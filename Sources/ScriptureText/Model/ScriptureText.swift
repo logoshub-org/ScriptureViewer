@@ -127,7 +127,9 @@ public struct ScriptureText: Equatable, Sendable {
 
         /// Whether the range holds this verse (any verse of a bridge).
         public func contains(verse number: Int) -> Bool {
-            (verse...endVerse).contains(number)
+            // `self.verse`, not `verse`: in the Kotlin Skip makes of this, the parameter is named after its label and would hide
+            // the property, so every verse up to the range's last would count as held.
+            (self.verse...endVerse).contains(number)
         }
 
         /// The number to show: the label, the bridge ("1-2") or the verse.

@@ -106,6 +106,36 @@ final class ScriptureTextOSISTests: XCTestCase {
     func testMarkers() throws { try check("markers") }
     func testVersePerLine() throws { try check("lines") }
 
+    /// What a viewer asks of the model beyond parsing, which the digests do not show: a verse range holds its own verse and no other,
+    /// a bookmark paints one verse, a verse is copied alone, and a search finds its word. (As Kotlin, `contains(verse:)` once held every
+    /// verse up to its own, because the parameter hid the property: the Android viewer's tests found it.)
+    func testAVerseIsFoundPaintedAndCopiedAlone() throws {
+        var display = ScriptureDisplayOptions()
+        display.headings = true
+        let model = try parse(display)
+        let range = try XCTUnwrap(model.verseRange(containing: 105))
+        XCTAssertEqual(range.verse, 105)
+        XCTAssertTrue(range.contains(verse: 105))
+        XCTAssertFalse(range.contains(verse: 104))
+        XCTAssertFalse(range.contains(verse: 106))
+
+        let bookmark = Highlight(Highlight.Target.verse(105), style: HighlightStyle.bookmark(colour: "#3478F6"))
+        let painted = model.resolve([bookmark])
+        XCTAssertEqual(painted.count, 1)
+        if painted.count == 1 {
+            let words = try XCTUnwrap(model.substring(utf16Start: painted[0].start, length: painted[0].length))
+            XCTAssertTrue(words.hasPrefix("Thy word is a lamp"), words)
+        }
+
+        let copied = try XCTUnwrap(model.copiedText(verse: 105))
+        XCTAssertTrue(copied.text.hasPrefix("105 Thy word is a lamp"), copied.text)
+        XCTAssertFalse(copied.text.contains("106"), copied.text)
+
+        let terms: [String] = ["lamp"]
+        XCTAssertEqual(model.searchHits(for: terms).count, 1)
+        XCTAssertFalse(model.strongsHits(for: "H835").isEmpty)
+    }
+
     private func check(_ name: String) throws {
         var display = ScriptureDisplayOptions()
         for (variant, options) in variants() where variant == name { display = options }

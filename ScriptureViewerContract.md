@@ -1,8 +1,9 @@
 # The scripture viewer contract
 
 The viewer is the one part of PocketSword that cannot be written once: it must scroll to an exact verse, know which verse is at the
-top, select and copy across paragraphs, and mark words and verses. On iOS that is UIKit (a TextKit 2 `UITextView`); on Android it is
-Jetpack Compose (a read-only `BasicTextField`; see plan D155 and D156). Everything around it (screens, navigation, lookups, bookmarks,
+top, select and copy across paragraphs, and mark words and verses. On iOS that is UIKit (a TextKit 2 `UITextView`); on Android it is a
+`TextView` holding a `Spannable`, under a thin Jetpack Compose wrapper (plan D185; Compose's own text, plan D155 and D156, is the
+fallback). Everything around it (screens, navigation, lookups, bookmarks,
 history, search, downloads) is the host app, written once in Swift and SwiftUI.
 
 This file is the agreed boundary. The code is `Sources/ScriptureText/Viewer/ScriptureViewerContract.swift`: Foundation and
@@ -63,21 +64,26 @@ notification.
   the text view's calls; `ScriptureTextTheme(_: ScriptureViewerTheme)` realises the theme (the contract's font size is in CSS points).
   The old UIKit container, with its detail pane, is gone: the host shows its own pane (plan D160, D161, D162). The dictionary entry, the
   devotional and the Bible and Commentary readers all use the view.
-- **Android:** a composable of the same name over a read-only `BasicTextField` with an `OutputTransformation`, the selection range from
-  `TextFieldState`, extra menu items through `appendTextContextMenuComponents`, and our own tap handling (plan D155, D156).
+- **Android (built 2026-11-16):** `Android/scriptureviewer`, a composable named `ScriptureViewer` (package `scripture.viewer`) over
+  `ScriptureTextView`, a selectable `TextView` holding the chapter as one `Spannable` in a `NestedScrollView`, hosted by `AndroidView`
+  (plan D185). A bridge does what the iOS coordinator does. The contract types and the bar rule are this folder's Swift, transpiled by
+  Skip (`Transpile/`, package `scripture.text`), so both platforms and the Skip-built host use the same ones. Sixteen instrumented tests
+  run it against Psalm 119 on an emulator; what differs from iOS, what was measured and what is left is in `Android/README.md`. The SwiftUI
+  view a Skip-built app names (same name, same values) is `ScriptureViewerSkip` in `Transpile/`, a `ComposeView` around the composable.
 
 ## Open points
 
-1. **Android accessibility:** a read-only text field is announced as one edit box; its semantics need replacing (role, per-verse
-   navigation).
-2. **Android taps:** the field consumes taps for the cursor and selection; word and verse-number taps need a gesture that does not
-   fight it.
+1. **Android accessibility:** with the `TextView` the chapter is one text node, not an edit box, and can be moved through by word, line
+   and paragraph. Still open: listening to it with TalkBack, and navigation by verse.
+2. **Android taps:** settled with the `TextView`: the view watches the touches without taking them, finds the character from the
+   layout and asks the model for the tap target; selection and scrolling carry on beside it.
 3. **iOS navigation bar:** `setContentScrollView` ties the bar's scroll-edge effect to the text view; a SwiftUI wrapper needs a
    view-controller representable, or accepts the plainer bar.
-4. **Observation:** the controller uses `@Observable` (in the standard library, so it builds for Android); how Skip carries it to
-   Compose has to be checked.
-5. **Sizing:** `scrolls = false` has to report the text's height to the host (SwiftUI `sizeThatFits` on iOS, intrinsic size on
-   Compose).
+4. **Observation:** settled: with SkipModel the controller transpiles, its properties become Compose state, and a composable that
+   reads `currentVerse` follows the scroll (tested). Still open: the SwiftUI-side `ScriptureViewer` view that the Skip-built app's
+   shared code names, wrapping the composable under `#if SKIP`.
+5. **Sizing:** done on both: `scrolls = false` takes the text's height (SwiftUI `sizeThatFits` on iOS, the view's measured height on
+   Android).
 6. **The detail pane in the host:** history and Back inside the pane become the host's job.
 
 ## Order of work

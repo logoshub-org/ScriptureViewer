@@ -24,16 +24,21 @@ let package = Package(
         .library(name: "ScriptureTextMarkup", type: .dynamic, targets: ["ScriptureTextMarkup"]),
         .library(name: "ScriptureTextBuilding", type: .dynamic, targets: ["ScriptureTextBuilding"]),
         .library(name: "ScriptureTextOSIS", type: .dynamic, targets: ["ScriptureTextOSIS"]),
+        .library(name: "ScriptureViewerSkip", type: .dynamic, targets: ["ScriptureViewerSkip"]),
     ],
     dependencies: [
         .package(url: "https://github.com/skiptools/skip.git", from: "1.9.20"),
         .package(url: "https://github.com/skiptools/skip-foundation.git", from: "1.4.9"),
+        .package(url: "https://github.com/skiptools/skip-model.git", from: "1.8.1"),
+        .package(url: "https://github.com/skiptools/skip-ui.git", from: "1.66.0"),
     ],
     targets: [
-        .target(name: "ScriptureText", dependencies: [foundation], plugins: [skipstone]),
+        .target(name: "ScriptureText", dependencies: [foundation, .product(name: "SkipModel", package: "skip-model")], plugins: [skipstone]),
         .target(name: "ScriptureTextMarkup", dependencies: ["ScriptureText", foundation], plugins: [skipstone]),
         .target(name: "ScriptureTextBuilding", dependencies: ["ScriptureText", foundation], plugins: [skipstone]),
         .target(name: "ScriptureTextOSIS", dependencies: ["ScriptureText", "ScriptureTextBuilding", "ScriptureTextMarkup", foundation], plugins: [skipstone]),
+        // The SwiftUI `ScriptureViewer` for the Skip-built app, over the Compose viewer in ../Android (its Kotlin is linked into Skip/).
+        .target(name: "ScriptureViewerSkip", dependencies: ["ScriptureText", foundation, .product(name: "SkipUI", package: "skip-ui")], plugins: [skipstone]),
         .testTarget(name: "ScriptureTextOSISTests", dependencies: ["ScriptureText", "ScriptureTextOSIS", .product(name: "SkipTest", package: "skip")],
                     resources: [.process("Resources")], plugins: [skipstone]),
     ]

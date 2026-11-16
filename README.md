@@ -54,9 +54,10 @@ to it (scroll to a verse, focus a verse). The full boundary, input by input and 
 ## Android
 
 The contract is written so that each platform supplies its own `ScriptureViewer`: on iOS it is this package's UIKit-backed view; on
-Android it is meant to be a Jetpack Compose view over the same values and events. That viewer is not built yet. The portable core
-(`ScriptureText`, its markup tokenizer and the OSIS parser) is already transpiled to Kotlin by [Skip](https://skip.dev) and checked
-against the Swift results; the other parsers have not been put through it yet.
+Android it is a composable of the same name over a `TextView`, in [Android/](Android/README.md), taking the same values and reporting
+the same events. It is built and tested on an emulator; it is not yet published as a library or hosted in an app. The portable core
+(`ScriptureText` with the viewer contract, its markup tokenizer and the OSIS parser) is transpiled to Kotlin by [Skip](https://skip.dev)
+in `Transpile/` and checked against the Swift results; the other parsers have not been put through it yet.
 
 ## Tests
 

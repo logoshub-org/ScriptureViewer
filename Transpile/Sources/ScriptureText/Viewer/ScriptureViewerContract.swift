@@ -1,0 +1,1 @@
+../../../../Sources/ScriptureText/Viewer/ScriptureViewerContract.swift
