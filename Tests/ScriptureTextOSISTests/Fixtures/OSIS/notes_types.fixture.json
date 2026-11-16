@@ -1,0 +1,36 @@
+{
+ "description": "Note types as SWORD distinguishes them: translation and study footnotes (marker n), crossReference notes (marker x, own option), an x-strongsMarkup note (never shown), an untyped note, and a footnote with references. Canonical and editorial titles under headings off.",
+ "identity": {
+  "work": "Sample",
+  "versification": "KJV",
+  "book": "Tale",
+  "chapter": 1
+ },
+ "entries": [
+  [
+   1,
+   "<title canonical=\"true\" type=\"psalm\">A sung superscription</title><title type=\"sub\">An editorial heading</title>The first clause<note type=\"translation\" placement=\"foot\"><reference osisRef=\"Tale.1.1\" type=\"source\">1:1 </reference>Or <rdg>another reading</rdg></note>, the second<note type=\"crossReference\" osisRef=\"Tale.1.1\" osisID=\"Tale.1.1!crossReference.a\"><reference osisRef=\"Tale.2.3\">Tale 2:3</reference>; <reference osisRef=\"Tale.4.5\">Tale 4:5</reference></note>;"
+  ],
+  [
+   2,
+   "then a study note<note type=\"study\"><catchWord>study</catchWord> the body</note> and <note type=\"x-strongsMarkup\">strongs markup that must stay hidden</note>strong words<note>an untyped note</note>."
+  ]
+ ],
+ "runs": [
+  {
+   "name": "default"
+  },
+  {
+   "name": "nocross",
+   "crossReferences": false
+  },
+  {
+   "name": "nofootnotes",
+   "footnotes": false
+  },
+  {
+   "name": "noheadings",
+   "headings": false
+  }
+ ]
+}

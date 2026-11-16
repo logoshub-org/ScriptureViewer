@@ -1,0 +1,45 @@
+{
+ "description": "BSB-style structure: section and subsection divs, sub/parallel titles, speaker, an introduction div, x-p paragraph milestones, a footnote with an inner reference, and a list whose container spans verses 2 to 5 (plus lb).",
+ "identity": {
+  "work": "Sample",
+  "versification": "KJV",
+  "book": "Tale",
+  "chapter": 1
+ },
+ "entries": [
+  [
+   0,
+   "<div type=\"introduction\">About this tale, in brief.</div><title type=\"main\">The Tale</title>"
+  ],
+  [
+   1,
+   "<div sID=\"s1\" type=\"majorSection\"/><title>Book One</title><div sID=\"s2\" type=\"section\"/><title type=\"sub\">The Gathering</title><title type=\"parallel\">(Luke 2:1–5)</title><div sID=\"p1\" type=\"x-p\"/>They gathered at the gate<note type=\"translation\" placement=\"foot\" osisID=\"Tale.1.1!note.1\" osisRef=\"Tale.1.1\"><reference osisRef=\"Tale.1.1\" type=\"source\">1:1 </reference>Or <rdg type=\"x-literal\">met</rdg></note>.<div eID=\"p1\" type=\"x-p\"/>"
+  ],
+  [
+   2,
+   "<speaker>The Guide</speaker><div sID=\"p2\" type=\"x-p\"/>He listed the supplies:<list><item>the first thing,"
+  ],
+  [
+   3,
+   "and more of it;</item><item>the second thing;"
+  ],
+  [
+   4,
+   "<lb/>a line break inside</item></list>"
+  ],
+  [
+   5,
+   "<div eID=\"p2\" type=\"x-p\"/><div sID=\"s3\" type=\"subSection\"/><title>A minor part</title>and the rest."
+  ]
+ ],
+ "runs": [
+  {
+   "name": "default"
+  },
+  {
+   "name": "plain",
+   "headings": false,
+   "footnotes": false
+  }
+ ]
+}

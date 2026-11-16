@@ -1,0 +1,41 @@
+{
+ "description": "Poetry as milestones (WEB/BSB/ASV style): levels 1, 2 and 3, a line with no level (= 1), Selah, a Psalm superscription, an acrostic heading, the container <l> form, and a verse that begins mid-group.",
+ "identity": {
+  "work": "Sample",
+  "versification": "KJV",
+  "book": "Ps",
+  "chapter": 9
+ },
+ "entries": [
+  [
+   0,
+   "<chapter osisID=\"Ps.9\" sID=\"c1\"/><title type=\"chapter\">PSALM 9</title>"
+  ],
+  [
+   1,
+   "<title canonical=\"true\" type=\"psalm\">A song for the evening walk.</title><lg sID=\"g1\"/><l level=\"1\" sID=\"a\"/>I will lift my voice at dusk,<l eID=\"a\"/><l level=\"2\" sID=\"b\"/>and the hills will answer me.<l eID=\"b\"/>"
+  ],
+  [
+   2,
+   "<l level=\"1\" sID=\"c\"/>Where the river runs,<l eID=\"c\"/><l level=\"3\" sID=\"d\"/>deep and slow,<l eID=\"d\"/><l sID=\"e\"/>with no stated level<l eID=\"e\"/><l type=\"selah\" sID=\"s1\"/>Selah<l eID=\"s1\"/><lg eID=\"g1\"/>"
+  ],
+  [
+   3,
+   "<lg sID=\"g2\"/><title type=\"acrostic\">ALEPH</title><l level=\"1\" sID=\"f\"/>First line of the letter<l eID=\"f\"/>"
+  ],
+  [
+   4,
+   "<l level=\"2\" sID=\"h\"/>and a second, <w lemma=\"strong:H0001\">indented</w> one<l eID=\"h\"/><lg eID=\"g2\"/> <lg><l level=\"2\">container form line</l><l>second container line</l></lg>"
+  ]
+ ],
+ "runs": [
+  {
+   "name": "default"
+  },
+  {
+   "name": "plain",
+   "headings": false,
+   "verseNumbers": false
+  }
+ ]
+}

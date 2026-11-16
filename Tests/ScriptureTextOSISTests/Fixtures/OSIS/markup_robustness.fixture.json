@@ -1,0 +1,32 @@
+{
+ "description": "Tolerance: unknown elements, an unclosed container, stray close tags, a bare '<', an unknown entity, a comment, CDATA, an unterminated tag at the end of the last entry, and surrogate pairs.",
+ "identity": {
+  "work": "Sample",
+  "versification": "KJV",
+  "book": "Tale",
+  "chapter": 7
+ },
+ "entries": [
+  [
+   1,
+   "<custom a=\"1\">kept <hi type=\"italic\">never closed "
+  ],
+  [
+   2,
+   "text</nothing></stray> 1 < 2 &nbsp; &#x1D50A; 😀 <!-- hidden -->after <![CDATA[<raw> & stuff]]> end"
+  ],
+  [
+   3,
+   "<l sID=/>broken <w lemma=>x</w> and <note>unfinished note"
+  ],
+  [
+   4,
+   "last words <w lemm"
+  ]
+ ],
+ "runs": [
+  {
+   "name": "default"
+  }
+ ]
+}

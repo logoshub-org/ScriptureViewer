@@ -1,0 +1,35 @@
+identity: work=Sample versification=KJV book=Tale chapter=1
+text: 100 UTF-16 units
+  A sung superscription⏎1The first clause‹WJ›n‹WJ›, the second‹WJ›x‹WJ›; 2then a study note‹WJ›n and strong words‹WJ›n‹WJ›.
+verses: 2
+  1  22+36  [1The first clause‹WJ›n‹WJ›, the second‹WJ›x‹WJ›;]
+  2  59+41  [2then a study note‹WJ›n and strong words‹WJ›n‹WJ…]
+spans: 7
+  0+21  block(d)  [A sung superscription]
+  22+1  verseNumber(1)  [1]
+  40+1  footnote(1.1)  [n]
+  55+1  footnote(Tale.1.1!crossReference.a)  [x]
+  59+1  verseNumber(2)  [2]
+  78+1  footnote(2.3)  [n]
+  97+1  footnote(2.5)  [n]
+words: 15
+  1.0  0+1  A
+  1.1  2+4  sung
+  1.2  7+14  superscription
+  1.3  23+3  The
+  1.4  27+5  first
+  1.5  33+6  clause
+  1.6  44+3  the
+  1.7  48+6  second
+  2.0  60+4  then
+  2.1  65+1  a
+  2.2  67+5  study
+  2.3  73+4  note
+  2.4  80+3  and
+  2.5  84+6  strong
+  2.6  91+5  words
+notes: 4
+  1.1  footnote  "1:1 Or another reading"  refs=["Tale.1.1"]
+  Tale.1.1!crossReference.a  crossReference  "Tale 2:3; Tale 4:5"  refs=["Tale.2.3", "Tale.4.5"]
+  2.3  footnote  "study the body"  refs=[]
+  2.5  footnote  "an untyped note"  refs=[]

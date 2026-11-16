@@ -1,0 +1,1 @@
+../../../../Sources/ScriptureText/Model/ScriptureText.swift

@@ -1,0 +1,23 @@
+identity: work=Sample versification=KJV book=Tale chapter=5
+text: 64 UTF-16 units
+  1בְּרֵאשִׁית בָּרָא אֱלֹהִים׃ 2שָׁלוֹם־לָכֶם וְשלום׃ 3ראשית־ברא׃
+verses: 3
+  1  0+29  [1בְּרֵאשִׁית בָּרָא אֱלֹהִים׃]
+  2  30+22  [2שָׁלוֹם־לָכֶם וְשלום׃]
+  3  53+11  [3ראשית־ברא׃]
+spans: 5
+  0+1  verseNumber(1)  [1]
+  30+1  verseNumber(2)  [2]
+  53+1  verseNumber(3)  [3]
+  54+5  word(lemma: strong:H7225, morph: nil)  [ראשית]
+  60+3  word(lemma: strong:H1254, morph: nil)  [ברא]
+words: 8
+  1.0  1+11  בְּרֵאשִׁית
+  1.1  13+6  בָּרָא
+  1.2  20+8  אֱלֹהִים
+  2.0  31+7  שָׁלוֹם
+  2.1  39+5  לָכֶם
+  2.2  45+6  וְשלום
+  3.0  54+5  ראשית
+  3.1  60+3  ברא
+notes: 0

@@ -1,0 +1,5036 @@
+utf16=21509
+verses=176 spans=2390 words=2423 notes=0
+V 1 20 118
+V 2 139 130
+V 3 270 89
+V 4 360 96
+V 5 457 97
+V 6 555 108
+V 7 664 151
+V 8 816 92
+V 9 917 139
+V 10 1057 124
+V 11 1182 110
+V 12 1293 90
+V 13 1384 96
+V 14 1481 115
+V 15 1597 105
+V 16 1703 108
+V 17 1821 125
+V 18 1947 125
+V 19 2073 99
+V 20 2173 121
+V 21 2295 134
+V 22 2430 118
+V 23 2549 150
+V 24 2700 84
+V 25 2795 119
+V 26 2915 124
+V 27 3040 139
+V 28 3180 123
+V 29 3304 114
+V 30 3419 115
+V 31 3535 104
+V 32 3640 122
+V 33 3769 132
+V 34 3902 147
+V 35 4050 114
+V 36 4165 99
+V 37 4265 136
+V 38 4402 98
+V 39 4501 112
+V 40 4614 116
+V 41 4738 126
+V 42 4865 139
+V 43 5005 152
+V 44 5158 97
+V 45 5256 94
+V 46 5351 116
+V 47 5468 100
+V 48 5569 169
+V 49 5747 117
+V 50 5865 103
+V 51 5969 129
+V 52 6099 118
+V 53 6218 122
+V 54 6341 92
+V 55 6434 128
+V 56 6563 62
+V 57 6635 117
+V 58 6753 134
+V 59 6888 111
+V 60 7000 103
+V 61 7104 122
+V 62 7227 140
+V 63 7368 122
+V 64 7491 118
+V 65 7618 114
+V 66 7733 130
+V 67 7864 114
+V 68 7979 95
+V 69 8075 145
+V 70 8221 107
+V 71 8329 120
+V 72 8450 116
+V 73 8574 165
+V 74 8740 139
+V 75 8880 149
+V 76 9030 133
+V 77 9164 128
+V 78 9293 174
+V 79 9468 142
+V 80 9611 96
+V 81 9716 108
+V 82 9825 116
+V 83 9942 113
+V 84 10056 145
+V 85 10202 99
+V 86 10302 126
+V 87 10429 119
+V 88 10549 129
+V 89 10688 91
+V 90 10780 144
+V 91 10925 115
+V 92 11041 124
+V 93 11166 113
+V 94 11280 87
+V 95 11368 132
+V 96 11501 127
+V 97 11636 89
+V 98 11726 135
+V 99 11862 128
+V 100 11991 107
+V 101 12099 129
+V 102 12229 100
+V 103 12330 118
+V 104 12449 123
+V 105 12580 95
+V 106 12676 134
+V 107 12811 120
+V 108 12932 152
+V 109 13085 107
+V 110 13193 121
+V 111 13315 137
+V 112 13453 133
+V 113 13597 86
+V 114 13684 96
+V 115 13781 128
+V 116 13910 143
+V 117 14054 148
+V 118 14203 140
+V 119 14344 146
+V 120 14491 120
+V 121 14619 122
+V 122 14742 115
+V 123 14858 115
+V 124 14974 124
+V 125 15099 115
+V 126 15215 118
+V 127 15334 103
+V 128 15438 147
+V 129 15592 101
+V 130 15694 128
+V 131 15823 121
+V 132 15945 149
+V 133 16095 123
+V 134 16219 116
+V 135 16336 116
+V 136 16453 124
+V 137 16588 89
+V 138 16678 116
+V 139 16795 122
+V 140 16918 103
+V 141 17022 100
+V 142 17123 113
+V 143 17237 124
+V 144 17362 142
+V 145 17513 134
+V 146 17648 110
+V 147 17759 127
+V 148 17887 119
+V 149 18007 151
+V 150 18159 125
+V 151 18285 88
+V 152 18374 135
+V 153 18518 126
+V 154 18645 120
+V 155 18766 109
+V 156 18876 120
+V 157 18997 134
+V 158 19132 136
+V 159 19269 148
+V 160 19418 140
+V 161 19568 142
+V 162 19711 104
+V 163 19816 101
+V 164 19918 114
+V 165 20033 115
+V 166 20149 114
+V 167 20264 112
+V 168 20377 115
+V 169 20500 142
+V 170 20643 119
+V 171 20763 116
+V 172 20880 121
+V 173 21002 97
+V 174 21100 111
+V 175 21212 130
+V 176 21343 166
+S block:cl 0 10
+S italic 11 8
+S block:qa 11 8
+S verseNumber:1 20 1
+S word:strong:H0835:- 21 7
+S strongs:strong:H0835 28 6
+S italic 35 3
+S word:strong:H08549:- 39 13
+S strongs:strong:H08549 52 7
+S word:strong:H01870:- 60 10
+S strongs:strong:H01870 70 7
+S word:strong:H01980:strongMorph:TH8802 79 8
+S strongs:strong:H01980 87 7
+S morph:strongMorph:TH8802 94 6
+S word:strong:H08451:- 101 10
+S strongs:strong:H08451 111 7
+S word:strong:H03068:- 119 11
+S divineName 126 4
+S strongs:strong:H03068 130 7
+S verseNumber:2 139 1
+S word:strong:H0835:- 140 7
+S strongs:strong:H0835 147 6
+S italic 154 3
+S word:strong:H05341:strongMorph:TH8802 158 14
+S strongs:strong:H05341 172 7
+S morph:strongMorph:TH8802 179 6
+S word:strong:H05713:- 186 15
+S strongs:strong:H05713 201 7
+S italic 210 8
+S word:strong:H01875:strongMorph:TH8799 219 4
+S strongs:strong:H01875 223 7
+S morph:strongMorph:TH8799 230 6
+S word:strong:H03820:- 237 24
+S strongs:strong:H03820 261 7
+S verseNumber:3 270 1
+S word:strong:H06466:strongMorph:TH8804 271 12
+S strongs:strong:H06466 283 7
+S morph:strongMorph:TH8804 290 6
+S word:strong:H05766:- 297 11
+S strongs:strong:H05766 308 7
+S word:strong:H01980:strongMorph:TH8804 317 9
+S strongs:strong:H01980 326 7
+S morph:strongMorph:TH8804 333 6
+S word:strong:H01870:- 340 11
+S strongs:strong:H01870 351 7
+S verseNumber:4 360 1
+S word:strong:H06680:strongMorph:TH8765 361 19
+S strongs:strong:H06680 380 7
+S morph:strongMorph:TH8765 387 6
+S italic 394 2
+S word:strong:H08104:strongMorph:TH8800 397 7
+S strongs:strong:H08104 404 7
+S morph:strongMorph:TH8800 411 6
+S word:strong:H06490:- 418 12
+S strongs:strong:H06490 430 7
+S word:strong:H03966:- 438 10
+S strongs:strong:H03966 448 7
+S verseNumber:5 457 1
+S word:strong:H0305:- 458 6
+S strongs:strong:H0305 464 6
+S word:strong:H01870:- 471 7
+S strongs:strong:H01870 478 7
+S word:strong:H03559:strongMorph:TH8735 486 13
+S strongs:strong:H03559 499 7
+S morph:strongMorph:TH8735 506 6
+S word:strong:H08104:strongMorph:TH8800 513 7
+S strongs:strong:H08104 520 7
+S morph:strongMorph:TH8800 527 6
+S word:strong:H02706:- 534 12
+S strongs:strong:H02706 546 7
+S verseNumber:6 555 1
+S word:strong:H0954:strongMorph:TH8799 556 27
+S strongs:strong:H0954 583 6
+S morph:strongMorph:TH8799 589 6
+S word:strong:H05027:strongMorph:TH8687 597 19
+S strongs:strong:H05027 616 7
+S morph:strongMorph:TH8687 623 6
+S word:strong:H04687:- 630 25
+S strongs:strong:H04687 655 7
+S verseNumber:7 664 1
+S word:strong:H03034:strongMorph:TH8686 665 13
+S strongs:strong:H03034 678 7
+S morph:strongMorph:TH8686 685 6
+S word:strong:H03476:- 692 21
+S strongs:strong:H03476 713 7
+S word:strong:H03824:- 721 8
+S strongs:strong:H03824 729 7
+S word:strong:H03925:strongMorph:TH8800 738 25
+S strongs:strong:H03925 763 7
+S morph:strongMorph:TH8800 770 6
+S word:strong:H06664:- 777 13
+S strongs:strong:H06664 790 7
+S word:strong:H04941:- 798 9
+S strongs:strong:H04941 807 7
+S verseNumber:8 816 1
+S word:strong:H08104:strongMorph:TH8799 817 11
+S strongs:strong:H08104 828 7
+S morph:strongMorph:TH8799 835 6
+S word:strong:H02706:- 842 12
+S strongs:strong:H02706 854 7
+S word:strong:H05800:strongMorph:TH8799 863 9
+S strongs:strong:H05800 872 7
+S morph:strongMorph:TH8799 879 6
+S word:strong:H03966:- 886 14
+S strongs:strong:H03966 900 7
+S italic 909 7
+S block:qa 909 7
+S verseNumber:9 917 1
+S word:strong:H05288:- 918 29
+S strongs:strong:H05288 947 7
+S word:strong:H02135:strongMorph:TH8762 955 7
+S strongs:strong:H02135 962 7
+S morph:strongMorph:TH8762 969 6
+S word:strong:H0734:- 976 7
+S strongs:strong:H0734 983 6
+S word:strong:H08104:strongMorph:TH8800 991 14
+S strongs:strong:H08104 1005 7
+S morph:strongMorph:TH8800 1012 6
+S italic 1019 7
+S word:strong:H01697:- 1027 21
+S strongs:strong:H01697 1048 7
+S verseNumber:10 1057 2
+S word:strong:H03820:- 1059 19
+S strongs:strong:H03820 1078 7
+S word:strong:H01875:strongMorph:TH8804 1086 13
+S strongs:strong:H01875 1099 7
+S morph:strongMorph:TH8804 1106 6
+S word:strong:H07686:strongMorph:TH8686 1113 25
+S strongs:strong:H07686 1138 7
+S morph:strongMorph:TH8686 1145 6
+S word:strong:H04687:- 1152 21
+S strongs:strong:H04687 1173 7
+S verseNumber:11 1182 2
+S word:strong:H0565:- 1184 8
+S strongs:strong:H0565 1192 6
+S word:strong:H06845:strongMorph:TH8804 1199 10
+S strongs:strong:H06845 1209 7
+S morph:strongMorph:TH8804 1216 6
+S word:strong:H03820:- 1223 13
+S strongs:strong:H03820 1236 7
+S word:strong:H02398:strongMorph:TH8799 1245 20
+S strongs:strong:H02398 1265 7
+S morph:strongMorph:TH8799 1272 6
+S verseNumber:12 1293 2
+S word:strong:H01288:strongMorph:TH8803 1295 7
+S strongs:strong:H01288 1302 7
+S morph:strongMorph:TH8803 1309 6
+S italic 1316 3
+S word:strong:H03068:- 1320 12
+S divineName 1328 4
+S strongs:strong:H03068 1332 7
+S word:strong:H03925:strongMorph:TH8761 1341 5
+S strongs:strong:H03925 1346 7
+S morph:strongMorph:TH8761 1353 6
+S word:strong:H02706:- 1360 15
+S strongs:strong:H02706 1375 7
+S verseNumber:13 1384 2
+S word:strong:H08193:- 1386 12
+S strongs:strong:H08193 1398 7
+S word:strong:H05608:strongMorph:TH8765 1406 15
+S strongs:strong:H05608 1421 7
+S morph:strongMorph:TH8765 1428 6
+S word:strong:H04941:- 1435 17
+S strongs:strong:H04941 1452 7
+S word:strong:H06310:- 1460 12
+S strongs:strong:H06310 1472 7
+S verseNumber:14 1481 2
+S word:strong:H07797:strongMorph:TH8804 1483 15
+S strongs:strong:H07797 1498 7
+S morph:strongMorph:TH8804 1505 6
+S word:strong:H01870:- 1512 10
+S strongs:strong:H01870 1522 7
+S word:strong:H05715:- 1530 18
+S strongs:strong:H05715 1548 7
+S italic 1560 7
+S word:strong:H05921:- 1568 2
+S strongs:strong:H05921 1570 7
+S word:strong:H01952:- 1578 10
+S strongs:strong:H01952 1588 7
+S verseNumber:15 1597 2
+S word:strong:H07878:strongMorph:TH8799 1599 15
+S strongs:strong:H07878 1614 7
+S morph:strongMorph:TH8799 1621 6
+S word:strong:H06490:- 1628 15
+S strongs:strong:H06490 1643 7
+S word:strong:H05027:strongMorph:TH8686 1652 16
+S strongs:strong:H05027 1668 7
+S morph:strongMorph:TH8686 1675 6
+S word:strong:H0734:- 1682 13
+S strongs:strong:H0734 1695 6
+S verseNumber:16 1703 2
+S word:strong:H08173:strongMorph:TH8698 1705 14
+S strongs:strong:H08173 1719 7
+S morph:strongMorph:TH8698 1726 6
+S word:strong:H02708:- 1733 22
+S strongs:strong:H02708 1755 7
+S word:strong:H07911:strongMorph:TH8799 1764 17
+S strongs:strong:H07911 1781 7
+S morph:strongMorph:TH8799 1788 6
+S word:strong:H01697:- 1795 8
+S strongs:strong:H01697 1803 7
+S italic 1812 8
+S block:qa 1812 8
+S verseNumber:17 1821 2
+S word:strong:H01580:strongMorph:TH8798 1823 16
+S strongs:strong:H01580 1839 7
+S morph:strongMorph:TH8798 1846 6
+S word:strong:H05650:- 1853 16
+S strongs:strong:H05650 1869 7
+S italic 1878 4
+S word:strong:H02421:strongMorph:TH8799 1883 10
+S strongs:strong:H02421 1893 7
+S morph:strongMorph:TH8799 1900 6
+S word:strong:H08104:strongMorph:TH8799 1908 8
+S strongs:strong:H08104 1916 7
+S morph:strongMorph:TH8799 1923 6
+S word:strong:H01697:- 1930 8
+S strongs:strong:H01697 1938 7
+S verseNumber:18 1947 2
+S word:strong:H01540:strongMorph:TH8761 1949 4
+S strongs:strong:H01540 1953 7
+S morph:strongMorph:TH8761 1960 6
+S word:strong:H05869:- 1967 14
+S strongs:strong:H05869 1981 7
+S word:strong:H05027:strongMorph:TH8686 1990 17
+S strongs:strong:H05027 2007 7
+S morph:strongMorph:TH8686 2014 6
+S word:strong:H06381:strongMorph:TH8737 2021 15
+S strongs:strong:H06381 2036 7
+S morph:strongMorph:TH8737 2043 6
+S word:strong:H08451:- 2050 14
+S strongs:strong:H08451 2064 7
+S verseNumber:19 2073 2
+S italic 2077 2
+S word:strong:H01616:- 2080 10
+S strongs:strong:H01616 2090 7
+S word:strong:H0776:- 2098 12
+S strongs:strong:H0776 2110 6
+S word:strong:H05641:strongMorph:TH8686 2118 4
+S strongs:strong:H05641 2122 7
+S morph:strongMorph:TH8686 2129 6
+S word:strong:H04687:- 2136 20
+S strongs:strong:H04687 2156 7
+S verseNumber:20 2173 2
+S word:strong:H05315:- 2175 7
+S strongs:strong:H05315 2182 7
+S word:strong:H01638:strongMorph:TH8804 2190 8
+S strongs:strong:H01638 2198 7
+S morph:strongMorph:TH8804 2205 6
+S word:strong:H08375:- 2212 15
+S strongs:strong:H08375 2227 7
+S italic 2235 12
+S word:strong:H04941:- 2248 18
+S strongs:strong:H04941 2266 7
+S word:strong:H06256:- 2274 12
+S strongs:strong:H06256 2286 7
+S verseNumber:21 2295 2
+S word:strong:H01605:strongMorph:TH8804 2297 17
+S strongs:strong:H01605 2314 7
+S morph:strongMorph:TH8804 2321 6
+S word:strong:H02086:- 2328 9
+S strongs:strong:H02086 2337 7
+S italic 2345 8
+S word:strong:H0779:strongMorph:TH8803 2354 6
+S strongs:strong:H0779 2360 6
+S morph:strongMorph:TH8803 2366 6
+S word:strong:H07686:strongMorph:TH8802 2374 12
+S strongs:strong:H07686 2386 7
+S morph:strongMorph:TH8802 2393 6
+S word:strong:H04687:- 2400 21
+S strongs:strong:H04687 2421 7
+S verseNumber:22 2430 2
+S word:strong:H01556:strongMorph:TH8798 2432 6
+S strongs:strong:H01556 2438 7
+S morph:strongMorph:TH8798 2445 6
+S word:strong:H02781:- 2452 16
+S strongs:strong:H02781 2468 7
+S word:strong:H0937:- 2476 12
+S strongs:strong:H0937 2488 6
+S word:strong:H05341:strongMorph:TH8804 2496 15
+S strongs:strong:H05341 2511 7
+S morph:strongMorph:TH8804 2518 6
+S word:strong:H05713:- 2525 15
+S strongs:strong:H05713 2540 7
+S verseNumber:23 2549 2
+S word:strong:H08269:- 2551 7
+S strongs:strong:H08269 2558 7
+S word:strong:H03427:strongMorph:TH8804 2566 12
+S strongs:strong:H03427 2578 7
+S morph:strongMorph:TH8804 2585 6
+S italic 2592 3
+S word:strong:H01696:strongMorph:TH8738 2596 5
+S strongs:strong:H01696 2601 7
+S morph:strongMorph:TH8738 2608 6
+S italic 2627 3
+S word:strong:H05650:- 2631 11
+S strongs:strong:H05650 2642 7
+S word:strong:H07878:strongMorph:TH8799 2650 12
+S strongs:strong:H07878 2662 7
+S morph:strongMorph:TH8799 2669 6
+S word:strong:H02706:- 2676 15
+S strongs:strong:H02706 2691 7
+S verseNumber:24 2700 2
+S word:strong:H05713:- 2702 15
+S strongs:strong:H05713 2717 7
+S italic 2730 3
+S word:strong:H08191:- 2734 10
+S strongs:strong:H08191 2744 7
+S italic 2752 3
+S word:strong:H06098 strong:H0582:- 2756 14
+S strongs:strong:H06098 2770 7
+S strongs:strong:H0582 2777 6
+S italic 2785 9
+S block:qa 2785 9
+S verseNumber:25 2795 2
+S word:strong:H05315:- 2797 7
+S strongs:strong:H05315 2804 7
+S word:strong:H01692:strongMorph:TH8804 2812 8
+S strongs:strong:H01692 2820 7
+S morph:strongMorph:TH8804 2827 6
+S word:strong:H06083:- 2834 13
+S strongs:strong:H06083 2847 7
+S word:strong:H02421:strongMorph:TH8761 2856 7
+S strongs:strong:H02421 2863 7
+S morph:strongMorph:TH8761 2870 6
+S word:strong:H01697:- 2877 29
+S strongs:strong:H01697 2906 7
+S verseNumber:26 2915 2
+S word:strong:H05608:strongMorph:TH8765 2917 15
+S strongs:strong:H05608 2932 7
+S morph:strongMorph:TH8765 2939 6
+S word:strong:H01870:- 2946 7
+S strongs:strong:H01870 2953 7
+S word:strong:H06030:strongMorph:TH8799 2962 17
+S strongs:strong:H06030 2979 7
+S morph:strongMorph:TH8799 2986 6
+S word:strong:H03925:strongMorph:TH8761 2993 9
+S strongs:strong:H03925 3002 7
+S morph:strongMorph:TH8761 3009 6
+S word:strong:H02706:- 3016 15
+S strongs:strong:H02706 3031 7
+S verseNumber:27 3040 2
+S word:strong:H0995:strongMorph:TH8685 3042 21
+S strongs:strong:H0995 3063 6
+S morph:strongMorph:TH8685 3069 6
+S word:strong:H01870:- 3076 7
+S strongs:strong:H01870 3083 7
+S word:strong:H06490:- 3091 15
+S strongs:strong:H06490 3106 7
+S word:strong:H07878:strongMorph:TH8799 3115 15
+S strongs:strong:H07878 3130 7
+S morph:strongMorph:TH8799 3137 6
+S word:strong:H06381:strongMorph:TH8737 3144 21
+S strongs:strong:H06381 3165 7
+S morph:strongMorph:TH8737 3172 6
+S verseNumber:28 3180 2
+S word:strong:H05315:- 3182 7
+S strongs:strong:H05315 3189 7
+S word:strong:H01811:strongMorph:TH8804 3197 7
+S strongs:strong:H01811 3204 7
+S morph:strongMorph:TH8804 3211 6
+S word:strong:H08424:- 3218 13
+S strongs:strong:H08424 3231 7
+S word:strong:H06965:strongMorph:TH8761 3240 10
+S strongs:strong:H06965 3250 7
+S morph:strongMorph:TH8761 3257 6
+S word:strong:H01697:- 3264 31
+S strongs:strong:H01697 3295 7
+S verseNumber:29 3304 2
+S word:strong:H05493:strongMorph:TH8685 3306 6
+S strongs:strong:H05493 3312 7
+S morph:strongMorph:TH8685 3319 6
+S word:strong:H01870:- 3326 15
+S strongs:strong:H01870 3341 7
+S word:strong:H08267:- 3349 8
+S strongs:strong:H08267 3357 7
+S word:strong:H08451:- 3366 20
+S strongs:strong:H08451 3386 7
+S word:strong:H02603:strongMorph:TH8798 3394 10
+S strongs:strong:H02603 3404 7
+S morph:strongMorph:TH8798 3411 6
+S verseNumber:30 3419 2
+S word:strong:H0977:strongMorph:TH8804 3421 13
+S strongs:strong:H0977 3434 6
+S morph:strongMorph:TH8804 3440 6
+S word:strong:H01870:- 3447 7
+S strongs:strong:H01870 3454 7
+S word:strong:H0530:- 3462 8
+S strongs:strong:H0530 3470 6
+S word:strong:H04941:- 3478 13
+S strongs:strong:H04941 3491 7
+S word:strong:H07737:strongMorph:TH8765 3499 11
+S strongs:strong:H07737 3510 7
+S morph:strongMorph:TH8765 3517 6
+S italic 3524 9
+S verseNumber:31 3535 2
+S word:strong:H01692:strongMorph:TH8804 3537 12
+S strongs:strong:H01692 3549 7
+S morph:strongMorph:TH8804 3556 6
+S word:strong:H05715:- 3563 20
+S strongs:strong:H05715 3583 7
+S word:strong:H03068:- 3592 6
+S divineName 3594 4
+S strongs:strong:H03068 3598 7
+S word:strong:H0954:strongMorph:TH8686 3607 19
+S strongs:strong:H0954 3626 6
+S morph:strongMorph:TH8686 3632 6
+S verseNumber:32 3640 2
+S word:strong:H07323:strongMorph:TH8799 3642 10
+S strongs:strong:H07323 3652 7
+S morph:strongMorph:TH8799 3659 6
+S word:strong:H01870:- 3666 7
+S strongs:strong:H01870 3673 7
+S word:strong:H04687:- 3681 19
+S strongs:strong:H04687 3700 7
+S word:strong:H07337:strongMorph:TH8686 3709 23
+S strongs:strong:H07337 3732 7
+S morph:strongMorph:TH8686 3739 6
+S word:strong:H03820:- 3746 8
+S strongs:strong:H03820 3754 7
+S italic 3763 5
+S block:qa 3763 5
+S verseNumber:33 3769 2
+S word:strong:H03384:strongMorph:TH8685 3771 5
+S strongs:strong:H03384 3776 7
+S morph:strongMorph:TH8685 3783 6
+S word:strong:H03068:- 3790 10
+S divineName 3796 4
+S strongs:strong:H03068 3800 7
+S word:strong:H01870:- 3809 7
+S strongs:strong:H01870 3816 7
+S word:strong:H02706:- 3824 15
+S strongs:strong:H02706 3839 7
+S word:strong:H05341:strongMorph:TH8799 3848 16
+S strongs:strong:H05341 3864 7
+S morph:strongMorph:TH8799 3871 6
+S italic 3881 4
+S word:strong:H06118:- 3886 7
+S strongs:strong:H06118 3893 7
+S verseNumber:34 3902 2
+S word:strong:H0995:strongMorph:TH8685 3904 21
+S strongs:strong:H0995 3925 6
+S morph:strongMorph:TH8685 3931 6
+S word:strong:H05341:strongMorph:TH8799 3939 16
+S strongs:strong:H05341 3955 7
+S morph:strongMorph:TH8799 3962 6
+S word:strong:H08451:- 3969 7
+S strongs:strong:H08451 3976 7
+S word:strong:H08104:strongMorph:TH8799 3985 20
+S strongs:strong:H08104 4005 7
+S morph:strongMorph:TH8799 4012 6
+S italic 4027 2
+S word:strong:H03820:- 4030 11
+S strongs:strong:H03820 4041 7
+S verseNumber:35 4050 2
+S word:strong:H01869:strongMorph:TH8685 4052 13
+S strongs:strong:H01869 4065 7
+S morph:strongMorph:TH8685 4072 6
+S word:strong:H05410:- 4079 11
+S strongs:strong:H05410 4090 7
+S word:strong:H04687:- 4098 19
+S strongs:strong:H04687 4117 7
+S word:strong:H02654:strongMorph:TH8804 4126 24
+S strongs:strong:H02654 4150 7
+S morph:strongMorph:TH8804 4157 6
+S verseNumber:36 4165 2
+S word:strong:H05186:strongMorph:TH8685 4167 7
+S strongs:strong:H05186 4174 7
+S morph:strongMorph:TH8685 4181 6
+S word:strong:H03820:- 4188 8
+S strongs:strong:H03820 4196 7
+S word:strong:H05715:- 4204 20
+S strongs:strong:H05715 4224 7
+S word:strong:H01215:- 4233 23
+S strongs:strong:H01215 4256 7
+S verseNumber:37 4265 2
+S word:strong:H05674:strongMorph:TH8685 4267 9
+S strongs:strong:H05674 4276 7
+S morph:strongMorph:TH8685 4283 6
+S word:strong:H05869:- 4290 9
+S strongs:strong:H05869 4299 7
+S word:strong:H07200:strongMorph:TH8800 4307 14
+S strongs:strong:H07200 4321 7
+S morph:strongMorph:TH8800 4328 6
+S word:strong:H07723:- 4335 6
+S strongs:strong:H07723 4341 7
+S italic 4350 3
+S word:strong:H02421:strongMorph:TH8761 4354 7
+S strongs:strong:H02421 4361 7
+S morph:strongMorph:TH8761 4368 6
+S word:strong:H01870:- 4375 18
+S strongs:strong:H01870 4393 7
+S verseNumber:38 4402 2
+S word:strong:H06965:strongMorph:TH8685 4404 8
+S strongs:strong:H06965 4412 7
+S morph:strongMorph:TH8685 4419 6
+S word:strong:H0565:- 4426 8
+S strongs:strong:H0565 4434 6
+S word:strong:H05650:- 4441 16
+S strongs:strong:H05650 4457 7
+S italic 4470 10
+S word:strong:H03374:- 4481 11
+S strongs:strong:H03374 4492 7
+S verseNumber:39 4501 2
+S word:strong:H05674:strongMorph:TH8685 4503 9
+S strongs:strong:H05674 4512 7
+S morph:strongMorph:TH8685 4519 6
+S word:strong:H02781:- 4526 11
+S strongs:strong:H02781 4537 7
+S word:strong:H03025:strongMorph:TH8804 4545 12
+S strongs:strong:H03025 4557 7
+S morph:strongMorph:TH8804 4564 6
+S word:strong:H04941:- 4572 17
+S strongs:strong:H04941 4589 7
+S italic 4597 3
+S word:strong:H02896:- 4601 4
+S strongs:strong:H02896 4605 7
+S verseNumber:40 4614 2
+S word:strong:H08373:strongMorph:TH8804 4616 21
+S strongs:strong:H08373 4637 7
+S morph:strongMorph:TH8804 4644 6
+S word:strong:H06490:- 4651 18
+S strongs:strong:H06490 4669 7
+S word:strong:H02421:strongMorph:TH8761 4678 7
+S strongs:strong:H02421 4685 7
+S morph:strongMorph:TH8761 4692 6
+S word:strong:H06666:- 4699 23
+S strongs:strong:H06666 4722 7
+S italic 4731 6
+S block:qa 4731 6
+S verseNumber:41 4738 2
+S word:strong:H02617:- 4740 15
+S strongs:strong:H02617 4755 7
+S word:strong:H0935:strongMorph:TH8799 4763 4
+S strongs:strong:H0935 4767 6
+S morph:strongMorph:TH8799 4773 6
+S word:strong:H03068:- 4780 20
+S divineName 4796 4
+S strongs:strong:H03068 4800 7
+S italic 4809 4
+S word:strong:H08668:- 4814 13
+S strongs:strong:H08668 4827 7
+S word:strong:H0565:- 4836 21
+S strongs:strong:H0565 4857 6
+S verseNumber:42 4865 2
+S word:strong:H01697:- 4867 25
+S strongs:strong:H01697 4892 7
+S word:strong:H06030:strongMorph:TH8799 4900 9
+S strongs:strong:H06030 4909 7
+S morph:strongMorph:TH8799 4916 6
+S word:strong:H02778:strongMorph:TH8802 4923 20
+S strongs:strong:H02778 4943 7
+S morph:strongMorph:TH8802 4950 6
+S word:strong:H0982:strongMorph:TH8804 4957 15
+S strongs:strong:H0982 4972 6
+S morph:strongMorph:TH8804 4978 6
+S word:strong:H01697:- 4985 11
+S strongs:strong:H01697 4996 7
+S verseNumber:43 5005 2
+S word:strong:H05337:strongMorph:TH8686 5007 8
+S strongs:strong:H05337 5015 7
+S morph:strongMorph:TH8686 5022 6
+S word:strong:H01697:- 5029 12
+S strongs:strong:H01697 5041 7
+S word:strong:H0571:- 5049 8
+S strongs:strong:H0571 5057 6
+S word:strong:H03966:- 5064 7
+S strongs:strong:H03966 5071 7
+S word:strong:H06310:- 5079 15
+S strongs:strong:H06310 5094 7
+S word:strong:H03176:strongMorph:TH8765 5103 16
+S strongs:strong:H03176 5119 7
+S morph:strongMorph:TH8765 5126 6
+S word:strong:H04941:- 5133 16
+S strongs:strong:H04941 5149 7
+S verseNumber:44 5158 2
+S word:strong:H08104:strongMorph:TH8799 5160 15
+S strongs:strong:H08104 5175 7
+S morph:strongMorph:TH8799 5182 6
+S word:strong:H08451:- 5189 7
+S strongs:strong:H08451 5196 7
+S word:strong:H08548:- 5204 11
+S strongs:strong:H08548 5215 7
+S word:strong:H05769:- 5223 8
+S strongs:strong:H05769 5231 7
+S word:strong:H05703:- 5239 8
+S strongs:strong:H05703 5247 7
+S verseNumber:45 5256 2
+S word:strong:H01980:strongMorph:TH8691 5258 15
+S strongs:strong:H01980 5273 7
+S morph:strongMorph:TH8691 5280 6
+S word:strong:H07342:- 5287 10
+S strongs:strong:H07342 5297 7
+S word:strong:H01875:strongMorph:TH8804 5306 10
+S strongs:strong:H01875 5316 7
+S morph:strongMorph:TH8804 5323 6
+S word:strong:H06490:- 5330 12
+S strongs:strong:H06490 5342 7
+S verseNumber:46 5351 2
+S word:strong:H01696:strongMorph:TH8762 5353 12
+S strongs:strong:H01696 5365 7
+S morph:strongMorph:TH8762 5372 6
+S word:strong:H05713:- 5379 18
+S strongs:strong:H05713 5397 7
+S word:strong:H04428:- 5405 17
+S strongs:strong:H04428 5422 7
+S word:strong:H0954:strongMorph:TH8799 5431 23
+S strongs:strong:H0954 5454 6
+S morph:strongMorph:TH8799 5460 6
+S verseNumber:47 5468 2
+S word:strong:H08173:strongMorph:TH8698 5470 18
+S strongs:strong:H08173 5488 7
+S morph:strongMorph:TH8698 5495 6
+S word:strong:H04687:- 5502 26
+S strongs:strong:H04687 5528 7
+S word:strong:H0157:strongMorph:TH8804 5537 18
+S strongs:strong:H0157 5555 6
+S morph:strongMorph:TH8804 5561 6
+S verseNumber:48 5569 2
+S word:strong:H03709:- 5571 8
+S strongs:strong:H03709 5579 7
+S word:strong:H05375:strongMorph:TH8799 5587 19
+S strongs:strong:H05375 5606 7
+S morph:strongMorph:TH8799 5613 6
+S word:strong:H04687:- 5620 21
+S strongs:strong:H04687 5641 7
+S word:strong:H0157:strongMorph:TH8804 5650 18
+S strongs:strong:H0157 5668 6
+S morph:strongMorph:TH8804 5674 6
+S word:strong:H07878:strongMorph:TH8799 5682 19
+S strongs:strong:H07878 5701 7
+S morph:strongMorph:TH8799 5708 6
+S word:strong:H02706:- 5715 15
+S strongs:strong:H02706 5730 7
+S italic 5739 7
+S block:qa 5739 7
+S verseNumber:49 5747 2
+S word:strong:H02142:strongMorph:TH8798 5749 8
+S strongs:strong:H02142 5757 7
+S morph:strongMorph:TH8798 5764 6
+S word:strong:H01697:- 5771 8
+S strongs:strong:H01697 5779 7
+S word:strong:H05650:- 5787 16
+S strongs:strong:H05650 5803 7
+S word:strong:H03176:strongMorph:TH8765 5812 38
+S strongs:strong:H03176 5850 7
+S morph:strongMorph:TH8765 5857 6
+S verseNumber:50 5865 2
+S italic 5872 2
+S word:strong:H05165:- 5875 10
+S strongs:strong:H05165 5885 7
+S word:strong:H06040:- 5893 16
+S strongs:strong:H06040 5909 7
+S word:strong:H0565:- 5918 12
+S strongs:strong:H0565 5930 6
+S word:strong:H02421:strongMorph:TH8765 5937 14
+S strongs:strong:H02421 5951 7
+S morph:strongMorph:TH8765 5958 6
+S verseNumber:51 5969 2
+S word:strong:H02086:- 5971 9
+S strongs:strong:H02086 5980 7
+S word:strong:H03966:- 5988 19
+S strongs:strong:H03966 6007 7
+S word:strong:H03887:strongMorph:TH8689 6015 11
+S strongs:strong:H03887 6026 7
+S morph:strongMorph:TH8689 6033 6
+S italic 6041 3
+S word:strong:H05186:strongMorph:TH8804 6045 19
+S strongs:strong:H05186 6064 7
+S morph:strongMorph:TH8804 6071 6
+S word:strong:H08451:- 6078 12
+S strongs:strong:H08451 6090 7
+S verseNumber:52 6099 2
+S word:strong:H02142:strongMorph:TH8804 6101 12
+S strongs:strong:H02142 6113 7
+S morph:strongMorph:TH8804 6120 6
+S word:strong:H04941:- 6127 13
+S strongs:strong:H04941 6140 7
+S word:strong:H05769:- 6148 6
+S strongs:strong:H05769 6154 7
+S word:strong:H03068:- 6163 6
+S divineName 6165 4
+S strongs:strong:H03068 6169 7
+S word:strong:H05162:strongMorph:TH8691 6178 18
+S strongs:strong:H05162 6196 7
+S morph:strongMorph:TH8691 6203 6
+S verseNumber:53 6218 2
+S word:strong:H02152:- 6220 6
+S strongs:strong:H02152 6226 7
+S word:strong:H0270:strongMorph:TH8804 6234 15
+S strongs:strong:H0270 6249 6
+S morph:strongMorph:TH8804 6255 6
+S word:strong:H07563:- 6262 29
+S strongs:strong:H07563 6291 7
+S word:strong:H05800:strongMorph:TH8802 6299 12
+S strongs:strong:H05800 6311 7
+S morph:strongMorph:TH8802 6318 6
+S word:strong:H08451:- 6325 7
+S strongs:strong:H08451 6332 7
+S verseNumber:54 6341 2
+S word:strong:H02706:- 6343 12
+S strongs:strong:H02706 6355 7
+S word:strong:H02158:- 6363 18
+S strongs:strong:H02158 6381 7
+S word:strong:H01004:- 6389 12
+S strongs:strong:H01004 6401 7
+S word:strong:H04033:- 6409 16
+S strongs:strong:H04033 6425 7
+S verseNumber:55 6434 2
+S word:strong:H02142:strongMorph:TH8804 6436 17
+S strongs:strong:H02142 6453 7
+S morph:strongMorph:TH8804 6460 6
+S word:strong:H08034:- 6467 8
+S strongs:strong:H08034 6475 7
+S word:strong:H03068:- 6484 6
+S divineName 6486 4
+S strongs:strong:H03068 6490 7
+S word:strong:H03915:- 6499 12
+S strongs:strong:H03915 6511 7
+S word:strong:H08104:strongMorph:TH8799 6520 13
+S strongs:strong:H08104 6533 7
+S morph:strongMorph:TH8799 6540 6
+S word:strong:H08451:- 6547 7
+S strongs:strong:H08451 6554 7
+S verseNumber:56 6563 2
+S word:strong:H05341:strongMorph:TH8804 6565 26
+S strongs:strong:H05341 6591 7
+S morph:strongMorph:TH8804 6598 6
+S word:strong:H06490:- 6605 12
+S strongs:strong:H06490 6617 7
+S italic 6626 8
+S block:qa 6626 8
+S verseNumber:57 6635 2
+S italic 6637 8
+S word:strong:H02506:- 6646 10
+S strongs:strong:H02506 6656 7
+S word:strong:H03068:- 6665 6
+S divineName 6667 4
+S strongs:strong:H03068 6671 7
+S word:strong:H0559:strongMorph:TH8804 6680 11
+S strongs:strong:H0559 6691 6
+S morph:strongMorph:TH8804 6697 6
+S word:strong:H08104:strongMorph:TH8800 6704 17
+S strongs:strong:H08104 6721 7
+S morph:strongMorph:TH8800 6728 6
+S word:strong:H01697:- 6735 9
+S strongs:strong:H01697 6744 7
+S verseNumber:58 6753 2
+S word:strong:H02470:strongMorph:TH8765 6755 11
+S strongs:strong:H02470 6766 7
+S morph:strongMorph:TH8765 6773 6
+S word:strong:H06440:- 6780 10
+S strongs:strong:H06440 6790 7
+S italic 6803 2
+S word:strong:H03820:- 6806 11
+S strongs:strong:H03820 6817 7
+S word:strong:H02603:strongMorph:TH8798 6826 11
+S strongs:strong:H02603 6837 7
+S morph:strongMorph:TH8798 6844 6
+S word:strong:H0565:- 6851 29
+S strongs:strong:H0565 6880 6
+S verseNumber:59 6888 2
+S word:strong:H02803:strongMorph:TH8765 6890 9
+S strongs:strong:H02803 6899 7
+S morph:strongMorph:TH8765 6906 6
+S word:strong:H01870:- 6913 10
+S strongs:strong:H01870 6923 7
+S word:strong:H07725:strongMorph:TH8686 6932 10
+S strongs:strong:H07725 6942 7
+S morph:strongMorph:TH8686 6949 6
+S word:strong:H07272:- 6956 7
+S strongs:strong:H07272 6963 7
+S word:strong:H05713:- 6971 20
+S strongs:strong:H05713 6991 7
+S verseNumber:60 7000 2
+S word:strong:H02363:strongMorph:TH8804 7002 12
+S strongs:strong:H02363 7014 7
+S morph:strongMorph:TH8804 7021 6
+S word:strong:H04102:strongMorph:TH8701 7029 11
+S strongs:strong:H04102 7040 7
+S morph:strongMorph:TH8701 7047 6
+S word:strong:H08104:strongMorph:TH8800 7054 11
+S strongs:strong:H08104 7065 7
+S morph:strongMorph:TH8800 7072 6
+S word:strong:H04687:- 7079 16
+S strongs:strong:H04687 7095 7
+S verseNumber:61 7104 2
+S word:strong:H02256:- 7106 9
+S strongs:strong:H02256 7115 7
+S word:strong:H07563:- 7123 13
+S strongs:strong:H07563 7136 7
+S word:strong:H05749:strongMorph:TH8765 7144 11
+S strongs:strong:H05749 7155 7
+S morph:strongMorph:TH8765 7162 6
+S italic 7173 3
+S word:strong:H07911:strongMorph:TH8804 7177 20
+S strongs:strong:H07911 7197 7
+S morph:strongMorph:TH8804 7204 6
+S word:strong:H08451:- 7211 7
+S strongs:strong:H08451 7218 7
+S verseNumber:62 7227 2
+S word:strong:H03915 strong:H02676:- 7229 11
+S strongs:strong:H03915 7240 7
+S strongs:strong:H02676 7247 7
+S word:strong:H06965:strongMorph:TH8799 7255 11
+S strongs:strong:H06965 7266 7
+S morph:strongMorph:TH8799 7273 6
+S word:strong:H03034:strongMorph:TH8687 7280 14
+S strongs:strong:H03034 7294 7
+S morph:strongMorph:TH8687 7301 6
+S word:strong:H06664:- 7308 34
+S strongs:strong:H06664 7342 7
+S word:strong:H04941:- 7350 9
+S strongs:strong:H04941 7359 7
+S verseNumber:63 7368 2
+S italic 7372 2
+S word:strong:H02270:- 7375 11
+S strongs:strong:H02270 7386 7
+S italic 7401 4
+S word:strong:H03372:strongMorph:TH8804 7406 9
+S strongs:strong:H03372 7415 7
+S morph:strongMorph:TH8804 7422 6
+S word:strong:H08104:strongMorph:TH8802 7429 27
+S strongs:strong:H08104 7456 7
+S morph:strongMorph:TH8802 7463 6
+S word:strong:H06490:- 7470 12
+S strongs:strong:H06490 7482 7
+S verseNumber:64 7491 2
+S word:strong:H0776:- 7493 9
+S strongs:strong:H0776 7502 6
+S word:strong:H03068:- 7510 6
+S divineName 7512 4
+S strongs:strong:H03068 7516 7
+S word:strong:H04390:strongMorph:TH8804 7525 7
+S strongs:strong:H04390 7532 7
+S morph:strongMorph:TH8804 7539 6
+S word:strong:H02617:- 7546 12
+S strongs:strong:H02617 7558 7
+S word:strong:H03925:strongMorph:TH8761 7567 5
+S strongs:strong:H03925 7572 7
+S morph:strongMorph:TH8761 7579 6
+S word:strong:H02706:- 7586 15
+S strongs:strong:H02706 7601 7
+S italic 7610 7
+S block:qa 7610 7
+S verseNumber:65 7618 2
+S word:strong:H06213:strongMorph:TH8804 7620 15
+S strongs:strong:H06213 7635 7
+S morph:strongMorph:TH8804 7642 6
+S word:strong:H02896:- 7649 4
+S strongs:strong:H02896 7653 7
+S word:strong:H05650:- 7661 16
+S strongs:strong:H05650 7677 7
+S word:strong:H03068:- 7686 6
+S divineName 7688 4
+S strongs:strong:H03068 7692 7
+S word:strong:H01697:- 7701 23
+S strongs:strong:H01697 7724 7
+S verseNumber:66 7733 2
+S word:strong:H03925:strongMorph:TH8761 7735 5
+S strongs:strong:H03925 7740 7
+S morph:strongMorph:TH8761 7747 6
+S word:strong:H02898:- 7754 7
+S strongs:strong:H02898 7761 7
+S word:strong:H02940:- 7769 8
+S strongs:strong:H02940 7777 7
+S word:strong:H01847:- 7785 13
+S strongs:strong:H01847 7798 7
+S word:strong:H0539:strongMorph:TH8689 7807 19
+S strongs:strong:H0539 7826 6
+S morph:strongMorph:TH8689 7832 6
+S word:strong:H04687:- 7839 16
+S strongs:strong:H04687 7855 7
+S verseNumber:67 7864 2
+S word:strong:H06031:strongMorph:TH8799 7866 22
+S strongs:strong:H06031 7888 7
+S morph:strongMorph:TH8799 7895 6
+S word:strong:H07683:strongMorph:TH8802 7902 13
+S strongs:strong:H07683 7915 7
+S morph:strongMorph:TH8802 7922 6
+S word:strong:H08104:strongMorph:TH8804 7930 19
+S strongs:strong:H08104 7949 7
+S morph:strongMorph:TH8804 7956 6
+S word:strong:H0565:- 7963 8
+S strongs:strong:H0565 7971 6
+S verseNumber:68 7979 2
+S italic 7986 3
+S word:strong:H02896:- 7990 4
+S strongs:strong:H02896 7994 7
+S word:strong:H02895:strongMorph:TH8688 8003 14
+S strongs:strong:H02895 8017 7
+S morph:strongMorph:TH8688 8024 6
+S word:strong:H03925:strongMorph:TH8761 8032 5
+S strongs:strong:H03925 8037 7
+S morph:strongMorph:TH8761 8044 6
+S word:strong:H02706:- 8051 15
+S strongs:strong:H02706 8066 7
+S verseNumber:69 8075 2
+S word:strong:H02086:- 8077 9
+S strongs:strong:H02086 8086 7
+S word:strong:H02950:strongMorph:TH8804 8094 11
+S strongs:strong:H02950 8105 7
+S morph:strongMorph:TH8804 8112 6
+S word:strong:H08267:- 8119 5
+S strongs:strong:H08267 8124 7
+S italic 8144 3
+S word:strong:H05341:strongMorph:TH8799 8148 11
+S strongs:strong:H05341 8159 7
+S morph:strongMorph:TH8799 8166 6
+S word:strong:H06490:- 8173 12
+S strongs:strong:H06490 8185 7
+S italic 8198 2
+S word:strong:H03820:- 8201 11
+S strongs:strong:H03820 8212 7
+S verseNumber:70 8221 2
+S word:strong:H03820:- 8223 11
+S strongs:strong:H03820 8234 7
+S word:strong:H02954:strongMorph:TH8804 8242 9
+S strongs:strong:H02954 8251 7
+S morph:strongMorph:TH8804 8258 6
+S word:strong:H02459:- 8265 9
+S strongs:strong:H02459 8274 7
+S italic 8283 3
+S word:strong:H08173:strongMorph:TH8773 8287 9
+S strongs:strong:H08173 8296 7
+S morph:strongMorph:TH8773 8303 6
+S word:strong:H08451:- 8310 10
+S strongs:strong:H08451 8320 7
+S verseNumber:71 8329 2
+S italic 8331 5
+S word:strong:H02896:- 8337 4
+S strongs:strong:H02896 8341 7
+S word:strong:H06031:strongMorph:TH8795 8349 33
+S strongs:strong:H06031 8382 7
+S morph:strongMorph:TH8795 8389 6
+S word:strong:H03925:strongMorph:TH8799 8397 18
+S strongs:strong:H03925 8415 7
+S morph:strongMorph:TH8799 8422 6
+S word:strong:H02706:- 8429 12
+S strongs:strong:H02706 8441 7
+S verseNumber:72 8450 2
+S word:strong:H08451:- 8452 7
+S strongs:strong:H08451 8459 7
+S word:strong:H06310:- 8467 12
+S strongs:strong:H06310 8479 7
+S italic 8487 2
+S word:strong:H02896:- 8490 6
+S strongs:strong:H02896 8496 7
+S word:strong:H0505:- 8504 22
+S strongs:strong:H0505 8526 6
+S word:strong:H02091:- 8533 7
+S strongs:strong:H02091 8540 7
+S word:strong:H03701:- 8548 10
+S strongs:strong:H03701 8558 7
+S italic 8567 6
+S block:qa 8567 6
+S verseNumber:73 8574 2
+S word:strong:H03027:- 8576 9
+S strongs:strong:H03027 8585 7
+S word:strong:H06213:strongMorph:TH8804 8593 9
+S strongs:strong:H06213 8602 7
+S morph:strongMorph:TH8804 8609 6
+S word:strong:H03559:strongMorph:TH8787 8616 16
+S strongs:strong:H03559 8632 7
+S morph:strongMorph:TH8787 8639 6
+S word:strong:H0995:strongMorph:TH8685 8646 25
+S strongs:strong:H0995 8671 6
+S morph:strongMorph:TH8685 8677 6
+S word:strong:H03925:strongMorph:TH8799 8685 16
+S strongs:strong:H03925 8701 7
+S morph:strongMorph:TH8799 8708 6
+S word:strong:H04687:- 8715 16
+S strongs:strong:H04687 8731 7
+S verseNumber:74 8740 2
+S word:strong:H03373:- 8742 14
+S strongs:strong:H03373 8756 7
+S word:strong:H08055:strongMorph:TH8799 8764 17
+S strongs:strong:H08055 8781 7
+S morph:strongMorph:TH8799 8788 6
+S word:strong:H07200:strongMorph:TH8799 8795 13
+S strongs:strong:H07200 8808 7
+S morph:strongMorph:TH8799 8815 6
+S word:strong:H03176:strongMorph:TH8765 8822 24
+S strongs:strong:H03176 8846 7
+S morph:strongMorph:TH8765 8853 6
+S word:strong:H01697:- 8860 11
+S strongs:strong:H01697 8871 7
+S verseNumber:75 8880 2
+S word:strong:H03045:strongMorph:TH8804 8882 6
+S strongs:strong:H03045 8888 7
+S morph:strongMorph:TH8804 8895 6
+S word:strong:H03068:- 8903 6
+S divineName 8905 4
+S strongs:strong:H03068 8909 7
+S word:strong:H04941:- 8918 18
+S strongs:strong:H04941 8936 7
+S italic 8944 3
+S word:strong:H06664:- 8948 5
+S strongs:strong:H06664 8953 7
+S italic 8966 4
+S word:strong:H0530:- 8971 20
+S strongs:strong:H0530 8991 6
+S word:strong:H06031:strongMorph:TH8765 8998 14
+S strongs:strong:H06031 9012 7
+S morph:strongMorph:TH8765 9019 6
+S verseNumber:76 9030 2
+S word:strong:H02617:- 9032 39
+S strongs:strong:H02617 9071 7
+S word:strong:H05162:strongMorph:TH8763 9079 17
+S strongs:strong:H05162 9096 7
+S morph:strongMorph:TH8763 9103 6
+S word:strong:H0565:- 9111 21
+S strongs:strong:H0565 9132 6
+S word:strong:H05650:- 9139 16
+S strongs:strong:H05650 9155 7
+S verseNumber:77 9164 2
+S word:strong:H07356:- 9166 22
+S strongs:strong:H07356 9188 7
+S word:strong:H0935:strongMorph:TH8799 9196 4
+S strongs:strong:H0935 9200 6
+S morph:strongMorph:TH8799 9206 6
+S word:strong:H02421:strongMorph:TH8799 9213 24
+S strongs:strong:H02421 9237 7
+S morph:strongMorph:TH8799 9244 6
+S word:strong:H08451:- 9252 11
+S strongs:strong:H08451 9263 7
+S italic 9271 2
+S word:strong:H08191:- 9274 10
+S strongs:strong:H08191 9284 7
+S verseNumber:78 9293 2
+S word:strong:H02086:- 9295 13
+S strongs:strong:H02086 9308 7
+S word:strong:H0954:strongMorph:TH8799 9316 10
+S strongs:strong:H0954 9326 6
+S morph:strongMorph:TH8799 9332 6
+S word:strong:H05791:strongMorph:TH8765 9340 25
+S strongs:strong:H05791 9365 7
+S morph:strongMorph:TH8765 9372 6
+S word:strong:H08267:- 9379 23
+S strongs:strong:H08267 9402 7
+S italic 9411 3
+S word:strong:H07878:strongMorph:TH8799 9415 15
+S strongs:strong:H07878 9430 7
+S morph:strongMorph:TH8799 9437 6
+S word:strong:H06490:- 9444 15
+S strongs:strong:H06490 9459 7
+S verseNumber:79 9468 2
+S word:strong:H03373:- 9470 19
+S strongs:strong:H03373 9489 7
+S word:strong:H07725:strongMorph:TH8799 9497 9
+S strongs:strong:H07725 9506 7
+S morph:strongMorph:TH8799 9513 6
+S word:strong:H03045 strong:H03045:strongMorph:TH8804 strongMorph:TH8675 strongMorph:TH8802 9520 34
+S strongs:strong:H03045 9554 7
+S strongs:strong:H03045 9561 7
+S morph:strongMorph:TH8804 9568 6
+S morph:strongMorph:TH8675 9574 6
+S morph:strongMorph:TH8802 9580 6
+S word:strong:H05713:- 9587 15
+S strongs:strong:H05713 9602 7
+S verseNumber:80 9611 2
+S word:strong:H03820:- 9613 12
+S strongs:strong:H03820 9625 7
+S word:strong:H08549:- 9633 8
+S strongs:strong:H08549 9641 7
+S word:strong:H02706:- 9649 15
+S strongs:strong:H02706 9664 7
+S word:strong:H0954:strongMorph:TH8799 9673 21
+S strongs:strong:H0954 9694 6
+S morph:strongMorph:TH8799 9700 6
+S italic 9708 7
+S block:qa 9708 7
+S verseNumber:81 9716 2
+S word:strong:H05315:- 9718 7
+S strongs:strong:H05315 9725 7
+S word:strong:H03615:strongMorph:TH8804 9733 8
+S strongs:strong:H03615 9741 7
+S morph:strongMorph:TH8804 9748 6
+S word:strong:H08668:- 9755 17
+S strongs:strong:H08668 9772 7
+S italic 9781 3
+S word:strong:H03176:strongMorph:TH8765 9785 6
+S strongs:strong:H03176 9791 7
+S morph:strongMorph:TH8765 9798 6
+S word:strong:H01697:- 9805 11
+S strongs:strong:H01697 9816 7
+S verseNumber:82 9825 2
+S word:strong:H05869:- 9827 9
+S strongs:strong:H05869 9836 7
+S word:strong:H03615:strongMorph:TH8804 9844 4
+S strongs:strong:H03615 9848 7
+S morph:strongMorph:TH8804 9855 6
+S word:strong:H0565:- 9862 12
+S strongs:strong:H0565 9874 6
+S word:strong:H0559:strongMorph:TH8800 9882 6
+S strongs:strong:H0559 9888 6
+S morph:strongMorph:TH8800 9894 6
+S word:strong:H05162:strongMorph:TH8762 9902 22
+S strongs:strong:H05162 9924 7
+S morph:strongMorph:TH8762 9931 6
+S verseNumber:83 9942 2
+S word:strong:H04997:- 9944 29
+S strongs:strong:H04997 9973 7
+S word:strong:H07008:- 9981 12
+S strongs:strong:H07008 9993 7
+S italic 10002 3
+S word:strong:H07911:strongMorph:TH8804 10006 15
+S strongs:strong:H07911 10021 7
+S morph:strongMorph:TH8804 10028 6
+S word:strong:H02706:- 10035 12
+S strongs:strong:H02706 10047 7
+S verseNumber:84 10056 2
+S italic 10067 3
+S word:strong:H03117:- 10071 8
+S strongs:strong:H03117 10079 7
+S word:strong:H05650:- 10087 14
+S strongs:strong:H05650 10101 7
+S word:strong:H06213:strongMorph:TH8799 10110 22
+S strongs:strong:H06213 10132 7
+S morph:strongMorph:TH8799 10139 6
+S word:strong:H04941:- 10146 8
+S strongs:strong:H04941 10154 7
+S word:strong:H07291:strongMorph:TH8802 10162 22
+S strongs:strong:H07291 10184 7
+S morph:strongMorph:TH8802 10191 6
+S verseNumber:85 10202 2
+S word:strong:H02086:- 10204 9
+S strongs:strong:H02086 10213 7
+S word:strong:H03738:strongMorph:TH8804 10221 11
+S strongs:strong:H03738 10232 7
+S morph:strongMorph:TH8804 10239 6
+S word:strong:H07882:- 10246 4
+S strongs:strong:H07882 10250 7
+S italic 10272 3
+S word:strong:H08451:- 10276 17
+S strongs:strong:H08451 10293 7
+S verseNumber:86 10302 2
+S word:strong:H04687:- 10304 20
+S strongs:strong:H04687 10324 7
+S italic 10332 3
+S word:strong:H0530:- 10336 8
+S strongs:strong:H0530 10344 6
+S word:strong:H07291:strongMorph:TH8804 10352 14
+S strongs:strong:H07291 10366 7
+S morph:strongMorph:TH8804 10373 6
+S word:strong:H08267:- 10380 13
+S strongs:strong:H08267 10393 7
+S word:strong:H05826:strongMorph:TH8798 10402 4
+S strongs:strong:H05826 10406 7
+S morph:strongMorph:TH8798 10413 6
+S verseNumber:87 10429 2
+S word:strong:H04592:- 10431 15
+S strongs:strong:H04592 10446 7
+S word:strong:H03615:strongMorph:TH8765 10454 8
+S strongs:strong:H03615 10462 7
+S morph:strongMorph:TH8765 10469 6
+S word:strong:H0776:- 10476 13
+S strongs:strong:H0776 10489 6
+S word:strong:H05800:strongMorph:TH8804 10497 13
+S strongs:strong:H05800 10510 7
+S morph:strongMorph:TH8804 10517 6
+S word:strong:H06490:- 10524 16
+S strongs:strong:H06490 10540 7
+S verseNumber:88 10549 2
+S word:strong:H02421:strongMorph:TH8761 10551 7
+S strongs:strong:H02421 10558 7
+S morph:strongMorph:TH8761 10565 6
+S word:strong:H02617:- 10572 27
+S strongs:strong:H02617 10599 7
+S word:strong:H08104:strongMorph:TH8799 10608 15
+S strongs:strong:H08104 10623 7
+S morph:strongMorph:TH8799 10630 6
+S word:strong:H05715:- 10637 13
+S strongs:strong:H05715 10650 7
+S word:strong:H06310:- 10658 12
+S strongs:strong:H06310 10670 7
+S italic 10679 8
+S block:qa 10679 8
+S verseNumber:89 10688 2
+S word:strong:H05769:- 10690 8
+S strongs:strong:H05769 10698 7
+S word:strong:H03068:- 10707 6
+S divineName 10709 4
+S strongs:strong:H03068 10713 7
+S word:strong:H01697:- 10722 8
+S strongs:strong:H01697 10730 7
+S word:strong:H05324:strongMorph:TH8737 10738 10
+S strongs:strong:H05324 10748 7
+S morph:strongMorph:TH8737 10755 6
+S word:strong:H08064:- 10762 9
+S strongs:strong:H08064 10771 7
+S verseNumber:90 10780 2
+S word:strong:H0530:- 10782 16
+S strongs:strong:H0530 10798 6
+S italic 10805 2
+S word:strong:H01755:- 10808 8
+S strongs:strong:H01755 10816 7
+S word:strong:H01755:- 10824 11
+S strongs:strong:H01755 10835 7
+S word:strong:H03559:strongMorph:TH8790 10844 21
+S strongs:strong:H03559 10865 7
+S morph:strongMorph:TH8790 10872 6
+S word:strong:H0776:- 10879 9
+S strongs:strong:H0776 10888 6
+S word:strong:H05975:strongMorph:TH8799 10896 14
+S strongs:strong:H05975 10910 7
+S morph:strongMorph:TH8799 10917 6
+S verseNumber:91 10925 2
+S word:strong:H05975:strongMorph:TH8804 10927 13
+S strongs:strong:H05975 10940 7
+S morph:strongMorph:TH8804 10947 6
+S word:strong:H03117:- 10954 8
+S strongs:strong:H03117 10962 7
+S word:strong:H04941:- 10970 29
+S strongs:strong:H04941 10999 7
+S italic 11016 3
+S word:strong:H05650:- 11020 12
+S strongs:strong:H05650 11032 7
+S verseNumber:92 11041 2
+S word:strong:H03884:- 11043 6
+S strongs:strong:H03884 11049 7
+S word:strong:H08451:- 11057 7
+S strongs:strong:H08451 11064 7
+S italic 11072 8
+S word:strong:H08191:- 11081 11
+S strongs:strong:H08191 11092 7
+S word:strong:H06:strongMorph:TH8804 11101 27
+S strongs:strong:H06 11128 4
+S morph:strongMorph:TH8804 11132 6
+S word:strong:H06040:- 11139 18
+S strongs:strong:H06040 11157 7
+S verseNumber:93 11166 2
+S word:strong:H05769:- 11168 12
+S strongs:strong:H05769 11180 7
+S word:strong:H07911:strongMorph:TH8799 11188 6
+S strongs:strong:H07911 11194 7
+S morph:strongMorph:TH8799 11201 6
+S word:strong:H06490:- 11208 12
+S strongs:strong:H06490 11220 7
+S word:strong:H02421:strongMorph:TH8765 11229 33
+S strongs:strong:H02421 11262 7
+S morph:strongMorph:TH8765 11269 6
+S verseNumber:94 11280 2
+S italic 11284 2
+S word:strong:H03467:strongMorph:TH8685 11287 11
+S strongs:strong:H03467 11298 7
+S morph:strongMorph:TH8685 11305 6
+S word:strong:H01875:strongMorph:TH8804 11312 21
+S strongs:strong:H01875 11333 7
+S morph:strongMorph:TH8804 11340 6
+S word:strong:H06490:- 11347 12
+S strongs:strong:H06490 11359 7
+S verseNumber:95 11368 2
+S word:strong:H07563:- 11370 10
+S strongs:strong:H07563 11380 7
+S word:strong:H06960:strongMorph:TH8765 11388 11
+S strongs:strong:H06960 11399 7
+S morph:strongMorph:TH8765 11406 6
+S word:strong:H06:strongMorph:TH8763 11413 17
+S strongs:strong:H06 11430 4
+S morph:strongMorph:TH8763 11434 6
+S italic 11445 3
+S word:strong:H0995:strongMorph:TH8709 11449 15
+S strongs:strong:H0995 11464 6
+S morph:strongMorph:TH8709 11470 6
+S word:strong:H05713:- 11477 15
+S strongs:strong:H05713 11492 7
+S verseNumber:96 11501 2
+S word:strong:H07200:strongMorph:TH8804 11503 11
+S strongs:strong:H07200 11514 7
+S morph:strongMorph:TH8804 11521 6
+S word:strong:H07093:- 11528 6
+S strongs:strong:H07093 11534 7
+S word:strong:H08502:- 11542 17
+S strongs:strong:H08502 11559 7
+S italic 11568 3
+S word:strong:H04687:- 11572 15
+S strongs:strong:H04687 11587 7
+S italic 11595 2
+S word:strong:H03966:- 11598 9
+S strongs:strong:H03966 11607 7
+S word:strong:H07342:- 11615 5
+S strongs:strong:H07342 11620 7
+S italic 11629 6
+S block:qa 11629 6
+S verseNumber:97 11636 2
+S word:strong:H0157:strongMorph:TH8804 11638 12
+S strongs:strong:H0157 11650 6
+S morph:strongMorph:TH8804 11656 6
+S word:strong:H08451:- 11663 7
+S strongs:strong:H08451 11670 7
+S italic 11682 2
+S word:strong:H07881:- 11685 13
+S strongs:strong:H07881 11698 7
+S word:strong:H03117:- 11706 11
+S strongs:strong:H03117 11717 7
+S verseNumber:98 11726 2
+S word:strong:H04687:- 11728 29
+S strongs:strong:H04687 11757 7
+S word:strong:H02449:strongMorph:TH8762 11765 18
+S strongs:strong:H02449 11783 7
+S morph:strongMorph:TH8762 11790 6
+S word:strong:H0341:strongMorph:TH8802 11797 17
+S strongs:strong:H0341 11814 6
+S morph:strongMorph:TH8802 11820 6
+S italic 11837 3
+S word:strong:H05769:- 11841 4
+S strongs:strong:H05769 11845 7
+S verseNumber:99 11862 2
+S word:strong:H07919:strongMorph:TH8689 11864 25
+S strongs:strong:H07919 11889 7
+S morph:strongMorph:TH8689 11896 6
+S word:strong:H03925:strongMorph:TH8764 11903 20
+S strongs:strong:H03925 11923 7
+S morph:strongMorph:TH8764 11930 6
+S word:strong:H05715:- 11938 19
+S strongs:strong:H05715 11957 7
+S italic 11965 3
+S word:strong:H07881:- 11969 13
+S strongs:strong:H07881 11982 7
+S verseNumber:100 11991 3
+S word:strong:H0995:strongMorph:TH8709 11994 12
+S strongs:strong:H0995 12006 6
+S morph:strongMorph:TH8709 12012 6
+S word:strong:H02205:- 12019 22
+S strongs:strong:H02205 12041 7
+S word:strong:H05341:strongMorph:TH8804 12050 14
+S strongs:strong:H05341 12064 7
+S morph:strongMorph:TH8804 12071 6
+S word:strong:H06490:- 12078 12
+S strongs:strong:H06490 12090 7
+S verseNumber:101 12099 3
+S word:strong:H03607:strongMorph:TH8804 12102 16
+S strongs:strong:H03607 12118 7
+S morph:strongMorph:TH8804 12125 6
+S word:strong:H07272:- 12132 7
+S strongs:strong:H07272 12139 7
+S word:strong:H07451:- 12147 15
+S strongs:strong:H07451 12162 7
+S word:strong:H0734:- 12170 3
+S strongs:strong:H0734 12173 6
+S word:strong:H08104:strongMorph:TH8799 12181 17
+S strongs:strong:H08104 12198 7
+S morph:strongMorph:TH8799 12205 6
+S word:strong:H01697:- 12212 8
+S strongs:strong:H01697 12220 7
+S verseNumber:102 12229 3
+S word:strong:H05493:strongMorph:TH8804 12232 19
+S strongs:strong:H05493 12251 7
+S morph:strongMorph:TH8804 12258 6
+S word:strong:H04941:- 12265 18
+S strongs:strong:H04941 12283 7
+S word:strong:H03384:strongMorph:TH8689 12292 20
+S strongs:strong:H03384 12312 7
+S morph:strongMorph:TH8689 12319 6
+S verseNumber:103 12330 3
+S word:strong:H04452:strongMorph:TH8738 12333 9
+S strongs:strong:H04452 12342 7
+S morph:strongMorph:TH8738 12349 6
+S word:strong:H0565:- 12356 13
+S strongs:strong:H0565 12369 6
+S word:strong:H02441:- 12376 13
+S strongs:strong:H02441 12389 7
+S italic 12398 3
+S italic 12403 7
+S word:strong:H01706:- 12411 10
+S strongs:strong:H01706 12421 7
+S word:strong:H06310:- 12429 11
+S strongs:strong:H06310 12440 7
+S verseNumber:104 12449 3
+S word:strong:H06490:- 12452 20
+S strongs:strong:H06490 12472 7
+S word:strong:H0995:strongMorph:TH8709 12480 19
+S strongs:strong:H0995 12499 6
+S morph:strongMorph:TH8709 12505 6
+S word:strong:H08130:strongMorph:TH8804 12513 16
+S strongs:strong:H08130 12529 7
+S morph:strongMorph:TH8804 12536 6
+S word:strong:H08267:- 12543 11
+S strongs:strong:H08267 12554 7
+S word:strong:H0734:- 12562 3
+S strongs:strong:H0734 12565 6
+S italic 12573 6
+S block:qa 12573 6
+S verseNumber:105 12580 3
+S word:strong:H01697:- 12583 8
+S strongs:strong:H01697 12591 7
+S italic 12599 2
+S word:strong:H05216:- 12602 6
+S strongs:strong:H05216 12608 7
+S word:strong:H07272:- 12616 12
+S strongs:strong:H07272 12628 7
+S word:strong:H0216:- 12637 11
+S strongs:strong:H0216 12648 6
+S word:strong:H05410:- 12655 12
+S strongs:strong:H05410 12667 7
+S verseNumber:106 12676 3
+S word:strong:H07650:strongMorph:TH8738 12679 12
+S strongs:strong:H07650 12691 7
+S morph:strongMorph:TH8738 12698 6
+S word:strong:H06965:strongMorph:TH8762 12706 18
+S strongs:strong:H06965 12724 7
+S morph:strongMorph:TH8762 12731 6
+S italic 12738 2
+S word:strong:H08104:strongMorph:TH8800 12742 16
+S strongs:strong:H08104 12758 7
+S morph:strongMorph:TH8800 12765 6
+S word:strong:H06664:- 12772 13
+S strongs:strong:H06664 12785 7
+S word:strong:H04941:- 12793 9
+S strongs:strong:H04941 12802 7
+S verseNumber:107 12811 3
+S word:strong:H06031:strongMorph:TH8738 12814 14
+S strongs:strong:H06031 12828 7
+S morph:strongMorph:TH8738 12835 6
+S word:strong:H03966:- 12842 9
+S strongs:strong:H03966 12851 7
+S word:strong:H02421:strongMorph:TH8761 12860 7
+S strongs:strong:H02421 12867 7
+S morph:strongMorph:TH8761 12874 6
+S word:strong:H03068:- 12881 10
+S divineName 12887 4
+S strongs:strong:H03068 12891 7
+S word:strong:H01697:- 12900 23
+S strongs:strong:H01697 12923 7
+S verseNumber:108 12932 3
+S word:strong:H07521:strongMorph:TH8798 12935 6
+S strongs:strong:H07521 12941 7
+S morph:strongMorph:TH8798 12948 6
+S word:strong:H05071:- 12956 38
+S strongs:strong:H05071 12994 7
+S word:strong:H06310:- 13002 11
+S strongs:strong:H06310 13013 7
+S word:strong:H03068:- 13022 6
+S divineName 13024 4
+S strongs:strong:H03068 13028 7
+S word:strong:H03925:strongMorph:TH8761 13037 9
+S strongs:strong:H03925 13046 7
+S morph:strongMorph:TH8761 13053 6
+S word:strong:H04941:- 13060 16
+S strongs:strong:H04941 13076 7
+S verseNumber:109 13085 3
+S word:strong:H05315:- 13088 7
+S strongs:strong:H05315 13095 7
+S italic 13103 2
+S word:strong:H08548:- 13106 11
+S strongs:strong:H08548 13117 7
+S word:strong:H03709:- 13125 10
+S strongs:strong:H03709 13135 7
+S word:strong:H07911:strongMorph:TH8804 13144 19
+S strongs:strong:H07911 13163 7
+S morph:strongMorph:TH8804 13170 6
+S word:strong:H08451:- 13177 7
+S strongs:strong:H08451 13184 7
+S verseNumber:110 13193 3
+S word:strong:H07563:- 13196 10
+S strongs:strong:H07563 13206 7
+S word:strong:H05414:strongMorph:TH8804 13214 9
+S strongs:strong:H05414 13223 7
+S morph:strongMorph:TH8804 13230 6
+S word:strong:H06341:- 13237 7
+S strongs:strong:H06341 13244 7
+S word:strong:H08582:strongMorph:TH8804 13252 19
+S strongs:strong:H08582 13271 7
+S morph:strongMorph:TH8804 13278 6
+S word:strong:H06490:- 13285 21
+S strongs:strong:H06490 13306 7
+S verseNumber:111 13315 3
+S word:strong:H05715:- 13318 15
+S strongs:strong:H05715 13333 7
+S word:strong:H05157:strongMorph:TH8804 13341 27
+S strongs:strong:H05157 13368 7
+S morph:strongMorph:TH8804 13375 6
+S word:strong:H05769:- 13382 8
+S strongs:strong:H05769 13390 7
+S italic 13408 3
+S word:strong:H08342:- 13412 13
+S strongs:strong:H08342 13425 7
+S word:strong:H03820:- 13433 11
+S strongs:strong:H03820 13444 7
+S verseNumber:112 13453 3
+S word:strong:H05186:strongMorph:TH8804 13456 15
+S strongs:strong:H05186 13471 7
+S morph:strongMorph:TH8804 13478 6
+S word:strong:H03820:- 13485 10
+S strongs:strong:H03820 13495 7
+S word:strong:H06213:strongMorph:TH8800 13503 10
+S strongs:strong:H06213 13513 7
+S morph:strongMorph:TH8800 13520 6
+S word:strong:H02706:- 13527 12
+S strongs:strong:H02706 13539 7
+S word:strong:H05769:- 13547 5
+S strongs:strong:H05769 13552 7
+S italic 13561 9
+S word:strong:H06118:- 13571 7
+S strongs:strong:H06118 13578 7
+S italic 13587 9
+S block:qa 13587 9
+S verseNumber:113 13597 3
+S word:strong:H08130:strongMorph:TH8804 13600 6
+S strongs:strong:H08130 13606 7
+S morph:strongMorph:TH8804 13613 6
+S italic 13620 4
+S word:strong:H05588:- 13625 8
+S strongs:strong:H05588 13633 7
+S word:strong:H08451:- 13642 11
+S strongs:strong:H08451 13653 7
+S word:strong:H0157:strongMorph:TH8804 13661 9
+S strongs:strong:H0157 13670 6
+S morph:strongMorph:TH8804 13676 6
+S verseNumber:114 13684 3
+S italic 13692 3
+S word:strong:H05643:- 13696 15
+S strongs:strong:H05643 13711 7
+S word:strong:H04043:- 13719 13
+S strongs:strong:H04043 13732 7
+S word:strong:H03176:strongMorph:TH8765 13741 6
+S strongs:strong:H03176 13747 7
+S morph:strongMorph:TH8765 13754 6
+S word:strong:H01697:- 13761 11
+S strongs:strong:H01697 13772 7
+S verseNumber:115 13781 3
+S word:strong:H05493:strongMorph:TH8798 13784 6
+S strongs:strong:H05493 13790 7
+S morph:strongMorph:TH8798 13797 6
+S word:strong:H07489:strongMorph:TH8688 13804 21
+S strongs:strong:H07489 13825 7
+S morph:strongMorph:TH8688 13832 6
+S word:strong:H05341:strongMorph:TH8799 13840 15
+S strongs:strong:H05341 13855 7
+S morph:strongMorph:TH8799 13862 6
+S word:strong:H04687:- 13869 16
+S strongs:strong:H04687 13885 7
+S word:strong:H0430:- 13893 9
+S strongs:strong:H0430 13902 6
+S verseNumber:116 13910 3
+S word:strong:H05564:strongMorph:TH8798 13913 6
+S strongs:strong:H05564 13919 7
+S morph:strongMorph:TH8798 13926 6
+S word:strong:H0565:- 13933 26
+S strongs:strong:H0565 13959 6
+S word:strong:H02421:strongMorph:TH8799 13967 15
+S strongs:strong:H02421 13982 7
+S morph:strongMorph:TH8799 13989 6
+S word:strong:H0954:strongMorph:TH8686 13997 25
+S strongs:strong:H0954 14022 6
+S morph:strongMorph:TH8686 14028 6
+S word:strong:H07664:- 14035 10
+S strongs:strong:H07664 14045 7
+S verseNumber:117 14054 3
+S word:strong:H05582:strongMorph:TH8798 14057 15
+S strongs:strong:H05582 14072 7
+S morph:strongMorph:TH8798 14079 6
+S word:strong:H03467:strongMorph:TH8735 14087 19
+S strongs:strong:H03467 14106 7
+S morph:strongMorph:TH8735 14113 6
+S word:strong:H08159:strongMorph:TH8799 14121 23
+S strongs:strong:H08159 14144 7
+S morph:strongMorph:TH8799 14151 6
+S word:strong:H02706:- 14158 17
+S strongs:strong:H02706 14175 7
+S word:strong:H08548:- 14183 11
+S strongs:strong:H08548 14194 7
+S verseNumber:118 14203 3
+S word:strong:H05541:strongMorph:TH8804 14206 22
+S strongs:strong:H05541 14228 7
+S morph:strongMorph:TH8804 14235 6
+S word:strong:H07686:strongMorph:TH8802 14242 17
+S strongs:strong:H07686 14259 7
+S morph:strongMorph:TH8802 14266 6
+S word:strong:H02706:- 14273 17
+S strongs:strong:H02706 14290 7
+S word:strong:H08649:- 14299 16
+S strongs:strong:H08649 14315 7
+S italic 14323 2
+S word:strong:H08267:- 14326 9
+S strongs:strong:H08267 14335 7
+S verseNumber:119 14344 3
+S word:strong:H07673:strongMorph:TH8689 14347 17
+S strongs:strong:H07673 14364 7
+S morph:strongMorph:TH8689 14371 6
+S word:strong:H07563:- 14378 14
+S strongs:strong:H07563 14392 7
+S word:strong:H0776:- 14400 12
+S strongs:strong:H0776 14412 6
+S italic 14419 4
+S word:strong:H05509:- 14424 5
+S strongs:strong:H05509 14429 7
+S word:strong:H0157:strongMorph:TH8804 14438 16
+S strongs:strong:H0157 14454 6
+S morph:strongMorph:TH8804 14460 6
+S word:strong:H05713:- 14467 15
+S strongs:strong:H05713 14482 7
+S verseNumber:120 14491 3
+S word:strong:H01320:- 14494 8
+S strongs:strong:H01320 14502 7
+S word:strong:H05568:strongMorph:TH8804 14510 9
+S strongs:strong:H05568 14519 7
+S morph:strongMorph:TH8804 14526 6
+S word:strong:H06343:- 14533 8
+S strongs:strong:H06343 14541 7
+S word:strong:H03372:strongMorph:TH8804 14549 24
+S strongs:strong:H03372 14573 7
+S morph:strongMorph:TH8804 14580 6
+S word:strong:H04941:- 14587 16
+S strongs:strong:H04941 14603 7
+S italic 14612 6
+S block:qa 14612 6
+S verseNumber:121 14619 3
+S word:strong:H06213:strongMorph:TH8804 14622 11
+S strongs:strong:H06213 14633 7
+S morph:strongMorph:TH8804 14640 6
+S word:strong:H04941:- 14647 8
+S strongs:strong:H04941 14655 7
+S word:strong:H06664:- 14663 11
+S strongs:strong:H06664 14674 7
+S word:strong:H03240:strongMorph:TH8686 14683 5
+S strongs:strong:H03240 14688 7
+S morph:strongMorph:TH8686 14695 6
+S word:strong:H06231:strongMorph:TH8802 14702 25
+S strongs:strong:H06231 14727 7
+S morph:strongMorph:TH8802 14734 6
+S verseNumber:122 14742 3
+S word:strong:H06148:strongMorph:TH8798 14745 9
+S strongs:strong:H06148 14754 7
+S morph:strongMorph:TH8798 14761 6
+S word:strong:H05650:- 14768 15
+S strongs:strong:H05650 14783 7
+S word:strong:H02896:- 14791 8
+S strongs:strong:H02896 14799 7
+S word:strong:H02086:- 14808 17
+S strongs:strong:H02086 14825 7
+S word:strong:H06231:strongMorph:TH8799 14833 7
+S strongs:strong:H06231 14840 7
+S morph:strongMorph:TH8799 14847 6
+S verseNumber:123 14858 3
+S word:strong:H05869:- 14861 9
+S strongs:strong:H05869 14870 7
+S word:strong:H03615:strongMorph:TH8804 14878 4
+S strongs:strong:H03615 14882 7
+S morph:strongMorph:TH8804 14889 6
+S word:strong:H03444:- 14896 17
+S strongs:strong:H03444 14913 7
+S word:strong:H0565:- 14922 16
+S strongs:strong:H0565 14938 6
+S word:strong:H06664:- 14945 20
+S strongs:strong:H06664 14965 7
+S verseNumber:124 14974 3
+S word:strong:H06213:strongMorph:TH8798 14977 4
+S strongs:strong:H06213 14981 7
+S morph:strongMorph:TH8798 14988 6
+S word:strong:H05650:- 14995 16
+S strongs:strong:H05650 15011 7
+S word:strong:H02617:- 15019 24
+S strongs:strong:H02617 15043 7
+S word:strong:H03925:strongMorph:TH8761 15052 9
+S strongs:strong:H03925 15061 7
+S morph:strongMorph:TH8761 15068 6
+S word:strong:H02706:- 15075 15
+S strongs:strong:H02706 15090 7
+S verseNumber:125 15099 3
+S italic 15104 2
+S word:strong:H05650:- 15107 11
+S strongs:strong:H05650 15118 7
+S word:strong:H0995:strongMorph:TH8685 15127 21
+S strongs:strong:H0995 15148 6
+S morph:strongMorph:TH8685 15154 6
+S word:strong:H03045:strongMorph:TH8799 15162 15
+S strongs:strong:H03045 15177 7
+S morph:strongMorph:TH8799 15184 6
+S word:strong:H05713:- 15191 15
+S strongs:strong:H05713 15206 7
+S verseNumber:126 15215 3
+S italic 15218 5
+S word:strong:H06256:- 15224 4
+S strongs:strong:H06256 15228 7
+S italic 15240 4
+S divineName 15246 4
+S word:strong:H03068:- 15246 4
+S strongs:strong:H03068 15250 7
+S word:strong:H06213:strongMorph:TH8800 15259 7
+S strongs:strong:H06213 15266 7
+S morph:strongMorph:TH8800 15273 6
+S italic 15281 3
+S word:strong:H06565:strongMorph:TH8689 15285 19
+S strongs:strong:H06565 15304 7
+S morph:strongMorph:TH8689 15311 6
+S word:strong:H08451:- 15318 7
+S strongs:strong:H08451 15325 7
+S verseNumber:127 15334 3
+S word:strong:H0157:strongMorph:TH8804 15337 16
+S strongs:strong:H0157 15353 6
+S morph:strongMorph:TH8804 15359 6
+S word:strong:H04687:- 15366 16
+S strongs:strong:H04687 15382 7
+S word:strong:H02091:- 15390 10
+S strongs:strong:H02091 15400 7
+S word:strong:H06337:- 15409 20
+S strongs:strong:H06337 15429 7
+S verseNumber:128 15438 3
+S italic 15464 3
+S word:strong:H06490:- 15468 8
+S strongs:strong:H06490 15476 7
+S italic 15484 10
+S italic 15499 12
+S word:strong:H03474:strongMorph:TH8765 15512 5
+S strongs:strong:H03474 15517 7
+S morph:strongMorph:TH8765 15524 6
+S italic 15532 3
+S word:strong:H08130:strongMorph:TH8804 15536 6
+S strongs:strong:H08130 15542 7
+S morph:strongMorph:TH8804 15549 6
+S word:strong:H08267:- 15556 11
+S strongs:strong:H08267 15567 7
+S word:strong:H0734:- 15575 3
+S strongs:strong:H0734 15578 6
+S italic 15586 5
+S block:qa 15586 5
+S verseNumber:129 15592 3
+S word:strong:H05715:- 15595 15
+S strongs:strong:H05715 15610 7
+S italic 15618 3
+S word:strong:H06382:- 15622 9
+S strongs:strong:H06382 15631 7
+S word:strong:H05315:- 15640 22
+S strongs:strong:H05315 15662 7
+S word:strong:H05341:strongMorph:TH8804 15670 4
+S strongs:strong:H05341 15674 7
+S morph:strongMorph:TH8804 15681 6
+S verseNumber:130 15694 3
+S word:strong:H06608:- 15697 12
+S strongs:strong:H06608 15709 7
+S word:strong:H01697:- 15717 12
+S strongs:strong:H01697 15729 7
+S word:strong:H0215:strongMorph:TH8686 15737 12
+S strongs:strong:H0215 15749 6
+S morph:strongMorph:TH8686 15755 6
+S word:strong:H0995:strongMorph:TH8688 15763 23
+S strongs:strong:H0995 15786 6
+S morph:strongMorph:TH8688 15792 6
+S word:strong:H06612:- 15799 15
+S strongs:strong:H06612 15814 7
+S verseNumber:131 15823 3
+S word:strong:H06473:strongMorph:TH8804 15826 8
+S strongs:strong:H06473 15834 7
+S morph:strongMorph:TH8804 15841 6
+S word:strong:H06310:- 15848 8
+S strongs:strong:H06310 15856 7
+S word:strong:H07602:strongMorph:TH8799 15865 10
+S strongs:strong:H07602 15875 7
+S morph:strongMorph:TH8799 15882 6
+S word:strong:H02968:strongMorph:TH8804 15890 12
+S strongs:strong:H02968 15902 7
+S morph:strongMorph:TH8804 15909 6
+S word:strong:H04687:- 15916 20
+S strongs:strong:H04687 15936 7
+S verseNumber:132 15945 3
+S word:strong:H06437:strongMorph:TH8798 15948 4
+S strongs:strong:H06437 15952 7
+S morph:strongMorph:TH8798 15959 6
+S word:strong:H02603:strongMorph:TH8798 15966 29
+S strongs:strong:H02603 15995 7
+S morph:strongMorph:TH8798 16002 6
+S word:strong:H04941:- 16009 22
+S strongs:strong:H04941 16031 7
+S word:strong:H0157:strongMorph:TH8802 16039 26
+S strongs:strong:H0157 16065 6
+S morph:strongMorph:TH8802 16071 6
+S word:strong:H08034:- 16078 8
+S strongs:strong:H08034 16086 7
+S verseNumber:133 16095 3
+S word:strong:H03559:strongMorph:TH8685 16098 5
+S strongs:strong:H03559 16103 7
+S morph:strongMorph:TH8685 16110 6
+S word:strong:H06471:- 16117 8
+S strongs:strong:H06471 16125 7
+S word:strong:H0565:- 16133 11
+S strongs:strong:H0565 16144 6
+S word:strong:H0205:- 16152 24
+S strongs:strong:H0205 16176 6
+S word:strong:H07980:strongMorph:TH8686 16183 13
+S strongs:strong:H07980 16196 7
+S morph:strongMorph:TH8686 16203 6
+S verseNumber:134 16219 3
+S word:strong:H06299:strongMorph:TH8798 16222 7
+S strongs:strong:H06299 16229 7
+S morph:strongMorph:TH8798 16236 6
+S word:strong:H06233:- 16243 22
+S strongs:strong:H06233 16265 7
+S word:strong:H0120:- 16273 6
+S strongs:strong:H0120 16279 6
+S word:strong:H08104:strongMorph:TH8799 16287 14
+S strongs:strong:H08104 16301 7
+S morph:strongMorph:TH8799 16308 6
+S word:strong:H06490:- 16315 12
+S strongs:strong:H06490 16327 7
+S verseNumber:135 16336 3
+S word:strong:H06440:- 16339 13
+S strongs:strong:H06440 16352 7
+S word:strong:H0215:strongMorph:TH8685 16360 8
+S strongs:strong:H0215 16368 6
+S morph:strongMorph:TH8685 16374 6
+S word:strong:H05650:- 16381 16
+S strongs:strong:H05650 16397 7
+S word:strong:H03925:strongMorph:TH8761 16406 9
+S strongs:strong:H03925 16415 7
+S morph:strongMorph:TH8761 16422 6
+S word:strong:H02706:- 16429 15
+S strongs:strong:H02706 16444 7
+S verseNumber:136 16453 3
+S word:strong:H06388:- 16456 6
+S strongs:strong:H06388 16462 7
+S word:strong:H04325:- 16470 9
+S strongs:strong:H04325 16479 7
+S word:strong:H03381:strongMorph:TH8804 16487 8
+S strongs:strong:H03381 16495 7
+S morph:strongMorph:TH8804 16502 6
+S word:strong:H05869:- 16509 9
+S strongs:strong:H05869 16518 7
+S word:strong:H08104:strongMorph:TH8804 16527 17
+S strongs:strong:H08104 16544 7
+S morph:strongMorph:TH8804 16551 6
+S word:strong:H08451:- 16558 11
+S strongs:strong:H08451 16569 7
+S italic 16578 9
+S block:qa 16578 9
+S verseNumber:137 16588 3
+S word:strong:H06662:- 16591 9
+S strongs:strong:H06662 16600 7
+S italic 16608 3
+S word:strong:H03068:- 16612 12
+S divineName 16620 4
+S strongs:strong:H03068 16624 7
+S word:strong:H03477:- 16633 11
+S strongs:strong:H03477 16644 7
+S italic 16652 3
+S word:strong:H04941:- 16656 13
+S strongs:strong:H04941 16669 7
+S verseNumber:138 16678 3
+S word:strong:H05713:- 16681 15
+S strongs:strong:H05713 16696 7
+S italic 16704 4
+S word:strong:H06680:strongMorph:TH8765 16709 19
+S strongs:strong:H06680 16728 7
+S morph:strongMorph:TH8765 16735 6
+S italic 16742 3
+S word:strong:H06664:- 16746 9
+S strongs:strong:H06664 16755 7
+S word:strong:H03966:- 16763 8
+S strongs:strong:H03966 16771 7
+S word:strong:H0530:- 16779 8
+S strongs:strong:H0530 16787 6
+S verseNumber:139 16795 3
+S word:strong:H07068:- 16798 7
+S strongs:strong:H07068 16805 7
+S word:strong:H06789:strongMorph:TH8765 16813 13
+S strongs:strong:H06789 16826 7
+S morph:strongMorph:TH8765 16833 6
+S word:strong:H06862:- 16840 24
+S strongs:strong:H06862 16864 7
+S word:strong:H07911:strongMorph:TH8804 16872 14
+S strongs:strong:H07911 16886 7
+S morph:strongMorph:TH8804 16893 6
+S word:strong:H01697:- 16900 9
+S strongs:strong:H01697 16909 7
+S verseNumber:140 16918 3
+S word:strong:H0565:- 16921 8
+S strongs:strong:H0565 16929 6
+S italic 16936 2
+S word:strong:H03966:- 16939 4
+S strongs:strong:H03966 16943 7
+S word:strong:H06884:strongMorph:TH8803 16951 4
+S strongs:strong:H06884 16955 7
+S morph:strongMorph:TH8803 16962 6
+S word:strong:H05650:- 16970 21
+S strongs:strong:H05650 16991 7
+S word:strong:H0157:strongMorph:TH8804 16999 6
+S strongs:strong:H0157 17005 6
+S morph:strongMorph:TH8804 17011 6
+S verseNumber:141 17022 3
+S italic 17027 2
+S word:strong:H06810:- 17030 5
+S strongs:strong:H06810 17035 7
+S word:strong:H0959:strongMorph:TH8737 17043 12
+S strongs:strong:H0959 17055 6
+S morph:strongMorph:TH8737 17061 6
+S italic 17069 3
+S word:strong:H07911:strongMorph:TH8804 17073 15
+S strongs:strong:H07911 17088 7
+S morph:strongMorph:TH8804 17095 6
+S word:strong:H06490:- 17102 12
+S strongs:strong:H06490 17114 7
+S verseNumber:142 17123 3
+S word:strong:H06666:- 17126 17
+S strongs:strong:H06666 17143 7
+S italic 17151 2
+S word:strong:H05769:- 17154 14
+S strongs:strong:H05769 17168 7
+S word:strong:H06664:- 17176 13
+S strongs:strong:H06664 17189 7
+S word:strong:H08451:- 17198 11
+S strongs:strong:H08451 17209 7
+S italic 17217 2
+S word:strong:H0571:- 17220 9
+S strongs:strong:H0571 17229 6
+S verseNumber:143 17237 3
+S word:strong:H06862:- 17240 7
+S strongs:strong:H06862 17247 7
+S word:strong:H04689:- 17255 11
+S strongs:strong:H04689 17266 7
+S word:strong:H04672:strongMorph:TH8804 17274 15
+S strongs:strong:H04672 17289 7
+S morph:strongMorph:TH8804 17296 6
+S italic 17310 3
+S word:strong:H04687:- 17314 16
+S strongs:strong:H04687 17330 7
+S italic 17338 3
+S word:strong:H08191:- 17342 11
+S strongs:strong:H08191 17353 7
+S verseNumber:144 17362 3
+S word:strong:H06664:- 17365 17
+S strongs:strong:H06664 17382 7
+S word:strong:H05715:- 17390 18
+S strongs:strong:H05715 17408 7
+S italic 17416 2
+S word:strong:H05769:- 17419 11
+S strongs:strong:H05769 17430 7
+S word:strong:H0995:strongMorph:TH8685 17439 21
+S strongs:strong:H0995 17460 6
+S morph:strongMorph:TH8685 17466 6
+S word:strong:H02421:strongMorph:TH8799 17474 16
+S strongs:strong:H02421 17490 7
+S morph:strongMorph:TH8799 17497 6
+S italic 17505 7
+S block:qa 17505 7
+S verseNumber:145 17513 3
+S word:strong:H07121:strongMorph:TH8804 17516 7
+S strongs:strong:H07121 17523 7
+S morph:strongMorph:TH8804 17530 6
+S italic 17542 2
+S word:strong:H03820:- 17545 11
+S strongs:strong:H03820 17556 7
+S word:strong:H06030:strongMorph:TH8798 17565 4
+S strongs:strong:H06030 17569 7
+S morph:strongMorph:TH8798 17576 6
+S word:strong:H03068:- 17583 10
+S divineName 17589 4
+S strongs:strong:H03068 17593 7
+S word:strong:H05341:strongMorph:TH8799 17602 11
+S strongs:strong:H05341 17613 7
+S morph:strongMorph:TH8799 17620 6
+S word:strong:H02706:- 17627 12
+S strongs:strong:H02706 17639 7
+S verseNumber:146 17648 3
+S word:strong:H07121:strongMorph:TH8804 17651 7
+S strongs:strong:H07121 17658 7
+S morph:strongMorph:TH8804 17665 6
+S word:strong:H03467:strongMorph:TH8685 17672 15
+S strongs:strong:H03467 17687 7
+S morph:strongMorph:TH8685 17694 6
+S word:strong:H08104:strongMorph:TH8799 17701 20
+S strongs:strong:H08104 17721 7
+S morph:strongMorph:TH8799 17728 6
+S word:strong:H05713:- 17735 15
+S strongs:strong:H05713 17750 7
+S verseNumber:147 17759 3
+S word:strong:H06923:strongMorph:TH8765 17762 11
+S strongs:strong:H06923 17773 7
+S morph:strongMorph:TH8765 17780 6
+S word:strong:H05399:- 17787 26
+S strongs:strong:H05399 17813 7
+S word:strong:H07768:strongMorph:TH8762 17822 9
+S strongs:strong:H07768 17831 7
+S morph:strongMorph:TH8762 17838 6
+S word:strong:H03176:strongMorph:TH8765 17846 7
+S strongs:strong:H03176 17853 7
+S morph:strongMorph:TH8765 17860 6
+S word:strong:H01697:- 17867 11
+S strongs:strong:H01697 17878 7
+S verseNumber:148 17887 3
+S word:strong:H05869:- 17890 9
+S strongs:strong:H05869 17899 7
+S word:strong:H06923:strongMorph:TH8765 17907 7
+S strongs:strong:H06923 17914 7
+S morph:strongMorph:TH8765 17921 6
+S italic 17932 5
+S word:strong:H0821:- 17938 7
+S strongs:strong:H0821 17945 6
+S word:strong:H07878:strongMorph:TH8800 17953 21
+S strongs:strong:H07878 17974 7
+S morph:strongMorph:TH8800 17981 6
+S word:strong:H0565:- 17988 11
+S strongs:strong:H0565 17999 6
+S verseNumber:149 18007 3
+S word:strong:H08085:strongMorph:TH8798 18010 4
+S strongs:strong:H08085 18014 7
+S morph:strongMorph:TH8798 18021 6
+S word:strong:H06963:- 18028 8
+S strongs:strong:H06963 18036 7
+S word:strong:H02617:- 18044 33
+S strongs:strong:H02617 18077 7
+S word:strong:H03068:- 18086 6
+S divineName 18088 4
+S strongs:strong:H03068 18092 7
+S word:strong:H02421:strongMorph:TH8761 18101 7
+S strongs:strong:H02421 18108 7
+S morph:strongMorph:TH8761 18115 6
+S word:strong:H04941:- 18122 28
+S strongs:strong:H04941 18150 7
+S verseNumber:150 18159 3
+S word:strong:H07126:strongMorph:TH8804 18162 14
+S strongs:strong:H07126 18176 7
+S morph:strongMorph:TH8804 18183 6
+S word:strong:H07291:strongMorph:TH8802 18190 11
+S strongs:strong:H07291 18201 7
+S morph:strongMorph:TH8802 18208 6
+S word:strong:H02154:- 18215 14
+S strongs:strong:H02154 18229 7
+S word:strong:H07368:strongMorph:TH8804 18238 12
+S strongs:strong:H07368 18250 7
+S morph:strongMorph:TH8804 18257 6
+S word:strong:H08451:- 18264 12
+S strongs:strong:H08451 18276 7
+S verseNumber:151 18285 3
+S italic 18293 3
+S word:strong:H07138:- 18297 4
+S strongs:strong:H07138 18301 7
+S word:strong:H03068:- 18310 6
+S divineName 18312 4
+S strongs:strong:H03068 18316 7
+S word:strong:H04687:- 18325 24
+S strongs:strong:H04687 18349 7
+S italic 18357 3
+S word:strong:H0571:- 18361 5
+S strongs:strong:H0571 18366 6
+S verseNumber:152 18374 3
+S word:strong:H05713:- 18377 26
+S strongs:strong:H05713 18403 7
+S word:strong:H03045:strongMorph:TH8804 18412 12
+S strongs:strong:H03045 18424 7
+S morph:strongMorph:TH8804 18431 6
+S word:strong:H06924:- 18438 6
+S strongs:strong:H06924 18444 7
+S word:strong:H03245:strongMorph:TH8804 18452 22
+S strongs:strong:H03245 18474 7
+S morph:strongMorph:TH8804 18481 6
+S word:strong:H05769:- 18488 13
+S strongs:strong:H05769 18501 7
+S italic 18510 7
+S block:qa 18510 7
+S verseNumber:153 18518 3
+S word:strong:H07200:strongMorph:TH8798 18521 8
+S strongs:strong:H07200 18529 7
+S morph:strongMorph:TH8798 18536 6
+S word:strong:H06040:- 18543 15
+S strongs:strong:H06040 18558 7
+S word:strong:H02502:strongMorph:TH8761 18567 11
+S strongs:strong:H02502 18578 7
+S morph:strongMorph:TH8761 18585 6
+S word:strong:H07911:strongMorph:TH8804 18592 23
+S strongs:strong:H07911 18615 7
+S morph:strongMorph:TH8804 18622 6
+S word:strong:H08451:- 18629 7
+S strongs:strong:H08451 18636 7
+S verseNumber:154 18645 3
+S word:strong:H07378:strongMorph:TH8798 18648 5
+S strongs:strong:H07378 18653 7
+S morph:strongMorph:TH8798 18660 6
+S word:strong:H07379:- 18667 8
+S strongs:strong:H07379 18675 7
+S word:strong:H01350:strongMorph:TH8798 18684 11
+S strongs:strong:H01350 18695 7
+S morph:strongMorph:TH8798 18702 6
+S word:strong:H02421:strongMorph:TH8761 18709 11
+S strongs:strong:H02421 18720 7
+S morph:strongMorph:TH8761 18727 6
+S word:strong:H0565:- 18734 24
+S strongs:strong:H0565 18758 6
+S verseNumber:155 18766 3
+S word:strong:H03444:- 18769 9
+S strongs:strong:H03444 18778 7
+S italic 18786 2
+S word:strong:H07350:- 18789 3
+S strongs:strong:H07350 18792 7
+S word:strong:H07563:- 18800 15
+S strongs:strong:H07563 18815 7
+S word:strong:H01875:strongMorph:TH8804 18824 13
+S strongs:strong:H01875 18837 7
+S morph:strongMorph:TH8804 18844 6
+S word:strong:H02706:- 18851 16
+S strongs:strong:H02706 18867 7
+S verseNumber:156 18876 3
+S word:strong:H07227:- 18879 5
+S strongs:strong:H07227 18884 7
+S italic 18892 3
+S word:strong:H07356:- 18896 18
+S strongs:strong:H07356 18914 7
+S word:strong:H03068:- 18923 6
+S divineName 18925 4
+S strongs:strong:H03068 18929 7
+S word:strong:H02421:strongMorph:TH8761 18938 7
+S strongs:strong:H02421 18945 7
+S morph:strongMorph:TH8761 18952 6
+S word:strong:H04941:- 18959 29
+S strongs:strong:H04941 18988 7
+S verseNumber:157 18997 3
+S word:strong:H07227:- 19000 4
+S strongs:strong:H07227 19004 7
+S italic 19012 3
+S word:strong:H07291:strongMorph:TH8802 19016 14
+S strongs:strong:H07291 19030 7
+S morph:strongMorph:TH8802 19037 6
+S word:strong:H06862:- 19044 16
+S strongs:strong:H06862 19060 7
+S italic 19069 3
+S word:strong:H05186:strongMorph:TH8804 19073 16
+S strongs:strong:H05186 19089 7
+S morph:strongMorph:TH8804 19096 6
+S word:strong:H05715:- 19103 20
+S strongs:strong:H05715 19123 7
+S verseNumber:158 19132 3
+S word:strong:H07200:strongMorph:TH8804 19135 8
+S strongs:strong:H07200 19143 7
+S morph:strongMorph:TH8804 19150 6
+S word:strong:H0898:strongMorph:TH8802 19157 17
+S strongs:strong:H0898 19174 6
+S morph:strongMorph:TH8802 19180 6
+S word:strong:H06962:strongMorph:TH8709 19188 15
+S strongs:strong:H06962 19203 7
+S morph:strongMorph:TH8709 19210 6
+S word:strong:H08104:strongMorph:TH8804 19218 17
+S strongs:strong:H08104 19235 7
+S morph:strongMorph:TH8804 19242 6
+S word:strong:H0565:- 19249 12
+S strongs:strong:H0565 19261 6
+S verseNumber:159 19269 3
+S word:strong:H07200:strongMorph:TH8798 19272 8
+S strongs:strong:H07200 19280 7
+S morph:strongMorph:TH8798 19287 6
+S word:strong:H0157:strongMorph:TH8804 19294 10
+S strongs:strong:H0157 19304 6
+S morph:strongMorph:TH8804 19310 6
+S word:strong:H06490:- 19317 12
+S strongs:strong:H06490 19329 7
+S word:strong:H02421:strongMorph:TH8761 19338 7
+S strongs:strong:H02421 19345 7
+S morph:strongMorph:TH8761 19352 6
+S word:strong:H03068:- 19359 10
+S divineName 19365 4
+S strongs:strong:H03068 19369 7
+S word:strong:H02617:- 19378 31
+S strongs:strong:H02617 19409 7
+S verseNumber:160 19418 3
+S word:strong:H01697:- 19421 8
+S strongs:strong:H01697 19429 7
+S italic 19437 2
+S word:strong:H0571:- 19440 4
+S strongs:strong:H0571 19444 6
+S italic 19451 4
+S word:strong:H07218:- 19456 13
+S strongs:strong:H07218 19469 7
+S word:strong:H06664:- 19478 30
+S strongs:strong:H06664 19508 7
+S word:strong:H04941:- 19516 9
+S strongs:strong:H04941 19525 7
+S italic 19533 8
+S word:strong:H05769:- 19542 8
+S strongs:strong:H05769 19550 7
+S italic 19559 8
+S block:qa 19559 8
+S verseNumber:161 19568 3
+S word:strong:H08269:- 19571 7
+S strongs:strong:H08269 19578 7
+S word:strong:H07291:strongMorph:TH8804 19586 15
+S strongs:strong:H07291 19601 7
+S morph:strongMorph:TH8804 19608 6
+S word:strong:H02600:- 19615 18
+S strongs:strong:H02600 19633 7
+S word:strong:H03820:- 19642 12
+S strongs:strong:H03820 19654 7
+S word:strong:H06342:strongMorph:TH8804 19662 15
+S strongs:strong:H06342 19677 7
+S morph:strongMorph:TH8804 19684 6
+S word:strong:H01697:- 19691 11
+S strongs:strong:H01697 19702 7
+S verseNumber:162 19711 3
+S word:strong:H07797:strongMorph:TH8801 19714 9
+S strongs:strong:H07797 19723 7
+S morph:strongMorph:TH8801 19730 6
+S word:strong:H0565:- 19737 11
+S strongs:strong:H0565 19748 6
+S word:strong:H04672:strongMorph:TH8802 19756 19
+S strongs:strong:H04672 19775 7
+S morph:strongMorph:TH8802 19782 6
+S word:strong:H07227:- 19789 5
+S strongs:strong:H07227 19794 7
+S word:strong:H07998:- 19802 5
+S strongs:strong:H07998 19807 7
+S verseNumber:163 19816 3
+S word:strong:H08130:strongMorph:TH8804 19819 6
+S strongs:strong:H08130 19825 7
+S morph:strongMorph:TH8804 19832 6
+S word:strong:H08581:strongMorph:TH8762 19839 9
+S strongs:strong:H08581 19848 7
+S morph:strongMorph:TH8762 19855 6
+S word:strong:H08267:- 19862 5
+S strongs:strong:H08267 19867 7
+S italic 19876 3
+S word:strong:H08451:- 19880 7
+S strongs:strong:H08451 19887 7
+S word:strong:H0157:strongMorph:TH8804 19895 9
+S strongs:strong:H0157 19904 6
+S morph:strongMorph:TH8804 19910 6
+S verseNumber:164 19918 3
+S word:strong:H07651:- 19921 11
+S strongs:strong:H07651 19932 7
+S word:strong:H03117:- 19940 5
+S strongs:strong:H03117 19945 7
+S word:strong:H01984:strongMorph:TH8765 19953 11
+S strongs:strong:H01984 19964 7
+S morph:strongMorph:TH8765 19971 6
+S word:strong:H06664:- 19978 29
+S strongs:strong:H06664 20007 7
+S word:strong:H04941:- 20015 9
+S strongs:strong:H04941 20024 7
+S verseNumber:165 20033 3
+S word:strong:H07227:- 20036 5
+S strongs:strong:H07227 20041 7
+S word:strong:H07965:- 20049 5
+S strongs:strong:H07965 20054 7
+S word:strong:H0157:strongMorph:TH8802 20062 20
+S strongs:strong:H0157 20082 6
+S morph:strongMorph:TH8802 20088 6
+S word:strong:H08451:- 20095 7
+S strongs:strong:H08451 20102 7
+S word:strong:H04383:- 20111 24
+S strongs:strong:H04383 20135 7
+S verseNumber:166 20149 3
+S divineName 20152 4
+S word:strong:H03068:- 20152 4
+S strongs:strong:H03068 20156 7
+S word:strong:H07663:strongMorph:TH8765 20165 12
+S strongs:strong:H07663 20177 7
+S morph:strongMorph:TH8765 20184 6
+S word:strong:H03444:- 20191 17
+S strongs:strong:H03444 20208 7
+S word:strong:H06213:strongMorph:TH8804 20217 8
+S strongs:strong:H06213 20225 7
+S morph:strongMorph:TH8804 20232 6
+S word:strong:H04687:- 20239 16
+S strongs:strong:H04687 20255 7
+S verseNumber:167 20264 3
+S word:strong:H05315:- 20267 7
+S strongs:strong:H05315 20274 7
+S word:strong:H08104:strongMorph:TH8804 20282 9
+S strongs:strong:H08104 20291 7
+S morph:strongMorph:TH8804 20298 6
+S word:strong:H05713:- 20305 15
+S strongs:strong:H05713 20320 7
+S word:strong:H0157:strongMorph:TH8799 20329 10
+S strongs:strong:H0157 20339 6
+S morph:strongMorph:TH8799 20345 6
+S word:strong:H03966:- 20352 16
+S strongs:strong:H03966 20368 7
+S verseNumber:168 20377 3
+S word:strong:H08104:strongMorph:TH8804 20380 11
+S strongs:strong:H08104 20391 7
+S morph:strongMorph:TH8804 20398 6
+S word:strong:H06490:- 20405 12
+S strongs:strong:H06490 20417 7
+S word:strong:H05713:- 20425 19
+S strongs:strong:H05713 20444 7
+S word:strong:H01870:- 20453 15
+S strongs:strong:H01870 20468 7
+S italic 20476 3
+S italic 20493 6
+S block:qa 20493 6
+S verseNumber:169 20500 3
+S word:strong:H07440:- 20503 10
+S strongs:strong:H07440 20513 7
+S word:strong:H07126:strongMorph:TH8799 20521 9
+S strongs:strong:H07126 20530 7
+S morph:strongMorph:TH8799 20537 6
+S word:strong:H06440:- 20544 6
+S strongs:strong:H06440 20550 7
+S word:strong:H03068:- 20558 12
+S divineName 20566 4
+S strongs:strong:H03068 20570 7
+S word:strong:H0995:strongMorph:TH8685 20579 21
+S strongs:strong:H0995 20600 6
+S morph:strongMorph:TH8685 20606 6
+S word:strong:H01697:- 20613 21
+S strongs:strong:H01697 20634 7
+S verseNumber:170 20643 3
+S word:strong:H08467:- 20646 19
+S strongs:strong:H08467 20665 7
+S word:strong:H0935:strongMorph:TH8799 20673 4
+S strongs:strong:H0935 20677 6
+S morph:strongMorph:TH8799 20683 6
+S word:strong:H06440:- 20690 6
+S strongs:strong:H06440 20696 7
+S word:strong:H05337:strongMorph:TH8685 20704 13
+S strongs:strong:H05337 20717 7
+S morph:strongMorph:TH8685 20724 6
+S word:strong:H0565:- 20731 24
+S strongs:strong:H0565 20755 6
+S verseNumber:171 20763 3
+S word:strong:H08193:- 20766 7
+S strongs:strong:H08193 20773 7
+S word:strong:H05042:strongMorph:TH8686 20781 11
+S strongs:strong:H05042 20792 7
+S morph:strongMorph:TH8686 20799 6
+S word:strong:H08416:- 20806 6
+S strongs:strong:H08416 20812 7
+S word:strong:H03925:strongMorph:TH8762 20821 21
+S strongs:strong:H03925 20842 7
+S morph:strongMorph:TH8762 20849 6
+S word:strong:H02706:- 20856 15
+S strongs:strong:H02706 20871 7
+S verseNumber:172 20880 3
+S word:strong:H03956:- 20883 9
+S strongs:strong:H03956 20892 7
+S word:strong:H06030:strongMorph:TH8799 20900 11
+S strongs:strong:H06030 20911 7
+S morph:strongMorph:TH8799 20918 6
+S word:strong:H0565:- 20925 11
+S strongs:strong:H0565 20936 6
+S word:strong:H04687:- 20944 24
+S strongs:strong:H04687 20968 7
+S italic 20976 3
+S word:strong:H06664:- 20980 13
+S strongs:strong:H06664 20993 7
+S verseNumber:173 21002 3
+S word:strong:H03027:- 21005 14
+S strongs:strong:H03027 21019 7
+S word:strong:H05826:strongMorph:TH8800 21027 4
+S strongs:strong:H05826 21031 7
+S morph:strongMorph:TH8800 21038 6
+S word:strong:H0977:strongMorph:TH8804 21045 21
+S strongs:strong:H0977 21066 6
+S morph:strongMorph:TH8804 21072 6
+S word:strong:H06490:- 21079 12
+S strongs:strong:H06490 21091 7
+S verseNumber:174 21100 3
+S word:strong:H08373:strongMorph:TH8804 21103 13
+S strongs:strong:H08373 21116 7
+S morph:strongMorph:TH8804 21123 6
+S word:strong:H03444:- 21130 17
+S strongs:strong:H03444 21147 7
+S word:strong:H03068:- 21156 6
+S divineName 21158 4
+S strongs:strong:H03068 21162 7
+S word:strong:H08451:- 21171 11
+S strongs:strong:H08451 21182 7
+S italic 21190 2
+S word:strong:H08191:- 21193 10
+S strongs:strong:H08191 21203 7
+S verseNumber:175 21212 3
+S word:strong:H05315:- 21215 11
+S strongs:strong:H05315 21226 7
+S word:strong:H02421:strongMorph:TH8799 21234 4
+S strongs:strong:H02421 21238 7
+S morph:strongMorph:TH8799 21245 6
+S word:strong:H01984:strongMorph:TH8762 21253 19
+S strongs:strong:H01984 21272 7
+S morph:strongMorph:TH8762 21279 6
+S word:strong:H04941:- 21286 27
+S strongs:strong:H04941 21313 7
+S word:strong:H05826:strongMorph:TH8799 21321 4
+S strongs:strong:H05826 21325 7
+S morph:strongMorph:TH8799 21332 6
+S verseNumber:176 21343 3
+S word:strong:H08582:strongMorph:TH8804 21346 18
+S strongs:strong:H08582 21364 7
+S morph:strongMorph:TH8804 21371 6
+S word:strong:H06:strongMorph:TH8802 21378 11
+S strongs:strong:H06 21389 4
+S morph:strongMorph:TH8802 21393 6
+S word:strong:H07716:- 21400 5
+S strongs:strong:H07716 21405 7
+S word:strong:H01245:strongMorph:TH8761 21414 4
+S strongs:strong:H01245 21418 7
+S morph:strongMorph:TH8761 21425 6
+S word:strong:H05650:- 21432 11
+S strongs:strong:H05650 21443 7
+S word:strong:H07911:strongMorph:TH8804 21452 19
+S strongs:strong:H07911 21471 7
+S morph:strongMorph:TH8804 21478 6
+S word:strong:H04687:- 21485 16
+S strongs:strong:H04687 21501 7
+W 1 0 21 7
+W 1 1 35 3
+W 1 2 39 3
+W 1 3 43 9
+W 1 4 60 2
+W 1 5 63 3
+W 1 6 67 3
+W 1 7 79 3
+W 1 8 83 4
+W 1 9 101 2
+W 1 10 104 3
+W 1 11 108 3
+W 1 12 119 2
+W 1 13 122 3
+W 1 14 126 4
+W 2 0 140 7
+W 2 1 154 3
+W 2 2 158 4
+W 2 3 163 4
+W 2 4 168 4
+W 2 5 186 3
+W 2 6 190 11
+W 2 7 210 3
+W 2 8 214 4
+W 2 9 219 4
+W 2 10 237 3
+W 2 11 241 4
+W 2 12 246 3
+W 2 13 250 5
+W 2 14 256 5
+W 3 0 271 4
+W 3 1 276 4
+W 3 2 281 2
+W 3 3 297 2
+W 3 4 300 8
+W 3 5 317 4
+W 3 6 322 4
+W 3 7 340 2
+W 3 8 343 3
+W 3 9 347 4
+W 4 0 361 4
+W 4 1 366 4
+W 4 2 371 9
+W 4 3 394 2
+W 4 4 397 2
+W 4 5 400 4
+W 4 6 418 3
+W 4 7 422 8
+W 4 8 438 10
+W 5 0 458 1
+W 5 1 460 4
+W 5 2 471 2
+W 5 3 474 4
+W 5 4 486 4
+W 5 5 491 8
+W 5 6 513 2
+W 5 7 516 4
+W 5 8 534 3
+W 5 9 538 8
+W 6 0 556 4
+W 6 1 561 5
+W 6 2 567 1
+W 6 3 569 3
+W 6 4 573 2
+W 6 5 576 7
+W 6 6 597 4
+W 6 7 602 1
+W 6 8 604 4
+W 6 9 609 7
+W 6 10 630 4
+W 6 11 635 3
+W 6 12 639 3
+W 6 13 643 12
+W 7 0 665 1
+W 7 1 667 4
+W 7 2 672 6
+W 7 3 692 4
+W 7 4 697 4
+W 7 5 702 11
+W 7 6 721 2
+W 7 7 724 5
+W 7 8 738 4
+W 7 9 743 1
+W 7 10 745 5
+W 7 11 751 4
+W 7 12 756 7
+W 7 13 777 3
+W 7 14 781 9
+W 7 15 798 9
+W 8 0 817 1
+W 8 1 819 4
+W 8 2 824 4
+W 8 3 842 3
+W 8 4 846 8
+W 8 5 863 1
+W 8 6 865 7
+W 8 7 886 2
+W 8 8 889 3
+W 8 9 893 7
+W 9 0 918 11
+W 9 1 930 5
+W 9 2 936 1
+W 9 3 938 5
+W 9 4 944 3
+W 9 5 955 7
+W 9 6 976 3
+W 9 7 980 3
+W 9 8 991 2
+W 9 9 994 6
+W 9 10 1001 4
+W 9 11 1019 7
+W 9 12 1027 9
+W 9 13 1037 2
+W 9 14 1040 3
+W 9 15 1044 4
+W 10 0 1059 4
+W 10 1 1064 2
+W 10 2 1067 5
+W 10 3 1073 5
+W 10 4 1086 4
+W 10 5 1091 1
+W 10 6 1093 6
+W 10 7 1113 4
+W 10 8 1119 1
+W 10 9 1121 3
+W 10 10 1125 2
+W 10 11 1128 3
+W 10 12 1132 6
+W 10 13 1152 4
+W 10 14 1157 3
+W 10 15 1161 12
+W 11 0 1184 3
+W 11 1 1188 4
+W 11 2 1199 4
+W 11 3 1204 1
+W 11 4 1206 3
+W 11 5 1223 2
+W 11 6 1226 4
+W 11 7 1231 5
+W 11 8 1245 4
+W 11 9 1250 1
+W 11 10 1252 5
+W 11 11 1258 3
+W 11 12 1262 3
+W 11 13 1279 7
+W 11 14 1287 4
+W 12 0 1295 7
+W 12 1 1316 3
+W 12 2 1320 4
+W 12 3 1326 1
+W 12 4 1328 4
+W 12 5 1341 5
+W 12 6 1360 2
+W 12 7 1363 3
+W 12 8 1367 8
+W 13 0 1386 4
+W 13 1 1391 2
+W 13 2 1394 4
+W 13 3 1406 4
+W 13 4 1411 1
+W 13 5 1413 8
+W 13 6 1435 3
+W 13 7 1439 3
+W 13 8 1443 9
+W 13 9 1460 2
+W 13 10 1463 3
+W 13 11 1467 5
+W 14 0 1483 1
+W 14 1 1485 4
+W 14 2 1490 8
+W 14 3 1512 2
+W 14 4 1515 3
+W 14 5 1519 3
+W 14 6 1530 2
+W 14 7 1533 3
+W 14 8 1537 11
+W 14 9 1557 2
+W 14 10 1560 4
+W 14 11 1565 2
+W 14 12 1568 2
+W 14 13 1578 3
+W 14 14 1582 6
+W 15 0 1599 1
+W 15 1 1601 4
+W 15 2 1606 8
+W 15 3 1628 2
+W 15 4 1631 3
+W 15 5 1635 8
+W 15 6 1652 3
+W 15 7 1656 4
+W 15 8 1661 7
+W 15 9 1682 4
+W 15 10 1687 3
+W 15 11 1691 4
+W 16 0 1705 1
+W 16 1 1707 4
+W 16 2 1712 7
+W 16 3 1733 6
+W 16 4 1740 2
+W 16 5 1743 3
+W 16 6 1747 8
+W 16 7 1764 1
+W 16 8 1766 4
+W 16 9 1771 3
+W 16 10 1775 6
+W 16 11 1795 3
+W 16 12 1799 4
+W 17 0 1823 4
+W 17 1 1828 11
+W 17 2 1853 4
+W 17 3 1858 3
+W 17 4 1862 7
+W 17 5 1878 4
+W 17 6 1883 1
+W 17 7 1885 3
+W 17 8 1889 4
+W 17 9 1908 3
+W 17 10 1912 4
+W 17 11 1930 3
+W 17 12 1934 4
+W 18 0 1949 4
+W 18 1 1967 4
+W 18 2 1972 4
+W 18 3 1977 4
+W 18 4 1990 4
+W 18 5 1995 1
+W 18 6 1997 3
+W 18 7 2001 6
+W 18 8 2021 8
+W 18 9 2030 6
+W 18 10 2050 3
+W 18 11 2054 2
+W 18 12 2057 3
+W 18 13 2061 3
+W 19 0 2075 1
+W 19 1 2077 2
+W 19 2 2080 1
+W 19 3 2082 8
+W 19 4 2098 2
+W 19 5 2101 3
+W 19 6 2105 5
+W 19 7 2118 4
+W 19 8 2136 3
+W 19 9 2140 3
+W 19 10 2144 12
+W 19 11 2164 4
+W 19 12 2169 2
+W 20 0 2175 2
+W 20 1 2178 4
+W 20 2 2190 8
+W 20 3 2212 3
+W 20 4 2216 3
+W 20 5 2220 7
+W 20 6 2235 4
+W 20 7 2240 2
+W 20 8 2243 4
+W 20 9 2248 4
+W 20 10 2253 3
+W 20 11 2257 9
+W 20 12 2274 2
+W 20 13 2277 3
+W 20 14 2281 5
+W 21 0 2297 4
+W 21 1 2302 4
+W 21 2 2307 7
+W 21 3 2328 3
+W 21 4 2332 5
+W 21 5 2345 4
+W 21 6 2350 3
+W 21 7 2354 6
+W 21 8 2374 5
+W 21 9 2380 2
+W 21 10 2383 3
+W 21 11 2400 4
+W 21 12 2405 3
+W 21 13 2409 12
+W 22 0 2432 6
+W 22 1 2452 4
+W 22 2 2457 2
+W 22 3 2460 8
+W 22 4 2476 3
+W 22 5 2480 8
+W 22 6 2496 3
+W 22 7 2500 1
+W 22 8 2502 4
+W 22 9 2507 4
+W 22 10 2525 3
+W 22 11 2529 11
+W 23 0 2551 7
+W 23 1 2566 4
+W 23 2 2571 3
+W 23 3 2575 3
+W 23 4 2592 3
+W 23 5 2596 5
+W 23 6 2615 7
+W 23 7 2623 2
+W 23 8 2627 3
+W 23 9 2631 3
+W 23 10 2635 7
+W 23 11 2650 3
+W 23 12 2654 8
+W 23 13 2676 2
+W 23 14 2679 3
+W 23 15 2683 8
+W 24 0 2702 3
+W 24 1 2706 11
+W 24 2 2725 4
+W 24 3 2730 3
+W 24 4 2734 2
+W 24 5 2737 7
+W 24 6 2752 3
+W 24 7 2756 2
+W 24 8 2759 11
+W 25 0 2797 2
+W 25 1 2800 4
+W 25 2 2812 8
+W 25 3 2834 4
+W 25 4 2839 3
+W 25 5 2843 4
+W 25 6 2856 7
+W 25 7 2877 4
+W 25 8 2882 2
+W 25 9 2885 9
+W 25 10 2895 2
+W 25 11 2898 3
+W 25 12 2902 4
+W 26 0 2917 1
+W 26 1 2919 4
+W 26 2 2924 8
+W 26 3 2946 2
+W 26 4 2949 4
+W 26 5 2962 3
+W 26 6 2966 4
+W 26 7 2971 8
+W 26 8 2993 2
+W 26 9 2997 5
+W 26 10 3016 2
+W 26 11 3019 3
+W 26 12 3023 8
+W 27 0 3042 4
+W 27 1 3047 2
+W 27 2 3050 2
+W 27 3 3053 10
+W 27 4 3076 3
+W 27 5 3080 3
+W 27 6 3091 2
+W 27 7 3094 3
+W 27 8 3098 8
+W 27 9 3115 2
+W 27 10 3118 5
+W 27 11 3124 1
+W 27 12 3126 4
+W 27 13 3144 2
+W 27 14 3147 3
+W 27 15 3151 8
+W 27 16 3160 5
+W 28 0 3182 2
+W 28 1 3185 4
+W 28 2 3197 7
+W 28 3 3218 3
+W 28 4 3222 9
+W 28 5 3240 10
+W 28 6 3264 4
+W 28 7 3269 2
+W 28 8 3272 9
+W 28 9 3282 4
+W 28 10 3287 3
+W 28 11 3291 4
+W 29 0 3306 6
+W 29 1 3326 4
+W 29 2 3331 2
+W 29 3 3334 3
+W 29 4 3338 3
+W 29 5 3349 2
+W 29 6 3352 5
+W 29 7 3366 3
+W 29 8 3370 5
+W 29 9 3376 2
+W 29 10 3379 3
+W 29 11 3383 3
+W 29 12 3394 10
+W 30 0 3421 1
+W 30 1 3423 4
+W 30 2 3428 6
+W 30 3 3447 3
+W 30 4 3451 3
+W 30 5 3462 2
+W 30 6 3465 5
+W 30 7 3478 3
+W 30 8 3482 9
+W 30 9 3499 4
+W 30 10 3504 1
+W 30 11 3506 4
+W 30 12 3524 6
+W 30 13 3531 2
+W 31 0 3537 1
+W 31 1 3539 4
+W 31 2 3544 5
+W 31 3 3563 4
+W 31 4 3568 3
+W 31 5 3572 11
+W 31 6 3592 1
+W 31 7 3594 4
+W 31 8 3607 3
+W 31 9 3611 2
+W 31 10 3614 3
+W 31 11 3618 2
+W 31 12 3621 5
+W 32 0 3642 1
+W 32 1 3644 4
+W 32 2 3649 3
+W 32 3 3666 3
+W 32 4 3670 3
+W 32 5 3681 2
+W 32 6 3684 3
+W 32 7 3688 12
+W 32 8 3709 4
+W 32 9 3714 4
+W 32 10 3719 5
+W 32 11 3725 7
+W 32 12 3746 2
+W 32 13 3749 5
+W 33 0 3771 5
+W 33 1 3790 2
+W 33 2 3794 1
+W 33 3 3796 4
+W 33 4 3809 3
+W 33 5 3813 3
+W 33 6 3824 2
+W 33 7 3827 3
+W 33 8 3831 8
+W 33 9 3848 3
+W 33 10 3852 1
+W 33 11 3854 5
+W 33 12 3860 4
+W 33 13 3878 2
+W 33 14 3881 4
+W 33 15 3886 3
+W 33 16 3890 3
+W 34 0 3904 4
+W 34 1 3909 2
+W 34 2 3912 13
+W 34 3 3939 3
+W 34 4 3943 1
+W 34 5 3945 5
+W 34 6 3951 4
+W 34 7 3969 3
+W 34 8 3973 3
+W 34 9 3985 3
+W 34 10 3990 1
+W 34 11 3992 5
+W 34 12 3998 7
+W 34 13 4019 2
+W 34 14 4022 4
+W 34 15 4027 2
+W 34 16 4030 5
+W 34 17 4036 5
+W 35 0 4052 4
+W 35 1 4057 2
+W 35 2 4060 2
+W 35 3 4063 2
+W 35 4 4079 2
+W 35 5 4082 3
+W 35 6 4086 4
+W 35 7 4098 2
+W 35 8 4101 3
+W 35 9 4105 12
+W 35 10 4126 3
+W 35 11 4130 7
+W 35 12 4138 2
+W 35 13 4141 1
+W 35 14 4143 7
+W 36 0 4167 7
+W 36 1 4188 2
+W 36 2 4191 5
+W 36 3 4204 4
+W 36 4 4209 3
+W 36 5 4213 11
+W 36 6 4233 3
+W 36 7 4237 3
+W 36 8 4241 2
+W 36 9 4244 12
+W 37 0 4267 4
+W 37 1 4272 4
+W 37 2 4290 4
+W 37 3 4295 4
+W 37 4 4307 4
+W 37 5 4312 9
+W 37 6 4335 6
+W 37 7 4350 3
+W 37 8 4354 7
+W 37 9 4375 4
+W 37 10 4380 2
+W 37 11 4383 2
+W 37 12 4386 3
+W 37 13 4390 3
+W 38 0 4404 8
+W 38 1 4426 3
+W 38 2 4430 4
+W 38 3 4441 4
+W 38 4 4446 3
+W 38 5 4450 7
+W 38 6 4466 3
+W 38 7 4470 2
+W 38 8 4473 7
+W 38 9 4481 2
+W 38 10 4484 3
+W 38 11 4488 4
+W 39 0 4503 4
+W 39 1 4508 4
+W 39 2 4526 2
+W 39 3 4529 8
+W 39 4 4545 5
+W 39 5 4551 1
+W 39 6 4553 4
+W 39 7 4572 3
+W 39 8 4576 3
+W 39 9 4580 9
+W 39 10 4597 3
+W 39 11 4601 4
+W 40 0 4616 6
+W 40 1 4624 1
+W 40 2 4626 4
+W 40 3 4631 6
+W 40 4 4651 5
+W 40 5 4657 3
+W 40 6 4661 8
+W 40 7 4678 7
+W 40 8 4699 2
+W 40 9 4702 2
+W 40 10 4705 3
+W 40 11 4709 13
+W 41 0 4740 3
+W 41 1 4744 3
+W 41 2 4748 7
+W 41 3 4763 4
+W 41 4 4780 4
+W 41 5 4785 4
+W 41 6 4790 2
+W 41 7 4794 1
+W 41 8 4796 4
+W 41 9 4809 4
+W 41 10 4814 3
+W 41 11 4818 9
+W 41 12 4836 9
+W 41 13 4846 2
+W 41 14 4849 3
+W 41 15 4853 4
+W 42 0 4867 2
+W 42 1 4870 5
+W 42 2 4876 1
+W 42 3 4878 4
+W 42 4 4883 9
+W 42 5 4900 2
+W 42 6 4903 6
+W 42 7 4923 3
+W 42 8 4927 4
+W 42 9 4932 11
+W 42 10 4957 2
+W 42 11 4961 3
+W 42 12 4965 1
+W 42 13 4967 5
+W 42 14 4985 2
+W 42 15 4988 3
+W 42 16 4992 4
+W 43 0 5007 3
+W 43 1 5011 4
+W 43 2 5029 3
+W 43 3 5033 3
+W 43 4 5037 4
+W 43 5 5049 2
+W 43 6 5052 5
+W 43 7 5064 7
+W 43 8 5079 3
+W 43 9 5083 2
+W 43 10 5086 2
+W 43 11 5089 5
+W 43 12 5103 3
+W 43 13 5107 1
+W 43 14 5109 4
+W 43 15 5114 5
+W 43 16 5133 2
+W 43 17 5136 3
+W 43 18 5140 9
+W 44 0 5160 2
+W 44 1 5163 5
+W 44 2 5169 1
+W 44 3 5171 4
+W 44 4 5189 3
+W 44 5 5193 3
+W 44 6 5204 11
+W 44 7 5223 3
+W 44 8 5227 4
+W 44 9 5239 3
+W 44 10 5243 4
+W 45 0 5258 3
+W 45 1 5262 1
+W 45 2 5264 4
+W 45 3 5269 4
+W 45 4 5287 2
+W 45 5 5290 7
+W 45 6 5306 3
+W 45 7 5310 1
+W 45 8 5312 4
+W 45 9 5330 3
+W 45 10 5334 8
+W 46 0 5353 1
+W 46 1 5355 4
+W 46 2 5360 5
+W 46 3 5379 2
+W 46 4 5382 3
+W 46 5 5386 11
+W 46 6 5405 4
+W 46 7 5410 6
+W 46 8 5417 5
+W 46 9 5431 3
+W 46 10 5435 4
+W 46 11 5440 3
+W 46 12 5444 2
+W 46 13 5447 7
+W 47 0 5470 3
+W 47 1 5474 1
+W 47 2 5476 4
+W 47 3 5481 7
+W 47 4 5502 6
+W 47 5 5509 2
+W 47 6 5512 3
+W 47 7 5516 12
+W 47 8 5537 5
+W 47 9 5543 1
+W 47 10 5545 4
+W 47 11 5550 5
+W 48 0 5571 2
+W 48 1 5574 5
+W 48 2 5587 4
+W 48 3 5592 4
+W 48 4 5597 1
+W 48 5 5599 4
+W 48 6 5604 2
+W 48 7 5620 4
+W 48 8 5625 3
+W 48 9 5629 12
+W 48 10 5650 5
+W 48 11 5656 1
+W 48 12 5658 4
+W 48 13 5663 5
+W 48 14 5682 3
+W 48 15 5686 1
+W 48 16 5688 4
+W 48 17 5693 8
+W 48 18 5715 2
+W 48 19 5718 3
+W 48 20 5722 8
+W 49 0 5749 8
+W 49 1 5771 3
+W 49 2 5775 4
+W 49 3 5787 4
+W 49 4 5792 3
+W 49 5 5796 7
+W 49 6 5812 4
+W 49 7 5817 5
+W 49 8 5823 4
+W 49 9 5828 4
+W 49 10 5833 6
+W 49 11 5840 2
+W 49 12 5843 2
+W 49 13 5846 4
+W 50 0 5867 4
+W 50 1 5872 2
+W 50 2 5875 2
+W 50 3 5878 7
+W 50 4 5893 2
+W 50 5 5896 2
+W 50 6 5899 10
+W 50 7 5918 3
+W 50 8 5922 3
+W 50 9 5926 4
+W 50 10 5937 4
+W 50 11 5942 9
+W 50 12 5965 2
+W 51 0 5971 3
+W 51 1 5975 5
+W 51 2 5988 4
+W 51 3 5993 3
+W 51 4 5997 2
+W 51 5 6000 7
+W 51 6 6015 2
+W 51 7 6018 8
+W 51 8 6041 3
+W 51 9 6045 4
+W 51 10 6050 1
+W 51 11 6052 3
+W 51 12 6056 8
+W 51 13 6078 4
+W 51 14 6083 3
+W 51 15 6087 3
+W 52 0 6101 1
+W 52 1 6103 10
+W 52 2 6127 3
+W 52 3 6131 9
+W 52 4 6148 2
+W 52 5 6151 3
+W 52 6 6163 1
+W 52 7 6165 4
+W 52 8 6178 3
+W 52 9 6182 4
+W 52 10 6187 9
+W 52 11 6210 6
+W 53 0 6220 6
+W 53 1 6234 4
+W 53 2 6239 5
+W 53 3 6245 4
+W 53 4 6262 4
+W 53 5 6267 2
+W 53 6 6270 7
+W 53 7 6278 2
+W 53 8 6281 3
+W 53 9 6285 6
+W 53 10 6299 4
+W 53 11 6304 7
+W 53 12 6325 3
+W 53 13 6329 3
+W 54 0 6343 3
+W 54 1 6347 8
+W 54 2 6363 4
+W 54 3 6368 4
+W 54 4 6373 2
+W 54 5 6376 5
+W 54 6 6389 2
+W 54 7 6392 3
+W 54 8 6396 5
+W 54 9 6409 2
+W 54 10 6412 2
+W 54 11 6415 10
+W 55 0 6436 1
+W 55 1 6438 4
+W 55 2 6443 10
+W 55 3 6467 3
+W 55 4 6471 4
+W 55 5 6484 1
+W 55 6 6486 4
+W 55 7 6499 2
+W 55 8 6502 3
+W 55 9 6506 5
+W 55 10 6520 3
+W 55 11 6524 4
+W 55 12 6529 4
+W 55 13 6547 3
+W 55 14 6551 3
+W 56 0 6565 4
+W 56 1 6570 1
+W 56 2 6572 3
+W 56 3 6577 7
+W 56 4 6585 1
+W 56 5 6587 4
+W 56 6 6605 3
+W 56 7 6609 8
+W 57 0 6637 4
+W 57 1 6642 3
+W 57 2 6646 2
+W 57 3 6649 7
+W 57 4 6665 1
+W 57 5 6667 4
+W 57 6 6680 1
+W 57 7 6682 4
+W 57 8 6687 4
+W 57 9 6704 4
+W 57 10 6709 1
+W 57 11 6711 5
+W 57 12 6717 4
+W 57 13 6735 3
+W 57 14 6739 5
+W 58 0 6755 1
+W 58 1 6757 9
+W 58 2 6780 3
+W 58 3 6784 6
+W 58 4 6798 4
+W 58 5 6803 2
+W 58 6 6806 5
+W 58 7 6812 5
+W 58 8 6826 2
+W 58 9 6829 8
+W 58 10 6851 4
+W 58 11 6856 2
+W 58 12 6859 9
+W 58 13 6869 2
+W 58 14 6872 3
+W 58 15 6876 4
+W 59 0 6890 1
+W 59 1 6892 7
+W 59 2 6913 2
+W 59 3 6916 2
+W 59 4 6919 4
+W 59 5 6932 3
+W 59 6 6936 6
+W 59 7 6956 2
+W 59 8 6959 4
+W 59 9 6971 4
+W 59 10 6976 3
+W 59 11 6980 11
+W 60 0 7002 1
+W 60 1 7004 4
+W 60 2 7009 5
+W 60 3 7029 3
+W 60 4 7033 7
+W 60 5 7054 3
+W 60 6 7058 2
+W 60 7 7061 4
+W 60 8 7079 3
+W 60 9 7083 12
+W 61 0 7106 3
+W 61 1 7110 5
+W 61 2 7123 2
+W 61 3 7126 3
+W 61 4 7130 6
+W 61 5 7144 4
+W 61 6 7149 6
+W 61 7 7169 2
+W 61 8 7173 3
+W 61 9 7177 1
+W 61 10 7179 4
+W 61 11 7184 3
+W 61 12 7188 9
+W 61 13 7211 3
+W 61 14 7215 3
+W 62 0 7229 2
+W 62 1 7232 8
+W 62 2 7255 1
+W 62 3 7257 4
+W 62 4 7262 4
+W 62 5 7280 2
+W 62 6 7283 4
+W 62 7 7288 6
+W 62 8 7308 4
+W 62 9 7313 4
+W 62 10 7318 7
+W 62 11 7326 2
+W 62 12 7329 3
+W 62 13 7333 9
+W 62 14 7350 9
+W 63 0 7370 1
+W 63 1 7372 2
+W 63 2 7375 1
+W 63 3 7377 9
+W 63 4 7394 2
+W 63 5 7397 3
+W 63 6 7401 4
+W 63 7 7406 4
+W 63 8 7411 4
+W 63 9 7429 4
+W 63 10 7435 3
+W 63 11 7439 2
+W 63 12 7442 4
+W 63 13 7447 4
+W 63 14 7452 4
+W 63 15 7470 3
+W 63 16 7474 8
+W 64 0 7493 3
+W 64 1 7497 5
+W 64 2 7510 1
+W 64 3 7512 4
+W 64 4 7525 2
+W 64 5 7528 4
+W 64 6 7546 2
+W 64 7 7549 3
+W 64 8 7553 5
+W 64 9 7567 5
+W 64 10 7586 2
+W 64 11 7589 3
+W 64 12 7593 8
+W 65 0 7620 4
+W 65 1 7625 4
+W 65 2 7630 5
+W 65 3 7649 4
+W 65 4 7661 4
+W 65 5 7666 3
+W 65 6 7670 7
+W 65 7 7686 1
+W 65 8 7688 4
+W 65 9 7701 9
+W 65 10 7711 4
+W 65 11 7716 3
+W 65 12 7720 4
+W 66 0 7735 5
+W 66 1 7754 2
+W 66 2 7757 4
+W 66 3 7769 8
+W 66 4 7785 3
+W 66 5 7789 9
+W 66 6 7807 3
+W 66 7 7811 1
+W 66 8 7813 4
+W 66 9 7818 8
+W 66 10 7839 3
+W 66 11 7843 12
+W 67 0 7866 6
+W 67 1 7873 1
+W 67 2 7875 3
+W 67 3 7879 9
+W 67 4 7902 1
+W 67 5 7904 4
+W 67 6 7909 6
+W 67 7 7930 3
+W 67 8 7934 3
+W 67 9 7938 4
+W 67 10 7943 1
+W 67 11 7945 4
+W 67 12 7963 3
+W 67 13 7967 4
+W 68 0 7981 4
+W 68 1 7986 3
+W 68 2 7990 4
+W 68 3 8003 3
+W 68 4 8007 5
+W 68 5 8013 4
+W 68 6 8032 5
+W 68 7 8051 2
+W 68 8 8054 3
+W 68 9 8058 8
+W 69 0 8077 3
+W 69 1 8081 5
+W 69 2 8094 4
+W 69 3 8099 6
+W 69 4 8119 1
+W 69 5 8121 3
+W 69 6 8132 7
+W 69 7 8140 2
+W 69 8 8144 3
+W 69 9 8148 1
+W 69 10 8150 4
+W 69 11 8155 4
+W 69 12 8173 3
+W 69 13 8177 8
+W 69 14 8193 4
+W 69 15 8198 2
+W 69 16 8201 5
+W 69 17 8207 5
+W 70 0 8223 5
+W 70 1 8229 5
+W 70 2 8242 2
+W 70 3 8245 2
+W 70 4 8248 3
+W 70 5 8265 2
+W 70 6 8268 6
+W 70 7 8283 3
+W 70 8 8287 1
+W 70 9 8289 7
+W 70 10 8310 2
+W 70 11 8313 3
+W 70 12 8317 3
+W 71 0 8331 2
+W 71 1 8334 2
+W 71 2 8337 4
+W 71 3 8349 3
+W 71 4 8353 2
+W 71 5 8356 4
+W 71 6 8361 1
+W 71 7 8363 4
+W 71 8 8368 4
+W 71 9 8373 9
+W 71 10 8397 4
+W 71 11 8402 1
+W 71 12 8404 5
+W 71 13 8410 5
+W 71 14 8429 3
+W 71 15 8433 8
+W 72 0 8452 3
+W 72 1 8456 3
+W 72 2 8467 2
+W 72 3 8470 3
+W 72 4 8474 5
+W 72 5 8487 2
+W 72 6 8490 6
+W 72 7 8504 4
+W 72 8 8509 2
+W 72 9 8512 4
+W 72 10 8517 9
+W 72 11 8533 2
+W 72 12 8536 4
+W 72 13 8548 3
+W 72 14 8552 6
+W 73 0 8576 3
+W 73 1 8580 5
+W 73 2 8593 4
+W 73 3 8598 4
+W 73 4 8616 2
+W 73 5 8619 3
+W 73 6 8623 9
+W 73 7 8646 2
+W 73 8 8650 4
+W 73 9 8655 2
+W 73 10 8658 13
+W 73 11 8685 4
+W 73 12 8690 1
+W 73 13 8692 3
+W 73 14 8696 5
+W 73 15 8715 3
+W 73 16 8719 12
+W 74 0 8742 4
+W 74 1 8747 4
+W 74 2 8752 4
+W 74 3 8764 4
+W 74 4 8769 4
+W 74 5 8774 2
+W 74 6 8777 4
+W 74 7 8795 4
+W 74 8 8800 4
+W 74 9 8805 3
+W 74 10 8822 2
+W 74 11 8826 7
+W 74 12 8834 1
+W 74 13 8836 4
+W 74 14 8841 5
+W 74 15 8860 2
+W 74 16 8863 3
+W 74 17 8867 4
+W 75 0 8882 1
+W 75 1 8884 4
+W 75 2 8903 1
+W 75 3 8905 4
+W 75 4 8918 4
+W 75 5 8923 3
+W 75 6 8927 9
+W 75 7 8944 3
+W 75 8 8948 5
+W 75 9 8962 3
+W 75 10 8966 4
+W 75 11 8971 4
+W 75 12 8976 2
+W 75 13 8979 12
+W 75 14 8998 4
+W 75 15 9003 9
+W 75 16 9026 2
+W 76 0 9032 3
+W 76 1 9037 1
+W 76 2 9039 4
+W 76 3 9044 4
+W 76 4 9050 3
+W 76 5 9054 8
+W 76 6 9063 8
+W 76 7 9079 2
+W 76 8 9082 3
+W 76 9 9086 2
+W 76 10 9089 7
+W 76 11 9111 9
+W 76 12 9121 2
+W 76 13 9124 3
+W 76 14 9128 4
+W 76 15 9139 4
+W 76 16 9144 3
+W 76 17 9148 7
+W 77 0 9166 3
+W 77 1 9170 3
+W 77 2 9174 6
+W 77 3 9181 7
+W 77 4 9196 4
+W 77 5 9213 4
+W 77 6 9218 2
+W 77 7 9222 4
+W 77 8 9227 1
+W 77 9 9229 3
+W 77 10 9233 4
+W 77 11 9252 3
+W 77 12 9256 3
+W 77 13 9260 3
+W 77 14 9271 2
+W 77 15 9274 2
+W 77 16 9277 7
+W 78 0 9295 3
+W 78 1 9299 3
+W 78 2 9303 5
+W 78 3 9316 2
+W 78 4 9319 7
+W 78 5 9340 3
+W 78 6 9344 4
+W 78 7 9349 5
+W 78 8 9355 10
+W 78 9 9379 4
+W 78 10 9384 2
+W 78 11 9387 7
+W 78 12 9395 1
+W 78 13 9397 5
+W 78 14 9411 3
+W 78 15 9415 1
+W 78 16 9417 4
+W 78 17 9422 8
+W 78 18 9444 2
+W 78 19 9447 3
+W 78 20 9451 8
+W 79 0 9470 3
+W 79 1 9474 5
+W 79 2 9480 4
+W 79 3 9485 4
+W 79 4 9497 4
+W 79 5 9502 4
+W 79 6 9520 4
+W 79 7 9525 2
+W 79 8 9529 3
+W 79 9 9533 5
+W 79 10 9539 4
+W 79 11 9544 4
+W 79 12 9549 5
+W 79 13 9587 3
+W 79 14 9591 11
+W 80 0 9613 3
+W 80 1 9617 2
+W 80 2 9620 5
+W 80 3 9633 2
+W 80 4 9636 5
+W 80 5 9649 2
+W 80 6 9652 3
+W 80 7 9656 8
+W 80 8 9673 4
+W 80 9 9678 1
+W 80 10 9680 2
+W 80 11 9683 3
+W 80 12 9687 7
+W 81 0 9718 2
+W 81 1 9721 4
+W 81 2 9733 8
+W 81 3 9755 3
+W 81 4 9759 3
+W 81 5 9763 9
+W 81 6 9781 3
+W 81 7 9785 1
+W 81 8 9787 4
+W 81 9 9805 2
+W 81 10 9808 3
+W 81 11 9812 4
+W 82 0 9827 4
+W 82 1 9832 4
+W 82 2 9844 4
+W 82 3 9862 3
+W 82 4 9866 3
+W 82 5 9870 4
+W 82 6 9882 6
+W 82 7 9902 4
+W 82 8 9907 4
+W 82 9 9912 4
+W 82 10 9917 7
+W 82 11 9938 2
+W 83 0 9944 3
+W 83 1 9948 1
+W 83 2 9950 2
+W 83 3 9953 6
+W 83 4 9960 4
+W 83 5 9965 1
+W 83 6 9967 6
+W 83 7 9981 2
+W 83 8 9984 3
+W 83 9 9988 5
+W 83 10 10002 3
+W 83 11 10006 2
+W 83 12 10009 1
+W 83 13 10011 3
+W 83 14 10015 6
+W 83 15 10035 3
+W 83 16 10039 8
+W 84 0 10058 3
+W 84 1 10062 4
+W 84 2 10067 3
+W 84 3 10071 3
+W 84 4 10075 4
+W 84 5 10087 2
+W 84 6 10090 3
+W 84 7 10094 7
+W 84 8 10110 4
+W 84 9 10115 4
+W 84 10 10120 4
+W 84 11 10125 7
+W 84 12 10146 8
+W 84 13 10162 2
+W 84 14 10165 4
+W 84 15 10170 4
+W 84 16 10175 9
+W 84 17 10198 2
+W 85 0 10204 3
+W 85 1 10208 5
+W 85 2 10221 4
+W 85 3 10226 6
+W 85 4 10246 4
+W 85 5 10258 3
+W 85 6 10262 2
+W 85 7 10266 5
+W 85 8 10272 3
+W 85 9 10276 3
+W 85 10 10280 5
+W 85 11 10286 3
+W 85 12 10290 3
+W 86 0 10304 3
+W 86 1 10308 3
+W 86 2 10312 12
+W 86 3 10332 3
+W 86 4 10336 8
+W 86 5 10352 4
+W 86 6 10357 9
+W 86 7 10380 2
+W 86 8 10383 10
+W 86 9 10402 4
+W 86 10 10420 4
+W 86 11 10425 2
+W 87 0 10431 4
+W 87 1 10436 3
+W 87 2 10440 6
+W 87 3 10454 8
+W 87 4 10476 2
+W 87 5 10479 4
+W 87 6 10484 5
+W 87 7 10497 3
+W 87 8 10501 1
+W 87 9 10503 7
+W 87 10 10524 3
+W 87 11 10528 3
+W 87 12 10532 8
+W 88 0 10551 7
+W 88 1 10572 2
+W 88 2 10575 5
+W 88 3 10581 3
+W 88 4 10585 14
+W 88 5 10608 2
+W 88 6 10611 5
+W 88 7 10617 1
+W 88 8 10619 4
+W 88 9 10637 3
+W 88 10 10641 9
+W 88 11 10658 2
+W 88 12 10661 3
+W 88 13 10665 5
+W 89 0 10690 3
+W 89 1 10694 4
+W 89 2 10707 1
+W 89 3 10709 4
+W 89 4 10722 3
+W 89 5 10726 4
+W 89 6 10738 2
+W 89 7 10741 7
+W 89 8 10762 2
+W 89 9 10765 6
+W 90 0 10782 3
+W 90 1 10786 12
+W 90 2 10805 2
+W 90 3 10808 4
+W 90 4 10813 3
+W 90 5 10824 11
+W 90 6 10844 4
+W 90 7 10849 4
+W 90 8 10854 11
+W 90 9 10879 3
+W 90 10 10883 5
+W 90 11 10896 3
+W 90 12 10900 2
+W 90 13 10903 7
+W 91 0 10927 4
+W 91 1 10932 8
+W 91 2 10954 4
+W 91 3 10959 3
+W 91 4 10970 9
+W 91 5 10980 2
+W 91 6 10983 5
+W 91 7 10989 10
+W 91 8 11008 3
+W 91 9 11012 3
+W 91 10 11016 3
+W 91 11 11020 3
+W 91 12 11024 8
+W 92 0 11043 6
+W 92 1 11057 3
+W 92 2 11061 3
+W 92 3 11072 3
+W 92 4 11076 4
+W 92 5 11081 2
+W 92 6 11084 8
+W 92 7 11101 1
+W 92 8 11103 6
+W 92 9 11110 4
+W 92 10 11115 4
+W 92 11 11120 8
+W 92 12 11139 2
+W 92 13 11142 4
+W 92 14 11147 10
+W 93 0 11168 1
+W 93 1 11170 4
+W 93 2 11175 5
+W 93 3 11188 6
+W 93 4 11208 3
+W 93 5 11212 8
+W 93 6 11229 3
+W 93 7 11233 4
+W 93 8 11238 4
+W 93 9 11243 4
+W 93 10 11248 4
+W 93 11 11253 9
+W 93 12 11276 2
+W 94 0 11282 1
+W 94 1 11284 2
+W 94 2 11287 5
+W 94 3 11294 4
+W 94 4 11312 2
+W 94 5 11316 3
+W 94 6 11320 1
+W 94 7 11322 4
+W 94 8 11327 6
+W 94 9 11347 3
+W 94 10 11351 8
+W 95 0 11370 3
+W 95 1 11374 6
+W 95 2 11388 4
+W 95 3 11393 6
+W 95 4 11413 3
+W 95 5 11417 2
+W 95 6 11420 2
+W 95 7 11423 7
+W 95 8 11441 2
+W 95 9 11445 3
+W 95 10 11449 1
+W 95 11 11451 4
+W 95 12 11456 8
+W 95 13 11477 3
+W 95 14 11481 11
+W 96 0 11503 1
+W 96 1 11505 4
+W 96 2 11510 4
+W 96 3 11528 2
+W 96 4 11531 3
+W 96 5 11542 2
+W 96 6 11545 3
+W 96 7 11549 10
+W 96 8 11568 3
+W 96 9 11572 3
+W 96 10 11576 11
+W 96 11 11595 2
+W 96 12 11598 9
+W 96 13 11615 5
+W 97 0 11638 1
+W 97 1 11640 3
+W 97 2 11644 4
+W 97 3 11649 1
+W 97 4 11663 3
+W 97 5 11667 3
+W 97 6 11679 2
+W 97 7 11682 2
+W 97 8 11685 2
+W 97 9 11688 10
+W 97 10 11706 3
+W 97 11 11710 3
+W 97 12 11714 3
+W 98 0 11728 4
+W 98 1 11733 7
+W 98 2 11741 3
+W 98 3 11745 12
+W 98 4 11765 4
+W 98 5 11770 4
+W 98 6 11775 2
+W 98 7 11778 5
+W 98 8 11797 4
+W 98 9 11802 4
+W 98 10 11807 7
+W 98 11 11828 3
+W 98 12 11832 4
+W 98 13 11837 3
+W 98 14 11841 4
+W 98 15 11853 4
+W 98 16 11858 2
+W 99 0 11864 1
+W 99 1 11866 4
+W 99 2 11871 4
+W 99 3 11876 13
+W 99 4 11903 4
+W 99 5 11908 3
+W 99 6 11912 2
+W 99 7 11915 8
+W 99 8 11938 3
+W 99 9 11942 3
+W 99 10 11946 11
+W 99 11 11965 3
+W 99 12 11969 2
+W 99 13 11972 10
+W 100 0 11994 1
+W 100 1 11996 10
+W 100 2 12019 4
+W 100 3 12024 4
+W 100 4 12029 3
+W 100 5 12033 8
+W 100 6 12050 7
+W 100 7 12058 1
+W 100 8 12060 4
+W 100 9 12078 3
+W 100 10 12082 8
+W 101 0 12102 1
+W 101 1 12104 4
+W 101 2 12109 9
+W 101 3 12132 2
+W 101 4 12135 4
+W 101 5 12147 4
+W 101 6 12152 5
+W 101 7 12158 4
+W 101 8 12170 3
+W 101 9 12181 4
+W 101 10 12186 1
+W 101 11 12188 5
+W 101 12 12194 4
+W 101 13 12212 3
+W 101 14 12216 4
+W 102 0 12232 1
+W 102 1 12234 4
+W 102 2 12239 3
+W 102 3 12243 8
+W 102 4 12265 4
+W 102 5 12270 3
+W 102 6 12274 9
+W 102 7 12292 3
+W 102 8 12296 4
+W 102 9 12301 4
+W 102 10 12306 6
+W 102 11 12326 2
+W 103 0 12333 3
+W 103 1 12337 5
+W 103 2 12356 3
+W 103 3 12360 3
+W 103 4 12364 5
+W 103 5 12376 4
+W 103 6 12381 2
+W 103 7 12384 5
+W 103 8 12398 3
+W 103 9 12403 7
+W 103 10 12411 4
+W 103 11 12416 5
+W 103 12 12429 2
+W 103 13 12432 2
+W 103 14 12435 5
+W 104 0 12452 7
+W 104 1 12460 3
+W 104 2 12464 8
+W 104 3 12480 1
+W 104 4 12482 3
+W 104 5 12486 13
+W 104 6 12513 9
+W 104 7 12523 1
+W 104 8 12525 4
+W 104 9 12543 5
+W 104 10 12549 5
+W 104 11 12562 3
+W 105 0 12583 3
+W 105 1 12587 4
+W 105 2 12599 2
+W 105 3 12602 1
+W 105 4 12604 4
+W 105 5 12616 4
+W 105 6 12621 2
+W 105 7 12624 4
+W 105 8 12637 3
+W 105 9 12641 1
+W 105 10 12643 5
+W 105 11 12655 4
+W 105 12 12660 2
+W 105 13 12663 4
+W 106 0 12679 1
+W 106 1 12681 4
+W 106 2 12686 5
+W 106 3 12706 3
+W 106 4 12710 1
+W 106 5 12712 4
+W 106 6 12717 7
+W 106 7 12738 2
+W 106 8 12742 4
+W 106 9 12747 1
+W 106 10 12749 4
+W 106 11 12754 4
+W 106 12 12772 3
+W 106 13 12776 9
+W 106 14 12793 9
+W 107 0 12814 1
+W 107 1 12816 2
+W 107 2 12819 9
+W 107 3 12842 4
+W 107 4 12847 4
+W 107 5 12860 7
+W 107 6 12881 2
+W 107 7 12885 1
+W 107 8 12887 4
+W 107 9 12900 9
+W 107 10 12910 4
+W 107 11 12915 3
+W 107 12 12919 4
+W 108 0 12935 6
+W 108 1 12956 1
+W 108 2 12958 7
+W 108 3 12966 4
+W 108 4 12972 3
+W 108 5 12976 8
+W 108 6 12985 9
+W 108 7 13002 2
+W 108 8 13005 2
+W 108 9 13008 5
+W 108 10 13022 1
+W 108 11 13024 4
+W 108 12 13037 3
+W 108 13 13041 5
+W 108 14 13060 2
+W 108 15 13063 3
+W 108 16 13067 9
+W 109 0 13088 2
+W 109 1 13091 4
+W 109 2 13103 2
+W 109 3 13106 11
+W 109 4 13125 2
+W 109 5 13128 2
+W 109 6 13131 4
+W 109 7 13144 3
+W 109 8 13148 2
+W 109 9 13151 1
+W 109 10 13153 3
+W 109 11 13157 6
+W 109 12 13177 3
+W 109 13 13181 3
+W 110 0 13196 3
+W 110 1 13200 6
+W 110 2 13214 4
+W 110 3 13219 4
+W 110 4 13237 1
+W 110 5 13239 5
+W 110 6 13252 3
+W 110 7 13256 2
+W 110 8 13260 3
+W 110 9 13264 1
+W 110 10 13266 5
+W 110 11 13285 3
+W 110 12 13289 4
+W 110 13 13294 3
+W 110 14 13298 8
+W 111 0 13318 3
+W 111 1 13322 11
+W 111 2 13341 4
+W 111 3 13346 1
+W 111 4 13348 5
+W 111 5 13354 2
+W 111 6 13357 2
+W 111 7 13360 8
+W 111 8 13382 3
+W 111 9 13386 4
+W 111 10 13399 3
+W 111 11 13403 4
+W 111 12 13408 3
+W 111 13 13412 3
+W 111 14 13416 9
+W 111 15 13433 2
+W 111 16 13436 2
+W 111 17 13439 5
+W 112 0 13456 1
+W 112 1 13458 4
+W 112 2 13463 8
+W 112 3 13485 4
+W 112 4 13490 5
+W 112 5 13503 2
+W 112 6 13506 7
+W 112 7 13527 3
+W 112 8 13531 8
+W 112 9 13547 5
+W 112 10 13561 4
+W 112 11 13566 4
+W 112 12 13571 3
+W 112 13 13575 3
+W 113 0 13600 1
+W 113 1 13602 4
+W 113 2 13620 4
+W 113 3 13625 8
+W 113 4 13642 3
+W 113 5 13646 3
+W 113 6 13650 3
+W 113 7 13661 2
+W 113 8 13664 1
+W 113 9 13666 4
+W 114 0 13687 4
+W 114 1 13692 3
+W 114 2 13696 2
+W 114 3 13699 6
+W 114 4 13706 5
+W 114 5 13719 3
+W 114 6 13723 2
+W 114 7 13726 6
+W 114 8 13741 1
+W 114 9 13743 4
+W 114 10 13761 2
+W 114 11 13764 3
+W 114 12 13768 4
+W 115 0 13784 6
+W 115 1 13804 4
+W 115 2 13809 2
+W 115 3 13813 2
+W 115 4 13816 9
+W 115 5 13840 3
+W 115 6 13844 1
+W 115 7 13846 4
+W 115 8 13851 4
+W 115 9 13869 3
+W 115 10 13873 12
+W 115 11 13893 2
+W 115 12 13896 2
+W 115 13 13899 3
+W 116 0 13913 6
+W 116 1 13933 2
+W 116 2 13936 9
+W 116 3 13946 4
+W 116 4 13951 3
+W 116 5 13955 4
+W 116 6 13967 4
+W 116 7 13972 1
+W 116 8 13974 3
+W 116 9 13978 4
+W 116 10 13997 3
+W 116 11 14001 3
+W 116 12 14005 2
+W 116 13 14008 3
+W 116 14 14012 2
+W 116 15 14015 7
+W 116 16 14035 2
+W 116 17 14038 2
+W 116 18 14041 4
+W 117 0 14057 4
+W 117 1 14062 4
+W 117 2 14067 2
+W 117 3 14070 2
+W 117 4 14087 3
+W 117 5 14091 1
+W 117 6 14093 5
+W 117 7 14099 2
+W 117 8 14102 4
+W 117 9 14121 3
+W 117 10 14125 1
+W 117 11 14127 4
+W 117 12 14132 4
+W 117 13 14137 7
+W 117 14 14158 4
+W 117 15 14163 3
+W 117 16 14167 8
+W 117 17 14183 11
+W 118 0 14206 4
+W 118 1 14211 4
+W 118 2 14216 7
+W 118 3 14224 4
+W 118 4 14242 3
+W 118 5 14246 4
+W 118 6 14251 4
+W 118 7 14256 3
+W 118 8 14273 4
+W 118 9 14278 3
+W 118 10 14282 8
+W 118 11 14299 3
+W 118 12 14303 5
+W 118 13 14309 6
+W 118 14 14323 2
+W 118 15 14326 9
+W 119 0 14347 4
+W 119 1 14352 7
+W 119 2 14360 4
+W 119 3 14378 3
+W 119 4 14382 3
+W 119 5 14386 6
+W 119 6 14400 2
+W 119 7 14403 3
+W 119 8 14407 5
+W 119 9 14419 4
+W 119 10 14424 5
+W 119 11 14438 9
+W 119 12 14448 1
+W 119 13 14450 4
+W 119 14 14467 3
+W 119 15 14471 11
+W 120 0 14494 2
+W 120 1 14497 5
+W 120 2 14510 9
+W 120 3 14533 3
+W 120 4 14537 4
+W 120 5 14549 2
+W 120 6 14552 4
+W 120 7 14558 3
+W 120 8 14562 1
+W 120 9 14564 2
+W 120 10 14567 6
+W 120 11 14587 2
+W 120 12 14590 3
+W 120 13 14594 9
+W 121 0 14622 1
+W 121 1 14624 4
+W 121 2 14629 4
+W 121 3 14647 8
+W 121 4 14663 3
+W 121 5 14667 7
+W 121 6 14683 5
+W 121 7 14702 2
+W 121 8 14705 3
+W 121 9 14709 2
+W 121 10 14712 4
+W 121 11 14717 10
+W 122 0 14745 2
+W 122 1 14748 6
+W 122 2 14768 3
+W 122 3 14772 3
+W 122 4 14776 7
+W 122 5 14791 3
+W 122 6 14795 4
+W 122 7 14808 3
+W 122 8 14812 3
+W 122 9 14816 3
+W 122 10 14820 5
+W 122 11 14833 7
+W 122 12 14854 2
+W 123 0 14861 4
+W 123 1 14866 4
+W 123 2 14878 4
+W 123 3 14896 3
+W 123 4 14900 3
+W 123 5 14904 9
+W 123 6 14922 3
+W 123 7 14926 3
+W 123 8 14930 3
+W 123 9 14934 4
+W 123 10 14945 2
+W 123 11 14948 3
+W 123 12 14952 13
+W 124 0 14977 4
+W 124 1 14995 4
+W 124 2 15000 3
+W 124 3 15004 7
+W 124 4 15019 9
+W 124 5 15029 4
+W 124 6 15034 3
+W 124 7 15038 5
+W 124 8 15052 3
+W 124 9 15056 5
+W 124 10 15075 2
+W 124 11 15078 3
+W 124 12 15082 8
+W 125 0 15102 1
+W 125 1 15104 2
+W 125 2 15107 3
+W 125 3 15111 7
+W 125 4 15127 4
+W 125 5 15132 2
+W 125 6 15135 13
+W 125 7 15162 4
+W 125 8 15167 1
+W 125 9 15169 3
+W 125 10 15173 4
+W 125 11 15191 3
+W 125 12 15195 11
+W 126 0 15218 2
+W 126 1 15221 2
+W 126 2 15224 4
+W 126 3 15236 3
+W 126 4 15240 4
+W 126 5 15246 4
+W 126 6 15259 2
+W 126 7 15262 4
+W 126 8 15281 3
+W 126 9 15285 4
+W 126 10 15290 4
+W 126 11 15295 4
+W 126 12 15300 4
+W 126 13 15318 3
+W 126 14 15322 3
+W 127 0 15337 9
+W 127 1 15347 1
+W 127 2 15349 4
+W 127 3 15366 3
+W 127 4 15370 12
+W 127 5 15390 5
+W 127 6 15396 4
+W 127 7 15409 3
+W 127 8 15414 5
+W 127 9 15420 4
+W 127 10 15425 4
+W 128 0 15441 9
+W 128 1 15451 1
+W 128 2 15453 6
+W 128 3 15460 3
+W 128 4 15464 3
+W 128 5 15468 8
+W 128 6 15484 10
+W 128 7 15495 3
+W 128 8 15499 6
+W 128 9 15506 2
+W 128 10 15509 2
+W 128 11 15512 5
+W 128 12 15532 3
+W 128 13 15536 1
+W 128 14 15538 4
+W 128 15 15556 5
+W 128 16 15562 5
+W 128 17 15575 3
+W 129 0 15595 3
+W 129 1 15599 11
+W 129 2 15618 3
+W 129 3 15622 9
+W 129 4 15640 9
+W 129 5 15650 4
+W 129 6 15655 2
+W 129 7 15658 4
+W 129 8 15670 4
+W 129 9 15688 4
+W 130 0 15697 3
+W 130 1 15701 8
+W 130 2 15717 2
+W 130 3 15720 3
+W 130 4 15724 5
+W 130 5 15737 6
+W 130 6 15744 5
+W 130 7 15763 2
+W 130 8 15766 6
+W 130 9 15773 13
+W 130 10 15799 4
+W 130 11 15804 3
+W 130 12 15808 6
+W 131 0 15826 1
+W 131 1 15828 6
+W 131 2 15848 2
+W 131 3 15851 5
+W 131 4 15865 3
+W 131 5 15869 6
+W 131 6 15890 3
+W 131 7 15894 1
+W 131 8 15896 6
+W 131 9 15916 3
+W 131 10 15920 3
+W 131 11 15924 12
+W 132 0 15948 4
+W 132 1 15966 4
+W 132 2 15971 4
+W 132 3 15976 2
+W 132 4 15980 3
+W 132 5 15984 2
+W 132 6 15987 8
+W 132 7 16009 4
+W 132 8 16014 2
+W 132 9 16018 2
+W 132 10 16021 4
+W 132 11 16026 5
+W 132 12 16039 2
+W 132 13 16042 2
+W 132 14 16045 4
+W 132 15 16050 5
+W 132 16 16056 4
+W 132 17 16061 4
+W 132 18 16078 3
+W 132 19 16082 4
+W 133 0 16098 5
+W 133 1 16117 2
+W 133 2 16120 5
+W 133 3 16133 2
+W 133 4 16136 3
+W 133 5 16140 4
+W 133 6 16152 3
+W 133 7 16156 3
+W 133 8 16160 3
+W 133 9 16164 3
+W 133 10 16168 8
+W 133 11 16183 4
+W 133 12 16188 8
+W 133 13 16210 4
+W 133 14 16215 2
+W 134 0 16222 7
+W 134 1 16243 2
+W 134 2 16246 4
+W 134 3 16251 3
+W 134 4 16255 10
+W 134 5 16273 2
+W 134 6 16276 3
+W 134 7 16287 2
+W 134 8 16290 4
+W 134 9 16295 1
+W 134 10 16297 4
+W 134 11 16315 3
+W 134 12 16319 8
+W 135 0 16339 4
+W 135 1 16344 3
+W 135 2 16348 4
+W 135 3 16360 2
+W 135 4 16363 5
+W 135 5 16381 4
+W 135 6 16386 3
+W 135 7 16390 7
+W 135 8 16406 3
+W 135 9 16410 5
+W 135 10 16429 2
+W 135 11 16432 3
+W 135 12 16436 8
+W 136 0 16456 6
+W 136 1 16470 2
+W 136 2 16473 6
+W 136 3 16487 3
+W 136 4 16491 4
+W 136 5 16509 4
+W 136 6 16514 4
+W 136 7 16527 7
+W 136 8 16535 4
+W 136 9 16540 4
+W 136 10 16558 3
+W 136 11 16562 3
+W 136 12 16566 3
+W 137 0 16591 9
+W 137 1 16608 3
+W 137 2 16612 4
+W 137 3 16618 1
+W 137 4 16620 4
+W 137 5 16633 3
+W 137 6 16637 7
+W 137 7 16652 3
+W 137 8 16656 3
+W 137 9 16660 9
+W 138 0 16681 3
+W 138 1 16685 11
+W 138 2 16704 4
+W 138 3 16709 4
+W 138 4 16714 4
+W 138 5 16719 9
+W 138 6 16742 3
+W 138 7 16746 9
+W 138 8 16763 3
+W 138 9 16767 4
+W 138 10 16779 8
+W 139 0 16798 2
+W 139 1 16801 4
+W 139 2 16813 4
+W 139 3 16818 8
+W 139 4 16840 2
+W 139 5 16844 7
+W 139 6 16852 4
+W 139 7 16857 7
+W 139 8 16872 4
+W 139 9 16877 9
+W 139 10 16900 3
+W 139 11 16904 5
+W 140 0 16921 3
+W 140 1 16925 4
+W 140 2 16936 2
+W 140 3 16939 4
+W 140 4 16951 4
+W 140 5 16970 9
+W 140 6 16980 3
+W 140 7 16984 7
+W 140 8 16999 6
+W 140 9 17018 2
+W 141 0 17025 1
+W 141 1 17027 2
+W 141 2 17030 5
+W 141 3 17043 3
+W 141 4 17047 8
+W 141 5 17069 3
+W 141 6 17073 2
+W 141 7 17076 3
+W 141 8 17080 1
+W 141 9 17082 6
+W 141 10 17102 3
+W 141 11 17106 8
+W 142 0 17126 3
+W 142 1 17130 13
+W 142 2 17151 2
+W 142 3 17154 2
+W 142 4 17157 11
+W 142 5 17176 13
+W 142 6 17198 3
+W 142 7 17202 3
+W 142 8 17206 3
+W 142 9 17217 2
+W 142 10 17220 3
+W 142 11 17224 5
+W 143 0 17240 7
+W 143 1 17255 3
+W 143 2 17259 7
+W 143 3 17274 4
+W 143 4 17279 5
+W 143 5 17285 4
+W 143 6 17303 2
+W 143 7 17306 2
+W 143 8 17310 3
+W 143 9 17314 3
+W 143 10 17318 12
+W 143 11 17338 3
+W 143 12 17342 2
+W 143 13 17345 8
+W 144 0 17365 3
+W 144 1 17369 13
+W 144 2 17390 2
+W 144 3 17393 3
+W 144 4 17397 11
+W 144 5 17416 2
+W 144 6 17419 11
+W 144 7 17439 4
+W 144 8 17444 2
+W 144 9 17447 13
+W 144 10 17474 3
+W 144 11 17478 1
+W 144 12 17480 5
+W 144 13 17486 4
+W 145 0 17516 1
+W 145 1 17518 5
+W 145 2 17537 4
+W 145 3 17542 2
+W 145 4 17545 5
+W 145 5 17551 5
+W 145 6 17565 4
+W 145 7 17583 2
+W 145 8 17587 1
+W 145 9 17589 4
+W 145 10 17602 1
+W 145 11 17604 4
+W 145 12 17609 4
+W 145 13 17627 3
+W 145 14 17631 8
+W 146 0 17651 1
+W 146 1 17653 5
+W 146 2 17672 4
+W 146 3 17677 4
+W 146 4 17683 4
+W 146 5 17701 2
+W 146 6 17705 3
+W 146 7 17709 1
+W 146 8 17711 5
+W 146 9 17717 4
+W 146 10 17735 3
+W 146 11 17739 11
+W 147 0 17762 1
+W 147 1 17764 9
+W 147 2 17787 3
+W 147 3 17791 7
+W 147 4 17799 2
+W 147 5 17802 3
+W 147 6 17806 7
+W 147 7 17822 3
+W 147 8 17826 5
+W 147 9 17846 1
+W 147 10 17848 5
+W 147 11 17867 2
+W 147 12 17870 3
+W 147 13 17874 4
+W 148 0 17890 4
+W 148 1 17895 4
+W 148 2 17907 7
+W 148 3 17928 3
+W 148 4 17932 5
+W 148 5 17938 7
+W 148 6 17953 4
+W 148 7 17958 1
+W 148 8 17960 5
+W 148 9 17966 8
+W 148 10 17988 2
+W 148 11 17991 3
+W 148 12 17995 4
+W 149 0 18010 4
+W 149 1 18028 2
+W 149 2 18031 5
+W 149 3 18044 9
+W 149 4 18054 4
+W 149 5 18059 3
+W 149 6 18063 14
+W 149 7 18086 1
+W 149 8 18088 4
+W 149 9 18101 7
+W 149 10 18122 2
+W 149 11 18125 9
+W 149 12 18135 2
+W 149 13 18138 3
+W 149 14 18142 8
+W 150 0 18162 4
+W 150 1 18167 4
+W 150 2 18172 4
+W 150 3 18190 4
+W 150 4 18195 6
+W 150 5 18215 5
+W 150 6 18221 8
+W 150 7 18238 4
+W 150 8 18243 3
+W 150 9 18247 3
+W 150 10 18264 4
+W 150 11 18269 3
+W 150 12 18273 3
+W 151 0 18288 4
+W 151 1 18293 3
+W 151 2 18297 4
+W 151 3 18310 1
+W 151 4 18312 4
+W 151 5 18325 3
+W 151 6 18329 3
+W 151 7 18333 3
+W 151 8 18337 12
+W 151 9 18357 3
+W 151 10 18361 5
+W 152 0 18377 10
+W 152 1 18388 3
+W 152 2 18392 11
+W 152 3 18412 1
+W 152 4 18414 4
+W 152 5 18419 5
+W 152 6 18438 2
+W 152 7 18441 3
+W 152 8 18452 4
+W 152 9 18457 4
+W 152 10 18462 4
+W 152 11 18467 7
+W 152 12 18488 4
+W 152 13 18493 3
+W 152 14 18497 4
+W 153 0 18521 8
+W 153 1 18543 4
+W 153 2 18548 10
+W 153 3 18567 3
+W 153 4 18571 7
+W 153 5 18592 2
+W 153 6 18596 3
+W 153 7 18600 1
+W 153 8 18602 2
+W 153 9 18605 3
+W 153 10 18609 6
+W 153 11 18629 3
+W 153 12 18633 3
+W 154 0 18648 5
+W 154 1 18667 2
+W 154 2 18670 5
+W 154 3 18684 3
+W 154 4 18688 7
+W 154 5 18709 2
+W 154 6 18713 7
+W 154 7 18734 2
+W 154 8 18737 9
+W 154 9 18747 2
+W 154 10 18750 3
+W 154 11 18754 4
+W 155 0 18769 9
+W 155 1 18786 2
+W 155 2 18789 3
+W 155 3 18800 4
+W 155 4 18805 3
+W 155 5 18809 6
+W 155 6 18824 3
+W 155 7 18828 4
+W 155 8 18833 4
+W 155 9 18851 3
+W 155 10 18855 3
+W 155 11 18859 8
+W 156 0 18879 5
+W 156 1 18892 3
+W 156 2 18896 3
+W 156 3 18900 6
+W 156 4 18907 7
+W 156 5 18923 1
+W 156 6 18925 4
+W 156 7 18938 7
+W 156 8 18959 2
+W 156 9 18962 9
+W 156 10 18972 2
+W 156 11 18975 3
+W 156 12 18979 9
+W 157 0 19000 4
+W 157 1 19012 3
+W 157 2 19016 2
+W 157 3 19019 11
+W 157 4 19044 3
+W 157 5 19048 4
+W 157 6 19053 7
+W 157 7 19069 3
+W 157 8 19073 2
+W 157 9 19076 1
+W 157 10 19078 3
+W 157 11 19082 7
+W 157 12 19103 4
+W 157 13 19108 3
+W 157 14 19112 11
+W 158 0 19135 1
+W 158 1 19137 6
+W 158 2 19157 3
+W 158 3 19161 13
+W 158 4 19188 3
+W 158 5 19192 3
+W 158 6 19196 7
+W 158 7 19218 7
+W 158 8 19226 4
+W 158 9 19231 4
+W 158 10 19249 3
+W 158 11 19253 3
+W 158 12 19257 4
+W 159 0 19272 8
+W 159 1 19294 3
+W 159 2 19298 1
+W 159 3 19300 4
+W 159 4 19317 3
+W 159 5 19321 8
+W 159 6 19338 7
+W 159 7 19359 2
+W 159 8 19363 1
+W 159 9 19365 4
+W 159 10 19378 9
+W 159 11 19388 2
+W 159 12 19391 3
+W 159 13 19395 14
+W 160 0 19421 3
+W 160 1 19425 4
+W 160 2 19437 2
+W 160 3 19440 4
+W 160 4 19451 4
+W 160 5 19456 3
+W 160 6 19460 9
+W 160 7 19478 3
+W 160 8 19482 5
+W 160 9 19488 3
+W 160 10 19492 2
+W 160 11 19495 3
+W 160 12 19499 9
+W 160 13 19516 9
+W 160 14 19533 8
+W 160 15 19542 3
+W 160 16 19546 4
+W 161 0 19571 7
+W 161 1 19586 4
+W 161 2 19591 10
+W 161 3 19615 2
+W 161 4 19618 7
+W 161 5 19626 1
+W 161 6 19628 5
+W 161 7 19642 3
+W 161 8 19646 2
+W 161 9 19649 5
+W 161 10 19662 8
+W 161 11 19671 2
+W 161 12 19674 3
+W 161 13 19691 2
+W 161 14 19694 3
+W 161 15 19698 4
+W 162 0 19714 1
+W 162 1 19716 7
+W 162 2 19737 2
+W 162 3 19740 3
+W 162 4 19744 4
+W 162 5 19756 2
+W 162 6 19759 3
+W 162 7 19763 4
+W 162 8 19768 7
+W 162 9 19789 5
+W 162 10 19802 5
+W 163 0 19819 1
+W 163 1 19821 4
+W 163 2 19839 3
+W 163 3 19843 5
+W 163 4 19862 5
+W 163 5 19876 3
+W 163 6 19880 3
+W 163 7 19884 3
+W 163 8 19895 2
+W 163 9 19898 1
+W 163 10 19900 4
+W 164 0 19921 5
+W 164 1 19927 5
+W 164 2 19940 1
+W 164 3 19942 3
+W 164 4 19953 2
+W 164 5 19956 1
+W 164 6 19958 6
+W 164 7 19978 4
+W 164 8 19983 7
+W 164 9 19991 2
+W 164 10 19994 3
+W 164 11 19998 9
+W 164 12 20015 9
+W 165 0 20036 5
+W 165 1 20049 5
+W 165 2 20062 4
+W 165 3 20067 4
+W 165 4 20072 5
+W 165 5 20078 4
+W 165 6 20095 3
+W 165 7 20099 3
+W 165 8 20111 3
+W 165 9 20115 7
+W 165 10 20123 5
+W 165 11 20129 6
+W 165 12 20143 4
+W 166 0 20152 4
+W 166 1 20165 1
+W 166 2 20167 4
+W 166 3 20172 5
+W 166 4 20191 3
+W 166 5 20195 3
+W 166 6 20199 9
+W 166 7 20217 3
+W 166 8 20221 4
+W 166 9 20239 3
+W 166 10 20243 12
+W 167 0 20267 2
+W 167 1 20270 4
+W 167 2 20282 4
+W 167 3 20287 4
+W 167 4 20305 3
+W 167 5 20309 11
+W 167 6 20329 3
+W 167 7 20333 1
+W 167 8 20335 4
+W 167 9 20352 4
+W 167 10 20357 11
+W 168 0 20380 1
+W 168 1 20382 4
+W 168 2 20387 4
+W 168 3 20405 3
+W 168 4 20409 8
+W 168 5 20425 3
+W 168 6 20429 3
+W 168 7 20433 11
+W 168 8 20453 3
+W 168 9 20457 3
+W 168 10 20461 2
+W 168 11 20464 4
+W 168 12 20476 3
+W 168 13 20480 6
+W 168 14 20487 4
+W 169 0 20503 3
+W 169 1 20507 2
+W 169 2 20510 3
+W 169 3 20521 4
+W 169 4 20526 4
+W 169 5 20544 6
+W 169 6 20558 4
+W 169 7 20564 1
+W 169 8 20566 4
+W 169 9 20579 4
+W 169 10 20584 2
+W 169 11 20587 13
+W 169 12 20613 9
+W 169 13 20623 2
+W 169 14 20626 3
+W 169 15 20630 4
+W 170 0 20646 3
+W 170 1 20650 2
+W 170 2 20653 12
+W 170 3 20673 4
+W 170 4 20690 6
+W 170 5 20704 4
+W 170 6 20710 7
+W 170 7 20731 2
+W 170 8 20734 9
+W 170 9 20744 2
+W 170 10 20747 3
+W 170 11 20751 4
+W 171 0 20766 2
+W 171 1 20769 4
+W 171 2 20781 5
+W 171 3 20787 5
+W 171 4 20806 6
+W 171 5 20821 4
+W 171 6 20826 4
+W 171 7 20831 4
+W 171 8 20836 6
+W 171 9 20856 2
+W 171 10 20859 3
+W 171 11 20863 8
+W 172 0 20883 2
+W 172 1 20886 6
+W 172 2 20900 5
+W 172 3 20906 5
+W 172 4 20925 2
+W 172 5 20928 3
+W 172 6 20932 4
+W 172 7 20944 3
+W 172 8 20948 3
+W 172 9 20952 3
+W 172 10 20956 12
+W 172 11 20976 3
+W 172 12 20980 13
+W 173 0 21005 3
+W 173 1 21009 5
+W 173 2 21015 4
+W 173 3 21027 4
+W 173 4 21045 2
+W 173 5 21049 3
+W 173 6 21053 1
+W 173 7 21055 4
+W 173 8 21060 6
+W 173 9 21079 3
+W 173 10 21083 8
+W 174 0 21103 1
+W 174 1 21105 4
+W 174 2 21110 6
+W 174 3 21130 3
+W 174 4 21134 3
+W 174 5 21138 9
+W 174 6 21156 1
+W 174 7 21158 4
+W 174 8 21171 3
+W 174 9 21175 3
+W 174 10 21179 3
+W 174 11 21190 2
+W 174 12 21193 2
+W 174 13 21196 7
+W 175 0 21215 3
+W 175 1 21219 2
+W 175 2 21222 4
+W 175 3 21234 4
+W 175 4 21253 3
+W 175 5 21257 2
+W 175 6 21260 5
+W 175 7 21266 6
+W 175 8 21286 4
+W 175 9 21292 3
+W 175 10 21296 3
+W 175 11 21300 3
+W 175 12 21304 9
+W 175 13 21321 4
+W 175 14 21339 2
+W 176 0 21346 1
+W 176 1 21348 4
+W 176 2 21353 4
+W 176 3 21358 6
+W 176 4 21378 4
+W 176 5 21383 1
+W 176 6 21385 4
+W 176 7 21400 5
+W 176 8 21414 4
+W 176 9 21432 3
+W 176 10 21436 7
+W 176 11 21452 3
+W 176 12 21456 1
+W 176 13 21458 2
+W 176 14 21461 3
+W 176 15 21465 6
+W 176 16 21485 3
+W 176 17 21489 12
+T PSALM 119.
+א ALEPH.
+1Blessed<0835> are the undefiled<08549> in the way<01870>, who walk<01980>(8802) in the law<08451> of the LORD<03068>. 2Blessed<0835> are they that keep<05341>(8802) his testimonies<05713>, and that seek<01875>(8799) him with the whole heart<03820>. 3They also do<06466>(8804) no iniquity<05766>: they walk<01980>(8804) in his ways<01870>. 4Thou hast commanded<06680>(8765) us to keep<08104>(8800) thy precepts<06490> diligently<03966>. 5O that<0305> my ways<01870> were directed<03559>(8735) to keep<08104>(8800) thy statutes<02706>! 6Then shall I not be ashamed<0954>(8799), when I have respect<05027>(8687) unto all thy commandments<04687>. 7I will praise<03034>(8686) thee with uprightness<03476> of heart<03824>, when I shall have learned<03925>(8800) thy righteous<06664> judgments<04941>. 8I will keep<08104>(8799) thy statutes<02706>: O forsake<05800>(8799) me not utterly<03966>.
+ב BETH.
+9Wherewithal shall a young man<05288> cleanse<02135>(8762) his way<0734>? by taking heed<08104>(8800) thereto according to thy word<01697>. 10With my whole heart<03820> have I sought<01875>(8804) thee: O let me not wander<07686>(8686) from thy commandments<04687>. 11Thy word<0565> have I hid<06845>(8804) in mine heart<03820>, that I might not sin<02398>(8799) against thee. 12Blessed<01288>(8803) art thou, O LORD<03068>: teach<03925>(8761) me thy statutes<02706>. 13With my lips<08193> have I declared<05608>(8765) all the judgments<04941> of thy mouth<06310>. 14I have rejoiced<07797>(8804) in the way<01870> of thy testimonies<05715>, as much as in<05921> all riches<01952>. 15I will meditate<07878>(8799) in thy precepts<06490>, and have respect<05027>(8686) unto thy ways<0734>. 16I will delight<08173>(8698) myself in thy statutes<02708>: I will not forget<07911>(8799) thy word<01697>.
+ג GIMEL.
+17Deal bountifully<01580>(8798) with thy servant<05650>, that I may live<02421>(8799), and keep<08104>(8799) thy word<01697>. 18Open<01540>(8761) thou mine eyes<05869>, that I may behold<05027>(8686) wondrous things<06381>(8737) out of thy law<08451>. 19I am a stranger<01616> in the earth<0776>: hide<05641>(8686) not thy commandments<04687> from me. 20My soul<05315> breaketh<01638>(8804) for the longing<08375> that it hath unto thy judgments<04941> at all times<06256>. 21Thou hast rebuked<01605>(8804) the proud<02086> that are cursed<0779>(8803), which do err<07686>(8802) from thy commandments<04687>. 22Remove<01556>(8798) from me reproach<02781> and contempt<0937>; for I have kept<05341>(8804) thy testimonies<05713>. 23Princes<08269> also did sit<03427>(8804) and speak<01696>(8738) against me: but thy servant<05650> did meditate<07878>(8799) in thy statutes<02706>. 24Thy testimonies<05713> also are my delight<08191> and my counsellors<06098><0582>.
+ד DALETH.
+25My soul<05315> cleaveth<01692>(8804) unto the dust<06083>: quicken<02421>(8761) thou me according to thy word<01697>. 26I have declared<05608>(8765) my ways<01870>, and thou heardest<06030>(8799) me: teach<03925>(8761) me thy statutes<02706>. 27Make me to understand<0995>(8685) the way<01870> of thy precepts<06490>: so shall I talk<07878>(8799) of thy wondrous works<06381>(8737). 28My soul<05315> melteth<01811>(8804) for heaviness<08424>: strengthen<06965>(8761) thou me according unto thy word<01697>. 29Remove<05493>(8685) from me the way<01870> of lying<08267>: and grant me thy law<08451> graciously<02603>(8798). 30I have chosen<0977>(8804) the way<01870> of truth<0530>: thy judgments<04941> have I laid<07737>(8765) before me. 31I have stuck<01692>(8804) unto thy testimonies<05715>: O LORD<03068>, put me not to shame<0954>(8686). 32I will run<07323>(8799) the way<01870> of thy commandments<04687>, when thou shalt enlarge<07337>(8686) my heart<03820>.
+ה HE.
+33Teach<03384>(8685) me, O LORD<03068>, the way<01870> of thy statutes<02706>; and I shall keep<05341>(8799) it unto the end<06118>. 34Give me understanding<0995>(8685), and I shall keep<05341>(8799) thy law<08451>; yea, I shall observe<08104>(8799) it with my whole heart<03820>. 35Make me to go<01869>(8685) in the path<05410> of thy commandments<04687>; for therein do I delight<02654>(8804). 36Incline<05186>(8685) my heart<03820> unto thy testimonies<05715>, and not to covetousness<01215>. 37Turn away<05674>(8685) mine eyes<05869> from beholding<07200>(8800) vanity<07723>; and quicken<02421>(8761) thou me in thy way<01870>. 38Stablish<06965>(8685) thy word<0565> unto thy servant<05650>, who is devoted to thy fear<03374>. 39Turn away<05674>(8685) my reproach<02781> which I fear<03025>(8804): for thy judgments<04941> are good<02896>. 40Behold, I have longed<08373>(8804) after thy precepts<06490>: quicken<02421>(8761) me in thy righteousness<06666>.
+ו VAU.
+41Let thy mercies<02617> come<0935>(8799) also unto me, O LORD<03068>, even thy salvation<08668>, according to thy word<0565>. 42So shall I have wherewith<01697> to answer<06030>(8799) him that reproacheth<02778>(8802) me: for I trust<0982>(8804) in thy word<01697>. 43And take<05337>(8686) not the word<01697> of truth<0571> utterly<03966> out of my mouth<06310>; for I have hoped<03176>(8765) in thy judgments<04941>. 44So shall I keep<08104>(8799) thy law<08451> continually<08548> for ever<05769> and ever<05703>. 45And I will walk<01980>(8691) at liberty<07342>: for I seek<01875>(8804) thy precepts<06490>. 46I will speak<01696>(8762) of thy testimonies<05713> also before kings<04428>, and will not be ashamed<0954>(8799). 47And I will delight<08173>(8698) myself in thy commandments<04687>, which I have loved<0157>(8804). 48My hands<03709> also will I lift up<05375>(8799) unto thy commandments<04687>, which I have loved<0157>(8804); and I will meditate<07878>(8799) in thy statutes<02706>.
+ז ZAIN.
+49Remember<02142>(8798) the word<01697> unto thy servant<05650>, upon which thou hast caused me to hope<03176>(8765). 50This is my comfort<05165> in my affliction<06040>: for thy word<0565> hath quickened<02421>(8765) me. 51The proud<02086> have had me greatly<03966> in derision<03887>(8689): yet have I not declined<05186>(8804) from thy law<08451>. 52I remembered<02142>(8804) thy judgments<04941> of old<05769>, O LORD<03068>; and have comforted<05162>(8691) myself. 53Horror<02152> hath taken hold<0270>(8804) upon me because of the wicked<07563> that forsake<05800>(8802) thy law<08451>. 54Thy statutes<02706> have been my songs<02158> in the house<01004> of my pilgrimage<04033>. 55I have remembered<02142>(8804) thy name<08034>, O LORD<03068>, in the night<03915>, and have kept<08104>(8799) thy law<08451>. 56This I had, because I kept<05341>(8804) thy precepts<06490>.
+ח CHETH.
+57Thou art my portion<02506>, O LORD<03068>: I have said<0559>(8804) that I would keep<08104>(8800) thy words<01697>. 58I intreated<02470>(8765) thy favour<06440> with my whole heart<03820>: be merciful<02603>(8798) unto me according to thy word<0565>. 59I thought<02803>(8765) on my ways<01870>, and turned<07725>(8686) my feet<07272> unto thy testimonies<05713>. 60I made haste<02363>(8804), and delayed<04102>(8701) not to keep<08104>(8800) thy commandments<04687>. 61The bands<02256> of the wicked<07563> have robbed<05749>(8765) me: but I have not forgotten<07911>(8804) thy law<08451>. 62At midnight<03915><02676> I will rise<06965>(8799) to give thanks<03034>(8687) unto thee because of thy righteous<06664> judgments<04941>. 63I am a companion<02270> of all them that fear<03372>(8804) thee, and of them that keep<08104>(8802) thy precepts<06490>. 64The earth<0776>, O LORD<03068>, is full<04390>(8804) of thy mercy<02617>: teach<03925>(8761) me thy statutes<02706>.
+ט TETH.
+65Thou hast dealt<06213>(8804) well<02896> with thy servant<05650>, O LORD<03068>, according unto thy word<01697>. 66Teach<03925>(8761) me good<02898> judgment<02940> and knowledge<01847>: for I have believed<0539>(8689) thy commandments<04687>. 67Before I was afflicted<06031>(8799) I went astray<07683>(8802): but now have I kept<08104>(8804) thy word<0565>. 68Thou art good<02896>, and doest good<02895>(8688); teach<03925>(8761) me thy statutes<02706>. 69The proud<02086> have forged<02950>(8804) a lie<08267> against me: but I will keep<05341>(8799) thy precepts<06490> with my whole heart<03820>. 70Their heart<03820> is as fat<02954>(8804) as grease<02459>; but I delight<08173>(8773) in thy law<08451>. 71It is good<02896> for me that I have been afflicted<06031>(8795); that I might learn<03925>(8799) thy statutes<02706>. 72The law<08451> of thy mouth<06310> is better<02896> unto me than thousands<0505> of gold<02091> and silver<03701>.
+י JOD.
+73Thy hands<03027> have made<06213>(8804) me and fashioned<03559>(8787) me: give me understanding<0995>(8685), that I may learn<03925>(8799) thy commandments<04687>. 74They that fear<03373> thee will be glad<08055>(8799) when they see<07200>(8799) me; because I have hoped<03176>(8765) in thy word<01697>. 75I know<03045>(8804), O LORD<03068>, that thy judgments<04941> are right<06664>, and that thou in faithfulness<0530> hast afflicted<06031>(8765) me. 76Let, I pray thee, thy merciful kindness<02617> be for my comfort<05162>(8763), according to thy word<0565> unto thy servant<05650>. 77Let thy tender mercies<07356> come<0935>(8799) unto me, that I may live<02421>(8799): for thy law<08451> is my delight<08191>. 78Let the proud<02086> be ashamed<0954>(8799); for they dealt perversely<05791>(8765) with me without a cause<08267>: but I will meditate<07878>(8799) in thy precepts<06490>. 79Let those that fear<03373> thee turn<07725>(8799) unto me, and those that have known<03045><03045>(8804)(8675)(8802) thy testimonies<05713>. 80Let my heart<03820> be sound<08549> in thy statutes<02706>; that I be not ashamed<0954>(8799).
+כ CAPH.
+81My soul<05315> fainteth<03615>(8804) for thy salvation<08668>: but I hope<03176>(8765) in thy word<01697>. 82Mine eyes<05869> fail<03615>(8804) for thy word<0565>, saying<0559>(8800), When wilt thou comfort<05162>(8762) me? 83For I am become like a bottle<04997> in the smoke<07008>; yet do I not forget<07911>(8804) thy statutes<02706>. 84How many are the days<03117> of thy servant<05650>? when wilt thou execute<06213>(8799) judgment<04941> on them that persecute<07291>(8802) me? 85The proud<02086> have digged<03738>(8804) pits<07882> for me, which are not after thy law<08451>. 86All thy commandments<04687> are faithful<0530>: they persecute<07291>(8804) me wrongfully<08267>; help<05826>(8798) thou me. 87They had almost<04592> consumed<03615>(8765) me upon earth<0776>; but I forsook<05800>(8804) not thy precepts<06490>. 88Quicken<02421>(8761) me after thy lovingkindness<02617>; so shall I keep<08104>(8799) the testimony<05715> of thy mouth<06310>.
+ל LAMED.
+89For ever<05769>, O LORD<03068>, thy word<01697> is settled<05324>(8737) in heaven<08064>. 90Thy faithfulness<0530> is unto all<01755> generations<01755>: thou hast established<03559>(8790) the earth<0776>, and it abideth<05975>(8799). 91They continue<05975>(8804) this day<03117> according to thine ordinances<04941>: for all are thy servants<05650>. 92Unless<03884> thy law<08451> had been my delights<08191>, I should then have perished<06>(8804) in mine affliction<06040>. 93I will never<05769> forget<07911>(8799) thy precepts<06490>: for with them thou hast quickened<02421>(8765) me. 94I am thine, save<03467>(8685) me; for I have sought<01875>(8804) thy precepts<06490>. 95The wicked<07563> have waited<06960>(8765) for me to destroy<06>(8763) me: but I will consider<0995>(8709) thy testimonies<05713>. 96I have seen<07200>(8804) an end<07093> of all perfection<08502>: but thy commandment<04687> is exceeding<03966> broad<07342>.
+מ MEM.
+97O how love I<0157>(8804) thy law<08451>! it is my meditation<07881> all the day<03117>. 98Thou through thy commandments<04687> hast made me wiser<02449>(8762) than mine enemies<0341>(8802): for they are ever<05769> with me. 99I have more understanding<07919>(8689) than all my teachers<03925>(8764): for thy testimonies<05715> are my meditation<07881>. 100I understand<0995>(8709) more than the ancients<02205>, because I keep<05341>(8804) thy precepts<06490>. 101I have refrained<03607>(8804) my feet<07272> from every evil<07451> way<0734>, that I might keep<08104>(8799) thy word<01697>. 102I have not departed<05493>(8804) from thy judgments<04941>: for thou hast taught<03384>(8689) me. 103How sweet<04452>(8738) are thy words<0565> unto my taste<02441>! yea, sweeter than honey<01706> to my mouth<06310>! 104Through thy precepts<06490> I get understanding<0995>(8709): therefore I hate<08130>(8804) every false<08267> way<0734>.
+נ NUN.
+105Thy word<01697> is a lamp<05216> unto my feet<07272>, and a light<0216> unto my path<05410>. 106I have sworn<07650>(8738), and I will perform<06965>(8762) it, that I will keep<08104>(8800) thy righteous<06664> judgments<04941>. 107I am afflicted<06031>(8738) very much<03966>: quicken<02421>(8761) me, O LORD<03068>, according unto thy word<01697>. 108Accept<07521>(8798), I beseech thee, the freewill offerings<05071> of my mouth<06310>, O LORD<03068>, and teach<03925>(8761) me thy judgments<04941>. 109My soul<05315> is continually<08548> in my hand<03709>: yet do I not forget<07911>(8804) thy law<08451>. 110The wicked<07563> have laid<05414>(8804) a snare<06341> for me: yet I erred<08582>(8804) not from thy precepts<06490>. 111Thy testimonies<05715> have I taken as an heritage<05157>(8804) for ever<05769>: for they are the rejoicing<08342> of my heart<03820>. 112I have inclined<05186>(8804) mine heart<03820> to perform<06213>(8800) thy statutes<02706> alway<05769>, even unto the end<06118>.
+ס SAMECH.
+113I hate<08130>(8804) vain thoughts<05588>: but thy law<08451> do I love<0157>(8804). 114Thou art my hiding place<05643> and my shield<04043>: I hope<03176>(8765) in thy word<01697>. 115Depart<05493>(8798) from me, ye evildoers<07489>(8688): for I will keep<05341>(8799) the commandments<04687> of my God<0430>. 116Uphold<05564>(8798) me according unto thy word<0565>, that I may live<02421>(8799): and let me not be ashamed<0954>(8686) of my hope<07664>. 117Hold thou me up<05582>(8798), and I shall be safe<03467>(8735): and I will have respect<08159>(8799) unto thy statutes<02706> continually<08548>. 118Thou hast trodden down<05541>(8804) all them that err<07686>(8802) from thy statutes<02706>: for their deceit<08649> is falsehood<08267>. 119Thou puttest away<07673>(8689) all the wicked<07563> of the earth<0776> like dross<05509>: therefore I love<0157>(8804) thy testimonies<05713>. 120My flesh<01320> trembleth<05568>(8804) for fear<06343> of thee; and I am afraid<03372>(8804) of thy judgments<04941>.
+ע AIN.
+121I have done<06213>(8804) judgment<04941> and justice<06664>: leave<03240>(8686) me not to mine oppressors<06231>(8802). 122Be surety<06148>(8798) for thy servant<05650> for good<02896>: let not the proud<02086> oppress<06231>(8799) me. 123Mine eyes<05869> fail<03615>(8804) for thy salvation<03444>, and for the word<0565> of thy righteousness<06664>. 124Deal<06213>(8798) with thy servant<05650> according unto thy mercy<02617>, and teach<03925>(8761) me thy statutes<02706>. 125I am thy servant<05650>; give me understanding<0995>(8685), that I may know<03045>(8799) thy testimonies<05713>. 126It is time<06256> for thee, LORD<03068>, to work<06213>(8800): for they have made void<06565>(8689) thy law<08451>. 127Therefore I love<0157>(8804) thy commandments<04687> above gold<02091>; yea, above fine gold<06337>. 128Therefore I esteem all thy precepts<06490> concerning all things to be right<03474>(8765); and I hate<08130>(8804) every false<08267> way<0734>.
+פ PE.
+129Thy testimonies<05715> are wonderful<06382>: therefore doth my soul<05315> keep<05341>(8804) them. 130The entrance<06608> of thy words<01697> giveth light<0215>(8686); it giveth understanding<0995>(8688) unto the simple<06612>. 131I opened<06473>(8804) my mouth<06310>, and panted<07602>(8799): for I longed<02968>(8804) for thy commandments<04687>. 132Look<06437>(8798) thou upon me, and be merciful<02603>(8798) unto me, as thou usest<04941> to do unto those that love<0157>(8802) thy name<08034>. 133Order<03559>(8685) my steps<06471> in thy word<0565>: and let not any iniquity<0205> have dominion<07980>(8686) over me. 134Deliver<06299>(8798) me from the oppression<06233> of man<0120>: so will I keep<08104>(8799) thy precepts<06490>. 135Make thy face<06440> to shine<0215>(8685) upon thy servant<05650>; and teach<03925>(8761) me thy statutes<02706>. 136Rivers<06388> of waters<04325> run down<03381>(8804) mine eyes<05869>, because they keep<08104>(8804) not thy law<08451>.
+צ TZADDI.
+137Righteous<06662> art thou, O LORD<03068>, and upright<03477> are thy judgments<04941>. 138Thy testimonies<05713> that thou hast commanded<06680>(8765) are righteous<06664> and very<03966> faithful<0530>. 139My zeal<07068> hath consumed<06789>(8765) me, because mine enemies<06862> have forgotten<07911>(8804) thy words<01697>. 140Thy word<0565> is very<03966> pure<06884>(8803): therefore thy servant<05650> loveth<0157>(8804) it. 141I am small<06810> and despised<0959>(8737): yet do not I forget<07911>(8804) thy precepts<06490>. 142Thy righteousness<06666> is an everlasting<05769> righteousness<06664>, and thy law<08451> is the truth<0571>. 143Trouble<06862> and anguish<04689> have taken hold<04672>(8804) on me: yet thy commandments<04687> are my delights<08191>. 144The righteousness<06664> of thy testimonies<05715> is everlasting<05769>: give me understanding<0995>(8685), and I shall live<02421>(8799).
+ק KOPH.
+145I cried<07121>(8804) with my whole heart<03820>; hear<06030>(8798) me, O LORD<03068>: I will keep<05341>(8799) thy statutes<02706>. 146I cried<07121>(8804) unto thee; save<03467>(8685) me, and I shall keep<08104>(8799) thy testimonies<05713>. 147I prevented<06923>(8765) the dawning of the morning<05399>, and cried<07768>(8762): I hoped<03176>(8765) in thy word<01697>. 148Mine eyes<05869> prevent<06923>(8765) the night watches<0821>, that I might meditate<07878>(8800) in thy word<0565>. 149Hear<08085>(8798) my voice<06963> according unto thy lovingkindness<02617>: O LORD<03068>, quicken<02421>(8761) me according to thy judgment<04941>. 150They draw nigh<07126>(8804) that follow<07291>(8802) after mischief<02154>: they are far<07368>(8804) from thy law<08451>. 151Thou art near<07138>, O LORD<03068>; and all thy commandments<04687> are truth<0571>. 152Concerning thy testimonies<05713>, I have known<03045>(8804) of old<06924> that thou hast founded<03245>(8804) them for ever<05769>.
+ר RESH.
+153Consider<07200>(8798) mine affliction<06040>, and deliver<02502>(8761) me: for I do not forget<07911>(8804) thy law<08451>. 154Plead<07378>(8798) my cause<07379>, and deliver<01350>(8798) me: quicken<02421>(8761) me according to thy word<0565>. 155Salvation<03444> is far<07350> from the wicked<07563>: for they seek<01875>(8804) not thy statutes<02706>. 156Great<07227> are thy tender mercies<07356>, O LORD<03068>: quicken<02421>(8761) me according to thy judgments<04941>. 157Many<07227> are my persecutors<07291>(8802) and mine enemies<06862>; yet do I not decline<05186>(8804) from thy testimonies<05715>. 158I beheld<07200>(8804) the transgressors<0898>(8802), and was grieved<06962>(8709); because they kept<08104>(8804) not thy word<0565>. 159Consider<07200>(8798) how I love<0157>(8804) thy precepts<06490>: quicken<02421>(8761) me, O LORD<03068>, according to thy lovingkindness<02617>. 160Thy word<01697> is true<0571> from the beginning<07218>: and every one of thy righteous<06664> judgments<04941> endureth for ever<05769>.
+ש SCHIN.
+161Princes<08269> have persecuted<07291>(8804) me without a cause<02600>: but my heart<03820> standeth in awe<06342>(8804) of thy word<01697>. 162I rejoice<07797>(8801) at thy word<0565>, as one that findeth<04672>(8802) great<07227> spoil<07998>. 163I hate<08130>(8804) and abhor<08581>(8762) lying<08267>: but thy law<08451> do I love<0157>(8804). 164Seven times<07651> a day<03117> do I praise<01984>(8765) thee because of thy righteous<06664> judgments<04941>. 165Great<07227> peace<07965> have they which love<0157>(8802) thy law<08451>: and nothing shall offend<04383> them. 166LORD<03068>, I have hoped<07663>(8765) for thy salvation<03444>, and done<06213>(8804) thy commandments<04687>. 167My soul<05315> hath kept<08104>(8804) thy testimonies<05713>; and I love<0157>(8799) them exceedingly<03966>. 168I have kept<08104>(8804) thy precepts<06490> and thy testimonies<05713>: for all my ways<01870> are before thee.
+ת TAU.
+169Let my cry<07440> come near<07126>(8799) before<06440> thee, O LORD<03068>: give me understanding<0995>(8685) according to thy word<01697>. 170Let my supplication<08467> come<0935>(8799) before<06440> thee: deliver<05337>(8685) me according to thy word<0565>. 171My lips<08193> shall utter<05042>(8686) praise<08416>, when thou hast taught<03925>(8762) me thy statutes<02706>. 172My tongue<03956> shall speak<06030>(8799) of thy word<0565>: for all thy commandments<04687> are righteousness<06664>. 173Let thine hand<03027> help<05826>(8800) me; for I have chosen<0977>(8804) thy precepts<06490>. 174I have longed<08373>(8804) for thy salvation<03444>, O LORD<03068>; and thy law<08451> is my delight<08191>. 175Let my soul<05315> live<02421>(8799), and it shall praise<01984>(8762) thee; and let thy judgments<04941> help<05826>(8799) me. 176I have gone astray<08582>(8804) like a lost<06>(8802) sheep<07716>; seek<01245>(8761) thy servant<05650>; for I do not forget<07911>(8804) thy commandments<04687>.

@@ -1,0 +1,3929 @@
+utf16=13411
+verses=176 spans=1152 words=2423 notes=0
+V 1 0 71
+V 2 72 84
+V 3 157 49
+V 4 207 56
+V 5 264 51
+V 6 316 76
+V 7 393 97
+V 8 491 52
+V 9 544 93
+V 10 638 84
+V 11 723 71
+V 12 795 50
+V 13 846 62
+V 14 909 74
+V 15 984 66
+V 16 1051 68
+V 17 1120 72
+V 18 1193 72
+V 19 1266 66
+V 20 1333 80
+V 21 1414 82
+V 22 1497 72
+V 23 1570 90
+V 24 1661 57
+V 25 1719 72
+V 26 1792 71
+V 27 1864 87
+V 28 1952 76
+V 29 2029 67
+V 30 2097 70
+V 31 2168 65
+V 32 2234 75
+V 33 2310 78
+V 34 2389 95
+V 35 2485 74
+V 36 2560 65
+V 37 2626 76
+V 38 2703 65
+V 39 2769 65
+V 40 2835 76
+V 41 2912 87
+V 42 3000 87
+V 43 3088 92
+V 44 3181 56
+V 45 3238 54
+V 46 3293 77
+V 47 3371 68
+V 48 3440 110
+V 49 3551 77
+V 50 3629 70
+V 51 3700 82
+V 52 3783 71
+V 53 3855 76
+V 54 3932 64
+V 55 3997 74
+V 56 4072 42
+V 57 4115 71
+V 58 4187 88
+V 59 4276 64
+V 60 4341 57
+V 61 4399 75
+V 62 4475 86
+V 63 4562 82
+V 64 4645 65
+V 65 4711 73
+V 66 4785 77
+V 67 4863 69
+V 68 4933 55
+V 69 4989 91
+V 70 5081 60
+V 71 5142 80
+V 72 5223 75
+V 73 5299 100
+V 74 5400 86
+V 75 5487 96
+V 76 5584 100
+V 77 5685 82
+V 78 5768 115
+V 79 5884 83
+V 80 5968 63
+V 81 6032 61
+V 82 6094 65
+V 83 6160 79
+V 84 6240 98
+V 85 6339 65
+V 86 6405 80
+V 87 6486 73
+V 88 6560 82
+V 89 6643 50
+V 90 6694 92
+V 91 6787 81
+V 92 6869 86
+V 93 6956 73
+V 94 7030 54
+V 95 7085 83
+V 96 7169 79
+V 97 7249 56
+V 98 7306 96
+V 99 7403 88
+V 100 7492 68
+V 101 7561 76
+V 102 7638 67
+V 103 7706 78
+V 104 7785 78
+V 105 7864 61
+V 106 7926 81
+V 107 8008 73
+V 108 8082 98
+V 109 8181 66
+V 110 8248 74
+V 111 8323 96
+V 112 8420 79
+V 113 8500 47
+V 114 8548 62
+V 115 8611 76
+V 116 8688 92
+V 117 8781 95
+V 118 8877 93
+V 119 8971 94
+V 120 9066 73
+V 121 9140 69
+V 122 9210 68
+V 123 9279 75
+V 124 9355 77
+V 125 9433 76
+V 126 9510 71
+V 127 9582 70
+V 128 9653 101
+V 129 9755 67
+V 130 9823 83
+V 131 9907 68
+V 132 9976 97
+V 133 10074 78
+V 134 10153 70
+V 135 10224 70
+V 136 10295 70
+V 137 10366 61
+V 138 10428 76
+V 139 10505 75
+V 140 10581 58
+V 141 10640 61
+V 142 10702 79
+V 143 10782 83
+V 144 10866 96
+V 145 10963 74
+V 146 11038 64
+V 147 11103 74
+V 148 11178 74
+V 149 11253 97
+V 150 11351 72
+V 151 11424 61
+V 152 11486 88
+V 153 11575 73
+V 154 11649 68
+V 155 11718 68
+V 156 11787 79
+V 157 11867 87
+V 158 11955 79
+V 159 12035 89
+V 160 12125 99
+V 161 12225 88
+V 162 12314 58
+V 163 12373 49
+V 164 12423 73
+V 165 12497 75
+V 166 12573 67
+V 167 12641 66
+V 168 12708 81
+V 169 12790 89
+V 170 12880 74
+V 171 12955 69
+V 172 13025 81
+V 173 13107 58
+V 174 13166 70
+V 175 13237 77
+V 176 13315 96
+S verseNumber:1 0 1
+S word:strong:H0835:- 1 7
+S italic 9 3
+S word:strong:H08549:- 13 13
+S word:strong:H01870:- 27 10
+S word:strong:H01980:strongMorph:TH8802 39 8
+S word:strong:H08451:- 48 10
+S word:strong:H03068:- 59 11
+S divineName 66 4
+S verseNumber:2 72 1
+S word:strong:H0835:- 73 7
+S italic 81 3
+S word:strong:H05341:strongMorph:TH8802 85 14
+S word:strong:H05713:- 100 15
+S italic 117 8
+S word:strong:H01875:strongMorph:TH8799 126 4
+S word:strong:H03820:- 131 24
+S verseNumber:3 157 1
+S word:strong:H06466:strongMorph:TH8804 158 12
+S word:strong:H05766:- 171 11
+S word:strong:H01980:strongMorph:TH8804 184 9
+S word:strong:H01870:- 194 11
+S verseNumber:4 207 1
+S word:strong:H06680:strongMorph:TH8765 208 19
+S italic 228 2
+S word:strong:H08104:strongMorph:TH8800 231 7
+S word:strong:H06490:- 239 12
+S word:strong:H03966:- 252 10
+S verseNumber:5 264 1
+S word:strong:H0305:- 265 6
+S word:strong:H01870:- 272 7
+S word:strong:H03559:strongMorph:TH8735 280 13
+S word:strong:H08104:strongMorph:TH8800 294 7
+S word:strong:H02706:- 302 12
+S verseNumber:6 316 1
+S word:strong:H0954:strongMorph:TH8799 317 27
+S word:strong:H05027:strongMorph:TH8687 346 19
+S word:strong:H04687:- 366 25
+S verseNumber:7 393 1
+S word:strong:H03034:strongMorph:TH8686 394 13
+S word:strong:H03476:- 408 21
+S word:strong:H03824:- 430 8
+S word:strong:H03925:strongMorph:TH8800 440 25
+S word:strong:H06664:- 466 13
+S word:strong:H04941:- 480 9
+S verseNumber:8 491 1
+S word:strong:H08104:strongMorph:TH8799 492 11
+S word:strong:H02706:- 504 12
+S word:strong:H05800:strongMorph:TH8799 518 9
+S word:strong:H03966:- 528 14
+S verseNumber:9 544 1
+S word:strong:H05288:- 545 29
+S word:strong:H02135:strongMorph:TH8762 575 7
+S word:strong:H0734:- 583 7
+S word:strong:H08104:strongMorph:TH8800 592 14
+S italic 607 7
+S word:strong:H01697:- 615 21
+S verseNumber:10 638 2
+S word:strong:H03820:- 640 19
+S word:strong:H01875:strongMorph:TH8804 660 13
+S word:strong:H07686:strongMorph:TH8686 674 25
+S word:strong:H04687:- 700 21
+S verseNumber:11 723 2
+S word:strong:H0565:- 725 8
+S word:strong:H06845:strongMorph:TH8804 734 10
+S word:strong:H03820:- 745 13
+S word:strong:H02398:strongMorph:TH8799 760 20
+S verseNumber:12 795 2
+S word:strong:H01288:strongMorph:TH8803 797 7
+S italic 805 3
+S word:strong:H03068:- 809 12
+S divineName 817 4
+S word:strong:H03925:strongMorph:TH8761 823 5
+S word:strong:H02706:- 829 15
+S verseNumber:13 846 2
+S word:strong:H08193:- 848 12
+S word:strong:H05608:strongMorph:TH8765 861 15
+S word:strong:H04941:- 877 17
+S word:strong:H06310:- 895 12
+S verseNumber:14 909 2
+S word:strong:H07797:strongMorph:TH8804 911 15
+S word:strong:H01870:- 927 10
+S word:strong:H05715:- 938 18
+S italic 961 7
+S word:strong:H05921:- 969 2
+S word:strong:H01952:- 972 10
+S verseNumber:15 984 2
+S word:strong:H07878:strongMorph:TH8799 986 15
+S word:strong:H06490:- 1002 15
+S word:strong:H05027:strongMorph:TH8686 1019 16
+S word:strong:H0734:- 1036 13
+S verseNumber:16 1051 2
+S word:strong:H08173:strongMorph:TH8698 1053 14
+S word:strong:H02708:- 1068 22
+S word:strong:H07911:strongMorph:TH8799 1092 17
+S word:strong:H01697:- 1110 8
+S verseNumber:17 1120 2
+S word:strong:H01580:strongMorph:TH8798 1122 16
+S word:strong:H05650:- 1139 16
+S italic 1157 4
+S word:strong:H02421:strongMorph:TH8799 1162 10
+S word:strong:H08104:strongMorph:TH8799 1174 8
+S word:strong:H01697:- 1183 8
+S verseNumber:18 1193 2
+S word:strong:H01540:strongMorph:TH8761 1195 4
+S word:strong:H05869:- 1200 14
+S word:strong:H05027:strongMorph:TH8686 1216 17
+S word:strong:H06381:strongMorph:TH8737 1234 15
+S word:strong:H08451:- 1250 14
+S verseNumber:19 1266 2
+S italic 1270 2
+S word:strong:H01616:- 1273 10
+S word:strong:H0776:- 1284 12
+S word:strong:H05641:strongMorph:TH8686 1298 4
+S word:strong:H04687:- 1303 20
+S verseNumber:20 1333 2
+S word:strong:H05315:- 1335 7
+S word:strong:H01638:strongMorph:TH8804 1343 8
+S word:strong:H08375:- 1352 15
+S italic 1368 12
+S word:strong:H04941:- 1381 18
+S word:strong:H06256:- 1400 12
+S verseNumber:21 1414 2
+S word:strong:H01605:strongMorph:TH8804 1416 17
+S word:strong:H02086:- 1434 9
+S italic 1444 8
+S word:strong:H0779:strongMorph:TH8803 1453 6
+S word:strong:H07686:strongMorph:TH8802 1461 12
+S word:strong:H04687:- 1474 21
+S verseNumber:22 1497 2
+S word:strong:H01556:strongMorph:TH8798 1499 6
+S word:strong:H02781:- 1506 16
+S word:strong:H0937:- 1523 12
+S word:strong:H05341:strongMorph:TH8804 1537 15
+S word:strong:H05713:- 1553 15
+S verseNumber:23 1570 2
+S word:strong:H08269:- 1572 7
+S word:strong:H03427:strongMorph:TH8804 1580 12
+S italic 1593 3
+S word:strong:H01696:strongMorph:TH8738 1597 5
+S italic 1615 3
+S word:strong:H05650:- 1619 11
+S word:strong:H07878:strongMorph:TH8799 1631 12
+S word:strong:H02706:- 1644 15
+S verseNumber:24 1661 2
+S word:strong:H05713:- 1663 15
+S italic 1684 3
+S word:strong:H08191:- 1688 10
+S italic 1699 3
+S word:strong:H06098 strong:H0582:- 1703 14
+S verseNumber:25 1719 2
+S word:strong:H05315:- 1721 7
+S word:strong:H01692:strongMorph:TH8804 1729 8
+S word:strong:H06083:- 1738 13
+S word:strong:H02421:strongMorph:TH8761 1753 7
+S word:strong:H01697:- 1761 29
+S verseNumber:26 1792 2
+S word:strong:H05608:strongMorph:TH8765 1794 15
+S word:strong:H01870:- 1810 7
+S word:strong:H06030:strongMorph:TH8799 1819 17
+S word:strong:H03925:strongMorph:TH8761 1837 9
+S word:strong:H02706:- 1847 15
+S verseNumber:27 1864 2
+S word:strong:H0995:strongMorph:TH8685 1866 21
+S word:strong:H01870:- 1888 7
+S word:strong:H06490:- 1896 15
+S word:strong:H07878:strongMorph:TH8799 1913 15
+S word:strong:H06381:strongMorph:TH8737 1929 21
+S verseNumber:28 1952 2
+S word:strong:H05315:- 1954 7
+S word:strong:H01811:strongMorph:TH8804 1962 7
+S word:strong:H08424:- 1970 13
+S word:strong:H06965:strongMorph:TH8761 1985 10
+S word:strong:H01697:- 1996 31
+S verseNumber:29 2029 2
+S word:strong:H05493:strongMorph:TH8685 2031 6
+S word:strong:H01870:- 2038 15
+S word:strong:H08267:- 2054 8
+S word:strong:H08451:- 2064 20
+S word:strong:H02603:strongMorph:TH8798 2085 10
+S verseNumber:30 2097 2
+S word:strong:H0977:strongMorph:TH8804 2099 13
+S word:strong:H01870:- 2113 7
+S word:strong:H0530:- 2121 8
+S word:strong:H04941:- 2131 13
+S word:strong:H07737:strongMorph:TH8765 2145 11
+S italic 2157 9
+S verseNumber:31 2168 2
+S word:strong:H01692:strongMorph:TH8804 2170 12
+S word:strong:H05715:- 2183 20
+S word:strong:H03068:- 2205 6
+S divineName 2207 4
+S word:strong:H0954:strongMorph:TH8686 2213 19
+S verseNumber:32 2234 2
+S word:strong:H07323:strongMorph:TH8799 2236 10
+S word:strong:H01870:- 2247 7
+S word:strong:H04687:- 2255 19
+S word:strong:H07337:strongMorph:TH8686 2276 23
+S word:strong:H03820:- 2300 8
+S verseNumber:33 2310 2
+S word:strong:H03384:strongMorph:TH8685 2312 5
+S word:strong:H03068:- 2318 10
+S divineName 2324 4
+S word:strong:H01870:- 2330 7
+S word:strong:H02706:- 2338 15
+S word:strong:H05341:strongMorph:TH8799 2355 16
+S italic 2375 4
+S word:strong:H06118:- 2380 7
+S verseNumber:34 2389 2
+S word:strong:H0995:strongMorph:TH8685 2391 21
+S word:strong:H05341:strongMorph:TH8799 2414 16
+S word:strong:H08451:- 2431 7
+S word:strong:H08104:strongMorph:TH8799 2440 20
+S italic 2469 2
+S word:strong:H03820:- 2472 11
+S verseNumber:35 2485 2
+S word:strong:H01869:strongMorph:TH8685 2487 13
+S word:strong:H05410:- 2501 11
+S word:strong:H04687:- 2513 19
+S word:strong:H02654:strongMorph:TH8804 2534 24
+S verseNumber:36 2560 2
+S word:strong:H05186:strongMorph:TH8685 2562 7
+S word:strong:H03820:- 2570 8
+S word:strong:H05715:- 2579 20
+S word:strong:H01215:- 2601 23
+S verseNumber:37 2626 2
+S word:strong:H05674:strongMorph:TH8685 2628 9
+S word:strong:H05869:- 2638 9
+S word:strong:H07200:strongMorph:TH8800 2648 14
+S word:strong:H07723:- 2663 6
+S italic 2671 3
+S word:strong:H02421:strongMorph:TH8761 2675 7
+S word:strong:H01870:- 2683 18
+S verseNumber:38 2703 2
+S word:strong:H06965:strongMorph:TH8685 2705 8
+S word:strong:H0565:- 2714 8
+S word:strong:H05650:- 2723 16
+S italic 2745 10
+S word:strong:H03374:- 2756 11
+S verseNumber:39 2769 2
+S word:strong:H05674:strongMorph:TH8685 2771 9
+S word:strong:H02781:- 2781 11
+S word:strong:H03025:strongMorph:TH8804 2793 12
+S word:strong:H04941:- 2807 17
+S italic 2825 3
+S word:strong:H02896:- 2829 4
+S verseNumber:40 2835 2
+S word:strong:H08373:strongMorph:TH8804 2837 21
+S word:strong:H06490:- 2859 18
+S word:strong:H02421:strongMorph:TH8761 2879 7
+S word:strong:H06666:- 2887 23
+S verseNumber:41 2912 2
+S word:strong:H02617:- 2914 15
+S word:strong:H0935:strongMorph:TH8799 2930 4
+S word:strong:H03068:- 2935 20
+S divineName 2951 4
+S italic 2957 4
+S word:strong:H08668:- 2962 13
+S word:strong:H0565:- 2977 21
+S verseNumber:42 3000 2
+S word:strong:H01697:- 3002 25
+S word:strong:H06030:strongMorph:TH8799 3028 9
+S word:strong:H02778:strongMorph:TH8802 3038 20
+S word:strong:H0982:strongMorph:TH8804 3059 15
+S word:strong:H01697:- 3075 11
+S verseNumber:43 3088 2
+S word:strong:H05337:strongMorph:TH8686 3090 8
+S word:strong:H01697:- 3099 12
+S word:strong:H0571:- 3112 8
+S word:strong:H03966:- 3121 7
+S word:strong:H06310:- 3129 15
+S word:strong:H03176:strongMorph:TH8765 3146 16
+S word:strong:H04941:- 3163 16
+S verseNumber:44 3181 2
+S word:strong:H08104:strongMorph:TH8799 3183 15
+S word:strong:H08451:- 3199 7
+S word:strong:H08548:- 3207 11
+S word:strong:H05769:- 3219 8
+S word:strong:H05703:- 3228 8
+S verseNumber:45 3238 2
+S word:strong:H01980:strongMorph:TH8691 3240 15
+S word:strong:H07342:- 3256 10
+S word:strong:H01875:strongMorph:TH8804 3268 10
+S word:strong:H06490:- 3279 12
+S verseNumber:46 3293 2
+S word:strong:H01696:strongMorph:TH8762 3295 12
+S word:strong:H05713:- 3308 18
+S word:strong:H04428:- 3327 17
+S word:strong:H0954:strongMorph:TH8799 3346 23
+S verseNumber:47 3371 2
+S word:strong:H08173:strongMorph:TH8698 3373 18
+S word:strong:H04687:- 3392 26
+S word:strong:H0157:strongMorph:TH8804 3420 18
+S verseNumber:48 3440 2
+S word:strong:H03709:- 3442 8
+S word:strong:H05375:strongMorph:TH8799 3451 19
+S word:strong:H04687:- 3471 21
+S word:strong:H0157:strongMorph:TH8804 3494 18
+S word:strong:H07878:strongMorph:TH8799 3514 19
+S word:strong:H02706:- 3534 15
+S verseNumber:49 3551 2
+S word:strong:H02142:strongMorph:TH8798 3553 8
+S word:strong:H01697:- 3562 8
+S word:strong:H05650:- 3571 16
+S word:strong:H03176:strongMorph:TH8765 3589 38
+S verseNumber:50 3629 2
+S italic 3636 2
+S word:strong:H05165:- 3639 10
+S word:strong:H06040:- 3650 16
+S word:strong:H0565:- 3668 12
+S word:strong:H02421:strongMorph:TH8765 3681 14
+S verseNumber:51 3700 2
+S word:strong:H02086:- 3702 9
+S word:strong:H03966:- 3712 19
+S word:strong:H03887:strongMorph:TH8689 3732 11
+S italic 3745 3
+S word:strong:H05186:strongMorph:TH8804 3749 19
+S word:strong:H08451:- 3769 12
+S verseNumber:52 3783 2
+S word:strong:H02142:strongMorph:TH8804 3785 12
+S word:strong:H04941:- 3798 13
+S word:strong:H05769:- 3812 6
+S word:strong:H03068:- 3820 6
+S divineName 3822 4
+S word:strong:H05162:strongMorph:TH8691 3828 18
+S verseNumber:53 3855 2
+S word:strong:H02152:- 3857 6
+S word:strong:H0270:strongMorph:TH8804 3864 15
+S word:strong:H07563:- 3880 29
+S word:strong:H05800:strongMorph:TH8802 3910 12
+S word:strong:H08451:- 3923 7
+S verseNumber:54 3932 2
+S word:strong:H02706:- 3934 12
+S word:strong:H02158:- 3947 18
+S word:strong:H01004:- 3966 12
+S word:strong:H04033:- 3979 16
+S verseNumber:55 3997 2
+S word:strong:H02142:strongMorph:TH8804 3999 17
+S word:strong:H08034:- 4017 8
+S word:strong:H03068:- 4027 6
+S divineName 4029 4
+S word:strong:H03915:- 4035 12
+S word:strong:H08104:strongMorph:TH8799 4049 13
+S word:strong:H08451:- 4063 7
+S verseNumber:56 4072 2
+S word:strong:H05341:strongMorph:TH8804 4074 26
+S word:strong:H06490:- 4101 12
+S verseNumber:57 4115 2
+S italic 4117 8
+S word:strong:H02506:- 4126 10
+S word:strong:H03068:- 4138 6
+S divineName 4140 4
+S word:strong:H0559:strongMorph:TH8804 4146 11
+S word:strong:H08104:strongMorph:TH8800 4158 17
+S word:strong:H01697:- 4176 9
+S verseNumber:58 4187 2
+S word:strong:H02470:strongMorph:TH8765 4189 11
+S word:strong:H06440:- 4201 10
+S italic 4217 2
+S word:strong:H03820:- 4220 11
+S word:strong:H02603:strongMorph:TH8798 4233 11
+S word:strong:H0565:- 4245 29
+S verseNumber:59 4276 2
+S word:strong:H02803:strongMorph:TH8765 4278 9
+S word:strong:H01870:- 4288 10
+S word:strong:H07725:strongMorph:TH8686 4300 10
+S word:strong:H07272:- 4311 7
+S word:strong:H05713:- 4319 20
+S verseNumber:60 4341 2
+S word:strong:H02363:strongMorph:TH8804 4343 12
+S word:strong:H04102:strongMorph:TH8701 4357 11
+S word:strong:H08104:strongMorph:TH8800 4369 11
+S word:strong:H04687:- 4381 16
+S verseNumber:61 4399 2
+S word:strong:H02256:- 4401 9
+S word:strong:H07563:- 4411 13
+S word:strong:H05749:strongMorph:TH8765 4425 11
+S italic 4441 3
+S word:strong:H07911:strongMorph:TH8804 4445 20
+S word:strong:H08451:- 4466 7
+S verseNumber:62 4475 2
+S word:strong:H03915 strong:H02676:- 4477 11
+S word:strong:H06965:strongMorph:TH8799 4489 11
+S word:strong:H03034:strongMorph:TH8687 4501 14
+S word:strong:H06664:- 4516 34
+S word:strong:H04941:- 4551 9
+S verseNumber:63 4562 2
+S italic 4566 2
+S word:strong:H02270:- 4569 11
+S italic 4588 4
+S word:strong:H03372:strongMorph:TH8804 4593 9
+S word:strong:H08104:strongMorph:TH8802 4603 27
+S word:strong:H06490:- 4631 12
+S verseNumber:64 4645 2
+S word:strong:H0776:- 4647 9
+S word:strong:H03068:- 4658 6
+S divineName 4660 4
+S word:strong:H04390:strongMorph:TH8804 4666 7
+S word:strong:H02617:- 4674 12
+S word:strong:H03925:strongMorph:TH8761 4688 5
+S word:strong:H02706:- 4694 15
+S verseNumber:65 4711 2
+S word:strong:H06213:strongMorph:TH8804 4713 15
+S word:strong:H02896:- 4729 4
+S word:strong:H05650:- 4734 16
+S word:strong:H03068:- 4752 6
+S divineName 4754 4
+S word:strong:H01697:- 4760 23
+S verseNumber:66 4785 2
+S word:strong:H03925:strongMorph:TH8761 4787 5
+S word:strong:H02898:- 4793 7
+S word:strong:H02940:- 4801 8
+S word:strong:H01847:- 4810 13
+S word:strong:H0539:strongMorph:TH8689 4825 19
+S word:strong:H04687:- 4845 16
+S verseNumber:67 4863 2
+S word:strong:H06031:strongMorph:TH8799 4865 22
+S word:strong:H07683:strongMorph:TH8802 4888 13
+S word:strong:H08104:strongMorph:TH8804 4903 19
+S word:strong:H0565:- 4923 8
+S verseNumber:68 4933 2
+S italic 4940 3
+S word:strong:H02896:- 4944 4
+S word:strong:H02895:strongMorph:TH8688 4950 14
+S word:strong:H03925:strongMorph:TH8761 4966 5
+S word:strong:H02706:- 4972 15
+S verseNumber:69 4989 2
+S word:strong:H02086:- 4991 9
+S word:strong:H02950:strongMorph:TH8804 5001 11
+S word:strong:H08267:- 5013 5
+S italic 5031 3
+S word:strong:H05341:strongMorph:TH8799 5035 11
+S word:strong:H06490:- 5047 12
+S italic 5065 2
+S word:strong:H03820:- 5068 11
+S verseNumber:70 5081 2
+S word:strong:H03820:- 5083 11
+S word:strong:H02954:strongMorph:TH8804 5095 9
+S word:strong:H02459:- 5105 9
+S italic 5116 3
+S word:strong:H08173:strongMorph:TH8773 5120 9
+S word:strong:H08451:- 5130 10
+S verseNumber:71 5142 2
+S italic 5144 5
+S word:strong:H02896:- 5150 4
+S word:strong:H06031:strongMorph:TH8795 5155 33
+S word:strong:H03925:strongMorph:TH8799 5190 18
+S word:strong:H02706:- 5209 12
+S verseNumber:72 5223 2
+S word:strong:H08451:- 5225 7
+S word:strong:H06310:- 5233 12
+S italic 5246 2
+S word:strong:H02896:- 5249 6
+S word:strong:H0505:- 5256 22
+S word:strong:H02091:- 5279 7
+S word:strong:H03701:- 5287 10
+S verseNumber:73 5299 2
+S word:strong:H03027:- 5301 9
+S word:strong:H06213:strongMorph:TH8804 5311 9
+S word:strong:H03559:strongMorph:TH8787 5321 16
+S word:strong:H0995:strongMorph:TH8685 5338 25
+S word:strong:H03925:strongMorph:TH8799 5365 16
+S word:strong:H04687:- 5382 16
+S verseNumber:74 5400 2
+S word:strong:H03373:- 5402 14
+S word:strong:H08055:strongMorph:TH8799 5417 17
+S word:strong:H07200:strongMorph:TH8799 5435 13
+S word:strong:H03176:strongMorph:TH8765 5449 24
+S word:strong:H01697:- 5474 11
+S verseNumber:75 5487 2
+S word:strong:H03045:strongMorph:TH8804 5489 6
+S word:strong:H03068:- 5497 6
+S divineName 5499 4
+S word:strong:H04941:- 5505 18
+S italic 5524 3
+S word:strong:H06664:- 5528 5
+S italic 5539 4
+S word:strong:H0530:- 5544 20
+S word:strong:H06031:strongMorph:TH8765 5565 14
+S verseNumber:76 5584 2
+S word:strong:H02617:- 5586 39
+S word:strong:H05162:strongMorph:TH8763 5626 17
+S word:strong:H0565:- 5645 21
+S word:strong:H05650:- 5667 16
+S verseNumber:77 5685 2
+S word:strong:H07356:- 5687 22
+S word:strong:H0935:strongMorph:TH8799 5710 4
+S word:strong:H02421:strongMorph:TH8799 5715 24
+S word:strong:H08451:- 5741 11
+S italic 5753 2
+S word:strong:H08191:- 5756 10
+S verseNumber:78 5768 2
+S word:strong:H02086:- 5770 13
+S word:strong:H0954:strongMorph:TH8799 5784 10
+S word:strong:H05791:strongMorph:TH8765 5796 25
+S word:strong:H08267:- 5822 23
+S italic 5847 3
+S word:strong:H07878:strongMorph:TH8799 5851 15
+S word:strong:H06490:- 5867 15
+S verseNumber:79 5884 2
+S word:strong:H03373:- 5886 19
+S word:strong:H07725:strongMorph:TH8799 5906 9
+S word:strong:H03045 strong:H03045:strongMorph:TH8804 strongMorph:TH8675 strongMorph:TH8802 5916 34
+S word:strong:H05713:- 5951 15
+S verseNumber:80 5968 2
+S word:strong:H03820:- 5970 12
+S word:strong:H08549:- 5983 8
+S word:strong:H02706:- 5992 15
+S word:strong:H0954:strongMorph:TH8799 6009 21
+S verseNumber:81 6032 2
+S word:strong:H05315:- 6034 7
+S word:strong:H03615:strongMorph:TH8804 6042 8
+S word:strong:H08668:- 6051 17
+S italic 6070 3
+S word:strong:H03176:strongMorph:TH8765 6074 6
+S word:strong:H01697:- 6081 11
+S verseNumber:82 6094 2
+S word:strong:H05869:- 6096 9
+S word:strong:H03615:strongMorph:TH8804 6106 4
+S word:strong:H0565:- 6111 12
+S word:strong:H0559:strongMorph:TH8800 6125 6
+S word:strong:H05162:strongMorph:TH8762 6133 22
+S verseNumber:83 6160 2
+S word:strong:H04997:- 6162 29
+S word:strong:H07008:- 6192 12
+S italic 6206 3
+S word:strong:H07911:strongMorph:TH8804 6210 15
+S word:strong:H02706:- 6226 12
+S verseNumber:84 6240 2
+S italic 6251 3
+S word:strong:H03117:- 6255 8
+S word:strong:H05650:- 6264 14
+S word:strong:H06213:strongMorph:TH8799 6280 22
+S word:strong:H04941:- 6303 8
+S word:strong:H07291:strongMorph:TH8802 6312 22
+S verseNumber:85 6339 2
+S word:strong:H02086:- 6341 9
+S word:strong:H03738:strongMorph:TH8804 6351 11
+S word:strong:H07882:- 6363 4
+S italic 6382 3
+S word:strong:H08451:- 6386 17
+S verseNumber:86 6405 2
+S word:strong:H04687:- 6407 20
+S italic 6428 3
+S word:strong:H0530:- 6432 8
+S word:strong:H07291:strongMorph:TH8804 6442 14
+S word:strong:H08267:- 6457 13
+S word:strong:H05826:strongMorph:TH8798 6472 4
+S verseNumber:87 6486 2
+S word:strong:H04592:- 6488 15
+S word:strong:H03615:strongMorph:TH8765 6504 8
+S word:strong:H0776:- 6513 13
+S word:strong:H05800:strongMorph:TH8804 6528 13
+S word:strong:H06490:- 6542 16
+S verseNumber:88 6560 2
+S word:strong:H02421:strongMorph:TH8761 6562 7
+S word:strong:H02617:- 6570 27
+S word:strong:H08104:strongMorph:TH8799 6599 15
+S word:strong:H05715:- 6615 13
+S word:strong:H06310:- 6629 12
+S verseNumber:89 6643 2
+S word:strong:H05769:- 6645 8
+S word:strong:H03068:- 6655 6
+S divineName 6657 4
+S word:strong:H01697:- 6663 8
+S word:strong:H05324:strongMorph:TH8737 6672 10
+S word:strong:H08064:- 6683 9
+S verseNumber:90 6694 2
+S word:strong:H0530:- 6696 16
+S italic 6713 2
+S word:strong:H01755:- 6716 8
+S word:strong:H01755:- 6725 11
+S word:strong:H03559:strongMorph:TH8790 6738 21
+S word:strong:H0776:- 6760 9
+S word:strong:H05975:strongMorph:TH8799 6771 14
+S verseNumber:91 6787 2
+S word:strong:H05975:strongMorph:TH8804 6789 13
+S word:strong:H03117:- 6803 8
+S word:strong:H04941:- 6812 29
+S italic 6851 3
+S word:strong:H05650:- 6855 12
+S verseNumber:92 6869 2
+S word:strong:H03884:- 6871 6
+S word:strong:H08451:- 6878 7
+S italic 6886 8
+S word:strong:H08191:- 6895 11
+S word:strong:H06:strongMorph:TH8804 6908 27
+S word:strong:H06040:- 6936 18
+S verseNumber:93 6956 2
+S word:strong:H05769:- 6958 12
+S word:strong:H07911:strongMorph:TH8799 6971 6
+S word:strong:H06490:- 6978 12
+S word:strong:H02421:strongMorph:TH8765 6992 33
+S verseNumber:94 7030 2
+S italic 7034 2
+S word:strong:H03467:strongMorph:TH8685 7037 11
+S word:strong:H01875:strongMorph:TH8804 7049 21
+S word:strong:H06490:- 7071 12
+S verseNumber:95 7085 2
+S word:strong:H07563:- 7087 10
+S word:strong:H06960:strongMorph:TH8765 7098 11
+S word:strong:H06:strongMorph:TH8763 7110 17
+S italic 7132 3
+S word:strong:H0995:strongMorph:TH8709 7136 15
+S word:strong:H05713:- 7152 15
+S verseNumber:96 7169 2
+S word:strong:H07200:strongMorph:TH8804 7171 11
+S word:strong:H07093:- 7183 6
+S word:strong:H08502:- 7190 17
+S italic 7209 3
+S word:strong:H04687:- 7213 15
+S italic 7229 2
+S word:strong:H03966:- 7232 9
+S word:strong:H07342:- 7242 5
+S verseNumber:97 7249 2
+S word:strong:H0157:strongMorph:TH8804 7251 12
+S word:strong:H08451:- 7264 7
+S italic 7276 2
+S word:strong:H07881:- 7279 13
+S word:strong:H03117:- 7293 11
+S verseNumber:98 7306 2
+S word:strong:H04687:- 7308 29
+S word:strong:H02449:strongMorph:TH8762 7338 18
+S word:strong:H0341:strongMorph:TH8802 7357 17
+S italic 7385 3
+S word:strong:H05769:- 7389 4
+S verseNumber:99 7403 2
+S word:strong:H07919:strongMorph:TH8689 7405 25
+S word:strong:H03925:strongMorph:TH8764 7431 20
+S word:strong:H05715:- 7453 19
+S italic 7473 3
+S word:strong:H07881:- 7477 13
+S verseNumber:100 7492 3
+S word:strong:H0995:strongMorph:TH8709 7495 12
+S word:strong:H02205:- 7508 22
+S word:strong:H05341:strongMorph:TH8804 7532 14
+S word:strong:H06490:- 7547 12
+S verseNumber:101 7561 3
+S word:strong:H03607:strongMorph:TH8804 7564 16
+S word:strong:H07272:- 7581 7
+S word:strong:H07451:- 7589 15
+S word:strong:H0734:- 7605 3
+S word:strong:H08104:strongMorph:TH8799 7610 17
+S word:strong:H01697:- 7628 8
+S verseNumber:102 7638 3
+S word:strong:H05493:strongMorph:TH8804 7641 19
+S word:strong:H04941:- 7661 18
+S word:strong:H03384:strongMorph:TH8689 7681 20
+S verseNumber:103 7706 3
+S word:strong:H04452:strongMorph:TH8738 7709 9
+S word:strong:H0565:- 7719 13
+S word:strong:H02441:- 7733 13
+S italic 7748 3
+S italic 7753 7
+S word:strong:H01706:- 7761 10
+S word:strong:H06310:- 7772 11
+S verseNumber:104 7785 3
+S word:strong:H06490:- 7788 20
+S word:strong:H0995:strongMorph:TH8709 7809 19
+S word:strong:H08130:strongMorph:TH8804 7830 16
+S word:strong:H08267:- 7847 11
+S word:strong:H0734:- 7859 3
+S verseNumber:105 7864 3
+S word:strong:H01697:- 7867 8
+S italic 7876 2
+S word:strong:H05216:- 7879 6
+S word:strong:H07272:- 7886 12
+S word:strong:H0216:- 7900 11
+S word:strong:H05410:- 7912 12
+S verseNumber:106 7926 3
+S word:strong:H07650:strongMorph:TH8738 7929 12
+S word:strong:H06965:strongMorph:TH8762 7943 18
+S italic 7962 2
+S word:strong:H08104:strongMorph:TH8800 7966 16
+S word:strong:H06664:- 7983 13
+S word:strong:H04941:- 7997 9
+S verseNumber:107 8008 3
+S word:strong:H06031:strongMorph:TH8738 8011 14
+S word:strong:H03966:- 8026 9
+S word:strong:H02421:strongMorph:TH8761 8037 7
+S word:strong:H03068:- 8045 10
+S divineName 8051 4
+S word:strong:H01697:- 8057 23
+S verseNumber:108 8082 3
+S word:strong:H07521:strongMorph:TH8798 8085 6
+S word:strong:H05071:- 8093 38
+S word:strong:H06310:- 8132 11
+S word:strong:H03068:- 8145 6
+S divineName 8147 4
+S word:strong:H03925:strongMorph:TH8761 8153 9
+S word:strong:H04941:- 8163 16
+S verseNumber:109 8181 3
+S word:strong:H05315:- 8184 7
+S italic 8192 2
+S word:strong:H08548:- 8195 11
+S word:strong:H03709:- 8207 10
+S word:strong:H07911:strongMorph:TH8804 8219 19
+S word:strong:H08451:- 8239 7
+S verseNumber:110 8248 3
+S word:strong:H07563:- 8251 10
+S word:strong:H05414:strongMorph:TH8804 8262 9
+S word:strong:H06341:- 8272 7
+S word:strong:H08582:strongMorph:TH8804 8280 19
+S word:strong:H06490:- 8300 21
+S verseNumber:111 8323 3
+S word:strong:H05715:- 8326 15
+S word:strong:H05157:strongMorph:TH8804 8342 27
+S word:strong:H05769:- 8370 8
+S italic 8389 3
+S word:strong:H08342:- 8393 13
+S word:strong:H03820:- 8407 11
+S verseNumber:112 8420 3
+S word:strong:H05186:strongMorph:TH8804 8423 15
+S word:strong:H03820:- 8439 10
+S word:strong:H06213:strongMorph:TH8800 8450 10
+S word:strong:H02706:- 8461 12
+S word:strong:H05769:- 8474 5
+S italic 8481 9
+S word:strong:H06118:- 8491 7
+S verseNumber:113 8500 3
+S word:strong:H08130:strongMorph:TH8804 8503 6
+S italic 8510 4
+S word:strong:H05588:- 8515 8
+S word:strong:H08451:- 8525 11
+S word:strong:H0157:strongMorph:TH8804 8537 9
+S verseNumber:114 8548 3
+S italic 8556 3
+S word:strong:H05643:- 8560 15
+S word:strong:H04043:- 8576 13
+S word:strong:H03176:strongMorph:TH8765 8591 6
+S word:strong:H01697:- 8598 11
+S verseNumber:115 8611 3
+S word:strong:H05493:strongMorph:TH8798 8614 6
+S word:strong:H07489:strongMorph:TH8688 8621 21
+S word:strong:H05341:strongMorph:TH8799 8644 15
+S word:strong:H04687:- 8660 16
+S word:strong:H0430:- 8677 9
+S verseNumber:116 8688 3
+S word:strong:H05564:strongMorph:TH8798 8691 6
+S word:strong:H0565:- 8698 26
+S word:strong:H02421:strongMorph:TH8799 8726 15
+S word:strong:H0954:strongMorph:TH8686 8743 25
+S word:strong:H07664:- 8769 10
+S verseNumber:117 8781 3
+S word:strong:H05582:strongMorph:TH8798 8784 15
+S word:strong:H03467:strongMorph:TH8735 8801 19
+S word:strong:H08159:strongMorph:TH8799 8822 23
+S word:strong:H02706:- 8846 17
+S word:strong:H08548:- 8864 11
+S verseNumber:118 8877 3
+S word:strong:H05541:strongMorph:TH8804 8880 22
+S word:strong:H07686:strongMorph:TH8802 8903 17
+S word:strong:H02706:- 8921 17
+S word:strong:H08649:- 8940 16
+S italic 8957 2
+S word:strong:H08267:- 8960 9
+S verseNumber:119 8971 3
+S word:strong:H07673:strongMorph:TH8689 8974 17
+S word:strong:H07563:- 8992 14
+S word:strong:H0776:- 9007 12
+S italic 9020 4
+S word:strong:H05509:- 9025 5
+S word:strong:H0157:strongMorph:TH8804 9032 16
+S word:strong:H05713:- 9049 15
+S verseNumber:120 9066 3
+S word:strong:H01320:- 9069 8
+S word:strong:H05568:strongMorph:TH8804 9078 9
+S word:strong:H06343:- 9088 8
+S word:strong:H03372:strongMorph:TH8804 9097 24
+S word:strong:H04941:- 9122 16
+S verseNumber:121 9140 3
+S word:strong:H06213:strongMorph:TH8804 9143 11
+S word:strong:H04941:- 9155 8
+S word:strong:H06664:- 9164 11
+S word:strong:H03240:strongMorph:TH8686 9177 5
+S word:strong:H06231:strongMorph:TH8802 9183 25
+S verseNumber:122 9210 3
+S word:strong:H06148:strongMorph:TH8798 9213 9
+S word:strong:H05650:- 9223 15
+S word:strong:H02896:- 9239 8
+S word:strong:H02086:- 9249 17
+S word:strong:H06231:strongMorph:TH8799 9267 7
+S verseNumber:123 9279 3
+S word:strong:H05869:- 9282 9
+S word:strong:H03615:strongMorph:TH8804 9292 4
+S word:strong:H03444:- 9297 17
+S word:strong:H0565:- 9316 16
+S word:strong:H06664:- 9333 20
+S verseNumber:124 9355 3
+S word:strong:H06213:strongMorph:TH8798 9358 4
+S word:strong:H05650:- 9363 16
+S word:strong:H02617:- 9380 24
+S word:strong:H03925:strongMorph:TH8761 9406 9
+S word:strong:H02706:- 9416 15
+S verseNumber:125 9433 3
+S italic 9438 2
+S word:strong:H05650:- 9441 11
+S word:strong:H0995:strongMorph:TH8685 9454 21
+S word:strong:H03045:strongMorph:TH8799 9477 15
+S word:strong:H05713:- 9493 15
+S verseNumber:126 9510 3
+S italic 9513 5
+S word:strong:H06256:- 9519 4
+S italic 9528 4
+S divineName 9534 4
+S word:strong:H03068:- 9534 4
+S word:strong:H06213:strongMorph:TH8800 9540 7
+S italic 9549 3
+S word:strong:H06565:strongMorph:TH8689 9553 19
+S word:strong:H08451:- 9573 7
+S verseNumber:127 9582 3
+S word:strong:H0157:strongMorph:TH8804 9585 16
+S word:strong:H04687:- 9602 16
+S word:strong:H02091:- 9619 10
+S word:strong:H06337:- 9631 20
+S verseNumber:128 9653 3
+S italic 9679 3
+S word:strong:H06490:- 9683 8
+S italic 9692 10
+S italic 9707 12
+S word:strong:H03474:strongMorph:TH8765 9720 5
+S italic 9727 3
+S word:strong:H08130:strongMorph:TH8804 9731 6
+S word:strong:H08267:- 9738 11
+S word:strong:H0734:- 9750 3
+S verseNumber:129 9755 3
+S word:strong:H05715:- 9758 15
+S italic 9774 3
+S word:strong:H06382:- 9778 9
+S word:strong:H05315:- 9789 22
+S word:strong:H05341:strongMorph:TH8804 9812 4
+S verseNumber:130 9823 3
+S word:strong:H06608:- 9826 12
+S word:strong:H01697:- 9839 12
+S word:strong:H0215:strongMorph:TH8686 9852 12
+S word:strong:H0995:strongMorph:TH8688 9866 23
+S word:strong:H06612:- 9890 15
+S verseNumber:131 9907 3
+S word:strong:H06473:strongMorph:TH8804 9910 8
+S word:strong:H06310:- 9919 8
+S word:strong:H07602:strongMorph:TH8799 9929 10
+S word:strong:H02968:strongMorph:TH8804 9941 12
+S word:strong:H04687:- 9954 20
+S verseNumber:132 9976 3
+S word:strong:H06437:strongMorph:TH8798 9979 4
+S word:strong:H02603:strongMorph:TH8798 9984 29
+S word:strong:H04941:- 10014 22
+S word:strong:H0157:strongMorph:TH8802 10037 26
+S word:strong:H08034:- 10064 8
+S verseNumber:133 10074 3
+S word:strong:H03559:strongMorph:TH8685 10077 5
+S word:strong:H06471:- 10083 8
+S word:strong:H0565:- 10092 11
+S word:strong:H0205:- 10105 24
+S word:strong:H07980:strongMorph:TH8686 10130 13
+S verseNumber:134 10153 3
+S word:strong:H06299:strongMorph:TH8798 10156 7
+S word:strong:H06233:- 10164 22
+S word:strong:H0120:- 10187 6
+S word:strong:H08104:strongMorph:TH8799 10195 14
+S word:strong:H06490:- 10210 12
+S verseNumber:135 10224 3
+S word:strong:H06440:- 10227 13
+S word:strong:H0215:strongMorph:TH8685 10241 8
+S word:strong:H05650:- 10250 16
+S word:strong:H03925:strongMorph:TH8761 10268 9
+S word:strong:H02706:- 10278 15
+S verseNumber:136 10295 3
+S word:strong:H06388:- 10298 6
+S word:strong:H04325:- 10305 9
+S word:strong:H03381:strongMorph:TH8804 10315 8
+S word:strong:H05869:- 10324 9
+S word:strong:H08104:strongMorph:TH8804 10335 17
+S word:strong:H08451:- 10353 11
+S verseNumber:137 10366 3
+S word:strong:H06662:- 10369 9
+S italic 10379 3
+S word:strong:H03068:- 10383 12
+S divineName 10391 4
+S word:strong:H03477:- 10397 11
+S italic 10409 3
+S word:strong:H04941:- 10413 13
+S verseNumber:138 10428 3
+S word:strong:H05713:- 10431 15
+S italic 10447 4
+S word:strong:H06680:strongMorph:TH8765 10452 19
+S italic 10472 3
+S word:strong:H06664:- 10476 9
+S word:strong:H03966:- 10486 8
+S word:strong:H0530:- 10495 8
+S verseNumber:139 10505 3
+S word:strong:H07068:- 10508 7
+S word:strong:H06789:strongMorph:TH8765 10516 13
+S word:strong:H06862:- 10530 24
+S word:strong:H07911:strongMorph:TH8804 10555 14
+S word:strong:H01697:- 10570 9
+S verseNumber:140 10581 3
+S word:strong:H0565:- 10584 8
+S italic 10593 2
+S word:strong:H03966:- 10596 4
+S word:strong:H06884:strongMorph:TH8803 10601 4
+S word:strong:H05650:- 10607 21
+S word:strong:H0157:strongMorph:TH8804 10629 6
+S verseNumber:141 10640 3
+S italic 10645 2
+S word:strong:H06810:- 10648 5
+S word:strong:H0959:strongMorph:TH8737 10654 12
+S italic 10668 3
+S word:strong:H07911:strongMorph:TH8804 10672 15
+S word:strong:H06490:- 10688 12
+S verseNumber:142 10702 3
+S word:strong:H06666:- 10705 17
+S italic 10723 2
+S word:strong:H05769:- 10726 14
+S word:strong:H06664:- 10741 13
+S word:strong:H08451:- 10756 11
+S italic 10768 2
+S word:strong:H0571:- 10771 9
+S verseNumber:143 10782 3
+S word:strong:H06862:- 10785 7
+S word:strong:H04689:- 10793 11
+S word:strong:H04672:strongMorph:TH8804 10805 15
+S italic 10828 3
+S word:strong:H04687:- 10832 16
+S italic 10849 3
+S word:strong:H08191:- 10853 11
+S verseNumber:144 10866 3
+S word:strong:H06664:- 10869 17
+S word:strong:H05715:- 10887 18
+S italic 10906 2
+S word:strong:H05769:- 10909 11
+S word:strong:H0995:strongMorph:TH8685 10922 21
+S word:strong:H02421:strongMorph:TH8799 10945 16
+S verseNumber:145 10963 3
+S word:strong:H07121:strongMorph:TH8804 10966 7
+S italic 10979 2
+S word:strong:H03820:- 10982 11
+S word:strong:H06030:strongMorph:TH8798 10995 4
+S word:strong:H03068:- 11000 10
+S divineName 11006 4
+S word:strong:H05341:strongMorph:TH8799 11012 11
+S word:strong:H02706:- 11024 12
+S verseNumber:146 11038 3
+S word:strong:H07121:strongMorph:TH8804 11041 7
+S word:strong:H03467:strongMorph:TH8685 11049 15
+S word:strong:H08104:strongMorph:TH8799 11065 20
+S word:strong:H05713:- 11086 15
+S verseNumber:147 11103 3
+S word:strong:H06923:strongMorph:TH8765 11106 11
+S word:strong:H05399:- 11118 26
+S word:strong:H07768:strongMorph:TH8762 11146 9
+S word:strong:H03176:strongMorph:TH8765 11157 7
+S word:strong:H01697:- 11165 11
+S verseNumber:148 11178 3
+S word:strong:H05869:- 11181 9
+S word:strong:H06923:strongMorph:TH8765 11191 7
+S italic 11203 5
+S word:strong:H0821:- 11209 7
+S word:strong:H07878:strongMorph:TH8800 11218 21
+S word:strong:H0565:- 11240 11
+S verseNumber:149 11253 3
+S word:strong:H08085:strongMorph:TH8798 11256 4
+S word:strong:H06963:- 11261 8
+S word:strong:H02617:- 11270 33
+S word:strong:H03068:- 11305 6
+S divineName 11307 4
+S word:strong:H02421:strongMorph:TH8761 11313 7
+S word:strong:H04941:- 11321 28
+S verseNumber:150 11351 3
+S word:strong:H07126:strongMorph:TH8804 11354 14
+S word:strong:H07291:strongMorph:TH8802 11369 11
+S word:strong:H02154:- 11381 14
+S word:strong:H07368:strongMorph:TH8804 11397 12
+S word:strong:H08451:- 11410 12
+S verseNumber:151 11424 3
+S italic 11432 3
+S word:strong:H07138:- 11436 4
+S word:strong:H03068:- 11442 6
+S divineName 11444 4
+S word:strong:H04687:- 11450 24
+S italic 11475 3
+S word:strong:H0571:- 11479 5
+S verseNumber:152 11486 3
+S word:strong:H05713:- 11489 26
+S word:strong:H03045:strongMorph:TH8804 11517 12
+S word:strong:H06924:- 11530 6
+S word:strong:H03245:strongMorph:TH8804 11537 22
+S word:strong:H05769:- 11560 13
+S verseNumber:153 11575 3
+S word:strong:H07200:strongMorph:TH8798 11578 8
+S word:strong:H06040:- 11587 15
+S word:strong:H02502:strongMorph:TH8761 11604 11
+S word:strong:H07911:strongMorph:TH8804 11616 23
+S word:strong:H08451:- 11640 7
+S verseNumber:154 11649 3
+S word:strong:H07378:strongMorph:TH8798 11652 5
+S word:strong:H07379:- 11658 8
+S word:strong:H01350:strongMorph:TH8798 11668 11
+S word:strong:H02421:strongMorph:TH8761 11680 11
+S word:strong:H0565:- 11692 24
+S verseNumber:155 11718 3
+S word:strong:H03444:- 11721 9
+S italic 11731 2
+S word:strong:H07350:- 11734 3
+S word:strong:H07563:- 11738 15
+S word:strong:H01875:strongMorph:TH8804 11755 13
+S word:strong:H02706:- 11769 16
+S verseNumber:156 11787 3
+S word:strong:H07227:- 11790 5
+S italic 11796 3
+S word:strong:H07356:- 11800 18
+S word:strong:H03068:- 11820 6
+S divineName 11822 4
+S word:strong:H02421:strongMorph:TH8761 11828 7
+S word:strong:H04941:- 11836 29
+S verseNumber:157 11867 3
+S word:strong:H07227:- 11870 4
+S italic 11875 3
+S word:strong:H07291:strongMorph:TH8802 11879 14
+S word:strong:H06862:- 11894 16
+S italic 11912 3
+S word:strong:H05186:strongMorph:TH8804 11916 16
+S word:strong:H05715:- 11933 20
+S verseNumber:158 11955 3
+S word:strong:H07200:strongMorph:TH8804 11958 8
+S word:strong:H0898:strongMorph:TH8802 11967 17
+S word:strong:H06962:strongMorph:TH8709 11986 15
+S word:strong:H08104:strongMorph:TH8804 12003 17
+S word:strong:H0565:- 12021 12
+S verseNumber:159 12035 3
+S word:strong:H07200:strongMorph:TH8798 12038 8
+S word:strong:H0157:strongMorph:TH8804 12047 10
+S word:strong:H06490:- 12058 12
+S word:strong:H02421:strongMorph:TH8761 12072 7
+S word:strong:H03068:- 12080 10
+S divineName 12086 4
+S word:strong:H02617:- 12092 31
+S verseNumber:160 12125 3
+S word:strong:H01697:- 12128 8
+S italic 12137 2
+S word:strong:H0571:- 12140 4
+S italic 12145 4
+S word:strong:H07218:- 12150 13
+S word:strong:H06664:- 12165 30
+S word:strong:H04941:- 12196 9
+S italic 12206 8
+S word:strong:H05769:- 12215 8
+S verseNumber:161 12225 3
+S word:strong:H08269:- 12228 7
+S word:strong:H07291:strongMorph:TH8804 12236 15
+S word:strong:H02600:- 12252 18
+S word:strong:H03820:- 12272 12
+S word:strong:H06342:strongMorph:TH8804 12285 15
+S word:strong:H01697:- 12301 11
+S verseNumber:162 12314 3
+S word:strong:H07797:strongMorph:TH8801 12317 9
+S word:strong:H0565:- 12327 11
+S word:strong:H04672:strongMorph:TH8802 12340 19
+S word:strong:H07227:- 12360 5
+S word:strong:H07998:- 12366 5
+S verseNumber:163 12373 3
+S word:strong:H08130:strongMorph:TH8804 12376 6
+S word:strong:H08581:strongMorph:TH8762 12383 9
+S word:strong:H08267:- 12393 5
+S italic 12400 3
+S word:strong:H08451:- 12404 7
+S word:strong:H0157:strongMorph:TH8804 12412 9
+S verseNumber:164 12423 3
+S word:strong:H07651:- 12426 11
+S word:strong:H03117:- 12438 5
+S word:strong:H01984:strongMorph:TH8765 12444 11
+S word:strong:H06664:- 12456 29
+S word:strong:H04941:- 12486 9
+S verseNumber:165 12497 3
+S word:strong:H07227:- 12500 5
+S word:strong:H07965:- 12506 5
+S word:strong:H0157:strongMorph:TH8802 12512 20
+S word:strong:H08451:- 12533 7
+S word:strong:H04383:- 12542 24
+S verseNumber:166 12573 3
+S divineName 12576 4
+S word:strong:H03068:- 12576 4
+S word:strong:H07663:strongMorph:TH8765 12582 12
+S word:strong:H03444:- 12595 17
+S word:strong:H06213:strongMorph:TH8804 12614 8
+S word:strong:H04687:- 12623 16
+S verseNumber:167 12641 3
+S word:strong:H05315:- 12644 7
+S word:strong:H08104:strongMorph:TH8804 12652 9
+S word:strong:H05713:- 12662 15
+S word:strong:H0157:strongMorph:TH8799 12679 10
+S word:strong:H03966:- 12690 16
+S verseNumber:168 12708 3
+S word:strong:H08104:strongMorph:TH8804 12711 11
+S word:strong:H06490:- 12723 12
+S word:strong:H05713:- 12736 19
+S word:strong:H01870:- 12757 15
+S italic 12773 3
+S verseNumber:169 12790 3
+S word:strong:H07440:- 12793 10
+S word:strong:H07126:strongMorph:TH8799 12804 9
+S word:strong:H06440:- 12814 6
+S word:strong:H03068:- 12821 12
+S divineName 12829 4
+S word:strong:H0995:strongMorph:TH8685 12835 21
+S word:strong:H01697:- 12857 21
+S verseNumber:170 12880 3
+S word:strong:H08467:- 12883 19
+S word:strong:H0935:strongMorph:TH8799 12903 4
+S word:strong:H06440:- 12908 6
+S word:strong:H05337:strongMorph:TH8685 12915 13
+S word:strong:H0565:- 12929 24
+S verseNumber:171 12955 3
+S word:strong:H08193:- 12958 7
+S word:strong:H05042:strongMorph:TH8686 12966 11
+S word:strong:H08416:- 12978 6
+S word:strong:H03925:strongMorph:TH8762 12986 21
+S word:strong:H02706:- 13008 15
+S verseNumber:172 13025 3
+S word:strong:H03956:- 13028 9
+S word:strong:H06030:strongMorph:TH8799 13038 11
+S word:strong:H0565:- 13050 11
+S word:strong:H04687:- 13063 24
+S italic 13088 3
+S word:strong:H06664:- 13092 13
+S verseNumber:173 13107 3
+S word:strong:H03027:- 13110 14
+S word:strong:H05826:strongMorph:TH8800 13125 4
+S word:strong:H0977:strongMorph:TH8804 13130 21
+S word:strong:H06490:- 13152 12
+S verseNumber:174 13166 3
+S word:strong:H08373:strongMorph:TH8804 13169 13
+S word:strong:H03444:- 13183 17
+S word:strong:H03068:- 13202 6
+S divineName 13204 4
+S word:strong:H08451:- 13210 11
+S italic 13222 2
+S word:strong:H08191:- 13225 10
+S verseNumber:175 13237 3
+S word:strong:H05315:- 13240 11
+S word:strong:H02421:strongMorph:TH8799 13252 4
+S word:strong:H01984:strongMorph:TH8762 13258 19
+S word:strong:H04941:- 13278 27
+S word:strong:H05826:strongMorph:TH8799 13306 4
+S verseNumber:176 13315 3
+S word:strong:H08582:strongMorph:TH8804 13318 18
+S word:strong:H06:strongMorph:TH8802 13337 11
+S word:strong:H07716:- 13349 5
+S word:strong:H01245:strongMorph:TH8761 13356 4
+S word:strong:H05650:- 13361 11
+S word:strong:H07911:strongMorph:TH8804 13374 19
+S word:strong:H04687:- 13394 16
+W 1 0 1 7
+W 1 1 9 3
+W 1 2 13 3
+W 1 3 17 9
+W 1 4 27 2
+W 1 5 30 3
+W 1 6 34 3
+W 1 7 39 3
+W 1 8 43 4
+W 1 9 48 2
+W 1 10 51 3
+W 1 11 55 3
+W 1 12 59 2
+W 1 13 62 3
+W 1 14 66 4
+W 2 0 73 7
+W 2 1 81 3
+W 2 2 85 4
+W 2 3 90 4
+W 2 4 95 4
+W 2 5 100 3
+W 2 6 104 11
+W 2 7 117 3
+W 2 8 121 4
+W 2 9 126 4
+W 2 10 131 3
+W 2 11 135 4
+W 2 12 140 3
+W 2 13 144 5
+W 2 14 150 5
+W 3 0 158 4
+W 3 1 163 4
+W 3 2 168 2
+W 3 3 171 2
+W 3 4 174 8
+W 3 5 184 4
+W 3 6 189 4
+W 3 7 194 2
+W 3 8 197 3
+W 3 9 201 4
+W 4 0 208 4
+W 4 1 213 4
+W 4 2 218 9
+W 4 3 228 2
+W 4 4 231 2
+W 4 5 234 4
+W 4 6 239 3
+W 4 7 243 8
+W 4 8 252 10
+W 5 0 265 1
+W 5 1 267 4
+W 5 2 272 2
+W 5 3 275 4
+W 5 4 280 4
+W 5 5 285 8
+W 5 6 294 2
+W 5 7 297 4
+W 5 8 302 3
+W 5 9 306 8
+W 6 0 317 4
+W 6 1 322 5
+W 6 2 328 1
+W 6 3 330 3
+W 6 4 334 2
+W 6 5 337 7
+W 6 6 346 4
+W 6 7 351 1
+W 6 8 353 4
+W 6 9 358 7
+W 6 10 366 4
+W 6 11 371 3
+W 6 12 375 3
+W 6 13 379 12
+W 7 0 394 1
+W 7 1 396 4
+W 7 2 401 6
+W 7 3 408 4
+W 7 4 413 4
+W 7 5 418 11
+W 7 6 430 2
+W 7 7 433 5
+W 7 8 440 4
+W 7 9 445 1
+W 7 10 447 5
+W 7 11 453 4
+W 7 12 458 7
+W 7 13 466 3
+W 7 14 470 9
+W 7 15 480 9
+W 8 0 492 1
+W 8 1 494 4
+W 8 2 499 4
+W 8 3 504 3
+W 8 4 508 8
+W 8 5 518 1
+W 8 6 520 7
+W 8 7 528 2
+W 8 8 531 3
+W 8 9 535 7
+W 9 0 545 11
+W 9 1 557 5
+W 9 2 563 1
+W 9 3 565 5
+W 9 4 571 3
+W 9 5 575 7
+W 9 6 583 3
+W 9 7 587 3
+W 9 8 592 2
+W 9 9 595 6
+W 9 10 602 4
+W 9 11 607 7
+W 9 12 615 9
+W 9 13 625 2
+W 9 14 628 3
+W 9 15 632 4
+W 10 0 640 4
+W 10 1 645 2
+W 10 2 648 5
+W 10 3 654 5
+W 10 4 660 4
+W 10 5 665 1
+W 10 6 667 6
+W 10 7 674 4
+W 10 8 680 1
+W 10 9 682 3
+W 10 10 686 2
+W 10 11 689 3
+W 10 12 693 6
+W 10 13 700 4
+W 10 14 705 3
+W 10 15 709 12
+W 11 0 725 3
+W 11 1 729 4
+W 11 2 734 4
+W 11 3 739 1
+W 11 4 741 3
+W 11 5 745 2
+W 11 6 748 4
+W 11 7 753 5
+W 11 8 760 4
+W 11 9 765 1
+W 11 10 767 5
+W 11 11 773 3
+W 11 12 777 3
+W 11 13 781 7
+W 11 14 789 4
+W 12 0 797 7
+W 12 1 805 3
+W 12 2 809 4
+W 12 3 815 1
+W 12 4 817 4
+W 12 5 823 5
+W 12 6 829 2
+W 12 7 832 3
+W 12 8 836 8
+W 13 0 848 4
+W 13 1 853 2
+W 13 2 856 4
+W 13 3 861 4
+W 13 4 866 1
+W 13 5 868 8
+W 13 6 877 3
+W 13 7 881 3
+W 13 8 885 9
+W 13 9 895 2
+W 13 10 898 3
+W 13 11 902 5
+W 14 0 911 1
+W 14 1 913 4
+W 14 2 918 8
+W 14 3 927 2
+W 14 4 930 3
+W 14 5 934 3
+W 14 6 938 2
+W 14 7 941 3
+W 14 8 945 11
+W 14 9 958 2
+W 14 10 961 4
+W 14 11 966 2
+W 14 12 969 2
+W 14 13 972 3
+W 14 14 976 6
+W 15 0 986 1
+W 15 1 988 4
+W 15 2 993 8
+W 15 3 1002 2
+W 15 4 1005 3
+W 15 5 1009 8
+W 15 6 1019 3
+W 15 7 1023 4
+W 15 8 1028 7
+W 15 9 1036 4
+W 15 10 1041 3
+W 15 11 1045 4
+W 16 0 1053 1
+W 16 1 1055 4
+W 16 2 1060 7
+W 16 3 1068 6
+W 16 4 1075 2
+W 16 5 1078 3
+W 16 6 1082 8
+W 16 7 1092 1
+W 16 8 1094 4
+W 16 9 1099 3
+W 16 10 1103 6
+W 16 11 1110 3
+W 16 12 1114 4
+W 17 0 1122 4
+W 17 1 1127 11
+W 17 2 1139 4
+W 17 3 1144 3
+W 17 4 1148 7
+W 17 5 1157 4
+W 17 6 1162 1
+W 17 7 1164 3
+W 17 8 1168 4
+W 17 9 1174 3
+W 17 10 1178 4
+W 17 11 1183 3
+W 17 12 1187 4
+W 18 0 1195 4
+W 18 1 1200 4
+W 18 2 1205 4
+W 18 3 1210 4
+W 18 4 1216 4
+W 18 5 1221 1
+W 18 6 1223 3
+W 18 7 1227 6
+W 18 8 1234 8
+W 18 9 1243 6
+W 18 10 1250 3
+W 18 11 1254 2
+W 18 12 1257 3
+W 18 13 1261 3
+W 19 0 1268 1
+W 19 1 1270 2
+W 19 2 1273 1
+W 19 3 1275 8
+W 19 4 1284 2
+W 19 5 1287 3
+W 19 6 1291 5
+W 19 7 1298 4
+W 19 8 1303 3
+W 19 9 1307 3
+W 19 10 1311 12
+W 19 11 1324 4
+W 19 12 1329 2
+W 20 0 1335 2
+W 20 1 1338 4
+W 20 2 1343 8
+W 20 3 1352 3
+W 20 4 1356 3
+W 20 5 1360 7
+W 20 6 1368 4
+W 20 7 1373 2
+W 20 8 1376 4
+W 20 9 1381 4
+W 20 10 1386 3
+W 20 11 1390 9
+W 20 12 1400 2
+W 20 13 1403 3
+W 20 14 1407 5
+W 21 0 1416 4
+W 21 1 1421 4
+W 21 2 1426 7
+W 21 3 1434 3
+W 21 4 1438 5
+W 21 5 1444 4
+W 21 6 1449 3
+W 21 7 1453 6
+W 21 8 1461 5
+W 21 9 1467 2
+W 21 10 1470 3
+W 21 11 1474 4
+W 21 12 1479 3
+W 21 13 1483 12
+W 22 0 1499 6
+W 22 1 1506 4
+W 22 2 1511 2
+W 22 3 1514 8
+W 22 4 1523 3
+W 22 5 1527 8
+W 22 6 1537 3
+W 22 7 1541 1
+W 22 8 1543 4
+W 22 9 1548 4
+W 22 10 1553 3
+W 22 11 1557 11
+W 23 0 1572 7
+W 23 1 1580 4
+W 23 2 1585 3
+W 23 3 1589 3
+W 23 4 1593 3
+W 23 5 1597 5
+W 23 6 1603 7
+W 23 7 1611 2
+W 23 8 1615 3
+W 23 9 1619 3
+W 23 10 1623 7
+W 23 11 1631 3
+W 23 12 1635 8
+W 23 13 1644 2
+W 23 14 1647 3
+W 23 15 1651 8
+W 24 0 1663 3
+W 24 1 1667 11
+W 24 2 1679 4
+W 24 3 1684 3
+W 24 4 1688 2
+W 24 5 1691 7
+W 24 6 1699 3
+W 24 7 1703 2
+W 24 8 1706 11
+W 25 0 1721 2
+W 25 1 1724 4
+W 25 2 1729 8
+W 25 3 1738 4
+W 25 4 1743 3
+W 25 5 1747 4
+W 25 6 1753 7
+W 25 7 1761 4
+W 25 8 1766 2
+W 25 9 1769 9
+W 25 10 1779 2
+W 25 11 1782 3
+W 25 12 1786 4
+W 26 0 1794 1
+W 26 1 1796 4
+W 26 2 1801 8
+W 26 3 1810 2
+W 26 4 1813 4
+W 26 5 1819 3
+W 26 6 1823 4
+W 26 7 1828 8
+W 26 8 1837 2
+W 26 9 1841 5
+W 26 10 1847 2
+W 26 11 1850 3
+W 26 12 1854 8
+W 27 0 1866 4
+W 27 1 1871 2
+W 27 2 1874 2
+W 27 3 1877 10
+W 27 4 1888 3
+W 27 5 1892 3
+W 27 6 1896 2
+W 27 7 1899 3
+W 27 8 1903 8
+W 27 9 1913 2
+W 27 10 1916 5
+W 27 11 1922 1
+W 27 12 1924 4
+W 27 13 1929 2
+W 27 14 1932 3
+W 27 15 1936 8
+W 27 16 1945 5
+W 28 0 1954 2
+W 28 1 1957 4
+W 28 2 1962 7
+W 28 3 1970 3
+W 28 4 1974 9
+W 28 5 1985 10
+W 28 6 1996 4
+W 28 7 2001 2
+W 28 8 2004 9
+W 28 9 2014 4
+W 28 10 2019 3
+W 28 11 2023 4
+W 29 0 2031 6
+W 29 1 2038 4
+W 29 2 2043 2
+W 29 3 2046 3
+W 29 4 2050 3
+W 29 5 2054 2
+W 29 6 2057 5
+W 29 7 2064 3
+W 29 8 2068 5
+W 29 9 2074 2
+W 29 10 2077 3
+W 29 11 2081 3
+W 29 12 2085 10
+W 30 0 2099 1
+W 30 1 2101 4
+W 30 2 2106 6
+W 30 3 2113 3
+W 30 4 2117 3
+W 30 5 2121 2
+W 30 6 2124 5
+W 30 7 2131 3
+W 30 8 2135 9
+W 30 9 2145 4
+W 30 10 2150 1
+W 30 11 2152 4
+W 30 12 2157 6
+W 30 13 2164 2
+W 31 0 2170 1
+W 31 1 2172 4
+W 31 2 2177 5
+W 31 3 2183 4
+W 31 4 2188 3
+W 31 5 2192 11
+W 31 6 2205 1
+W 31 7 2207 4
+W 31 8 2213 3
+W 31 9 2217 2
+W 31 10 2220 3
+W 31 11 2224 2
+W 31 12 2227 5
+W 32 0 2236 1
+W 32 1 2238 4
+W 32 2 2243 3
+W 32 3 2247 3
+W 32 4 2251 3
+W 32 5 2255 2
+W 32 6 2258 3
+W 32 7 2262 12
+W 32 8 2276 4
+W 32 9 2281 4
+W 32 10 2286 5
+W 32 11 2292 7
+W 32 12 2300 2
+W 32 13 2303 5
+W 33 0 2312 5
+W 33 1 2318 2
+W 33 2 2322 1
+W 33 3 2324 4
+W 33 4 2330 3
+W 33 5 2334 3
+W 33 6 2338 2
+W 33 7 2341 3
+W 33 8 2345 8
+W 33 9 2355 3
+W 33 10 2359 1
+W 33 11 2361 5
+W 33 12 2367 4
+W 33 13 2372 2
+W 33 14 2375 4
+W 33 15 2380 3
+W 33 16 2384 3
+W 34 0 2391 4
+W 34 1 2396 2
+W 34 2 2399 13
+W 34 3 2414 3
+W 34 4 2418 1
+W 34 5 2420 5
+W 34 6 2426 4
+W 34 7 2431 3
+W 34 8 2435 3
+W 34 9 2440 3
+W 34 10 2445 1
+W 34 11 2447 5
+W 34 12 2453 7
+W 34 13 2461 2
+W 34 14 2464 4
+W 34 15 2469 2
+W 34 16 2472 5
+W 34 17 2478 5
+W 35 0 2487 4
+W 35 1 2492 2
+W 35 2 2495 2
+W 35 3 2498 2
+W 35 4 2501 2
+W 35 5 2504 3
+W 35 6 2508 4
+W 35 7 2513 2
+W 35 8 2516 3
+W 35 9 2520 12
+W 35 10 2534 3
+W 35 11 2538 7
+W 35 12 2546 2
+W 35 13 2549 1
+W 35 14 2551 7
+W 36 0 2562 7
+W 36 1 2570 2
+W 36 2 2573 5
+W 36 3 2579 4
+W 36 4 2584 3
+W 36 5 2588 11
+W 36 6 2601 3
+W 36 7 2605 3
+W 36 8 2609 2
+W 36 9 2612 12
+W 37 0 2628 4
+W 37 1 2633 4
+W 37 2 2638 4
+W 37 3 2643 4
+W 37 4 2648 4
+W 37 5 2653 9
+W 37 6 2663 6
+W 37 7 2671 3
+W 37 8 2675 7
+W 37 9 2683 4
+W 37 10 2688 2
+W 37 11 2691 2
+W 37 12 2694 3
+W 37 13 2698 3
+W 38 0 2705 8
+W 38 1 2714 3
+W 38 2 2718 4
+W 38 3 2723 4
+W 38 4 2728 3
+W 38 5 2732 7
+W 38 6 2741 3
+W 38 7 2745 2
+W 38 8 2748 7
+W 38 9 2756 2
+W 38 10 2759 3
+W 38 11 2763 4
+W 39 0 2771 4
+W 39 1 2776 4
+W 39 2 2781 2
+W 39 3 2784 8
+W 39 4 2793 5
+W 39 5 2799 1
+W 39 6 2801 4
+W 39 7 2807 3
+W 39 8 2811 3
+W 39 9 2815 9
+W 39 10 2825 3
+W 39 11 2829 4
+W 40 0 2837 6
+W 40 1 2845 1
+W 40 2 2847 4
+W 40 3 2852 6
+W 40 4 2859 5
+W 40 5 2865 3
+W 40 6 2869 8
+W 40 7 2879 7
+W 40 8 2887 2
+W 40 9 2890 2
+W 40 10 2893 3
+W 40 11 2897 13
+W 41 0 2914 3
+W 41 1 2918 3
+W 41 2 2922 7
+W 41 3 2930 4
+W 41 4 2935 4
+W 41 5 2940 4
+W 41 6 2945 2
+W 41 7 2949 1
+W 41 8 2951 4
+W 41 9 2957 4
+W 41 10 2962 3
+W 41 11 2966 9
+W 41 12 2977 9
+W 41 13 2987 2
+W 41 14 2990 3
+W 41 15 2994 4
+W 42 0 3002 2
+W 42 1 3005 5
+W 42 2 3011 1
+W 42 3 3013 4
+W 42 4 3018 9
+W 42 5 3028 2
+W 42 6 3031 6
+W 42 7 3038 3
+W 42 8 3042 4
+W 42 9 3047 11
+W 42 10 3059 2
+W 42 11 3063 3
+W 42 12 3067 1
+W 42 13 3069 5
+W 42 14 3075 2
+W 42 15 3078 3
+W 42 16 3082 4
+W 43 0 3090 3
+W 43 1 3094 4
+W 43 2 3099 3
+W 43 3 3103 3
+W 43 4 3107 4
+W 43 5 3112 2
+W 43 6 3115 5
+W 43 7 3121 7
+W 43 8 3129 3
+W 43 9 3133 2
+W 43 10 3136 2
+W 43 11 3139 5
+W 43 12 3146 3
+W 43 13 3150 1
+W 43 14 3152 4
+W 43 15 3157 5
+W 43 16 3163 2
+W 43 17 3166 3
+W 43 18 3170 9
+W 44 0 3183 2
+W 44 1 3186 5
+W 44 2 3192 1
+W 44 3 3194 4
+W 44 4 3199 3
+W 44 5 3203 3
+W 44 6 3207 11
+W 44 7 3219 3
+W 44 8 3223 4
+W 44 9 3228 3
+W 44 10 3232 4
+W 45 0 3240 3
+W 45 1 3244 1
+W 45 2 3246 4
+W 45 3 3251 4
+W 45 4 3256 2
+W 45 5 3259 7
+W 45 6 3268 3
+W 45 7 3272 1
+W 45 8 3274 4
+W 45 9 3279 3
+W 45 10 3283 8
+W 46 0 3295 1
+W 46 1 3297 4
+W 46 2 3302 5
+W 46 3 3308 2
+W 46 4 3311 3
+W 46 5 3315 11
+W 46 6 3327 4
+W 46 7 3332 6
+W 46 8 3339 5
+W 46 9 3346 3
+W 46 10 3350 4
+W 46 11 3355 3
+W 46 12 3359 2
+W 46 13 3362 7
+W 47 0 3373 3
+W 47 1 3377 1
+W 47 2 3379 4
+W 47 3 3384 7
+W 47 4 3392 6
+W 47 5 3399 2
+W 47 6 3402 3
+W 47 7 3406 12
+W 47 8 3420 5
+W 47 9 3426 1
+W 47 10 3428 4
+W 47 11 3433 5
+W 48 0 3442 2
+W 48 1 3445 5
+W 48 2 3451 4
+W 48 3 3456 4
+W 48 4 3461 1
+W 48 5 3463 4
+W 48 6 3468 2
+W 48 7 3471 4
+W 48 8 3476 3
+W 48 9 3480 12
+W 48 10 3494 5
+W 48 11 3500 1
+W 48 12 3502 4
+W 48 13 3507 5
+W 48 14 3514 3
+W 48 15 3518 1
+W 48 16 3520 4
+W 48 17 3525 8
+W 48 18 3534 2
+W 48 19 3537 3
+W 48 20 3541 8
+W 49 0 3553 8
+W 49 1 3562 3
+W 49 2 3566 4
+W 49 3 3571 4
+W 49 4 3576 3
+W 49 5 3580 7
+W 49 6 3589 4
+W 49 7 3594 5
+W 49 8 3600 4
+W 49 9 3605 4
+W 49 10 3610 6
+W 49 11 3617 2
+W 49 12 3620 2
+W 49 13 3623 4
+W 50 0 3631 4
+W 50 1 3636 2
+W 50 2 3639 2
+W 50 3 3642 7
+W 50 4 3650 2
+W 50 5 3653 2
+W 50 6 3656 10
+W 50 7 3668 3
+W 50 8 3672 3
+W 50 9 3676 4
+W 50 10 3681 4
+W 50 11 3686 9
+W 50 12 3696 2
+W 51 0 3702 3
+W 51 1 3706 5
+W 51 2 3712 4
+W 51 3 3717 3
+W 51 4 3721 2
+W 51 5 3724 7
+W 51 6 3732 2
+W 51 7 3735 8
+W 51 8 3745 3
+W 51 9 3749 4
+W 51 10 3754 1
+W 51 11 3756 3
+W 51 12 3760 8
+W 51 13 3769 4
+W 51 14 3774 3
+W 51 15 3778 3
+W 52 0 3785 1
+W 52 1 3787 10
+W 52 2 3798 3
+W 52 3 3802 9
+W 52 4 3812 2
+W 52 5 3815 3
+W 52 6 3820 1
+W 52 7 3822 4
+W 52 8 3828 3
+W 52 9 3832 4
+W 52 10 3837 9
+W 52 11 3847 6
+W 53 0 3857 6
+W 53 1 3864 4
+W 53 2 3869 5
+W 53 3 3875 4
+W 53 4 3880 4
+W 53 5 3885 2
+W 53 6 3888 7
+W 53 7 3896 2
+W 53 8 3899 3
+W 53 9 3903 6
+W 53 10 3910 4
+W 53 11 3915 7
+W 53 12 3923 3
+W 53 13 3927 3
+W 54 0 3934 3
+W 54 1 3938 8
+W 54 2 3947 4
+W 54 3 3952 4
+W 54 4 3957 2
+W 54 5 3960 5
+W 54 6 3966 2
+W 54 7 3969 3
+W 54 8 3973 5
+W 54 9 3979 2
+W 54 10 3982 2
+W 54 11 3985 10
+W 55 0 3999 1
+W 55 1 4001 4
+W 55 2 4006 10
+W 55 3 4017 3
+W 55 4 4021 4
+W 55 5 4027 1
+W 55 6 4029 4
+W 55 7 4035 2
+W 55 8 4038 3
+W 55 9 4042 5
+W 55 10 4049 3
+W 55 11 4053 4
+W 55 12 4058 4
+W 55 13 4063 3
+W 55 14 4067 3
+W 56 0 4074 4
+W 56 1 4079 1
+W 56 2 4081 3
+W 56 3 4086 7
+W 56 4 4094 1
+W 56 5 4096 4
+W 56 6 4101 3
+W 56 7 4105 8
+W 57 0 4117 4
+W 57 1 4122 3
+W 57 2 4126 2
+W 57 3 4129 7
+W 57 4 4138 1
+W 57 5 4140 4
+W 57 6 4146 1
+W 57 7 4148 4
+W 57 8 4153 4
+W 57 9 4158 4
+W 57 10 4163 1
+W 57 11 4165 5
+W 57 12 4171 4
+W 57 13 4176 3
+W 57 14 4180 5
+W 58 0 4189 1
+W 58 1 4191 9
+W 58 2 4201 3
+W 58 3 4205 6
+W 58 4 4212 4
+W 58 5 4217 2
+W 58 6 4220 5
+W 58 7 4226 5
+W 58 8 4233 2
+W 58 9 4236 8
+W 58 10 4245 4
+W 58 11 4250 2
+W 58 12 4253 9
+W 58 13 4263 2
+W 58 14 4266 3
+W 58 15 4270 4
+W 59 0 4278 1
+W 59 1 4280 7
+W 59 2 4288 2
+W 59 3 4291 2
+W 59 4 4294 4
+W 59 5 4300 3
+W 59 6 4304 6
+W 59 7 4311 2
+W 59 8 4314 4
+W 59 9 4319 4
+W 59 10 4324 3
+W 59 11 4328 11
+W 60 0 4343 1
+W 60 1 4345 4
+W 60 2 4350 5
+W 60 3 4357 3
+W 60 4 4361 7
+W 60 5 4369 3
+W 60 6 4373 2
+W 60 7 4376 4
+W 60 8 4381 3
+W 60 9 4385 12
+W 61 0 4401 3
+W 61 1 4405 5
+W 61 2 4411 2
+W 61 3 4414 3
+W 61 4 4418 6
+W 61 5 4425 4
+W 61 6 4430 6
+W 61 7 4437 2
+W 61 8 4441 3
+W 61 9 4445 1
+W 61 10 4447 4
+W 61 11 4452 3
+W 61 12 4456 9
+W 61 13 4466 3
+W 61 14 4470 3
+W 62 0 4477 2
+W 62 1 4480 8
+W 62 2 4489 1
+W 62 3 4491 4
+W 62 4 4496 4
+W 62 5 4501 2
+W 62 6 4504 4
+W 62 7 4509 6
+W 62 8 4516 4
+W 62 9 4521 4
+W 62 10 4526 7
+W 62 11 4534 2
+W 62 12 4537 3
+W 62 13 4541 9
+W 62 14 4551 9
+W 63 0 4564 1
+W 63 1 4566 2
+W 63 2 4569 1
+W 63 3 4571 9
+W 63 4 4581 2
+W 63 5 4584 3
+W 63 6 4588 4
+W 63 7 4593 4
+W 63 8 4598 4
+W 63 9 4603 4
+W 63 10 4609 3
+W 63 11 4613 2
+W 63 12 4616 4
+W 63 13 4621 4
+W 63 14 4626 4
+W 63 15 4631 3
+W 63 16 4635 8
+W 64 0 4647 3
+W 64 1 4651 5
+W 64 2 4658 1
+W 64 3 4660 4
+W 64 4 4666 2
+W 64 5 4669 4
+W 64 6 4674 2
+W 64 7 4677 3
+W 64 8 4681 5
+W 64 9 4688 5
+W 64 10 4694 2
+W 64 11 4697 3
+W 64 12 4701 8
+W 65 0 4713 4
+W 65 1 4718 4
+W 65 2 4723 5
+W 65 3 4729 4
+W 65 4 4734 4
+W 65 5 4739 3
+W 65 6 4743 7
+W 65 7 4752 1
+W 65 8 4754 4
+W 65 9 4760 9
+W 65 10 4770 4
+W 65 11 4775 3
+W 65 12 4779 4
+W 66 0 4787 5
+W 66 1 4793 2
+W 66 2 4796 4
+W 66 3 4801 8
+W 66 4 4810 3
+W 66 5 4814 9
+W 66 6 4825 3
+W 66 7 4829 1
+W 66 8 4831 4
+W 66 9 4836 8
+W 66 10 4845 3
+W 66 11 4849 12
+W 67 0 4865 6
+W 67 1 4872 1
+W 67 2 4874 3
+W 67 3 4878 9
+W 67 4 4888 1
+W 67 5 4890 4
+W 67 6 4895 6
+W 67 7 4903 3
+W 67 8 4907 3
+W 67 9 4911 4
+W 67 10 4916 1
+W 67 11 4918 4
+W 67 12 4923 3
+W 67 13 4927 4
+W 68 0 4935 4
+W 68 1 4940 3
+W 68 2 4944 4
+W 68 3 4950 3
+W 68 4 4954 5
+W 68 5 4960 4
+W 68 6 4966 5
+W 68 7 4972 2
+W 68 8 4975 3
+W 68 9 4979 8
+W 69 0 4991 3
+W 69 1 4995 5
+W 69 2 5001 4
+W 69 3 5006 6
+W 69 4 5013 1
+W 69 5 5015 3
+W 69 6 5019 7
+W 69 7 5027 2
+W 69 8 5031 3
+W 69 9 5035 1
+W 69 10 5037 4
+W 69 11 5042 4
+W 69 12 5047 3
+W 69 13 5051 8
+W 69 14 5060 4
+W 69 15 5065 2
+W 69 16 5068 5
+W 69 17 5074 5
+W 70 0 5083 5
+W 70 1 5089 5
+W 70 2 5095 2
+W 70 3 5098 2
+W 70 4 5101 3
+W 70 5 5105 2
+W 70 6 5108 6
+W 70 7 5116 3
+W 70 8 5120 1
+W 70 9 5122 7
+W 70 10 5130 2
+W 70 11 5133 3
+W 70 12 5137 3
+W 71 0 5144 2
+W 71 1 5147 2
+W 71 2 5150 4
+W 71 3 5155 3
+W 71 4 5159 2
+W 71 5 5162 4
+W 71 6 5167 1
+W 71 7 5169 4
+W 71 8 5174 4
+W 71 9 5179 9
+W 71 10 5190 4
+W 71 11 5195 1
+W 71 12 5197 5
+W 71 13 5203 5
+W 71 14 5209 3
+W 71 15 5213 8
+W 72 0 5225 3
+W 72 1 5229 3
+W 72 2 5233 2
+W 72 3 5236 3
+W 72 4 5240 5
+W 72 5 5246 2
+W 72 6 5249 6
+W 72 7 5256 4
+W 72 8 5261 2
+W 72 9 5264 4
+W 72 10 5269 9
+W 72 11 5279 2
+W 72 12 5282 4
+W 72 13 5287 3
+W 72 14 5291 6
+W 73 0 5301 3
+W 73 1 5305 5
+W 73 2 5311 4
+W 73 3 5316 4
+W 73 4 5321 2
+W 73 5 5324 3
+W 73 6 5328 9
+W 73 7 5338 2
+W 73 8 5342 4
+W 73 9 5347 2
+W 73 10 5350 13
+W 73 11 5365 4
+W 73 12 5370 1
+W 73 13 5372 3
+W 73 14 5376 5
+W 73 15 5382 3
+W 73 16 5386 12
+W 74 0 5402 4
+W 74 1 5407 4
+W 74 2 5412 4
+W 74 3 5417 4
+W 74 4 5422 4
+W 74 5 5427 2
+W 74 6 5430 4
+W 74 7 5435 4
+W 74 8 5440 4
+W 74 9 5445 3
+W 74 10 5449 2
+W 74 11 5453 7
+W 74 12 5461 1
+W 74 13 5463 4
+W 74 14 5468 5
+W 74 15 5474 2
+W 74 16 5477 3
+W 74 17 5481 4
+W 75 0 5489 1
+W 75 1 5491 4
+W 75 2 5497 1
+W 75 3 5499 4
+W 75 4 5505 4
+W 75 5 5510 3
+W 75 6 5514 9
+W 75 7 5524 3
+W 75 8 5528 5
+W 75 9 5535 3
+W 75 10 5539 4
+W 75 11 5544 4
+W 75 12 5549 2
+W 75 13 5552 12
+W 75 14 5565 4
+W 75 15 5570 9
+W 75 16 5580 2
+W 76 0 5586 3
+W 76 1 5591 1
+W 76 2 5593 4
+W 76 3 5598 4
+W 76 4 5604 3
+W 76 5 5608 8
+W 76 6 5617 8
+W 76 7 5626 2
+W 76 8 5629 3
+W 76 9 5633 2
+W 76 10 5636 7
+W 76 11 5645 9
+W 76 12 5655 2
+W 76 13 5658 3
+W 76 14 5662 4
+W 76 15 5667 4
+W 76 16 5672 3
+W 76 17 5676 7
+W 77 0 5687 3
+W 77 1 5691 3
+W 77 2 5695 6
+W 77 3 5702 7
+W 77 4 5710 4
+W 77 5 5715 4
+W 77 6 5720 2
+W 77 7 5724 4
+W 77 8 5729 1
+W 77 9 5731 3
+W 77 10 5735 4
+W 77 11 5741 3
+W 77 12 5745 3
+W 77 13 5749 3
+W 77 14 5753 2
+W 77 15 5756 2
+W 77 16 5759 7
+W 78 0 5770 3
+W 78 1 5774 3
+W 78 2 5778 5
+W 78 3 5784 2
+W 78 4 5787 7
+W 78 5 5796 3
+W 78 6 5800 4
+W 78 7 5805 5
+W 78 8 5811 10
+W 78 9 5822 4
+W 78 10 5827 2
+W 78 11 5830 7
+W 78 12 5838 1
+W 78 13 5840 5
+W 78 14 5847 3
+W 78 15 5851 1
+W 78 16 5853 4
+W 78 17 5858 8
+W 78 18 5867 2
+W 78 19 5870 3
+W 78 20 5874 8
+W 79 0 5886 3
+W 79 1 5890 5
+W 79 2 5896 4
+W 79 3 5901 4
+W 79 4 5906 4
+W 79 5 5911 4
+W 79 6 5916 4
+W 79 7 5921 2
+W 79 8 5925 3
+W 79 9 5929 5
+W 79 10 5935 4
+W 79 11 5940 4
+W 79 12 5945 5
+W 79 13 5951 3
+W 79 14 5955 11
+W 80 0 5970 3
+W 80 1 5974 2
+W 80 2 5977 5
+W 80 3 5983 2
+W 80 4 5986 5
+W 80 5 5992 2
+W 80 6 5995 3
+W 80 7 5999 8
+W 80 8 6009 4
+W 80 9 6014 1
+W 80 10 6016 2
+W 80 11 6019 3
+W 80 12 6023 7
+W 81 0 6034 2
+W 81 1 6037 4
+W 81 2 6042 8
+W 81 3 6051 3
+W 81 4 6055 3
+W 81 5 6059 9
+W 81 6 6070 3
+W 81 7 6074 1
+W 81 8 6076 4
+W 81 9 6081 2
+W 81 10 6084 3
+W 81 11 6088 4
+W 82 0 6096 4
+W 82 1 6101 4
+W 82 2 6106 4
+W 82 3 6111 3
+W 82 4 6115 3
+W 82 5 6119 4
+W 82 6 6125 6
+W 82 7 6133 4
+W 82 8 6138 4
+W 82 9 6143 4
+W 82 10 6148 7
+W 82 11 6156 2
+W 83 0 6162 3
+W 83 1 6166 1
+W 83 2 6168 2
+W 83 3 6171 6
+W 83 4 6178 4
+W 83 5 6183 1
+W 83 6 6185 6
+W 83 7 6192 2
+W 83 8 6195 3
+W 83 9 6199 5
+W 83 10 6206 3
+W 83 11 6210 2
+W 83 12 6213 1
+W 83 13 6215 3
+W 83 14 6219 6
+W 83 15 6226 3
+W 83 16 6230 8
+W 84 0 6242 3
+W 84 1 6246 4
+W 84 2 6251 3
+W 84 3 6255 3
+W 84 4 6259 4
+W 84 5 6264 2
+W 84 6 6267 3
+W 84 7 6271 7
+W 84 8 6280 4
+W 84 9 6285 4
+W 84 10 6290 4
+W 84 11 6295 7
+W 84 12 6303 8
+W 84 13 6312 2
+W 84 14 6315 4
+W 84 15 6320 4
+W 84 16 6325 9
+W 84 17 6335 2
+W 85 0 6341 3
+W 85 1 6345 5
+W 85 2 6351 4
+W 85 3 6356 6
+W 85 4 6363 4
+W 85 5 6368 3
+W 85 6 6372 2
+W 85 7 6376 5
+W 85 8 6382 3
+W 85 9 6386 3
+W 85 10 6390 5
+W 85 11 6396 3
+W 85 12 6400 3
+W 86 0 6407 3
+W 86 1 6411 3
+W 86 2 6415 12
+W 86 3 6428 3
+W 86 4 6432 8
+W 86 5 6442 4
+W 86 6 6447 9
+W 86 7 6457 2
+W 86 8 6460 10
+W 86 9 6472 4
+W 86 10 6477 4
+W 86 11 6482 2
+W 87 0 6488 4
+W 87 1 6493 3
+W 87 2 6497 6
+W 87 3 6504 8
+W 87 4 6513 2
+W 87 5 6516 4
+W 87 6 6521 5
+W 87 7 6528 3
+W 87 8 6532 1
+W 87 9 6534 7
+W 87 10 6542 3
+W 87 11 6546 3
+W 87 12 6550 8
+W 88 0 6562 7
+W 88 1 6570 2
+W 88 2 6573 5
+W 88 3 6579 3
+W 88 4 6583 14
+W 88 5 6599 2
+W 88 6 6602 5
+W 88 7 6608 1
+W 88 8 6610 4
+W 88 9 6615 3
+W 88 10 6619 9
+W 88 11 6629 2
+W 88 12 6632 3
+W 88 13 6636 5
+W 89 0 6645 3
+W 89 1 6649 4
+W 89 2 6655 1
+W 89 3 6657 4
+W 89 4 6663 3
+W 89 5 6667 4
+W 89 6 6672 2
+W 89 7 6675 7
+W 89 8 6683 2
+W 89 9 6686 6
+W 90 0 6696 3
+W 90 1 6700 12
+W 90 2 6713 2
+W 90 3 6716 4
+W 90 4 6721 3
+W 90 5 6725 11
+W 90 6 6738 4
+W 90 7 6743 4
+W 90 8 6748 11
+W 90 9 6760 3
+W 90 10 6764 5
+W 90 11 6771 3
+W 90 12 6775 2
+W 90 13 6778 7
+W 91 0 6789 4
+W 91 1 6794 8
+W 91 2 6803 4
+W 91 3 6808 3
+W 91 4 6812 9
+W 91 5 6822 2
+W 91 6 6825 5
+W 91 7 6831 10
+W 91 8 6843 3
+W 91 9 6847 3
+W 91 10 6851 3
+W 91 11 6855 3
+W 91 12 6859 8
+W 92 0 6871 6
+W 92 1 6878 3
+W 92 2 6882 3
+W 92 3 6886 3
+W 92 4 6890 4
+W 92 5 6895 2
+W 92 6 6898 8
+W 92 7 6908 1
+W 92 8 6910 6
+W 92 9 6917 4
+W 92 10 6922 4
+W 92 11 6927 8
+W 92 12 6936 2
+W 92 13 6939 4
+W 92 14 6944 10
+W 93 0 6958 1
+W 93 1 6960 4
+W 93 2 6965 5
+W 93 3 6971 6
+W 93 4 6978 3
+W 93 5 6982 8
+W 93 6 6992 3
+W 93 7 6996 4
+W 93 8 7001 4
+W 93 9 7006 4
+W 93 10 7011 4
+W 93 11 7016 9
+W 93 12 7026 2
+W 94 0 7032 1
+W 94 1 7034 2
+W 94 2 7037 5
+W 94 3 7044 4
+W 94 4 7049 2
+W 94 5 7053 3
+W 94 6 7057 1
+W 94 7 7059 4
+W 94 8 7064 6
+W 94 9 7071 3
+W 94 10 7075 8
+W 95 0 7087 3
+W 95 1 7091 6
+W 95 2 7098 4
+W 95 3 7103 6
+W 95 4 7110 3
+W 95 5 7114 2
+W 95 6 7117 2
+W 95 7 7120 7
+W 95 8 7128 2
+W 95 9 7132 3
+W 95 10 7136 1
+W 95 11 7138 4
+W 95 12 7143 8
+W 95 13 7152 3
+W 95 14 7156 11
+W 96 0 7171 1
+W 96 1 7173 4
+W 96 2 7178 4
+W 96 3 7183 2
+W 96 4 7186 3
+W 96 5 7190 2
+W 96 6 7193 3
+W 96 7 7197 10
+W 96 8 7209 3
+W 96 9 7213 3
+W 96 10 7217 11
+W 96 11 7229 2
+W 96 12 7232 9
+W 96 13 7242 5
+W 97 0 7251 1
+W 97 1 7253 3
+W 97 2 7257 4
+W 97 3 7262 1
+W 97 4 7264 3
+W 97 5 7268 3
+W 97 6 7273 2
+W 97 7 7276 2
+W 97 8 7279 2
+W 97 9 7282 10
+W 97 10 7293 3
+W 97 11 7297 3
+W 97 12 7301 3
+W 98 0 7308 4
+W 98 1 7313 7
+W 98 2 7321 3
+W 98 3 7325 12
+W 98 4 7338 4
+W 98 5 7343 4
+W 98 6 7348 2
+W 98 7 7351 5
+W 98 8 7357 4
+W 98 9 7362 4
+W 98 10 7367 7
+W 98 11 7376 3
+W 98 12 7380 4
+W 98 13 7385 3
+W 98 14 7389 4
+W 98 15 7394 4
+W 98 16 7399 2
+W 99 0 7405 1
+W 99 1 7407 4
+W 99 2 7412 4
+W 99 3 7417 13
+W 99 4 7431 4
+W 99 5 7436 3
+W 99 6 7440 2
+W 99 7 7443 8
+W 99 8 7453 3
+W 99 9 7457 3
+W 99 10 7461 11
+W 99 11 7473 3
+W 99 12 7477 2
+W 99 13 7480 10
+W 100 0 7495 1
+W 100 1 7497 10
+W 100 2 7508 4
+W 100 3 7513 4
+W 100 4 7518 3
+W 100 5 7522 8
+W 100 6 7532 7
+W 100 7 7540 1
+W 100 8 7542 4
+W 100 9 7547 3
+W 100 10 7551 8
+W 101 0 7564 1
+W 101 1 7566 4
+W 101 2 7571 9
+W 101 3 7581 2
+W 101 4 7584 4
+W 101 5 7589 4
+W 101 6 7594 5
+W 101 7 7600 4
+W 101 8 7605 3
+W 101 9 7610 4
+W 101 10 7615 1
+W 101 11 7617 5
+W 101 12 7623 4
+W 101 13 7628 3
+W 101 14 7632 4
+W 102 0 7641 1
+W 102 1 7643 4
+W 102 2 7648 3
+W 102 3 7652 8
+W 102 4 7661 4
+W 102 5 7666 3
+W 102 6 7670 9
+W 102 7 7681 3
+W 102 8 7685 4
+W 102 9 7690 4
+W 102 10 7695 6
+W 102 11 7702 2
+W 103 0 7709 3
+W 103 1 7713 5
+W 103 2 7719 3
+W 103 3 7723 3
+W 103 4 7727 5
+W 103 5 7733 4
+W 103 6 7738 2
+W 103 7 7741 5
+W 103 8 7748 3
+W 103 9 7753 7
+W 103 10 7761 4
+W 103 11 7766 5
+W 103 12 7772 2
+W 103 13 7775 2
+W 103 14 7778 5
+W 104 0 7788 7
+W 104 1 7796 3
+W 104 2 7800 8
+W 104 3 7809 1
+W 104 4 7811 3
+W 104 5 7815 13
+W 104 6 7830 9
+W 104 7 7840 1
+W 104 8 7842 4
+W 104 9 7847 5
+W 104 10 7853 5
+W 104 11 7859 3
+W 105 0 7867 3
+W 105 1 7871 4
+W 105 2 7876 2
+W 105 3 7879 1
+W 105 4 7881 4
+W 105 5 7886 4
+W 105 6 7891 2
+W 105 7 7894 4
+W 105 8 7900 3
+W 105 9 7904 1
+W 105 10 7906 5
+W 105 11 7912 4
+W 105 12 7917 2
+W 105 13 7920 4
+W 106 0 7929 1
+W 106 1 7931 4
+W 106 2 7936 5
+W 106 3 7943 3
+W 106 4 7947 1
+W 106 5 7949 4
+W 106 6 7954 7
+W 106 7 7962 2
+W 106 8 7966 4
+W 106 9 7971 1
+W 106 10 7973 4
+W 106 11 7978 4
+W 106 12 7983 3
+W 106 13 7987 9
+W 106 14 7997 9
+W 107 0 8011 1
+W 107 1 8013 2
+W 107 2 8016 9
+W 107 3 8026 4
+W 107 4 8031 4
+W 107 5 8037 7
+W 107 6 8045 2
+W 107 7 8049 1
+W 107 8 8051 4
+W 107 9 8057 9
+W 107 10 8067 4
+W 107 11 8072 3
+W 107 12 8076 4
+W 108 0 8085 6
+W 108 1 8093 1
+W 108 2 8095 7
+W 108 3 8103 4
+W 108 4 8109 3
+W 108 5 8113 8
+W 108 6 8122 9
+W 108 7 8132 2
+W 108 8 8135 2
+W 108 9 8138 5
+W 108 10 8145 1
+W 108 11 8147 4
+W 108 12 8153 3
+W 108 13 8157 5
+W 108 14 8163 2
+W 108 15 8166 3
+W 108 16 8170 9
+W 109 0 8184 2
+W 109 1 8187 4
+W 109 2 8192 2
+W 109 3 8195 11
+W 109 4 8207 2
+W 109 5 8210 2
+W 109 6 8213 4
+W 109 7 8219 3
+W 109 8 8223 2
+W 109 9 8226 1
+W 109 10 8228 3
+W 109 11 8232 6
+W 109 12 8239 3
+W 109 13 8243 3
+W 110 0 8251 3
+W 110 1 8255 6
+W 110 2 8262 4
+W 110 3 8267 4
+W 110 4 8272 1
+W 110 5 8274 5
+W 110 6 8280 3
+W 110 7 8284 2
+W 110 8 8288 3
+W 110 9 8292 1
+W 110 10 8294 5
+W 110 11 8300 3
+W 110 12 8304 4
+W 110 13 8309 3
+W 110 14 8313 8
+W 111 0 8326 3
+W 111 1 8330 11
+W 111 2 8342 4
+W 111 3 8347 1
+W 111 4 8349 5
+W 111 5 8355 2
+W 111 6 8358 2
+W 111 7 8361 8
+W 111 8 8370 3
+W 111 9 8374 4
+W 111 10 8380 3
+W 111 11 8384 4
+W 111 12 8389 3
+W 111 13 8393 3
+W 111 14 8397 9
+W 111 15 8407 2
+W 111 16 8410 2
+W 111 17 8413 5
+W 112 0 8423 1
+W 112 1 8425 4
+W 112 2 8430 8
+W 112 3 8439 4
+W 112 4 8444 5
+W 112 5 8450 2
+W 112 6 8453 7
+W 112 7 8461 3
+W 112 8 8465 8
+W 112 9 8474 5
+W 112 10 8481 4
+W 112 11 8486 4
+W 112 12 8491 3
+W 112 13 8495 3
+W 113 0 8503 1
+W 113 1 8505 4
+W 113 2 8510 4
+W 113 3 8515 8
+W 113 4 8525 3
+W 113 5 8529 3
+W 113 6 8533 3
+W 113 7 8537 2
+W 113 8 8540 1
+W 113 9 8542 4
+W 114 0 8551 4
+W 114 1 8556 3
+W 114 2 8560 2
+W 114 3 8563 6
+W 114 4 8570 5
+W 114 5 8576 3
+W 114 6 8580 2
+W 114 7 8583 6
+W 114 8 8591 1
+W 114 9 8593 4
+W 114 10 8598 2
+W 114 11 8601 3
+W 114 12 8605 4
+W 115 0 8614 6
+W 115 1 8621 4
+W 115 2 8626 2
+W 115 3 8630 2
+W 115 4 8633 9
+W 115 5 8644 3
+W 115 6 8648 1
+W 115 7 8650 4
+W 115 8 8655 4
+W 115 9 8660 3
+W 115 10 8664 12
+W 115 11 8677 2
+W 115 12 8680 2
+W 115 13 8683 3
+W 116 0 8691 6
+W 116 1 8698 2
+W 116 2 8701 9
+W 116 3 8711 4
+W 116 4 8716 3
+W 116 5 8720 4
+W 116 6 8726 4
+W 116 7 8731 1
+W 116 8 8733 3
+W 116 9 8737 4
+W 116 10 8743 3
+W 116 11 8747 3
+W 116 12 8751 2
+W 116 13 8754 3
+W 116 14 8758 2
+W 116 15 8761 7
+W 116 16 8769 2
+W 116 17 8772 2
+W 116 18 8775 4
+W 117 0 8784 4
+W 117 1 8789 4
+W 117 2 8794 2
+W 117 3 8797 2
+W 117 4 8801 3
+W 117 5 8805 1
+W 117 6 8807 5
+W 117 7 8813 2
+W 117 8 8816 4
+W 117 9 8822 3
+W 117 10 8826 1
+W 117 11 8828 4
+W 117 12 8833 4
+W 117 13 8838 7
+W 117 14 8846 4
+W 117 15 8851 3
+W 117 16 8855 8
+W 117 17 8864 11
+W 118 0 8880 4
+W 118 1 8885 4
+W 118 2 8890 7
+W 118 3 8898 4
+W 118 4 8903 3
+W 118 5 8907 4
+W 118 6 8912 4
+W 118 7 8917 3
+W 118 8 8921 4
+W 118 9 8926 3
+W 118 10 8930 8
+W 118 11 8940 3
+W 118 12 8944 5
+W 118 13 8950 6
+W 118 14 8957 2
+W 118 15 8960 9
+W 119 0 8974 4
+W 119 1 8979 7
+W 119 2 8987 4
+W 119 3 8992 3
+W 119 4 8996 3
+W 119 5 9000 6
+W 119 6 9007 2
+W 119 7 9010 3
+W 119 8 9014 5
+W 119 9 9020 4
+W 119 10 9025 5
+W 119 11 9032 9
+W 119 12 9042 1
+W 119 13 9044 4
+W 119 14 9049 3
+W 119 15 9053 11
+W 120 0 9069 2
+W 120 1 9072 5
+W 120 2 9078 9
+W 120 3 9088 3
+W 120 4 9092 4
+W 120 5 9097 2
+W 120 6 9100 4
+W 120 7 9106 3
+W 120 8 9110 1
+W 120 9 9112 2
+W 120 10 9115 6
+W 120 11 9122 2
+W 120 12 9125 3
+W 120 13 9129 9
+W 121 0 9143 1
+W 121 1 9145 4
+W 121 2 9150 4
+W 121 3 9155 8
+W 121 4 9164 3
+W 121 5 9168 7
+W 121 6 9177 5
+W 121 7 9183 2
+W 121 8 9186 3
+W 121 9 9190 2
+W 121 10 9193 4
+W 121 11 9198 10
+W 122 0 9213 2
+W 122 1 9216 6
+W 122 2 9223 3
+W 122 3 9227 3
+W 122 4 9231 7
+W 122 5 9239 3
+W 122 6 9243 4
+W 122 7 9249 3
+W 122 8 9253 3
+W 122 9 9257 3
+W 122 10 9261 5
+W 122 11 9267 7
+W 122 12 9275 2
+W 123 0 9282 4
+W 123 1 9287 4
+W 123 2 9292 4
+W 123 3 9297 3
+W 123 4 9301 3
+W 123 5 9305 9
+W 123 6 9316 3
+W 123 7 9320 3
+W 123 8 9324 3
+W 123 9 9328 4
+W 123 10 9333 2
+W 123 11 9336 3
+W 123 12 9340 13
+W 124 0 9358 4
+W 124 1 9363 4
+W 124 2 9368 3
+W 124 3 9372 7
+W 124 4 9380 9
+W 124 5 9390 4
+W 124 6 9395 3
+W 124 7 9399 5
+W 124 8 9406 3
+W 124 9 9410 5
+W 124 10 9416 2
+W 124 11 9419 3
+W 124 12 9423 8
+W 125 0 9436 1
+W 125 1 9438 2
+W 125 2 9441 3
+W 125 3 9445 7
+W 125 4 9454 4
+W 125 5 9459 2
+W 125 6 9462 13
+W 125 7 9477 4
+W 125 8 9482 1
+W 125 9 9484 3
+W 125 10 9488 4
+W 125 11 9493 3
+W 125 12 9497 11
+W 126 0 9513 2
+W 126 1 9516 2
+W 126 2 9519 4
+W 126 3 9524 3
+W 126 4 9528 4
+W 126 5 9534 4
+W 126 6 9540 2
+W 126 7 9543 4
+W 126 8 9549 3
+W 126 9 9553 4
+W 126 10 9558 4
+W 126 11 9563 4
+W 126 12 9568 4
+W 126 13 9573 3
+W 126 14 9577 3
+W 127 0 9585 9
+W 127 1 9595 1
+W 127 2 9597 4
+W 127 3 9602 3
+W 127 4 9606 12
+W 127 5 9619 5
+W 127 6 9625 4
+W 127 7 9631 3
+W 127 8 9636 5
+W 127 9 9642 4
+W 127 10 9647 4
+W 128 0 9656 9
+W 128 1 9666 1
+W 128 2 9668 6
+W 128 3 9675 3
+W 128 4 9679 3
+W 128 5 9683 8
+W 128 6 9692 10
+W 128 7 9703 3
+W 128 8 9707 6
+W 128 9 9714 2
+W 128 10 9717 2
+W 128 11 9720 5
+W 128 12 9727 3
+W 128 13 9731 1
+W 128 14 9733 4
+W 128 15 9738 5
+W 128 16 9744 5
+W 128 17 9750 3
+W 129 0 9758 3
+W 129 1 9762 11
+W 129 2 9774 3
+W 129 3 9778 9
+W 129 4 9789 9
+W 129 5 9799 4
+W 129 6 9804 2
+W 129 7 9807 4
+W 129 8 9812 4
+W 129 9 9817 4
+W 130 0 9826 3
+W 130 1 9830 8
+W 130 2 9839 2
+W 130 3 9842 3
+W 130 4 9846 5
+W 130 5 9852 6
+W 130 6 9859 5
+W 130 7 9866 2
+W 130 8 9869 6
+W 130 9 9876 13
+W 130 10 9890 4
+W 130 11 9895 3
+W 130 12 9899 6
+W 131 0 9910 1
+W 131 1 9912 6
+W 131 2 9919 2
+W 131 3 9922 5
+W 131 4 9929 3
+W 131 5 9933 6
+W 131 6 9941 3
+W 131 7 9945 1
+W 131 8 9947 6
+W 131 9 9954 3
+W 131 10 9958 3
+W 131 11 9962 12
+W 132 0 9979 4
+W 132 1 9984 4
+W 132 2 9989 4
+W 132 3 9994 2
+W 132 4 9998 3
+W 132 5 10002 2
+W 132 6 10005 8
+W 132 7 10014 4
+W 132 8 10019 2
+W 132 9 10023 2
+W 132 10 10026 4
+W 132 11 10031 5
+W 132 12 10037 2
+W 132 13 10040 2
+W 132 14 10043 4
+W 132 15 10048 5
+W 132 16 10054 4
+W 132 17 10059 4
+W 132 18 10064 3
+W 132 19 10068 4
+W 133 0 10077 5
+W 133 1 10083 2
+W 133 2 10086 5
+W 133 3 10092 2
+W 133 4 10095 3
+W 133 5 10099 4
+W 133 6 10105 3
+W 133 7 10109 3
+W 133 8 10113 3
+W 133 9 10117 3
+W 133 10 10121 8
+W 133 11 10130 4
+W 133 12 10135 8
+W 133 13 10144 4
+W 133 14 10149 2
+W 134 0 10156 7
+W 134 1 10164 2
+W 134 2 10167 4
+W 134 3 10172 3
+W 134 4 10176 10
+W 134 5 10187 2
+W 134 6 10190 3
+W 134 7 10195 2
+W 134 8 10198 4
+W 134 9 10203 1
+W 134 10 10205 4
+W 134 11 10210 3
+W 134 12 10214 8
+W 135 0 10227 4
+W 135 1 10232 3
+W 135 2 10236 4
+W 135 3 10241 2
+W 135 4 10244 5
+W 135 5 10250 4
+W 135 6 10255 3
+W 135 7 10259 7
+W 135 8 10268 3
+W 135 9 10272 5
+W 135 10 10278 2
+W 135 11 10281 3
+W 135 12 10285 8
+W 136 0 10298 6
+W 136 1 10305 2
+W 136 2 10308 6
+W 136 3 10315 3
+W 136 4 10319 4
+W 136 5 10324 4
+W 136 6 10329 4
+W 136 7 10335 7
+W 136 8 10343 4
+W 136 9 10348 4
+W 136 10 10353 3
+W 136 11 10357 3
+W 136 12 10361 3
+W 137 0 10369 9
+W 137 1 10379 3
+W 137 2 10383 4
+W 137 3 10389 1
+W 137 4 10391 4
+W 137 5 10397 3
+W 137 6 10401 7
+W 137 7 10409 3
+W 137 8 10413 3
+W 137 9 10417 9
+W 138 0 10431 3
+W 138 1 10435 11
+W 138 2 10447 4
+W 138 3 10452 4
+W 138 4 10457 4
+W 138 5 10462 9
+W 138 6 10472 3
+W 138 7 10476 9
+W 138 8 10486 3
+W 138 9 10490 4
+W 138 10 10495 8
+W 139 0 10508 2
+W 139 1 10511 4
+W 139 2 10516 4
+W 139 3 10521 8
+W 139 4 10530 2
+W 139 5 10534 7
+W 139 6 10542 4
+W 139 7 10547 7
+W 139 8 10555 4
+W 139 9 10560 9
+W 139 10 10570 3
+W 139 11 10574 5
+W 140 0 10584 3
+W 140 1 10588 4
+W 140 2 10593 2
+W 140 3 10596 4
+W 140 4 10601 4
+W 140 5 10607 9
+W 140 6 10617 3
+W 140 7 10621 7
+W 140 8 10629 6
+W 140 9 10636 2
+W 141 0 10643 1
+W 141 1 10645 2
+W 141 2 10648 5
+W 141 3 10654 3
+W 141 4 10658 8
+W 141 5 10668 3
+W 141 6 10672 2
+W 141 7 10675 3
+W 141 8 10679 1
+W 141 9 10681 6
+W 141 10 10688 3
+W 141 11 10692 8
+W 142 0 10705 3
+W 142 1 10709 13
+W 142 2 10723 2
+W 142 3 10726 2
+W 142 4 10729 11
+W 142 5 10741 13
+W 142 6 10756 3
+W 142 7 10760 3
+W 142 8 10764 3
+W 142 9 10768 2
+W 142 10 10771 3
+W 142 11 10775 5
+W 143 0 10785 7
+W 143 1 10793 3
+W 143 2 10797 7
+W 143 3 10805 4
+W 143 4 10810 5
+W 143 5 10816 4
+W 143 6 10821 2
+W 143 7 10824 2
+W 143 8 10828 3
+W 143 9 10832 3
+W 143 10 10836 12
+W 143 11 10849 3
+W 143 12 10853 2
+W 143 13 10856 8
+W 144 0 10869 3
+W 144 1 10873 13
+W 144 2 10887 2
+W 144 3 10890 3
+W 144 4 10894 11
+W 144 5 10906 2
+W 144 6 10909 11
+W 144 7 10922 4
+W 144 8 10927 2
+W 144 9 10930 13
+W 144 10 10945 3
+W 144 11 10949 1
+W 144 12 10951 5
+W 144 13 10957 4
+W 145 0 10966 1
+W 145 1 10968 5
+W 145 2 10974 4
+W 145 3 10979 2
+W 145 4 10982 5
+W 145 5 10988 5
+W 145 6 10995 4
+W 145 7 11000 2
+W 145 8 11004 1
+W 145 9 11006 4
+W 145 10 11012 1
+W 145 11 11014 4
+W 145 12 11019 4
+W 145 13 11024 3
+W 145 14 11028 8
+W 146 0 11041 1
+W 146 1 11043 5
+W 146 2 11049 4
+W 146 3 11054 4
+W 146 4 11060 4
+W 146 5 11065 2
+W 146 6 11069 3
+W 146 7 11073 1
+W 146 8 11075 5
+W 146 9 11081 4
+W 146 10 11086 3
+W 146 11 11090 11
+W 147 0 11106 1
+W 147 1 11108 9
+W 147 2 11118 3
+W 147 3 11122 7
+W 147 4 11130 2
+W 147 5 11133 3
+W 147 6 11137 7
+W 147 7 11146 3
+W 147 8 11150 5
+W 147 9 11157 1
+W 147 10 11159 5
+W 147 11 11165 2
+W 147 12 11168 3
+W 147 13 11172 4
+W 148 0 11181 4
+W 148 1 11186 4
+W 148 2 11191 7
+W 148 3 11199 3
+W 148 4 11203 5
+W 148 5 11209 7
+W 148 6 11218 4
+W 148 7 11223 1
+W 148 8 11225 5
+W 148 9 11231 8
+W 148 10 11240 2
+W 148 11 11243 3
+W 148 12 11247 4
+W 149 0 11256 4
+W 149 1 11261 2
+W 149 2 11264 5
+W 149 3 11270 9
+W 149 4 11280 4
+W 149 5 11285 3
+W 149 6 11289 14
+W 149 7 11305 1
+W 149 8 11307 4
+W 149 9 11313 7
+W 149 10 11321 2
+W 149 11 11324 9
+W 149 12 11334 2
+W 149 13 11337 3
+W 149 14 11341 8
+W 150 0 11354 4
+W 150 1 11359 4
+W 150 2 11364 4
+W 150 3 11369 4
+W 150 4 11374 6
+W 150 5 11381 5
+W 150 6 11387 8
+W 150 7 11397 4
+W 150 8 11402 3
+W 150 9 11406 3
+W 150 10 11410 4
+W 150 11 11415 3
+W 150 12 11419 3
+W 151 0 11427 4
+W 151 1 11432 3
+W 151 2 11436 4
+W 151 3 11442 1
+W 151 4 11444 4
+W 151 5 11450 3
+W 151 6 11454 3
+W 151 7 11458 3
+W 151 8 11462 12
+W 151 9 11475 3
+W 151 10 11479 5
+W 152 0 11489 10
+W 152 1 11500 3
+W 152 2 11504 11
+W 152 3 11517 1
+W 152 4 11519 4
+W 152 5 11524 5
+W 152 6 11530 2
+W 152 7 11533 3
+W 152 8 11537 4
+W 152 9 11542 4
+W 152 10 11547 4
+W 152 11 11552 7
+W 152 12 11560 4
+W 152 13 11565 3
+W 152 14 11569 4
+W 153 0 11578 8
+W 153 1 11587 4
+W 153 2 11592 10
+W 153 3 11604 3
+W 153 4 11608 7
+W 153 5 11616 2
+W 153 6 11620 3
+W 153 7 11624 1
+W 153 8 11626 2
+W 153 9 11629 3
+W 153 10 11633 6
+W 153 11 11640 3
+W 153 12 11644 3
+W 154 0 11652 5
+W 154 1 11658 2
+W 154 2 11661 5
+W 154 3 11668 3
+W 154 4 11672 7
+W 154 5 11680 2
+W 154 6 11684 7
+W 154 7 11692 2
+W 154 8 11695 9
+W 154 9 11705 2
+W 154 10 11708 3
+W 154 11 11712 4
+W 155 0 11721 9
+W 155 1 11731 2
+W 155 2 11734 3
+W 155 3 11738 4
+W 155 4 11743 3
+W 155 5 11747 6
+W 155 6 11755 3
+W 155 7 11759 4
+W 155 8 11764 4
+W 155 9 11769 3
+W 155 10 11773 3
+W 155 11 11777 8
+W 156 0 11790 5
+W 156 1 11796 3
+W 156 2 11800 3
+W 156 3 11804 6
+W 156 4 11811 7
+W 156 5 11820 1
+W 156 6 11822 4
+W 156 7 11828 7
+W 156 8 11836 2
+W 156 9 11839 9
+W 156 10 11849 2
+W 156 11 11852 3
+W 156 12 11856 9
+W 157 0 11870 4
+W 157 1 11875 3
+W 157 2 11879 2
+W 157 3 11882 11
+W 157 4 11894 3
+W 157 5 11898 4
+W 157 6 11903 7
+W 157 7 11912 3
+W 157 8 11916 2
+W 157 9 11919 1
+W 157 10 11921 3
+W 157 11 11925 7
+W 157 12 11933 4
+W 157 13 11938 3
+W 157 14 11942 11
+W 158 0 11958 1
+W 158 1 11960 6
+W 158 2 11967 3
+W 158 3 11971 13
+W 158 4 11986 3
+W 158 5 11990 3
+W 158 6 11994 7
+W 158 7 12003 7
+W 158 8 12011 4
+W 158 9 12016 4
+W 158 10 12021 3
+W 158 11 12025 3
+W 158 12 12029 4
+W 159 0 12038 8
+W 159 1 12047 3
+W 159 2 12051 1
+W 159 3 12053 4
+W 159 4 12058 3
+W 159 5 12062 8
+W 159 6 12072 7
+W 159 7 12080 2
+W 159 8 12084 1
+W 159 9 12086 4
+W 159 10 12092 9
+W 159 11 12102 2
+W 159 12 12105 3
+W 159 13 12109 14
+W 160 0 12128 3
+W 160 1 12132 4
+W 160 2 12137 2
+W 160 3 12140 4
+W 160 4 12145 4
+W 160 5 12150 3
+W 160 6 12154 9
+W 160 7 12165 3
+W 160 8 12169 5
+W 160 9 12175 3
+W 160 10 12179 2
+W 160 11 12182 3
+W 160 12 12186 9
+W 160 13 12196 9
+W 160 14 12206 8
+W 160 15 12215 3
+W 160 16 12219 4
+W 161 0 12228 7
+W 161 1 12236 4
+W 161 2 12241 10
+W 161 3 12252 2
+W 161 4 12255 7
+W 161 5 12263 1
+W 161 6 12265 5
+W 161 7 12272 3
+W 161 8 12276 2
+W 161 9 12279 5
+W 161 10 12285 8
+W 161 11 12294 2
+W 161 12 12297 3
+W 161 13 12301 2
+W 161 14 12304 3
+W 161 15 12308 4
+W 162 0 12317 1
+W 162 1 12319 7
+W 162 2 12327 2
+W 162 3 12330 3
+W 162 4 12334 4
+W 162 5 12340 2
+W 162 6 12343 3
+W 162 7 12347 4
+W 162 8 12352 7
+W 162 9 12360 5
+W 162 10 12366 5
+W 163 0 12376 1
+W 163 1 12378 4
+W 163 2 12383 3
+W 163 3 12387 5
+W 163 4 12393 5
+W 163 5 12400 3
+W 163 6 12404 3
+W 163 7 12408 3
+W 163 8 12412 2
+W 163 9 12415 1
+W 163 10 12417 4
+W 164 0 12426 5
+W 164 1 12432 5
+W 164 2 12438 1
+W 164 3 12440 3
+W 164 4 12444 2
+W 164 5 12447 1
+W 164 6 12449 6
+W 164 7 12456 4
+W 164 8 12461 7
+W 164 9 12469 2
+W 164 10 12472 3
+W 164 11 12476 9
+W 164 12 12486 9
+W 165 0 12500 5
+W 165 1 12506 5
+W 165 2 12512 4
+W 165 3 12517 4
+W 165 4 12522 5
+W 165 5 12528 4
+W 165 6 12533 3
+W 165 7 12537 3
+W 165 8 12542 3
+W 165 9 12546 7
+W 165 10 12554 5
+W 165 11 12560 6
+W 165 12 12567 4
+W 166 0 12576 4
+W 166 1 12582 1
+W 166 2 12584 4
+W 166 3 12589 5
+W 166 4 12595 3
+W 166 5 12599 3
+W 166 6 12603 9
+W 166 7 12614 3
+W 166 8 12618 4
+W 166 9 12623 3
+W 166 10 12627 12
+W 167 0 12644 2
+W 167 1 12647 4
+W 167 2 12652 4
+W 167 3 12657 4
+W 167 4 12662 3
+W 167 5 12666 11
+W 167 6 12679 3
+W 167 7 12683 1
+W 167 8 12685 4
+W 167 9 12690 4
+W 167 10 12695 11
+W 168 0 12711 1
+W 168 1 12713 4
+W 168 2 12718 4
+W 168 3 12723 3
+W 168 4 12727 8
+W 168 5 12736 3
+W 168 6 12740 3
+W 168 7 12744 11
+W 168 8 12757 3
+W 168 9 12761 3
+W 168 10 12765 2
+W 168 11 12768 4
+W 168 12 12773 3
+W 168 13 12777 6
+W 168 14 12784 4
+W 169 0 12793 3
+W 169 1 12797 2
+W 169 2 12800 3
+W 169 3 12804 4
+W 169 4 12809 4
+W 169 5 12814 6
+W 169 6 12821 4
+W 169 7 12827 1
+W 169 8 12829 4
+W 169 9 12835 4
+W 169 10 12840 2
+W 169 11 12843 13
+W 169 12 12857 9
+W 169 13 12867 2
+W 169 14 12870 3
+W 169 15 12874 4
+W 170 0 12883 3
+W 170 1 12887 2
+W 170 2 12890 12
+W 170 3 12903 4
+W 170 4 12908 6
+W 170 5 12915 4
+W 170 6 12921 7
+W 170 7 12929 2
+W 170 8 12932 9
+W 170 9 12942 2
+W 170 10 12945 3
+W 170 11 12949 4
+W 171 0 12958 2
+W 171 1 12961 4
+W 171 2 12966 5
+W 171 3 12972 5
+W 171 4 12978 6
+W 171 5 12986 4
+W 171 6 12991 4
+W 171 7 12996 4
+W 171 8 13001 6
+W 171 9 13008 2
+W 171 10 13011 3
+W 171 11 13015 8
+W 172 0 13028 2
+W 172 1 13031 6
+W 172 2 13038 5
+W 172 3 13044 5
+W 172 4 13050 2
+W 172 5 13053 3
+W 172 6 13057 4
+W 172 7 13063 3
+W 172 8 13067 3
+W 172 9 13071 3
+W 172 10 13075 12
+W 172 11 13088 3
+W 172 12 13092 13
+W 173 0 13110 3
+W 173 1 13114 5
+W 173 2 13120 4
+W 173 3 13125 4
+W 173 4 13130 2
+W 173 5 13134 3
+W 173 6 13138 1
+W 173 7 13140 4
+W 173 8 13145 6
+W 173 9 13152 3
+W 173 10 13156 8
+W 174 0 13169 1
+W 174 1 13171 4
+W 174 2 13176 6
+W 174 3 13183 3
+W 174 4 13187 3
+W 174 5 13191 9
+W 174 6 13202 1
+W 174 7 13204 4
+W 174 8 13210 3
+W 174 9 13214 3
+W 174 10 13218 3
+W 174 11 13222 2
+W 174 12 13225 2
+W 174 13 13228 7
+W 175 0 13240 3
+W 175 1 13244 2
+W 175 2 13247 4
+W 175 3 13252 4
+W 175 4 13258 3
+W 175 5 13262 2
+W 175 6 13265 5
+W 175 7 13271 6
+W 175 8 13278 4
+W 175 9 13284 3
+W 175 10 13288 3
+W 175 11 13292 3
+W 175 12 13296 9
+W 175 13 13306 4
+W 175 14 13311 2
+W 176 0 13318 1
+W 176 1 13320 4
+W 176 2 13325 4
+W 176 3 13330 6
+W 176 4 13337 4
+W 176 5 13342 1
+W 176 6 13344 4
+W 176 7 13349 5
+W 176 8 13356 4
+W 176 9 13361 3
+W 176 10 13365 7
+W 176 11 13374 3
+W 176 12 13378 1
+W 176 13 13380 2
+W 176 14 13383 3
+W 176 15 13387 6
+W 176 16 13394 3
+W 176 17 13398 12
+T 1Blessed are the undefiled in the way, who walk in the law of the LORD.
+2Blessed are they that keep his testimonies, and that seek him with the whole heart.
+3They also do no iniquity: they walk in his ways.
+4Thou hast commanded us to keep thy precepts diligently.
+5O that my ways were directed to keep thy statutes!
+6Then shall I not be ashamed, when I have respect unto all thy commandments.
+7I will praise thee with uprightness of heart, when I shall have learned thy righteous judgments.
+8I will keep thy statutes: O forsake me not utterly.
+9Wherewithal shall a young man cleanse his way? by taking heed thereto according to thy word.
+10With my whole heart have I sought thee: O let me not wander from thy commandments.
+11Thy word have I hid in mine heart, that I might not sin against thee.
+12Blessed art thou, O LORD: teach me thy statutes.
+13With my lips have I declared all the judgments of thy mouth.
+14I have rejoiced in the way of thy testimonies, as much as in all riches.
+15I will meditate in thy precepts, and have respect unto thy ways.
+16I will delight myself in thy statutes: I will not forget thy word.
+17Deal bountifully with thy servant, that I may live, and keep thy word.
+18Open thou mine eyes, that I may behold wondrous things out of thy law.
+19I am a stranger in the earth: hide not thy commandments from me.
+20My soul breaketh for the longing that it hath unto thy judgments at all times.
+21Thou hast rebuked the proud that are cursed, which do err from thy commandments.
+22Remove from me reproach and contempt; for I have kept thy testimonies.
+23Princes also did sit and speak against me: but thy servant did meditate in thy statutes.
+24Thy testimonies also are my delight and my counsellors.
+25My soul cleaveth unto the dust: quicken thou me according to thy word.
+26I have declared my ways, and thou heardest me: teach me thy statutes.
+27Make me to understand the way of thy precepts: so shall I talk of thy wondrous works.
+28My soul melteth for heaviness: strengthen thou me according unto thy word.
+29Remove from me the way of lying: and grant me thy law graciously.
+30I have chosen the way of truth: thy judgments have I laid before me.
+31I have stuck unto thy testimonies: O LORD, put me not to shame.
+32I will run the way of thy commandments, when thou shalt enlarge my heart.
+33Teach me, O LORD, the way of thy statutes; and I shall keep it unto the end.
+34Give me understanding, and I shall keep thy law; yea, I shall observe it with my whole heart.
+35Make me to go in the path of thy commandments; for therein do I delight.
+36Incline my heart unto thy testimonies, and not to covetousness.
+37Turn away mine eyes from beholding vanity; and quicken thou me in thy way.
+38Stablish thy word unto thy servant, who is devoted to thy fear.
+39Turn away my reproach which I fear: for thy judgments are good.
+40Behold, I have longed after thy precepts: quicken me in thy righteousness.
+41Let thy mercies come also unto me, O LORD, even thy salvation, according to thy word.
+42So shall I have wherewith to answer him that reproacheth me: for I trust in thy word.
+43And take not the word of truth utterly out of my mouth; for I have hoped in thy judgments.
+44So shall I keep thy law continually for ever and ever.
+45And I will walk at liberty: for I seek thy precepts.
+46I will speak of thy testimonies also before kings, and will not be ashamed.
+47And I will delight myself in thy commandments, which I have loved.
+48My hands also will I lift up unto thy commandments, which I have loved; and I will meditate in thy statutes.
+49Remember the word unto thy servant, upon which thou hast caused me to hope.
+50This is my comfort in my affliction: for thy word hath quickened me.
+51The proud have had me greatly in derision: yet have I not declined from thy law.
+52I remembered thy judgments of old, O LORD; and have comforted myself.
+53Horror hath taken hold upon me because of the wicked that forsake thy law.
+54Thy statutes have been my songs in the house of my pilgrimage.
+55I have remembered thy name, O LORD, in the night, and have kept thy law.
+56This I had, because I kept thy precepts.
+57Thou art my portion, O LORD: I have said that I would keep thy words.
+58I intreated thy favour with my whole heart: be merciful unto me according to thy word.
+59I thought on my ways, and turned my feet unto thy testimonies.
+60I made haste, and delayed not to keep thy commandments.
+61The bands of the wicked have robbed me: but I have not forgotten thy law.
+62At midnight I will rise to give thanks unto thee because of thy righteous judgments.
+63I am a companion of all them that fear thee, and of them that keep thy precepts.
+64The earth, O LORD, is full of thy mercy: teach me thy statutes.
+65Thou hast dealt well with thy servant, O LORD, according unto thy word.
+66Teach me good judgment and knowledge: for I have believed thy commandments.
+67Before I was afflicted I went astray: but now have I kept thy word.
+68Thou art good, and doest good; teach me thy statutes.
+69The proud have forged a lie against me: but I will keep thy precepts with my whole heart.
+70Their heart is as fat as grease; but I delight in thy law.
+71It is good for me that I have been afflicted; that I might learn thy statutes.
+72The law of thy mouth is better unto me than thousands of gold and silver.
+73Thy hands have made me and fashioned me: give me understanding, that I may learn thy commandments.
+74They that fear thee will be glad when they see me; because I have hoped in thy word.
+75I know, O LORD, that thy judgments are right, and that thou in faithfulness hast afflicted me.
+76Let, I pray thee, thy merciful kindness be for my comfort, according to thy word unto thy servant.
+77Let thy tender mercies come unto me, that I may live: for thy law is my delight.
+78Let the proud be ashamed; for they dealt perversely with me without a cause: but I will meditate in thy precepts.
+79Let those that fear thee turn unto me, and those that have known thy testimonies.
+80Let my heart be sound in thy statutes; that I be not ashamed.
+81My soul fainteth for thy salvation: but I hope in thy word.
+82Mine eyes fail for thy word, saying, When wilt thou comfort me?
+83For I am become like a bottle in the smoke; yet do I not forget thy statutes.
+84How many are the days of thy servant? when wilt thou execute judgment on them that persecute me?
+85The proud have digged pits for me, which are not after thy law.
+86All thy commandments are faithful: they persecute me wrongfully; help thou me.
+87They had almost consumed me upon earth; but I forsook not thy precepts.
+88Quicken me after thy lovingkindness; so shall I keep the testimony of thy mouth.
+89For ever, O LORD, thy word is settled in heaven.
+90Thy faithfulness is unto all generations: thou hast established the earth, and it abideth.
+91They continue this day according to thine ordinances: for all are thy servants.
+92Unless thy law had been my delights, I should then have perished in mine affliction.
+93I will never forget thy precepts: for with them thou hast quickened me.
+94I am thine, save me; for I have sought thy precepts.
+95The wicked have waited for me to destroy me: but I will consider thy testimonies.
+96I have seen an end of all perfection: but thy commandment is exceeding broad.
+97O how love I thy law! it is my meditation all the day.
+98Thou through thy commandments hast made me wiser than mine enemies: for they are ever with me.
+99I have more understanding than all my teachers: for thy testimonies are my meditation.
+100I understand more than the ancients, because I keep thy precepts.
+101I have refrained my feet from every evil way, that I might keep thy word.
+102I have not departed from thy judgments: for thou hast taught me.
+103How sweet are thy words unto my taste! yea, sweeter than honey to my mouth!
+104Through thy precepts I get understanding: therefore I hate every false way.
+105Thy word is a lamp unto my feet, and a light unto my path.
+106I have sworn, and I will perform it, that I will keep thy righteous judgments.
+107I am afflicted very much: quicken me, O LORD, according unto thy word.
+108Accept, I beseech thee, the freewill offerings of my mouth, O LORD, and teach me thy judgments.
+109My soul is continually in my hand: yet do I not forget thy law.
+110The wicked have laid a snare for me: yet I erred not from thy precepts.
+111Thy testimonies have I taken as an heritage for ever: for they are the rejoicing of my heart.
+112I have inclined mine heart to perform thy statutes alway, even unto the end.
+113I hate vain thoughts: but thy law do I love.
+114Thou art my hiding place and my shield: I hope in thy word.
+115Depart from me, ye evildoers: for I will keep the commandments of my God.
+116Uphold me according unto thy word, that I may live: and let me not be ashamed of my hope.
+117Hold thou me up, and I shall be safe: and I will have respect unto thy statutes continually.
+118Thou hast trodden down all them that err from thy statutes: for their deceit is falsehood.
+119Thou puttest away all the wicked of the earth like dross: therefore I love thy testimonies.
+120My flesh trembleth for fear of thee; and I am afraid of thy judgments.
+121I have done judgment and justice: leave me not to mine oppressors.
+122Be surety for thy servant for good: let not the proud oppress me.
+123Mine eyes fail for thy salvation, and for the word of thy righteousness.
+124Deal with thy servant according unto thy mercy, and teach me thy statutes.
+125I am thy servant; give me understanding, that I may know thy testimonies.
+126It is time for thee, LORD, to work: for they have made void thy law.
+127Therefore I love thy commandments above gold; yea, above fine gold.
+128Therefore I esteem all thy precepts concerning all things to be right; and I hate every false way.
+129Thy testimonies are wonderful: therefore doth my soul keep them.
+130The entrance of thy words giveth light; it giveth understanding unto the simple.
+131I opened my mouth, and panted: for I longed for thy commandments.
+132Look thou upon me, and be merciful unto me, as thou usest to do unto those that love thy name.
+133Order my steps in thy word: and let not any iniquity have dominion over me.
+134Deliver me from the oppression of man: so will I keep thy precepts.
+135Make thy face to shine upon thy servant; and teach me thy statutes.
+136Rivers of waters run down mine eyes, because they keep not thy law.
+137Righteous art thou, O LORD, and upright are thy judgments.
+138Thy testimonies that thou hast commanded are righteous and very faithful.
+139My zeal hath consumed me, because mine enemies have forgotten thy words.
+140Thy word is very pure: therefore thy servant loveth it.
+141I am small and despised: yet do not I forget thy precepts.
+142Thy righteousness is an everlasting righteousness, and thy law is the truth.
+143Trouble and anguish have taken hold on me: yet thy commandments are my delights.
+144The righteousness of thy testimonies is everlasting: give me understanding, and I shall live.
+145I cried with my whole heart; hear me, O LORD: I will keep thy statutes.
+146I cried unto thee; save me, and I shall keep thy testimonies.
+147I prevented the dawning of the morning, and cried: I hoped in thy word.
+148Mine eyes prevent the night watches, that I might meditate in thy word.
+149Hear my voice according unto thy lovingkindness: O LORD, quicken me according to thy judgment.
+150They draw nigh that follow after mischief: they are far from thy law.
+151Thou art near, O LORD; and all thy commandments are truth.
+152Concerning thy testimonies, I have known of old that thou hast founded them for ever.
+153Consider mine affliction, and deliver me: for I do not forget thy law.
+154Plead my cause, and deliver me: quicken me according to thy word.
+155Salvation is far from the wicked: for they seek not thy statutes.
+156Great are thy tender mercies, O LORD: quicken me according to thy judgments.
+157Many are my persecutors and mine enemies; yet do I not decline from thy testimonies.
+158I beheld the transgressors, and was grieved; because they kept not thy word.
+159Consider how I love thy precepts: quicken me, O LORD, according to thy lovingkindness.
+160Thy word is true from the beginning: and every one of thy righteous judgments endureth for ever.
+161Princes have persecuted me without a cause: but my heart standeth in awe of thy word.
+162I rejoice at thy word, as one that findeth great spoil.
+163I hate and abhor lying: but thy law do I love.
+164Seven times a day do I praise thee because of thy righteous judgments.
+165Great peace have they which love thy law: and nothing shall offend them.
+166LORD, I have hoped for thy salvation, and done thy commandments.
+167My soul hath kept thy testimonies; and I love them exceedingly.
+168I have kept thy precepts and thy testimonies: for all my ways are before thee.
+169Let my cry come near before thee, O LORD: give me understanding according to thy word.
+170Let my supplication come before thee: deliver me according to thy word.
+171My lips shall utter praise, when thou hast taught me thy statutes.
+172My tongue shall speak of thy word: for all thy commandments are righteousness.
+173Let thine hand help me; for I have chosen thy precepts.
+174I have longed for thy salvation, O LORD; and thy law is my delight.
+175Let my soul live, and it shall praise thee; and let thy judgments help me.
+176I have gone astray like a lost sheep; seek thy servant; for I do not forget thy commandments.

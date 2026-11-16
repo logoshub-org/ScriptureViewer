@@ -1,0 +1,52 @@
+identity: work=Sample versification=KJV book=Tale chapter=7
+text: 157 UTF-16 units
+  1בראשׁית<7225> ברא<1254> אלהים׃ 2את־השׁמים ואת הארץ׃ 3Εν<1722> αρχη ην ο λογος, τω Θεω<2316> αλλ εγω‹WJ›n 4Mary’s café said “εν αρχη” in the shade of the Αιδης.
+verses: 4
+  1  0+31  [1בראשׁית<7225> ברא<1254> אלהים׃]
+  2  32+20  [2את־השׁמים ואת הארץ׃]
+  3  53+49  [3Εν<1722> αρχη ην ο λογος, τω Θεω<2316> αλλ εγω‹…]
+  4  103+54  [4Mary’s café said “εν αρχη” in the shade of the …]
+spans: 13
+  0+1  verseNumber(1)  [1]
+  1+7  word(lemma: strong:H7225, morph: nil)  [בראשׁית]
+  8+6  strongs(strong:H7225)  [<7225>]
+  15+3  word(lemma: strong:H1254, morph: nil)  [ברא]
+  18+6  strongs(strong:H1254)  [<1254>]
+  32+1  verseNumber(2)  [2]
+  53+1  verseNumber(3)  [3]
+  54+2  word(lemma: strong:G1722, morph: nil)  [Εν]
+  56+6  strongs(strong:G1722)  [<1722>]
+  80+6  word(lemma: strong:G2316, morph: nil)  [τω Θεω]
+  86+6  strongs(strong:G2316)  [<2316>]
+  101+1  footnote(3.1)  [n]
+  103+1  verseNumber(4)  [4]
+words: 27
+  1.0  1+7  בראשׁית
+  1.1  15+3  ברא
+  1.2  25+5  אלהים
+  2.0  33+2  את
+  2.1  36+6  השׁמים
+  2.2  43+3  ואת
+  2.3  47+4  הארץ
+  3.0  54+2  Εν
+  3.1  63+4  αρχη
+  3.2  68+2  ην
+  3.3  71+1  ο
+  3.4  73+5  λογος
+  3.5  80+2  τω
+  3.6  83+3  Θεω
+  3.7  93+3  αλλ
+  3.8  97+3  εγω
+  4.0  104+6  Mary’s
+  4.1  111+4  café
+  4.2  116+4  said
+  4.3  122+2  εν
+  4.4  125+4  αρχη
+  4.5  131+2  in
+  4.6  134+3  the
+  4.7  138+5  shade
+  4.8  144+2  of
+  4.9  147+3  the
+  4.10  151+5  Αιδης
+notes: 1
+  3.1  footnote  "αλλ εγω — God’s word, εν αρχη"  refs=[]

@@ -1,0 +1,33 @@
+{
+ "description": "ChiUns-style: w on every word with no spaces between, an empty w, a multi-lemma w, U+3000 and NBSP kept, full-width punctuation, entities, a bare ideograph run outside w.",
+ "identity": {
+  "work": "Sample",
+  "versification": "NRSV",
+  "book": "Tale",
+  "chapter": 3
+ },
+ "entries": [
+  [
+   1,
+   "<w lemma=\"strong:G1161\"></w><w lemma=\"strong:G846\">耶稣对他</w><w lemma=\"strong:G3650 strong:G4771\">尽</w>：「你的　神」"
+  ],
+  [
+   2,
+   "<w lemma=\"strong:G1\">一</w><w lemma=\"strong:G2\" morph=\"robinson:V-AAI-3S\">二</w>。三四 五 &lt;WAHb&gt; <note n=\"1\">注释</note>六"
+  ],
+  [
+   3,
+   ""
+  ]
+ ],
+ "runs": [
+  {
+   "name": "default"
+  },
+  {
+   "name": "markers",
+   "strongsMarkers": true,
+   "morphMarkers": true
+  }
+ ]
+}

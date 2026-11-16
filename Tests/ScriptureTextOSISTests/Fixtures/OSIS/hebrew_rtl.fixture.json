@@ -1,0 +1,36 @@
+{
+ "description": "Hebrew: pointed words, a maqaf between words in bare text, sof pasuq, Latin verse numbers inside RTL text, unpointed words and w elements joined by maqaf. (Cantillation and point-stripping come with the transform options.)",
+ "identity": {
+  "work": "Sample",
+  "versification": "KJV",
+  "book": "Tale",
+  "chapter": 5
+ },
+ "entries": [
+  [
+   0,
+   "<chapter osisID=\"Tale.5\" sID=\"c\"/>"
+  ],
+  [
+   1,
+   "בְּרֵאשִׁית בָּרָא אֱלֹהִים׃"
+  ],
+  [
+   2,
+   "שָׁלוֹם־לָכֶם וְשלום׃"
+  ],
+  [
+   3,
+   "<w lemma=\"strong:H7225\">ראשית</w>־<w lemma=\"strong:H1254\">ברא</w>׃"
+  ]
+ ],
+ "runs": [
+  {
+   "name": "default"
+  },
+  {
+   "name": "markers",
+   "strongsMarkers": true
+  }
+ ]
+}

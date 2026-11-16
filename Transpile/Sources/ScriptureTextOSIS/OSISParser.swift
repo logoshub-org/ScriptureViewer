@@ -1,0 +1,1 @@
+../../../Sources/ScriptureTextOSIS/OSISParser.swift

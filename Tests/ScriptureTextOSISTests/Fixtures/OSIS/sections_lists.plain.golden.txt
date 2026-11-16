@@ -1,0 +1,47 @@
+identity: work=Sample versification=KJV book=Tale chapter=1
+text: 177 UTF-16 units
+  About this tale, in brief.⏎1They gathered at the gate.⏎The Guide⏎2He listed the supplies:⏎the first thing, 3and more of it;⏎the second thing;⏎4a line break inside⏎5and the rest.
+verses: 5
+  1  27+27  [1They gathered at the gate.]
+  2  65+41  [2He listed the supplies:⏎the first thing,]
+  3  107+34  [3and more of it;⏎the second thing;]
+  4  142+20  [4a line break inside]
+  5  163+14  [5and the rest.]
+spans: 9
+  0+26  block(ip)  [About this tale, in brief.]
+  27+1  verseNumber(1)  [1]
+  55+9  block(sp)  [The Guide]
+  65+1  verseNumber(2)  [2]
+  90+33  block(li1)  [the first thing, 3and more of it;]
+  107+1  verseNumber(3)  [3]
+  124+38  block(li1)  [the second thing;⏎4a line break inside]
+  142+1  verseNumber(4)  [4]
+  163+1  verseNumber(5)  [5]
+words: 26
+  1.0  28+4  They
+  1.1  33+8  gathered
+  1.2  42+2  at
+  1.3  45+3  the
+  1.4  49+4  gate
+  2.0  66+2  He
+  2.1  69+6  listed
+  2.2  76+3  the
+  2.3  80+8  supplies
+  2.4  90+3  the
+  2.5  94+5  first
+  2.6  100+5  thing
+  3.0  108+3  and
+  3.1  112+4  more
+  3.2  117+2  of
+  3.3  120+2  it
+  3.4  124+3  the
+  3.5  128+6  second
+  3.6  135+5  thing
+  4.0  143+1  a
+  4.1  145+4  line
+  4.2  150+5  break
+  4.3  156+6  inside
+  5.0  164+3  and
+  5.1  168+3  the
+  5.2  172+4  rest
+notes: 0

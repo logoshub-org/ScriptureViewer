@@ -1,0 +1,36 @@
+identity: work=Sample versification=NRSV book=Tale chapter=3
+text: 65 UTF-16 units
+  1耶稣对他<846>尽<3650><4771>：「你的‹IDSP›神」 2一<1>二<2>(V-AAI-3S)。三四‹NBSP›五 <WAHb> n六
+verses: 3
+  1  0+30  [1耶稣对他<846>尽<3650><4771>：「你的‹IDSP›神」]
+  2  31+34  [2一<1>二<2>(V-AAI-3S)。三四‹NBSP›五 <WAHb> n六]
+  3  65+0  []
+spans: 13
+  0+1  verseNumber(1)  [1]
+  1+4  word(lemma: strong:G846, morph: nil)  [耶稣对他]
+  5+5  strongs(strong:G846)  [<846>]
+  10+1  word(lemma: strong:G3650 strong:G4771, morph: nil)  [尽]
+  11+6  strongs(strong:G3650)  [<3650>]
+  17+6  strongs(strong:G4771)  [<4771>]
+  31+1  verseNumber(2)  [2]
+  32+1  word(lemma: strong:G1, morph: nil)  [一]
+  33+3  strongs(strong:G1)  [<1>]
+  36+1  word(lemma: strong:G2, morph: robinson:V-AAI-3S)  [二]
+  37+3  strongs(strong:G2)  [<2>]
+  40+10  morph(robinson:V-AAI-3S)  [(V-AAI-3S)]
+  63+1  footnote(2.1)  [n]
+words: 12
+  1.0  1+4  耶稣对他
+  1.1  10+1  尽
+  1.2  25+1  你
+  1.3  26+1  的
+  1.4  28+1  神
+  2.0  32+1  一
+  2.1  36+1  二
+  2.2  51+1  三
+  2.3  52+1  四
+  2.4  54+1  五
+  2.5  57+4  WAHb
+  2.6  64+1  六
+notes: 1
+  2.1  footnote  "注释"  refs=[]

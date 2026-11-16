@@ -1,0 +1,27 @@
+identity: work=Sample versification=LXX book=Tale chapter=6
+text: 43 UTF-16 units
+  1καὶ ἐγένετο ἐπὶ ἡμέραις 3αὐτοῦ n 4Αἰγύπτου
+verses: 4
+  1  0+24  [1καὶ ἐγένετο ἐπὶ ἡμέραις]
+  2  24+0  []
+  3  25+8  [3αὐτοῦ n]
+  4  34+9  [4Αἰγύπτου]
+spans: 9
+  0+1  verseNumber(1)  [1]
+  1+3  word(lemma: lemma.LXX:και strong:G2532, morph: packard:C)  [καὶ]
+  5+7  word(lemma: strong:G1096, morph: packard:V-AMI-3S)  [ἐγένετο]
+  13+3  word(lemma: strong:G1909, morph: nil)  [ἐπὶ]
+  17+7  word(lemma: strong:G2250, morph: nil)  [ἡμέραις]
+  25+1  verseNumber(3)  [3]
+  32+1  footnote(3.1)  [n]
+  34+1  verseNumber(4)  [4]
+  35+8  word(lemma: strong:G1, morph: nil)  [Αἰγύπτου]
+words: 6
+  1.0  1+3  καὶ
+  1.1  5+7  ἐγένετο
+  1.4  13+3  ἐπὶ
+  1.5  17+7  ἡμέραις
+  3.0  26+5  αὐτοῦ
+  4.0  35+8  Αἰγύπτου
+notes: 1
+  3.1  footnote  "σημείωσις"  refs=[]

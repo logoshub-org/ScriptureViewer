@@ -1,0 +1,46 @@
+{
+ "description": "LXX-style: precomposed polytonic Greek, w with Packard morph and xlit, x-1/x-2 variant readings (3 forms), empty verses, an x-alt-v11n milestone, and an entry cut off mid-tag.",
+ "identity": {
+  "work": "Sample",
+  "versification": "LXX",
+  "book": "Tale",
+  "chapter": 6
+ },
+ "entries": [
+  [
+   0,
+   "<chapter osisID=\"Tale.6\" sID=\"c\"/>"
+  ],
+  [
+   1,
+   "<w lemma=\"lemma.LXX:και strong:G2532\" morph=\"packard:C\" xlit=\"betacode:KAI\\\">καὶ</w> <w lemma=\"strong:G1096\" morph=\"packard:V-AMI-3S\">ἐγένετο</w> <seg type=\"x-variant\" subType=\"x-1\"><w lemma=\"strong:G1722\">ἐν</w> <w lemma=\"strong:G3588\">ταῖς</w></seg><seg type=\"x-variant\" subType=\"x-2\"><w lemma=\"strong:G1909\">ἐπὶ</w></seg> <w lemma=\"strong:G2250\">ἡμέραις</w>"
+  ],
+  [
+   2,
+   ""
+  ],
+  [
+   3,
+   "<milestone type=\"x-alt-v11n\" subType=\"x-different\" annotateRef=\"Tale.6.3\" annotateType=\"x-alternative\" n=\"Tale.6.4\"/><seg type=\"x-variant\" subType=\"x-2\">αὐτοῦ</seg><seg type=\"x-variant\" subType=\"x-1\">τοῦ βασιλέως</seg> <note n=\"a\">σημείωσις</note>"
+  ],
+  [
+   4,
+   "<w lemma=\"strong:G1\">Αἰγύπτου</w> <w lemm"
+  ]
+ ],
+ "runs": [
+  {
+   "name": "default"
+  },
+  {
+   "name": "secondary",
+   "variants": "secondary"
+  },
+  {
+   "name": "all_markers",
+   "variants": "all",
+   "strongsMarkers": true,
+   "morphMarkers": true
+  }
+ ]
+}

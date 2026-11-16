@@ -1,0 +1,37 @@
+identity: work=Sample versification=KJV book=Tale chapter=7
+text: 95 UTF-16 units
+  1kept never closed 2text 1 < 2 &nbsp; 𝔊 😀 after <raw> & stuff end⏎3broken x and n 4last words
+verses: 4
+  1  0+18  [1kept never closed]
+  2  19+48  [2text 1 < 2 &nbsp; 𝔊 😀 after <raw> & stuff end]
+  3  68+15  [3broken x and n]
+  4  84+11  [4last words]
+spans: 8
+  0+1  verseNumber(1)  [1]
+  6+89  italic  [never closed 2text 1 < 2 &nbsp; 𝔊 😀 after <raw> …]
+  19+1  verseNumber(2)  [2]
+  68+27  block(q1)  [3broken x and n 4last words]
+  68+1  verseNumber(3)  [3]
+  76+1  word(lemma: nil, morph: nil)  [x]
+  82+1  footnote(3.1)  [n]
+  84+1  verseNumber(4)  [4]
+words: 17
+  1.0  1+4  kept
+  1.1  6+5  never
+  1.2  12+6  closed
+  2.0  20+4  text
+  2.1  25+1  1
+  2.2  29+1  2
+  2.3  32+4  nbsp
+  2.4  38+2  𝔊
+  2.5  44+5  after
+  2.6  51+3  raw
+  2.7  58+5  stuff
+  2.8  64+3  end
+  3.0  69+6  broken
+  3.1  76+1  x
+  3.2  78+3  and
+  4.0  85+4  last
+  4.1  90+5  words
+notes: 1
+  3.1  footnote  "unfinished note"  refs=[]

@@ -1,0 +1,48 @@
+{
+ "description": "KJV-style prose: w lemma/morph (Robinson and strongMorph), x-p milestones, red letter with empty marker, transChange, divineName, study notes with catchWord/rdg, an empty w.",
+ "identity": {
+  "work": "Sample",
+  "versification": "KJV",
+  "book": "Tale",
+  "chapter": 1
+ },
+ "entries": [
+  [
+   0,
+   "<div type=\"book\" osisID=\"Tale\" sID=\"t1\" canonical=\"true\"/> <title type=\"main\">THE BOOK OF THE ROAD</title><chapter osisID=\"Tale.1\" sID=\"t2\" chapterTitle=\"CHAPTER 1.\"/><title type=\"chapter\">CHAPTER 1.</title>"
+  ],
+  [
+   1,
+   "<milestone marker=\"¶\" type=\"x-p\"/><w lemma=\"strong:H0430\">The keeper</w> <w lemma=\"strong:H0559\" morph=\"strongMorph:TH8799\">said</w>, <q who=\"Jesus\" marker=\"\"><transChange type=\"added\">Open</transChange> <w lemma=\"strong:H1234\">the gate</w></q><note type=\"study\"><catchWord>the gate</catchWord> <rdg type=\"x-literal\">a door of reeds</rdg></note> and <divineName>Lord</divineName> came."
+  ],
+  [
+   2,
+   "<w lemma=\"strong:G3056 strong:G2316\" morph=\"robinson:N-NSM\">Word</w> <w lemma=\"strong:G1510\" morph=\"robinson:V-IAI-3S\">was</w> with them<note type=\"study\"><catchWord>with</catchWord> <rdg type=\"x-literal\">toward</rdg></note>; <w lemma=\"strong:G1161\"></w><w lemma=\"strong:G846\">he</w> rose<milestone marker=\"¶\" type=\"x-p\"/>and walked."
+  ],
+  [
+   3,
+   "<w lemma=\"strong:H0001\">Friends</w>—<w lemma=\"strong:H0002\">neighbours</w>, and <w lemma=\"strong:H0003\">all</w> the town&apos;s people &amp; guests."
+  ]
+ ],
+ "runs": [
+  {
+   "name": "default"
+  },
+  {
+   "name": "markers",
+   "strongsMarkers": true,
+   "morphMarkers": true
+  },
+  {
+   "name": "plain",
+   "headings": false,
+   "footnotes": false,
+   "verseNumbers": false,
+   "redLetter": false
+  },
+  {
+   "name": "verse_per_line",
+   "versePerLine": true
+  }
+ ]
+}

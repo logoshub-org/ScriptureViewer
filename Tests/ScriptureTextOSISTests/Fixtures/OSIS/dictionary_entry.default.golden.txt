@@ -1,0 +1,11 @@
+identity: none
+text: 74 UTF-16 units
+  Part of Speech: Adjective⏎Case: Accusative⏎Number: Plural⏎Gender: Feminine
+verses: 0
+spans: 4
+  0+14  italic  [Part of Speech]
+  26+4  italic  [Case]
+  43+6  italic  [Number]
+  58+6  italic  [Gender]
+words: 0
+notes: 0

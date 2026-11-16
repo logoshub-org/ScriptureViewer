@@ -1,0 +1,25 @@
+ScriptureViewer - a native scripture reading surface and the portable text model under it
+
+COPYRIGHT
+  Copyright (C) 2026 Logos Hub Ltd.
+
+LICENSE OF THIS DISTRIBUTION
+  The Swift sources and Package.swift are distributed under the Mozilla Public License, version 2.0
+  (MPL-2.0); each source file says so in its header (the text is in the file LICENSE). The files named
+  below carry their own terms, and so do the test modules.
+
+THIRD-PARTY COMPONENTS
+  Paratext versification files   Sources/ScriptureTextVersification/StandardVersifications.swift
+  (org, eng, lxx, vul, rsc,      MIT (notice at the top of the file), Copyright SIL Global; from libpalaso
+  rso .vrs)                      SIL.Scripture/Resources at b4f7a6d, embedded unmodified as string literals.
+
+  usfm3 marker groups            Sources/ScriptureTextUSFM/USFMMarkers.swift
+                                 MIT, Copyright James Cuenod (github.com/jcuenod/usfm3, data/markers.toml):
+                                 the grouping of USFM markers is taken from it; no code is copied.
+
+TEST DATA (TestModules/)
+  Real module files, used only by the package's tests: the KJV, YLT, Weymouth, DTN and TFG (SWORD
+  modules), and the eBible.org USFM KJV (Genesis, Psalms and John). Each carries the licence stated in its
+  .conf file or its copr.htm (public domain, except the KJV, whose conf states a general public licence for
+  distribution); see TestModules/README.md. They are not part of any product, and no module whose licence
+  is not clear belongs there.

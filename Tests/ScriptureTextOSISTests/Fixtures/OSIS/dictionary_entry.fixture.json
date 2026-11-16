@@ -1,0 +1,15 @@
+{
+ "description": "A dictionary entry shaped like the Robinson morphology module (zLD/OSIS): hi italic labels and lb breaks; dictionary profile builds no verses, markers or word anchors.",
+ "profile": "dictionary",
+ "entries": [
+  [
+   1,
+   "<hi type=\"italic\">Part of Speech</hi>: Adjective<lb/><hi type=\"italic\">Case</hi>: Accusative<lb/><hi type=\"italic\">Number</hi>: Plural<lb/><hi type=\"italic\">Gender</hi>: Feminine"
+  ]
+ ],
+ "runs": [
+  {
+   "name": "default"
+  }
+ ]
+}

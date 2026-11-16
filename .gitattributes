@@ -1,0 +1,3 @@
+# Test modules are real module files: stored byte for byte, whatever core.autocrlf says on a machine (a changed byte changes what the
+# parsers are tested on).
+TestModules/** -text

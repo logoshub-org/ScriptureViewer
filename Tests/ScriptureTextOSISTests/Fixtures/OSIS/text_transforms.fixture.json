@@ -1,0 +1,55 @@
+{
+ "description": "D47 text transforms: pointed and cantillated Hebrew (maqaf, shin dot), polytonic Greek in text, a w element and a note (elision mark), and English with an accented e and an apostrophe that must survive every run. Word indexes are identical in all runs.",
+ "identity": {
+  "work": "Sample",
+  "versification": "KJV",
+  "book": "Tale",
+  "chapter": 7
+ },
+ "entries": [
+  [
+   0,
+   "<chapter osisID=\"Tale.7\" sID=\"c\"/>"
+  ],
+  [
+   1,
+   "<w lemma=\"strong:H7225\">בְּרֵאשִׁ֖ית</w> <w lemma=\"strong:H1254\">בָּרָ֣א</w> אֱלֹהִ֑ים׃"
+  ],
+  [
+   2,
+   "אֶת־הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ׃"
+  ],
+  [
+   3,
+   "<w lemma=\"strong:G1722\">Ἐν</w> ἀρχῇ ἦν ὁ λόγος, <w lemma=\"strong:G2316\">τῷ Θεῷ</w> ἀλλ’ ἐγώ<note n=\"a\">ἀλλ’ ἐγώ — God’s word, ἐν ἀρχῇ</note>"
+  ],
+  [
+   4,
+   "Mary’s café said “ἐν ἀρχῇ” in the shade of the Ἅιδης."
+  ]
+ ],
+ "runs": [
+  {
+   "name": "keep_all"
+  },
+  {
+   "name": "no_greek_accents",
+   "greekAccents": false
+  },
+  {
+   "name": "no_hebrew_points",
+   "hebrewPoints": false
+  },
+  {
+   "name": "no_cantillation",
+   "hebrewCantillation": false
+  },
+  {
+   "name": "strip_all",
+   "greekAccents": false,
+   "hebrewPoints": false,
+   "hebrewCantillation": false,
+   "strongsMarkers": true
+  }
+ ]
+}

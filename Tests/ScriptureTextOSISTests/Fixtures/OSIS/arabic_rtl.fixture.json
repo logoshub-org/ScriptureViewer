@@ -1,0 +1,34 @@
+{
+ "description": "Azeri-style Arabic script: harakat, ZWNJ, RLM and LRM, a pre-verse title, an <l> with no level, Persian digits, and a note inside a compound (hyphen).",
+ "identity": {
+  "work": "Sample",
+  "versification": "NRSV",
+  "book": "Tale",
+  "chapter": 4
+ },
+ "entries": [
+  [
+   0,
+   "<chapter osisID=\"Tale.4\" sID=\"c\"/>"
+  ],
+  [
+   1,
+   "<div sID=\"g1\" type=\"section\"/> <title subType=\"x-preverse\">عنوان</title> <div sID=\"g2\" type=\"paragraph\"/> سَلَام ‏جهان، می‌روم ‎1۲۳."
+  ],
+  [
+   2,
+   "<lg sID=\"g3\"/><l sID=\"l1\"/>آبّا<note n=\"31\">۱۴.۳۶ توضیح</note>-آتا، سنه<l eID=\"l1\"/><l level=\"2\" sID=\"l2\"/>بو پئیاله<l eID=\"l2\"/><lg eID=\"g3\"/>"
+  ]
+ ],
+ "runs": [
+  {
+   "name": "default"
+  },
+  {
+   "name": "plain",
+   "headings": false,
+   "footnotes": false,
+   "verseNumbers": false
+  }
+ ]
+}

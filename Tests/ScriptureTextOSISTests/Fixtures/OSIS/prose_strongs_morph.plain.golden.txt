@@ -1,0 +1,46 @@
+identity: work=Sample versification=KJV book=Tale chapter=1
+text: 141 UTF-16 units
+  The keeper said, Open the gate and LORD came. Word was with them; he rose⏎and walked. Friends—neighbours, and all the town's people & guests.
+verses: 3
+  1  0+45  [The keeper said, Open the gate and LORD came.]
+  2  46+39  [Word was with them; he rose⏎and walked.]
+  3  86+55  [Friends—neighbours, and all the town's people & …]
+spans: 11
+  0+10  word(lemma: strong:H0430, morph: nil)  [The keeper]
+  11+4  word(lemma: strong:H0559, morph: strongMorph:TH8799)  [said]
+  17+4  italic  [Open]
+  22+8  word(lemma: strong:H1234, morph: nil)  [the gate]
+  35+4  divineName  [LORD]
+  46+4  word(lemma: strong:G3056 strong:G2316, morph: robinson:N-NSM)  [Word]
+  51+3  word(lemma: strong:G1510, morph: robinson:V-IAI-3S)  [was]
+  66+2  word(lemma: strong:G846, morph: nil)  [he]
+  86+7  word(lemma: strong:H0001, morph: nil)  [Friends]
+  94+10  word(lemma: strong:H0002, morph: nil)  [neighbours]
+  110+3  word(lemma: strong:H0003, morph: nil)  [all]
+words: 25
+  1.0  0+3  The
+  1.1  4+6  keeper
+  1.2  11+4  said
+  1.3  17+4  Open
+  1.4  22+3  the
+  1.5  26+4  gate
+  1.6  31+3  and
+  1.7  35+4  LORD
+  1.8  40+4  came
+  2.0  46+4  Word
+  2.1  51+3  was
+  2.2  55+4  with
+  2.3  60+4  them
+  2.4  66+2  he
+  2.5  69+4  rose
+  2.6  74+3  and
+  2.7  78+6  walked
+  3.0  86+7  Friends
+  3.1  94+10  neighbours
+  3.2  106+3  and
+  3.3  110+3  all
+  3.4  114+3  the
+  3.5  118+6  town's
+  3.6  125+6  people
+  3.7  134+6  guests
+notes: 0

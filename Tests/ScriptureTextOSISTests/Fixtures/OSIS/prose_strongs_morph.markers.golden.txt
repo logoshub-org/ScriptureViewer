@@ -1,0 +1,69 @@
+identity: work=Sample versification=KJV book=Tale chapter=1
+text: 263 UTF-16 units
+  THE BOOK OF THE ROAD⏎CHAPTER 1.⏎1The keeper<0430> said<0559>(8799), Open the gate<1234>‹WJ›n and LORD came. 2Word<3056><2316>(N-NSM) was<1510>(V-IAI-3S) with them‹WJ›n‹WJ›; he<846> rose⏎and walked. 3Friends<0001>—neighbours<0002>, and all<0003> the town's people & guests.
+verses: 3
+  1  32+72  [1The keeper<0430> said<0559>(8799), Open the gat…]
+  2  105+83  [2Word<3056><2316>(N-NSM) was<1510>(V-IAI-3S) wit…]
+  3  189+74  [3Friends<0001>—neighbours<0002>, and all<0003> t…]
+spans: 32
+  0+20  block(mt)  [THE BOOK OF THE ROAD]
+  21+10  block(cl)  [CHAPTER 1.]
+  32+1  verseNumber(1)  [1]
+  33+10  word(lemma: strong:H0430, morph: nil)  [The keeper]
+  43+6  strongs(strong:H0430)  [<0430>]
+  50+4  word(lemma: strong:H0559, morph: strongMorph:TH8799)  [said]
+  54+6  strongs(strong:H0559)  [<0559>]
+  60+6  morph(strongMorph:TH8799)  [(8799)]
+  68+19  redLetter  [Open the gate<1234>]
+  68+4  italic  [Open]
+  73+8  word(lemma: strong:H1234, morph: nil)  [the gate]
+  81+6  strongs(strong:H1234)  [<1234>]
+  88+1  footnote(1.1)  [n]
+  94+4  divineName  [LORD]
+  105+1  verseNumber(2)  [2]
+  106+4  word(lemma: strong:G3056 strong:G2316, morph: robinson:N-NSM)  [Word]
+  110+6  strongs(strong:G3056)  [<3056>]
+  116+6  strongs(strong:G2316)  [<2316>]
+  122+7  morph(robinson:N-NSM)  [(N-NSM)]
+  130+3  word(lemma: strong:G1510, morph: robinson:V-IAI-3S)  [was]
+  133+6  strongs(strong:G1510)  [<1510>]
+  139+10  morph(robinson:V-IAI-3S)  [(V-IAI-3S)]
+  160+1  footnote(2.2)  [n]
+  164+2  word(lemma: strong:G846, morph: nil)  [he]
+  166+5  strongs(strong:G846)  [<846>]
+  189+1  verseNumber(3)  [3]
+  190+7  word(lemma: strong:H0001, morph: nil)  [Friends]
+  197+6  strongs(strong:H0001)  [<0001>]
+  204+10  word(lemma: strong:H0002, morph: nil)  [neighbours]
+  214+6  strongs(strong:H0002)  [<0002>]
+  226+3  word(lemma: strong:H0003, morph: nil)  [all]
+  229+6  strongs(strong:H0003)  [<0003>]
+words: 25
+  1.0  33+3  The
+  1.1  37+6  keeper
+  1.2  50+4  said
+  1.3  68+4  Open
+  1.4  73+3  the
+  1.5  77+4  gate
+  1.6  90+3  and
+  1.7  94+4  LORD
+  1.8  99+4  came
+  2.0  106+4  Word
+  2.1  130+3  was
+  2.2  150+4  with
+  2.3  155+4  them
+  2.4  164+2  he
+  2.5  172+4  rose
+  2.6  177+3  and
+  2.7  181+6  walked
+  3.0  190+7  Friends
+  3.1  204+10  neighbours
+  3.2  222+3  and
+  3.3  226+3  all
+  3.4  236+3  the
+  3.5  240+6  town's
+  3.6  247+6  people
+  3.7  256+6  guests
+notes: 2
+  1.1  footnote  "the gate a door of reeds"  refs=[]
+  2.2  footnote  "with toward"  refs=[]

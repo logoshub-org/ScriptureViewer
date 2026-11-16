@@ -1,0 +1,76 @@
+identity: work=Sample versification=KJV book=Ps chapter=9
+text: 265 UTF-16 units
+  PSALM 9⏎A song for the evening walk.⏎1I will lift my voice at dusk,⏎and the hills will answer me.⏎2Where the river runs,⏎deep and slow,⏎with no stated level⏎Selah⏎ALEPH⏎3First line of the letter⏎4and a second, indented one⏎⏎container form line⏎second container line
+verses: 4
+  1  37+60  [1I will lift my voice at dusk,⏎and the hills wil…]
+  2  98+64  [2Where the river runs,⏎deep and slow,⏎with no st…]
+  3  169+25  [3First line of the letter]
+  4  195+70  [4and a second, indented one⏎⏎container form line…]
+spans: 18
+  0+7  block(cl)  [PSALM 9]
+  8+28  block(d)  [A song for the evening walk.]
+  37+30  block(q1)  [1I will lift my voice at dusk,]
+  37+1  verseNumber(1)  [1]
+  68+29  block(q2)  [and the hills will answer me.]
+  98+22  block(q1)  [2Where the river runs,]
+  98+1  verseNumber(2)  [2]
+  121+14  block(q3)  [deep and slow,]
+  136+20  block(q1)  [with no stated level]
+  157+5  block(qr)  [Selah]
+  163+5  block(qa)  [ALEPH]
+  169+25  block(q1)  [3First line of the letter]
+  169+1  verseNumber(3)  [3]
+  195+27  block(q2)  [4and a second, indented one]
+  195+1  verseNumber(4)  [4]
+  210+8  word(lemma: strong:H0001, morph: nil)  [indented]
+  224+19  block(q2)  [container form line]
+  244+21  block(q1)  [second container line]
+words: 47
+  1.0  8+1  A
+  1.1  10+4  song
+  1.2  15+3  for
+  1.3  19+3  the
+  1.4  23+7  evening
+  1.5  31+4  walk
+  1.6  38+1  I
+  1.7  40+4  will
+  1.8  45+4  lift
+  1.9  50+2  my
+  1.10  53+5  voice
+  1.11  59+2  at
+  1.12  62+4  dusk
+  1.13  68+3  and
+  1.14  72+3  the
+  1.15  76+5  hills
+  1.16  82+4  will
+  1.17  87+6  answer
+  1.18  94+2  me
+  2.0  99+5  Where
+  2.1  105+3  the
+  2.2  109+5  river
+  2.3  115+4  runs
+  2.4  121+4  deep
+  2.5  126+3  and
+  2.6  130+4  slow
+  2.7  136+4  with
+  2.8  141+2  no
+  2.9  144+6  stated
+  2.10  151+5  level
+  2.11  157+5  Selah
+  3.0  170+5  First
+  3.1  176+4  line
+  3.2  181+2  of
+  3.3  184+3  the
+  3.4  188+6  letter
+  4.0  196+3  and
+  4.1  200+1  a
+  4.2  202+6  second
+  4.3  210+8  indented
+  4.4  219+3  one
+  4.5  224+9  container
+  4.6  234+4  form
+  4.7  239+4  line
+  4.8  244+6  second
+  4.9  251+9  container
+  4.10  261+4  line
+notes: 0

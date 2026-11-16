@@ -1,0 +1,42 @@
+identity: work=Sample versification=LXX book=Tale chapter=6
+text: 114 UTF-16 units
+  1καὶ<2532>(C) ἐγένετο<1096>(V-AMI-3S) ἐν<1722> ταῖς<3588>ἐπὶ<1909> ἡμέραις<2250> 3αὐτοῦτοῦ βασιλέως n 4Αἰγύπτου<1>
+verses: 4
+  1  0+80  [1καὶ<2532>(C) ἐγένετο<1096>(V-AMI-3S) ἐν<1722> τ…]
+  2  80+0  []
+  3  81+20  [3αὐτοῦτοῦ βασιλέως n]
+  4  102+12  [4Αἰγύπτου<1>]
+spans: 20
+  0+1  verseNumber(1)  [1]
+  1+3  word(lemma: lemma.LXX:και strong:G2532, morph: packard:C)  [καὶ]
+  4+6  strongs(strong:G2532)  [<2532>]
+  10+3  morph(packard:C)  [(C)]
+  14+7  word(lemma: strong:G1096, morph: packard:V-AMI-3S)  [ἐγένετο]
+  21+6  strongs(strong:G1096)  [<1096>]
+  27+10  morph(packard:V-AMI-3S)  [(V-AMI-3S)]
+  38+2  word(lemma: strong:G1722, morph: nil)  [ἐν]
+  40+6  strongs(strong:G1722)  [<1722>]
+  47+4  word(lemma: strong:G3588, morph: nil)  [ταῖς]
+  51+6  strongs(strong:G3588)  [<3588>]
+  57+3  word(lemma: strong:G1909, morph: nil)  [ἐπὶ]
+  60+6  strongs(strong:G1909)  [<1909>]
+  67+7  word(lemma: strong:G2250, morph: nil)  [ἡμέραις]
+  74+6  strongs(strong:G2250)  [<2250>]
+  81+1  verseNumber(3)  [3]
+  100+1  footnote(3.1)  [n]
+  102+1  verseNumber(4)  [4]
+  103+8  word(lemma: strong:G1, morph: nil)  [Αἰγύπτου]
+  111+3  strongs(strong:G1)  [<1>]
+words: 10
+  1.0  1+3  καὶ
+  1.1  14+7  ἐγένετο
+  1.2  38+2  ἐν
+  1.3  47+4  ταῖς
+  1.4  57+3  ἐπὶ
+  1.5  67+7  ἡμέραις
+  3.0  82+5  αὐτοῦ
+  3.1  87+3  τοῦ
+  3.2  91+8  βασιλέως
+  4.0  103+8  Αἰγύπτου
+notes: 1
+  3.1  footnote  "σημείωσις"  refs=[]

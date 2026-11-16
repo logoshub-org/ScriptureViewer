@@ -1,0 +1,36 @@
+{
+ "description": "<q> rules from SWORD's osisxhtml.cpp: explicit marker, empty marker, default marks by level, milestone red letter across verses, a bare <q/>, and quotes inside a footnote.",
+ "identity": {
+  "work": "Sample",
+  "versification": "KJV",
+  "book": "Tale",
+  "chapter": 2
+ },
+ "entries": [
+  [
+   1,
+   "He said, <q marker=\"“\">Come<q level=\"2\" marker=\"‘\">now</q> quickly</q> and <q>unmarked outer <q level=\"2\">unmarked inner</q></q>."
+  ],
+  [
+   2,
+   "<q sID=\"a\" who=\"Jesus\" marker=\"\"/>Follow me,"
+  ],
+  [
+   3,
+   "and I will make you<q eID=\"a\" who=\"Jesus\" marker=\"\"/> fishers<q/> of people.<note>Hebrew: <q sID=\"x\" type=\"x-footnote\" who=\"unknown\"/>them<q eID=\"x\" type=\"x-footnote\" who=\"unknown\"/></note>"
+  ]
+ ],
+ "runs": [
+  {
+   "name": "default"
+  },
+  {
+   "name": "nomarks",
+   "quoteMarks": false
+  },
+  {
+   "name": "nored",
+   "redLetter": false
+  }
+ ]
+}
