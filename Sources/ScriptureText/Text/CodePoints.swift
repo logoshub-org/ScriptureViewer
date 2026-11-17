@@ -26,7 +26,28 @@ public enum CodePoints {
         return out
     }
 
+    /// The last code point of a string, or nil when it is empty, without making an array of them all.
+    public static func last(_ s: String) -> Int? {
+        #if SKIP
+        if s.length == 0 { return nil }
+        return s.codePointBefore(s.length)
+        #else
+        return s.unicodeScalars.last.map { Int($0.value) }
+        #endif
+    }
+
     public static func string(_ codes: [Int], _ from: Int, _ to: Int) -> String {
+        #if SKIP
+        // A Kotlin string cannot grow in place: gathered in a builder, not by `+=` a character at a time.
+        let out = java.lang.StringBuilder(to - from)
+        var k = from
+        while k < to {
+            let scalar = codes[k]
+            if scalar >= 0 && scalar <= 0x10FFFF && !(scalar >= 0xD800 && scalar <= 0xDFFF) { out.appendCodePoint(scalar) }
+            k += 1
+        }
+        return out.toString()
+        #else
         var out = ""
         var k = from
         while k < to {
@@ -34,6 +55,7 @@ public enum CodePoints {
             k += 1
         }
         return out
+        #endif
     }
 
     public static func string(_ codes: [Int]) -> String { string(codes, 0, codes.count) }
@@ -81,17 +103,23 @@ public enum CodePoints {
     }
 
     public static func fromUTF16(_ units: [Int]) -> String {
+        #if SKIP
+        let out = java.lang.StringBuilder(units.count)
+        var k = 0
+        while k < units.count {
+            out.append(units[k].toChar())
+            k += 1
+        }
+        return out.toString()
+        #else
         var out = ""
         var k = 0
         while k < units.count {
-            #if SKIP
-            out += units[k].toChar().toString()
-            #else
             out += String(decoding: [UInt16(units[k])], as: UTF16.self)
-            #endif
             k += 1
         }
         return out
+        #endif
     }
 
     /// `chars[from..<to]` as a String.

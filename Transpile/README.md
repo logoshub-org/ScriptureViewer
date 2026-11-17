@@ -51,5 +51,10 @@ a dependency of the `ScriptureText` target here for that reason.
 
 The rules are in plan D158: `Int` only (no `UInt8`/`UInt32`/`Unicode.Scalar`), text as code point arrays through `CodePoints`, no
 `Substring` or `String.Index`, no double optionals or mutated tuples, `Codable` under `#if !SKIP`, `public` (not `package`) where a type
-crosses modules; and inside a function whose argument label is also a property's name (`contains(verse number:)`), write `self.verse`
+crosses modules. For speed in Kotlin (measured: these made the parser ten times slower before they were fixed; Psalm 119 went from
+about 105 ms to about 10–12 ms warm on the emulator): do not grow a string with `+=` in a loop (a Kotlin string is copied each time: gather the pieces,
+or use a `StringBuilder` under `#if SKIP`); do not `append` to an array that is a stored property in a loop (each append copies the array:
+use a local array, or a list type like the builder's `GrowingList`); and do not keep a struct that is changed often as another type's stored
+property (each read of the property copies it: make it a class if it has one owner). `Android/demo` has a `ParseBenchmark` to measure with.
+And inside a function whose argument label is also a property's name (`contains(verse number:)`), write `self.verse`
 for the property, because in Kotlin the parameter takes the label's name and hides it. When the Kotlin run fails to compile, the log names the Kotlin line; the Swift line is in the same message.

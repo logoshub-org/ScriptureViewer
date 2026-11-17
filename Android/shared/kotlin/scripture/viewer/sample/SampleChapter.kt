@@ -23,10 +23,21 @@ import scripture.text.osis.OSISParser
  */
 object SampleChapter {
 
-    fun psalm119(assets: AssetManager, markers: Boolean = false, versePerLine: Boolean = false): ScriptureText {
+    fun psalm119(assets: AssetManager, markers: Boolean = false, versePerLine: Boolean = false): ScriptureText =
+        parse(rawEntries(assets), markers = markers, versePerLine = versePerLine)
+
+    /** The chapter's entries as SWORD stores them: the chapter heading, then one entry of raw OSIS for each verse. */
+    fun rawEntries(assets: AssetManager): List<String> {
         val strings = JSONArray(assets.open("entries.json").bufferedReader().use { it.readText() })
+        val entries = ArrayList<String>()
+        for (index in 0 until strings.length()) entries.add(strings.getString(index))
+        return entries
+    }
+
+    /** The parse alone, which is what the benchmark times. */
+    fun parse(strings: List<String>, markers: Boolean = false, versePerLine: Boolean = false): ScriptureText {
         val raw = ArrayList<ChapterEntries.Entry>()
-        for (index in 0 until strings.length()) raw.add(ChapterEntries.Entry(verse = index, text = strings.getString(index)))
+        for (index in strings.indices) raw.add(ChapterEntries.Entry(verse = index, text = strings[index]))
 
         val display = ScriptureDisplayOptions()
         display.headings = true

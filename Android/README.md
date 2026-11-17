@@ -68,6 +68,10 @@ On the Android 17 emulator (arm64, 1080 by 2400) on an M-series Mac, which is no
 | Styling (model to `Spannable`) | 6 ms | 19 ms |
 | Measure and layout | 7 ms | 17 ms |
 
+Parsing that chapter from its raw OSIS in the transpiled core takes about 10–12 ms once warm (it was about 105 ms before the core was
+changed for Kotlin: the rules are in `../Transpile/README.md`); the first parse in a process takes 310–420 ms as installed and 127–160 ms
+when the app is compiled ahead of time. `demo` has a `ParseBenchmark` activity that measures this on a release build.
+
 Scrolling the chapter by hand for five seconds drew 351 frames with 1 janky (0.3%). A highlight change adds and removes spans and
 requests no layout (the `Layout` object stays the same one); painting 176 bookmarked verses and 251 search hits at once took 125 ms.
 

@@ -21,7 +21,11 @@
 
 import ScriptureText
 
-public struct ScriptureTextBuilder {
+///
+/// A class, not a struct: each parse has one builder, owned by its format's builder and never copied. As a struct it cost nothing in
+/// Swift, but in the Kotlin that Skip makes of this every read of a struct-typed property is a copy, so each call from the OSIS
+/// builder copied this whole value there and back (found by profiling the transpiled parser; see the speed rules in Transpile/README.md).
+public final class ScriptureTextBuilder {
 
     public struct Options: Sendable, Equatable {
         /// Show the verse number at the start of each verse.
@@ -44,16 +48,21 @@ public struct ScriptureTextBuilder {
     public let options: Options
 
     // Output
+    #if SKIP
+    /// The text so far. A Kotlin string cannot grow in place, so `text += s` would copy the whole chapter at every append.
+    private let text = java.lang.StringBuilder()
+    #else
     private var text = ""
+    #endif
     /// The text written so far, in UTF-16 code units.
     public private(set) var length = 0
     /// Where the last text outside a heading ended: a verse that a heading follows ends here (USFM puts a section
     /// heading before the next `\v`, so the heading is not part of the verse before it).
     public private(set) var contentEnd = 0
-    private var spans: [ScriptureText.Span] = []
-    private var verses: [ScriptureText.VerseRange] = []
-    private var notes: [ScriptureText.Note] = []
-    private var words: [ScriptureText.WordAnchor] = []
+    private let spans = GrowingList<ScriptureText.Span>()
+    private let verses = GrowingList<ScriptureText.VerseRange>()
+    private let notes = GrowingList<ScriptureText.Note>()
+    private let words = GrowingList<ScriptureText.WordAnchor>()
 
     // Whitespace and breaks
     private var endsWithNewline = true
@@ -112,7 +121,7 @@ public struct ScriptureTextBuilder {
     /// introduction) gets no marker and no range. A later part of a verse already begun (`14b` after `14a`, even with
     /// other verses between, as reader's editions reorder them) gets a range of its own, and its words go on from the
     /// earlier part's, so each word of the verse has one index.
-    public mutating func beginVerse(_ number: Int, lastVerse: Int? = nil, label: String? = nil) {
+    public func beginVerse(_ number: Int, lastVerse: Int? = nil, label: String? = nil) {
         endVerse()
         currentVerse = number
         currentLastVerse = lastVerse
@@ -129,11 +138,11 @@ public struct ScriptureTextBuilder {
     }
 
     /// Ends the current verse's range at the text written so far, or at `end` (see `contentEnd`).
-    public mutating func endVerse(at end: Int? = nil) {
+    public func endVerse(at end: Int? = nil) {
         guard let verse = currentVerse, verse > 0 else { currentVerse = nil; return }
         let start = verseStart ?? length         // an empty verse still gets a (zero-length) range
         let finish = max(min(end ?? length, length), start)
-        verses.append(.init(verse: verse, start: start, length: finish - start,
+        verses.append(ScriptureText.VerseRange(verse: verse, start: start, length: finish - start,
                             lastVerse: currentLastVerse, label: currentLabel))
         nextWordIndex[verse] = wordIndex
         currentVerse = nil
@@ -147,7 +156,7 @@ public struct ScriptureTextBuilder {
 
     /// Opens a span that starts at the next content: a block span (a paragraph role) before the verse marker, an
     /// inline one after it.
-    public mutating func openSpan(block: Bool) -> SpanHandle {
+    public func openSpan(block: Bool) -> SpanHandle {
         nextSpan += 1
         if block { waitingBlock.append(nextSpan) } else { waitingInline.append(nextSpan) }
         return SpanHandle(id: nextSpan)
@@ -156,14 +165,14 @@ public struct ScriptureTextBuilder {
     /// Closes a span and records it with `attribute`, unless it is empty or `attribute` is nil. Returns where it
     /// started, or nil if no content was written inside it.
     @discardableResult
-    public mutating func closeSpan(_ handle: SpanHandle, as attribute: ScriptureText.Attribute?) -> Int? {
+    public func closeSpan(_ handle: SpanHandle, as attribute: ScriptureText.Attribute?) -> Int? {
         guard let start = spanStarts.removeValue(forKey: handle.id) else {
             if let index = waitingInline.lastIndex(of: handle.id) { waitingInline.remove(at: index) }
             else if let index = waitingBlock.lastIndex(of: handle.id) { waitingBlock.remove(at: index) }
             return nil
         }
         if let attribute, length > start {          // empty elements make no span
-            spans.append(.init(start: start, length: length - start, attribute: attribute))
+            spans.append(ScriptureText.Span(start: start, length: length - start, attribute: attribute))
         }
         return start
     }
@@ -171,25 +180,25 @@ public struct ScriptureTextBuilder {
     // MARK: Breaks
 
     /// The next content starts on a new line.
-    public mutating func blockBreak() {
+    public func blockBreak() {
         needsBreak = true
         glue = false
     }
 
     /// A line break that counts towards a blank line when `counted` (a paragraph boundary or a line end; SWORD's
     /// `<br />`); two in a row make one.
-    public mutating func lineBreak(counted: Bool = true) {
+    public func lineBreak(counted: Bool = true) {
         blockBreak()
         if counted { breakCount += 1 }
     }
 
     /// A shown heading carries its own space: the breaks counted before it make no blank line.
-    public mutating func clearBreakCount() {
+    public func clearBreakCount() {
         breakCount = 0
     }
 
     /// A heading ended here.
-    public mutating func markHeadingEnd() {
+    public func markHeadingEnd() {
         lastHeadingEnd = length
     }
 
@@ -212,12 +221,12 @@ public struct ScriptureTextBuilder {
     }
 
     /// The next text starts a new word.
-    public mutating func wordBoundary() {
+    public func wordBoundary() {
         glue = false
     }
 
     /// Appends text, collapsing runs of markup whitespace (space, tab, CR, LF) and nothing else.
-    public mutating func emit(_ raw: String) {
+    public func emit(_ raw: String) {
         var run: [Int] = []
         for scalar in CodePoints.of(raw) {
             if Self.isMarkupSpace(scalar) {
@@ -233,7 +242,7 @@ public struct ScriptureTextBuilder {
 
     /// Words inside a hidden reading (a dropped variant, a canonical title with headings off) still take their
     /// indexes, so indexes do not depend on display options. They get no range.
-    public mutating func countHiddenWords(_ raw: String) {
+    public func countHiddenWords(_ raw: String) {
         var run: [Int] = []
         for scalar in CodePoints.of(raw) {
             if Self.isMarkupSpace(scalar) {
@@ -251,7 +260,7 @@ public struct ScriptureTextBuilder {
     /// morph token, with a leading TG/TH dropped when a digit follows (`strongMorph:TH8799` → `(8799)`). Lemma
     /// tokens with no scheme or a `lemma.` scheme (`lemma.TR:και`) are the "Lemmas" option's, which the app leaves
     /// off, so SWORD's `OSISLemma` filter removes them first.
-    public mutating func emitWordMarkers(lemma: String?, morph: String?) {
+    public func emitWordMarkers(lemma: String?, morph: String?) {
         if options.strongsMarkers, let lemma {
             for token in CodePoints.split(lemma, separator: " ") where Self.isStrongsLemma(token) {
                 var value = Self.valueAfterScheme(token)
@@ -280,39 +289,43 @@ public struct ScriptureTextBuilder {
     public var inNote: Bool { activeNote != nil }
 
     /// Starts capturing a note. A note is a word boundary.
-    public mutating func beginNote() {
+    public func beginNote() {
         glue = false
         activeNote = ActiveNote(text: "", references: [], spaced: false)
     }
 
     /// Note text, whitespace-collapsed.
-    public mutating func appendToNote(_ raw: String) {
-        guard activeNote != nil else { return }
+    public func appendToNote(_ raw: String) {
+        guard let note = activeNote else { return }
+        // Gathered a run of non-space at a time, not a character at a time (each `+=` on a Kotlin string copies it).
+        var run: [Int] = []
         for scalar in CodePoints.of(raw) {
             if Self.isMarkupSpace(scalar) {
-                activeNote!.spaced = true
+                if !run.isEmpty { note.text += CodePoints.string(run); run = [] }
+                note.spaced = true
             } else {
-                if activeNote!.spaced, !activeNote!.text.isEmpty { activeNote!.text += " " }
-                activeNote!.spaced = false
-                activeNote!.text += CodePoints.string(scalar: scalar)
+                if run.isEmpty, note.spaced, !note.text.isEmpty { note.text += " " }
+                note.spaced = false
+                run.append(scalar)
             }
         }
+        if !run.isEmpty { note.text += CodePoints.string(run) }
     }
 
     /// A reference the note cites (e.g. "Exod.25.5").
-    public mutating func addNoteReference(_ reference: String) {
+    public func addNoteReference(_ reference: String) {
         activeNote?.references.append(reference)
     }
 
     /// Ends the note. When `show` is true and it has text or references, it is recorded and its marker ("n", or "x"
     /// for a cross-reference) is written, joined to the word before it.
-    public mutating func finishNote(id: String, kind: ScriptureText.Note.Kind, show: Bool) {
+    public func finishNote(id: String, kind: ScriptureText.Note.Kind, show: Bool) {
         guard let note = activeNote else { return }
         activeNote = nil
         glue = false                             // a note is a word boundary
         defer { spaceAfterNote = note.spaced }   // set last: writing the marker clears it
         guard show, !note.text.isEmpty || !note.references.isEmpty else { return }
-        notes.append(.init(id: id, text: note.text, references: note.references, kind: kind))
+        notes.append(ScriptureText.Note(id: id, text: note.text, references: note.references, kind: kind))
 
         beginContent(allowVerseMarker: true)
         // D37: the marker is joined to the word before it, never after a space.
@@ -321,44 +334,53 @@ public struct ScriptureTextBuilder {
         }
         let start = length
         append(kind == .crossReference ? "x" : "n")
-        spans.append(.init(start: start, length: length - start, attribute: .footnote(id: id)))
+        spans.append(ScriptureText.Span(start: start, length: length - start, attribute: ScriptureText.Attribute.footnote(id: id)))
         lastAppendWasFootnoteMarker = true
         extendable = nil
     }
 
     /// Drops the note being captured (it was inside a hidden reading).
-    public mutating func discardNote() {
+    public func discardNote() {
         activeNote = nil
         glue = false
     }
 
     // MARK: Finish
 
-    public mutating func finish() -> ScriptureText {
+    public func finish() -> ScriptureText {
         endVerse()
         // Outer spans first, so equal starts order deterministically.
-        let ordered = spans.enumerated().sorted { a, b in
+        let ordered = spans.elements().enumerated().sorted { a, b in
             if a.element.start != b.element.start { return a.element.start < b.element.start }
             if a.element.length != b.element.length { return a.element.length > b.element.length }
             return a.offset < b.offset
         }.map(\.element)
-        return ScriptureText(text: text, spans: ordered, verses: verses, notes: notes, words: words)
+        #if SKIP
+        let whole = text.toString()
+        #else
+        let whole = text
+        #endif
+        return ScriptureText(text: whole, spans: ordered, verses: verses.elements(), notes: notes.elements(), words: words.elements())
     }
 
     // MARK: Writing
 
-    private mutating func append(_ s: String) {
+    private func append(_ s: String) {
         guard !s.isEmpty else { return }
+        #if SKIP
+        text.append(s)
+        #else
         text += s
+        #endif
         length += CodePoints.utf16Length(s)
-        lastScalar = CodePoints.of(s).last
+        lastScalar = CodePoints.last(s)
         endsWithNewline = lastScalar == 0x0A
         if headingDepth == 0 { contentEnd = length }
         lastAppendWasFootnoteMarker = false
         spaceAfterNote = false
     }
 
-    private mutating func flushPending() {
+    private func flushPending() {
         if needsBreak {
             let afterHeading = length == lastHeadingEnd
             if length > 0 && !endsWithNewline { append("\n") }
@@ -374,14 +396,14 @@ public struct ScriptureTextBuilder {
 
     /// Called before any content is appended. Settles breaks, starts block spans (so a poetry line or list item
     /// includes its verse marker), writes the pending verse marker, then starts inline spans (so words do not).
-    private mutating func beginContent(allowVerseMarker: Bool) {
+    private func beginContent(allowVerseMarker: Bool) {
         flushPending()
         startWaiting(block: true)
         if allowVerseMarker && headingDepth == 0 { emitVerseMarkerIfPending() }
         startWaiting(block: false)
     }
 
-    private mutating func startWaiting(block: Bool) {
+    private func startWaiting(block: Bool) {
         if block {
             guard !waitingBlock.isEmpty else { return }
             for id in waitingBlock { spanStarts[id] = length }
@@ -393,7 +415,7 @@ public struct ScriptureTextBuilder {
         }
     }
 
-    private mutating func emitVerseMarkerIfPending() {
+    private func emitVerseMarkerIfPending() {
         guard let verse = pendingVerse else { return }
         pendingVerse = nil
         verseStart = length
@@ -401,10 +423,10 @@ public struct ScriptureTextBuilder {
         let marker = currentLabel ?? (currentLastVerse.map { "\(verse)-\($0)" } ?? String(verse))
         let start = length
         append(marker)
-        spans.append(.init(start: start, length: length - start, attribute: .verseNumber(verse)))
+        spans.append(ScriptureText.Span(start: start, length: length - start, attribute: ScriptureText.Attribute.verseNumber(verse)))
     }
 
-    private mutating func appendRun(_ run: inout [Int]) {
+    private func appendRun(_ run: inout [Int]) {
         if spaceAfterNote, let first = run.first, !Self.isPunctuation(first) {
             pendingSpace = true                  // the space that was kept inside the note
         }
@@ -423,11 +445,11 @@ public struct ScriptureTextBuilder {
     /// A marker run (Strong's number, morph code) with its own span. A marker inside a word ends its anchor's range:
     /// text glued after the marker (`God<2316>'s`) keeps the word's index but is not covered, so a range never
     /// includes marker text and the index stays option-independent.
-    private mutating func emitMarker(_ marker: String, _ attribute: ScriptureText.Attribute) {
+    private func emitMarker(_ marker: String, _ attribute: ScriptureText.Attribute) {
         beginContent(allowVerseMarker: true)
         let start = length
         append(marker)
-        spans.append(.init(start: start, length: length - start, attribute: attribute))
+        spans.append(ScriptureText.Span(start: start, length: length - start, attribute: attribute))
         extendable = nil
     }
 
@@ -442,7 +464,7 @@ public struct ScriptureTextBuilder {
     /// when `start` is nil). A run glued to the previous word extends it, unless it starts with an ideograph;
     /// Unicode space separators and em/en dashes split words; an ideograph outside a tagged word is a word of its
     /// own; punctuation, symbols and format characters at a word's edges are not part of it.
-    private mutating func consumeWords(_ run: [Int], at start: Int?) {
+    private func consumeWords(_ run: [Int], at start: Int?) {
         guard anchorsWords else { glue = false; return }
         var position = start ?? 0
         var coreStart: Int?                  // first core scalar of the current segment
@@ -450,34 +472,36 @@ public struct ScriptureTextBuilder {
         var continuing = glue                // only the first segment may continue a word
         var endedOnBoundary = false
 
-        func closeSegment(_ builder: inout ScriptureTextBuilder) {
+        func closeSegment() {
             defer { coreStart = nil; continuing = false }
             guard let from = coreStart else { return }       // punctuation only: no word
             if continuing {
-                if start != nil, let e = builder.extendable {
-                    builder.words[e].length = coreEnd - builder.words[e].start
+                if start != nil, let e = extendable {
+                    var word = words[e]
+                    word.length = coreEnd - word.start
+                    words[e] = word
                 }
                 return                                       // same word, same index
             }
-            if start != nil, let verse = builder.currentVerse {
-                builder.words.append(.init(verse: verse, index: builder.wordIndex, start: from, length: coreEnd - from))
-                builder.extendable = builder.words.count - 1
+            if start != nil, let verse = currentVerse {
+                words.append(ScriptureText.WordAnchor(verse: verse, index: wordIndex, start: from, length: coreEnd - from))
+                extendable = words.count - 1
             } else {
-                builder.extendable = nil
+                extendable = nil
             }
-            builder.wordIndex += 1
+            wordIndex += 1
         }
 
         for scalar in run {
             let width = scalar > 0xFFFF ? 2 : 1
             if Self.isWordSeparator(scalar) {
-                closeSegment(&self)
+                closeSegment()
                 endedOnBoundary = true
             } else if wordDepth == 0, CodePoints.isIdeographic(scalar) {
-                closeSegment(&self)
+                closeSegment()
                 coreStart = position
                 coreEnd = position + width
-                closeSegment(&self)
+                closeSegment()
                 endedOnBoundary = true
             } else {
                 endedOnBoundary = false
@@ -489,7 +513,7 @@ public struct ScriptureTextBuilder {
             position += width
         }
         let lastWasWord = coreStart != nil || (continuing && !endedOnBoundary)
-        closeSegment(&self)
+        closeSegment()
         glue = lastWasWord && !endedOnBoundary
     }
 
@@ -563,8 +587,69 @@ public struct ScriptureTextBuilder {
     }
 }
 
-private struct ActiveNote {
+/// The note being captured. A class for the reason the builder is one: it is changed in place, a character run at a time.
+private final class ActiveNote {
     var text: String
     var references: [String]
     var spaced: Bool
+
+    init(text: String, references: [String], spaced: Bool) {
+        self.text = text
+        self.references = references
+        self.spaced = spaced
+    }
+}
+
+/// A list that grows in place, for what the builder gathers: the spans, verses, notes and word anchors of a chapter. In Swift it is
+/// an array and nothing more. In the Kotlin that Skip makes of this, an array held as a property is copied whole at every `append`
+/// (reading the property shares its storage, and writing to shared storage copies it), which made a chapter's 2,400 word anchors
+/// cost millions of copies; there it is a Java list.
+final class GrowingList<Element> {
+    #if SKIP
+    private let items = java.util.ArrayList<Element>()
+    #else
+    private var items: [Element] = []
+    #endif
+
+    var count: Int {
+        #if SKIP
+        return items.size
+        #else
+        return items.count
+        #endif
+    }
+
+    func append(_ element: Element) {
+        #if SKIP
+        items.add(items.size, element)      // the form that returns nothing, so this stays a statement in Kotlin
+        #else
+        items.append(element)
+        #endif
+    }
+
+    subscript(index: Int) -> Element {
+        get {
+            #if SKIP
+            return items.get(index)
+            #else
+            return items[index]
+            #endif
+        }
+        set {
+            #if SKIP
+            let replaced = items.set(index, newValue)
+            #else
+            items[index] = newValue
+            #endif
+        }
+    }
+
+    /// Everything gathered, in order.
+    func elements() -> [Element] {
+        #if SKIP
+        return Array<Element>(items, nocopy: true)
+        #else
+        return items
+        #endif
+    }
 }

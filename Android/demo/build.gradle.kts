@@ -18,6 +18,14 @@ android {
         versionName = "0.1"
     }
     buildFeatures { compose = true }
+    buildTypes {
+        // A release build to measure with (ParseBenchmark): optimised and not debuggable, signed with the debug key.
+        release {
+            isMinifyEnabled = true
+            signingConfig = signingConfigs.getByName("debug")
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17

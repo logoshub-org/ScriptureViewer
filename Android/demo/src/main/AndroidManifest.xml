@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application android:label="ScriptureViewer" android:supportsRtl="true" android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        <!-- So a profiler can watch the release build (see ParseBenchmark). -->
+        <profileable android:shell="true" />
+        <activity android:name=".ParseBenchmark" android:exported="true" />
         <activity android:name=".DemoActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
