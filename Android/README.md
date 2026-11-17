@@ -28,7 +28,7 @@ package's `ScriptureViewer` (which is `scripture.viewer.ScriptureViewer` in Kotl
 The Kotlin core must exist first, and again after any change to the Swift core:
 
 ```
-cd .. && swift build
+cd .. && swift build                                     # or: swift build --target ScriptureTextSource (all this project needs)
 ```
 
 Then, with `JAVA_HOME` (a JDK 17 or later, for example Android Studio's `jbr`) and the Android SDK (`ANDROID_HOME`, or `sdk.dir` in
@@ -39,6 +39,9 @@ Then, with `JAVA_HOME` (a JDK 17 or later, for example Android Studio's `jbr`) a
 ./gradlew :scriptureviewer:connectedDebugAndroidTest     # needs a running emulator or a device
 ./gradlew :demo:installDebug
 ```
+
+CI runs the instrumented tests on every push: the job "Viewer on an Android emulator" (`.github/workflows/ci.yml`) transpiles the core
+on a Linux runner and runs them on an API 34 emulator (ReactiveCircus/android-emulator-runner).
 
 The settings file takes the core in as an included build (Skip's generated Gradle project for `ScriptureTextSource`, which holds
 `ScriptureText`, the OSIS, GBF, ThML and plain-text parsers, the module source, `SkipModel`, `SkipFoundation` and `SkipLib`), under the

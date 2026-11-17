@@ -175,7 +175,7 @@ for target in package.targets where target.type == .regular && target.name != "S
 }
 
 // Setting the SKIP_ZERO=1 environment strips out the Skip plugin and all Skip dependencies: a plain Swift package, for builds that
-// need no Android (the Linux CI job; an iOS-only host may set it too). Skip's own pattern (`skip init --zero`).
+// need no Android (an iOS-only host may set it). Skip's own pattern (`skip init --zero`).
 if Context.environment["SKIP_ZERO"] ?? "0" != "0" {
     package.targets.forEach { target in
         target.plugins?.removeAll(where: {

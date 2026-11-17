@@ -18,10 +18,11 @@ THIRD-PARTY COMPONENTS
                                  the grouping of USFM markers is taken from it; no code is copied.
 
 DEPENDENCIES
-  Skip (skip.dev), which turns the library targets into Kotlin for Android when the package is built
-  (setting SKIP_ZERO=1 leaves it out): skip-foundation, skip-lib, skip-model and skip-unit are MPL-2.0;
-  skip (the build tool) and skip-ui are Apache-2.0. Fetched by Swift Package Manager, not part of this
-  repository.
+  Skip (skip.dev) turns the library targets into Kotlin for Android when the package is built (setting
+  SKIP_ZERO=1 leaves it out). Its build tool runs at build time only and is not distributed with an app.
+  The libraries an app carries: skip-foundation, skip-lib and skip-model (MPL-2.0), and skip-ui (MPL-2.0
+  until its release of 5 November 2026, Apache-2.0 from then on). Fetched by Swift Package Manager, not part
+  of this repository.
 
 ANDROID
   Android/ (the Compose viewer, its demo and tests) is MPL-2.0, as each file's header says. Its Kotlin is

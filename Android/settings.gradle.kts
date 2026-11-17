@@ -13,9 +13,13 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ScriptureViewerAndroid"
 
-val core = file("../.build/plugins/outputs/scriptureviewer/ScriptureTextSource/destination/skipstone")
-require(core.resolve("settings.gradle.kts").exists()) {
-    "The Kotlin core is not built: run `swift build` at the repository root first (looked in $core)."
+// Skip writes it under a folder named after the package's checkout folder (`scriptureviewer` for a clone named ScriptureViewer), so
+// it is looked for rather than named.
+val outputs = file("../.build/plugins/outputs")
+val core: File = requireNotNull(outputs.listFiles()?.map { it.resolve("ScriptureTextSource/destination/skipstone") }
+    ?.firstOrNull { it.resolve("settings.gradle.kts").exists() }) {
+    "The Kotlin core is not built: run `swift build --target ScriptureTextSource` (or `swift build`) at the repository root first " +
+        "(looked in $outputs)."
 }
 // Kotlin's incremental compilation goes wrong in the core when a file is transpiled again (it compiles the changed file without the
 // rest of its module, which Skip's linked module folders seem to cause), so it is off for this build and the one it includes.

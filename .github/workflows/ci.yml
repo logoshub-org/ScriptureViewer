@@ -7,37 +7,77 @@ on:
     branches: [main]
   pull_request:
 
+# The two platforms the package is for: iOS, and Android through Skip.
 jobs:
-  portable:
-    name: Tests on macOS
-    runs-on: macos-15
-    steps:
-      - uses: actions/checkout@v4
-      - name: Select Xcode
-        run: sudo xcode-select -s /Applications/Xcode_26.3.app
-      - name: swift test
-        run: swift test
-
   ios:
-    name: Viewer for iOS
+    name: Tests on iOS
     runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode_26.3.app
-      # The package is a Skip package: its build plugin writes the Android Kotlin as it builds, and Xcode asks for a plugin to be
-      # trusted before it runs one. On CI that is this flag.
-      - name: Build the ScriptureViewer scheme for the simulator
-        run: xcodebuild -scheme ScriptureViewer -destination 'generic/platform=iOS Simulator' -skipPackagePluginValidation build
+      # Every test target of the package, on an iPhone simulator (the first one the runner has), and the viewer built for iOS on the way.
+      # The package is a Skip package: Xcode asks for its build plugin to be trusted before it runs it, and on CI that is the flag.
+      - name: Tests on the iOS simulator
+        run: |
+          DEVICE=$(xcrun simctl list devices available -j | python3 -c "import json, sys
+          devices = json.load(sys.stdin)['devices']
+          print(next(d['udid'] for runtime, list in devices.items() if 'iOS' in runtime for d in list if d['name'].startswith('iPhone')))")
+          xcodebuild test -scheme ScriptureViewer-Package -destination "id=$DEVICE" -skipPackagePluginValidation
 
-  linux:
-    name: Tests on Linux
-    runs-on: ubuntu-latest
-    container: swift:6.0
-    # Plain Swift: SKIP_ZERO leaves Skip out of the package (see the end of Package.swift). The Android side is tested in Transpile/.
-    env:
-      SKIP_ZERO: "1"
+  android:
+    name: Tests on Android
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
-      - name: swift test
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_26.3.app
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "9.9.1"   # the version the Kotlin tests were run with locally
+      - name: Android SDK platform
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0" > /dev/null
+      # The Kotlin parity tests (Transpile/README.md): each test target runs as Swift and, through Skip, as Kotlin on an Android
+      # runtime on the JVM; the Kotlin results must match the Swift ones. (The viewer's instrumented tests need an emulator, which
+      # these runners cannot run: they are the next job, on Linux.)
+      - name: Kotlin parity tests
+        working-directory: Transpile
         run: swift test
+
+  android-emulator:
+    name: Viewer on an Android emulator
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # The Android project takes the core's Kotlin from what Skip writes when the package is built: only the core's targets, which
+      # build on Linux (the viewer target's iOS side needs UIKit). The runner's own Swift; Skip's build tool has a Linux version.
+      - name: Transpile the core to Kotlin
+        run: |
+          swift --version
+          swift build --target ScriptureTextSource
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Android SDK platform
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0" > /dev/null
+      - name: Enable KVM group perms
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      # The viewer's instrumented tests (Android/scriptureviewer/src/androidTest): Psalm 119 on a real Android, scrolled, tapped,
+      # selected, highlighted, sized, read by accessibility.
+      - name: Instrumented tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          working-directory: Android
+          script: ./gradlew --no-daemon :scriptureviewer:connectedDebugAndroidTest

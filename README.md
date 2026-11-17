@@ -34,7 +34,7 @@ Android app built with Skip. Nothing of Skip runs in an iOS app. What it means f
 - **Xcode asks you to trust the plugin** the first time (Trust & Enable). Command-line and CI builds pass `-skipPackagePluginValidation`
   to `xcodebuild`.
 - **An iOS-only host can leave Skip out**: building with the environment variable `SKIP_ZERO=1` strips the plugin and the Skip
-  dependencies, and the package is plain Swift (the Linux CI job builds it so).
+  dependencies, and the package is plain Swift.
 - **On macOS** `ScriptureViewer` is a placeholder that shows nothing, so code shared with iOS and Android builds on a Mac.
 
 The other products are the portable parts alone, for code that does not draw anything: `ScriptureText`, `ScriptureTextOSIS`,
@@ -70,8 +70,11 @@ viewer's own instrumented tests run on an Android emulator; it has not been host
 
 ## Tests
 
-`swift test` runs the portable tests on macOS or Linux, against real module files in `TestModules/` (public-domain texts, and the KJV,
-see its README). The viewer target is UIKit and builds for iOS only (on other platforms its files are empty).
+The package's tests run against real module files in `TestModules/` (public-domain texts, and the KJV, see its README). CI runs them on
+an iOS simulator (`xcodebuild test -scheme ScriptureViewer-Package -destination 'platform=iOS Simulator,name=…'
+-skipPackagePluginValidation`), and runs the Kotlin parity tests in `Transpile/` for Android (see its README). `swift test` runs the same
+package tests on a Mac, which is quicker while working. A third job runs the viewer's instrumented tests on an Android emulator, on a
+Linux runner (see [Android/README.md](Android/README.md)).
 
 ## Versions
 
