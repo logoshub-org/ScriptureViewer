@@ -8,7 +8,7 @@ package at the repository root).
 ## What runs
 
 `swift test` runs each test target twice: as Swift on macOS, and, through Skip's test harness, as Kotlin on a JVM Android runtime (needs
-Gradle, a JDK and the Android SDK, as for any Skip project). Both must pass.
+Gradle, a JDK 21 or later (Robolectric needs it for Android SDK 36) and the Android SDK, as for any Skip project). Both must pass.
 
 - `ScriptureTextOSISTests`: Psalm 119 of the KJV parsed from its raw OSIS, compared as a digest (text length, verses, spans, words, every
   offset, the text) with `expected_*.txt`; a test of what a viewer asks of the model beyond parsing (a verse found, painted and copied

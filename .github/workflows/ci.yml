@@ -35,7 +35,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: "17"
+          java-version: "21"   # Robolectric needs Java 21 for Android SDK 36 (the Kotlin tests run on it)
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: "9.9.1"   # the version the Kotlin tests were run with locally
@@ -62,7 +62,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: "17"
+          java-version: "21"   # Robolectric needs Java 21 for Android SDK 36 (the Kotlin tests run on it)
       - name: Android SDK platform
         run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0" > /dev/null
       - name: Enable KVM group perms
@@ -81,3 +81,26 @@ jobs:
           profile: pixel_6
           working-directory: Android
           script: ./gradlew --no-daemon :scriptureviewer:connectedDebugAndroidTest
+      # When a test fails: its name and message in this log, and the whole report (index.html, and the raw results) as an artifact
+      # on the run's page. The report's file:// path in Gradle's message is on the runner, which is gone by then.
+      - name: Failing tests
+        if: failure()
+        run: |
+          python3 - <<'PY'
+          import glob, html, re
+          for path in glob.glob("Android/scriptureviewer/build/outputs/androidTest-results/connected/**/*.xml", recursive=True):
+              text = open(path, encoding="utf-8").read()
+              for case in re.finditer(r'<testcase name="([^"]+)" classname="([^"]+)"[^>]*>\s*<failure[^>]*>(.*?)</failure>', text, re.S):
+                  print("FAILED", case.group(2) + "." + case.group(1))
+                  print(html.unescape(case.group(3)).strip()[:3000])
+                  print()
+          PY
+      - name: Upload Android test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-test-report
+          path: |
+            Android/scriptureviewer/build/reports/androidTests/connected/
+            Android/scriptureviewer/build/outputs/androidTest-results/connected/
+          if-no-files-found: ignore

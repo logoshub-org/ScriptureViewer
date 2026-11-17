@@ -282,7 +282,7 @@ class ScriptureViewerTests {
             assertTrue("space above the verse: $above", above >= 24 * density - 1 && above <= 96 * density + 1)
         }
         compose.onNodeWithTag("viewer").performTouchInput { swipe(Offset(centerX, height * 0.7f), Offset(centerX, height * 0.4f), 200) }
-        compose.waitUntil(5000) { compose.runOnUiThread<Boolean> { view.focusedVerse == null } }
+        compose.waitUntil(10_000) { compose.runOnUiThread<Boolean> { view.focusedVerse == null } }
         onMain { assertTrue(view.dimmedRanges.isEmpty()) }
 
         host.controller.focus(verse = 60)
@@ -366,7 +366,7 @@ class ScriptureViewerTests {
         host.controller.scroll(toVerse = 100)
         val onNumber = pointOfCharacter(view, verseNumberStart(psalm, 105))
         compose.onNodeWithTag("viewer").performTouchInput { click(onNumber) }
-        compose.waitUntil(3000) { host.taps.isNotEmpty() }
+        compose.waitUntil(10_000) { host.taps.isNotEmpty() }
         assertEquals(TapKind.verse, host.taps.last().kind)
         assertEquals("105", host.taps.last().key)
         // A verse number is not plain text: no plain tap follows it.
@@ -377,7 +377,7 @@ class ScriptureViewerTests {
         onMain { view.scroll.scrollTo(0, 0) }
         val onPlain = pointOfCharacter(view, psalm.text.indexOf("Blessed are they") + 9)
         compose.onNodeWithTag("viewer").performTouchInput { click(onPlain) }
-        compose.waitUntil(3000) { host.gestures.isNotEmpty() }
+        compose.waitUntil(10_000) { host.gestures.isNotEmpty() }
         assertEquals(listOf(ScriptureViewerGesture.plainTap), host.gestures)
         assertEquals(1, host.taps.size)
     }
@@ -438,7 +438,7 @@ class ScriptureViewerTests {
         val x = onScreen[0] + onWord.x.roundToInt()
         val y = onScreen[1] + onWord.y.roundToInt()
         device.swipe(x, y, x, y, 200)
-        compose.waitUntil(5000) { host.selections.lastOrNull() != null }
+        compose.waitUntil(10_000) { host.selections.lastOrNull() != null }
         val selection = host.selections.last()!!
         assertEquals("undefiled", psalm.text.substring(selection.start, selection.start + selection.length))
         assertEquals(1..1, selection.verses)
@@ -449,7 +449,7 @@ class ScriptureViewerTests {
         assertNotNull("the host's item in the selection menu", item)
         assertNotNull("the system's Copy beside it", device.findObject(By.text("Copy")))
         item.click()
-        compose.waitUntil(5000) { host.menu.isNotEmpty() }
+        compose.waitUntil(10_000) { host.menu.isNotEmpty() }
         assertEquals("bookmark", host.menu.last().first)
         assertEquals(1..1, host.menu.last().second.verses)
 
@@ -476,9 +476,12 @@ class ScriptureViewerTests {
         }
         val node = compose.onNodeWithTag("viewer")
         node.performTouchInput { swipe(Offset(centerX, height * 0.6f), Offset(centerX, height * 0.2f), 300) }
-        compose.waitUntil(5000) { host.chrome.isNotEmpty() }
+        compose.waitUntil(10_000) { host.chrome.isNotEmpty() }
         assertEquals("requests ${host.chrome}, scrolls ${host.scrolls}", ScriptureViewerChromeRequest.hide, host.chrome.first())
-        compose.waitUntil(5000) { host.scrolls.isNotEmpty() && host.controller.currentVerse > 1 }
+        compose.waitUntil(10_000) { host.scrolls.isNotEmpty() && host.controller.currentVerse > 1 }
+        // The fling goes on after the finger lifts: compare once the text has stopped, or the verse read here and the one a host view
+        // shows a moment later can differ (8 and 10 on a slower emulator).
+        waitForRest(view)
         onMain {
             assertEquals(view.verseAtTop(), host.controller.currentVerse)
             assertEquals(host.scrolls.last().second, host.controller.currentVerse)
@@ -488,7 +491,7 @@ class ScriptureViewerTests {
         // Up again brings the bars back.
         Thread.sleep(400)
         node.performTouchInput { swipe(Offset(centerX, height * 0.3f), Offset(centerX, height * 0.6f), 300) }
-        compose.waitUntil(5000) { host.chrome.last() == ScriptureViewerChromeRequest.show }
+        compose.waitUntil(10_000) { host.chrome.last() == ScriptureViewerChromeRequest.show }
 
         // A tap on the text sends them away when the host allows it, and the next brings them back. (On a word: a word with
         // lexical data is reported as a tap and still counts as plain text.)
@@ -498,11 +501,11 @@ class ScriptureViewerTests {
         host.controller.scroll(toVerse = 1)
         val onWord = pointOfCharacter(view, psalm.text.indexOf("undefiled") + 4)
         node.performTouchInput { click(onWord) }
-        compose.waitUntil(3000) { host.chrome.size == requests + 1 }
+        compose.waitUntil(10_000) { host.chrome.size == requests + 1 }
         assertEquals(ScriptureViewerChromeRequest.hide, host.chrome.last())
         Thread.sleep(400)
         node.performTouchInput { click(onWord) }
-        compose.waitUntil(3000) { host.chrome.size == requests + 2 }
+        compose.waitUntil(10_000) { host.chrome.size == requests + 2 }
         assertEquals(ScriptureViewerChromeRequest.show, host.chrome.last())
         assertEquals(TapKind.word, host.taps.last().kind)
     }
@@ -516,7 +519,7 @@ class ScriptureViewerTests {
         assertFalse(host.controller.isAtEnd)
         val node = compose.onNodeWithTag("viewer")
         node.performTouchInput { swipe(Offset(centerX, height * 0.7f), Offset(centerX, height * 0.2f), 200) }
-        compose.waitUntil(5000) { host.ends == 1 }
+        compose.waitUntil(10_000) { host.ends == 1 }
         assertTrue(host.controller.isAtEnd)
         node.performTouchInput { swipe(Offset(centerX, height * 0.4f), Offset(centerX, height * 0.6f), 200) }
         node.performTouchInput { swipe(Offset(centerX, height * 0.7f), Offset(centerX, height * 0.2f), 200) }
@@ -532,21 +535,21 @@ class ScriptureViewerTests {
         val host = showPsalm { configuration = ScriptureViewerConfiguration(pullChangesChapter = true) }
         val node = compose.onNodeWithTag("viewer")
         node.performTouchInput { swipe(Offset(width * 0.8f, centerY), Offset(width * 0.2f, centerY + 10f), 120) }
-        compose.waitUntil(3000) { host.gestures.contains(ScriptureViewerGesture.swipeLeft) }
+        compose.waitUntil(10_000) { host.gestures.contains(ScriptureViewerGesture.swipeLeft) }
         node.performTouchInput { swipe(Offset(width * 0.2f, centerY), Offset(width * 0.8f, centerY - 10f), 120) }
-        compose.waitUntil(3000) { host.gestures.contains(ScriptureViewerGesture.swipeRight) }
+        compose.waitUntil(10_000) { host.gestures.contains(ScriptureViewerGesture.swipeRight) }
         assertTrue(host.pulls.isEmpty())
 
         // At the top, a drag on down past it asks for the previous chapter.
         node.performTouchInput { swipe(Offset(centerX, height * 0.2f), Offset(centerX, height * 0.8f), 400) }
-        compose.waitUntil(3000) { host.pulls.isNotEmpty() }
+        compose.waitUntil(10_000) { host.pulls.isNotEmpty() }
         assertEquals(listOf(ScriptureViewerPull.previousChapter), host.pulls)
 
         // With the pull off and the drag's end wanted (Automatic Fullscreen), letting go is reported.
         host.configuration = ScriptureViewerConfiguration(reportsDragEnd = true)
         compose.waitForIdle()
         node.performTouchInput { swipe(Offset(centerX, height * 0.6f), Offset(centerX, height * 0.4f), 300) }
-        compose.waitUntil(3000) { host.gestures.contains(ScriptureViewerGesture.dragEnded) }
+        compose.waitUntil(10_000) { host.gestures.contains(ScriptureViewerGesture.dragEnded) }
         assertEquals(1, host.pulls.size)
 
         // The three-finger drag's rule: once for each drag, from 100 dp.
@@ -584,7 +587,7 @@ class ScriptureViewerTests {
             assertTrue(view.height < compose.activity.window.decorView.height / 4)
         }
         // Text that fits has been read to its end as soon as it shows.
-        compose.waitUntil(3000) { host.ends == 1 }
+        compose.waitUntil(10_000) { host.ends == 1 }
     }
 
     // MARK: Accessibility

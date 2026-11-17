@@ -31,7 +31,7 @@ The Kotlin core must exist first, and again after any change to the Swift core:
 cd .. && swift build                                     # or: swift build --target ScriptureTextSource (all this project needs)
 ```
 
-Then, with `JAVA_HOME` (a JDK 17 or later, for example Android Studio's `jbr`) and the Android SDK (`ANDROID_HOME`, or `sdk.dir` in
+Then, with `JAVA_HOME` (a JDK 21 or later, for example Android Studio's `jbr`; the Kotlin tests in `../Transpile` need 21) and the Android SDK (`ANDROID_HOME`, or `sdk.dir` in
 `local.properties`):
 
 ```
