@@ -38,6 +38,7 @@ import androidx.compose.ui.test.swipe
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.By
+import androidx.test.uiautomator.StaleObjectException
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.Until
 import org.junit.Assert.assertEquals
@@ -180,6 +181,44 @@ class ScriptureViewerTests {
             shell("am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS")
             Thread.sleep(500)
         }
+    }
+
+    /**
+     * An item of the selection menu: in its toolbar, or under its "More options" when the toolbar is too narrow for every item. Even
+     * the host's items, which ask always to show, go there when the system's smart selection adds its own (Define, Translate).
+     */
+    private fun menuItem(device: UiDevice, title: String, click: Boolean = false): Boolean {
+        // The toolbar is built again when smart selection's item arrives, a moment after the menu shows: a button found just before
+        // is then gone (stale), and the search goes on. The overflow is opened only after the toolbar has had a while to settle
+        // without the item, and closed again if the item is not in it either (the toolbar may have changed meanwhile).
+        val end = SystemClock.uptimeMillis() + 20_000
+        var lastChange = SystemClock.uptimeMillis()
+        while (SystemClock.uptimeMillis() < end) {
+            try {
+                device.findObject(By.text(title))?.let { item ->
+                    if (click) item.click()
+                    return true
+                }
+                val now = SystemClock.uptimeMillis()
+                if (now - lastChange >= 2000) {
+                    (device.findObject(By.desc("Close overflow")) ?: device.findObject(By.desc("More options")))?.let {
+                        it.click()
+                        lastChange = now
+                    }
+                }
+            } catch (_: StaleObjectException) {
+            }
+            Thread.sleep(200)
+        }
+        return false
+    }
+
+    /** The texts and descriptions on screen outside the viewer's own text, for a failure message about a menu. */
+    private fun labelsOnScreen(device: UiDevice): String {
+        val any = java.util.regex.Pattern.compile("(?s).{1,40}")
+        val texts = device.findObjects(By.text(any)).mapNotNull { it.text }
+        val descriptions = device.findObjects(By.desc(any)).mapNotNull { it.contentDescription?.let { d -> "[$d]" } }
+        return (texts + descriptions).distinct().joinToString(", ")
     }
 
     /** Waits until a fling has run out: the text has stopped moving. */
@@ -476,13 +515,12 @@ class ScriptureViewerTests {
         // No tap and no plain tap came of it.
         assertTrue(host.taps.isEmpty())
 
-        val item = device.wait(Until.findObject(By.text("Add Bookmark")), 5000)
-        assertNotNull("the host's item in the selection menu", item)
-        assertNotNull("the system's Copy beside it", device.findObject(By.text("Copy")))
-        item.click()
+        if (!menuItem(device, "Add Bookmark", click = true)) fail("the host's item is not in the selection menu; on screen: ${labelsOnScreen(device)}")
         compose.waitUntil(10_000) { host.menu.isNotEmpty() }
         assertEquals("bookmark", host.menu.last().first)
         assertEquals(1..1, host.menu.last().second.verses)
+        // The system's Copy is in the same menu (the host's item does not close it).
+        if (!menuItem(device, "Copy")) fail("the system's Copy is not in the selection menu; on screen: ${labelsOnScreen(device)}")
 
         // Share hands the host the text as copied.
         onMain { assertTrue(view.textView.onTextContextMenuItem(android.R.id.shareText)) }
