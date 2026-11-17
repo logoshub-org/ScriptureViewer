@@ -1,0 +1,2680 @@
+# Original books=95 mappings=8 excluded=0
+B Genesis | Gen old 31,25,24,26,32,22,24,22,29,32,32,20,18,24,21,16,27,33,38,18,34,24,20,67,34,35,46,22,35,43,54,33,20,31,29,43,36,30,23,23,57,38,34,34,28,34,31,22,33,26
+B Exodus | Exod old 22,25,22,31,23,30,29,28,35,29,10,51,22,31,27,36,16,27,25,26,37,30,33,18,40,37,21,43,46,38,18,35,23,35,35,38,29,31,43,38
+B Leviticus | Lev old 17,16,17,35,26,23,38,36,24,20,47,8,59,57,33,34,16,30,37,27,24,33,44,23,55,46,34
+B Numbers | Num old 54,34,51,49,31,27,89,26,23,36,35,16,33,45,41,35,28,32,22,29,35,41,30,25,19,65,23,31,39,17,54,42,56,29,34,13
+B Deuteronomy | Deut old 46,37,29,49,33,25,26,20,29,22,32,31,19,29,23,22,20,22,21,20,23,29,26,22,19,19,26,69,28,20,30,52,29,12
+B Joshua | Josh old 18,24,17,24,15,27,26,35,27,43,23,24,33,15,63,10,18,28,51,9,45,34,16,33
+B Judges | Judg old 36,23,31,24,31,40,25,35,57,18,40,15,25,20,20,31,13,31,30,48,25
+B Ruth | Ruth old 22,23,18,22
+B I Samuel | 1Sam old 28,36,21,22,12,21,17,22,27,27,15,25,23,52,35,23,58,30,24,42,16,23,28,23,44,25,12,25,11,31,13
+B II Samuel | 2Sam old 27,32,39,12,25,23,29,18,13,19,27,31,39,33,37,23,29,32,44,26,22,51,39,25
+B I Kings | 1Kgs old 53,46,28,20,32,38,51,66,28,29,43,33,34,31,34,34,24,46,21,43,29,54
+B II Kings | 2Kgs old 18,25,27,44,27,33,20,29,37,36,20,22,25,29,38,20,41,37,37,21,26,20,37,20,30
+B I Chronicles | 1Chr old 54,55,24,43,41,66,40,40,44,14,47,41,14,17,29,43,27,17,19,8,30,19,32,31,31,32,34,21,30
+B II Chronicles | 2Chr old 18,17,17,22,14,42,22,18,31,19,23,16,23,14,19,14,19,34,11,37,20,12,21,27,28,23,9,27,36,27,21,33,25,33,27,23
+B Ezra | Ezra old 11,70,13,24,17,22,28,36,15,44
+B Nehemiah | Neh old 11,20,38,17,19,19,72,18,37,40,36,47,31
+B Esther | Esth old 22,23,15,17,14,14,10,17,32,3
+B Job | Job old 22,13,26,21,27,30,21,22,35,22,20,25,28,22,35,22,16,21,29,29,34,30,17,25,6,14,23,28,25,31,40,22,33,37,16,33,24,41,30,32,26,17
+B Psalms | Ps old 6,12,9,9,13,11,18,10,21,18,7,9,6,7,5,11,15,51,15,10,14,32,6,10,22,12,14,9,11,13,25,11,22,23,28,13,40,23,14,18,14,12,5,27,18,12,10,15,21,23,21,11,7,9,24,14,12,12,18,14,9,13,12,11,14,20,8,36,37,6,24,20,28,23,11,13,21,72,13,20,17,8,19,13,14,17,7,19,53,17,16,16,5,23,11,13,12,9,9,5,8,29,22,35,45,48,43,14,31,7,10,10,9,8,18,19,2,29,176,7,8,9,4,8,5,6,5,6,8,8,3,18,3,3,21,26,9,8,24,14,10,8,12,15,21,10,20,14,9,6
+B Proverbs | Prov old 33,22,35,27,23,35,27,36,18,32,31,28,25,35,33,33,28,24,29,30,31,29,35,34,28,28,27,28,27,33,31
+B Ecclesiastes | Eccl old 18,26,22,17,19,12,29,17,18,20,10,14
+B Song of Solomon | Song old 17,17,11,16,16,12,14,14
+B Isaiah | Isa old 31,22,26,6,30,13,25,23,20,34,16,6,22,32,9,14,14,7,25,6,17,25,18,23,12,21,13,29,24,33,9,20,24,17,10,22,38,22,8,31,29,25,28,28,25,13,15,22,26,11,23,15,12,17,13,12,21,14,21,22,11,12,19,11,25,24
+B Jeremiah | Jer old 19,37,25,31,31,30,34,23,25,25,23,17,27,22,21,21,27,23,15,18,14,30,40,10,38,24,22,17,32,24,40,44,26,22,19,32,21,28,18,16,18,22,13,30,5,28,7,47,39,46,64,34
+B Lamentations | Lam old 22,22,66,22,22
+B Ezekiel | Ezek old 28,10,27,17,17,14,27,18,11,22,25,28,23,23,8,63,24,32,14,44,37,31,49,27,17,21,36,26,21,26,18,32,33,31,15,38,28,23,29,49,26,20,27,31,25,24,23,35
+B Daniel | Dan old 21,49,33,34,30,29,28,27,27,21,45,13
+B Hosea | Hos old 9,25,5,19,15,11,16,14,17,15,11,15,15,10
+B Joel | Joel old 20,27,5,21
+B Amos | Amos old 15,16,15,13,27,14,17,14,15
+B Obadiah | Obad old 21
+B Jonah | Jonah old 16,11,10,11
+B Micah | Mic old 16,13,12,14,14,16,20
+B Nahum | Nah old 14,14,19
+B Habakkuk | Hab old 17,20,19
+B Zephaniah | Zeph old 18,15,20
+B Haggai | Hag old 15,23
+B Zechariah | Zech old 17,17,10,14,11,15,14,23,17,12,17,14,9,21
+B Malachi | Mal old 14,17,24
+B Matthew | Matt new 25,23,17,25,48,34,29,34,38,42,30,50,58,36,39,28,27,35,30,34,46,46,39,51,46,75,66,20
+B Mark | Mark new 45,28,35,41,43,56,37,38,50,52,33,44,37,72,47,20
+B Luke | Luke new 80,52,38,44,39,49,50,56,62,42,54,59,35,35,32,31,37,43,48,47,38,71,56,53
+B John | John new 51,25,36,54,47,71,53,59,41,42,57,50,38,31,27,33,26,40,42,31,25
+B Acts | Acts new 26,47,26,37,42,15,60,40,43,48,30,25,52,28,41,40,34,28,40,38,40,30,35,27,27,32,44,31
+B Romans | Rom new 32,29,31,25,21,23,25,39,33,21,36,21,14,23,33,27
+B I Corinthians | 1Cor new 31,16,23,21,13,20,40,13,27,33,34,31,13,40,58,24
+B II Corinthians | 2Cor new 24,17,18,18,21,18,16,24,15,18,33,21,13
+B Galatians | Gal new 24,21,29,31,26,18
+B Ephesians | Eph new 23,22,21,32,33,24
+B Philippians | Phil new 30,30,21,23
+B Colossians | Col new 29,23,25,18
+B I Thessalonians | 1Thess new 10,20,13,18,28
+B II Thessalonians | 2Thess new 12,17,18
+B I Timothy | 1Tim new 20,15,16,16,25,21
+B II Timothy | 2Tim new 18,26,17,22
+B Titus | Titus new 16,15,15
+B Philemon | Phlm new 25
+B Hebrews | Heb new 14,18,19,16,14,20,28,13,28,39,40,29,25
+B James | Jas new 27,26,18,17,20
+B I Peter | 1Pet new 25,25,22,19,14
+B II Peter | 2Pet new 21,22,18
+B I John | 1John new 10,29,24,21,21
+B II John | 2John new 13
+B III John | 3John new 15
+B Jude | Jude new 25
+B Revelation of John | Rev new 20,29,22,11,14,17,17,13,21,11,19,18,18,20,8,21,18,24,21,15,27,21
+B Tobit | Tob old 22,14,17,21,23,19,17,21,6,14,19,22,18,15
+B Judith | Jdt old 16,28,10,15,24,21,32,36,14,23,23,20,20,19,14,25
+B Esther (Greek) | EsthGr old 39,23,22,47,28,14,10,39,32,13
+B Wisdom | Wis old 16,24,19,20,23,25,30,21,18,21,26,27,19,31,19,29,20,25,22
+B Sirach | Sir old 30,18,31,31,15,37,36,19,18,31,34,18,26,27,20,30,32,33,30,31,28,27,27,34,26,29,30,26,28,25,31,24,33,26,24,27,31,34,35,30,27,25,33,23,26,20,25,25,16,29,30
+B Baruch | Bar old 22,35,38,37,9
+B Epistle of Jeremiah | EpJer old 72
+B Prayer of Azariah | PrAzar old 67
+B Susanna | Sus old 64
+B Bel and the Dragon | Bel old 42
+B I Maccabees | 1Macc old 64,70,60,61,68,63,50,32,73,89,74,53,53,49,41,24
+B II Maccabees | 2Macc old 36,32,40,50,27,31,42,36,29,38,38,45,26,46,39
+B III Maccabees | 3Macc old 29,33,30,21,51,41,23
+B IV Maccabees | 4Macc old 35,24,21,26,38,35,23,29,32,21,27,19,27,20,32,25,24,24
+B I Esdras | 1Esd old 55,26,24,63,71,33,15,92,55
+B II Esdras | 2Esd old 40,48,36,52,56,59,140,63,47,59,46,51,58,48,63,78
+B Prayer of Manasses | PrMan old 15
+B Additional Psalm | AddPs old 7
+B Odes | Odes old 19,43,10,19,12,8,20,37,22,9,11,15,4,46
+B Psalms of Solomon | PssSol old 8,37,12,25,19,6,10,34,11,8,9,6,12,10,13,15,46,12
+B Joshua A | JoshA old 18,24,17,24,15,27,26,35,27,43,23,24,33,15,63,10,18,28,51,9,45,34,16,33
+B Judges B | JudgB old 36,23,31,24,31,40,25,35,57,18,40,15,25,20,20,31,13,31,30,48,25
+B Tobit S | TobS old 22,14,17,21,23,19,17,21,6,14,19,22,18,15
+B Susanna (Theodotion) | SusTh old 64
+B Daniel (Theodotion) | DanTh old 21,49,97,37,30,29,28,27,27,21,45,13
+B Bel (Theodotion) | BelTh old 42
+B Apocalypse of Ezra | 4Ezra old 36,52,56,59,139,63,47,60,46,51,58,48
+B Jubilees | Jub old 26,17,19,24,36,34,37,40,27,48,39,56,34,55,20,28,30,31,59,66,30,38,59,30,50,48,37,38,27,29,31,24,30,20
+B I Enoch | 1En old 28,42,30,88,40,42,39,46,42,16,19,40,34,35,45,41,69,42,29,53,57,14,26,16,30,37,21,34,28,23,29,82,59,49,36,30,34,36,24,40,22,16
+M PrAzar.1.1 > DanGr.3.24 x29 : DanGr.3.24 < PrAzar.1.1 ~ PrAzar.1.1
+M PrAzar.1.30 > DanGr.3.52 x2 : DanGr.3.52 < PrAzar.1.30 ~ PrAzar.1.30
+M PrAzar.1.33 > DanGr.3.54 x1 : DanGr.3.54 < PrAzar.1.33 ~ PrAzar.1.33
+M PrAzar.1.32 > DanGr.3.55 x1 : DanGr.3.55 < PrAzar.1.32 ~ PrAzar.1.32
+M PrAzar.1.34 > DanGr.3.56 x2 : DanGr.3.56 < PrAzar.1.34 ~ PrAzar.1.34
+M PrAzar.1.37 > DanGr.3.58 x1 : DanGr.3.58 < PrAzar.1.37 ~ PrAzar.1.37
+M PrAzar.1.36 > DanGr.3.59 x1 : DanGr.3.59 < PrAzar.1.36 ~ PrAzar.1.36
+M PrAzar.1.38 > DanGr.3.60 x31 : DanGr.3.60 < PrAzar.1.38 ~ PrAzar.1.38
+# Septuagint books=89 mappings=278 excluded=304
+B Genesis | Gen old 31,25,24,26,32,22,24,22,29,32,32,20,18,24,21,16,27,33,38,18,34,24,20,67,34,35,46,22,35,43,54,33,20,31,29,43,36,30,23,23,57,38,34,34,28,34,31,22,33,26
+B Exodus | Exod old 22,25,22,31,23,30,29,28,35,29,10,51,22,31,27,36,16,27,25,26,37,30,33,18,40,37,21,43,46,38,18,35,23,35,35,38,21,27,23,38
+B Leviticus | Lev old 17,16,17,35,26,23,38,36,24,20,47,8,59,57,33,34,16,30,37,27,24,33,44,23,55,46,34
+B Numbers | Num old 54,34,51,49,31,26,89,26,23,36,35,16,33,45,41,35,28,32,22,29,35,41,30,25,18,65,23,31,39,17,54,42,56,29,34,13
+B Deuteronomy | Deut old 46,37,29,49,33,25,26,20,29,22,32,31,19,29,23,22,20,22,21,20,23,29,26,22,19,19,26,69,28,20,30,52,29,12
+B Joshua | Josh old 18,24,17,24,15,27,26,29,27,42,23,24,32,15,63,10,18,28,51,9,45,34,16,33
+B Judges | Judg old 36,23,31,24,31,40,25,35,57,18,40,15,25,20,20,31,13,31,30,48,25
+B Ruth | Ruth old 22,23,18,22
+B I Samuel | 1Sam old 28,36,21,22,12,21,17,22,27,27,15,25,23,52,35,23,54,29,24,42,16,23,28,23,44,25,12,25,11,31,13
+B II Samuel | 2Sam old 27,32,39,12,25,23,29,18,13,19,27,31,39,33,37,23,29,32,44,26,22,51,39,25
+B I Kings | 1Kgs old 53,46,28,19,32,36,50,66,28,29,43,33,34,31,34,34,24,46,21,29,43,54
+B II Kings | 2Kgs old 18,25,27,44,27,33,20,29,37,36,20,22,25,29,38,20,41,37,37,21,26,20,37,20,30
+B I Chronicles | 1Chr old 54,55,24,43,41,66,40,40,44,14,47,41,14,17,29,43,27,17,19,8,30,19,32,31,31,32,34,21,30
+B II Chronicles | 2Chr old 18,17,17,22,14,42,22,18,31,19,23,16,23,14,19,14,19,34,11,37,20,12,21,27,28,23,9,27,36,27,21,33,25,33,27,23
+B Ezra | Ezra old 11,70,13,24,17,22,28,36,15,44,11,20,37,23,19,19,73,18,38,40,36,47,31
+B Job | Job old 22,13,26,21,27,30,21,22,35,22,20,25,28,22,35,22,16,21,29,29,34,30,17,25,6,14,23,28,25,31,40,22,33,37,16,33,24,41,30,32,26,17
+B Psalms | Ps old 6,12,9,9,13,11,18,10,39,7,9,6,7,5,11,15,51,15,10,14,32,6,10,22,12,14,9,11,13,25,11,22,23,28,13,40,23,14,18,14,12,5,27,18,12,10,15,21,23,21,11,7,9,24,14,12,12,18,14,9,13,12,11,14,20,8,36,37,6,24,20,28,23,11,13,21,72,13,20,17,8,19,13,14,17,7,19,53,17,16,16,5,23,11,13,12,9,9,5,8,29,22,35,45,48,43,14,31,7,10,10,9,26,9,10,2,29,176,7,8,9,4,8,5,6,5,6,8,8,3,18,3,3,21,26,9,8,24,14,10,8,12,15,21,10,11,9,14,9,6,7
+B Proverbs | Prov old 33,22,35,27,23,35,27,36,18,32,31,28,25,35,33,33,28,22,29,30,31,29,35,34,28,28,27,28,27,33,31
+B Ecclesiastes | Eccl old 18,26,22,17,19,12,29,17,18,20,10,14
+B Song of Solomon | Song old 17,17,11,16,16,12,14,14
+B Isaiah | Isa old 31,21,26,6,30,13,25,23,20,34,16,6,22,32,9,14,14,7,25,6,17,25,18,23,12,21,13,29,24,33,9,20,24,17,10,22,38,22,8,31,29,25,28,28,25,13,15,22,26,11,23,15,12,17,13,11,21,14,21,22,11,12,19,11,25,24
+B Jeremiah | Jer old 19,37,25,31,31,30,34,23,25,25,23,17,27,22,21,21,27,23,15,18,14,30,40,10,20,28,46,64,7,33,44,38,24,22,17,32,24,40,44,13,22,19,32,21,28,18,16,18,22,13,35,34
+B Lamentations | Lam old 22,22,66,22,22
+B Ezekiel | Ezek old 28,10,27,17,17,14,27,18,11,22,25,28,23,23,8,63,24,32,14,44,37,31,49,27,17,21,36,26,21,26,18,32,33,31,15,38,28,23,29,49,26,20,27,31,25,24,23,35
+B Hosea | Hos old 9,25,5,19,15,11,16,14,17,15,11,15,15,10
+B Joel | Joel old 20,27,5,21
+B Amos | Amos old 15,16,15,13,27,14,17,14,15
+B Obadiah | Obad old 21
+B Jonah | Jonah old 16,11,10,11
+B Micah | Mic old 16,13,12,14,14,16,20
+B Nahum | Nah old 14,14,19
+B Habakkuk | Hab old 17,20,19
+B Zephaniah | Zeph old 18,15,20
+B Haggai | Hag old 15,23
+B Zechariah | Zech old 17,17,10,14,11,15,14,23,17,12,17,14,9,21
+B Malachi | Mal old 14,17,24
+B Matthew | Matt new 25,23,17,25,48,34,29,34,38,42,30,50,58,36,39,28,27,35,30,34,46,46,39,51,46,75,66,20
+B Mark | Mark new 45,28,35,41,43,56,37,38,50,52,33,44,37,72,47,20
+B Luke | Luke new 80,52,38,44,39,49,50,56,62,42,54,59,35,35,32,31,37,43,48,47,38,71,56,53
+B John | John new 51,25,36,54,47,71,53,59,41,42,57,50,38,31,27,33,26,40,42,31,25
+B Acts | Acts new 26,47,26,37,42,15,60,40,43,48,30,25,52,28,41,40,34,28,40,38,40,30,35,27,27,32,44,31
+B Romans | Rom new 32,29,31,25,21,23,25,39,33,21,36,21,14,23,33,27
+B I Corinthians | 1Cor new 31,16,23,21,13,20,40,13,27,33,34,31,13,40,58,24
+B II Corinthians | 2Cor new 24,17,18,18,21,18,16,24,15,18,33,21,13
+B Galatians | Gal new 24,21,29,31,26,18
+B Ephesians | Eph new 23,22,21,32,33,24
+B Philippians | Phil new 30,30,21,23
+B Colossians | Col new 29,23,25,18
+B I Thessalonians | 1Thess new 10,20,13,18,28
+B II Thessalonians | 2Thess new 12,17,18
+B I Timothy | 1Tim new 20,15,16,16,25,21
+B II Timothy | 2Tim new 18,26,17,22
+B Titus | Titus new 16,15,15
+B Philemon | Phlm new 25
+B Hebrews | Heb new 14,18,19,16,14,20,28,13,28,39,40,29,25
+B James | Jas new 27,26,18,17,20
+B I Peter | 1Pet new 25,25,22,19,14
+B II Peter | 2Pet new 21,22,18
+B I John | 1John new 10,29,24,21,21
+B II John | 2John new 13
+B III John | 3John new 15
+B Jude | Jude new 25
+B Revelation of John | Rev new 20,29,22,11,14,17,17,13,21,11,19,18,18,20,8,21,18,24,21,15,27,21
+B Tobit | Tob old 22,14,17,21,23,19,17,21,6,14,19,22,18,15
+B Judith | Jdt old 16,28,10,15,24,21,32,36,14,23,23,20,20,19,14,25
+B Esther (Greek) | EsthGr old 22,23,15,17,14,14,10,17,32,3
+B Wisdom | Wis old 16,24,19,20,23,25,30,21,18,21,26,27,19,31,19,29,20,25,22
+B Sirach | Sir old 30,18,31,31,15,37,36,19,18,31,34,18,26,27,20,30,32,33,30,31,28,27,27,34,26,29,30,26,28,25,31,24,33,26,24,27,31,34,35,30,27,25,33,23,26,20,25,25,16,29,30
+B Baruch | Bar old 22,35,38,37,9
+B Epistle of Jeremiah | EpJer old 72
+B Susanna | Sus old 64
+B Bel and the Dragon | Bel old 42
+B I Maccabees | 1Macc old 64,70,60,61,68,63,50,32,73,89,74,53,53,49,41,24
+B II Maccabees | 2Macc old 36,32,40,50,27,31,42,36,29,38,38,45,26,46,39
+B III Maccabees | 3Macc old 29,33,30,21,51,41,23
+B IV Maccabees | 4Macc old 35,24,21,26,38,35,23,29,32,21,27,19,27,20,32,25,24,24
+B I Esdras | 1Esd old 55,26,24,63,71,33,15,92,55
+B II Esdras | 2Esd old 40,48,36,52,56,59,140,63,47,59,46,51,58,48,63,78
+B Prayer of Manasses | PrMan old 15
+B Additional Psalm | AddPs old 7
+B Odes | Odes old 19,43,10,19,12,8,20,37,22,9,11,15,4,46
+B Psalms of Solomon | PssSol old 8,37,12,25,19,6,10,34,11,8,9,6,12,10,13,15,46,12
+B Joshua A | JoshA old 18,24,17,24,15,27,26,35,27,43,23,24,33,15,63,10,18,28,45,9,45,34,16,33
+B Judges B | JudgB old 36,23,31,24,31,40,25,35,57,18,40,15,25,20,20,31,13,31,30,48,25
+B Tobit S | TobS old 22,14,17,21,23,19,17,21,6,14,19,22,18,15
+B Susanna (Theodotion) | SusTh old 64
+B Daniel (Theodotion) | DanTh old 21,49,97,37,30,29,28,27,27,21,45,13
+B Bel (Theodotion) | BelTh old 42
+B Daniel (Greek) | DanGr old 21,49,97,37,30,29,28,27,27,21,45,13
+M DanGr.1.1 > Dan.1.1 x21 : Dan.1.1 < DanGr.1.1 ~ Dan.1.1
+M DanGr.2.1 > Dan.2.1 x49 : Dan.2.1 < DanGr.2.1 ~ Dan.2.1
+M DanGr.3.1 > Dan.3.1 x23 : Dan.3.1 < DanGr.3.1 ~ Dan.3.1
+M DanGr.3.91 > Dan.3.24 x7 : Dan.3.24 < DanGr.3.91 ~ Dan.3.24
+M DanGr.4.1 > Dan.3.31 x3 : Dan.3.31 < DanGr.4.1 ~ Dan.4.1
+M DanGr.4.4 > Dan.4.1 x34 : Dan.4.1 < DanGr.4.4 ~ Dan.4.4
+M DanGr.4.1 > Dan.4.4 x2 : Dan.3.31 < DanGr.4.7 ~ Dan.4.1
+M DanGr.5.1 > Dan.5.1 x30 : Dan.5.1 < DanGr.5.1 ~ Dan.5.1
+M DanGr.6.1 > Dan.6.1 x29 : Dan.6.1 < DanGr.6.1 ~ Dan.5.31
+M DanGr.7.1 > Dan.7.1 x28 : Dan.7.1 < DanGr.7.1 ~ Dan.7.1
+M DanGr.8.1 > Dan.8.1 x27 : Dan.8.1 < DanGr.8.1 ~ Dan.8.1
+M DanGr.9.1 > Dan.9.1 x27 : Dan.9.1 < DanGr.9.1 ~ Dan.9.1
+M DanGr.10.1 > Dan.10.1 x21 : Dan.10.1 < DanGr.10.1 ~ Dan.10.1
+M DanGr.11.1 > Dan.11.1 x45 : Dan.11.1 < DanGr.11.1 ~ Dan.11.1
+M DanGr.12.1 > Dan.12.1 x13 : Dan.12.1 < DanGr.12.1 ~ Dan.12.1
+M Exod.20.13 > Exod.20.14 x1 : Exod.20.14 < Exod.20.13 ~ Exod.20.14
+M Exod.20.14 > Exod.20.15 x1 : Exod.20.15 < Exod.20.14 ~ Exod.20.15
+M Exod.20.15 > Exod.20.13 x1 : Exod.20.13 < Exod.20.15 ~ Exod.20.13
+M Exod.21.16 > Exod.21.17 x1 : Exod.21.17 < Exod.21.16 ~ Exod.21.17
+M Exod.21.17 > Exod.21.16 x1 : Exod.21.16 < Exod.21.17 ~ Exod.21.16
+M Exod.36.9 > Exod.39.2 x1 : Exod.39.2 < Exod.36.9 ~ Exod.39.2
+M Exod.36.10 > Exod.39.3 x1 : Exod.39.3 < Exod.36.10 ~ Exod.39.3
+M Exod.36.11 > Exod.39.4 x1 : Exod.39.4 < Exod.36.11 ~ Exod.39.4
+M Exod.36.12 > Exod.39.5 x1 : Exod.39.5 < Exod.36.12 ~ Exod.39.5
+M Exod.36.13 > Exod.39.6 x1 : Exod.39.6 < Exod.36.13 ~ Exod.39.6
+M Exod.36.14 > Exod.39.7 x1 : Exod.39.7 < Exod.36.14 ~ Exod.39.7
+M Exod.36.15 > Exod.39.8 x1 : Exod.39.8 < Exod.36.15 ~ Exod.39.8
+M Exod.36.16 > Exod.39.9 x1 : Exod.39.9 < Exod.36.16 ~ Exod.39.9
+M Exod.36.17 > Exod.39.10 x1 : Exod.39.10 < Exod.36.17 ~ Exod.39.10
+M Exod.36.20 > Exod.39.13 x1 : Exod.39.13 < Exod.36.20 ~ Exod.39.13
+M Exod.36.21 > Exod.39.14 x1 : Exod.39.14 < Exod.36.21 ~ Exod.39.14
+M Exod.36.22 > Exod.39.15 x1 : Exod.39.15 < Exod.36.22 ~ Exod.39.15
+M Exod.36.23 > Exod.39.16 x1 : Exod.39.16 < Exod.36.23 ~ Exod.39.16
+M Exod.36.25 > Exod.39.17 x1 : Exod.39.17 < Exod.36.25 ~ Exod.39.17
+M Exod.36.26 > Exod.39.18 x1 : Exod.39.18 < Exod.36.26 ~ Exod.39.18
+M Exod.36.27 > Exod.39.19 x1 : Exod.39.19 < Exod.36.27 ~ Exod.39.19
+M Exod.36.28 > Exod.39.20 x1 : Exod.39.20 < Exod.36.28 ~ Exod.39.20
+M Exod.36.29 > Exod.39.21 x1 : Exod.39.21 < Exod.36.29 ~ Exod.39.21
+M Exod.36.30 > Exod.39.22 x1 : Exod.39.22 < Exod.36.30 ~ Exod.39.22
+M Exod.36.31 > Exod.39.23 x1 : Exod.39.23 < Exod.36.31 ~ Exod.39.23
+M Exod.36.32 > Exod.39.24 x1 : Exod.39.24 < Exod.36.32 ~ Exod.39.24
+M Exod.36.33 > Exod.39.25 x1 : Exod.39.25 < Exod.36.33 ~ Exod.39.25
+M Exod.36.34 > Exod.39.26 x1 : Exod.39.26 < Exod.36.34 ~ Exod.39.26
+M Exod.36.35 > Exod.39.27 x1 : Exod.39.27 < Exod.36.35 ~ Exod.39.27
+M Exod.36.36 > Exod.39.28 x1 : Exod.39.28 < Exod.36.36 ~ Exod.39.28
+M Exod.36.37 > Exod.39.29 x1 : Exod.39.29 < Exod.36.37 ~ Exod.39.29
+M Exod.36.38 > Exod.39.30 x1 : Exod.39.30 < Exod.36.38 ~ Exod.39.30
+M Deut.5.17 > Deut.5.18 x1 : Deut.5.18 < Deut.5.17 ~ Deut.5.18
+M Deut.5.18 > Deut.5.17 x1 : Deut.5.17 < Deut.5.18 ~ Deut.5.17
+M EsthGr.1.1 > Esth.1.1 x22 : Esth.1.1 < EsthGr.1.1 ~ Esth.1.1
+M EsthGr.2.1 > Esth.2.1 x23 : Esth.2.1 < EsthGr.2.1 ~ Esth.2.1
+M EsthGr.3.1 > Esth.3.1 x15 : Esth.3.1 < EsthGr.3.1 ~ Esth.3.1
+M EsthGr.4.1 > Esth.4.1 x17 : Esth.4.1 < EsthGr.4.1 ~ Esth.4.1
+M EsthGr.5.1 > Esth.5.1 x14 : Esth.5.1 < EsthGr.5.1 ~ Esth.5.1
+M EsthGr.6.1 > Esth.6.1 x14 : Esth.6.1 < EsthGr.6.1 ~ Esth.6.1
+M EsthGr.7.1 > Esth.7.1 x10 : Esth.7.1 < EsthGr.7.1 ~ Esth.7.1
+M EsthGr.8.1 > Esth.8.1 x17 : Esth.8.1 < EsthGr.8.1 ~ Esth.8.1
+M EsthGr.9.1 > Esth.9.1 x32 : Esth.9.1 < EsthGr.9.1 ~ Esth.9.1
+M EsthGr.10.1 > Esth.10.1 x3 : Esth.10.1 < EsthGr.10.1 ~ Esth.10.1
+M Ps.9.22 > Ps.10.0 x1 : Ps.10.1 < Ps.9.22 ~ Ps.10.1
+M Ps.9.22 > Ps.10.1 x18 : Ps.10.1 < Ps.9.22 ~ Ps.10.1
+M Ps.10.0 > Ps.11.0 x8 : Ps.11.0 < Ps.10.0 ~ Ps.11.0
+M Ps.11.0 > Ps.12.0 x10 : Ps.12.0 < Ps.11.0 ~ Ps.12.0
+M Ps.12.0 > Ps.13.0 x7 : Ps.13.0 < Ps.12.0 ~ Ps.13.0
+M Ps.13.0 > Ps.14.0 x8 : Ps.14.0 < Ps.13.0 ~ Ps.14.0
+M Ps.14.0 > Ps.15.0 x6 : Ps.15.0 < Ps.14.0 ~ Ps.15.0
+M Ps.15.0 > Ps.16.0 x12 : Ps.16.0 < Ps.15.0 ~ Ps.16.0
+M Ps.16.0 > Ps.17.0 x16 : Ps.17.0 < Ps.16.0 ~ Ps.17.0
+M Ps.17.0 > Ps.18.0 x52 : Ps.18.0 < Ps.17.0 ~ Ps.18.0
+M Ps.18.0 > Ps.19.0 x16 : Ps.19.0 < Ps.18.0 ~ Ps.19.0
+M Ps.19.0 > Ps.20.0 x11 : Ps.20.0 < Ps.19.0 ~ Ps.20.0
+M Ps.20.0 > Ps.21.0 x15 : Ps.21.0 < Ps.20.0 ~ Ps.21.0
+M Ps.21.0 > Ps.22.0 x33 : Ps.22.0 < Ps.21.0 ~ Ps.22.0
+M Ps.22.0 > Ps.23.0 x7 : Ps.23.0 < Ps.22.0 ~ Ps.23.0
+M Ps.23.0 > Ps.24.0 x11 : Ps.24.0 < Ps.23.0 ~ Ps.24.0
+M Ps.24.0 > Ps.25.0 x23 : Ps.25.0 < Ps.24.0 ~ Ps.25.0
+M Ps.25.0 > Ps.26.0 x13 : Ps.26.0 < Ps.25.0 ~ Ps.26.0
+M Ps.26.0 > Ps.27.0 x15 : Ps.27.0 < Ps.26.0 ~ Ps.27.0
+M Ps.27.0 > Ps.28.0 x10 : Ps.28.0 < Ps.27.0 ~ Ps.28.0
+M Ps.28.0 > Ps.29.0 x12 : Ps.29.0 < Ps.28.0 ~ Ps.29.0
+M Ps.29.0 > Ps.30.0 x14 : Ps.30.0 < Ps.29.0 ~ Ps.30.0
+M Ps.30.0 > Ps.31.0 x26 : Ps.31.0 < Ps.30.0 ~ Ps.31.0
+M Ps.31.0 > Ps.32.0 x12 : Ps.32.0 < Ps.31.0 ~ Ps.32.0
+M Ps.32.0 > Ps.33.0 x23 : Ps.33.0 < Ps.32.0 ~ Ps.33.0
+M Ps.33.0 > Ps.34.0 x24 : Ps.34.0 < Ps.33.0 ~ Ps.34.0
+M Ps.34.0 > Ps.35.0 x29 : Ps.35.0 < Ps.34.0 ~ Ps.35.0
+M Ps.35.0 > Ps.36.0 x14 : Ps.36.0 < Ps.35.0 ~ Ps.36.0
+M Ps.36.0 > Ps.37.0 x41 : Ps.37.0 < Ps.36.0 ~ Ps.37.0
+M Ps.37.0 > Ps.38.0 x24 : Ps.38.0 < Ps.37.0 ~ Ps.38.0
+M Ps.38.0 > Ps.39.0 x15 : Ps.39.0 < Ps.38.0 ~ Ps.39.0
+M Ps.39.0 > Ps.40.0 x19 : Ps.40.0 < Ps.39.0 ~ Ps.40.0
+M Ps.40.0 > Ps.41.0 x15 : Ps.41.0 < Ps.40.0 ~ Ps.41.0
+M Ps.41.0 > Ps.42.0 x13 : Ps.42.0 < Ps.41.0 ~ Ps.42.0
+M Ps.42.0 > Ps.43.0 x6 : Ps.43.0 < Ps.42.0 ~ Ps.43.0
+M Ps.43.0 > Ps.44.0 x28 : Ps.44.0 < Ps.43.0 ~ Ps.44.0
+M Ps.44.0 > Ps.45.0 x19 : Ps.45.0 < Ps.44.0 ~ Ps.45.0
+M Ps.45.0 > Ps.46.0 x13 : Ps.46.0 < Ps.45.0 ~ Ps.46.0
+M Ps.46.0 > Ps.47.0 x11 : Ps.47.0 < Ps.46.0 ~ Ps.47.0
+M Ps.47.0 > Ps.48.0 x16 : Ps.48.0 < Ps.47.0 ~ Ps.48.0
+M Ps.48.0 > Ps.49.0 x22 : Ps.49.0 < Ps.48.0 ~ Ps.49.0
+M Ps.49.0 > Ps.50.0 x24 : Ps.50.0 < Ps.49.0 ~ Ps.50.0
+M Ps.50.0 > Ps.51.0 x22 : Ps.51.0 < Ps.50.0 ~ Ps.51.0
+M Ps.51.0 > Ps.52.0 x12 : Ps.52.0 < Ps.51.0 ~ Ps.52.0
+M Ps.52.0 > Ps.53.0 x8 : Ps.53.0 < Ps.52.0 ~ Ps.53.0
+M Ps.53.0 > Ps.54.0 x10 : Ps.54.0 < Ps.53.0 ~ Ps.54.0
+M Ps.54.0 > Ps.55.0 x25 : Ps.55.0 < Ps.54.0 ~ Ps.55.0
+M Ps.55.0 > Ps.56.0 x15 : Ps.56.0 < Ps.55.0 ~ Ps.56.0
+M Ps.56.0 > Ps.57.0 x13 : Ps.57.0 < Ps.56.0 ~ Ps.57.0
+M Ps.57.0 > Ps.58.0 x13 : Ps.58.0 < Ps.57.0 ~ Ps.58.0
+M Ps.58.0 > Ps.59.0 x19 : Ps.59.0 < Ps.58.0 ~ Ps.59.0
+M Ps.59.0 > Ps.60.0 x15 : Ps.60.0 < Ps.59.0 ~ Ps.60.0
+M Ps.60.0 > Ps.61.0 x10 : Ps.61.0 < Ps.60.0 ~ Ps.61.0
+M Ps.61.0 > Ps.62.0 x14 : Ps.62.0 < Ps.61.0 ~ Ps.62.0
+M Ps.62.0 > Ps.63.0 x13 : Ps.63.0 < Ps.62.0 ~ Ps.63.0
+M Ps.63.0 > Ps.64.0 x12 : Ps.64.0 < Ps.63.0 ~ Ps.64.0
+M Ps.64.0 > Ps.65.0 x15 : Ps.65.0 < Ps.64.0 ~ Ps.65.0
+M Ps.65.0 > Ps.66.0 x21 : Ps.66.0 < Ps.65.0 ~ Ps.66.0
+M Ps.66.0 > Ps.67.0 x9 : Ps.67.0 < Ps.66.0 ~ Ps.67.0
+M Ps.67.0 > Ps.68.0 x37 : Ps.68.0 < Ps.67.0 ~ Ps.68.0
+M Ps.68.0 > Ps.69.0 x38 : Ps.69.0 < Ps.68.0 ~ Ps.69.0
+M Ps.69.0 > Ps.70.0 x7 : Ps.70.0 < Ps.69.0 ~ Ps.70.0
+M Ps.70.0 > Ps.71.0 x25 : Ps.71.0 < Ps.70.0 ~ Ps.71.0
+M Ps.71.0 > Ps.72.0 x21 : Ps.72.0 < Ps.71.0 ~ Ps.72.0
+M Ps.72.0 > Ps.73.0 x29 : Ps.73.0 < Ps.72.0 ~ Ps.73.0
+M Ps.73.0 > Ps.74.0 x24 : Ps.74.0 < Ps.73.0 ~ Ps.74.0
+M Ps.74.0 > Ps.75.0 x12 : Ps.75.0 < Ps.74.0 ~ Ps.75.0
+M Ps.75.0 > Ps.76.0 x14 : Ps.76.0 < Ps.75.0 ~ Ps.76.0
+M Ps.76.0 > Ps.77.0 x22 : Ps.77.0 < Ps.76.0 ~ Ps.77.0
+M Ps.77.0 > Ps.78.0 x73 : Ps.78.0 < Ps.77.0 ~ Ps.78.0
+M Ps.78.0 > Ps.79.0 x14 : Ps.79.0 < Ps.78.0 ~ Ps.79.0
+M Ps.79.0 > Ps.80.0 x21 : Ps.80.0 < Ps.79.0 ~ Ps.80.0
+M Ps.80.0 > Ps.81.0 x18 : Ps.81.0 < Ps.80.0 ~ Ps.81.0
+M Ps.81.0 > Ps.82.0 x9 : Ps.82.0 < Ps.81.0 ~ Ps.82.0
+M Ps.82.0 > Ps.83.0 x20 : Ps.83.0 < Ps.82.0 ~ Ps.83.0
+M Ps.83.0 > Ps.84.0 x14 : Ps.84.0 < Ps.83.0 ~ Ps.84.0
+M Ps.84.0 > Ps.85.0 x15 : Ps.85.0 < Ps.84.0 ~ Ps.85.0
+M Ps.85.0 > Ps.86.0 x18 : Ps.86.0 < Ps.85.0 ~ Ps.86.0
+M Ps.86.0 > Ps.87.0 x8 : Ps.87.0 < Ps.86.0 ~ Ps.87.0
+M Ps.87.0 > Ps.88.0 x20 : Ps.88.0 < Ps.87.0 ~ Ps.88.0
+M Ps.88.0 > Ps.89.0 x54 : Ps.89.0 < Ps.88.0 ~ Ps.89.0
+M Ps.89.0 > Ps.90.0 x18 : Ps.90.0 < Ps.89.0 ~ Ps.90.0
+M Ps.90.0 > Ps.91.0 x17 : Ps.91.0 < Ps.90.0 ~ Ps.91.0
+M Ps.91.0 > Ps.92.0 x17 : Ps.92.0 < Ps.91.0 ~ Ps.92.0
+M Ps.92.0 > Ps.93.0 x6 : Ps.93.0 < Ps.92.0 ~ Ps.93.0
+M Ps.93.0 > Ps.94.0 x24 : Ps.94.0 < Ps.93.0 ~ Ps.94.0
+M Ps.94.0 > Ps.95.0 x12 : Ps.95.0 < Ps.94.0 ~ Ps.95.0
+M Ps.95.0 > Ps.96.0 x14 : Ps.96.0 < Ps.95.0 ~ Ps.96.0
+M Ps.96.0 > Ps.97.0 x13 : Ps.97.0 < Ps.96.0 ~ Ps.97.0
+M Ps.97.0 > Ps.98.0 x10 : Ps.98.0 < Ps.97.0 ~ Ps.98.0
+M Ps.98.0 > Ps.99.0 x10 : Ps.99.0 < Ps.98.0 ~ Ps.99.0
+M Ps.99.0 > Ps.100.0 x6 : Ps.100.0 < Ps.99.0 ~ Ps.100.0
+M Ps.100.0 > Ps.101.0 x9 : Ps.101.0 < Ps.100.0 ~ Ps.101.0
+M Ps.101.0 > Ps.102.0 x30 : Ps.102.0 < Ps.101.0 ~ Ps.102.0
+M Ps.102.0 > Ps.103.0 x23 : Ps.103.0 < Ps.102.0 ~ Ps.103.0
+M Ps.103.0 > Ps.104.0 x36 : Ps.104.0 < Ps.103.0 ~ Ps.104.0
+M Ps.104.0 > Ps.105.0 x46 : Ps.105.0 < Ps.104.0 ~ Ps.105.0
+M Ps.105.0 > Ps.106.0 x49 : Ps.106.0 < Ps.105.0 ~ Ps.106.0
+M Ps.106.0 > Ps.107.0 x44 : Ps.107.0 < Ps.106.0 ~ Ps.107.0
+M Ps.107.0 > Ps.108.0 x15 : Ps.108.0 < Ps.107.0 ~ Ps.108.0
+M Ps.108.0 > Ps.109.0 x32 : Ps.109.0 < Ps.108.0 ~ Ps.109.0
+M Ps.109.0 > Ps.110.0 x8 : Ps.110.0 < Ps.109.0 ~ Ps.110.0
+M Ps.110.0 > Ps.111.0 x11 : Ps.111.0 < Ps.110.0 ~ Ps.111.0
+M Ps.111.0 > Ps.112.0 x11 : Ps.112.0 < Ps.111.0 ~ Ps.112.0
+M Ps.112.0 > Ps.113.0 x10 : Ps.113.0 < Ps.112.0 ~ Ps.113.0
+M Ps.113.0 > Ps.114.0 x9 : Ps.114.0 < Ps.113.0 ~ Ps.114.0
+M Ps.113.9 > Ps.115.0 x1 : Ps.115.1 < Ps.113.9 ~ Ps.115.1
+M Ps.113.9 > Ps.115.1 x18 : Ps.115.1 < Ps.113.9 ~ Ps.115.1
+M Ps.114.0 > Ps.116.0 x10 : Ps.116.0 < Ps.114.0 ~ Ps.116.0
+M Ps.115.0 > Ps.116.10 x1 : Ps.116.10 < Ps.115.1 ~ Ps.116.10
+M Ps.115.1 > Ps.116.10 x10 : Ps.116.10 < Ps.115.1 ~ Ps.116.10
+M Ps.116.0 > Ps.117.0 x3 : Ps.117.0 < Ps.116.0 ~ Ps.117.0
+M Ps.117.0 > Ps.118.0 x30 : Ps.118.0 < Ps.117.0 ~ Ps.118.0
+M Ps.118.0 > Ps.119.0 x177 : Ps.119.0 < Ps.118.0 ~ Ps.119.0
+M Ps.119.0 > Ps.120.0 x8 : Ps.120.0 < Ps.119.0 ~ Ps.120.0
+M Ps.120.0 > Ps.121.0 x9 : Ps.121.0 < Ps.120.0 ~ Ps.121.0
+M Ps.121.0 > Ps.122.0 x10 : Ps.122.0 < Ps.121.0 ~ Ps.122.0
+M Ps.122.0 > Ps.123.0 x5 : Ps.123.0 < Ps.122.0 ~ Ps.123.0
+M Ps.123.0 > Ps.124.0 x9 : Ps.124.0 < Ps.123.0 ~ Ps.124.0
+M Ps.124.0 > Ps.125.0 x6 : Ps.125.0 < Ps.124.0 ~ Ps.125.0
+M Ps.125.0 > Ps.126.0 x7 : Ps.126.0 < Ps.125.0 ~ Ps.126.0
+M Ps.126.0 > Ps.127.0 x6 : Ps.127.0 < Ps.126.0 ~ Ps.127.0
+M Ps.127.0 > Ps.128.0 x7 : Ps.128.0 < Ps.127.0 ~ Ps.128.0
+M Ps.128.0 > Ps.129.0 x9 : Ps.129.0 < Ps.128.0 ~ Ps.129.0
+M Ps.129.0 > Ps.130.0 x9 : Ps.130.0 < Ps.129.0 ~ Ps.130.0
+M Ps.130.0 > Ps.131.0 x4 : Ps.131.0 < Ps.130.0 ~ Ps.131.0
+M Ps.131.0 > Ps.132.0 x19 : Ps.132.0 < Ps.131.0 ~ Ps.132.0
+M Ps.132.0 > Ps.133.0 x4 : Ps.133.0 < Ps.132.0 ~ Ps.133.0
+M Ps.133.0 > Ps.134.0 x4 : Ps.134.0 < Ps.133.0 ~ Ps.134.0
+M Ps.134.0 > Ps.135.0 x22 : Ps.135.0 < Ps.134.0 ~ Ps.135.0
+M Ps.135.0 > Ps.136.0 x27 : Ps.136.0 < Ps.135.0 ~ Ps.136.0
+M Ps.136.0 > Ps.137.0 x10 : Ps.137.0 < Ps.136.0 ~ Ps.137.0
+M Ps.137.0 > Ps.138.0 x9 : Ps.138.0 < Ps.137.0 ~ Ps.138.0
+M Ps.138.0 > Ps.139.0 x25 : Ps.139.0 < Ps.138.0 ~ Ps.139.0
+M Ps.139.0 > Ps.140.0 x15 : Ps.140.0 < Ps.139.0 ~ Ps.140.0
+M Ps.140.0 > Ps.141.0 x11 : Ps.141.0 < Ps.140.0 ~ Ps.141.0
+M Ps.141.0 > Ps.142.0 x9 : Ps.142.0 < Ps.141.0 ~ Ps.142.0
+M Ps.142.0 > Ps.143.0 x13 : Ps.143.0 < Ps.142.0 ~ Ps.143.0
+M Ps.143.0 > Ps.144.0 x16 : Ps.144.0 < Ps.143.0 ~ Ps.144.0
+M Ps.144.0 > Ps.145.0 x22 : Ps.145.0 < Ps.144.0 ~ Ps.145.0
+M Ps.145.0 > Ps.146.0 x11 : Ps.146.0 < Ps.145.0 ~ Ps.146.0
+M Ps.146.0 > Ps.147.0 x12 : Ps.147.0 < Ps.146.0 ~ Ps.147.0
+M Ps.147.0 > Ps.147.12 x1 : Ps.147.12 < Ps.147.1 ~ Ps.147.12
+M Ps.147.1 > Ps.147.12 x9 : Ps.147.12 < Ps.147.1 ~ Ps.147.12
+M Ps.151.0 > AddPs.1.0 x8 : AddPs.1.0 < Ps.151.0 ~ AddPs.1.0
+M Jer.25.14 > Jer.49.34 x6 : Jer.49.34 < Jer.25.20 ~ Jer.49.34
+M Jer.25.20 > Jer.49.34 x1 : Jer.49.34 < Jer.25.20 ~ Jer.49.34
+M Jer.26.1 > Jer.46.1 x28 : Jer.46.1 < Jer.26.1 ~ Jer.46.1
+M Jer.27.1 > Jer.50.1 x46 : Jer.50.1 < Jer.27.1 ~ Jer.50.1
+M Jer.28.1 > Jer.51.1 x64 : Jer.51.1 < Jer.28.1 ~ Jer.51.1
+M Jer.29.1 > Jer.47.1 x7 : Jer.47.1 < Jer.29.1 ~ Jer.47.1
+M Jer.30.1 > Jer.49.7 x16 : Jer.49.7 < Jer.30.1 ~ Jer.49.7
+M Jer.30.17 > Jer.49.1 x6 : Jer.49.1 < Jer.30.17 ~ Jer.49.1
+M Jer.30.23 > Jer.49.28 x6 : Jer.49.28 < Jer.30.23 ~ Jer.49.28
+M Jer.30.29 > Jer.49.23 x5 : Jer.49.23 < Jer.30.29 ~ Jer.49.23
+M Jer.31.1 > Jer.48.1 x44 : Jer.48.1 < Jer.31.1 ~ Jer.48.1
+M Jer.32.13 > Jer.25.13 x1 : Jer.25.13 < Jer.32.13 ~ Jer.25.13
+M Jer.32.15 > Jer.25.15 x24 : Jer.25.15 < Jer.32.15 ~ Jer.25.15
+M Jer.33.1 > Jer.26.1 x24 : Jer.26.1 < Jer.33.1 ~ Jer.26.1
+M Jer.34.1 > Jer.27.1 x22 : Jer.27.1 < Jer.34.1 ~ Jer.27.1
+M Jer.35.1 > Jer.28.1 x17 : Jer.28.1 < Jer.35.1 ~ Jer.28.1
+M Jer.36.1 > Jer.29.1 x32 : Jer.29.1 < Jer.36.1 ~ Jer.29.1
+M Jer.37.1 > Jer.30.1 x24 : Jer.30.1 < Jer.37.1 ~ Jer.30.1
+M Jer.38.1 > Jer.31.1 x40 : Jer.31.1 < Jer.38.1 ~ Jer.31.1
+M Jer.39.1 > Jer.32.1 x44 : Jer.32.1 < Jer.39.1 ~ Jer.32.1
+M Jer.40.1 > Jer.33.1 x13 : Jer.33.1 < Jer.40.1 ~ Jer.33.1
+M Jer.41.1 > Jer.34.1 x22 : Jer.34.1 < Jer.41.1 ~ Jer.34.1
+M Jer.42.1 > Jer.35.1 x19 : Jer.35.1 < Jer.42.1 ~ Jer.35.1
+M Jer.43.1 > Jer.36.1 x32 : Jer.36.1 < Jer.43.1 ~ Jer.36.1
+M Jer.44.1 > Jer.37.1 x21 : Jer.37.1 < Jer.44.1 ~ Jer.37.1
+M Jer.45.1 > Jer.38.1 x28 : Jer.38.1 < Jer.45.1 ~ Jer.38.1
+M Jer.46.1 > Jer.39.1 x3 : Jer.39.1 < Jer.46.1 ~ Jer.39.1
+M Jer.46.14 > Jer.39.14 x5 : Jer.39.14 < Jer.46.14 ~ Jer.39.14
+M Jer.47.1 > Jer.40.1 x16 : Jer.40.1 < Jer.47.1 ~ Jer.40.1
+M Jer.48.1 > Jer.41.1 x18 : Jer.41.1 < Jer.48.1 ~ Jer.41.1
+M Jer.49.1 > Jer.42.1 x22 : Jer.42.1 < Jer.49.1 ~ Jer.42.1
+M Jer.50.1 > Jer.43.1 x13 : Jer.43.1 < Jer.50.1 ~ Jer.43.1
+M Jer.51.1 > Jer.44.1 x30 : Jer.44.1 < Jer.51.1 ~ Jer.44.1
+M Jer.51.31 > Jer.45.1 x5 : Jer.45.1 < Jer.51.31 ~ Jer.45.1
+M DanGr.1.1 > Dan.1.1 x21 : Dan.1.1 < DanGr.1.1 ~ Dan.1.1
+M DanGr.2.1 > Dan.2.1 x49 : Dan.2.1 < DanGr.2.1 ~ Dan.2.1
+M DanGr.3.1 > Dan.3.1 x23 : Dan.3.1 < DanGr.3.1 ~ Dan.3.1
+M DanGr.3.91 > Dan.3.24 x7 : Dan.3.24 < DanGr.3.91 ~ Dan.3.24
+M DanGr.4.1 > Dan.3.31 x3 : Dan.3.31 < DanGr.4.1 ~ Dan.4.1
+M DanGr.4.4 > Dan.4.1 x34 : Dan.4.1 < DanGr.4.4 ~ Dan.4.4
+M DanGr.5.1 > Dan.5.1 x31 : Dan.5.1 < DanGr.5.1 ~ Dan.5.1
+M DanGr.6.1 > Dan.6.1 x28 : Dan.6.1 < DanGr.6.1 ~ Dan.5.31
+M DanGr.7.1 > Dan.7.1 x28 : Dan.7.1 < DanGr.7.1 ~ Dan.7.1
+M DanGr.8.1 > Dan.8.1 x27 : Dan.8.1 < DanGr.8.1 ~ Dan.8.1
+M DanGr.9.1 > Dan.9.1 x27 : Dan.9.1 < DanGr.9.1 ~ Dan.9.1
+M DanGr.10.1 > Dan.10.1 x21 : Dan.10.1 < DanGr.10.1 ~ Dan.10.1
+M DanGr.11.1 > Dan.11.1 x45 : Dan.11.1 < DanGr.11.1 ~ Dan.11.1
+M DanGr.12.1 > Dan.12.1 x13 : Dan.12.1 < DanGr.12.1 ~ Dan.12.1
+M Ezra.11.1 > Neh.1.1 x11 : Neh.1.1 < Ezra.11.1 ~ Neh.1.1
+M Ezra.12.1 > Neh.2.1 x20 : Neh.2.1 < Ezra.12.1 ~ Neh.2.1
+M Ezra.13.1 > Neh.3.1 x38 : Neh.3.1 < Ezra.13.1 ~ Neh.3.1
+M Ezra.14.1 > Neh.4.1 x17 : Neh.4.1 < Ezra.14.1 ~ Neh.4.7
+M Ezra.15.1 > Neh.5.1 x19 : Neh.5.1 < Ezra.15.1 ~ Neh.5.1
+M Ezra.16.1 > Neh.6.1 x19 : Neh.6.1 < Ezra.16.1 ~ Neh.6.1
+M Ezra.17.1 > Neh.7.1 x72 : Neh.7.1 < Ezra.17.1 ~ Neh.7.1
+M Ezra.18.1 > Neh.8.1 x18 : Neh.8.1 < Ezra.18.1 ~ Neh.8.1
+M Ezra.19.1 > Neh.9.1 x37 : Neh.9.1 < Ezra.19.1 ~ Neh.9.1
+M Ezra.20.1 > Neh.10.1 x40 : Neh.10.1 < Ezra.20.1 ~ Neh.9.38
+M Ezra.21.1 > Neh.11.1 x36 : Neh.11.1 < Ezra.21.1 ~ Neh.11.1
+M Ezra.22.1 > Neh.12.1 x47 : Neh.12.1 < Ezra.22.1 ~ Neh.12.1
+M Ezra.23.1 > Neh.13.1 x31 : Neh.13.1 < Ezra.23.1 ~ Neh.13.1
+M 2Esd.3.1 > 4Ezra.1.1 x36 : 4Ezra.1.1 < 2Esd.3.1 ~ 4Ezra.1.1
+M 2Esd.4.1 > 4Ezra.2.1 x52 : 4Ezra.2.1 < 2Esd.4.1 ~ 4Ezra.2.1
+M 2Esd.5.1 > 4Ezra.3.1 x56 : 4Ezra.3.1 < 2Esd.5.1 ~ 4Ezra.3.1
+M 2Esd.6.1 > 4Ezra.4.1 x59 : 4Ezra.4.1 < 2Esd.6.1 ~ 4Ezra.4.1
+M 2Esd.7.1 > 4Ezra.5.1 x35 : 4Ezra.5.1 < 2Esd.7.1 ~ 4Ezra.5.1
+M 2Esd.7.106 > 4Ezra.5.36 x35 : 4Ezra.5.36 < 2Esd.7.106 ~ 4Ezra.5.36
+M 2Esd.8.1 > 4Ezra.6.1 x63 : 4Ezra.6.1 < 2Esd.8.1 ~ 4Ezra.6.1
+M 2Esd.9.1 > 4Ezra.7.1 x47 : 4Ezra.7.1 < 2Esd.9.1 ~ 4Ezra.7.1
+M 2Esd.10.1 > 4Ezra.8.1 x60 : 4Ezra.8.1 < 2Esd.10.1 ~ 4Ezra.8.1
+M 2Esd.11.1 > 4Ezra.9.1 x46 : 4Ezra.9.1 < 2Esd.11.1 ~ 4Ezra.9.1
+M 2Esd.12.1 > 4Ezra.10.1 x51 : 4Ezra.10.1 < 2Esd.12.1 ~ 4Ezra.10.1
+M 2Esd.13.1 > 4Ezra.11.1 x58 : 4Ezra.11.1 < 2Esd.13.1 ~ 4Ezra.11.1
+M 2Esd.14.1 > 4Ezra.12.1 x48 : 4Ezra.12.1 < 2Esd.14.1 ~ 4Ezra.12.1
+X Gen.31.51 not contained
+X Gen.35.21 not contained
+X Exod.25.6 not contained
+X Exod.28.23 not contained
+X Exod.28.24 not contained
+X Exod.28.25 not contained
+X Exod.28.26 not contained
+X Exod.28.27 not contained
+X Exod.28.28 not contained
+X Exod.32.9 not contained
+X Exod.35.8 not contained
+X Exod.35.15 not contained
+X Exod.35.17 not contained
+X Exod.35.18 not contained
+X Exod.40.7 not contained
+X Exod.40.11 not contained
+X Exod.40.28 not contained
+X Exod.40.30 not contained
+X Exod.40.31 not contained
+X Exod.40.32 not contained
+X Josh.6.4 not contained
+X Josh.8.13 not contained
+X Josh.8.26 not contained
+X Josh.10.15 not contained
+X Josh.20.4 not contained
+X Josh.20.5 not contained
+X Josh.20.6 not contained
+X 1Sam.13.1 not contained
+X 1Sam.17.21 not contained
+X 1Sam.17.22 not contained
+X 1Sam.17.23 not contained
+X 1Sam.17.24 not contained
+X 1Sam.17.25 not contained
+X 1Sam.17.26 not contained
+X 1Sam.17.27 not contained
+X 1Sam.17.28 not contained
+X 1Sam.17.29 not contained
+X 1Sam.17.30 not contained
+X 1Sam.17.31 not contained
+X 1Sam.17.41 not contained
+X 1Sam.17.50 not contained
+X 1Sam.18.1 not contained
+X 1Sam.18.2 not contained
+X 1Sam.18.3 not contained
+X 1Sam.18.4 not contained
+X 1Sam.18.5 not contained
+X 1Sam.18.10 not contained
+X 1Sam.18.11 not contained
+X 1Sam.18.17 not contained
+X 1Sam.18.18 not contained
+X 1Sam.18.19 not contained
+X 1Sam.23.12 not contained
+X 1Kgs.3.1 not contained
+X 1Kgs.5.5 not contained
+X 1Kgs.5.6 not contained
+X 1Kgs.5.7 not contained
+X 1Kgs.5.8 not contained
+X 1Kgs.5.31 not contained
+X 1Kgs.6.11 not contained
+X 1Kgs.6.12 not contained
+X 1Kgs.6.13 not contained
+X 1Kgs.6.14 not contained
+X 1Kgs.6.18 not contained
+X 1Kgs.8.12 not contained
+X 1Kgs.8.13 not contained
+X 1Kgs.9.15 not contained
+X 1Kgs.9.16 not contained
+X 1Kgs.9.17 not contained
+X 1Kgs.9.18 not contained
+X 1Kgs.9.19 not contained
+X 1Kgs.9.20 not contained
+X 1Kgs.9.21 not contained
+X 1Kgs.9.22 not contained
+X 1Kgs.9.23 not contained
+X 1Kgs.9.24 not contained
+X 1Kgs.9.25 not contained
+X 1Kgs.11.3 not contained
+X 1Kgs.11.23 not contained
+X 1Kgs.11.24 not contained
+X 1Kgs.11.39 not contained
+X 1Kgs.12.2 not contained
+X 1Kgs.12.17 not contained
+X 1Kgs.13.27 not contained
+X 1Kgs.14.1 not contained
+X 1Kgs.14.2 not contained
+X 1Kgs.14.3 not contained
+X 1Kgs.14.4 not contained
+X 1Kgs.14.5 not contained
+X 1Kgs.14.6 not contained
+X 1Kgs.14.7 not contained
+X 1Kgs.14.8 not contained
+X 1Kgs.14.9 not contained
+X 1Kgs.14.10 not contained
+X 1Kgs.14.11 not contained
+X 1Kgs.14.12 not contained
+X 1Kgs.14.13 not contained
+X 1Kgs.14.14 not contained
+X 1Kgs.14.15 not contained
+X 1Kgs.14.16 not contained
+X 1Kgs.14.17 not contained
+X 1Kgs.14.18 not contained
+X 1Kgs.14.19 not contained
+X 1Kgs.14.20 not contained
+X 1Kgs.15.6 not contained
+X 1Kgs.15.32 not contained
+X 1Kgs.22.47 not contained
+X 1Kgs.22.48 not contained
+X 1Kgs.22.49 not contained
+X 1Kgs.22.50 not contained
+X 1Sam.17.12 not contained
+X 1Sam.17.13 not contained
+X 1Sam.17.14 not contained
+X 1Sam.17.15 not contained
+X 1Sam.17.16 not contained
+X 1Sam.17.17 not contained
+X 1Sam.17.18 not contained
+X 1Sam.17.19 not contained
+X 1Sam.17.20 not contained
+X 1Chr.1.11 not contained
+X 1Chr.1.12 not contained
+X 1Chr.1.13 not contained
+X 1Chr.1.14 not contained
+X 1Chr.1.15 not contained
+X 1Chr.1.16 not contained
+X 1Chr.1.18 not contained
+X 1Chr.1.19 not contained
+X 1Chr.1.20 not contained
+X 1Chr.1.21 not contained
+X 1Chr.1.22 not contained
+X 1Chr.1.23 not contained
+X 1Chr.16.24 not contained
+X 2Chr.27.8 not contained
+X Ezra.13.7 not contained
+X Ezra.14.18 not contained
+X Ezra.14.19 not contained
+X Ezra.14.20 not contained
+X Ezra.14.21 not contained
+X Ezra.14.22 not contained
+X Ezra.14.23 not contained
+X Ezra.19.38 not contained
+X Ezra.21.16 not contained
+X Ezra.21.20 not contained
+X Ezra.21.21 not contained
+X Ezra.21.28 not contained
+X Ezra.21.29 not contained
+X Ezra.21.32 not contained
+X Ezra.21.33 not contained
+X Ezra.21.34 not contained
+X Ezra.21.35 not contained
+X Ezra.22.4 not contained
+X Ezra.22.5 not contained
+X Ezra.22.6 not contained
+X Job.23.14 not contained
+X Ps.115.5 not contained
+X Prov.4.7 not contained
+X Prov.8.33 not contained
+X Prov.11.4 not contained
+X Prov.15.31 not contained
+X Prov.16.1 not contained
+X Prov.16.3 not contained
+X Prov.16.4 not contained
+X Prov.16.6 not contained
+X Prov.19.1 not contained
+X Prov.19.2 not contained
+X Prov.20.14 not contained
+X Prov.20.15 not contained
+X Prov.20.16 not contained
+X Prov.20.17 not contained
+X Prov.20.18 not contained
+X Prov.20.19 not contained
+X Prov.20.20 not contained
+X Prov.20.21 not contained
+X Prov.20.22 not contained
+X Prov.21.5 not contained
+X Prov.22.6 not contained
+X Prov.23.23 not contained
+X Jer.2.1 not contained
+X Jer.7.1 not contained
+X Jer.8.11 not contained
+X Jer.8.12 not contained
+X Jer.10.6 not contained
+X Jer.10.7 not contained
+X Jer.10.8 not contained
+X Jer.10.10 not contained
+X Jer.11.7 not contained
+X Jer.17.1 not contained
+X Jer.17.2 not contained
+X Jer.17.3 not contained
+X Jer.17.4 not contained
+X Jer.26.1 not contained
+X Jer.26.26 not contained
+X Jer.28.45 not contained
+X Jer.28.46 not contained
+X Jer.28.47 not contained
+X Jer.28.48 not contained
+X Jer.30.22 not contained
+X Jer.32.1 not contained
+X Jer.32.2 not contained
+X Jer.32.3 not contained
+X Jer.32.4 not contained
+X Jer.32.5 not contained
+X Jer.32.6 not contained
+X Jer.32.7 not contained
+X Jer.32.8 not contained
+X Jer.32.9 not contained
+X Jer.32.10 not contained
+X Jer.32.11 not contained
+X Jer.32.12 not contained
+X Jer.32.14 not contained
+X Jer.34.1 not contained
+X Jer.34.7 not contained
+X Jer.34.13 not contained
+X Jer.34.17 not contained
+X Jer.34.21 not contained
+X Jer.36.16 not contained
+X Jer.36.17 not contained
+X Jer.36.18 not contained
+X Jer.36.19 not contained
+X Jer.36.20 not contained
+X Jer.37.10 not contained
+X Jer.37.11 not contained
+X Jer.37.15 not contained
+X Jer.37.22 not contained
+X Jer.46.4 not contained
+X Jer.46.5 not contained
+X Jer.46.6 not contained
+X Jer.46.7 not contained
+X Jer.46.8 not contained
+X Jer.46.9 not contained
+X Jer.46.10 not contained
+X Jer.46.11 not contained
+X Jer.46.12 not contained
+X Jer.46.13 not contained
+X Jer.52.2 not contained
+X Jer.52.3 not contained
+X Jer.52.15 not contained
+X Jer.52.28 not contained
+X Jer.52.29 not contained
+X Jer.52.30 not contained
+X Lam.3.22 not contained
+X Lam.3.23 not contained
+X Lam.3.24 not contained
+X Lam.3.29 not contained
+X Ezek.1.14 not contained
+X Ezek.10.14 not contained
+X Ezek.27.31 not contained
+X Ezek.32.19 not contained
+X Ezek.33.26 not contained
+X Ezek.40.30 not contained
+X Tob.4.8 not contained
+X Tob.4.9 not contained
+X Tob.4.10 not contained
+X Tob.4.11 not contained
+X Tob.4.12 not contained
+X Tob.4.13 not contained
+X Tob.4.14 not contained
+X Tob.4.15 not contained
+X Tob.4.16 not contained
+X Tob.4.17 not contained
+X Tob.4.18 not contained
+X Tob.13.8 not contained
+X Tob.13.9 not contained
+X Tob.13.10 not contained
+X EsthGr.4.6 not contained
+X EsthGr.9.5 not contained
+X EsthGr.9.30 not contained
+X Sir.1.5 not contained
+X Sir.1.7 not contained
+X Sir.1.21 not contained
+X Sir.3.19 not contained
+X Sir.3.25 not contained
+X Sir.6.1 not contained
+X Sir.10.21 not contained
+X Sir.11.15 not contained
+X Sir.11.16 not contained
+X Sir.13.14 not contained
+X Sir.16.15 not contained
+X Sir.16.16 not contained
+X Sir.17.5 not contained
+X Sir.17.9 not contained
+X Sir.17.16 not contained
+X Sir.17.18 not contained
+X Sir.17.21 not contained
+X Sir.18.3 not contained
+X Sir.19.18 not contained
+X Sir.19.19 not contained
+X Sir.19.21 not contained
+X Sir.22.7 not contained
+X Sir.22.8 not contained
+X Sir.24.18 not contained
+X Sir.24.24 not contained
+X Sir.25.12 not contained
+X Sir.26.19 not contained
+X Sir.26.20 not contained
+X Sir.26.21 not contained
+X Sir.26.22 not contained
+X Sir.26.23 not contained
+X Sir.26.24 not contained
+X Sir.26.25 not contained
+X Sir.26.26 not contained
+X Sir.26.27 not contained
+X 4Macc.10.4 not contained
+X 4Macc.11.7 not contained
+X 4Macc.11.8 not contained
+# Vulgate books=89 mappings=541 excluded=0
+B Genesis | Gen old 31,25,24,26,32,22,24,22,29,32,32,20,18,24,21,16,27,33,38,18,34,24,20,67,34,35,46,22,35,43,55,32,20,31,29,43,36,30,23,23,57,38,34,34,28,34,31,22,32,25
+B Exodus | Exod old 22,25,22,31,23,30,25,32,35,29,10,51,22,31,27,36,16,27,25,26,36,31,33,18,40,37,21,43,46,38,18,35,23,35,35,38,29,31,43,36
+B Leviticus | Lev old 17,16,17,35,19,30,38,36,24,20,47,8,59,57,33,34,16,30,37,27,24,33,44,23,55,45,34
+B Numbers | Num old 54,34,51,49,31,27,89,26,23,36,34,15,34,45,41,50,13,32,22,30,35,41,30,25,18,65,23,31,39,17,54,42,56,29,34,13
+B Deuteronomy | Deut old 46,37,29,49,33,25,26,20,29,22,32,32,18,29,23,22,20,22,21,20,23,30,25,22,19,19,26,68,29,20,30,52,29,12
+B Joshua | Josh old 18,24,17,25,16,27,26,35,27,43,23,24,33,15,63,10,18,28,51,9,43,34,16,33
+B Judges | Judg old 36,23,31,24,32,40,25,35,57,18,40,15,25,20,20,31,13,31,30,48,24
+B Ruth | Ruth old 22,23,18,22
+B I Samuel | 1Sam old 28,36,21,22,12,21,17,22,27,27,15,25,23,52,35,23,58,30,24,43,15,23,28,23,44,25,12,25,11,31,13
+B II Samuel | 2Sam old 27,32,39,12,25,23,29,18,13,19,27,31,39,33,37,23,29,33,43,26,22,51,39,25
+B I Kings | 1Kgs old 53,46,28,34,18,38,51,66,28,29,43,33,34,31,34,34,24,46,21,43,29,54
+B II Kings | 2Kgs old 18,25,27,44,27,33,20,29,37,36,21,21,25,29,38,20,41,37,37,21,26,20,37,20,30
+B I Chronicles | 1Chr old 54,55,24,43,26,81,40,40,44,14,46,40,14,17,29,43,27,17,19,7,30,19,32,31,31,32,34,21,30
+B II Chronicles | 2Chr old 17,18,17,22,14,42,22,18,31,19,23,16,22,15,19,14,19,34,11,37,20,12,21,27,28,23,9,27,36,27,21,33,25,33,27,23
+B Ezra | Ezra old 11,70,13,24,17,22,28,36,15,44
+B Nehemiah | Neh old 11,20,31,23,19,19,73,18,38,39,36,46,31
+B Esther | Esth old 32,23,15,47,28,14,10,41,32,13
+B Job | Job old 22,13,26,21,27,30,21,22,35,22,20,25,28,22,35,23,16,21,29,29,34,30,17,25,6,14,23,28,25,31,40,22,33,37,16,33,24,41,35,28,25,16
+B Psalms | Ps old 6,13,9,10,13,11,18,10,39,8,9,6,7,5,10,15,51,15,10,14,32,6,10,22,12,14,9,11,13,25,11,22,23,28,13,40,23,14,18,14,12,5,26,18,12,10,15,21,23,21,11,7,9,24,13,12,12,18,14,9,13,12,11,14,20,8,36,37,6,24,20,28,23,11,13,21,72,13,20,17,8,19,13,14,17,7,19,53,17,16,16,5,23,11,13,12,9,9,5,8,29,22,35,45,48,43,14,31,7,10,10,9,26,9,19,2,29,176,7,8,9,4,8,5,6,5,6,8,8,3,18,3,3,21,26,9,8,24,14,10,8,12,15,21,10,11,20,14,9,6
+B Proverbs | Prov old 33,22,35,27,23,35,27,36,18,32,31,28,25,35,33,33,28,24,29,30,31,29,35,34,28,28,27,28,27,33,31
+B Ecclesiastes | Eccl old 18,26,22,17,19,11,30,17,18,20,10,14
+B Song of Solomon | Song old 16,17,11,16,17,12,13,14
+B Isaiah | Isa old 31,22,26,6,30,13,25,22,21,34,16,6,22,32,9,14,14,7,25,6,17,25,18,23,12,21,13,29,24,33,9,20,24,17,10,22,38,22,8,31,29,25,28,28,25,13,15,22,26,11,23,15,12,17,13,12,21,14,21,22,11,12,19,12,25,24
+B Jeremiah | Jer old 19,37,25,31,31,30,34,22,26,25,23,17,27,22,21,21,27,23,15,18,14,30,40,10,38,24,22,17,32,24,40,44,26,22,19,32,20,28,18,16,18,22,13,30,5,28,7,47,39,46,64,34
+B Lamentations | Lam old 22,22,66,22,22
+B Ezekiel | Ezek old 28,9,27,17,17,14,27,18,11,22,25,28,23,23,8,63,24,32,14,49,32,31,49,27,17,21,36,26,21,26,18,32,33,31,15,38,28,23,29,49,26,20,27,31,25,24,23,35
+B Daniel | Dan old 21,49,100,34,31,28,28,27,27,21,45,13,65,41
+B Hosea | Hos old 11,24,5,19,15,11,16,14,17,15,12,14,15,10
+B Joel | Joel old 20,32,21
+B Amos | Amos old 15,16,15,13,27,15,17,14,15
+B Obadiah | Obad old 21
+B Jonah | Jonah old 16,11,10,11
+B Micah | Mic old 16,13,12,13,14,16,20
+B Nahum | Nah old 15,13,19
+B Habakkuk | Hab old 17,20,19
+B Zephaniah | Zeph old 18,15,20
+B Haggai | Hag old 14,24
+B Zechariah | Zech old 21,13,10,14,11,15,14,23,17,12,17,14,9,21
+B Malachi | Mal old 14,17,18,6
+B Matthew | Matt new 25,23,17,25,48,34,29,34,38,42,30,50,58,36,39,28,26,35,30,34,46,46,39,51,46,75,66,20
+B Mark | Mark new 45,28,35,40,43,56,37,39,49,52,33,44,37,72,47,20
+B Luke | Luke new 80,52,38,44,39,49,50,56,62,42,54,59,35,35,32,31,37,43,48,47,38,71,56,53
+B John | John new 51,25,36,54,47,72,53,59,41,42,57,50,38,31,27,33,26,40,42,31,25
+B Acts | Acts new 26,47,26,37,42,15,59,40,43,48,30,25,52,27,41,40,34,28,40,38,40,30,35,27,27,32,44,31
+B Romans | Rom new 32,29,31,25,21,23,25,39,33,21,36,21,14,23,33,27
+B I Corinthians | 1Cor new 31,16,23,21,13,20,40,13,27,33,34,31,13,40,58,24
+B II Corinthians | 2Cor new 24,17,18,18,21,18,16,24,15,18,33,21,13
+B Galatians | Gal new 24,21,29,31,26,18
+B Ephesians | Eph new 23,22,21,32,33,24
+B Philippians | Phil new 30,30,21,23
+B Colossians | Col new 29,23,25,18
+B I Thessalonians | 1Thess new 10,20,13,18,28
+B II Thessalonians | 2Thess new 12,17,18
+B I Timothy | 1Tim new 20,15,16,16,25,21
+B II Timothy | 2Tim new 18,26,17,22
+B Titus | Titus new 16,15,15
+B Philemon | Phlm new 25
+B Hebrews | Heb new 14,18,19,16,14,20,28,13,28,39,40,29,25
+B James | Jas new 27,26,18,17,20
+B I Peter | 1Pet new 25,25,22,19,14
+B II Peter | 2Pet new 21,22,18
+B I John | 1John new 10,29,24,21,21
+B II John | 2John new 13
+B III John | 3John new 15
+B Jude | Jude new 25
+B Revelation of John | Rev new 20,29,22,11,14,17,17,13,21,11,19,18,18,20,8,21,18,24,21,15,27,21
+B Tobit | Tob old 25,23,25,23,28,22,20,24,12,13,21,22,23,17
+B Judith | Jdt old 12,18,15,17,29,21,25,34,19,20,21,20,31,18,15,31
+B Esther (Greek) | EsthGr old 39,23,22,47,28,14,10,39,32,13
+B Wisdom | Wis old 16,25,19,20,24,27,30,21,19,21,27,27,19,31,19,29,20,25,20
+B Sirach | Sir old 40,23,34,36,18,37,40,22,25,34,36,19,32,27,22,31,31,33,28,33,31,33,38,47,36,28,33,30,35,27,42,28,33,31,26,28,34,39,41,32,28,26,37,27,31,23,31,28,19,31,38,13
+B Baruch | Bar old 22,35,38,37,9,72
+B Epistle of Jeremiah | EpJer old 72
+B Prayer of Azariah | PrAzar old 67
+B Susanna | Sus old 64
+B Bel and the Dragon | Bel old 42
+B I Maccabees | 1Macc old 67,70,60,61,68,63,50,32,73,89,74,54,54,49,41,24
+B II Maccabees | 2Macc old 36,33,40,50,27,31,42,36,29,38,38,46,26,46,40
+B III Maccabees | 3Macc old 29,33,30,21,51,41,23
+B IV Maccabees | 4Macc old 35,24,21,26,38,35,23,29,32,21,27,19,27,20,32,25,24,24
+B I Esdras | 1Esd old 58,31,24,63,73,34,15,97,56
+B II Esdras | 2Esd old 40,48,36,52,55,59,139,63,47,60,46,51,58,47,63,78
+B Prayer of Manasses | PrMan old 15
+B Additional Psalm | AddPs old 7
+B 5 Ezra | 5Ezra old 40,48
+B Apocalypse of Ezra | 4Ezra old 36,52,55,59,139,63,47,60,46,51,58,47
+B 6 Ezra | 6Ezra old 63,0,0,0,0,0,0,0,0,0,0,78
+B Daniel (Greek) | DanGr old 21,49,97,37,31,28,28,27,27,21,45,13,64,42
+B Laodiceans | EpLao new 20
+M Gen.31.55 > Gen.32.1 x1 : Gen.32.1 < Gen.31.55 ~ Gen.31.55
+M Gen.32.1 > Gen.32.2 x32 : Gen.32.2 < Gen.32.1 ~ Gen.32.1
+M Gen.49.31 > Gen.49.31 x1 : Gen.49.32 < Gen.49.31 ~ Gen.49.32
+M Gen.49.31 > Gen.49.32 x1 : Gen.49.32 < Gen.49.31 ~ Gen.49.32
+M Gen.49.32 > Gen.49.33 x1 : Gen.49.33 < Gen.49.32 ~ Gen.49.33
+M Gen.50.22 > Gen.50.22 x1 : Gen.50.23 < Gen.50.22 ~ Gen.50.23
+M Gen.50.22 > Gen.50.23 x1 : Gen.50.23 < Gen.50.22 ~ Gen.50.23
+M Gen.50.23 > Gen.50.24 x3 : Gen.50.24 < Gen.50.23 ~ Gen.50.24
+M Exod.8.1 > Exod.7.26 x4 : Exod.7.26 < Exod.8.1 ~ Exod.8.1
+M Exod.8.5 > Exod.8.1 x28 : Exod.8.1 < Exod.8.5 ~ Exod.8.5
+M Exod.22.1 > Exod.21.37 x1 : Exod.21.37 < Exod.22.1 ~ Exod.22.1
+M Exod.22.2 > Exod.22.1 x30 : Exod.22.1 < Exod.22.2 ~ Exod.22.2
+M Exod.40.13 > Exod.40.13 x1 : Exod.40.15 < Exod.40.13 ~ Exod.40.15
+M Exod.40.13 > Exod.40.14 x1 : Exod.40.15 < Exod.40.13 ~ Exod.40.15
+M Exod.40.13 > Exod.40.15 x1 : Exod.40.15 < Exod.40.13 ~ Exod.40.15
+M Exod.40.14 > Exod.40.16 x23 : Exod.40.16 < Exod.40.14 ~ Exod.40.16
+M Lev.6.1 > Lev.5.20 x7 : Lev.5.20 < Lev.6.1 ~ Lev.6.1
+M Lev.6.8 > Lev.6.1 x23 : Lev.6.1 < Lev.6.8 ~ Lev.6.8
+M Lev.26.45 > Lev.26.45 x1 : Lev.26.46 < Lev.26.45 ~ Lev.26.46
+M Lev.26.45 > Lev.26.46 x1 : Lev.26.46 < Lev.26.45 ~ Lev.26.46
+M Num.11.34 > Num.11.34 x1 : Num.11.35 < Num.11.34 ~ Num.11.35
+M Num.11.34 > Num.11.35 x1 : Num.11.35 < Num.11.34 ~ Num.11.35
+M Num.13.1 > Num.12.16 x1 : Num.12.16 < Num.13.1 ~ Num.12.16
+M Num.13.2 > Num.13.1 x33 : Num.13.1 < Num.13.2 ~ Num.13.1
+M Num.16.36 > Num.17.1 x15 : Num.17.1 < Num.16.36 ~ Num.16.36
+M Num.17.1 > Num.17.16 x13 : Num.17.16 < Num.17.1 ~ Num.17.1
+M Num.20.28 > Num.20.28 x1 : Num.20.28 < Num.20.29 ~ Num.20.28
+M Num.20.29 > Num.20.28 x1 : Num.20.28 < Num.20.29 ~ Num.20.28
+M Num.20.30 > Num.20.29 x1 : Num.20.29 < Num.20.30 ~ Num.20.29
+M Num.26.1 > Num.25.19 x1 : Num.26.1 < Num.26.1 ~ Num.26.1
+M Num.26.1 > Num.26.1 x1 : Num.26.1 < Num.26.1 ~ Num.26.1
+M Deut.12.32 > Deut.13.1 x1 : Deut.13.1 < Deut.12.32 ~ Deut.12.32
+M Deut.13.1 > Deut.13.2 x18 : Deut.13.2 < Deut.13.1 ~ Deut.13.1
+M Deut.22.30 > Deut.23.1 x1 : Deut.23.1 < Deut.22.30 ~ Deut.22.30
+M Deut.23.1 > Deut.23.2 x25 : Deut.23.2 < Deut.23.1 ~ Deut.23.1
+M Deut.29.1 > Deut.28.69 x1 : Deut.28.69 < Deut.29.1 ~ Deut.29.1
+M Deut.29.2 > Deut.29.1 x28 : Deut.29.1 < Deut.29.2 ~ Deut.29.2
+M Josh.4.23 > Josh.4.23 x1 : Josh.4.23 < Josh.4.24 ~ Josh.4.23
+M Josh.4.24 > Josh.4.23 x1 : Josh.4.23 < Josh.4.24 ~ Josh.4.23
+M Josh.4.25 > Josh.4.24 x1 : Josh.4.24 < Josh.4.25 ~ Josh.4.24
+M Josh.5.14 > Josh.5.14 x1 : Josh.5.14 < Josh.5.15 ~ Josh.5.14
+M Josh.5.15 > Josh.5.14 x1 : Josh.5.14 < Josh.5.15 ~ Josh.5.14
+M Josh.5.16 > Josh.5.15 x1 : Josh.5.15 < Josh.5.16 ~ Josh.5.15
+M Josh.21.36 > Josh.21.36 x1 : Josh.21.37 < Josh.21.36 ~ Josh.21.37
+M Josh.21.36 > Josh.21.37 x1 : Josh.21.37 < Josh.21.36 ~ Josh.21.37
+M Josh.21.37 > Josh.21.38 x1 : Josh.21.39 < Josh.21.37 ~ Josh.21.39
+M Josh.21.37 > Josh.21.39 x1 : Josh.21.39 < Josh.21.37 ~ Josh.21.39
+M Josh.21.38 > Josh.21.40 x6 : Josh.21.40 < Josh.21.38 ~ Josh.21.40
+M Judg.5.31 > Judg.5.31 x1 : Judg.5.31 < Judg.5.32 ~ Judg.5.31
+M Judg.5.32 > Judg.5.31 x1 : Judg.5.31 < Judg.5.32 ~ Judg.5.31
+M Judg.21.24 > Judg.21.24 x1 : Judg.21.25 < Judg.21.24 ~ Judg.21.25
+M Judg.21.24 > Judg.21.25 x1 : Judg.21.25 < Judg.21.24 ~ Judg.21.25
+M 1Sam.20.43 > 1Sam.21.1 x1 : 1Sam.21.1 < 1Sam.20.43 ~ 1Sam.20.42
+M 1Sam.21.1 > 1Sam.21.2 x15 : 1Sam.21.2 < 1Sam.21.1 ~ 1Sam.21.1
+M 2Sam.18.33 > 2Sam.19.1 x1 : 2Sam.19.1 < 2Sam.18.33 ~ 2Sam.18.33
+M 2Sam.19.1 > 2Sam.19.2 x43 : 2Sam.19.2 < 2Sam.19.1 ~ 2Sam.19.1
+M 1Kgs.4.21 > 1Kgs.5.1 x14 : 1Kgs.5.1 < 1Kgs.4.21 ~ 1Kgs.4.21
+M 1Kgs.5.1 > 1Kgs.5.15 x18 : 1Kgs.5.15 < 1Kgs.5.1 ~ 1Kgs.5.1
+M 2Kgs.11.21 > 2Kgs.12.1 x1 : 2Kgs.12.1 < 2Kgs.11.21 ~ 2Kgs.11.21
+M 2Kgs.12.1 > 2Kgs.12.2 x21 : 2Kgs.12.2 < 2Kgs.12.1 ~ 2Kgs.12.1
+M 1Chr.6.1 > 1Chr.5.27 x15 : 1Chr.5.27 < 1Chr.6.1 ~ 1Chr.6.1
+M 1Chr.6.16 > 1Chr.6.1 x66 : 1Chr.6.1 < 1Chr.6.16 ~ 1Chr.6.16
+M 1Chr.11.46 > 1Chr.11.46 x1 : 1Chr.11.47 < 1Chr.11.46 ~ 1Chr.11.47
+M 1Chr.11.46 > 1Chr.11.47 x1 : 1Chr.11.47 < 1Chr.11.46 ~ 1Chr.11.47
+M 1Chr.12.4 > 1Chr.12.4 x1 : 1Chr.12.5 < 1Chr.12.4 ~ 1Chr.12.4
+M 1Chr.12.4 > 1Chr.12.5 x1 : 1Chr.12.5 < 1Chr.12.4 ~ 1Chr.12.4
+M 1Chr.12.5 > 1Chr.12.6 x36 : 1Chr.12.6 < 1Chr.12.5 ~ 1Chr.12.5
+M 1Chr.20.7 > 1Chr.20.7 x1 : 1Chr.20.8 < 1Chr.20.7 ~ 1Chr.20.8
+M 1Chr.20.7 > 1Chr.20.8 x1 : 1Chr.20.8 < 1Chr.20.7 ~ 1Chr.20.8
+M 2Chr.2.1 > 2Chr.1.18 x1 : 2Chr.1.18 < 2Chr.2.1 ~ 2Chr.2.1
+M 2Chr.2.2 > 2Chr.2.1 x17 : 2Chr.2.1 < 2Chr.2.2 ~ 2Chr.2.2
+M 2Chr.14.1 > 2Chr.13.23 x1 : 2Chr.13.23 < 2Chr.14.1 ~ 2Chr.14.1
+M 2Chr.14.2 > 2Chr.14.1 x14 : 2Chr.14.1 < 2Chr.14.2 ~ 2Chr.14.2
+M Neh.3.30 > Neh.3.30 x1 : Neh.3.31 < Neh.3.30 ~ Neh.3.31
+M Neh.3.30 > Neh.3.31 x1 : Neh.3.31 < Neh.3.30 ~ Neh.3.31
+M Neh.3.31 > Neh.3.32 x1 : Neh.3.32 < Neh.3.31 ~ Neh.3.32
+M Neh.4.1 > Neh.3.33 x6 : Neh.3.33 < Neh.4.1 ~ Neh.4.1
+M Neh.4.7 > Neh.4.1 x17 : Neh.4.1 < Neh.4.7 ~ Neh.4.7
+M Neh.7.67 > Neh.7.67 x1 : Neh.7.67 < Neh.7.68 ~ Neh.7.67
+M Neh.7.68 > Neh.7.67 x1 : Neh.7.67 < Neh.7.68 ~ Neh.7.67
+M Neh.7.69 > Neh.7.68 x5 : Neh.7.68 < Neh.7.69 ~ Neh.7.69
+M Neh.9.38 > Neh.10.1 x1 : Neh.10.1 < Neh.9.38 ~ Neh.9.38
+M Neh.10.1 > Neh.10.2 x39 : Neh.10.2 < Neh.10.1 ~ Neh.10.1
+M Neh.12.33 > Neh.12.33 x1 : Neh.12.34 < Neh.12.33 ~ Neh.12.34
+M Neh.12.33 > Neh.12.34 x1 : Neh.12.34 < Neh.12.33 ~ Neh.12.34
+M Neh.12.34 > Neh.12.35 x13 : Neh.12.35 < Neh.12.34 ~ Neh.12.35
+M Job.16.4 > Job.16.4 x1 : Job.16.4 < Job.16.5 ~ Job.16.4
+M Job.16.5 > Job.16.4 x1 : Job.16.4 < Job.16.5 ~ Job.16.4
+M Job.16.6 > Job.16.5 x18 : Job.16.5 < Job.16.6 ~ Job.16.5
+M Job.39.31 > Job.40.1 x5 : Job.40.1 < Job.39.31 ~ Job.40.1
+M Job.40.1 > Job.40.6 x27 : Job.40.6 < Job.40.1 ~ Job.40.6
+M Job.40.28 > Job.41.1 x1 : Job.41.1 < Job.40.28 ~ Job.41.9
+M Job.41.1 > Job.41.2 x25 : Job.41.2 < Job.41.1 ~ Job.41.10
+M Job.42.16 > Job.42.16 x1 : Job.42.17 < Job.42.16 ~ Job.42.17
+M Job.42.16 > Job.42.17 x1 : Job.42.17 < Job.42.16 ~ Job.42.17
+M Ps.1.0 > Ps.1.0 x7 : Ps.1.0 < Ps.1.0 ~ Ps.1.0
+M Ps.2.0 > Ps.2.0 x12 : Ps.2.0 < Ps.2.0 ~ Ps.2.0
+M Ps.2.12 > Ps.2.12 x1 : Ps.2.12 < Ps.2.13 ~ Ps.2.12
+M Ps.2.13 > Ps.2.12 x1 : Ps.2.12 < Ps.2.13 ~ Ps.2.12
+M Ps.3.0 > Ps.3.0 x10 : Ps.3.0 < Ps.3.0 ~ Ps.3.0
+M Ps.4.0 > Ps.4.0 x9 : Ps.4.0 < Ps.4.0 ~ Ps.4.0
+M Ps.4.9 > Ps.4.9 x1 : Ps.4.9 < Ps.4.10 ~ Ps.4.8
+M Ps.4.10 > Ps.4.9 x1 : Ps.4.9 < Ps.4.10 ~ Ps.4.8
+M Ps.5.0 > Ps.5.0 x14 : Ps.5.0 < Ps.5.0 ~ Ps.5.0
+M Ps.6.0 > Ps.6.0 x12 : Ps.6.0 < Ps.6.0 ~ Ps.6.0
+M Ps.7.0 > Ps.7.0 x19 : Ps.7.0 < Ps.7.0 ~ Ps.7.0
+M Ps.8.0 > Ps.8.0 x11 : Ps.8.0 < Ps.8.0 ~ Ps.8.0
+M Ps.9.0 > Ps.9.0 x22 : Ps.9.0 < Ps.9.0 ~ Ps.9.0
+M Ps.9.22 > Ps.10.0 x1 : Ps.10.1 < Ps.9.22 ~ Ps.10.1
+M Ps.9.22 > Ps.10.1 x18 : Ps.10.1 < Ps.9.22 ~ Ps.10.1
+M Ps.10.0 > Ps.11.0 x2 : Ps.11.0 < Ps.10.0 ~ Ps.11.0
+M Ps.10.2 > Ps.11.1 x1 : Ps.11.1 < Ps.10.2 ~ Ps.11.1
+M Ps.10.3 > Ps.11.2 x6 : Ps.11.2 < Ps.10.3 ~ Ps.11.2
+M Ps.11.0 > Ps.12.0 x10 : Ps.12.0 < Ps.11.0 ~ Ps.12.0
+M Ps.12.0 > Ps.13.0 x2 : Ps.13.0 < Ps.12.0 ~ Ps.13.0
+M Ps.12.1 > Ps.13.2 x1 : Ps.13.2 < Ps.12.1 ~ Ps.13.1
+M Ps.12.2 > Ps.13.3 x1 : Ps.13.3 < Ps.12.3 ~ Ps.13.2
+M Ps.12.3 > Ps.13.3 x1 : Ps.13.3 < Ps.12.3 ~ Ps.13.2
+M Ps.12.4 > Ps.13.4 x3 : Ps.13.4 < Ps.12.4 ~ Ps.13.3
+M Ps.13.0 > Ps.14.0 x8 : Ps.14.0 < Ps.13.0 ~ Ps.14.0
+M Ps.14.0 > Ps.15.0 x2 : Ps.15.0 < Ps.14.0 ~ Ps.15.0
+M Ps.14.2 > Ps.15.2 x1 : Ps.15.2 < Ps.14.3 ~ Ps.15.2
+M Ps.14.3 > Ps.15.2 x1 : Ps.15.3 < Ps.14.3 ~ Ps.15.3
+M Ps.14.3 > Ps.15.3 x1 : Ps.15.3 < Ps.14.3 ~ Ps.15.3
+M Ps.14.4 > Ps.15.4 x2 : Ps.15.4 < Ps.14.4 ~ Ps.15.4
+M Ps.15.0 > Ps.16.0 x10 : Ps.16.0 < Ps.15.0 ~ Ps.16.0
+M Ps.15.10 > Ps.16.10 x1 : Ps.16.11 < Ps.15.10 ~ Ps.16.11
+M Ps.15.10 > Ps.16.11 x1 : Ps.16.11 < Ps.15.10 ~ Ps.16.11
+M Ps.16.0 > Ps.17.0 x16 : Ps.17.0 < Ps.16.0 ~ Ps.17.0
+M Ps.17.0 > Ps.18.0 x52 : Ps.18.0 < Ps.17.0 ~ Ps.18.0
+M Ps.18.0 > Ps.19.0 x16 : Ps.19.0 < Ps.18.0 ~ Ps.19.0
+M Ps.19.0 > Ps.20.0 x11 : Ps.20.0 < Ps.19.0 ~ Ps.20.0
+M Ps.20.0 > Ps.21.0 x15 : Ps.21.0 < Ps.20.0 ~ Ps.21.0
+M Ps.21.0 > Ps.22.0 x33 : Ps.22.0 < Ps.21.0 ~ Ps.22.0
+M Ps.22.0 > Ps.23.0 x7 : Ps.23.0 < Ps.22.0 ~ Ps.23.0
+M Ps.23.0 > Ps.24.0 x11 : Ps.24.0 < Ps.23.0 ~ Ps.24.0
+M Ps.24.0 > Ps.25.0 x23 : Ps.25.0 < Ps.24.0 ~ Ps.25.0
+M Ps.25.0 > Ps.26.0 x13 : Ps.26.0 < Ps.25.0 ~ Ps.26.0
+M Ps.26.0 > Ps.27.0 x15 : Ps.27.0 < Ps.26.0 ~ Ps.27.0
+M Ps.27.0 > Ps.28.0 x10 : Ps.28.0 < Ps.27.0 ~ Ps.28.0
+M Ps.28.0 > Ps.29.0 x12 : Ps.29.0 < Ps.28.0 ~ Ps.29.0
+M Ps.29.0 > Ps.30.0 x14 : Ps.30.0 < Ps.29.0 ~ Ps.30.0
+M Ps.30.0 > Ps.31.0 x26 : Ps.31.0 < Ps.30.0 ~ Ps.31.0
+M Ps.31.0 > Ps.32.0 x12 : Ps.32.0 < Ps.31.0 ~ Ps.32.0
+M Ps.32.0 > Ps.33.0 x23 : Ps.33.0 < Ps.32.0 ~ Ps.33.0
+M Ps.33.0 > Ps.34.0 x24 : Ps.34.0 < Ps.33.0 ~ Ps.34.0
+M Ps.34.0 > Ps.35.0 x29 : Ps.35.0 < Ps.34.0 ~ Ps.35.0
+M Ps.35.0 > Ps.36.0 x14 : Ps.36.0 < Ps.35.0 ~ Ps.36.0
+M Ps.36.0 > Ps.37.0 x41 : Ps.37.0 < Ps.36.0 ~ Ps.37.0
+M Ps.37.0 > Ps.38.0 x24 : Ps.38.0 < Ps.37.0 ~ Ps.38.0
+M Ps.38.0 > Ps.39.0 x15 : Ps.39.0 < Ps.38.0 ~ Ps.39.0
+M Ps.39.0 > Ps.40.0 x19 : Ps.40.0 < Ps.39.0 ~ Ps.40.0
+M Ps.40.0 > Ps.41.0 x15 : Ps.41.0 < Ps.40.0 ~ Ps.41.0
+M Ps.41.0 > Ps.42.0 x13 : Ps.42.0 < Ps.41.0 ~ Ps.42.0
+M Ps.42.0 > Ps.43.0 x6 : Ps.43.0 < Ps.42.0 ~ Ps.43.0
+M Ps.43.0 > Ps.44.0 x22 : Ps.44.0 < Ps.43.0 ~ Ps.44.0
+M Ps.43.22 > Ps.44.22 x1 : Ps.44.23 < Ps.43.22 ~ Ps.44.22
+M Ps.43.22 > Ps.44.23 x1 : Ps.44.23 < Ps.43.22 ~ Ps.44.22
+M Ps.43.23 > Ps.44.24 x4 : Ps.44.24 < Ps.43.23 ~ Ps.44.23
+M Ps.44.0 > Ps.45.0 x19 : Ps.45.0 < Ps.44.0 ~ Ps.45.0
+M Ps.45.0 > Ps.46.0 x13 : Ps.46.0 < Ps.45.0 ~ Ps.46.0
+M Ps.46.0 > Ps.47.0 x11 : Ps.47.0 < Ps.46.0 ~ Ps.47.0
+M Ps.47.0 > Ps.48.0 x16 : Ps.48.0 < Ps.47.0 ~ Ps.48.0
+M Ps.48.0 > Ps.49.0 x22 : Ps.49.0 < Ps.48.0 ~ Ps.49.0
+M Ps.49.0 > Ps.50.0 x24 : Ps.50.0 < Ps.49.0 ~ Ps.50.0
+M Ps.50.0 > Ps.51.0 x22 : Ps.51.0 < Ps.50.0 ~ Ps.51.0
+M Ps.51.0 > Ps.52.0 x12 : Ps.52.0 < Ps.51.0 ~ Ps.52.0
+M Ps.52.0 > Ps.53.0 x8 : Ps.53.0 < Ps.52.0 ~ Ps.53.0
+M Ps.53.0 > Ps.54.0 x10 : Ps.54.0 < Ps.53.0 ~ Ps.54.0
+M Ps.54.0 > Ps.55.0 x25 : Ps.55.0 < Ps.54.0 ~ Ps.55.0
+M Ps.55.0 > Ps.56.0 x11 : Ps.56.0 < Ps.55.0 ~ Ps.56.0
+M Ps.55.11 > Ps.56.11 x1 : Ps.56.12 < Ps.55.11 ~ Ps.56.11
+M Ps.55.11 > Ps.56.12 x1 : Ps.56.12 < Ps.55.11 ~ Ps.56.11
+M Ps.55.12 > Ps.56.13 x2 : Ps.56.13 < Ps.55.12 ~ Ps.56.12
+M Ps.56.0 > Ps.57.0 x13 : Ps.57.0 < Ps.56.0 ~ Ps.57.0
+M Ps.57.0 > Ps.58.0 x13 : Ps.58.0 < Ps.57.0 ~ Ps.58.0
+M Ps.58.0 > Ps.59.0 x19 : Ps.59.0 < Ps.58.0 ~ Ps.59.0
+M Ps.59.0 > Ps.60.0 x15 : Ps.60.0 < Ps.59.0 ~ Ps.60.0
+M Ps.60.0 > Ps.61.0 x10 : Ps.61.0 < Ps.60.0 ~ Ps.61.0
+M Ps.61.0 > Ps.62.0 x14 : Ps.62.0 < Ps.61.0 ~ Ps.62.0
+M Ps.62.0 > Ps.63.0 x13 : Ps.63.0 < Ps.62.0 ~ Ps.63.0
+M Ps.63.0 > Ps.64.0 x12 : Ps.64.0 < Ps.63.0 ~ Ps.64.0
+M Ps.64.0 > Ps.65.0 x15 : Ps.65.0 < Ps.64.0 ~ Ps.65.0
+M Ps.65.0 > Ps.66.0 x21 : Ps.66.0 < Ps.65.0 ~ Ps.66.0
+M Ps.66.0 > Ps.67.0 x9 : Ps.67.0 < Ps.66.0 ~ Ps.67.0
+M Ps.67.0 > Ps.68.0 x37 : Ps.68.0 < Ps.67.0 ~ Ps.68.0
+M Ps.68.0 > Ps.69.0 x38 : Ps.69.0 < Ps.68.0 ~ Ps.69.0
+M Ps.69.0 > Ps.70.0 x7 : Ps.70.0 < Ps.69.0 ~ Ps.70.0
+M Ps.70.0 > Ps.71.0 x25 : Ps.71.0 < Ps.70.0 ~ Ps.71.0
+M Ps.71.0 > Ps.72.0 x21 : Ps.72.0 < Ps.71.0 ~ Ps.72.0
+M Ps.72.0 > Ps.73.0 x29 : Ps.73.0 < Ps.72.0 ~ Ps.73.0
+M Ps.73.0 > Ps.74.0 x24 : Ps.74.0 < Ps.73.0 ~ Ps.74.0
+M Ps.74.0 > Ps.75.0 x12 : Ps.75.0 < Ps.74.0 ~ Ps.75.0
+M Ps.75.0 > Ps.76.0 x14 : Ps.76.0 < Ps.75.0 ~ Ps.76.0
+M Ps.76.0 > Ps.77.0 x22 : Ps.77.0 < Ps.76.0 ~ Ps.77.0
+M Ps.77.0 > Ps.78.0 x73 : Ps.78.0 < Ps.77.0 ~ Ps.78.0
+M Ps.78.0 > Ps.79.0 x14 : Ps.79.0 < Ps.78.0 ~ Ps.79.0
+M Ps.79.0 > Ps.80.0 x21 : Ps.80.0 < Ps.79.0 ~ Ps.80.0
+M Ps.80.0 > Ps.81.0 x18 : Ps.81.0 < Ps.80.0 ~ Ps.81.0
+M Ps.81.0 > Ps.82.0 x9 : Ps.82.0 < Ps.81.0 ~ Ps.82.0
+M Ps.82.0 > Ps.83.0 x20 : Ps.83.0 < Ps.82.0 ~ Ps.83.0
+M Ps.83.0 > Ps.84.0 x14 : Ps.84.0 < Ps.83.0 ~ Ps.84.0
+M Ps.84.0 > Ps.85.0 x15 : Ps.85.0 < Ps.84.0 ~ Ps.85.0
+M Ps.85.0 > Ps.86.0 x18 : Ps.86.0 < Ps.85.0 ~ Ps.86.0
+M Ps.86.0 > Ps.87.0 x8 : Ps.87.0 < Ps.86.0 ~ Ps.87.0
+M Ps.87.0 > Ps.88.0 x20 : Ps.88.0 < Ps.87.0 ~ Ps.88.0
+M Ps.88.0 > Ps.89.0 x54 : Ps.89.0 < Ps.88.0 ~ Ps.89.0
+M Ps.89.0 > Ps.90.0 x18 : Ps.90.0 < Ps.89.0 ~ Ps.90.0
+M Ps.90.0 > Ps.91.0 x17 : Ps.91.0 < Ps.90.0 ~ Ps.91.0
+M Ps.91.0 > Ps.92.0 x17 : Ps.92.0 < Ps.91.0 ~ Ps.92.0
+M Ps.92.0 > Ps.93.0 x6 : Ps.93.0 < Ps.92.0 ~ Ps.93.0
+M Ps.93.0 > Ps.94.0 x24 : Ps.94.0 < Ps.93.0 ~ Ps.94.0
+M Ps.94.0 > Ps.95.0 x12 : Ps.95.0 < Ps.94.0 ~ Ps.95.0
+M Ps.95.0 > Ps.96.0 x14 : Ps.96.0 < Ps.95.0 ~ Ps.96.0
+M Ps.96.0 > Ps.97.0 x13 : Ps.97.0 < Ps.96.0 ~ Ps.97.0
+M Ps.97.0 > Ps.98.0 x10 : Ps.98.0 < Ps.97.0 ~ Ps.98.0
+M Ps.98.0 > Ps.99.0 x10 : Ps.99.0 < Ps.98.0 ~ Ps.99.0
+M Ps.99.0 > Ps.100.0 x6 : Ps.100.0 < Ps.99.0 ~ Ps.100.0
+M Ps.100.0 > Ps.101.0 x9 : Ps.101.0 < Ps.100.0 ~ Ps.101.0
+M Ps.101.0 > Ps.102.0 x30 : Ps.102.0 < Ps.101.0 ~ Ps.102.0
+M Ps.102.0 > Ps.103.0 x23 : Ps.103.0 < Ps.102.0 ~ Ps.103.0
+M Ps.103.0 > Ps.104.0 x36 : Ps.104.0 < Ps.103.0 ~ Ps.104.0
+M Ps.104.0 > Ps.105.0 x46 : Ps.105.0 < Ps.104.0 ~ Ps.105.0
+M Ps.105.0 > Ps.106.0 x49 : Ps.106.0 < Ps.105.0 ~ Ps.106.0
+M Ps.106.0 > Ps.107.0 x44 : Ps.107.0 < Ps.106.0 ~ Ps.107.0
+M Ps.107.0 > Ps.108.0 x15 : Ps.108.0 < Ps.107.0 ~ Ps.108.0
+M Ps.108.0 > Ps.109.0 x32 : Ps.109.0 < Ps.108.0 ~ Ps.109.0
+M Ps.109.0 > Ps.110.0 x8 : Ps.110.0 < Ps.109.0 ~ Ps.110.0
+M Ps.110.0 > Ps.111.0 x11 : Ps.111.0 < Ps.110.0 ~ Ps.111.0
+M Ps.111.0 > Ps.112.0 x11 : Ps.112.0 < Ps.111.0 ~ Ps.112.0
+M Ps.112.0 > Ps.113.0 x10 : Ps.113.0 < Ps.112.0 ~ Ps.113.0
+M Ps.113.0 > Ps.114.0 x9 : Ps.114.0 < Ps.113.0 ~ Ps.114.0
+M Ps.113.9 > Ps.115.0 x1 : Ps.115.1 < Ps.113.9 ~ Ps.115.1
+M Ps.113.9 > Ps.115.1 x18 : Ps.115.1 < Ps.113.9 ~ Ps.115.1
+M Ps.114.1 > Ps.116.1 x9 : Ps.116.1 < Ps.114.1 ~ Ps.116.1
+M Ps.115.10 > Ps.116.10 x10 : Ps.116.10 < Ps.115.10 ~ Ps.116.10
+M Ps.116.0 > Ps.117.0 x3 : Ps.117.0 < Ps.116.0 ~ Ps.117.0
+M Ps.117.0 > Ps.118.0 x30 : Ps.118.0 < Ps.117.0 ~ Ps.118.0
+M Ps.118.0 > Ps.119.0 x177 : Ps.119.0 < Ps.118.0 ~ Ps.119.0
+M Ps.119.0 > Ps.120.0 x8 : Ps.120.0 < Ps.119.0 ~ Ps.120.0
+M Ps.120.0 > Ps.121.0 x9 : Ps.121.0 < Ps.120.0 ~ Ps.121.0
+M Ps.121.0 > Ps.122.0 x10 : Ps.122.0 < Ps.121.0 ~ Ps.122.0
+M Ps.122.0 > Ps.123.0 x5 : Ps.123.0 < Ps.122.0 ~ Ps.123.0
+M Ps.123.0 > Ps.124.0 x9 : Ps.124.0 < Ps.123.0 ~ Ps.124.0
+M Ps.124.0 > Ps.125.0 x6 : Ps.125.0 < Ps.124.0 ~ Ps.125.0
+M Ps.125.0 > Ps.126.0 x7 : Ps.126.0 < Ps.125.0 ~ Ps.126.0
+M Ps.126.0 > Ps.127.0 x6 : Ps.127.0 < Ps.126.0 ~ Ps.127.0
+M Ps.127.0 > Ps.128.0 x7 : Ps.128.0 < Ps.127.0 ~ Ps.128.0
+M Ps.128.0 > Ps.129.0 x9 : Ps.129.0 < Ps.128.0 ~ Ps.129.0
+M Ps.129.0 > Ps.130.0 x9 : Ps.130.0 < Ps.129.0 ~ Ps.130.0
+M Ps.130.0 > Ps.131.0 x4 : Ps.131.0 < Ps.130.0 ~ Ps.131.0
+M Ps.131.0 > Ps.132.0 x19 : Ps.132.0 < Ps.131.0 ~ Ps.132.0
+M Ps.132.0 > Ps.133.0 x4 : Ps.133.0 < Ps.132.0 ~ Ps.133.0
+M Ps.133.0 > Ps.134.0 x4 : Ps.134.0 < Ps.133.0 ~ Ps.134.0
+M Ps.134.0 > Ps.135.0 x22 : Ps.135.0 < Ps.134.0 ~ Ps.135.0
+M Ps.135.0 > Ps.136.0 x27 : Ps.136.0 < Ps.135.0 ~ Ps.136.0
+M Ps.136.0 > Ps.137.0 x10 : Ps.137.0 < Ps.136.0 ~ Ps.137.0
+M Ps.137.0 > Ps.138.0 x9 : Ps.138.0 < Ps.137.0 ~ Ps.138.0
+M Ps.138.0 > Ps.139.0 x25 : Ps.139.0 < Ps.138.0 ~ Ps.139.0
+M Ps.139.0 > Ps.140.0 x15 : Ps.140.0 < Ps.139.0 ~ Ps.140.0
+M Ps.140.0 > Ps.141.0 x11 : Ps.141.0 < Ps.140.0 ~ Ps.141.0
+M Ps.141.0 > Ps.142.0 x9 : Ps.142.0 < Ps.141.0 ~ Ps.142.0
+M Ps.142.0 > Ps.143.0 x13 : Ps.143.0 < Ps.142.0 ~ Ps.143.0
+M Ps.143.0 > Ps.144.0 x16 : Ps.144.0 < Ps.143.0 ~ Ps.144.0
+M Ps.144.0 > Ps.145.0 x22 : Ps.145.0 < Ps.144.0 ~ Ps.145.0
+M Ps.145.0 > Ps.146.0 x2 : Ps.146.0 < Ps.145.0 ~ Ps.146.0
+M Ps.145.2 > Ps.146.1 x1 : Ps.146.2 < Ps.145.2 ~ Ps.146.2
+M Ps.145.2 > Ps.146.2 x1 : Ps.146.2 < Ps.145.2 ~ Ps.146.2
+M Ps.145.3 > Ps.146.3 x8 : Ps.146.3 < Ps.145.3 ~ Ps.146.3
+M Ps.146.0 > Ps.147.0 x12 : Ps.147.0 < Ps.146.0 ~ Ps.147.0
+M Ps.147.12 > Ps.147.12 x9 : Ps.147.12 < Ps.147.12 ~ Ps.147.12
+M Ps.148.0 > Ps.148.0 x15 : Ps.148.0 < Ps.148.0 ~ Ps.148.0
+M Ps.149.0 > Ps.149.0 x10 : Ps.149.0 < Ps.149.0 ~ Ps.149.0
+M Ps.150.0 > Ps.150.0 x7 : Ps.150.0 < Ps.150.0 ~ Ps.150.0
+M Eccl.7.1 > Eccl.6.12 x1 : Eccl.6.12 < Eccl.7.1 ~ Eccl.6.12
+M Eccl.7.2 > Eccl.7.1 x29 : Eccl.7.1 < Eccl.7.2 ~ Eccl.7.1
+M Song.1.1 > Song.1.1 x1 : Song.1.2 < Song.1.1 ~ Song.1.2
+M Song.1.1 > Song.1.2 x16 : Song.1.2 < Song.1.1 ~ Song.1.2
+M Song.5.17 > Song.6.1 x1 : Song.6.1 < Song.5.17 ~ Song.6.1
+M Song.6.1 > Song.6.2 x11 : Song.6.2 < Song.6.1 ~ Song.6.2
+M Song.6.12 > Song.7.1 x1 : Song.7.1 < Song.7.1 ~ Song.6.13
+M Song.7.1 > Song.7.1 x1 : Song.7.2 < Song.7.1 ~ Song.7.1
+M Song.7.1 > Song.7.2 x1 : Song.7.2 < Song.7.1 ~ Song.7.1
+M Song.7.2 > Song.7.3 x12 : Song.7.3 < Song.7.2 ~ Song.7.2
+M Isa.8.22 > Isa.8.22 x1 : Isa.8.23 < Isa.8.22 ~ Isa.9.1
+M Isa.8.22 > Isa.8.23 x1 : Isa.8.23 < Isa.9.1 ~ Isa.9.1
+M Isa.9.1 > Isa.8.23 x1 : Isa.8.23 < Isa.9.1 ~ Isa.9.1
+M Isa.9.2 > Isa.9.1 x20 : Isa.9.1 < Isa.9.2 ~ Isa.9.2
+M Isa.9.20 > Isa.9.19 x1 : Isa.9.20 < Isa.9.20 ~ Isa.9.21
+M Isa.9.20 > Isa.9.20 x1 : Isa.9.20 < Isa.9.21 ~ Isa.9.21
+M Isa.9.21 > Isa.9.20 x1 : Isa.9.20 < Isa.9.21 ~ Isa.9.21
+M Isa.63.19 > Isa.63.19 x1 : Isa.63.19 < Isa.64.1 ~ Isa.63.19
+M Isa.64.1 > Isa.63.19 x1 : Isa.63.19 < Isa.64.1 ~ Isa.63.19
+M Isa.64.2 > Isa.64.1 x11 : Isa.64.1 < Isa.64.2 ~ Isa.64.2
+M Jer.9.1 > Jer.8.23 x1 : Jer.8.23 < Jer.9.1 ~ Jer.9.1
+M Jer.9.2 > Jer.9.1 x25 : Jer.9.1 < Jer.9.2 ~ Jer.9.2
+M Jer.37.4 > Jer.37.4 x1 : Jer.37.5 < Jer.37.4 ~ Jer.37.5
+M Jer.37.4 > Jer.37.5 x1 : Jer.37.5 < Jer.37.4 ~ Jer.37.5
+M Jer.37.5 > Jer.37.6 x16 : Jer.37.6 < Jer.37.5 ~ Jer.37.6
+M Ezek.2.9 > Ezek.2.9 x1 : Ezek.2.10 < Ezek.2.9 ~ Ezek.2.10
+M Ezek.2.9 > Ezek.2.10 x1 : Ezek.2.10 < Ezek.2.9 ~ Ezek.2.10
+M Ezek.20.45 > Ezek.21.1 x5 : Ezek.21.1 < Ezek.20.45 ~ Ezek.20.45
+M Ezek.21.1 > Ezek.21.6 x32 : Ezek.21.6 < Ezek.21.1 ~ Ezek.21.1
+M Dan.3.24 > PrAzar.1.1 x67 : PrAzar.1.1 < DanGr.3.24 ~ PrAzar.1.1
+M Dan.3.91 > Dan.3.24 x10 : Dan.3.24 < DanGr.3.91 ~ Dan.3.24
+M Dan.5.31 > Dan.6.1 x1 : Dan.6.1 < DanGr.6.1 ~ Dan.5.31
+M Dan.6.1 > Dan.6.2 x28 : Dan.6.2 < DanGr.6.2 ~ Dan.6.1
+M Dan.13.1 > Sus.1.1 x64 : Sus.1.1 < Dan.13.1 ~ DanGr.13.1
+M Dan.13.65 > Bel.1.1 x1 : Bel.1.1 < Dan.14.1 ~ DanGr.14.1
+M Dan.14.1 > Bel.1.1 x1 : Bel.1.1 < Dan.14.1 ~ DanGr.14.1
+M Dan.14.2 > Bel.1.2 x40 : Bel.1.2 < Dan.14.2 ~ DanGr.14.2
+M Hos.1.10 > Hos.2.1 x2 : Hos.2.1 < Hos.1.10 ~ Hos.1.10
+M Hos.2.1 > Hos.2.3 x22 : Hos.2.3 < Hos.2.1 ~ Hos.2.1
+M Hos.2.23 > Hos.2.25 x1 : Hos.2.25 < Hos.2.24 ~ Hos.2.23
+M Hos.2.24 > Hos.2.25 x1 : Hos.2.25 < Hos.2.24 ~ Hos.2.23
+M Hos.11.12 > Hos.12.1 x1 : Hos.12.1 < Hos.11.12 ~ Hos.11.12
+M Hos.12.1 > Hos.12.2 x14 : Hos.12.2 < Hos.12.1 ~ Hos.12.1
+M Joel.2.28 > Joel.3.1 x5 : Joel.3.1 < Joel.2.28 ~ Joel.2.28
+M Joel.3.1 > Joel.4.1 x21 : Joel.4.1 < Joel.3.1 ~ Joel.3.1
+M Amos.6.10 > Amos.6.10 x1 : Amos.6.10 < Amos.6.11 ~ Amos.6.10
+M Amos.6.11 > Amos.6.10 x1 : Amos.6.10 < Amos.6.11 ~ Amos.6.10
+M Amos.6.12 > Amos.6.11 x4 : Amos.6.11 < Amos.6.12 ~ Amos.6.11
+M Mic.5.1 > Mic.4.14 x1 : Mic.4.14 < Mic.5.1 ~ Mic.5.1
+M Mic.5.2 > Mic.5.1 x9 : Mic.5.1 < Mic.5.2 ~ Mic.5.2
+M Mic.5.11 > Mic.5.10 x1 : Mic.5.11 < Mic.5.11 ~ Mic.5.12
+M Mic.5.11 > Mic.5.11 x1 : Mic.5.11 < Mic.5.11 ~ Mic.5.12
+M Jonah.1.17 > Jonah.2.1 x1 : Jonah.2.1 < Jonah.1.17 ~ Jonah.1.17
+M Jonah.2.1 > Jonah.2.2 x10 : Jonah.2.2 < Jonah.2.1 ~ Jonah.2.1
+M Nah.1.15 > Nah.2.1 x1 : Nah.2.1 < Nah.1.15 ~ Nah.1.15
+M Nah.2.1 > Nah.2.2 x13 : Nah.2.2 < Nah.2.1 ~ Nah.2.1
+M Hag.2.1 > Hag.1.15 x1 : Hag.1.15 < Hag.2.1 ~ Hag.1.15
+M Hag.2.2 > Hag.2.1 x23 : Hag.2.1 < Hag.2.2 ~ Hag.2.1
+M Zech.1.18 > Zech.2.1 x4 : Zech.2.1 < Zech.1.18 ~ Zech.1.18
+M Zech.2.1 > Zech.2.5 x13 : Zech.2.5 < Zech.2.1 ~ Zech.2.1
+M Mal.4.1 > Mal.3.19 x6 : Mal.3.19 < Mal.4.1 ~ Mal.4.1
+M Matt.17.15 > Matt.17.16 x12 : Matt.17.16 < Matt.17.15 ~ Matt.17.16
+M Mark.4.40 > Mark.4.40 x1 : Mark.4.41 < Mark.4.40 ~ Mark.4.41
+M Mark.4.40 > Mark.4.41 x1 : Mark.4.41 < Mark.4.40 ~ Mark.4.41
+M Mark.8.39 > Mark.9.1 x1 : Mark.9.1 < Mark.8.39 ~ Mark.9.1
+M Mark.9.1 > Mark.9.2 x49 : Mark.9.2 < Mark.9.1 ~ Mark.9.2
+M John.6.51 > John.6.51 x1 : John.6.51 < John.6.52 ~ John.6.51
+M John.6.52 > John.6.51 x1 : John.6.51 < John.6.52 ~ John.6.51
+M John.6.53 > John.6.52 x20 : John.6.52 < John.6.53 ~ John.6.52
+M Acts.7.55 > Acts.7.55 x1 : Acts.7.56 < Acts.7.55 ~ Acts.7.56
+M Acts.7.55 > Acts.7.56 x1 : Acts.7.56 < Acts.7.55 ~ Acts.7.56
+M Acts.7.56 > Acts.7.57 x4 : Acts.7.57 < Acts.7.56 ~ Acts.7.57
+M Acts.14.6 > Acts.14.6 x1 : Acts.14.7 < Acts.14.6 ~ Acts.14.7
+M Acts.14.6 > Acts.14.7 x1 : Acts.14.7 < Acts.14.6 ~ Acts.14.7
+M Acts.14.7 > Acts.14.8 x21 : Acts.14.8 < Acts.14.7 ~ Acts.14.8
+M Wis.2.24 > Wis.2.24 x1 : Wis.2.24 < Wis.2.25 ~ Wis.2.24
+M Wis.2.25 > Wis.2.24 x1 : Wis.2.24 < Wis.2.25 ~ Wis.2.24
+M Wis.5.13 > Wis.5.13 x1 : Wis.5.13 < Wis.5.14 ~ Wis.5.13
+M Wis.5.14 > Wis.5.13 x1 : Wis.5.13 < Wis.5.14 ~ Wis.5.13
+M Wis.5.15 > Wis.5.14 x10 : Wis.5.14 < Wis.5.15 ~ Wis.5.14
+M Wis.6.2 > Wis.6.1 x20 : Wis.6.1 < Wis.6.2 ~ Wis.6.1
+M Wis.6.22 > Wis.6.21 x1 : Wis.6.21 < Wis.6.23 ~ Wis.6.21
+M Wis.6.23 > Wis.6.21 x1 : Wis.6.21 < Wis.6.23 ~ Wis.6.21
+M Wis.6.24 > Wis.6.22 x4 : Wis.6.22 < Wis.6.24 ~ Wis.6.22
+M Wis.9.18 > Wis.9.18 x1 : Wis.9.18 < Wis.9.19 ~ Wis.9.18
+M Wis.9.19 > Wis.9.18 x1 : Wis.9.18 < Wis.9.19 ~ Wis.9.18
+M Wis.11.5 > Wis.11.5 x1 : Wis.11.5 < Wis.11.6 ~ Wis.11.5
+M Wis.11.6 > Wis.11.5 x1 : Wis.11.5 < Wis.11.6 ~ Wis.11.5
+M Wis.11.7 > Wis.11.6 x21 : Wis.11.6 < Wis.11.7 ~ Wis.11.6
+M Wis.19.12 > Wis.19.12 x1 : Wis.19.13 < Wis.19.12 ~ Wis.19.13
+M Wis.19.12 > Wis.19.13 x1 : Wis.19.13 < Wis.19.12 ~ Wis.19.13
+M Wis.19.13 > Wis.19.14 x7 : Wis.19.14 < Wis.19.13 ~ Wis.19.14
+M Wis.19.20 > Wis.19.21 x1 : Wis.19.22 < Wis.19.20 ~ Wis.19.22
+M Wis.19.20 > Wis.19.22 x1 : Wis.19.22 < Wis.19.20 ~ Wis.19.22
+M Bar.6.1 > EpJer.1.1 x72 : EpJer.1.1 < Bar.6.1 ~ Bar.6.1
+M 1Macc.1.4 > 1Macc.1.4 x1 : 1Macc.1.4 < 1Macc.1.5 ~ 1Macc.1.4
+M 1Macc.1.5 > 1Macc.1.4 x1 : 1Macc.1.4 < 1Macc.1.5 ~ 1Macc.1.4
+M 1Macc.1.6 > 1Macc.1.5 x26 : 1Macc.1.5 < 1Macc.1.6 ~ 1Macc.1.5
+M 1Macc.1.31 > 1Macc.1.30 x1 : 1Macc.1.30 < 1Macc.1.32 ~ 1Macc.1.30
+M 1Macc.1.32 > 1Macc.1.30 x1 : 1Macc.1.30 < 1Macc.1.32 ~ 1Macc.1.30
+M 1Macc.1.33 > 1Macc.1.31 x3 : 1Macc.1.31 < 1Macc.1.33 ~ 1Macc.1.31
+M 1Macc.1.36 > 1Macc.1.34 x1 : 1Macc.1.35 < 1Macc.1.36 ~ 1Macc.1.35
+M 1Macc.1.36 > 1Macc.1.35 x1 : 1Macc.1.35 < 1Macc.1.37 ~ 1Macc.1.35
+M 1Macc.1.37 > 1Macc.1.35 x1 : 1Macc.1.35 < 1Macc.1.37 ~ 1Macc.1.35
+M 1Macc.1.38 > 1Macc.1.36 x9 : 1Macc.1.36 < 1Macc.1.38 ~ 1Macc.1.36
+M 1Macc.1.47 > 1Macc.1.45 x1 : 1Macc.1.45 < 1Macc.1.48 ~ 1Macc.1.45
+M 1Macc.1.48 > 1Macc.1.45 x1 : 1Macc.1.45 < 1Macc.1.48 ~ 1Macc.1.45
+M 1Macc.1.49 > 1Macc.1.46 x19 : 1Macc.1.46 < 1Macc.1.49 ~ 1Macc.1.46
+M 1Macc.12.53 > 1Macc.12.53 x1 : 1Macc.12.53 < 1Macc.12.54 ~ 1Macc.12.53
+M 1Macc.12.54 > 1Macc.12.53 x1 : 1Macc.12.53 < 1Macc.12.54 ~ 1Macc.12.53
+M 1Macc.13.52 > 1Macc.13.52 x1 : 1Macc.13.52 < 1Macc.13.53 ~ 1Macc.13.52
+M 1Macc.13.53 > 1Macc.13.52 x1 : 1Macc.13.52 < 1Macc.13.53 ~ 1Macc.13.52
+M 1Macc.13.54 > 1Macc.13.53 x1 : 1Macc.13.53 < 1Macc.13.54 ~ 1Macc.13.53
+M 2Macc.2.18 > 2Macc.2.18 x1 : 2Macc.2.18 < 2Macc.2.19 ~ 2Macc.2.18
+M 2Macc.2.19 > 2Macc.2.18 x1 : 2Macc.2.18 < 2Macc.2.19 ~ 2Macc.2.18
+M 2Macc.2.20 > 2Macc.2.19 x14 : 2Macc.2.19 < 2Macc.2.20 ~ 2Macc.2.19
+M 2Macc.12.45 > 2Macc.12.45 x1 : 2Macc.12.45 < 2Macc.12.46 ~ 2Macc.12.45
+M 2Macc.12.46 > 2Macc.12.45 x1 : 2Macc.12.45 < 2Macc.12.46 ~ 2Macc.12.45
+M 2Macc.15.36 > 2Macc.15.36 x1 : 2Macc.15.36 < 2Macc.15.37 ~ 2Macc.15.36
+M 2Macc.15.37 > 2Macc.15.36 x1 : 2Macc.15.36 < 2Macc.15.37 ~ 2Macc.15.36
+M 2Macc.15.38 > 2Macc.15.37 x3 : 2Macc.15.37 < 2Macc.15.38 ~ 2Macc.15.37
+M 1Esd.1.4 > 1Esd.1.3 x1 : 1Esd.1.4 < 1Esd.1.4 ~ 1Esd.1.4
+M 1Esd.1.4 > 1Esd.1.4 x1 : 1Esd.1.4 < 1Esd.1.5 ~ 1Esd.1.4
+M 1Esd.1.5 > 1Esd.1.4 x1 : 1Esd.1.5 < 1Esd.1.5 ~ 1Esd.1.5
+M 1Esd.1.5 > 1Esd.1.5 x1 : 1Esd.1.5 < 1Esd.1.5 ~ 1Esd.1.5
+M 1Esd.1.10 > 1Esd.1.10 x1 : 1Esd.1.11 < 1Esd.1.10 ~ 1Esd.1.11
+M 1Esd.1.10 > 1Esd.1.11 x1 : 1Esd.1.11 < 1Esd.1.10 ~ 1Esd.1.11
+M 1Esd.1.11 > 1Esd.1.12 x1 : 1Esd.1.12 < 1Esd.1.11 ~ 1Esd.1.12
+M 1Esd.1.12 > 1Esd.1.13 x1 : 1Esd.1.13 < 1Esd.1.13 ~ 1Esd.1.13
+M 1Esd.1.13 > 1Esd.1.13 x1 : 1Esd.1.14 < 1Esd.1.13 ~ 1Esd.1.14
+M 1Esd.1.13 > 1Esd.1.14 x1 : 1Esd.1.14 < 1Esd.1.14 ~ 1Esd.1.14
+M 1Esd.1.14 > 1Esd.1.14 x1 : 1Esd.1.14 < 1Esd.1.14 ~ 1Esd.1.14
+M 1Esd.1.15 > 1Esd.1.15 x1 : 1Esd.1.15 < 1Esd.1.16 ~ 1Esd.1.15
+M 1Esd.1.16 > 1Esd.1.15 x1 : 1Esd.1.15 < 1Esd.1.16 ~ 1Esd.1.15
+M 1Esd.1.17 > 1Esd.1.16 x1 : 1Esd.1.16 < 1Esd.1.18 ~ 1Esd.1.16
+M 1Esd.1.18 > 1Esd.1.16 x1 : 1Esd.1.16 < 1Esd.1.18 ~ 1Esd.1.16
+M 1Esd.1.19 > 1Esd.1.17 x32 : 1Esd.1.17 < 1Esd.1.19 ~ 1Esd.1.17
+M 1Esd.1.51 > 1Esd.1.49 x1 : 1Esd.1.49 < 1Esd.1.52 ~ 1Esd.1.49
+M 1Esd.1.52 > 1Esd.1.49 x1 : 1Esd.1.49 < 1Esd.1.52 ~ 1Esd.1.49
+M 1Esd.1.53 > 1Esd.1.50 x6 : 1Esd.1.50 < 1Esd.1.53 ~ 1Esd.1.50
+M 1Esd.2.1 > 1Esd.2.1 x1 : 1Esd.2.1 < 1Esd.2.2 ~ 1Esd.2.1
+M 1Esd.2.2 > 1Esd.2.1 x1 : 1Esd.2.1 < 1Esd.2.2 ~ 1Esd.2.1
+M 1Esd.2.3 > 1Esd.2.2 x1 : 1Esd.2.2 < 1Esd.2.4 ~ 1Esd.2.2
+M 1Esd.2.4 > 1Esd.2.2 x1 : 1Esd.2.2 < 1Esd.2.4 ~ 1Esd.2.2
+M 1Esd.2.5 > 1Esd.2.3 x1 : 1Esd.2.3 < 1Esd.2.5 ~ 1Esd.2.3
+M 1Esd.2.6 > 1Esd.2.4 x1 : 1Esd.2.4 < 1Esd.2.7 ~ 1Esd.2.4
+M 1Esd.2.7 > 1Esd.2.4 x1 : 1Esd.2.4 < 1Esd.2.7 ~ 1Esd.2.4
+M 1Esd.2.8 > 1Esd.2.5 x1 : 1Esd.2.5 < 1Esd.2.8 ~ 1Esd.2.5
+M 1Esd.2.9 > 1Esd.2.6 x1 : 1Esd.2.6 < 1Esd.2.9 ~ 1Esd.2.6
+M 1Esd.2.10 > 1Esd.2.7 x1 : 1Esd.2.7 < 1Esd.2.10 ~ 1Esd.2.7
+M 1Esd.2.11 > 1Esd.2.8 x1 : 1Esd.2.8 < 1Esd.2.12 ~ 1Esd.2.8
+M 1Esd.2.12 > 1Esd.2.8 x1 : 1Esd.2.8 < 1Esd.2.12 ~ 1Esd.2.8
+M 1Esd.2.13 > 1Esd.2.9 x1 : 1Esd.2.10 < 1Esd.2.13 ~ 1Esd.2.10
+M 1Esd.2.13 > 1Esd.2.10 x1 : 1Esd.2.10 < 1Esd.2.13 ~ 1Esd.2.10
+M 1Esd.2.14 > 1Esd.2.11 x1 : 1Esd.2.11 < 1Esd.2.15 ~ 1Esd.2.11
+M 1Esd.2.15 > 1Esd.2.11 x1 : 1Esd.2.11 < 1Esd.2.15 ~ 1Esd.2.11
+M 1Esd.2.16 > 1Esd.2.12 x4 : 1Esd.2.12 < 1Esd.2.16 ~ 1Esd.2.12
+M 1Esd.2.20 > 1Esd.2.16 x1 : 1Esd.2.16 < 1Esd.2.21 ~ 1Esd.2.16
+M 1Esd.2.21 > 1Esd.2.16 x1 : 1Esd.2.16 < 1Esd.2.21 ~ 1Esd.2.16
+M 1Esd.2.22 > 1Esd.2.17 x1 : 1Esd.2.17 < 1Esd.2.23 ~ 1Esd.2.17
+M 1Esd.2.23 > 1Esd.2.17 x1 : 1Esd.2.17 < 1Esd.2.23 ~ 1Esd.2.17
+M 1Esd.2.24 > 1Esd.2.18 x1 : 1Esd.2.18 < 1Esd.2.24 ~ 1Esd.2.18
+M 1Esd.2.25 > 1Esd.2.19 x1 : 1Esd.2.19 < 1Esd.2.25 ~ 1Esd.2.19
+M 1Esd.2.26 > 1Esd.2.20 x1 : 1Esd.2.21 < 1Esd.2.26 ~ 1Esd.2.21
+M 1Esd.2.26 > 1Esd.2.21 x1 : 1Esd.2.21 < 1Esd.2.27 ~ 1Esd.2.21
+M 1Esd.2.27 > 1Esd.2.21 x1 : 1Esd.2.22 < 1Esd.2.27 ~ 1Esd.2.22
+M 1Esd.2.27 > 1Esd.2.22 x1 : 1Esd.2.22 < 1Esd.2.27 ~ 1Esd.2.22
+M 1Esd.2.28 > 1Esd.2.23 x1 : 1Esd.2.23 < 1Esd.2.28 ~ 1Esd.2.23
+M 1Esd.2.29 > 1Esd.2.24 x1 : 1Esd.2.24 < 1Esd.2.29 ~ 1Esd.2.24
+M 1Esd.2.30 > 1Esd.2.25 x1 : 1Esd.2.26 < 1Esd.2.30 ~ 1Esd.2.26
+M 1Esd.2.30 > 1Esd.2.26 x1 : 1Esd.2.26 < 1Esd.2.30 ~ 1Esd.2.26
+M 1Esd.3.14 > 1Esd.3.14 x1 : 1Esd.3.14 < 1Esd.3.15 ~ 1Esd.3.14
+M 1Esd.3.15 > 1Esd.3.14 x1 : 1Esd.3.14 < 1Esd.3.15 ~ 1Esd.3.14
+M 1Esd.3.16 > 1Esd.3.15 x1 : 1Esd.3.15 < 1Esd.3.16 ~ 1Esd.3.15
+M 1Esd.3.17 > 1Esd.3.16 x1 : 1Esd.3.17 < 1Esd.3.17 ~ 1Esd.3.17
+M 1Esd.3.17 > 1Esd.3.17 x1 : 1Esd.3.17 < 1Esd.3.17 ~ 1Esd.3.17
+M 1Esd.4.10 > 1Esd.4.10 x1 : 1Esd.4.11 < 1Esd.4.10 ~ 1Esd.4.11
+M 1Esd.4.10 > 1Esd.4.11 x1 : 1Esd.4.11 < 1Esd.4.11 ~ 1Esd.4.11
+M 1Esd.4.11 > 1Esd.4.11 x1 : 1Esd.4.11 < 1Esd.4.11 ~ 1Esd.4.11
+M 1Esd.4.33 > 1Esd.4.33 x1 : 1Esd.4.34 < 1Esd.4.33 ~ 1Esd.4.34
+M 1Esd.4.33 > 1Esd.4.34 x1 : 1Esd.4.34 < 1Esd.4.33 ~ 1Esd.4.34
+M 1Esd.4.39 > 1Esd.4.39 x1 : 1Esd.4.39 < 1Esd.4.40 ~ 1Esd.4.39
+M 1Esd.4.40 > 1Esd.4.39 x1 : 1Esd.4.40 < 1Esd.4.40 ~ 1Esd.4.40
+M 1Esd.4.40 > 1Esd.4.40 x1 : 1Esd.4.40 < 1Esd.4.40 ~ 1Esd.4.40
+M 1Esd.5.41 > 1Esd.5.41 x1 : 1Esd.5.41 < 1Esd.5.42 ~ 1Esd.5.41
+M 1Esd.5.42 > 1Esd.5.41 x1 : 1Esd.5.41 < 1Esd.5.42 ~ 1Esd.5.41
+M 1Esd.5.43 > 1Esd.5.42 x11 : 1Esd.5.42 < 1Esd.5.43 ~ 1Esd.5.42
+M 1Esd.5.54 > 1Esd.5.53 x1 : 1Esd.5.53 < 1Esd.5.55 ~ 1Esd.5.53
+M 1Esd.5.55 > 1Esd.5.53 x1 : 1Esd.5.53 < 1Esd.5.55 ~ 1Esd.5.53
+M 1Esd.5.56 > 1Esd.5.54 x1 : 1Esd.5.54 < 1Esd.5.56 ~ 1Esd.5.54
+M 1Esd.5.57 > 1Esd.5.55 x1 : 1Esd.5.55 < 1Esd.5.57 ~ 1Esd.5.55
+M 1Esd.5.58 > 1Esd.5.56 x1 : 1Esd.5.57 < 1Esd.5.58 ~ 1Esd.5.57
+M 1Esd.5.58 > 1Esd.5.57 x1 : 1Esd.5.57 < 1Esd.5.60 ~ 1Esd.5.57
+M 1Esd.5.59 > 1Esd.5.57 x1 : 1Esd.5.57 < 1Esd.5.60 ~ 1Esd.5.57
+M 1Esd.5.60 > 1Esd.5.57 x1 : 1Esd.5.57 < 1Esd.5.60 ~ 1Esd.5.57
+M 1Esd.5.61 > 1Esd.5.58 x12 : 1Esd.5.58 < 1Esd.5.61 ~ 1Esd.5.58
+M 1Esd.5.73 > 1Esd.5.70 x1 : 1Esd.5.71 < 1Esd.5.73 ~ 1Esd.5.71
+M 1Esd.5.73 > 1Esd.5.71 x1 : 1Esd.5.71 < 1Esd.5.73 ~ 1Esd.5.71
+M 1Esd.6.8 > 1Esd.6.8 x1 : 1Esd.6.8 < 1Esd.6.9 ~ 1Esd.6.8
+M 1Esd.6.9 > 1Esd.6.8 x1 : 1Esd.6.8 < 1Esd.6.9 ~ 1Esd.6.8
+M 1Esd.6.10 > 1Esd.6.9 x25 : 1Esd.6.9 < 1Esd.6.10 ~ 1Esd.6.9
+M 1Esd.8.5 > 1Esd.8.5 x1 : 1Esd.8.5 < 1Esd.8.6 ~ 1Esd.8.5
+M 1Esd.8.6 > 1Esd.8.5 x1 : 1Esd.8.6 < 1Esd.8.6 ~ 1Esd.8.6
+M 1Esd.8.6 > 1Esd.8.6 x1 : 1Esd.8.6 < 1Esd.8.6 ~ 1Esd.8.6
+M 1Esd.8.13 > 1Esd.8.13 x1 : 1Esd.8.13 < 1Esd.8.14 ~ 1Esd.8.13
+M 1Esd.8.14 > 1Esd.8.13 x1 : 1Esd.8.14 < 1Esd.8.14 ~ 1Esd.8.14
+M 1Esd.8.14 > 1Esd.8.14 x1 : 1Esd.8.14 < 1Esd.8.14 ~ 1Esd.8.14
+M 1Esd.8.19 > 1Esd.8.19 x1 : 1Esd.8.19 < 1Esd.8.20 ~ 1Esd.8.19
+M 1Esd.8.20 > 1Esd.8.19 x1 : 1Esd.8.20 < 1Esd.8.20 ~ 1Esd.8.20
+M 1Esd.8.20 > 1Esd.8.20 x1 : 1Esd.8.20 < 1Esd.8.20 ~ 1Esd.8.20
+M 1Esd.8.43 > 1Esd.8.43 x1 : 1Esd.8.43 < 1Esd.8.44 ~ 1Esd.8.43
+M 1Esd.8.44 > 1Esd.8.43 x1 : 1Esd.8.43 < 1Esd.8.44 ~ 1Esd.8.43
+M 1Esd.8.45 > 1Esd.8.44 x5 : 1Esd.8.44 < 1Esd.8.45 ~ 1Esd.8.44
+M 1Esd.8.50 > 1Esd.8.49 x1 : 1Esd.8.50 < 1Esd.8.50 ~ 1Esd.8.50
+M 1Esd.8.50 > 1Esd.8.50 x1 : 1Esd.8.50 < 1Esd.8.50 ~ 1Esd.8.50
+M 1Esd.8.56 > 1Esd.8.56 x1 : 1Esd.8.56 < 1Esd.8.57 ~ 1Esd.8.56
+M 1Esd.8.57 > 1Esd.8.56 x1 : 1Esd.8.56 < 1Esd.8.57 ~ 1Esd.8.56
+M 1Esd.8.58 > 1Esd.8.57 x5 : 1Esd.8.57 < 1Esd.8.58 ~ 1Esd.8.57
+M 1Esd.8.63 > 1Esd.8.62 x1 : 1Esd.8.62 < 1Esd.8.64 ~ 1Esd.8.62
+M 1Esd.8.64 > 1Esd.8.62 x1 : 1Esd.8.62 < 1Esd.8.64 ~ 1Esd.8.62
+M 1Esd.8.65 > 1Esd.8.63 x1 : 1Esd.8.63 < 1Esd.8.66 ~ 1Esd.8.63
+M 1Esd.8.66 > 1Esd.8.63 x1 : 1Esd.8.63 < 1Esd.8.66 ~ 1Esd.8.63
+M 1Esd.8.67 > 1Esd.8.64 x19 : 1Esd.8.64 < 1Esd.8.67 ~ 1Esd.8.64
+M 1Esd.8.86 > 1Esd.8.83 x1 : 1Esd.8.84 < 1Esd.8.86 ~ 1Esd.8.84
+M 1Esd.8.86 > 1Esd.8.84 x1 : 1Esd.8.84 < 1Esd.8.87 ~ 1Esd.8.84
+M 1Esd.8.87 > 1Esd.8.84 x1 : 1Esd.8.84 < 1Esd.8.87 ~ 1Esd.8.84
+M 1Esd.8.88 > 1Esd.8.85 x5 : 1Esd.8.85 < 1Esd.8.88 ~ 1Esd.8.85
+M 1Esd.8.93 > 1Esd.8.90 x1 : 1Esd.8.90 < 1Esd.8.94 ~ 1Esd.8.90
+M 1Esd.8.94 > 1Esd.8.90 x1 : 1Esd.8.90 < 1Esd.8.94 ~ 1Esd.8.90
+M 1Esd.8.95 > 1Esd.8.91 x1 : 1Esd.8.91 < 1Esd.8.95 ~ 1Esd.8.91
+M 1Esd.8.96 > 1Esd.8.92 x1 : 1Esd.8.92 < 1Esd.8.96 ~ 1Esd.8.92
+M 2Esd.3.1 > 4Ezra.1.1 x36 : 4Ezra.1.1 < 2Esd.3.1 ~ 4Ezra.1.1
+M 2Esd.4.1 > 4Ezra.2.1 x52 : 4Ezra.2.1 < 2Esd.4.1 ~ 4Ezra.2.1
+M 2Esd.5.1 > 4Ezra.3.1 x56 : 4Ezra.3.1 < 2Esd.5.1 ~ 4Ezra.3.1
+M 2Esd.6.1 > 4Ezra.4.1 x59 : 4Ezra.4.1 < 2Esd.6.1 ~ 4Ezra.4.1
+M 2Esd.7.1 > 4Ezra.5.1 x35 : 4Ezra.5.1 < 2Esd.7.1 ~ 4Ezra.5.1
+M 2Esd.7.106 > 4Ezra.5.36 x35 : 4Ezra.5.36 < 2Esd.7.106 ~ 4Ezra.5.36
+M 2Esd.8.1 > 4Ezra.6.1 x63 : 4Ezra.6.1 < 2Esd.8.1 ~ 4Ezra.6.1
+M 2Esd.9.1 > 4Ezra.7.1 x47 : 4Ezra.7.1 < 2Esd.9.1 ~ 4Ezra.7.1
+M 2Esd.10.1 > 4Ezra.8.1 x60 : 4Ezra.8.1 < 2Esd.10.1 ~ 4Ezra.8.1
+M 2Esd.11.1 > 4Ezra.9.1 x46 : 4Ezra.9.1 < 2Esd.11.1 ~ 4Ezra.9.1
+M 2Esd.12.1 > 4Ezra.10.1 x51 : 4Ezra.10.1 < 2Esd.12.1 ~ 4Ezra.10.1
+M 2Esd.13.1 > 4Ezra.11.1 x58 : 4Ezra.11.1 < 2Esd.13.1 ~ 4Ezra.11.1
+M 2Esd.14.1 > 4Ezra.12.1 x48 : 4Ezra.12.1 < 2Esd.14.1 ~ 4Ezra.12.1
+M DanGr.1.1 > Dan.1.1 x21 : Dan.1.1 < DanGr.1.1 ~ Dan.1.1
+M DanGr.2.1 > Dan.2.1 x49 : Dan.2.1 < DanGr.2.1 ~ Dan.2.1
+M DanGr.3.24 > PrAzar.1.1 x29 : PrAzar.1.1 < DanGr.3.24 ~ PrAzar.1.1
+M DanGr.3.52 > PrAzar.1.30 x1 : PrAzar.1.30 < DanGr.3.52 ~ PrAzar.1.30
+M DanGr.3.54 > PrAzar.1.33 x1 : PrAzar.1.33 < DanGr.3.54 ~ PrAzar.1.33
+M DanGr.3.55 > PrAzar.1.32 x1 : PrAzar.1.32 < DanGr.3.55 ~ PrAzar.1.32
+M DanGr.3.56 > PrAzar.1.34 x2 : PrAzar.1.34 < DanGr.3.56 ~ PrAzar.1.34
+M DanGr.3.58 > PrAzar.1.37 x1 : PrAzar.1.37 < DanGr.3.58 ~ PrAzar.1.37
+M DanGr.3.59 > PrAzar.1.36 x1 : PrAzar.1.36 < DanGr.3.59 ~ PrAzar.1.36
+M DanGr.3.60 > PrAzar.1.38 x31 : PrAzar.1.38 < DanGr.3.60 ~ PrAzar.1.38
+M DanGr.3.91 > Dan.3.24 x7 : Dan.3.24 < DanGr.3.91 ~ Dan.3.24
+M DanGr.4.1 > Dan.3.31 x3 : Dan.3.31 < DanGr.4.1 ~ Dan.4.1
+M DanGr.4.4 > Dan.4.1 x34 : Dan.4.1 < DanGr.4.4 ~ Dan.4.4
+M DanGr.5.1 > Dan.5.1 x31 : Dan.5.1 < DanGr.5.1 ~ Dan.5.1
+M DanGr.6.1 > Dan.6.1 x28 : Dan.6.1 < DanGr.6.1 ~ Dan.5.31
+M DanGr.7.1 > Dan.7.1 x28 : Dan.7.1 < DanGr.7.1 ~ Dan.7.1
+M DanGr.8.1 > Dan.8.1 x27 : Dan.8.1 < DanGr.8.1 ~ Dan.8.1
+M DanGr.9.1 > Dan.9.1 x27 : Dan.9.1 < DanGr.9.1 ~ Dan.9.1
+M DanGr.10.1 > Dan.10.1 x21 : Dan.10.1 < DanGr.10.1 ~ Dan.10.1
+M DanGr.11.1 > Dan.11.1 x45 : Dan.11.1 < DanGr.11.1 ~ Dan.11.1
+M DanGr.12.1 > Dan.12.1 x13 : Dan.12.1 < DanGr.12.1 ~ Dan.12.1
+M DanGr.13.1 > Sus.1.63 x63 : Sus.1.63 < DanGr.13.1 ~ DanGr.13.63
+M DanGr.14.1 > Bel.1.42 x42 : Bel.1.42 < DanGr.14.1 ~ DanGr.14.42
+# English books=92 mappings=269 excluded=0
+B Genesis | Gen old 31,25,24,26,32,22,24,22,29,32,32,20,18,24,21,16,27,33,38,18,34,24,20,67,34,35,46,22,35,43,55,32,20,31,29,43,36,30,23,23,57,38,34,34,28,34,31,22,33,26
+B Exodus | Exod old 22,25,22,31,23,30,25,32,35,29,10,51,22,31,27,36,16,27,25,26,36,31,33,18,40,37,21,43,46,38,18,35,23,35,35,38,29,31,43,38
+B Leviticus | Lev old 17,16,17,35,19,30,38,36,24,20,47,8,59,57,33,34,16,30,37,27,24,33,44,23,55,46,34
+B Numbers | Num old 54,34,51,49,31,27,89,26,23,36,35,16,33,45,41,50,13,32,22,29,35,41,30,25,18,65,23,31,40,16,54,42,56,29,34,13
+B Deuteronomy | Deut old 46,37,29,49,33,25,26,20,29,22,32,32,18,29,23,22,20,22,21,20,23,30,25,22,19,19,26,68,29,20,30,52,29,12
+B Joshua | Josh old 18,24,17,24,15,27,26,35,27,43,23,24,33,15,63,10,18,28,51,9,45,34,16,33
+B Judges | Judg old 36,23,31,24,31,40,25,35,57,18,40,15,25,20,20,31,13,31,30,48,25
+B Ruth | Ruth old 22,23,18,22
+B I Samuel | 1Sam old 28,36,21,22,12,21,17,22,27,27,15,25,23,52,35,23,58,30,24,42,15,23,29,22,44,25,12,25,11,31,13
+B II Samuel | 2Sam old 27,32,39,12,25,23,29,18,13,19,27,31,39,33,37,23,29,33,43,26,22,51,39,25
+B I Kings | 1Kgs old 53,46,28,34,18,38,51,66,28,29,43,33,34,31,34,34,24,46,21,43,29,53
+B II Kings | 2Kgs old 18,25,27,44,27,33,20,29,37,36,21,21,25,29,38,20,41,37,37,21,26,20,37,20,30
+B I Chronicles | 1Chr old 54,55,24,43,26,81,40,40,44,14,47,40,14,17,29,43,27,17,19,8,30,19,32,31,31,32,34,21,30
+B II Chronicles | 2Chr old 17,18,17,22,14,42,22,18,31,19,23,16,22,15,19,14,19,34,11,37,20,12,21,27,28,23,9,27,36,27,21,33,25,33,27,23
+B Ezra | Ezra old 11,70,13,24,17,22,28,36,15,44
+B Nehemiah | Neh old 11,20,32,23,19,19,73,18,38,39,36,47,31
+B Esther | Esth old 22,23,15,17,14,14,10,17,32,3
+B Job | Job old 22,13,26,21,27,30,21,22,35,22,20,25,28,22,35,22,16,21,29,29,34,30,17,25,6,14,23,28,25,31,40,22,33,37,16,33,24,41,30,24,34,17
+B Psalms | Ps old 6,12,8,8,12,10,17,9,20,18,7,8,6,7,5,11,15,50,14,9,13,31,6,10,22,12,14,9,11,12,24,11,22,22,28,12,40,22,13,17,13,11,5,26,17,11,9,14,20,23,19,9,6,7,23,13,11,11,17,12,8,12,11,10,13,20,7,35,36,5,24,20,28,23,10,12,20,72,13,19,16,8,18,12,13,17,7,18,52,17,16,15,5,23,11,13,12,9,9,5,8,28,22,35,45,48,43,13,31,7,10,10,9,8,18,19,2,29,176,7,8,9,4,8,5,6,5,6,8,8,3,18,3,3,21,26,9,8,24,13,10,7,12,15,21,10,20,14,9,6
+B Proverbs | Prov old 33,22,35,27,23,35,27,36,18,32,31,28,25,35,33,33,28,24,29,30,31,29,35,34,28,28,27,28,27,33,31
+B Ecclesiastes | Eccl old 18,26,22,16,20,12,29,17,18,20,10,14
+B Song of Solomon | Song old 17,17,11,16,16,13,13,14
+B Isaiah | Isa old 31,22,26,6,30,13,25,22,21,34,16,6,22,32,9,14,14,7,25,6,17,25,18,23,12,21,13,29,24,33,9,20,24,17,10,22,38,22,8,31,29,25,28,28,25,13,15,22,26,11,23,15,12,17,13,12,21,14,21,22,11,12,19,12,25,24
+B Jeremiah | Jer old 19,37,25,31,31,30,34,22,26,25,23,17,27,22,21,21,27,23,15,18,14,30,40,10,38,24,22,17,32,24,40,44,26,22,19,32,21,28,18,16,18,22,13,30,5,28,7,47,39,46,64,34
+B Lamentations | Lam old 22,22,66,22,22
+B Ezekiel | Ezek old 28,10,27,17,17,14,27,18,11,22,25,28,23,23,8,63,24,32,14,49,32,31,49,27,17,21,36,26,21,26,18,32,33,31,15,38,28,23,29,49,26,20,27,31,25,24,23,35
+B Daniel | Dan old 21,49,30,37,31,28,28,27,27,21,45,13
+B Hosea | Hos old 11,23,5,19,15,11,16,14,17,15,12,14,16,9
+B Joel | Joel old 20,32,21
+B Amos | Amos old 15,16,15,13,27,14,17,14,15
+B Obadiah | Obad old 21
+B Jonah | Jonah old 17,10,10,11
+B Micah | Mic old 16,13,12,13,15,16,20
+B Nahum | Nah old 15,13,19
+B Habakkuk | Hab old 17,20,19
+B Zephaniah | Zeph old 18,15,20
+B Haggai | Hag old 15,23
+B Zechariah | Zech old 21,13,10,14,11,15,14,23,17,12,17,14,9,21
+B Malachi | Mal old 14,17,18,6
+B Matthew | Matt new 25,23,17,25,48,34,29,34,38,42,30,50,58,36,39,28,27,35,30,34,46,46,39,51,46,75,66,20
+B Mark | Mark new 45,28,35,41,43,56,37,38,50,52,33,44,37,72,47,20
+B Luke | Luke new 80,52,38,44,39,49,50,56,62,42,54,59,35,35,32,31,37,43,48,47,38,71,56,53
+B John | John new 51,25,36,54,47,71,53,59,41,42,57,50,38,31,27,33,26,40,42,31,25
+B Acts | Acts new 26,47,26,37,42,15,60,40,43,48,30,25,52,28,41,40,34,28,41,38,40,30,35,27,27,32,44,31
+B Romans | Rom new 32,29,31,25,21,23,25,39,33,21,36,21,14,23,33,27
+B I Corinthians | 1Cor new 31,16,23,21,13,20,40,13,27,33,34,31,13,40,58,24
+B II Corinthians | 2Cor new 24,17,18,18,21,18,16,24,15,18,33,21,14
+B Galatians | Gal new 24,21,29,31,26,18
+B Ephesians | Eph new 23,22,21,32,33,24
+B Philippians | Phil new 30,30,21,23
+B Colossians | Col new 29,23,25,18
+B I Thessalonians | 1Thess new 10,20,13,18,28
+B II Thessalonians | 2Thess new 12,17,18
+B I Timothy | 1Tim new 20,15,16,16,25,21
+B II Timothy | 2Tim new 18,26,17,22
+B Titus | Titus new 16,15,15
+B Philemon | Phlm new 25
+B Hebrews | Heb new 14,18,19,16,14,20,28,13,28,39,40,29,25
+B James | Jas new 27,26,18,17,20
+B I Peter | 1Pet new 25,25,22,19,14
+B II Peter | 2Pet new 21,22,18
+B I John | 1John new 10,29,24,21,21
+B II John | 2John new 13
+B III John | 3John new 15
+B Jude | Jude new 25
+B Revelation of John | Rev new 20,29,22,11,14,17,17,13,21,11,19,18,18,20,8,21,18,24,21,15,27,21
+B Tobit | Tob old 22,14,17,21,21,17,18,21,6,13,19,22,18,15
+B Judith | Jdt old 16,28,10,15,24,21,32,36,14,23,23,20,20,19,13,25
+B Esther (Greek) | EsthGr old 39,23,22,47,28,14,10,39,32,13
+B Wisdom | Wis old 16,24,19,20,23,25,30,21,18,21,26,27,19,31,19,29,21,25,22
+B Sirach | Sir old 30,18,31,31,15,37,36,19,18,31,34,18,26,27,20,30,32,33,30,32,28,27,27,34,26,29,30,26,28,25,31,24,31,26,20,26,31,34,35,30,23,25,33,23,26,20,25,25,16,29,30
+B Baruch | Bar old 21,35,37,37,9,73
+B Epistle of Jeremiah | EpJer old 73
+B Prayer of Azariah | PrAzar old 68
+B Susanna | Sus old 64
+B Bel and the Dragon | Bel old 42
+B I Maccabees | 1Macc old 64,70,60,61,68,63,50,32,73,89,74,53,53,49,41,24
+B II Maccabees | 2Macc old 36,32,40,50,27,31,42,36,29,38,38,45,26,46,39
+B III Maccabees | 3Macc old 29,33,30,21,51,41,23
+B IV Maccabees | 4Macc old 35,24,21,26,38,35,23,29,32,21,27,19,27,20,32,25,24,24
+B I Esdras | 1Esd old 58,30,24,63,73,34,15,96,55
+B II Esdras | 2Esd old 40,48,36,52,56,59,140,63,47,59,46,51,58,48,63,78
+B Prayer of Manasses | PrMan old 15
+B Additional Psalm | AddPs old 7
+B Joshua A | JoshA old 18,24,17,24,15,27,26,35,27,43,23,24,33,15,63,10,18,28,51,9,45,34,16,33
+B Judges B | JudgB old 36,23,31,24,31,40,25,35,57,18,40,15,25,20,20,31,13,31,30,48,25
+B Tobit S | TobS old 22,14,17,21,23,19,17,21,6,14,19,22,18,15
+B Susanna (Theodotion) | SusTh old 64
+B Daniel (Theodotion) | DanTh old 21,49,97,37,30,29,28,27,27,21,45,13
+B Bel (Theodotion) | BelTh old 42
+B Daniel (Greek) | DanGr old 21,49,97,37,31,28,28,27,27,21,45,13,64,42
+B Laodiceans | EpLao new 20
+M Gen.31.55 > Gen.32.1 x1 : Gen.32.1 < Gen.31.55 ~ Gen.31.55
+M Gen.32.1 > Gen.32.2 x32 : Gen.32.2 < Gen.32.1 ~ Gen.32.1
+M Exod.8.1 > Exod.7.26 x4 : Exod.7.26 < Exod.8.1 ~ Exod.8.1
+M Exod.8.5 > Exod.8.1 x28 : Exod.8.1 < Exod.8.5 ~ Exod.8.5
+M Exod.22.1 > Exod.21.37 x1 : Exod.21.37 < Exod.22.1 ~ Exod.22.1
+M Exod.22.2 > Exod.22.1 x30 : Exod.22.1 < Exod.22.2 ~ Exod.22.2
+M Lev.6.1 > Lev.5.20 x7 : Lev.5.20 < Lev.6.1 ~ Lev.6.1
+M Lev.6.8 > Lev.6.1 x23 : Lev.6.1 < Lev.6.8 ~ Lev.6.8
+M Num.16.36 > Num.17.1 x15 : Num.17.1 < Num.16.36 ~ Num.16.36
+M Num.17.1 > Num.17.16 x13 : Num.17.16 < Num.17.1 ~ Num.17.1
+M Num.29.40 > Num.30.1 x1 : Num.30.1 < Num.29.40 ~ Num.29.40
+M Num.30.1 > Num.30.2 x16 : Num.30.2 < Num.30.1 ~ Num.30.1
+M Deut.12.32 > Deut.13.1 x1 : Deut.13.1 < Deut.12.32 ~ Deut.12.32
+M Deut.13.1 > Deut.13.2 x18 : Deut.13.2 < Deut.13.1 ~ Deut.13.1
+M Deut.22.30 > Deut.23.1 x1 : Deut.23.1 < Deut.22.30 ~ Deut.22.30
+M Deut.23.1 > Deut.23.2 x25 : Deut.23.2 < Deut.23.1 ~ Deut.23.1
+M Deut.29.1 > Deut.28.69 x1 : Deut.28.69 < Deut.29.1 ~ Deut.29.1
+M Deut.29.2 > Deut.29.1 x28 : Deut.29.1 < Deut.29.2 ~ Deut.29.2
+M 1Sam.20.42 > 1Sam.21.1 x1 : 1Sam.21.1 < 1Sam.20.42 ~ 1Sam.20.42
+M 1Sam.21.1 > 1Sam.21.2 x15 : 1Sam.21.2 < 1Sam.21.1 ~ 1Sam.21.1
+M 1Sam.23.29 > 1Sam.24.1 x1 : 1Sam.24.1 < 1Sam.23.29 ~ 1Sam.23.29
+M 1Sam.24.1 > 1Sam.24.2 x22 : 1Sam.24.2 < 1Sam.24.1 ~ 1Sam.24.1
+M 2Sam.18.33 > 2Sam.19.1 x1 : 2Sam.19.1 < 2Sam.18.33 ~ 2Sam.18.33
+M 2Sam.19.1 > 2Sam.19.2 x43 : 2Sam.19.2 < 2Sam.19.1 ~ 2Sam.19.1
+M 1Kgs.4.21 > 1Kgs.5.1 x14 : 1Kgs.5.1 < 1Kgs.4.21 ~ 1Kgs.4.21
+M 1Kgs.5.1 > 1Kgs.5.15 x18 : 1Kgs.5.15 < 1Kgs.5.1 ~ 1Kgs.5.1
+M 1Kgs.22.43 > 1Kgs.22.44 x11 : 1Kgs.22.44 < 1Kgs.22.43 ~ 1Kgs.22.43
+M 2Kgs.11.21 > 2Kgs.12.1 x1 : 2Kgs.12.1 < 2Kgs.11.21 ~ 2Kgs.11.21
+M 2Kgs.12.1 > 2Kgs.12.2 x21 : 2Kgs.12.2 < 2Kgs.12.1 ~ 2Kgs.12.1
+M 1Chr.6.1 > 1Chr.5.27 x15 : 1Chr.5.27 < 1Chr.6.1 ~ 1Chr.6.1
+M 1Chr.6.16 > 1Chr.6.1 x66 : 1Chr.6.1 < 1Chr.6.16 ~ 1Chr.6.16
+M 1Chr.12.4 > 1Chr.12.5 x37 : 1Chr.12.5 < 1Chr.12.4 ~ 1Chr.12.4
+M 2Chr.2.1 > 2Chr.1.18 x1 : 2Chr.1.18 < 2Chr.2.1 ~ 2Chr.2.1
+M 2Chr.2.2 > 2Chr.2.1 x17 : 2Chr.2.1 < 2Chr.2.2 ~ 2Chr.2.2
+M 2Chr.14.1 > 2Chr.13.23 x1 : 2Chr.13.23 < 2Chr.14.1 ~ 2Chr.14.1
+M 2Chr.14.2 > 2Chr.14.1 x14 : 2Chr.14.1 < 2Chr.14.2 ~ 2Chr.14.2
+M Neh.4.1 > Neh.3.33 x6 : Neh.3.33 < Neh.4.1 ~ Neh.4.1
+M Neh.4.7 > Neh.4.1 x17 : Neh.4.1 < Neh.4.7 ~ Neh.4.7
+M Neh.7.69 > Neh.7.68 x5 : Neh.7.68 < Neh.7.69 ~ Neh.7.69
+M Neh.9.38 > Neh.10.1 x1 : Neh.10.1 < Neh.9.38 ~ Neh.9.38
+M Neh.10.1 > Neh.10.2 x39 : Neh.10.2 < Neh.10.1 ~ Neh.10.1
+M Job.41.1 > Job.40.25 x8 : Job.40.25 < Job.41.1 ~ Job.41.1
+M Job.41.9 > Job.41.1 x26 : Job.41.1 < Job.41.9 ~ Job.41.9
+M Ps.3.0 > Ps.3.1 x9 : Ps.3.1 < Ps.3.0 ~ Ps.3.0
+M Ps.4.0 > Ps.4.1 x9 : Ps.4.1 < Ps.4.0 ~ Ps.4.0
+M Ps.5.0 > Ps.5.1 x13 : Ps.5.1 < Ps.5.0 ~ Ps.5.0
+M Ps.6.0 > Ps.6.1 x11 : Ps.6.1 < Ps.6.0 ~ Ps.6.0
+M Ps.7.0 > Ps.7.1 x18 : Ps.7.1 < Ps.7.0 ~ Ps.7.0
+M Ps.8.0 > Ps.8.1 x10 : Ps.8.1 < Ps.8.0 ~ Ps.8.0
+M Ps.9.0 > Ps.9.1 x21 : Ps.9.1 < Ps.9.0 ~ Ps.9.0
+M Ps.12.0 > Ps.12.1 x9 : Ps.12.1 < Ps.12.0 ~ Ps.12.0
+M Ps.13.0 > Ps.13.1 x6 : Ps.13.1 < Ps.13.0 ~ Ps.13.0
+M Ps.18.0 > Ps.18.1 x51 : Ps.18.1 < Ps.18.0 ~ Ps.18.0
+M Ps.19.0 > Ps.19.1 x15 : Ps.19.1 < Ps.19.0 ~ Ps.19.0
+M Ps.20.0 > Ps.20.1 x10 : Ps.20.1 < Ps.20.0 ~ Ps.20.0
+M Ps.21.0 > Ps.21.1 x14 : Ps.21.1 < Ps.21.0 ~ Ps.21.0
+M Ps.22.0 > Ps.22.1 x32 : Ps.22.1 < Ps.22.0 ~ Ps.22.0
+M Ps.30.0 > Ps.30.1 x13 : Ps.30.1 < Ps.30.0 ~ Ps.30.0
+M Ps.31.0 > Ps.31.1 x25 : Ps.31.1 < Ps.31.0 ~ Ps.31.0
+M Ps.34.0 > Ps.34.1 x23 : Ps.34.1 < Ps.34.0 ~ Ps.34.0
+M Ps.36.0 > Ps.36.1 x13 : Ps.36.1 < Ps.36.0 ~ Ps.36.0
+M Ps.38.0 > Ps.38.1 x23 : Ps.38.1 < Ps.38.0 ~ Ps.38.0
+M Ps.39.0 > Ps.39.1 x14 : Ps.39.1 < Ps.39.0 ~ Ps.39.0
+M Ps.40.0 > Ps.40.1 x18 : Ps.40.1 < Ps.40.0 ~ Ps.40.0
+M Ps.41.0 > Ps.41.1 x14 : Ps.41.1 < Ps.41.0 ~ Ps.41.0
+M Ps.42.0 > Ps.42.1 x12 : Ps.42.1 < Ps.42.0 ~ Ps.42.0
+M Ps.44.0 > Ps.44.1 x27 : Ps.44.1 < Ps.44.0 ~ Ps.44.0
+M Ps.45.0 > Ps.45.1 x18 : Ps.45.1 < Ps.45.0 ~ Ps.45.0
+M Ps.46.0 > Ps.46.1 x12 : Ps.46.1 < Ps.46.0 ~ Ps.46.0
+M Ps.47.0 > Ps.47.1 x10 : Ps.47.1 < Ps.47.0 ~ Ps.47.0
+M Ps.48.0 > Ps.48.1 x15 : Ps.48.1 < Ps.48.0 ~ Ps.48.0
+M Ps.49.0 > Ps.49.1 x21 : Ps.49.1 < Ps.49.0 ~ Ps.49.0
+M Ps.51.0 > Ps.51.1 x1 : Ps.51.2 < Ps.51.0 ~ Ps.51.0
+M Ps.51.0 > Ps.51.2 x1 : Ps.51.2 < Ps.51.0 ~ Ps.51.0
+M Ps.51.1 > Ps.51.3 x19 : Ps.51.3 < Ps.51.1 ~ Ps.51.1
+M Ps.52.0 > Ps.52.1 x1 : Ps.52.2 < Ps.52.0 ~ Ps.52.0
+M Ps.52.0 > Ps.52.2 x1 : Ps.52.2 < Ps.52.0 ~ Ps.52.0
+M Ps.52.1 > Ps.52.3 x9 : Ps.52.3 < Ps.52.1 ~ Ps.52.1
+M Ps.53.0 > Ps.53.1 x7 : Ps.53.1 < Ps.53.0 ~ Ps.53.0
+M Ps.54.0 > Ps.54.1 x1 : Ps.54.2 < Ps.54.0 ~ Ps.54.0
+M Ps.54.0 > Ps.54.2 x1 : Ps.54.2 < Ps.54.0 ~ Ps.54.0
+M Ps.54.1 > Ps.54.3 x7 : Ps.54.3 < Ps.54.1 ~ Ps.54.1
+M Ps.55.0 > Ps.55.1 x24 : Ps.55.1 < Ps.55.0 ~ Ps.55.0
+M Ps.56.0 > Ps.56.1 x14 : Ps.56.1 < Ps.56.0 ~ Ps.56.0
+M Ps.57.0 > Ps.57.1 x12 : Ps.57.1 < Ps.57.0 ~ Ps.57.0
+M Ps.58.0 > Ps.58.1 x12 : Ps.58.1 < Ps.58.0 ~ Ps.58.0
+M Ps.59.0 > Ps.59.1 x18 : Ps.59.1 < Ps.59.0 ~ Ps.59.0
+M Ps.60.0 > Ps.60.1 x1 : Ps.60.2 < Ps.60.0 ~ Ps.60.0
+M Ps.60.0 > Ps.60.2 x1 : Ps.60.2 < Ps.60.0 ~ Ps.60.0
+M Ps.60.1 > Ps.60.3 x12 : Ps.60.3 < Ps.60.1 ~ Ps.60.1
+M Ps.61.0 > Ps.61.1 x9 : Ps.61.1 < Ps.61.0 ~ Ps.61.0
+M Ps.62.0 > Ps.62.1 x13 : Ps.62.1 < Ps.62.0 ~ Ps.62.0
+M Ps.63.0 > Ps.63.1 x12 : Ps.63.1 < Ps.63.0 ~ Ps.63.0
+M Ps.64.0 > Ps.64.1 x11 : Ps.64.1 < Ps.64.0 ~ Ps.64.0
+M Ps.65.0 > Ps.65.1 x14 : Ps.65.1 < Ps.65.0 ~ Ps.65.0
+M Ps.67.0 > Ps.67.1 x8 : Ps.67.1 < Ps.67.0 ~ Ps.67.0
+M Ps.68.0 > Ps.68.1 x36 : Ps.68.1 < Ps.68.0 ~ Ps.68.0
+M Ps.69.0 > Ps.69.1 x37 : Ps.69.1 < Ps.69.0 ~ Ps.69.0
+M Ps.70.0 > Ps.70.1 x6 : Ps.70.1 < Ps.70.0 ~ Ps.70.0
+M Ps.75.0 > Ps.75.1 x11 : Ps.75.1 < Ps.75.0 ~ Ps.75.0
+M Ps.76.0 > Ps.76.1 x13 : Ps.76.1 < Ps.76.0 ~ Ps.76.0
+M Ps.77.0 > Ps.77.1 x21 : Ps.77.1 < Ps.77.0 ~ Ps.77.0
+M Ps.80.0 > Ps.80.1 x20 : Ps.80.1 < Ps.80.0 ~ Ps.80.0
+M Ps.81.0 > Ps.81.1 x17 : Ps.81.1 < Ps.81.0 ~ Ps.81.0
+M Ps.83.0 > Ps.83.1 x19 : Ps.83.1 < Ps.83.0 ~ Ps.83.0
+M Ps.84.0 > Ps.84.1 x13 : Ps.84.1 < Ps.84.0 ~ Ps.84.0
+M Ps.85.0 > Ps.85.1 x14 : Ps.85.1 < Ps.85.0 ~ Ps.85.0
+M Ps.88.0 > Ps.88.1 x19 : Ps.88.1 < Ps.88.0 ~ Ps.88.0
+M Ps.89.0 > Ps.89.1 x53 : Ps.89.1 < Ps.89.0 ~ Ps.89.0
+M Ps.92.0 > Ps.92.1 x16 : Ps.92.1 < Ps.92.0 ~ Ps.92.0
+M Ps.102.0 > Ps.102.1 x29 : Ps.102.1 < Ps.102.0 ~ Ps.102.0
+M Ps.108.0 > Ps.108.1 x14 : Ps.108.1 < Ps.108.0 ~ Ps.108.0
+M Ps.140.0 > Ps.140.1 x14 : Ps.140.1 < Ps.140.0 ~ Ps.140.0
+M Ps.142.0 > Ps.142.1 x8 : Ps.142.1 < Ps.142.0 ~ Ps.142.0
+M Eccl.5.1 > Eccl.4.17 x1 : Eccl.4.17 < Eccl.5.1 ~ Eccl.5.1
+M Eccl.5.2 > Eccl.5.1 x19 : Eccl.5.1 < Eccl.5.2 ~ Eccl.5.2
+M Song.6.13 > Song.7.1 x1 : Song.7.1 < Song.6.13 ~ Song.6.13
+M Song.7.1 > Song.7.2 x13 : Song.7.2 < Song.7.1 ~ Song.7.1
+M Isa.9.1 > Isa.8.23 x1 : Isa.8.23 < Isa.9.1 ~ Isa.9.1
+M Isa.9.2 > Isa.9.1 x20 : Isa.9.1 < Isa.9.2 ~ Isa.9.2
+M Isa.64.2 > Isa.64.1 x11 : Isa.64.1 < Isa.64.2 ~ Isa.64.2
+M Jer.9.1 > Jer.8.23 x1 : Jer.8.23 < Jer.9.1 ~ Jer.9.1
+M Jer.9.2 > Jer.9.1 x25 : Jer.9.1 < Jer.9.2 ~ Jer.9.2
+M Ezek.20.45 > Ezek.21.1 x2 : Ezek.21.1 < Ezek.20.45 ~ Ezek.20.45
+M Ezek.20.47 > Ezek.21.3 x1 : Ezek.21.3 < Ezek.20.47 ~ Ezek.20.47
+M Ezek.20.48 > Ezek.21.4 x2 : Ezek.21.4 < Ezek.20.48 ~ Ezek.20.48
+M Ezek.21.1 > Ezek.21.6 x32 : Ezek.21.6 < Ezek.21.1 ~ Ezek.21.1
+M Dan.4.1 > Dan.3.31 x3 : Dan.3.31 < Dan.4.1 ~ Dan.4.1
+M Dan.4.4 > Dan.4.1 x34 : Dan.4.1 < Dan.4.4 ~ Dan.4.4
+M Dan.5.31 > Dan.6.1 x1 : Dan.6.1 < Dan.5.31 ~ Dan.5.31
+M Dan.6.1 > Dan.6.2 x28 : Dan.6.2 < Dan.6.1 ~ Dan.6.1
+M Hos.1.10 > Hos.2.1 x2 : Hos.2.1 < Hos.1.10 ~ Hos.1.10
+M Hos.2.1 > Hos.2.3 x23 : Hos.2.3 < Hos.2.1 ~ Hos.2.1
+M Hos.11.12 > Hos.12.1 x1 : Hos.12.1 < Hos.11.12 ~ Hos.11.12
+M Hos.12.1 > Hos.12.2 x14 : Hos.12.2 < Hos.12.1 ~ Hos.12.1
+M Hos.13.16 > Hos.14.1 x1 : Hos.14.1 < Hos.13.16 ~ Hos.13.16
+M Hos.14.1 > Hos.14.2 x9 : Hos.14.2 < Hos.14.1 ~ Hos.14.1
+M Joel.2.28 > Joel.3.1 x5 : Joel.3.1 < Joel.2.28 ~ Joel.2.28
+M Joel.3.1 > Joel.4.1 x21 : Joel.4.1 < Joel.3.1 ~ Joel.3.1
+M Jonah.1.17 > Jonah.2.1 x1 : Jonah.2.1 < Jonah.1.17 ~ Jonah.1.17
+M Jonah.2.1 > Jonah.2.2 x10 : Jonah.2.2 < Jonah.2.1 ~ Jonah.2.1
+M Mic.5.1 > Mic.4.14 x1 : Mic.4.14 < Mic.5.1 ~ Mic.5.1
+M Mic.5.2 > Mic.5.1 x14 : Mic.5.1 < Mic.5.2 ~ Mic.5.2
+M Nah.1.15 > Nah.2.1 x1 : Nah.2.1 < Nah.1.15 ~ Nah.1.15
+M Nah.2.1 > Nah.2.2 x13 : Nah.2.2 < Nah.2.1 ~ Nah.2.1
+M Zech.1.18 > Zech.2.1 x4 : Zech.2.1 < Zech.1.18 ~ Zech.1.18
+M Zech.2.1 > Zech.2.5 x13 : Zech.2.5 < Zech.2.1 ~ Zech.2.1
+M Mal.4.1 > Mal.3.19 x6 : Mal.3.19 < Mal.4.1 ~ Mal.4.1
+M Bar.6.1 > EpJer.1.1 x73 : EpJer.1.1 < Bar.6.1 ~ Bar.6.1
+M DanGr.13.1 > Sus.1.1 x63 : Sus.1.1 < DanGr.13.1 ~ DanGr.13.1
+M DanGr.14.1 > Bel.1.1 x42 : Bel.1.1 < DanGr.14.1 ~ DanGr.14.1
+M EsthGr.1.1 > EsthGr.1.1a x1 : EsthGr.1.1a < EsthGr.1.1 ~ EsthGr.1.1
+M EsthGr.1.2 > EsthGr.1.1b x1 : EsthGr.1.1b < EsthGr.1.2 ~ EsthGr.1.2
+M EsthGr.1.3 > EsthGr.1.1c x1 : EsthGr.1.1c < EsthGr.1.3 ~ EsthGr.1.3
+M EsthGr.1.4 > EsthGr.1.1d x1 : EsthGr.1.1d < EsthGr.1.4 ~ EsthGr.1.4
+M EsthGr.1.5 > EsthGr.1.1e x1 : EsthGr.1.1e < EsthGr.1.5 ~ EsthGr.1.5
+M EsthGr.1.6 > EsthGr.1.1f x1 : EsthGr.1.1f < EsthGr.1.6 ~ EsthGr.1.6
+M EsthGr.1.7 > EsthGr.1.1g x1 : EsthGr.1.1g < EsthGr.1.7 ~ EsthGr.1.7
+M EsthGr.1.8 > EsthGr.1.1h x1 : EsthGr.1.1h < EsthGr.1.8 ~ EsthGr.1.8
+M EsthGr.1.9 > EsthGr.1.1i x1 : EsthGr.1.1i < EsthGr.1.9 ~ EsthGr.1.9
+M EsthGr.1.10 > EsthGr.1.1k x1 : EsthGr.1.1k < EsthGr.1.10 ~ EsthGr.1.10
+M EsthGr.1.11 > EsthGr.1.1l x1 : EsthGr.1.1l < EsthGr.1.11 ~ EsthGr.1.11
+M EsthGr.1.12 > EsthGr.1.1m x1 : EsthGr.1.1m < EsthGr.1.12 ~ EsthGr.1.12
+M EsthGr.1.13 > EsthGr.1.1n x1 : EsthGr.1.1n < EsthGr.1.13 ~ EsthGr.1.13
+M EsthGr.1.14 > EsthGr.1.1o x1 : EsthGr.1.1o < EsthGr.1.14 ~ EsthGr.1.14
+M EsthGr.1.15 > EsthGr.1.1p x1 : EsthGr.1.1p < EsthGr.1.15 ~ EsthGr.1.15
+M EsthGr.1.16 > EsthGr.1.1q x1 : EsthGr.1.1q < EsthGr.1.16 ~ EsthGr.1.16
+M EsthGr.1.17 > EsthGr.1.1r x1 : EsthGr.1.1r < EsthGr.1.17 ~ EsthGr.1.17
+M EsthGr.1.18 > EsthGr.1.1s x1 : EsthGr.1.1s < EsthGr.1.18 ~ EsthGr.1.18
+M EsthGr.1.19 > EsthGr.1.2 x21 : EsthGr.1.2 < EsthGr.1.19 ~ EsthGr.1.19
+M EsthGr.3.14 > EsthGr.3.13a x1 : EsthGr.3.13a < EsthGr.3.14 ~ EsthGr.3.14
+M EsthGr.3.15 > EsthGr.3.13b x1 : EsthGr.3.13b < EsthGr.3.15 ~ EsthGr.3.15
+M EsthGr.3.16 > EsthGr.3.13c x1 : EsthGr.3.13c < EsthGr.3.16 ~ EsthGr.3.16
+M EsthGr.3.17 > EsthGr.3.13d x1 : EsthGr.3.13d < EsthGr.3.17 ~ EsthGr.3.17
+M EsthGr.3.18 > EsthGr.3.13e x1 : EsthGr.3.13e < EsthGr.3.18 ~ EsthGr.3.18
+M EsthGr.3.19 > EsthGr.3.13f x1 : EsthGr.3.13f < EsthGr.3.19 ~ EsthGr.3.19
+M EsthGr.3.20 > EsthGr.3.13g x1 : EsthGr.3.13g < EsthGr.3.20 ~ EsthGr.3.20
+M EsthGr.3.21 > EsthGr.3.14 x1 : EsthGr.3.14 < EsthGr.3.21 ~ EsthGr.3.21
+M EsthGr.3.22 > EsthGr.3.15 x1 : EsthGr.3.15 < EsthGr.3.22 ~ EsthGr.3.22
+M EsthGr.4.18 > EsthGr.4.17a x1 : EsthGr.4.17a < EsthGr.4.18 ~ EsthGr.4.18
+M EsthGr.4.19 > EsthGr.4.17b x1 : EsthGr.4.17b < EsthGr.4.19 ~ EsthGr.4.19
+M EsthGr.4.20 > EsthGr.4.17c x1 : EsthGr.4.17c < EsthGr.4.21 ~ EsthGr.4.20
+M EsthGr.4.21 > EsthGr.4.17c x1 : EsthGr.4.17c < EsthGr.4.21 ~ EsthGr.4.21
+M EsthGr.4.22 > EsthGr.4.17d x1 : EsthGr.4.17d < EsthGr.4.23 ~ EsthGr.4.22
+M EsthGr.4.23 > EsthGr.4.17d x1 : EsthGr.4.17d < EsthGr.4.23 ~ EsthGr.4.23
+M EsthGr.4.24 > EsthGr.4.17e x1 : EsthGr.4.17e < EsthGr.4.24 ~ EsthGr.4.24
+M EsthGr.4.25 > EsthGr.4.17f x1 : EsthGr.4.17f < EsthGr.4.25 ~ EsthGr.4.25
+M EsthGr.4.26 > EsthGr.4.17g x1 : EsthGr.4.17g < EsthGr.4.26 ~ EsthGr.4.26
+M EsthGr.4.27 > EsthGr.4.17h x1 : EsthGr.4.17h < EsthGr.4.27 ~ EsthGr.4.27
+M EsthGr.4.28 > EsthGr.4.17i x1 : EsthGr.4.17i < EsthGr.4.28 ~ EsthGr.4.28
+M EsthGr.4.29 > EsthGr.4.17k x1 : EsthGr.4.17k < EsthGr.4.31 ~ EsthGr.4.29
+M EsthGr.4.30 > EsthGr.4.17k x1 : EsthGr.4.17k < EsthGr.4.31 ~ EsthGr.4.30
+M EsthGr.4.31 > EsthGr.4.17k x1 : EsthGr.4.17k < EsthGr.4.31 ~ EsthGr.4.31
+M EsthGr.4.32 > EsthGr.4.17l x1 : EsthGr.4.17l < EsthGr.4.32 ~ EsthGr.4.32
+M EsthGr.4.33 > EsthGr.4.17m x1 : EsthGr.4.17m < EsthGr.4.33 ~ EsthGr.4.33
+M EsthGr.4.34 > EsthGr.4.17n x1 : EsthGr.4.17n < EsthGr.4.35 ~ EsthGr.4.34
+M EsthGr.4.35 > EsthGr.4.17n x1 : EsthGr.4.17n < EsthGr.4.35 ~ EsthGr.4.35
+M EsthGr.4.36 > EsthGr.4.17o x1 : EsthGr.4.17o < EsthGr.4.37 ~ EsthGr.4.36
+M EsthGr.4.37 > EsthGr.4.17o x1 : EsthGr.4.17o < EsthGr.4.37 ~ EsthGr.4.37
+M EsthGr.4.38 > EsthGr.4.17p x1 : EsthGr.4.17p < EsthGr.4.38 ~ EsthGr.4.38
+M EsthGr.4.39 > EsthGr.4.17q x1 : EsthGr.4.17q < EsthGr.4.39 ~ EsthGr.4.39
+M EsthGr.4.40 > EsthGr.4.17r x1 : EsthGr.4.17r < EsthGr.4.40 ~ EsthGr.4.40
+M EsthGr.4.41 > EsthGr.4.17s x1 : EsthGr.4.17s < EsthGr.4.41 ~ EsthGr.4.41
+M EsthGr.4.42 > EsthGr.4.17t x1 : EsthGr.4.17t < EsthGr.4.42 ~ EsthGr.4.42
+M EsthGr.4.43 > EsthGr.4.17u x1 : EsthGr.4.17u < EsthGr.4.43 ~ EsthGr.4.43
+M EsthGr.4.44 > EsthGr.4.17w x1 : EsthGr.4.17w < EsthGr.4.44 ~ EsthGr.4.44
+M EsthGr.4.45 > EsthGr.4.17x x1 : EsthGr.4.17x < EsthGr.4.45 ~ EsthGr.4.45
+M EsthGr.4.46 > EsthGr.4.17y x1 : EsthGr.4.17y < EsthGr.4.46 ~ EsthGr.4.46
+M EsthGr.4.47 > EsthGr.4.17z x1 : EsthGr.4.17z < EsthGr.4.47 ~ EsthGr.4.47
+M EsthGr.5.2 > EsthGr.5.1a x1 : EsthGr.5.1a < EsthGr.5.4 ~ EsthGr.5.2
+M EsthGr.5.3 > EsthGr.5.1a x1 : EsthGr.5.1a < EsthGr.5.4 ~ EsthGr.5.3
+M EsthGr.5.4 > EsthGr.5.1a x1 : EsthGr.5.1a < EsthGr.5.4 ~ EsthGr.5.4
+M EsthGr.5.5 > EsthGr.5.1b x1 : EsthGr.5.1b < EsthGr.5.5 ~ EsthGr.5.5
+M EsthGr.5.6 > EsthGr.5.1c x1 : EsthGr.5.1c < EsthGr.5.6 ~ EsthGr.5.6
+M EsthGr.5.7 > EsthGr.5.1d x1 : EsthGr.5.1d < EsthGr.5.7 ~ EsthGr.5.7
+M EsthGr.5.8 > EsthGr.5.1e x1 : EsthGr.5.1e < EsthGr.5.8 ~ EsthGr.5.8
+M EsthGr.5.9 > EsthGr.5.1f x1 : EsthGr.5.1f < EsthGr.5.10 ~ EsthGr.5.9
+M EsthGr.5.10 > EsthGr.5.1f x1 : EsthGr.5.1f < EsthGr.5.10 ~ EsthGr.5.10
+M EsthGr.5.11 > EsthGr.5.2 x1 : EsthGr.5.2 < EsthGr.5.12 ~ EsthGr.5.11
+M EsthGr.5.12 > EsthGr.5.2 x1 : EsthGr.5.2 < EsthGr.5.12 ~ EsthGr.5.12
+M EsthGr.5.13 > EsthGr.5.2a x1 : EsthGr.5.2a < EsthGr.5.14 ~ EsthGr.5.13
+M EsthGr.5.14 > EsthGr.5.2a x1 : EsthGr.5.2a < EsthGr.5.14 ~ EsthGr.5.14
+M EsthGr.5.15 > EsthGr.5.2b x1 : EsthGr.5.2b < EsthGr.5.16 ~ EsthGr.5.15
+M EsthGr.5.16 > EsthGr.5.2b x1 : EsthGr.5.2b < EsthGr.5.16 ~ EsthGr.5.16
+M EsthGr.5.17 > EsthGr.5.3 x12 : EsthGr.5.3 < EsthGr.5.17 ~ EsthGr.5.17
+M EsthGr.8.13 > EsthGr.8.12a x1 : EsthGr.8.12a < EsthGr.8.13 ~ EsthGr.8.13
+M EsthGr.8.14 > EsthGr.8.12b x1 : EsthGr.8.12b < EsthGr.8.14 ~ EsthGr.8.14
+M EsthGr.8.15 > EsthGr.8.12c x1 : EsthGr.8.12c < EsthGr.8.15 ~ EsthGr.8.15
+M EsthGr.8.16 > EsthGr.8.12d x1 : EsthGr.8.12d < EsthGr.8.16 ~ EsthGr.8.16
+M EsthGr.8.17 > EsthGr.8.12e x1 : EsthGr.8.12e < EsthGr.8.17 ~ EsthGr.8.17
+M EsthGr.8.18 > EsthGr.8.12f x1 : EsthGr.8.12f < EsthGr.8.18 ~ EsthGr.8.18
+M EsthGr.8.19 > EsthGr.8.12g x1 : EsthGr.8.12g < EsthGr.8.19 ~ EsthGr.8.19
+M EsthGr.8.20 > EsthGr.8.12h x1 : EsthGr.8.12h < EsthGr.8.20 ~ EsthGr.8.20
+M EsthGr.8.21 > EsthGr.8.12i x1 : EsthGr.8.12i < EsthGr.8.21 ~ EsthGr.8.21
+M EsthGr.8.22 > EsthGr.8.12k x1 : EsthGr.8.12k < EsthGr.8.22 ~ EsthGr.8.22
+M EsthGr.8.23 > EsthGr.8.12l x1 : EsthGr.8.12l < EsthGr.8.23 ~ EsthGr.8.23
+M EsthGr.8.24 > EsthGr.8.12m x1 : EsthGr.8.12m < EsthGr.8.24 ~ EsthGr.8.24
+M EsthGr.8.25 > EsthGr.8.12n x1 : EsthGr.8.12n < EsthGr.8.25 ~ EsthGr.8.25
+M EsthGr.8.26 > EsthGr.8.12o x1 : EsthGr.8.12o < EsthGr.8.26 ~ EsthGr.8.26
+M EsthGr.8.27 > EsthGr.8.12p x1 : EsthGr.8.12p < EsthGr.8.27 ~ EsthGr.8.27
+M EsthGr.8.28 > EsthGr.8.12q x1 : EsthGr.8.12q < EsthGr.8.28 ~ EsthGr.8.28
+M EsthGr.8.29 > EsthGr.8.12r x1 : EsthGr.8.12r < EsthGr.8.29 ~ EsthGr.8.29
+M EsthGr.8.30 > EsthGr.8.12s x1 : EsthGr.8.12s < EsthGr.8.30 ~ EsthGr.8.30
+M EsthGr.8.31 > EsthGr.8.12t x1 : EsthGr.8.12t < EsthGr.8.31 ~ EsthGr.8.31
+M EsthGr.8.32 > EsthGr.8.12u x1 : EsthGr.8.12u < EsthGr.8.32 ~ EsthGr.8.32
+M EsthGr.8.33 > EsthGr.8.12x x1 : EsthGr.8.12x < EsthGr.8.33 ~ EsthGr.8.33
+M EsthGr.8.34 > EsthGr.8.12y x1 : EsthGr.8.12y < EsthGr.8.36 ~ EsthGr.8.34
+M EsthGr.8.35 > EsthGr.8.12y x1 : EsthGr.8.12y < EsthGr.8.36 ~ EsthGr.8.35
+M EsthGr.8.36 > EsthGr.8.12y x1 : EsthGr.8.12y < EsthGr.8.36 ~ EsthGr.8.36
+M EsthGr.8.37 > EsthGr.8.13 x5 : EsthGr.8.13 < EsthGr.8.37 ~ EsthGr.8.37
+M EsthGr.10.4 > EsthGr.10.3a x1 : EsthGr.10.3a < EsthGr.10.4 ~ EsthGr.10.4
+M EsthGr.10.5 > EsthGr.10.3b x1 : EsthGr.10.3b < EsthGr.10.5 ~ EsthGr.10.5
+M EsthGr.10.6 > EsthGr.10.3c x1 : EsthGr.10.3c < EsthGr.10.6 ~ EsthGr.10.6
+M EsthGr.10.7 > EsthGr.10.3d x1 : EsthGr.10.3d < EsthGr.10.7 ~ EsthGr.10.7
+M EsthGr.10.8 > EsthGr.10.3e x1 : EsthGr.10.3e < EsthGr.10.8 ~ EsthGr.10.8
+M EsthGr.10.9 > EsthGr.10.3f x1 : EsthGr.10.3f < EsthGr.10.9 ~ EsthGr.10.9
+M EsthGr.10.10 > EsthGr.10.3g x1 : EsthGr.10.3g < EsthGr.10.10 ~ EsthGr.10.10
+M EsthGr.10.11 > EsthGr.10.3h x1 : EsthGr.10.3h < EsthGr.10.11 ~ EsthGr.10.11
+M EsthGr.10.12 > EsthGr.10.3i x1 : EsthGr.10.3i < EsthGr.10.12 ~ EsthGr.10.12
+M EsthGr.10.13 > EsthGr.10.3k x1 : EsthGr.10.3k < EsthGr.10.13 ~ EsthGr.10.13
+M EsthGr.10.14 > EsthGr.10.3l x1 : EsthGr.10.3l < EsthGr.10.14 ~ EsthGr.10.14
+M PrAzar.1.1 > DanGr.3.24 x29 : DanGr.3.24 < PrAzar.1.1 ~ PrAzar.1.1
+M PrAzar.1.30 > DanGr.3.52 x2 : DanGr.3.52 < PrAzar.1.30 ~ PrAzar.1.30
+M PrAzar.1.33 > DanGr.3.54 x1 : DanGr.3.54 < PrAzar.1.33 ~ PrAzar.1.33
+M PrAzar.1.32 > DanGr.3.55 x1 : DanGr.3.55 < PrAzar.1.32 ~ PrAzar.1.32
+M PrAzar.1.34 > DanGr.3.56 x2 : DanGr.3.56 < PrAzar.1.34 ~ PrAzar.1.34
+M PrAzar.1.37 > DanGr.3.58 x1 : DanGr.3.58 < PrAzar.1.37 ~ PrAzar.1.37
+M PrAzar.1.36 > DanGr.3.59 x1 : DanGr.3.59 < PrAzar.1.36 ~ PrAzar.1.36
+M PrAzar.1.38 > DanGr.3.60 x31 : DanGr.3.60 < PrAzar.1.38 ~ PrAzar.1.38
+# Russian Protestant books=66 mappings=238 excluded=0
+B Genesis | Gen old 31,25,24,26,32,22,24,22,29,32,32,20,18,24,21,16,27,33,38,18,34,24,20,67,34,35,46,22,35,43,55,32,20,31,29,43,36,30,23,23,57,38,34,34,28,34,31,22,33,26
+B Exodus | Exod old 22,25,22,31,23,30,25,32,35,29,10,51,22,31,27,36,16,27,25,26,36,31,33,18,40,37,21,43,46,38,18,35,23,35,35,38,29,31,43,38
+B Leviticus | Lev old 17,16,17,35,19,30,38,36,24,20,47,8,59,56,33,34,16,30,37,27,24,33,44,23,55,46,34
+B Numbers | Num old 54,34,51,49,31,27,89,26,23,36,35,15,34,45,41,50,13,32,22,29,35,41,30,25,18,65,23,31,39,17,54,42,56,29,34,13
+B Deuteronomy | Deut old 46,37,29,49,33,25,26,20,29,22,32,32,18,29,23,22,20,22,21,20,23,30,25,22,19,19,26,68,29,20,30,52,29,12
+B Joshua | Josh old 18,24,17,24,16,26,26,35,27,43,23,24,33,15,63,10,18,28,51,9,45,34,16,33
+B Judges | Judg old 36,23,31,24,31,40,25,35,57,18,40,15,25,20,20,31,13,31,30,48,25
+B Ruth | Ruth old 22,23,18,22
+B I Samuel | 1Sam old 28,36,21,22,12,21,17,22,27,27,15,25,23,52,35,23,58,30,24,43,15,23,28,23,44,25,12,25,11,31,13
+B II Samuel | 2Sam old 27,32,39,12,25,23,29,18,13,19,27,31,39,33,37,23,29,33,43,26,22,51,39,25
+B I Kings | 1Kgs old 53,46,28,34,18,38,51,66,28,29,43,33,34,31,34,34,24,46,21,43,29,53
+B II Kings | 2Kgs old 18,25,27,44,27,33,20,29,37,36,21,21,25,29,38,20,41,37,37,21,26,20,37,20,30
+B I Chronicles | 1Chr old 54,55,24,43,26,81,40,40,44,14,47,40,14,17,29,43,27,17,19,8,30,19,32,31,31,32,34,21,30
+B II Chronicles | 2Chr old 17,18,17,22,14,42,22,18,31,19,23,16,22,15,19,14,19,34,11,37,20,12,21,27,28,23,9,27,36,27,21,33,25,33,27,23
+B Ezra | Ezra old 11,70,13,24,17,22,28,36,15,44
+B Nehemiah | Neh old 11,20,32,23,19,19,73,18,38,39,36,47,31
+B Esther | Esth old 22,23,15,17,14,14,10,17,32,3
+B Job | Job old 22,13,26,21,27,30,21,22,35,22,20,25,28,22,35,22,16,21,29,29,34,30,17,25,6,14,23,28,25,31,40,22,33,37,16,33,24,41,35,27,26,17
+B Psalms | Ps old 6,12,9,9,13,11,18,10,39,7,9,6,7,5,11,15,51,15,10,14,32,6,10,22,12,14,9,11,13,25,11,22,23,28,13,40,23,14,18,14,12,5,27,18,12,10,15,21,23,21,11,7,9,24,14,12,12,18,14,9,13,12,11,14,20,8,36,37,6,24,20,28,23,11,13,21,72,13,20,17,8,19,13,14,17,7,19,53,17,16,16,5,23,11,13,12,9,9,5,8,29,22,35,45,48,43,14,31,7,10,10,9,26,9,10,2,29,176,7,8,9,4,8,5,6,5,6,8,8,3,18,3,3,21,26,9,8,24,14,10,7,12,15,21,10,11,9,14,9,6
+B Proverbs | Prov old 33,22,35,27,23,35,27,36,18,32,31,28,25,35,33,33,28,24,29,30,31,29,35,34,28,28,27,28,27,33,31
+B Ecclesiastes | Eccl old 18,26,22,17,19,12,29,17,18,20,10,14
+B Song of Solomon | Song old 16,17,11,16,16,12,14,14
+B Isaiah | Isa old 31,22,25,6,30,13,25,22,21,34,16,6,22,32,9,14,14,7,25,6,17,25,18,23,12,21,13,29,24,33,9,20,24,17,10,22,38,22,8,31,29,25,28,28,25,13,15,22,26,11,23,15,12,17,13,12,21,14,21,22,11,12,19,12,25,24
+B Jeremiah | Jer old 19,37,25,31,31,30,34,22,26,25,23,17,27,22,21,21,27,23,15,18,14,30,40,10,38,24,22,17,32,24,40,44,26,22,19,32,21,28,18,16,18,22,13,30,5,28,7,47,39,46,64,34
+B Lamentations | Lam old 22,22,66,22,22
+B Ezekiel | Ezek old 28,10,27,17,17,14,27,18,11,22,25,28,23,23,8,63,24,32,14,49,32,31,49,27,17,21,36,26,21,26,18,32,33,31,15,38,28,23,29,49,26,20,27,31,25,24,23,35
+B Daniel | Dan old 21,49,33,34,31,28,28,27,27,21,45,13
+B Hosea | Hos old 11,23,5,19,15,11,16,14,17,15,12,14,15,10
+B Joel | Joel old 20,32,21
+B Amos | Amos old 15,16,15,13,27,14,17,14,15
+B Obadiah | Obad old 21
+B Jonah | Jonah old 16,11,10,11
+B Micah | Mic old 16,13,12,13,15,16,20
+B Nahum | Nah old 15,13,19
+B Habakkuk | Hab old 17,20,19
+B Zephaniah | Zeph old 18,15,20
+B Haggai | Hag old 15,23
+B Zechariah | Zech old 21,13,10,14,11,15,14,23,17,12,17,14,9,21
+B Malachi | Mal old 14,17,18,6
+B Matthew | Matt new 25,23,17,25,48,34,29,34,38,42,30,50,58,36,39,28,27,35,30,34,46,46,39,51,46,75,66,20
+B Mark | Mark new 45,28,35,41,43,56,37,38,50,52,33,44,37,72,47,20
+B Luke | Luke new 80,52,38,44,39,49,50,56,62,42,54,59,35,35,32,31,37,43,48,47,38,71,56,53
+B John | John new 51,25,36,54,47,71,53,59,41,42,57,50,38,31,27,33,26,40,42,31,25
+B Acts | Acts new 26,47,26,37,42,15,60,40,43,48,30,25,52,28,41,40,34,28,40,38,40,30,35,27,27,32,44,31
+B Romans | Rom new 32,29,31,25,21,23,25,39,33,21,36,21,14,26,33,24
+B I Corinthians | 1Cor new 31,16,23,21,13,20,40,13,27,33,34,31,13,40,58,24
+B II Corinthians | 2Cor new 24,17,18,18,21,18,16,24,15,18,32,21,13
+B Galatians | Gal new 24,21,29,31,26,18
+B Ephesians | Eph new 23,22,21,32,33,24
+B Philippians | Phil new 30,30,21,23
+B Colossians | Col new 29,23,25,18
+B I Thessalonians | 1Thess new 10,20,13,18,28
+B II Thessalonians | 2Thess new 12,17,18
+B I Timothy | 1Tim new 20,15,16,16,25,21
+B II Timothy | 2Tim new 18,26,17,22
+B Titus | Titus new 16,15,15
+B Philemon | Phlm new 25
+B Hebrews | Heb new 14,18,19,16,14,20,28,13,28,39,40,29,25
+B James | Jas new 27,26,18,17,20
+B I Peter | 1Pet new 25,25,22,19,14
+B II Peter | 2Pet new 21,22,18
+B I John | 1John new 10,29,24,21,21
+B II John | 2John new 13
+B III John | 3John new 15
+B Jude | Jude new 25
+B Revelation of John | Rev new 20,29,22,11,14,17,17,13,21,11,19,17,18,20,8,21,18,24,21,15,27,21
+M Gen.31.55 > Gen.32.1 x1 : Gen.32.1 < Gen.31.55 ~ Gen.31.55
+M Gen.32.1 > Gen.32.2 x32 : Gen.32.2 < Gen.32.1 ~ Gen.32.1
+M Exod.8.1 > Exod.7.26 x4 : Exod.7.26 < Exod.8.1 ~ Exod.8.1
+M Exod.8.5 > Exod.8.1 x28 : Exod.8.1 < Exod.8.5 ~ Exod.8.5
+M Exod.22.1 > Exod.21.37 x1 : Exod.21.37 < Exod.22.1 ~ Exod.22.1
+M Exod.22.2 > Exod.22.1 x30 : Exod.22.1 < Exod.22.2 ~ Exod.22.2
+M Lev.6.1 > Lev.5.20 x7 : Lev.5.20 < Lev.6.1 ~ Lev.6.1
+M Lev.6.8 > Lev.6.1 x23 : Lev.6.1 < Lev.6.8 ~ Lev.6.8
+M Lev.14.55 > Lev.14.55 x1 : Lev.14.56 < Lev.14.55 ~ Lev.14.56
+M Lev.14.55 > Lev.14.56 x1 : Lev.14.56 < Lev.14.55 ~ Lev.14.56
+M Lev.14.56 > Lev.14.57 x1 : Lev.14.57 < Lev.14.56 ~ Lev.14.57
+M Num.13.1 > Num.12.16 x1 : Num.12.16 < Num.13.1 ~ Num.12.16
+M Num.13.2 > Num.13.1 x33 : Num.13.1 < Num.13.2 ~ Num.13.1
+M Num.16.36 > Num.17.1 x15 : Num.17.1 < Num.16.36 ~ Num.16.36
+M Num.17.1 > Num.17.16 x13 : Num.17.16 < Num.17.1 ~ Num.17.1
+M Num.26.1 > Num.25.19 x1 : Num.26.1 < Num.26.1 ~ Num.26.1
+M Num.26.1 > Num.26.1 x1 : Num.26.1 < Num.26.1 ~ Num.26.1
+M Deut.12.32 > Deut.13.1 x1 : Deut.13.1 < Deut.12.32 ~ Deut.12.32
+M Deut.13.1 > Deut.13.2 x18 : Deut.13.2 < Deut.13.1 ~ Deut.13.1
+M Deut.22.30 > Deut.23.1 x1 : Deut.23.1 < Deut.22.30 ~ Deut.22.30
+M Deut.23.1 > Deut.23.2 x25 : Deut.23.2 < Deut.23.1 ~ Deut.23.1
+M Deut.29.1 > Deut.28.69 x1 : Deut.28.69 < Deut.29.1 ~ Deut.29.1
+M Deut.29.2 > Deut.29.1 x28 : Deut.29.1 < Deut.29.2 ~ Deut.29.2
+M Josh.5.16 > Josh.6.1 x1 : Josh.6.1 < Josh.5.16 ~ Josh.6.1
+M Josh.6.1 > Josh.6.2 x26 : Josh.6.2 < Josh.6.1 ~ Josh.6.2
+M 1Sam.20.43 > 1Sam.21.1 x1 : 1Sam.21.1 < 1Sam.20.43 ~ 1Sam.20.42
+M 1Sam.21.1 > 1Sam.21.2 x15 : 1Sam.21.2 < 1Sam.21.1 ~ 1Sam.21.1
+M 2Sam.18.33 > 2Sam.19.1 x1 : 2Sam.19.1 < 2Sam.18.33 ~ 2Sam.18.33
+M 2Sam.19.1 > 2Sam.19.2 x43 : 2Sam.19.2 < 2Sam.19.1 ~ 2Sam.19.1
+M 1Kgs.4.21 > 1Kgs.5.1 x14 : 1Kgs.5.1 < 1Kgs.4.21 ~ 1Kgs.4.21
+M 1Kgs.5.1 > 1Kgs.5.15 x18 : 1Kgs.5.15 < 1Kgs.5.1 ~ 1Kgs.5.1
+M 1Kgs.22.43 > 1Kgs.22.43 x1 : 1Kgs.22.44 < 1Kgs.22.43 ~ 1Kgs.22.43
+M 1Kgs.22.43 > 1Kgs.22.44 x1 : 1Kgs.22.44 < 1Kgs.22.43 ~ 1Kgs.22.43
+M 1Kgs.22.44 > 1Kgs.22.45 x10 : 1Kgs.22.45 < 1Kgs.22.44 ~ 1Kgs.22.44
+M 2Kgs.11.21 > 2Kgs.12.1 x1 : 2Kgs.12.1 < 2Kgs.11.21 ~ 2Kgs.11.21
+M 2Kgs.12.1 > 2Kgs.12.2 x21 : 2Kgs.12.2 < 2Kgs.12.1 ~ 2Kgs.12.1
+M 1Chr.6.1 > 1Chr.5.27 x15 : 1Chr.5.27 < 1Chr.6.1 ~ 1Chr.6.1
+M 1Chr.6.16 > 1Chr.6.1 x66 : 1Chr.6.1 < 1Chr.6.16 ~ 1Chr.6.16
+M 1Chr.12.4 > 1Chr.12.4 x1 : 1Chr.12.5 < 1Chr.12.4 ~ 1Chr.12.4
+M 1Chr.12.4 > 1Chr.12.5 x1 : 1Chr.12.5 < 1Chr.12.4 ~ 1Chr.12.4
+M 1Chr.12.5 > 1Chr.12.6 x36 : 1Chr.12.6 < 1Chr.12.5 ~ 1Chr.12.5
+M 2Chr.2.1 > 2Chr.1.18 x1 : 2Chr.1.18 < 2Chr.2.1 ~ 2Chr.2.1
+M 2Chr.2.2 > 2Chr.2.1 x17 : 2Chr.2.1 < 2Chr.2.2 ~ 2Chr.2.2
+M 2Chr.14.1 > 2Chr.13.23 x1 : 2Chr.13.23 < 2Chr.14.1 ~ 2Chr.14.1
+M 2Chr.14.2 > 2Chr.14.1 x14 : 2Chr.14.1 < 2Chr.14.2 ~ 2Chr.14.2
+M Neh.4.1 > Neh.3.33 x6 : Neh.3.33 < Neh.4.1 ~ Neh.4.1
+M Neh.4.7 > Neh.4.1 x17 : Neh.4.1 < Neh.4.7 ~ Neh.4.7
+M Neh.7.67 > Neh.7.67 x1 : Neh.7.67 < Neh.7.68 ~ Neh.7.67
+M Neh.7.68 > Neh.7.67 x1 : Neh.7.67 < Neh.7.68 ~ Neh.7.67
+M Neh.7.69 > Neh.7.68 x5 : Neh.7.68 < Neh.7.69 ~ Neh.7.69
+M Neh.9.38 > Neh.10.1 x1 : Neh.10.1 < Neh.9.38 ~ Neh.9.38
+M Neh.10.1 > Neh.10.2 x39 : Neh.10.2 < Neh.10.1 ~ Neh.10.1
+M Job.39.31 > Job.40.1 x5 : Job.40.1 < Job.39.31 ~ Job.40.1
+M Job.40.1 > Job.40.6 x19 : Job.40.6 < Job.40.1 ~ Job.40.6
+M Job.40.20 > Job.40.25 x8 : Job.40.25 < Job.40.20 ~ Job.41.1
+M Ps.9.22 > Ps.10.0 x1 : Ps.10.1 < Ps.9.22 ~ Ps.10.1
+M Ps.9.22 > Ps.10.1 x18 : Ps.10.1 < Ps.9.22 ~ Ps.10.1
+M Ps.10.0 > Ps.11.0 x8 : Ps.11.0 < Ps.10.0 ~ Ps.11.0
+M Ps.11.0 > Ps.12.0 x10 : Ps.12.0 < Ps.11.0 ~ Ps.12.0
+M Ps.12.0 > Ps.13.0 x7 : Ps.13.0 < Ps.12.0 ~ Ps.13.0
+M Ps.13.0 > Ps.14.0 x8 : Ps.14.0 < Ps.13.0 ~ Ps.14.0
+M Ps.14.0 > Ps.15.0 x6 : Ps.15.0 < Ps.14.0 ~ Ps.15.0
+M Ps.15.0 > Ps.16.0 x12 : Ps.16.0 < Ps.15.0 ~ Ps.16.0
+M Ps.16.0 > Ps.17.0 x16 : Ps.17.0 < Ps.16.0 ~ Ps.17.0
+M Ps.17.0 > Ps.18.0 x52 : Ps.18.0 < Ps.17.0 ~ Ps.18.0
+M Ps.18.0 > Ps.19.0 x16 : Ps.19.0 < Ps.18.0 ~ Ps.19.0
+M Ps.19.0 > Ps.20.0 x11 : Ps.20.0 < Ps.19.0 ~ Ps.20.0
+M Ps.20.0 > Ps.21.0 x15 : Ps.21.0 < Ps.20.0 ~ Ps.21.0
+M Ps.21.0 > Ps.22.0 x33 : Ps.22.0 < Ps.21.0 ~ Ps.22.0
+M Ps.22.0 > Ps.23.0 x7 : Ps.23.0 < Ps.22.0 ~ Ps.23.0
+M Ps.23.0 > Ps.24.0 x11 : Ps.24.0 < Ps.23.0 ~ Ps.24.0
+M Ps.24.0 > Ps.25.0 x23 : Ps.25.0 < Ps.24.0 ~ Ps.25.0
+M Ps.25.0 > Ps.26.0 x13 : Ps.26.0 < Ps.25.0 ~ Ps.26.0
+M Ps.26.0 > Ps.27.0 x15 : Ps.27.0 < Ps.26.0 ~ Ps.27.0
+M Ps.27.0 > Ps.28.0 x10 : Ps.28.0 < Ps.27.0 ~ Ps.28.0
+M Ps.28.0 > Ps.29.0 x12 : Ps.29.0 < Ps.28.0 ~ Ps.29.0
+M Ps.29.0 > Ps.30.0 x14 : Ps.30.0 < Ps.29.0 ~ Ps.30.0
+M Ps.30.0 > Ps.31.0 x26 : Ps.31.0 < Ps.30.0 ~ Ps.31.0
+M Ps.31.0 > Ps.32.0 x12 : Ps.32.0 < Ps.31.0 ~ Ps.32.0
+M Ps.32.0 > Ps.33.0 x23 : Ps.33.0 < Ps.32.0 ~ Ps.33.0
+M Ps.33.0 > Ps.34.0 x24 : Ps.34.0 < Ps.33.0 ~ Ps.34.0
+M Ps.34.0 > Ps.35.0 x29 : Ps.35.0 < Ps.34.0 ~ Ps.35.0
+M Ps.35.0 > Ps.36.0 x14 : Ps.36.0 < Ps.35.0 ~ Ps.36.0
+M Ps.36.0 > Ps.37.0 x41 : Ps.37.0 < Ps.36.0 ~ Ps.37.0
+M Ps.37.0 > Ps.38.0 x24 : Ps.38.0 < Ps.37.0 ~ Ps.38.0
+M Ps.38.0 > Ps.39.0 x15 : Ps.39.0 < Ps.38.0 ~ Ps.39.0
+M Ps.39.0 > Ps.40.0 x19 : Ps.40.0 < Ps.39.0 ~ Ps.40.0
+M Ps.40.0 > Ps.41.0 x15 : Ps.41.0 < Ps.40.0 ~ Ps.41.0
+M Ps.41.0 > Ps.42.0 x13 : Ps.42.0 < Ps.41.0 ~ Ps.42.0
+M Ps.42.0 > Ps.43.0 x6 : Ps.43.0 < Ps.42.0 ~ Ps.43.0
+M Ps.43.0 > Ps.44.0 x28 : Ps.44.0 < Ps.43.0 ~ Ps.44.0
+M Ps.44.0 > Ps.45.0 x19 : Ps.45.0 < Ps.44.0 ~ Ps.45.0
+M Ps.45.0 > Ps.46.0 x13 : Ps.46.0 < Ps.45.0 ~ Ps.46.0
+M Ps.46.0 > Ps.47.0 x11 : Ps.47.0 < Ps.46.0 ~ Ps.47.0
+M Ps.47.0 > Ps.48.0 x16 : Ps.48.0 < Ps.47.0 ~ Ps.48.0
+M Ps.48.0 > Ps.49.0 x22 : Ps.49.0 < Ps.48.0 ~ Ps.49.0
+M Ps.49.0 > Ps.50.0 x24 : Ps.50.0 < Ps.49.0 ~ Ps.50.0
+M Ps.50.0 > Ps.51.0 x22 : Ps.51.0 < Ps.50.0 ~ Ps.51.0
+M Ps.51.0 > Ps.52.0 x12 : Ps.52.0 < Ps.51.0 ~ Ps.52.0
+M Ps.52.0 > Ps.53.0 x8 : Ps.53.0 < Ps.52.0 ~ Ps.53.0
+M Ps.53.0 > Ps.54.0 x10 : Ps.54.0 < Ps.53.0 ~ Ps.54.0
+M Ps.54.0 > Ps.55.0 x25 : Ps.55.0 < Ps.54.0 ~ Ps.55.0
+M Ps.55.0 > Ps.56.0 x15 : Ps.56.0 < Ps.55.0 ~ Ps.56.0
+M Ps.56.0 > Ps.57.0 x13 : Ps.57.0 < Ps.56.0 ~ Ps.57.0
+M Ps.57.0 > Ps.58.0 x13 : Ps.58.0 < Ps.57.0 ~ Ps.58.0
+M Ps.58.0 > Ps.59.0 x19 : Ps.59.0 < Ps.58.0 ~ Ps.59.0
+M Ps.59.0 > Ps.60.0 x15 : Ps.60.0 < Ps.59.0 ~ Ps.60.0
+M Ps.60.0 > Ps.61.0 x10 : Ps.61.0 < Ps.60.0 ~ Ps.61.0
+M Ps.61.0 > Ps.62.0 x14 : Ps.62.0 < Ps.61.0 ~ Ps.62.0
+M Ps.62.0 > Ps.63.0 x13 : Ps.63.0 < Ps.62.0 ~ Ps.63.0
+M Ps.63.0 > Ps.64.0 x12 : Ps.64.0 < Ps.63.0 ~ Ps.64.0
+M Ps.64.0 > Ps.65.0 x15 : Ps.65.0 < Ps.64.0 ~ Ps.65.0
+M Ps.65.0 > Ps.66.0 x21 : Ps.66.0 < Ps.65.0 ~ Ps.66.0
+M Ps.66.0 > Ps.67.0 x9 : Ps.67.0 < Ps.66.0 ~ Ps.67.0
+M Ps.67.0 > Ps.68.0 x37 : Ps.68.0 < Ps.67.0 ~ Ps.68.0
+M Ps.68.0 > Ps.69.0 x38 : Ps.69.0 < Ps.68.0 ~ Ps.69.0
+M Ps.69.0 > Ps.70.0 x7 : Ps.70.0 < Ps.69.0 ~ Ps.70.0
+M Ps.70.0 > Ps.71.0 x25 : Ps.71.0 < Ps.70.0 ~ Ps.71.0
+M Ps.71.0 > Ps.72.0 x21 : Ps.72.0 < Ps.71.0 ~ Ps.72.0
+M Ps.72.0 > Ps.73.0 x29 : Ps.73.0 < Ps.72.0 ~ Ps.73.0
+M Ps.73.0 > Ps.74.0 x24 : Ps.74.0 < Ps.73.0 ~ Ps.74.0
+M Ps.74.0 > Ps.75.0 x12 : Ps.75.0 < Ps.74.0 ~ Ps.75.0
+M Ps.75.0 > Ps.76.0 x14 : Ps.76.0 < Ps.75.0 ~ Ps.76.0
+M Ps.76.0 > Ps.77.0 x22 : Ps.77.0 < Ps.76.0 ~ Ps.77.0
+M Ps.77.0 > Ps.78.0 x73 : Ps.78.0 < Ps.77.0 ~ Ps.78.0
+M Ps.78.0 > Ps.79.0 x14 : Ps.79.0 < Ps.78.0 ~ Ps.79.0
+M Ps.79.0 > Ps.80.0 x21 : Ps.80.0 < Ps.79.0 ~ Ps.80.0
+M Ps.80.0 > Ps.81.0 x18 : Ps.81.0 < Ps.80.0 ~ Ps.81.0
+M Ps.81.0 > Ps.82.0 x9 : Ps.82.0 < Ps.81.0 ~ Ps.82.0
+M Ps.82.0 > Ps.83.0 x20 : Ps.83.0 < Ps.82.0 ~ Ps.83.0
+M Ps.83.0 > Ps.84.0 x14 : Ps.84.0 < Ps.83.0 ~ Ps.84.0
+M Ps.84.0 > Ps.85.0 x15 : Ps.85.0 < Ps.84.0 ~ Ps.85.0
+M Ps.85.0 > Ps.86.0 x18 : Ps.86.0 < Ps.85.0 ~ Ps.86.0
+M Ps.86.0 > Ps.87.0 x2 : Ps.87.0 < Ps.86.0 ~ Ps.87.0
+M Ps.86.2 > Ps.87.1 x1 : Ps.87.2 < Ps.86.2 ~ Ps.87.2
+M Ps.86.2 > Ps.87.2 x6 : Ps.87.2 < Ps.86.2 ~ Ps.87.2
+M Ps.87.0 > Ps.88.0 x20 : Ps.88.0 < Ps.87.0 ~ Ps.88.0
+M Ps.88.0 > Ps.89.0 x54 : Ps.89.0 < Ps.88.0 ~ Ps.89.0
+M Ps.89.0 > Ps.90.0 x2 : Ps.90.0 < Ps.89.0 ~ Ps.90.0
+M Ps.89.2 > Ps.90.1 x5 : Ps.90.1 < Ps.89.2 ~ Ps.90.1
+M Ps.89.6 > Ps.90.6 x1 : Ps.90.6 < Ps.89.6 ~ Ps.90.6
+M Ps.89.7 > Ps.90.7 x11 : Ps.90.7 < Ps.89.7 ~ Ps.90.7
+M Ps.90.0 > Ps.91.0 x17 : Ps.91.0 < Ps.90.0 ~ Ps.91.0
+M Ps.91.0 > Ps.92.0 x17 : Ps.92.0 < Ps.91.0 ~ Ps.92.0
+M Ps.92.0 > Ps.93.0 x6 : Ps.93.0 < Ps.92.0 ~ Ps.93.0
+M Ps.93.0 > Ps.94.0 x24 : Ps.94.0 < Ps.93.0 ~ Ps.94.0
+M Ps.94.0 > Ps.95.0 x12 : Ps.95.0 < Ps.94.0 ~ Ps.95.0
+M Ps.95.0 > Ps.96.0 x14 : Ps.96.0 < Ps.95.0 ~ Ps.96.0
+M Ps.96.0 > Ps.97.0 x13 : Ps.97.0 < Ps.96.0 ~ Ps.97.0
+M Ps.97.0 > Ps.98.0 x10 : Ps.98.0 < Ps.97.0 ~ Ps.98.0
+M Ps.98.0 > Ps.99.0 x10 : Ps.99.0 < Ps.98.0 ~ Ps.99.0
+M Ps.99.0 > Ps.100.0 x6 : Ps.100.0 < Ps.99.0 ~ Ps.100.0
+M Ps.100.0 > Ps.101.0 x9 : Ps.101.0 < Ps.100.0 ~ Ps.101.0
+M Ps.101.0 > Ps.102.0 x30 : Ps.102.0 < Ps.101.0 ~ Ps.102.0
+M Ps.102.0 > Ps.103.0 x23 : Ps.103.0 < Ps.102.0 ~ Ps.103.0
+M Ps.103.0 > Ps.104.0 x36 : Ps.104.0 < Ps.103.0 ~ Ps.104.0
+M Ps.104.0 > Ps.105.0 x46 : Ps.105.0 < Ps.104.0 ~ Ps.105.0
+M Ps.105.0 > Ps.106.0 x49 : Ps.106.0 < Ps.105.0 ~ Ps.106.0
+M Ps.106.0 > Ps.107.0 x44 : Ps.107.0 < Ps.106.0 ~ Ps.107.0
+M Ps.107.0 > Ps.108.0 x15 : Ps.108.0 < Ps.107.0 ~ Ps.108.0
+M Ps.108.0 > Ps.109.0 x32 : Ps.109.0 < Ps.108.0 ~ Ps.109.0
+M Ps.109.0 > Ps.110.0 x8 : Ps.110.0 < Ps.109.0 ~ Ps.110.0
+M Ps.110.0 > Ps.111.0 x11 : Ps.111.0 < Ps.110.0 ~ Ps.111.0
+M Ps.111.0 > Ps.112.0 x11 : Ps.112.0 < Ps.111.0 ~ Ps.112.0
+M Ps.112.0 > Ps.113.0 x10 : Ps.113.0 < Ps.112.0 ~ Ps.113.0
+M Ps.113.0 > Ps.114.0 x9 : Ps.114.0 < Ps.113.0 ~ Ps.114.0
+M Ps.113.9 > Ps.115.0 x1 : Ps.115.1 < Ps.113.9 ~ Ps.115.1
+M Ps.113.9 > Ps.115.1 x18 : Ps.115.1 < Ps.113.9 ~ Ps.115.1
+M Ps.114.0 > Ps.116.0 x10 : Ps.116.0 < Ps.114.0 ~ Ps.116.0
+M Ps.115.0 > Ps.116.10 x1 : Ps.116.10 < Ps.115.1 ~ Ps.116.10
+M Ps.115.1 > Ps.116.10 x10 : Ps.116.10 < Ps.115.1 ~ Ps.116.10
+M Ps.116.0 > Ps.117.0 x3 : Ps.117.0 < Ps.116.0 ~ Ps.117.0
+M Ps.117.0 > Ps.118.0 x30 : Ps.118.0 < Ps.117.0 ~ Ps.118.0
+M Ps.118.0 > Ps.119.0 x177 : Ps.119.0 < Ps.118.0 ~ Ps.119.0
+M Ps.119.0 > Ps.120.0 x8 : Ps.120.0 < Ps.119.0 ~ Ps.120.0
+M Ps.120.0 > Ps.121.0 x9 : Ps.121.0 < Ps.120.0 ~ Ps.121.0
+M Ps.121.0 > Ps.122.0 x10 : Ps.122.0 < Ps.121.0 ~ Ps.122.0
+M Ps.122.0 > Ps.123.0 x5 : Ps.123.0 < Ps.122.0 ~ Ps.123.0
+M Ps.123.0 > Ps.124.0 x9 : Ps.124.0 < Ps.123.0 ~ Ps.124.0
+M Ps.124.0 > Ps.125.0 x6 : Ps.125.0 < Ps.124.0 ~ Ps.125.0
+M Ps.125.0 > Ps.126.0 x7 : Ps.126.0 < Ps.125.0 ~ Ps.126.0
+M Ps.126.0 > Ps.127.0 x6 : Ps.127.0 < Ps.126.0 ~ Ps.127.0
+M Ps.127.0 > Ps.128.0 x7 : Ps.128.0 < Ps.127.0 ~ Ps.128.0
+M Ps.128.0 > Ps.129.0 x9 : Ps.129.0 < Ps.128.0 ~ Ps.129.0
+M Ps.129.0 > Ps.130.0 x9 : Ps.130.0 < Ps.129.0 ~ Ps.130.0
+M Ps.130.0 > Ps.131.0 x4 : Ps.131.0 < Ps.130.0 ~ Ps.131.0
+M Ps.131.0 > Ps.132.0 x19 : Ps.132.0 < Ps.131.0 ~ Ps.132.0
+M Ps.132.0 > Ps.133.0 x4 : Ps.133.0 < Ps.132.0 ~ Ps.133.0
+M Ps.133.0 > Ps.134.0 x4 : Ps.134.0 < Ps.133.0 ~ Ps.134.0
+M Ps.134.0 > Ps.135.0 x22 : Ps.135.0 < Ps.134.0 ~ Ps.135.0
+M Ps.135.0 > Ps.136.0 x27 : Ps.136.0 < Ps.135.0 ~ Ps.136.0
+M Ps.136.0 > Ps.137.0 x10 : Ps.137.0 < Ps.136.0 ~ Ps.137.0
+M Ps.137.0 > Ps.138.0 x9 : Ps.138.0 < Ps.137.0 ~ Ps.138.0
+M Ps.138.0 > Ps.139.0 x25 : Ps.139.0 < Ps.138.0 ~ Ps.139.0
+M Ps.139.0 > Ps.140.0 x15 : Ps.140.0 < Ps.139.0 ~ Ps.140.0
+M Ps.140.0 > Ps.141.0 x11 : Ps.141.0 < Ps.140.0 ~ Ps.141.0
+M Ps.141.0 > Ps.142.0 x1 : Ps.142.0 < Ps.141.0 ~ Ps.142.0
+M Ps.141.1 > Ps.142.2 x7 : Ps.142.2 < Ps.141.1 ~ Ps.142.1
+M Ps.142.0 > Ps.143.0 x13 : Ps.143.0 < Ps.142.0 ~ Ps.143.0
+M Ps.143.0 > Ps.144.0 x16 : Ps.144.0 < Ps.143.0 ~ Ps.144.0
+M Ps.144.0 > Ps.145.0 x22 : Ps.145.0 < Ps.144.0 ~ Ps.145.0
+M Ps.145.0 > Ps.146.0 x11 : Ps.146.0 < Ps.145.0 ~ Ps.146.0
+M Ps.146.0 > Ps.147.0 x12 : Ps.147.0 < Ps.146.0 ~ Ps.147.0
+M Ps.147.0 > Ps.147.12 x1 : Ps.147.12 < Ps.147.1 ~ Ps.147.12
+M Ps.147.1 > Ps.147.12 x9 : Ps.147.12 < Ps.147.1 ~ Ps.147.12
+M Song.1.1 > Song.1.2 x16 : Song.1.2 < Song.1.1 ~ Song.1.2
+M Isa.3.19 > Isa.3.19 x1 : Isa.3.20 < Isa.3.19 ~ Isa.3.20
+M Isa.3.19 > Isa.3.20 x1 : Isa.3.20 < Isa.3.19 ~ Isa.3.20
+M Isa.3.20 > Isa.3.21 x6 : Isa.3.21 < Isa.3.20 ~ Isa.3.21
+M Isa.9.1 > Isa.8.23 x1 : Isa.8.23 < Isa.9.1 ~ Isa.9.1
+M Isa.9.2 > Isa.9.1 x20 : Isa.9.1 < Isa.9.2 ~ Isa.9.2
+M Isa.63.19 > Isa.63.19 x1 : Isa.63.19 < Isa.64.1 ~ Isa.63.19
+M Isa.64.1 > Isa.63.19 x1 : Isa.63.19 < Isa.64.1 ~ Isa.63.19
+M Isa.64.2 > Isa.64.1 x11 : Isa.64.1 < Isa.64.2 ~ Isa.64.2
+M Jer.9.1 > Jer.8.23 x1 : Jer.8.23 < Jer.9.1 ~ Jer.9.1
+M Jer.9.2 > Jer.9.1 x25 : Jer.9.1 < Jer.9.2 ~ Jer.9.2
+M Ezek.20.45 > Ezek.21.1 x5 : Ezek.21.1 < Ezek.20.45 ~ Ezek.20.45
+M Ezek.21.1 > Ezek.21.6 x32 : Ezek.21.6 < Ezek.21.1 ~ Ezek.21.1
+M Dan.5.31 > Dan.6.1 x1 : Dan.6.1 < Dan.5.31 ~ Dan.5.31
+M Dan.6.1 > Dan.6.2 x28 : Dan.6.2 < Dan.6.1 ~ Dan.6.1
+M Hos.1.10 > Hos.2.1 x2 : Hos.2.1 < Hos.1.10 ~ Hos.1.10
+M Hos.2.1 > Hos.2.3 x23 : Hos.2.3 < Hos.2.1 ~ Hos.2.1
+M Hos.11.12 > Hos.12.1 x1 : Hos.12.1 < Hos.11.12 ~ Hos.11.12
+M Hos.12.1 > Hos.12.2 x14 : Hos.12.2 < Hos.12.1 ~ Hos.12.1
+M Joel.2.28 > Joel.3.1 x5 : Joel.3.1 < Joel.2.28 ~ Joel.2.28
+M Joel.3.1 > Joel.4.1 x21 : Joel.4.1 < Joel.3.1 ~ Joel.3.1
+M Mic.5.1 > Mic.4.14 x1 : Mic.4.14 < Mic.5.1 ~ Mic.5.1
+M Mic.5.2 > Mic.5.1 x14 : Mic.5.1 < Mic.5.2 ~ Mic.5.2
+M Nah.1.15 > Nah.2.1 x1 : Nah.2.1 < Nah.1.15 ~ Nah.1.15
+M Nah.2.1 > Nah.2.2 x13 : Nah.2.2 < Nah.2.1 ~ Nah.2.1
+M Zech.1.18 > Zech.2.1 x4 : Zech.2.1 < Zech.1.18 ~ Zech.1.18
+M Zech.2.1 > Zech.2.5 x13 : Zech.2.5 < Zech.2.1 ~ Zech.2.1
+M Mal.4.1 > Mal.3.19 x6 : Mal.3.19 < Mal.4.1 ~ Mal.4.1
+M Rom.14.24 > Rom.16.25 x3 : Rom.16.25 < Rom.14.24 ~ Rom.16.25
+M 2Cor.11.32 > 2Cor.11.32 x1 : 2Cor.11.33 < 2Cor.11.32 ~ 2Cor.11.33
+M 2Cor.11.32 > 2Cor.11.33 x1 : 2Cor.11.33 < 2Cor.11.32 ~ 2Cor.11.33
+M Rev.13.1 > Rev.12.18 x1 : Rev.13.1 < Rev.13.1 ~ Rev.13.1
+M Rev.13.1 > Rev.13.1 x1 : Rev.13.1 < Rev.13.1 ~ Rev.13.1
+# Russian Orthodox books=79 mappings=390 excluded=0
+B Genesis | Gen old 31,25,24,26,32,22,24,22,29,32,32,20,18,24,21,16,27,33,38,18,34,24,20,67,34,35,46,22,35,43,55,32,20,31,29,43,36,30,23,23,57,38,34,34,28,34,31,22,33,26
+B Exodus | Exod old 22,25,22,31,23,30,25,32,35,29,10,51,22,31,27,36,16,27,25,26,36,31,33,18,40,37,21,43,46,38,18,35,23,35,35,38,29,31,43,38
+B Leviticus | Lev old 17,16,17,35,19,30,38,36,24,20,47,8,59,56,33,34,16,30,37,27,24,33,44,23,55,46,34
+B Numbers | Num old 54,34,51,49,31,27,89,26,23,36,35,15,34,45,41,50,13,32,22,29,35,41,30,25,18,65,23,31,39,17,54,42,56,29,34,13
+B Deuteronomy | Deut old 46,37,29,49,33,25,26,20,29,22,32,32,18,29,23,22,20,22,21,20,23,30,25,22,19,19,26,68,29,20,30,52,29,12
+B Joshua | Josh old 18,24,17,24,16,26,26,35,27,43,23,24,33,15,63,10,18,28,51,9,45,34,16,36
+B Judges | Judg old 36,23,31,24,31,40,25,35,57,18,40,15,25,20,20,31,13,31,30,48,25
+B Ruth | Ruth old 22,23,18,22
+B I Samuel | 1Sam old 28,36,21,22,12,21,17,22,27,27,15,25,23,52,35,23,58,30,24,43,15,23,28,23,44,25,12,25,11,31,13
+B II Samuel | 2Sam old 27,32,39,12,25,23,29,18,13,19,27,31,39,33,37,23,29,33,43,26,22,51,39,25
+B I Kings | 1Kgs old 53,46,28,34,18,38,51,66,28,29,43,33,34,31,34,34,24,46,21,43,29,53
+B II Kings | 2Kgs old 18,25,27,44,27,33,20,29,37,36,21,21,25,29,38,20,41,37,37,21,26,20,37,20,30
+B I Chronicles | 1Chr old 54,55,24,43,26,81,40,40,44,14,47,40,14,17,29,43,27,17,19,8,30,19,32,31,31,32,34,21,30
+B II Chronicles | 2Chr old 17,18,17,22,14,42,22,18,31,19,23,16,22,15,19,14,19,34,11,37,20,12,21,27,28,23,9,27,36,27,21,33,25,33,27,23,12
+B Ezra | Ezra old 11,70,13,24,17,22,28,36,15,44
+B Nehemiah | Neh old 11,20,32,23,19,19,73,18,38,39,36,47,31
+B Esther | Esth old 22,23,15,17,14,14,10,17,32,3
+B Job | Job old 22,13,26,21,27,30,21,22,35,22,20,25,28,22,35,22,16,21,29,29,34,30,17,25,6,14,23,28,25,31,40,22,33,37,16,33,24,41,35,27,26,17
+B Psalms | Ps old 6,12,9,9,13,11,18,10,39,7,9,6,7,5,11,15,51,15,10,14,32,6,10,22,12,14,9,11,13,25,11,22,23,28,13,40,23,14,18,14,12,5,27,18,12,10,15,21,23,21,11,7,9,24,14,12,12,18,14,9,13,12,11,14,20,8,36,37,6,24,20,28,23,11,13,21,72,13,20,17,8,19,13,14,17,7,19,53,17,16,16,5,23,11,13,12,9,9,5,8,29,22,35,45,48,43,14,31,7,10,10,9,26,8,10,2,29,176,7,8,9,4,8,5,6,5,6,8,8,3,18,3,3,21,26,9,8,24,14,10,7,12,15,21,10,11,9,14,9,6,7
+B Proverbs | Prov old 33,22,35,29,23,35,27,36,18,32,31,28,26,35,33,33,28,25,29,30,31,29,35,34,28,28,27,28,27,33,31
+B Ecclesiastes | Eccl old 18,26,22,17,19,12,29,17,18,20,10,14
+B Song of Solomon | Song old 16,17,11,16,16,12,14,14
+B Isaiah | Isa old 31,22,25,6,30,13,25,22,21,34,16,6,22,32,9,14,14,7,25,6,17,25,18,23,12,21,13,29,24,33,9,20,24,17,10,22,38,22,8,31,29,25,28,28,25,13,15,22,26,11,23,15,12,17,13,12,21,14,21,22,11,12,19,12,25,24
+B Jeremiah | Jer old 19,37,25,31,31,30,34,22,26,25,23,17,27,22,21,21,27,23,15,18,14,30,40,10,38,24,22,17,32,24,40,44,26,22,19,32,21,28,18,16,18,22,13,30,5,28,7,47,39,46,64,34
+B Lamentations | Lam old 22,22,66,22,22
+B Ezekiel | Ezek old 28,10,27,17,17,14,27,18,11,22,25,28,23,23,8,63,24,32,14,49,32,31,49,27,17,21,36,26,21,26,18,32,33,31,15,38,28,23,29,49,26,20,27,31,25,24,23,35
+B Daniel | Dan old 21,49,100,34,31,28,28,27,27,21,45,13,64,42
+B Hosea | Hos old 11,23,5,19,15,11,16,14,17,15,12,14,15,10
+B Joel | Joel old 20,32,21
+B Amos | Amos old 15,16,15,13,27,14,17,14,15
+B Obadiah | Obad old 21
+B Jonah | Jonah old 16,11,10,11
+B Micah | Mic old 16,13,12,13,15,16,20
+B Nahum | Nah old 15,13,19
+B Habakkuk | Hab old 17,20,19
+B Zephaniah | Zeph old 18,15,20
+B Haggai | Hag old 15,23
+B Zechariah | Zech old 21,13,10,14,11,15,14,23,17,12,17,14,9,21
+B Malachi | Mal old 14,17,18,6
+B Matthew | Matt new 25,23,17,25,48,34,29,34,38,42,30,50,58,36,39,28,27,35,30,34,46,46,39,51,46,75,66,20
+B Mark | Mark new 45,28,35,41,43,56,37,38,50,52,33,44,37,72,47,20
+B Luke | Luke new 80,52,38,44,39,49,50,56,62,42,54,59,35,35,32,31,37,43,48,47,38,71,56,53
+B John | John new 51,25,36,54,47,71,53,59,41,42,57,50,38,31,27,33,26,40,42,31,25
+B Acts | Acts new 26,47,26,37,42,15,60,40,43,48,30,25,52,28,41,40,34,28,40,38,40,30,35,27,27,32,44,31
+B Romans | Rom new 32,29,31,25,21,23,25,39,33,21,36,21,14,26,33,24
+B I Corinthians | 1Cor new 31,16,23,21,13,20,40,13,27,33,34,31,13,40,58,24
+B II Corinthians | 2Cor new 24,17,18,18,21,18,16,24,15,18,32,21,13
+B Galatians | Gal new 24,21,29,31,26,18
+B Ephesians | Eph new 23,22,21,32,33,24
+B Philippians | Phil new 30,30,21,23
+B Colossians | Col new 29,23,25,18
+B I Thessalonians | 1Thess new 10,20,13,18,28
+B II Thessalonians | 2Thess new 12,17,18
+B I Timothy | 1Tim new 20,15,16,16,25,21
+B II Timothy | 2Tim new 18,26,17,22
+B Titus | Titus new 16,15,15
+B Philemon | Phlm new 25
+B Hebrews | Heb new 14,18,19,16,14,20,28,13,28,39,40,29,25
+B James | Jas new 27,26,18,17,20
+B I Peter | 1Pet new 25,25,22,19,14
+B II Peter | 2Pet new 21,22,18
+B I John | 1John new 10,29,24,21,21
+B II John | 2John new 13
+B III John | 3John new 15
+B Jude | Jude new 25
+B Revelation of John | Rev new 20,29,22,11,14,17,17,13,21,11,19,17,18,20,8,21,18,24,21,15,27,21
+B Tobit | Tob old 22,14,17,21,22,18,17,21,6,13,18,22,18,15
+B Judith | Jdt old 16,28,10,15,24,21,32,36,14,23,23,20,20,19,14,25
+B Esther (Greek) | EsthGr old 22,23,15,17,14,14,10,17,32,3
+B Wisdom | Wis old 16,24,19,20,24,27,30,21,19,21,27,28,19,31,19,29,20,25,21
+B Sirach | Sir old 30,18,31,35,18,37,39,22,23,34,34,18,32,27,20,31,31,33,28,31,31,31,37,37,29,27,33,30,31,27,37,25,33,26,23,29,34,39,42,32,29,26,36,27,31,23,31,28,18,31,38
+B Baruch | Bar old 22,35,38,37,9
+B Epistle of Jeremiah | EpJer old 72
+B I Maccabees | 1Macc old 64,70,60,61,68,63,50,32,73,89,74,53,53,49,41,24
+B II Maccabees | 2Macc old 36,33,40,50,27,31,42,36,29,38,38,45,26,46,39
+B III Maccabees | 3Macc old 25,24,22,16,36,37,20
+B I Esdras | 1Esd old 58,31,24,63,70,34,15,92,55
+B II Esdras | 2Esd old 40,48,36,52,56,59,70,63,47,60,46,51,58,48,63,78
+B Prayer of Manasses | PrMan old 15
+M Gen.31.55 > Gen.32.1 x1 : Gen.32.1 < Gen.31.55 ~ Gen.31.55
+M Gen.32.1 > Gen.32.2 x32 : Gen.32.2 < Gen.32.1 ~ Gen.32.1
+M Exod.8.1 > Exod.7.26 x4 : Exod.7.26 < Exod.8.1 ~ Exod.8.1
+M Exod.8.5 > Exod.8.1 x28 : Exod.8.1 < Exod.8.5 ~ Exod.8.5
+M Exod.22.1 > Exod.21.37 x1 : Exod.21.37 < Exod.22.1 ~ Exod.22.1
+M Exod.22.2 > Exod.22.1 x30 : Exod.22.1 < Exod.22.2 ~ Exod.22.2
+M Lev.6.1 > Lev.5.20 x7 : Lev.5.20 < Lev.6.1 ~ Lev.6.1
+M Lev.6.8 > Lev.6.1 x23 : Lev.6.1 < Lev.6.8 ~ Lev.6.8
+M Lev.14.55 > Lev.14.55 x1 : Lev.14.56 < Lev.14.55 ~ Lev.14.56
+M Lev.14.55 > Lev.14.56 x1 : Lev.14.56 < Lev.14.55 ~ Lev.14.56
+M Lev.14.56 > Lev.14.57 x1 : Lev.14.57 < Lev.14.56 ~ Lev.14.57
+M Num.13.1 > Num.12.16 x1 : Num.12.16 < Num.13.1 ~ Num.12.16
+M Num.13.2 > Num.13.1 x33 : Num.13.1 < Num.13.2 ~ Num.13.1
+M Num.16.36 > Num.17.1 x15 : Num.17.1 < Num.16.36 ~ Num.16.36
+M Num.17.1 > Num.17.16 x13 : Num.17.16 < Num.17.1 ~ Num.17.1
+M Num.26.1 > Num.25.19 x1 : Num.26.1 < Num.26.1 ~ Num.26.1
+M Num.26.1 > Num.26.1 x1 : Num.26.1 < Num.26.1 ~ Num.26.1
+M Deut.12.32 > Deut.13.1 x1 : Deut.13.1 < Deut.12.32 ~ Deut.12.32
+M Deut.13.1 > Deut.13.2 x18 : Deut.13.2 < Deut.13.1 ~ Deut.13.1
+M Deut.22.30 > Deut.23.1 x1 : Deut.23.1 < Deut.22.30 ~ Deut.22.30
+M Deut.23.1 > Deut.23.2 x25 : Deut.23.2 < Deut.23.1 ~ Deut.23.1
+M Deut.29.1 > Deut.28.69 x1 : Deut.28.69 < Deut.29.1 ~ Deut.29.1
+M Deut.29.2 > Deut.29.1 x28 : Deut.29.1 < Deut.29.2 ~ Deut.29.2
+M Josh.5.16 > Josh.6.1 x1 : Josh.6.1 < Josh.5.16 ~ Josh.6.1
+M Josh.6.1 > Josh.6.2 x26 : Josh.6.2 < Josh.6.1 ~ Josh.6.2
+M 1Sam.20.43 > 1Sam.21.1 x1 : 1Sam.21.1 < 1Sam.20.43 ~ 1Sam.20.42
+M 1Sam.21.1 > 1Sam.21.2 x15 : 1Sam.21.2 < 1Sam.21.1 ~ 1Sam.21.1
+M 2Sam.18.33 > 2Sam.19.1 x1 : 2Sam.19.1 < 2Sam.18.33 ~ 2Sam.18.33
+M 2Sam.19.1 > 2Sam.19.2 x43 : 2Sam.19.2 < 2Sam.19.1 ~ 2Sam.19.1
+M 1Kgs.4.21 > 1Kgs.5.1 x14 : 1Kgs.5.1 < 1Kgs.4.21 ~ 1Kgs.4.21
+M 1Kgs.5.1 > 1Kgs.5.15 x18 : 1Kgs.5.15 < 1Kgs.5.1 ~ 1Kgs.5.1
+M 1Kgs.22.43 > 1Kgs.22.43 x1 : 1Kgs.22.44 < 1Kgs.22.43 ~ 1Kgs.22.43
+M 1Kgs.22.43 > 1Kgs.22.44 x1 : 1Kgs.22.44 < 1Kgs.22.43 ~ 1Kgs.22.43
+M 1Kgs.22.44 > 1Kgs.22.45 x10 : 1Kgs.22.45 < 1Kgs.22.44 ~ 1Kgs.22.44
+M 2Kgs.11.21 > 2Kgs.12.1 x1 : 2Kgs.12.1 < 2Kgs.11.21 ~ 2Kgs.11.21
+M 2Kgs.12.1 > 2Kgs.12.2 x21 : 2Kgs.12.2 < 2Kgs.12.1 ~ 2Kgs.12.1
+M 1Chr.6.1 > 1Chr.5.27 x15 : 1Chr.5.27 < 1Chr.6.1 ~ 1Chr.6.1
+M 1Chr.6.16 > 1Chr.6.1 x66 : 1Chr.6.1 < 1Chr.6.16 ~ 1Chr.6.16
+M 1Chr.12.4 > 1Chr.12.4 x1 : 1Chr.12.5 < 1Chr.12.4 ~ 1Chr.12.4
+M 1Chr.12.4 > 1Chr.12.5 x1 : 1Chr.12.5 < 1Chr.12.4 ~ 1Chr.12.4
+M 1Chr.12.5 > 1Chr.12.6 x36 : 1Chr.12.6 < 1Chr.12.5 ~ 1Chr.12.5
+M 2Chr.2.1 > 2Chr.1.18 x1 : 2Chr.1.18 < 2Chr.2.1 ~ 2Chr.2.1
+M 2Chr.2.2 > 2Chr.2.1 x17 : 2Chr.2.1 < 2Chr.2.2 ~ 2Chr.2.2
+M 2Chr.14.1 > 2Chr.13.23 x1 : 2Chr.13.23 < 2Chr.14.1 ~ 2Chr.14.1
+M 2Chr.14.2 > 2Chr.14.1 x14 : 2Chr.14.1 < 2Chr.14.2 ~ 2Chr.14.2
+M 2Chr.37.1 > PrMan.1.1 x1 : PrMan.1.1 < 2Chr.37.1 ~ PrMan.1.1
+M 2Chr.37.2 > PrMan.1.2 x1 : PrMan.1.5 < 2Chr.37.2 ~ PrMan.1.5
+M 2Chr.37.2 > PrMan.1.3 x1 : PrMan.1.5 < 2Chr.37.2 ~ PrMan.1.5
+M 2Chr.37.2 > PrMan.1.4 x1 : PrMan.1.5 < 2Chr.37.2 ~ PrMan.1.5
+M 2Chr.37.2 > PrMan.1.5 x1 : PrMan.1.5 < 2Chr.37.3 ~ PrMan.1.5
+M 2Chr.37.3 > PrMan.1.5 x1 : PrMan.1.5 < 2Chr.37.3 ~ PrMan.1.5
+M 2Chr.37.4 > PrMan.1.6 x1 : PrMan.1.6 < 2Chr.37.4 ~ PrMan.1.6
+M 2Chr.37.5 > PrMan.1.7 x1 : PrMan.1.7 < 2Chr.37.6 ~ PrMan.1.7
+M 2Chr.37.6 > PrMan.1.7 x1 : PrMan.1.8 < 2Chr.37.6 ~ PrMan.1.8
+M 2Chr.37.6 > PrMan.1.8 x1 : PrMan.1.8 < 2Chr.37.7 ~ PrMan.1.8
+M 2Chr.37.7 > PrMan.1.8 x1 : PrMan.1.9 < 2Chr.37.7 ~ PrMan.1.9
+M 2Chr.37.7 > PrMan.1.9 x1 : PrMan.1.9 < 2Chr.37.8 ~ PrMan.1.9
+M 2Chr.37.8 > PrMan.1.9 x1 : PrMan.1.10 < 2Chr.37.8 ~ PrMan.1.10
+M 2Chr.37.8 > PrMan.1.10 x1 : PrMan.1.10 < 2Chr.37.10 ~ PrMan.1.10
+M 2Chr.37.9 > PrMan.1.10 x1 : PrMan.1.10 < 2Chr.37.10 ~ PrMan.1.10
+M 2Chr.37.10 > PrMan.1.10 x1 : PrMan.1.11 < 2Chr.37.10 ~ PrMan.1.11
+M 2Chr.37.10 > PrMan.1.11 x1 : PrMan.1.11 < 2Chr.37.10 ~ PrMan.1.11
+M 2Chr.37.11 > PrMan.1.12 x1 : PrMan.1.15 < 2Chr.37.11 ~ PrMan.1.15
+M 2Chr.37.11 > PrMan.1.13 x1 : PrMan.1.15 < 2Chr.37.11 ~ PrMan.1.15
+M 2Chr.37.11 > PrMan.1.14 x1 : PrMan.1.15 < 2Chr.37.11 ~ PrMan.1.15
+M 2Chr.37.11 > PrMan.1.15 x1 : PrMan.1.15 < 2Chr.37.12 ~ PrMan.1.15
+M 2Chr.37.12 > PrMan.1.15 x1 : PrMan.1.15 < 2Chr.37.12 ~ PrMan.1.15
+M Neh.4.1 > Neh.3.33 x6 : Neh.3.33 < Neh.4.1 ~ Neh.4.1
+M Neh.4.7 > Neh.4.1 x17 : Neh.4.1 < Neh.4.7 ~ Neh.4.7
+M Neh.7.67 > Neh.7.67 x1 : Neh.7.67 < Neh.7.68 ~ Neh.7.67
+M Neh.7.68 > Neh.7.67 x1 : Neh.7.67 < Neh.7.68 ~ Neh.7.67
+M Neh.7.69 > Neh.7.68 x5 : Neh.7.68 < Neh.7.69 ~ Neh.7.69
+M Neh.9.38 > Neh.10.1 x1 : Neh.10.1 < Neh.9.38 ~ Neh.9.38
+M Neh.10.1 > Neh.10.2 x39 : Neh.10.2 < Neh.10.1 ~ Neh.10.1
+M Job.39.31 > Job.40.1 x5 : Job.40.1 < Job.39.31 ~ Job.40.1
+M Job.40.1 > Job.40.6 x19 : Job.40.6 < Job.40.1 ~ Job.40.6
+M Job.40.20 > Job.40.25 x8 : Job.40.25 < Job.40.20 ~ Job.41.1
+M Ps.9.22 > Ps.10.0 x1 : Ps.10.1 < Ps.9.22 ~ Ps.10.1
+M Ps.9.22 > Ps.10.1 x18 : Ps.10.1 < Ps.9.22 ~ Ps.10.1
+M Ps.10.0 > Ps.11.0 x8 : Ps.11.0 < Ps.10.0 ~ Ps.11.0
+M Ps.11.0 > Ps.12.0 x10 : Ps.12.0 < Ps.11.0 ~ Ps.12.0
+M Ps.12.0 > Ps.13.0 x7 : Ps.13.0 < Ps.12.0 ~ Ps.13.0
+M Ps.13.0 > Ps.14.0 x8 : Ps.14.0 < Ps.13.0 ~ Ps.14.0
+M Ps.14.0 > Ps.15.0 x6 : Ps.15.0 < Ps.14.0 ~ Ps.15.0
+M Ps.15.0 > Ps.16.0 x12 : Ps.16.0 < Ps.15.0 ~ Ps.16.0
+M Ps.16.0 > Ps.17.0 x16 : Ps.17.0 < Ps.16.0 ~ Ps.17.0
+M Ps.17.0 > Ps.18.0 x52 : Ps.18.0 < Ps.17.0 ~ Ps.18.0
+M Ps.18.0 > Ps.19.0 x16 : Ps.19.0 < Ps.18.0 ~ Ps.19.0
+M Ps.19.0 > Ps.20.0 x11 : Ps.20.0 < Ps.19.0 ~ Ps.20.0
+M Ps.20.0 > Ps.21.0 x15 : Ps.21.0 < Ps.20.0 ~ Ps.21.0
+M Ps.21.0 > Ps.22.0 x33 : Ps.22.0 < Ps.21.0 ~ Ps.22.0
+M Ps.22.0 > Ps.23.0 x7 : Ps.23.0 < Ps.22.0 ~ Ps.23.0
+M Ps.23.0 > Ps.24.0 x11 : Ps.24.0 < Ps.23.0 ~ Ps.24.0
+M Ps.24.0 > Ps.25.0 x23 : Ps.25.0 < Ps.24.0 ~ Ps.25.0
+M Ps.25.0 > Ps.26.0 x13 : Ps.26.0 < Ps.25.0 ~ Ps.26.0
+M Ps.26.0 > Ps.27.0 x15 : Ps.27.0 < Ps.26.0 ~ Ps.27.0
+M Ps.27.0 > Ps.28.0 x10 : Ps.28.0 < Ps.27.0 ~ Ps.28.0
+M Ps.28.0 > Ps.29.0 x12 : Ps.29.0 < Ps.28.0 ~ Ps.29.0
+M Ps.29.0 > Ps.30.0 x14 : Ps.30.0 < Ps.29.0 ~ Ps.30.0
+M Ps.30.0 > Ps.31.0 x26 : Ps.31.0 < Ps.30.0 ~ Ps.31.0
+M Ps.31.0 > Ps.32.0 x12 : Ps.32.0 < Ps.31.0 ~ Ps.32.0
+M Ps.32.0 > Ps.33.0 x23 : Ps.33.0 < Ps.32.0 ~ Ps.33.0
+M Ps.33.0 > Ps.34.0 x24 : Ps.34.0 < Ps.33.0 ~ Ps.34.0
+M Ps.34.0 > Ps.35.0 x29 : Ps.35.0 < Ps.34.0 ~ Ps.35.0
+M Ps.35.0 > Ps.36.0 x14 : Ps.36.0 < Ps.35.0 ~ Ps.36.0
+M Ps.36.0 > Ps.37.0 x41 : Ps.37.0 < Ps.36.0 ~ Ps.37.0
+M Ps.37.0 > Ps.38.0 x24 : Ps.38.0 < Ps.37.0 ~ Ps.38.0
+M Ps.38.0 > Ps.39.0 x15 : Ps.39.0 < Ps.38.0 ~ Ps.39.0
+M Ps.39.0 > Ps.40.0 x19 : Ps.40.0 < Ps.39.0 ~ Ps.40.0
+M Ps.40.0 > Ps.41.0 x15 : Ps.41.0 < Ps.40.0 ~ Ps.41.0
+M Ps.41.0 > Ps.42.0 x13 : Ps.42.0 < Ps.41.0 ~ Ps.42.0
+M Ps.42.0 > Ps.43.0 x6 : Ps.43.0 < Ps.42.0 ~ Ps.43.0
+M Ps.43.0 > Ps.44.0 x28 : Ps.44.0 < Ps.43.0 ~ Ps.44.0
+M Ps.44.0 > Ps.45.0 x19 : Ps.45.0 < Ps.44.0 ~ Ps.45.0
+M Ps.45.0 > Ps.46.0 x13 : Ps.46.0 < Ps.45.0 ~ Ps.46.0
+M Ps.46.0 > Ps.47.0 x11 : Ps.47.0 < Ps.46.0 ~ Ps.47.0
+M Ps.47.0 > Ps.48.0 x16 : Ps.48.0 < Ps.47.0 ~ Ps.48.0
+M Ps.48.0 > Ps.49.0 x22 : Ps.49.0 < Ps.48.0 ~ Ps.49.0
+M Ps.49.0 > Ps.50.0 x24 : Ps.50.0 < Ps.49.0 ~ Ps.50.0
+M Ps.50.0 > Ps.51.0 x22 : Ps.51.0 < Ps.50.0 ~ Ps.51.0
+M Ps.51.0 > Ps.52.0 x12 : Ps.52.0 < Ps.51.0 ~ Ps.52.0
+M Ps.52.0 > Ps.53.0 x8 : Ps.53.0 < Ps.52.0 ~ Ps.53.0
+M Ps.53.0 > Ps.54.0 x10 : Ps.54.0 < Ps.53.0 ~ Ps.54.0
+M Ps.54.0 > Ps.55.0 x25 : Ps.55.0 < Ps.54.0 ~ Ps.55.0
+M Ps.55.0 > Ps.56.0 x15 : Ps.56.0 < Ps.55.0 ~ Ps.56.0
+M Ps.56.0 > Ps.57.0 x13 : Ps.57.0 < Ps.56.0 ~ Ps.57.0
+M Ps.57.0 > Ps.58.0 x13 : Ps.58.0 < Ps.57.0 ~ Ps.58.0
+M Ps.58.0 > Ps.59.0 x19 : Ps.59.0 < Ps.58.0 ~ Ps.59.0
+M Ps.59.0 > Ps.60.0 x15 : Ps.60.0 < Ps.59.0 ~ Ps.60.0
+M Ps.60.0 > Ps.61.0 x10 : Ps.61.0 < Ps.60.0 ~ Ps.61.0
+M Ps.61.0 > Ps.62.0 x14 : Ps.62.0 < Ps.61.0 ~ Ps.62.0
+M Ps.62.0 > Ps.63.0 x13 : Ps.63.0 < Ps.62.0 ~ Ps.63.0
+M Ps.63.0 > Ps.64.0 x12 : Ps.64.0 < Ps.63.0 ~ Ps.64.0
+M Ps.64.0 > Ps.65.0 x15 : Ps.65.0 < Ps.64.0 ~ Ps.65.0
+M Ps.65.0 > Ps.66.0 x21 : Ps.66.0 < Ps.65.0 ~ Ps.66.0
+M Ps.66.0 > Ps.67.0 x9 : Ps.67.0 < Ps.66.0 ~ Ps.67.0
+M Ps.67.0 > Ps.68.0 x37 : Ps.68.0 < Ps.67.0 ~ Ps.68.0
+M Ps.68.0 > Ps.69.0 x38 : Ps.69.0 < Ps.68.0 ~ Ps.69.0
+M Ps.69.0 > Ps.70.0 x7 : Ps.70.0 < Ps.69.0 ~ Ps.70.0
+M Ps.70.0 > Ps.71.0 x25 : Ps.71.0 < Ps.70.0 ~ Ps.71.0
+M Ps.71.0 > Ps.72.0 x21 : Ps.72.0 < Ps.71.0 ~ Ps.72.0
+M Ps.72.0 > Ps.73.0 x29 : Ps.73.0 < Ps.72.0 ~ Ps.73.0
+M Ps.73.0 > Ps.74.0 x24 : Ps.74.0 < Ps.73.0 ~ Ps.74.0
+M Ps.74.0 > Ps.75.0 x12 : Ps.75.0 < Ps.74.0 ~ Ps.75.0
+M Ps.75.0 > Ps.76.0 x14 : Ps.76.0 < Ps.75.0 ~ Ps.76.0
+M Ps.76.0 > Ps.77.0 x22 : Ps.77.0 < Ps.76.0 ~ Ps.77.0
+M Ps.77.0 > Ps.78.0 x73 : Ps.78.0 < Ps.77.0 ~ Ps.78.0
+M Ps.78.0 > Ps.79.0 x14 : Ps.79.0 < Ps.78.0 ~ Ps.79.0
+M Ps.79.0 > Ps.80.0 x21 : Ps.80.0 < Ps.79.0 ~ Ps.80.0
+M Ps.80.0 > Ps.81.0 x18 : Ps.81.0 < Ps.80.0 ~ Ps.81.0
+M Ps.81.0 > Ps.82.0 x9 : Ps.82.0 < Ps.81.0 ~ Ps.82.0
+M Ps.82.0 > Ps.83.0 x20 : Ps.83.0 < Ps.82.0 ~ Ps.83.0
+M Ps.83.0 > Ps.84.0 x14 : Ps.84.0 < Ps.83.0 ~ Ps.84.0
+M Ps.84.0 > Ps.85.0 x15 : Ps.85.0 < Ps.84.0 ~ Ps.85.0
+M Ps.85.0 > Ps.86.0 x18 : Ps.86.0 < Ps.85.0 ~ Ps.86.0
+M Ps.86.0 > Ps.87.1 x2 : Ps.87.1 < Ps.86.2 ~ Ps.87.1
+M Ps.86.2 > Ps.87.1 x1 : Ps.87.2 < Ps.86.2 ~ Ps.87.2
+M Ps.86.2 > Ps.87.2 x6 : Ps.87.2 < Ps.86.2 ~ Ps.87.2
+M Ps.87.0 > Ps.88.0 x20 : Ps.88.0 < Ps.87.0 ~ Ps.88.0
+M Ps.88.0 > Ps.89.0 x54 : Ps.89.0 < Ps.88.0 ~ Ps.89.0
+M Ps.89.0 > Ps.90.0 x2 : Ps.90.0 < Ps.89.0 ~ Ps.90.0
+M Ps.89.2 > Ps.90.1 x5 : Ps.90.1 < Ps.89.2 ~ Ps.90.1
+M Ps.89.7 > Ps.90.7 x11 : Ps.90.7 < Ps.89.7 ~ Ps.90.7
+M Ps.90.0 > Ps.91.0 x17 : Ps.91.0 < Ps.90.0 ~ Ps.91.0
+M Ps.91.0 > Ps.92.0 x17 : Ps.92.0 < Ps.91.0 ~ Ps.92.0
+M Ps.92.0 > Ps.93.0 x6 : Ps.93.0 < Ps.92.0 ~ Ps.93.0
+M Ps.93.0 > Ps.94.0 x24 : Ps.94.0 < Ps.93.0 ~ Ps.94.0
+M Ps.94.0 > Ps.95.0 x12 : Ps.95.0 < Ps.94.0 ~ Ps.95.0
+M Ps.95.0 > Ps.96.0 x14 : Ps.96.0 < Ps.95.0 ~ Ps.96.0
+M Ps.96.0 > Ps.97.0 x13 : Ps.97.0 < Ps.96.0 ~ Ps.97.0
+M Ps.97.0 > Ps.98.0 x10 : Ps.98.0 < Ps.97.0 ~ Ps.98.0
+M Ps.98.0 > Ps.99.0 x10 : Ps.99.0 < Ps.98.0 ~ Ps.99.0
+M Ps.99.0 > Ps.100.0 x6 : Ps.100.0 < Ps.99.0 ~ Ps.100.0
+M Ps.100.0 > Ps.101.0 x9 : Ps.101.0 < Ps.100.0 ~ Ps.101.0
+M Ps.101.0 > Ps.102.0 x30 : Ps.102.0 < Ps.101.0 ~ Ps.102.0
+M Ps.102.0 > Ps.103.0 x23 : Ps.103.0 < Ps.102.0 ~ Ps.103.0
+M Ps.103.0 > Ps.104.0 x36 : Ps.104.0 < Ps.103.0 ~ Ps.104.0
+M Ps.104.0 > Ps.105.0 x46 : Ps.105.0 < Ps.104.0 ~ Ps.105.0
+M Ps.105.0 > Ps.106.0 x49 : Ps.106.0 < Ps.105.0 ~ Ps.106.0
+M Ps.106.0 > Ps.107.0 x44 : Ps.107.0 < Ps.106.0 ~ Ps.107.0
+M Ps.107.0 > Ps.108.0 x15 : Ps.108.0 < Ps.107.0 ~ Ps.108.0
+M Ps.108.0 > Ps.109.0 x32 : Ps.109.0 < Ps.108.0 ~ Ps.109.0
+M Ps.109.0 > Ps.110.0 x8 : Ps.110.0 < Ps.109.0 ~ Ps.110.0
+M Ps.110.0 > Ps.111.0 x11 : Ps.111.0 < Ps.110.0 ~ Ps.111.0
+M Ps.111.0 > Ps.112.0 x11 : Ps.112.0 < Ps.111.0 ~ Ps.112.0
+M Ps.112.0 > Ps.113.0 x10 : Ps.113.0 < Ps.112.0 ~ Ps.113.0
+M Ps.113.0 > Ps.114.0 x9 : Ps.114.0 < Ps.113.0 ~ Ps.114.0
+M Ps.113.9 > Ps.115.0 x1 : Ps.115.1 < Ps.113.9 ~ Ps.115.1
+M Ps.113.9 > Ps.115.1 x18 : Ps.115.1 < Ps.113.9 ~ Ps.115.1
+M Ps.114.0 > Ps.116.0 x9 : Ps.116.0 < Ps.114.0 ~ Ps.116.0
+M Ps.114.8 > Ps.116.9 x1 : Ps.116.9 < Ps.114.8 ~ Ps.116.9
+M Ps.115.0 > Ps.116.10 x11 : Ps.116.10 < Ps.115.0 ~ Ps.116.10
+M Ps.116.0 > Ps.117.0 x3 : Ps.117.0 < Ps.116.0 ~ Ps.117.0
+M Ps.117.0 > Ps.118.0 x30 : Ps.118.0 < Ps.117.0 ~ Ps.118.0
+M Ps.118.0 > Ps.119.0 x177 : Ps.119.0 < Ps.118.0 ~ Ps.119.0
+M Ps.119.0 > Ps.120.0 x8 : Ps.120.0 < Ps.119.0 ~ Ps.120.0
+M Ps.120.0 > Ps.121.0 x9 : Ps.121.0 < Ps.120.0 ~ Ps.121.0
+M Ps.121.0 > Ps.122.0 x10 : Ps.122.0 < Ps.121.0 ~ Ps.122.0
+M Ps.122.0 > Ps.123.0 x5 : Ps.123.0 < Ps.122.0 ~ Ps.123.0
+M Ps.123.0 > Ps.124.0 x9 : Ps.124.0 < Ps.123.0 ~ Ps.124.0
+M Ps.124.0 > Ps.125.0 x6 : Ps.125.0 < Ps.124.0 ~ Ps.125.0
+M Ps.125.0 > Ps.126.0 x7 : Ps.126.0 < Ps.125.0 ~ Ps.126.0
+M Ps.126.0 > Ps.127.0 x6 : Ps.127.0 < Ps.126.0 ~ Ps.127.0
+M Ps.127.0 > Ps.128.0 x7 : Ps.128.0 < Ps.127.0 ~ Ps.128.0
+M Ps.128.0 > Ps.129.0 x9 : Ps.129.0 < Ps.128.0 ~ Ps.129.0
+M Ps.129.0 > Ps.130.0 x9 : Ps.130.0 < Ps.129.0 ~ Ps.130.0
+M Ps.130.0 > Ps.131.0 x4 : Ps.131.0 < Ps.130.0 ~ Ps.131.0
+M Ps.131.0 > Ps.132.0 x19 : Ps.132.0 < Ps.131.0 ~ Ps.132.0
+M Ps.132.0 > Ps.133.0 x4 : Ps.133.0 < Ps.132.0 ~ Ps.133.0
+M Ps.133.0 > Ps.134.0 x4 : Ps.134.0 < Ps.133.0 ~ Ps.134.0
+M Ps.134.0 > Ps.135.0 x22 : Ps.135.0 < Ps.134.0 ~ Ps.135.0
+M Ps.135.0 > Ps.136.0 x27 : Ps.136.0 < Ps.135.0 ~ Ps.136.0
+M Ps.136.0 > Ps.137.0 x10 : Ps.137.0 < Ps.136.0 ~ Ps.137.0
+M Ps.137.0 > Ps.138.0 x9 : Ps.138.0 < Ps.137.0 ~ Ps.138.0
+M Ps.138.0 > Ps.139.0 x25 : Ps.139.0 < Ps.138.0 ~ Ps.139.0
+M Ps.139.0 > Ps.140.0 x15 : Ps.140.0 < Ps.139.0 ~ Ps.140.0
+M Ps.140.0 > Ps.141.0 x11 : Ps.141.0 < Ps.140.0 ~ Ps.141.0
+M Ps.141.0 > Ps.142.0 x1 : Ps.142.0 < Ps.141.0 ~ Ps.142.0
+M Ps.141.1 > Ps.142.2 x7 : Ps.142.2 < Ps.141.1 ~ Ps.142.1
+M Ps.142.0 > Ps.143.0 x13 : Ps.143.0 < Ps.142.0 ~ Ps.143.0
+M Ps.143.0 > Ps.144.0 x16 : Ps.144.0 < Ps.143.0 ~ Ps.144.0
+M Ps.144.0 > Ps.145.0 x22 : Ps.145.0 < Ps.144.0 ~ Ps.145.0
+M Ps.145.0 > Ps.146.0 x11 : Ps.146.0 < Ps.145.0 ~ Ps.146.0
+M Ps.146.0 > Ps.147.0 x12 : Ps.147.0 < Ps.146.0 ~ Ps.147.0
+M Ps.147.0 > Ps.147.12 x1 : Ps.147.12 < Ps.147.1 ~ Ps.147.12
+M Ps.147.1 > Ps.147.12 x9 : Ps.147.12 < Ps.147.1 ~ Ps.147.12
+M Ps.151.1 > AddPs.1.1 x7 : AddPs.1.1 < Ps.151.1 ~ AddPs.1.1
+M Prov.13.15 > Prov.13.14 x12 : Prov.13.14 < Prov.13.15 ~ Prov.13.14
+M Prov.18.9 > Prov.18.8 x17 : Prov.18.8 < Prov.18.9 ~ Prov.18.8
+M Song.1.1 > Song.1.2 x16 : Song.1.2 < Song.1.1 ~ Song.1.2
+M Isa.3.19 > Isa.3.19 x1 : Isa.3.20 < Isa.3.23 ~ Isa.3.20
+M Isa.3.19 > Isa.3.20 x1 : Isa.3.20 < Isa.3.24 ~ Isa.3.20
+M Isa.3.20 > Isa.3.16 x6 : Isa.3.16 < Isa.3.20 ~ Isa.3.16
+M Isa.9.1 > Isa.8.23 x1 : Isa.8.23 < Isa.9.1 ~ Isa.9.1
+M Isa.9.2 > Isa.9.1 x20 : Isa.9.1 < Isa.9.2 ~ Isa.9.2
+M Isa.63.19 > Isa.63.19 x1 : Isa.63.19 < Isa.64.1 ~ Isa.63.19
+M Isa.64.1 > Isa.63.19 x1 : Isa.63.19 < Isa.64.1 ~ Isa.63.19
+M Isa.64.2 > Isa.64.1 x11 : Isa.64.1 < Isa.64.2 ~ Isa.64.2
+M Jer.9.1 > Jer.8.23 x1 : Jer.8.23 < Jer.9.1 ~ Jer.9.1
+M Jer.9.2 > Jer.9.1 x25 : Jer.9.1 < Jer.9.2 ~ Jer.9.2
+M Ezek.20.45 > Ezek.21.1 x5 : Ezek.21.1 < Ezek.20.45 ~ Ezek.20.45
+M Ezek.21.1 > Ezek.21.6 x32 : Ezek.21.6 < Ezek.21.1 ~ Ezek.21.1
+M Hos.1.10 > Hos.2.1 x2 : Hos.2.1 < Hos.1.10 ~ Hos.1.10
+M Hos.2.1 > Hos.2.3 x23 : Hos.2.3 < Hos.2.1 ~ Hos.2.1
+M Hos.11.12 > Hos.12.1 x1 : Hos.12.1 < Hos.11.12 ~ Hos.11.12
+M Hos.12.1 > Hos.12.2 x14 : Hos.12.2 < Hos.12.1 ~ Hos.12.1
+M Joel.2.28 > Joel.3.1 x5 : Joel.3.1 < Joel.2.28 ~ Joel.2.28
+M Joel.3.1 > Joel.4.1 x21 : Joel.4.1 < Joel.3.1 ~ Joel.3.1
+M Mic.5.1 > Mic.4.14 x1 : Mic.4.14 < Mic.5.1 ~ Mic.5.1
+M Mic.5.2 > Mic.5.1 x14 : Mic.5.1 < Mic.5.2 ~ Mic.5.2
+M Nah.1.15 > Nah.2.1 x1 : Nah.2.1 < Nah.1.15 ~ Nah.1.15
+M Nah.2.1 > Nah.2.2 x13 : Nah.2.2 < Nah.2.1 ~ Nah.2.1
+M Zech.1.18 > Zech.2.1 x4 : Zech.2.1 < Zech.1.18 ~ Zech.1.18
+M Zech.2.1 > Zech.2.5 x13 : Zech.2.5 < Zech.2.1 ~ Zech.2.1
+M Mal.4.1 > Mal.3.19 x6 : Mal.3.19 < Mal.4.1 ~ Mal.4.1
+M Rom.14.24 > Rom.16.25 x3 : Rom.16.25 < Rom.14.24 ~ Rom.16.25
+M 2Cor.11.32 > 2Cor.11.32 x1 : 2Cor.11.33 < 2Cor.11.32 ~ 2Cor.11.33
+M 2Cor.11.32 > 2Cor.11.33 x1 : 2Cor.11.33 < 2Cor.11.32 ~ 2Cor.11.33
+M Rev.13.1 > Rev.12.18 x1 : Rev.13.1 < Rev.13.1 ~ Rev.13.1
+M Rev.13.1 > Rev.13.1 x1 : Rev.13.1 < Rev.13.1 ~ Rev.13.1
+M 2Esd.7.36 > 2Esd.7.106 x35 : 2Esd.7.106 < 2Esd.7.36 ~ 2Esd.7.106
+M 2Esd.10.59 > 2Esd.10.59 x1 : 4Ezra.8.59 < 2Esd.10.60 ~ 4Ezra.8.59
+M 2Esd.10.60 > 2Esd.10.59 x1 : 4Ezra.8.60 < 2Esd.10.60 ~ 4Ezra.8.60
+M 2Esd.3.1 > 4Ezra.1.1 x36 : 4Ezra.1.1 < 2Esd.3.1 ~ 4Ezra.1.1
+M 2Esd.4.1 > 4Ezra.2.1 x52 : 4Ezra.2.1 < 2Esd.4.1 ~ 4Ezra.2.1
+M 2Esd.5.1 > 4Ezra.3.1 x56 : 4Ezra.3.1 < 2Esd.5.1 ~ 4Ezra.3.1
+M 2Esd.6.1 > 4Ezra.4.1 x59 : 4Ezra.4.1 < 2Esd.6.1 ~ 4Ezra.4.1
+M 2Esd.7.1 > 4Ezra.5.1 x35 : 4Ezra.5.1 < 2Esd.7.1 ~ 4Ezra.5.1
+M 2Esd.7.106 > 4Ezra.5.36 x35 : 4Ezra.5.36 < 2Esd.7.106 ~ 4Ezra.5.36
+M 2Esd.8.1 > 4Ezra.6.1 x63 : 4Ezra.6.1 < 2Esd.8.1 ~ 4Ezra.6.1
+M 2Esd.9.1 > 4Ezra.7.1 x47 : 4Ezra.7.1 < 2Esd.9.1 ~ 4Ezra.7.1
+M 2Esd.10.1 > 4Ezra.8.1 x60 : 4Ezra.8.1 < 2Esd.10.1 ~ 4Ezra.8.1
+M 2Esd.11.1 > 4Ezra.9.1 x46 : 4Ezra.9.1 < 2Esd.11.1 ~ 4Ezra.9.1
+M 2Esd.12.1 > 4Ezra.10.1 x51 : 4Ezra.10.1 < 2Esd.12.1 ~ 4Ezra.10.1
+M 2Esd.13.1 > 4Ezra.11.1 x58 : 4Ezra.11.1 < 2Esd.13.1 ~ 4Ezra.11.1
+M 2Esd.14.1 > 4Ezra.12.1 x48 : 4Ezra.12.1 < 2Esd.14.1 ~ 4Ezra.12.1
+M Dan.3.24 > DanGr.3.24 x67 : DanGr.3.24 < Dan.3.24 ~ PrAzar.1.1
+M Dan.3.91 > Dan.3.24 x10 : Dan.3.24 < Dan.3.91 ~ Dan.3.24
+M Dan.13.1 > Sus.1.1 x64 : Sus.1.1 < Dan.13.1 ~ DanGr.13.1
+M Dan.14.1 > Bel.1.1 x42 : Bel.1.1 < Dan.14.1 ~ DanGr.14.1
+M EsthGr.1.1 > EsthGr.1.1a x1 : EsthGr.1.1a < EsthGr.1.1 ~ EsthGr.1.1
+M EsthGr.1.2 > EsthGr.1.1b x1 : EsthGr.1.1b < EsthGr.1.2 ~ EsthGr.1.2
+M EsthGr.1.3 > EsthGr.1.1c x1 : EsthGr.1.1c < EsthGr.1.3 ~ EsthGr.1.3
+M EsthGr.1.4 > EsthGr.1.1d x1 : EsthGr.1.1d < EsthGr.1.4 ~ EsthGr.1.4
+M EsthGr.1.5 > EsthGr.1.1e x1 : EsthGr.1.1e < EsthGr.1.5 ~ EsthGr.1.5
+M EsthGr.1.6 > EsthGr.1.1f x1 : EsthGr.1.1f < EsthGr.1.6 ~ EsthGr.1.6
+M EsthGr.1.7 > EsthGr.1.1g x1 : EsthGr.1.1g < EsthGr.1.7 ~ EsthGr.1.7
+M EsthGr.1.8 > EsthGr.1.1h x1 : EsthGr.1.1h < EsthGr.1.8 ~ EsthGr.1.8
+M EsthGr.1.9 > EsthGr.1.1i x1 : EsthGr.1.1i < EsthGr.1.9 ~ EsthGr.1.9
+M EsthGr.1.10 > EsthGr.1.1k x1 : EsthGr.1.1k < EsthGr.1.10 ~ EsthGr.1.10
+M EsthGr.1.11 > EsthGr.1.1l x1 : EsthGr.1.1l < EsthGr.1.11 ~ EsthGr.1.11
+M EsthGr.1.12 > EsthGr.1.1m x1 : EsthGr.1.1m < EsthGr.1.12 ~ EsthGr.1.12
+M EsthGr.1.13 > EsthGr.1.1n x1 : EsthGr.1.1n < EsthGr.1.13 ~ EsthGr.1.13
+M EsthGr.1.14 > EsthGr.1.1o x1 : EsthGr.1.1o < EsthGr.1.14 ~ EsthGr.1.14
+M EsthGr.1.15 > EsthGr.1.1p x1 : EsthGr.1.1p < EsthGr.1.15 ~ EsthGr.1.15
+M EsthGr.1.16 > EsthGr.1.1q x1 : EsthGr.1.1q < EsthGr.1.16 ~ EsthGr.1.16
+M EsthGr.1.17 > EsthGr.1.1r x1 : EsthGr.1.1r < EsthGr.1.17 ~ EsthGr.1.17
+M EsthGr.1.18 > EsthGr.1.1s x1 : EsthGr.1.1s < EsthGr.1.18 ~ EsthGr.1.18
+M EsthGr.1.19 > EsthGr.1.2 x21 : EsthGr.1.2 < EsthGr.1.19 ~ EsthGr.1.19
+M EsthGr.3.14 > EsthGr.3.13a x1 : EsthGr.3.13a < EsthGr.3.14 ~ EsthGr.3.14
+M EsthGr.3.15 > EsthGr.3.13b x1 : EsthGr.3.13b < EsthGr.3.15 ~ EsthGr.3.15
+M EsthGr.3.16 > EsthGr.3.13c x1 : EsthGr.3.13c < EsthGr.3.16 ~ EsthGr.3.16
+M EsthGr.3.17 > EsthGr.3.13d x1 : EsthGr.3.13d < EsthGr.3.17 ~ EsthGr.3.17
+M EsthGr.3.18 > EsthGr.3.13e x1 : EsthGr.3.13e < EsthGr.3.18 ~ EsthGr.3.18
+M EsthGr.3.19 > EsthGr.3.13f x1 : EsthGr.3.13f < EsthGr.3.19 ~ EsthGr.3.19
+M EsthGr.3.20 > EsthGr.3.13g x1 : EsthGr.3.13g < EsthGr.3.20 ~ EsthGr.3.20
+M EsthGr.3.21 > EsthGr.3.14 x1 : EsthGr.3.14 < EsthGr.3.21 ~ EsthGr.3.21
+M EsthGr.3.22 > EsthGr.3.15 x1 : EsthGr.3.15 < EsthGr.3.22 ~ EsthGr.3.22
+M EsthGr.4.18 > EsthGr.4.17a x1 : EsthGr.4.17a < EsthGr.4.18 ~ EsthGr.4.18
+M EsthGr.4.19 > EsthGr.4.17b x1 : EsthGr.4.17b < EsthGr.4.19 ~ EsthGr.4.19
+M EsthGr.4.20 > EsthGr.4.17c x1 : EsthGr.4.17c < EsthGr.4.21 ~ EsthGr.4.21
+M EsthGr.4.21 > EsthGr.4.17c x1 : EsthGr.4.17c < EsthGr.4.21 ~ EsthGr.4.21
+M EsthGr.4.22 > EsthGr.4.17d x1 : EsthGr.4.17d < EsthGr.4.23 ~ EsthGr.4.23
+M EsthGr.4.23 > EsthGr.4.17d x1 : EsthGr.4.17d < EsthGr.4.23 ~ EsthGr.4.23
+M EsthGr.4.24 > EsthGr.4.17e x1 : EsthGr.4.17e < EsthGr.4.24 ~ EsthGr.4.24
+M EsthGr.4.25 > EsthGr.4.17f x1 : EsthGr.4.17f < EsthGr.4.25 ~ EsthGr.4.25
+M EsthGr.4.26 > EsthGr.4.17g x1 : EsthGr.4.17g < EsthGr.4.26 ~ EsthGr.4.26
+M EsthGr.4.27 > EsthGr.4.17h x1 : EsthGr.4.17h < EsthGr.4.27 ~ EsthGr.4.27
+M EsthGr.4.28 > EsthGr.4.17i x1 : EsthGr.4.17i < EsthGr.4.28 ~ EsthGr.4.28
+M EsthGr.4.29 > EsthGr.4.17k x1 : EsthGr.4.17k < EsthGr.4.31 ~ EsthGr.4.31
+M EsthGr.4.30 > EsthGr.4.17k x1 : EsthGr.4.17k < EsthGr.4.31 ~ EsthGr.4.31
+M EsthGr.4.31 > EsthGr.4.17k x1 : EsthGr.4.17k < EsthGr.4.31 ~ EsthGr.4.31
+M EsthGr.4.32 > EsthGr.4.17l x1 : EsthGr.4.17l < EsthGr.4.32 ~ EsthGr.4.32
+M EsthGr.4.33 > EsthGr.4.17m x1 : EsthGr.4.17m < EsthGr.4.33 ~ EsthGr.4.33
+M EsthGr.4.34 > EsthGr.4.17n x1 : EsthGr.4.17n < EsthGr.4.35 ~ EsthGr.4.35
+M EsthGr.4.35 > EsthGr.4.17n x1 : EsthGr.4.17n < EsthGr.4.35 ~ EsthGr.4.35
+M EsthGr.4.36 > EsthGr.4.17o x1 : EsthGr.4.17o < EsthGr.4.37 ~ EsthGr.4.37
+M EsthGr.4.37 > EsthGr.4.17o x1 : EsthGr.4.17o < EsthGr.4.37 ~ EsthGr.4.37
+M EsthGr.4.38 > EsthGr.4.17p x1 : EsthGr.4.17p < EsthGr.4.38 ~ EsthGr.4.38
+M EsthGr.4.39 > EsthGr.4.17q x1 : EsthGr.4.17q < EsthGr.4.39 ~ EsthGr.4.39
+M EsthGr.4.40 > EsthGr.4.17r x1 : EsthGr.4.17r < EsthGr.4.40 ~ EsthGr.4.40
+M EsthGr.4.41 > EsthGr.4.17s x1 : EsthGr.4.17s < EsthGr.4.41 ~ EsthGr.4.41
+M EsthGr.4.42 > EsthGr.4.17t x1 : EsthGr.4.17t < EsthGr.4.42 ~ EsthGr.4.42
+M EsthGr.4.43 > EsthGr.4.17u x1 : EsthGr.4.17u < EsthGr.4.43 ~ EsthGr.4.43
+M EsthGr.4.44 > EsthGr.4.17w x1 : EsthGr.4.17w < EsthGr.4.44 ~ EsthGr.4.44
+M EsthGr.4.45 > EsthGr.4.17x x1 : EsthGr.4.17x < EsthGr.4.45 ~ EsthGr.4.45
+M EsthGr.4.46 > EsthGr.4.17y x1 : EsthGr.4.17y < EsthGr.4.46 ~ EsthGr.4.46
+M EsthGr.4.47 > EsthGr.4.17z x1 : EsthGr.4.17z < EsthGr.4.47 ~ EsthGr.4.47
+M EsthGr.5.2 > EsthGr.5.1a x1 : EsthGr.5.1a < EsthGr.5.4 ~ EsthGr.5.4
+M EsthGr.5.3 > EsthGr.5.1a x1 : EsthGr.5.1a < EsthGr.5.4 ~ EsthGr.5.4
+M EsthGr.5.4 > EsthGr.5.1a x1 : EsthGr.5.1a < EsthGr.5.4 ~ EsthGr.5.4
+M EsthGr.5.5 > EsthGr.5.1b x1 : EsthGr.5.1b < EsthGr.5.5 ~ EsthGr.5.5
+M EsthGr.5.6 > EsthGr.5.1c x1 : EsthGr.5.1c < EsthGr.5.6 ~ EsthGr.5.6
+M EsthGr.5.7 > EsthGr.5.1d x1 : EsthGr.5.1d < EsthGr.5.7 ~ EsthGr.5.7
+M EsthGr.5.8 > EsthGr.5.1e x1 : EsthGr.5.1e < EsthGr.5.8 ~ EsthGr.5.8
+M EsthGr.5.9 > EsthGr.5.1f x1 : EsthGr.5.1f < EsthGr.5.10 ~ EsthGr.5.10
+M EsthGr.5.10 > EsthGr.5.1f x1 : EsthGr.5.1f < EsthGr.5.10 ~ EsthGr.5.10
+M EsthGr.5.11 > EsthGr.5.2 x1 : EsthGr.5.2 < EsthGr.5.12 ~ EsthGr.5.12
+M EsthGr.5.12 > EsthGr.5.2 x1 : EsthGr.5.2 < EsthGr.5.12 ~ EsthGr.5.12
+M EsthGr.5.13 > EsthGr.5.2a x1 : EsthGr.5.2a < EsthGr.5.14 ~ EsthGr.5.14
+M EsthGr.5.14 > EsthGr.5.2a x1 : EsthGr.5.2a < EsthGr.5.14 ~ EsthGr.5.14
+M EsthGr.5.15 > EsthGr.5.2b x1 : EsthGr.5.2b < EsthGr.5.16 ~ EsthGr.5.16
+M EsthGr.5.16 > EsthGr.5.2b x1 : EsthGr.5.2b < EsthGr.5.16 ~ EsthGr.5.16
+M EsthGr.5.17 > EsthGr.5.3 x12 : EsthGr.5.3 < EsthGr.5.17 ~ EsthGr.5.17
+M EsthGr.8.13 > EsthGr.8.12a x1 : EsthGr.8.12a < EsthGr.8.13 ~ EsthGr.8.13
+M EsthGr.8.14 > EsthGr.8.12b x1 : EsthGr.8.12b < EsthGr.8.14 ~ EsthGr.8.14
+M EsthGr.8.15 > EsthGr.8.12c x1 : EsthGr.8.12c < EsthGr.8.15 ~ EsthGr.8.15
+M EsthGr.8.16 > EsthGr.8.12d x1 : EsthGr.8.12d < EsthGr.8.16 ~ EsthGr.8.16
+M EsthGr.8.17 > EsthGr.8.12e x1 : EsthGr.8.12e < EsthGr.8.17 ~ EsthGr.8.17
+M EsthGr.8.18 > EsthGr.8.12f x1 : EsthGr.8.12f < EsthGr.8.18 ~ EsthGr.8.18
+M EsthGr.8.19 > EsthGr.8.12g x1 : EsthGr.8.12g < EsthGr.8.19 ~ EsthGr.8.19
+M EsthGr.8.20 > EsthGr.8.12h x1 : EsthGr.8.12h < EsthGr.8.20 ~ EsthGr.8.20
+M EsthGr.8.21 > EsthGr.8.12i x1 : EsthGr.8.12i < EsthGr.8.21 ~ EsthGr.8.21
+M EsthGr.8.22 > EsthGr.8.12k x1 : EsthGr.8.12k < EsthGr.8.22 ~ EsthGr.8.22
+M EsthGr.8.23 > EsthGr.8.12l x1 : EsthGr.8.12l < EsthGr.8.23 ~ EsthGr.8.23
+M EsthGr.8.24 > EsthGr.8.12m x1 : EsthGr.8.12m < EsthGr.8.24 ~ EsthGr.8.24
+M EsthGr.8.25 > EsthGr.8.12n x1 : EsthGr.8.12n < EsthGr.8.25 ~ EsthGr.8.25
+M EsthGr.8.26 > EsthGr.8.12o x1 : EsthGr.8.12o < EsthGr.8.26 ~ EsthGr.8.26
+M EsthGr.8.27 > EsthGr.8.12p x1 : EsthGr.8.12p < EsthGr.8.27 ~ EsthGr.8.27
+M EsthGr.8.28 > EsthGr.8.12q x1 : EsthGr.8.12q < EsthGr.8.28 ~ EsthGr.8.28
+M EsthGr.8.29 > EsthGr.8.12r x1 : EsthGr.8.12r < EsthGr.8.29 ~ EsthGr.8.29
+M EsthGr.8.30 > EsthGr.8.12s x1 : EsthGr.8.12s < EsthGr.8.30 ~ EsthGr.8.30
+M EsthGr.8.31 > EsthGr.8.12t x1 : EsthGr.8.12t < EsthGr.8.31 ~ EsthGr.8.31
+M EsthGr.8.32 > EsthGr.8.12u x1 : EsthGr.8.12u < EsthGr.8.32 ~ EsthGr.8.32
+M EsthGr.8.33 > EsthGr.8.12x x1 : EsthGr.8.12x < EsthGr.8.33 ~ EsthGr.8.33
+M EsthGr.8.34 > EsthGr.8.12y x1 : EsthGr.8.12y < EsthGr.8.36 ~ EsthGr.8.36
+M EsthGr.8.35 > EsthGr.8.12y x1 : EsthGr.8.12y < EsthGr.8.36 ~ EsthGr.8.36
+M EsthGr.8.36 > EsthGr.8.12y x1 : EsthGr.8.12y < EsthGr.8.36 ~ EsthGr.8.36
+M EsthGr.8.37 > EsthGr.8.13 x5 : EsthGr.8.13 < EsthGr.8.37 ~ EsthGr.8.37
+M EsthGr.10.4 > EsthGr.10.3a x1 : EsthGr.10.3a < EsthGr.10.4 ~ EsthGr.10.4
+M EsthGr.10.5 > EsthGr.10.3b x1 : EsthGr.10.3b < EsthGr.10.5 ~ EsthGr.10.5
+M EsthGr.10.6 > EsthGr.10.3c x1 : EsthGr.10.3c < EsthGr.10.6 ~ EsthGr.10.6
+M EsthGr.10.7 > EsthGr.10.3d x1 : EsthGr.10.3d < EsthGr.10.7 ~ EsthGr.10.7
+M EsthGr.10.8 > EsthGr.10.3e x1 : EsthGr.10.3e < EsthGr.10.8 ~ EsthGr.10.8
+M EsthGr.10.9 > EsthGr.10.3f x1 : EsthGr.10.3f < EsthGr.10.9 ~ EsthGr.10.9
+M EsthGr.10.10 > EsthGr.10.3g x1 : EsthGr.10.3g < EsthGr.10.10 ~ EsthGr.10.10
+M EsthGr.10.11 > EsthGr.10.3h x1 : EsthGr.10.3h < EsthGr.10.11 ~ EsthGr.10.11
+M EsthGr.10.12 > EsthGr.10.3i x1 : EsthGr.10.3i < EsthGr.10.12 ~ EsthGr.10.12
+M EsthGr.10.13 > EsthGr.10.3k x1 : EsthGr.10.3k < EsthGr.10.13 ~ EsthGr.10.13
+M EsthGr.10.14 > EsthGr.10.3l x1 : EsthGr.10.3l < EsthGr.10.14 ~ EsthGr.10.14
+P org Original
+P ENG English
+P Septuagint Septuagint
+P vul Vulgate
+P rsc Russian Protestant
+P Russian Orthodox Russian Orthodox
+P kjv none
+T GEN Gen Genesis old Gen GEN
+T EXO Exod Exodus old Exod EXO
+T LEV Lev Leviticus old Lev LEV
+T NUM Num Numbers old Num NUM
+T DEU Deut Deuteronomy old Deut DEU
+T JOS Josh Joshua old Josh JOS
+T JDG Judg Judges old Judg JDG
+T RUT Ruth Ruth old Ruth RUT
+T 1SA 1Sam I Samuel old 1Sam 1SA
+T 2SA 2Sam II Samuel old 2Sam 2SA
+T 1KI 1Kgs I Kings old 1Kgs 1KI
+T 2KI 2Kgs II Kings old 2Kgs 2KI
+T 1CH 1Chr I Chronicles old 1Chr 1CH
+T 2CH 2Chr II Chronicles old 2Chr 2CH
+T EZR Ezra Ezra old Ezra EZR
+T NEH Neh Nehemiah old Neh NEH
+T EST Esth Esther old Esth EST
+T JOB Job Job old Job JOB
+T PSA Ps Psalms old Ps PSA
+T PRO Prov Proverbs old Prov PRO
+T ECC Eccl Ecclesiastes old Eccl ECC
+T SNG Song Song of Solomon old Song SNG
+T ISA Isa Isaiah old Isa ISA
+T JER Jer Jeremiah old Jer JER
+T LAM Lam Lamentations old Lam LAM
+T EZK Ezek Ezekiel old Ezek EZK
+T DAN Dan Daniel old Dan DAN
+T HOS Hos Hosea old Hos HOS
+T JOL Joel Joel old Joel JOL
+T AMO Amos Amos old Amos AMO
+T OBA Obad Obadiah old Obad OBA
+T JON Jonah Jonah old Jonah JON
+T MIC Mic Micah old Mic MIC
+T NAM Nah Nahum old Nah NAM
+T HAB Hab Habakkuk old Hab HAB
+T ZEP Zeph Zephaniah old Zeph ZEP
+T HAG Hag Haggai old Hag HAG
+T ZEC Zech Zechariah old Zech ZEC
+T MAL Mal Malachi old Mal MAL
+T MAT Matt Matthew new Matt MAT
+T MRK Mark Mark new Mark MRK
+T LUK Luke Luke new Luke LUK
+T JHN John John new John JHN
+T ACT Acts Acts new Acts ACT
+T ROM Rom Romans new Rom ROM
+T 1CO 1Cor I Corinthians new 1Cor 1CO
+T 2CO 2Cor II Corinthians new 2Cor 2CO
+T GAL Gal Galatians new Gal GAL
+T EPH Eph Ephesians new Eph EPH
+T PHP Phil Philippians new Phil PHP
+T COL Col Colossians new Col COL
+T 1TH 1Thess I Thessalonians new 1Thess 1TH
+T 2TH 2Thess II Thessalonians new 2Thess 2TH
+T 1TI 1Tim I Timothy new 1Tim 1TI
+T 2TI 2Tim II Timothy new 2Tim 2TI
+T TIT Titus Titus new Titus TIT
+T PHM Phlm Philemon new Phlm PHM
+T HEB Heb Hebrews new Heb HEB
+T JAS Jas James new Jas JAS
+T 1PE 1Pet I Peter new 1Pet 1PE
+T 2PE 2Pet II Peter new 2Pet 2PE
+T 1JN 1John I John new 1John 1JN
+T 2JN 2John II John new 2John 2JN
+T 3JN 3John III John new 3John 3JN
+T JUD Jude Jude new Jude JUD
+T REV Rev Revelation of John new Rev REV
+T TOB Tob Tobit old Tob TOB
+T JDT Jdt Judith old Jdt JDT
+T ESG EsthGr Esther (Greek) old EsthGr ESG
+T WIS Wis Wisdom old Wis WIS
+T SIR Sir Sirach old Sir SIR
+T BAR Bar Baruch old Bar BAR
+T LJE EpJer Epistle of Jeremiah old EpJer LJE
+T S3Y PrAzar Prayer of Azariah old PrAzar S3Y
+T SUS Sus Susanna old Sus SUS
+T BEL Bel Bel and the Dragon old Bel BEL
+T 1MA 1Macc I Maccabees old 1Macc 1MA
+T 2MA 2Macc II Maccabees old 2Macc 2MA
+T 3MA 3Macc III Maccabees old 3Macc 3MA
+T 4MA 4Macc IV Maccabees old 4Macc 4MA
+T 1ES 1Esd I Esdras old 1Esd 1ES
+T 2ES 2Esd II Esdras old 2Esd 2ES
+T MAN PrMan Prayer of Manasses old PrMan MAN
+T PS2 AddPs Additional Psalm old AddPs PS2
+T ODA Odes Odes old Odes ODA
+T PSS PssSol Psalms of Solomon old PssSol PSS
+T JSA JoshA Joshua A old JoshA JSA
+T JDB JudgB Judges B old JudgB JDB
+T TBS TobS Tobit S old TobS TBS
+T SST SusTh Susanna (Theodotion) old SusTh SST
+T DNT DanTh Daniel (Theodotion) old DanTh DNT
+T BLT BelTh Bel (Theodotion) old BelTh BLT
+T EZA 4Ezra Apocalypse of Ezra old 4Ezra EZA
+T 5EZ 5Ezra 5 Ezra old 5Ezra 5EZ
+T 6EZ 6Ezra 6 Ezra old 6Ezra 6EZ
+T DAG DanGr Daniel (Greek) old DanGr DAG
+T JUB Jub Jubilees old Jub JUB
+T ENO 1En I Enoch old 1En ENO
+T LAO EpLao Laodiceans new EpLao LAO
+# Sample books=5 mappings=6 excluded=2
+B Genesis | Gen old 31,25,24
+B Psalms | Ps old 6,0,9
+B xyz | xyz old 5
+B QQQ | QQQ old 4,3
+B Revelation of John | Rev new 20
+M Gen.1.1 > Gen.1.2 x3 : Gen.1.9 < Gen.1.1 ~ Gen.1.9
+M Ps.3.1 > Ps.3.2 x8 : Ps.3.2 < Ps.3.1 ~ Ps.3.1
+M EsthGr.4.17 > EsthGr.4.17a x1 : EsthGr.4.17a < EsthGr.4.17 ~ EsthGr.4.18
+M DanGr.3.52 > DanGr.3.53 x1 : DanGr.3.53 < DanGr.3.52 ~ PrAzar.1.31
+M Gen.1.1 > Gen.1.9 x1 : Gen.1.9 < Gen.1.1 ~ Gen.1.9
+M Gen.2.1 > Gen.2.3 x2 : Gen.2.3 < Gen.2.1 ~ Gen.2.3
+X Acts.8.37 not contained
+X Gen.1.2b not contained
+# Renamed books=5 mappings=6 excluded=2
+B Genesis | Gen old 31,25,24
+B Psalms | Ps old 6,0,9
+B xyz | xyz old 5
+B QQQ | QQQ old 4,3
+B Revelation of John | Rev new 20
+M Gen.1.1 > Gen.1.2 x3 : Gen.1.9 < Gen.1.1 ~ Gen.1.9
+M Ps.3.1 > Ps.3.2 x8 : Ps.3.2 < Ps.3.1 ~ Ps.3.1
+M EsthGr.4.17 > EsthGr.4.17a x1 : EsthGr.4.17a < EsthGr.4.17 ~ EsthGr.4.18
+M DanGr.3.52 > DanGr.3.53 x1 : DanGr.3.53 < DanGr.3.52 ~ PrAzar.1.31
+M Gen.1.1 > Gen.1.9 x1 : Gen.1.9 < Gen.1.1 ~ Gen.1.9
+M Gen.2.1 > Gen.2.3 x2 : Gen.2.3 < Gen.2.1 ~ Gen.2.3
+X Acts.8.37 not contained
+X Gen.1.2b not contained
+#  books=1 mappings=0 excluded=0
+B Genesis | Gen old 3

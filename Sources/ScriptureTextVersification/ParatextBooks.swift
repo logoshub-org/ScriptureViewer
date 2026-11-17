@@ -62,8 +62,17 @@ public struct ParatextBook: Equatable, Sendable {
         old("JUB", "Jub", "Jubilees"), old("ENO", "1En", "I Enoch"), new("LAO", "EpLao", "Laodiceans"),
     ]
 
-    private static let byCode: [String: ParatextBook] = Dictionary(uniqueKeysWithValues: all.map { ($0.code, $0) })
-    private static let byOSIS: [String: ParatextBook] = Dictionary(uniqueKeysWithValues: all.map { ($0.osisID, $0) })
+    // Built with a loop, not `Dictionary(uniqueKeysWithValues:)` over pairs: the transpiler takes no tuples in arrays.
+    private static let byCode: [String: ParatextBook] = {
+        var books: [String: ParatextBook] = [:]
+        for book in all { books[book.code] = book }
+        return books
+    }()
+    private static let byOSIS: [String: ParatextBook] = {
+        var books: [String: ParatextBook] = [:]
+        for book in all { books[book.osisID] = book }
+        return books
+    }()
 
     /// The book with this USFM code, in any case.
     public static func book(code: String) -> ParatextBook? { byCode[code.uppercased()] }
@@ -72,10 +81,10 @@ public struct ParatextBook: Equatable, Sendable {
     public static func book(osisID: String) -> ParatextBook? { byOSIS[osisID] }
 
     private static func old(_ code: String, _ osis: String, _ name: String) -> ParatextBook {
-        ParatextBook(code: code, osisID: osis, name: name, testament: .old)
+        ParatextBook(code: code, osisID: osis, name: name, testament: Versification.Testament.old)
     }
 
     private static func new(_ code: String, _ osis: String, _ name: String) -> ParatextBook {
-        ParatextBook(code: code, osisID: osis, name: name, testament: .new)
+        ParatextBook(code: code, osisID: osis, name: name, testament: Versification.Testament.new)
     }
 }

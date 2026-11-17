@@ -29,79 +29,149 @@ public enum VRSReader {
         var excluded: [VerseReference] = []
         var fileName: String?
 
-        for rawLine in text.split(whereSeparator: \.isNewline) {
+        for rawLine in lines(text) {
             if fileName == nil, let title = systemName(inComment: rawLine) { fileName = title }
-            let line = rawLine.prefix { $0 != "#" }.trimmingCharacters(in: .whitespaces)
-            guard let first = line.first else { continue }
-            switch first {
-            case "-":
-                if let verse = reference(line.dropFirst()).map({ $0.start }) { excluded.append(verse) }
-            case "&", "*":
+            let line = trimmed(beforeComment(rawLine))
+            guard !line.isEmpty else { continue }
+            if line.hasPrefix("-") {
+                if let range = reference(String(line.dropFirst())) { excluded.append(range.start) }
+            } else if line.hasPrefix("&") || line.hasPrefix("*") {
                 continue
-            default:
-                if line.contains("=") {
-                    if let mapping = mapping(line) { mappings.append(mapping) }
-                } else if let book = book(line) {
-                    books.append(book)
-                }
+            } else if line.contains("=") {
+                if let mapping = mapping(line) { mappings.append(mapping) }
+            } else if let book = book(line) {
+                books.append(book)
             }
         }
         return Versification(name: name ?? fileName ?? "", books: books, mappings: mappings, excludedVerses: excluded)
     }
 
+    // The text is handled as code points and pieces of `String`, not as `Substring`s and `Character`s, so that it transpiles (plan D158).
+
+    /// The lines of `text`, empty ones left out. A line ends at any of the characters Swift's `Character.isNewline` names: LF, VT, FF,
+    /// CR, NEL, and the Unicode line and paragraph separators (CR LF is one line end: the empty line between them is left out).
+    private static func lines(_ text: String) -> [String] {
+        let codes = CodePoints.of(text)
+        var out: [String] = []
+        var start = 0
+        var k = 0
+        while k < codes.count {
+            let c = codes[k]
+            if (c >= 0x0A && c <= 0x0D) || c == 0x85 || c == 0x2028 || c == 0x2029 {
+                if k > start { out.append(CodePoints.string(codes, start, k)) }
+                start = k + 1
+            }
+            k += 1
+        }
+        if codes.count > start { out.append(CodePoints.string(codes, start, codes.count)) }
+        return out
+    }
+
+    /// The line up to its first `#`.
+    private static func beforeComment(_ line: String) -> String {
+        let codes = CodePoints.of(line)
+        var end = 0
+        while end < codes.count && codes[end] != 0x23 { end += 1 }
+        return end == codes.count ? line : CodePoints.string(codes, 0, end)
+    }
+
+    /// Without tabs and space separators at its ends (Foundation's `CharacterSet.whitespaces`).
+    private static func trimmed(_ s: String) -> String {
+        CodePoints.trimmed(s, where: { CodePoints.isHorizontalWhiteSpace($0) })
+    }
+
+    /// The non-empty pieces of `s` between `separator`s; with `keepEmpty`, the empty ones too.
+    private static func pieces(_ s: String, _ separator: Int, keepEmpty: Bool = false) -> [String] {
+        let codes = CodePoints.of(s)
+        var out: [String] = []
+        var start = 0
+        var k = 0
+        while k <= codes.count {
+            if k == codes.count || codes[k] == separator {
+                if keepEmpty || k > start { out.append(CodePoints.string(codes, start, k)) }
+                start = k + 1
+            }
+            k += 1
+        }
+        return out
+    }
+
+    private static func length(_ s: String) -> Int { CodePoints.of(s).count }
+
     /// `English` from `# Versification  "English"`.
-    private static func systemName(inComment line: Substring) -> String? {
+    private static func systemName(inComment line: String) -> String? {
         guard line.hasPrefix("#"), line.contains("Versification") else { return nil }
-        let parts = line.split(separator: "\"", omittingEmptySubsequences: false)
-        return parts.count >= 3 ? String(parts[1]) : nil
+        let parts = pieces(line, 0x22, keepEmpty: true)
+        return parts.count >= 3 ? parts[1] : nil
     }
 
     /// `GEN 1:31 2:25 …`: the verses of each chapter; a chapter the line skips has none.
     private static func book(_ line: String) -> Versification.Book? {
-        let fields = line.split(separator: " ", omittingEmptySubsequences: true)
-        guard fields.count >= 2, fields[0].count == 3 else { return nil }
+        let fields = pieces(line, 0x20)
+        guard fields.count >= 2, length(fields[0]) == 3 else { return nil }
         var verses: [Int] = []
-        for field in fields.dropFirst() {
-            let pair = field.split(separator: ":")
+        var f = 1
+        while f < fields.count {
+            let pair = pieces(fields[f], 0x3A)
             guard pair.count == 2, let chapter = Int(pair[0]), let last = Int(pair[1]), chapter >= 1 else { return nil }
-            if verses.count < chapter { verses.append(contentsOf: repeatElement(0, count: chapter - verses.count)) }
+            while verses.count < chapter { verses.append(0) }
             verses[chapter - 1] = last
+            f += 1
         }
-        let code = String(fields[0])
+        let code = fields[0]
         let known = ParatextBook.book(code: code)
         return Versification.Book(name: known?.name ?? code, osisID: known?.osisID ?? code, versesPerChapter: verses,
-                                  testament: known?.testament ?? .old)
+                                  testament: known?.testament ?? Versification.Testament.old)
     }
 
     /// `GEN 32:1-32 = GEN 32:2-33`.
     private static func mapping(_ line: String) -> Versification.Mapping? {
-        let sides = line.split(separator: "=", omittingEmptySubsequences: false)
+        let sides = pieces(line, 0x3D, keepEmpty: true)
         guard sides.count == 2, let here = reference(sides[0]), let original = reference(sides[1]) else { return nil }
         return Versification.Mapping(here: here.start, original: original.start, count: here.count)
     }
 
-    /// `GEN 32:1-32`, `ESG 4:17a`: the first verse and how many verses the range has.
-    private static func reference(_ text: Substring) -> (start: VerseReference, count: Int)? {
-        let fields = text.split(separator: " ", omittingEmptySubsequences: true)
-        guard fields.count == 2, fields[0].count == 3 else { return nil }
-        let chapterVerse = fields[1].split(separator: ":")
-        guard chapterVerse.count == 2, let chapter = Int(chapterVerse[0]) else { return nil }
-        let range = chapterVerse[1].split(separator: "-")
-        guard let (verse, part) = verseAndPart(range[0]) else { return nil }
-        var count = 1
-        if range.count == 2, let (last, _) = verseAndPart(range[1]), last > verse { count = last - verse + 1 }
-        let code = String(fields[0])
-        let book = ParatextBook.book(code: code)?.osisID ?? code
-        return (VerseReference(book: book, chapter: chapter, verse: verse, part: part), count)
+    /// A range of verses: the first, and how many.
+    private struct VerseRun {
+        var start: VerseReference
+        var count: Int
     }
 
-    /// `17a` → (17, "a").
-    private static func verseAndPart(_ text: Substring) -> (Int, String?)? {
-        let digits = text.prefix { $0.isASCII && $0.isNumber }
-        guard let verse = Int(digits) else { return nil }
-        let part = text.dropFirst(digits.count)
-        guard part.allSatisfy({ $0.isASCII && $0.isLetter }) else { return nil }
-        return (verse, part.isEmpty ? nil : String(part))
+    /// `GEN 32:1-32`, `ESG 4:17a`: the first verse and how many verses the range has.
+    private static func reference(_ text: String) -> VerseRun? {
+        let fields = pieces(text, 0x20)
+        guard fields.count == 2, length(fields[0]) == 3 else { return nil }
+        let chapterVerse = pieces(fields[1], 0x3A)
+        guard chapterVerse.count == 2, let chapter = Int(chapterVerse[0]) else { return nil }
+        let range = pieces(chapterVerse[1], 0x2D)
+        // An empty range (`GEN 1:-`) is no reference. (It used to stop the reader: the first piece was read without a check.)
+        guard !range.isEmpty, let first = verseAndPart(range[0]) else { return nil }
+        var count = 1
+        if range.count == 2, let last = verseAndPart(range[1]), last.verse > first.verse { count = last.verse - first.verse + 1 }
+        let code = fields[0]
+        let book = ParatextBook.book(code: code)?.osisID ?? code
+        return VerseRun(start: VerseReference(book: book, chapter: chapter, verse: first.verse, part: first.part), count: count)
+    }
+
+    /// A verse number and the part after it.
+    private struct VersePart {
+        var verse: Int
+        var part: String?
+    }
+
+    /// `17a` → 17, "a".
+    private static func verseAndPart(_ text: String) -> VersePart? {
+        let codes = CodePoints.of(text)
+        var digits = 0
+        while digits < codes.count && codes[digits] >= 0x30 && codes[digits] <= 0x39 { digits += 1 }
+        guard let verse = Int(CodePoints.string(codes, 0, digits)) else { return nil }
+        var k = digits
+        while k < codes.count {
+            let c = codes[k]
+            guard (c >= 0x41 && c <= 0x5A) || (c >= 0x61 && c <= 0x7A) else { return nil }
+            k += 1
+        }
+        return VersePart(verse: verse, part: digits == codes.count ? nil : CodePoints.string(codes, digits, codes.count))
     }
 }
 

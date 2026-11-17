@@ -8,7 +8,8 @@ place the Android library's Kotlin core is built.
 
 What goes through Skip: `ScriptureText` (the model, the viewer contract, the bar rule), `ScriptureTextMarkup`, `ScriptureTextBuilding`,
 the parsers `ScriptureTextOSIS`, `ScriptureTextGBF`, `ScriptureTextThML`, `ScriptureTextTEI` and `ScriptureTextPlain`, and
-`ScriptureTextSource` (which picks the parser for a module). Not yet: `ScriptureTextVersification` and `ScriptureTextUSFM`.
+`ScriptureTextSource` (which picks the parser for a module), and `ScriptureTextVersification` (Paratext's six systems and the `.vrs`
+reader). Not yet: `ScriptureTextUSFM`.
 
 ## What runs
 
@@ -21,7 +22,9 @@ Gradle, a JDK and the Android SDK, as for any Skip project). Both must pass.
 - `ScriptureTextSourceTests`: every other parser and the module source's choice among them. Four GBF chapters from the committed test
   modules (YLT Genesis 1, Weymouth Matthew 5, and the commentaries DTN Genesis 1 and TFG Matthew 1, with notes and reference marks) are read
   through `ScriptureModuleSource` as each source type and with two sets of display options, and sample entries go through the ThML, TEI and
-  plain-text parsers; the digests (notes included) are compared with `expected_parsers.txt`. It found two Android bugs the Swift tests
+  plain-text parsers; the digests (notes included) are compared with `expected_parsers.txt`. Also the versifications: Paratext's six
+  systems read from their embedded files (every book, chapter, mapping and excluded verse, with the mappings applied both ways and across
+  systems), the book table, and the reader on a file with the cases the six lack; compared with `expected_versification.txt`. It found two Android bugs the Swift tests
   could not: a repeated entry was shown twice (`ChapterEntries.shown`), and `ScriptureText`'s `contains(verse:)` held every verse up to its own.
 
 (The app's own navigation model, `AppModel`, is tested the same way, in the app's repository.) The Kotlin this package leaves in `.build`
