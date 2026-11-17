@@ -31,6 +31,12 @@ Gradle, a JDK and the Android SDK, as for any Skip project). Both must pass.
   `ModelDigest.swift`. It found two Android bugs the Swift tests
   could not: a repeated entry was shown twice (`ChapterEntries.shown`), and `ScriptureText`'s `contains(verse:)` held every verse up to its own.
 
+Three of the tests guard speed: OSIS (Psalm 119), GBF (TFG Matthew 1) and USFM (Psalm 119) each parse the same text eight times over
+and once, and fail if the longer run takes more than 16 times as long. Growth in proportion to the text gives about 8; the copying the
+Kotlin build once did, which grew with the square, gives up to 64 (put back on purpose, it failed the OSIS and USFM tests at 23 and 29). A
+ratio holds on any machine where a fixed time limit would not. (GBF's main text in that chapter is too short for the old bug to show; GBF
+writes through the same builder as OSIS.) The two warm-ups (`ScriptureModuleSource.warmUp`, `USFMParser.warmUp`) are also run as Kotlin.
+
 (The app's own navigation model, `AppModel`, is tested the same way, in the app's repository.) The Kotlin this package leaves in `.build`
 is also what the Android viewer builds on: see `../Android/README.md`.
 

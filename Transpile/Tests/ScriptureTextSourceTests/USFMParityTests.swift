@@ -41,6 +41,28 @@ final class USFMParityTests: XCTestCase {
         XCTAssertTrue(actual == wanted, "the USFM output differs from Swift's")
     }
 
+    /// The warm-up runs as Kotlin (it is for Android) and changes nothing the parity test sees.
+    func testWarmUpRuns() throws {
+        USFMParser.warmUp(rounds: 2)
+    }
+
+    /// USFM parse time grows in proportion to the text (see `ParseTiming`): Psalm 119 eight times over, as one chapter.
+    func testUSFMParseTimeGrowsInProportionToTheText() throws {
+        let once = try text("usfm_kjv_psa", "usfm")          // the book's opening lines and Psalm 119
+        let parts = once.components(separatedBy: "\\c 119")
+        XCTAssertEqual(parts.count, 2)
+        let chapter = "\\c 119" + parts[parts.count - 1]
+        var many = once
+        for _ in 1..<ParseTiming.factor { many += chapter }
+        var options = USFMParser.Options()
+        options.strongsMarkers = true
+        let parser = USFMParser(options: options)
+        let single = try ParseTiming.median { _ = parser.parse(once) }
+        let longer = try ParseTiming.median { _ = parser.parse(many) }
+        print("TIMING USFM Psalm 119: " + ParseTiming.describe(single) + " once, " + ParseTiming.describe(longer) + " eight times")
+        XCTAssertLessThan(longer / single, ParseTiming.limit, "eight times the text took " + String(longer / single) + " times as long")
+    }
+
     #if !SKIP
     /// macOS only: writes the expected file next to the test, when asked (GENERATE_EXPECTED=1).
     func testGenerateUSFMExpectedWhenAsked() throws {

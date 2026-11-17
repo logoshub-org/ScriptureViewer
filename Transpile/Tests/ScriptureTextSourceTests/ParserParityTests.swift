@@ -52,6 +52,33 @@ final class ParserParityTests: XCTestCase {
     }
     #endif
 
+    /// The warm-up runs as Kotlin (it is for Android).
+    func testWarmUpRuns() throws {
+        ScriptureModuleSource.warmUp(rounds: 2)
+    }
+
+    /// GBF parse time grows in proportion to the text (see `ParseTiming`): a commentary chapter eight times over.
+    func testGBFParseTimeGrowsInProportionToTheText() throws {
+        let texts = try strings("tfg_matt1")
+        var one: [ChapterEntries.Entry] = []
+        var many: [ChapterEntries.Entry] = []
+        var verse = 0
+        for round in 0..<ParseTiming.factor {
+            for text in texts {
+                if round == 0 { one.append(ChapterEntries.Entry(verse: verse, text: text)) }
+                many.append(ChapterEntries.Entry(verse: verse, text: text))
+                verse += 1
+            }
+        }
+        var options = OSISParser.Options()
+        options.footnotes = true
+        let parser = GBFParser(options: options, profile: ScriptureContentProfile.commentary)
+        let single = try ParseTiming.median { _ = parser.parse(one) }
+        let longer = try ParseTiming.median { _ = parser.parse(many) }
+        print("TIMING GBF TFG Matthew 1: " + ParseTiming.describe(single) + " once, " + ParseTiming.describe(longer) + " eight times")
+        XCTAssertLessThan(longer / single, ParseTiming.limit, "eight times the text took " + String(longer / single) + " times as long")
+    }
+
     // MARK: Input
 
     private func strings(_ name: String) throws -> [String] {

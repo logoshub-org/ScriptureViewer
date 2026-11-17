@@ -47,6 +47,7 @@ dependencies {
     implementation(project(":scriptureviewer"))
     implementation("org.logoshub.scripture:ScriptureTextOSIS")
     implementation("org.logoshub.scripture:ScriptureTextGBF")
+    implementation("org.logoshub.scripture:ScriptureTextSource")
     implementation(platform("androidx.compose:compose-bom:2026.05.01"))
     implementation("androidx.compose.foundation:foundation")
     implementation("androidx.activity:activity-compose:1.13.0")

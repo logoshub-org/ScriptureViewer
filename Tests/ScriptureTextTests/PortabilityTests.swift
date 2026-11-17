@@ -64,6 +64,6 @@ struct PortabilityTests {
                 checked += 1
             }
         }
-        #expect(checked == 17)      // the tokenizer, the shared builder, the OSIS parser and builder, the TEI, ThML, GBF, plain-text and module-source files, the five USFM files and the three versification files
+        #expect(checked == 18)      // the tokenizer, the shared builder, the OSIS parser and builder, the TEI, ThML, GBF, plain-text and module-source files, the module source's warm-up, the five USFM files and the three versification files
     }
 }

@@ -74,6 +74,11 @@ when the app is compiled ahead of time. A GBF commentary chapter (TFG Matthew 1,
 in about 6 ms warm, and in 5–9 ms the first time, since GBF goes through the OSIS parser, already warm by then. `demo` has a
 `ParseBenchmark` activity that measures these on a release build.
 
+**The first parse in a process** is the slow one: the code is loaded and compiled as it first runs. A host should call
+`ScriptureModuleSource.warmUp()` (and `USFMParser.warmUp()` if it reads USFM Bibles) at launch, off the main thread: it parses small
+built-in samples in each format. Measured on the emulator, as installed: the first Psalm 119 parse took 340–570 ms with no warm-up, and
+30–33 ms (the same as warm) after the default ten rounds, which took 340–470 ms themselves. `ParseBenchmark --ei warm 10` shows this.
+
 Scrolling the chapter by hand for five seconds drew 351 frames with 1 janky (0.3%). A highlight change adds and removes spans and
 requests no layout (the `Layout` object stays the same one); painting 176 bookmarked verses and 251 search hits at once took 125 ms.
 

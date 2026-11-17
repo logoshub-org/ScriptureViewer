@@ -81,6 +81,41 @@ public struct USFMParser: Sendable {
     }
 }
 
+extension USFMParser {
+
+    /// Runs the USFM reader once over a small book, so that the first chapter of a USFM Bible a reader opens is not also the first
+    /// time its code runs (see `ScriptureModuleSource.warmUp`, which does the same for the other formats). For a host to call at
+    /// launch, off the main thread. Ten rounds, as there (measured there for the other formats).
+    public static func warmUp(rounds: Int = 10) {
+        var options = Options()
+        options.strongsMarkers = true
+        var round = 0
+        while round < rounds {
+            if let book = USFMBook(warmUpBook) {
+                for chapter in book.chapters {
+                    if let model = USFMParser(options: options).parse(book, chapter: chapter) {
+                        let length = CodePoints.utf16Length(model.text)
+                        _ = model.copiedText(utf16Start: 0, length: length)
+                        var offset = 0
+                        while offset < length {
+                            _ = model.tapTarget(atUTF16Offset: offset)
+                            offset += 7
+                        }
+                    }
+                }
+            }
+            round += 1
+        }
+    }
+
+    /// A book of one chapter with what a real one has: titles, a heading, poetry, tagged words, notes, red letter, a bridge.
+    static let warmUpBook = "\\id PSA Warm up\n\\h Psalms\n\\toc1 The Psalms\n\\mt1 Psalms\n\\c 1\n\\s1 The two ways\n\\q1\n"
+        + "\\v 1 \\w Blessed|strong=\"H0835\"\\w* is the \\w man|strong=\"H0376\" x-morph=\"He,Ncmsa\"\\w* "
+        + "\\f + \\fr 1:1 \\ft Or, \\fq happy\\fq*.\\f*\n\\q2 that walks not \\x - \\xo 1:1 \\xt Ps 2:1.\\x*\n"
+        + "\\p\n\\v 2-3 But his delight is in the law of the \\nd Lord\\nd*, \\wj keep my word\\wj*~now.\n\\b\n"
+        + "\\q1\n\\v 4 \\qt-s |who=\"Jesus\"\\*He is like a tree\\qt-e\\*, \\add planted\\add* by the water.\n"
+}
+
 /// One USFM book file, indexed: its code and names, and where each chapter starts.
 public struct USFMBook: Sendable {
     /// The book's code from `\id` ("GEN").

@@ -18,19 +18,26 @@ import scripture.viewer.sample.SampleChapter
  * Run the release build, since a debug build is several times slower:
  *
  *     ./gradlew :demo:installRelease
- *     adb shell am start -n scripture.viewer.demo/.ParseBenchmark [--ei runs 12] [--ei seconds 10]
+ *     adb shell am start -n scripture.viewer.demo/.ParseBenchmark [--ei runs 12] [--ei seconds 10] [--ei warm 3]
  *     adb logcat -s ScriptureViewerMeasure
  *
  * The first time of each line is a first parse in the process (code not yet compiled); the rest are warm. With `seconds`, it then
- * goes on parsing for that long, for a profiler to watch.
+ * goes on parsing for that long, for a profiler to watch. With `warm`, it first runs `ScriptureModuleSource.warmUp` for that many rounds,
+ * as an app would at launch, and logs how long that took: the first parse after it shows what the warm-up saves.
  */
 class ParseBenchmark : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val runs = intent.getIntExtra("runs", 12)
         val seconds = intent.getIntExtra("seconds", 0)
+        val warm = intent.getIntExtra("warm", 0)
         val entries = SampleChapter.rawEntries(assets)
         Thread {
+            if (warm > 0) {
+                val start = System.nanoTime()
+                scripture.text.source.ScriptureModuleSource.warmUp(rounds = warm)
+                Log.i("ScriptureViewerMeasure", "warm-up ($warm rounds): ${(System.nanoTime() - start) / 1_000_000} ms")
+            }
             for (markers in listOf(false, true)) {
                 val times = ArrayList<Long>()
                 repeat(runs) {

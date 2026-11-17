@@ -36,6 +36,10 @@ final class ScriptureTextOSISTests: XCTestCase {
     }
 
     private func parse(_ display: ScriptureDisplayOptions) throws -> ScriptureText {
+        try parse(display, entries: try loadEntries())
+    }
+
+    private func parse(_ display: ScriptureDisplayOptions, entries raw: [ChapterEntries.Entry]) throws -> ScriptureText {
         let facts = ScriptureModuleFacts(name: "KJV", sourceType: .osis, versification: "KJV")
         var options = OSISParser.Options()
         options.headings = display.headings
@@ -51,7 +55,7 @@ final class ScriptureTextOSISTests: XCTestCase {
         options.greekAccents = transforms.greekAccents
         options.hebrewPoints = transforms.hebrewPoints
         options.hebrewCantillation = transforms.hebrewCantillation
-        let shown = ChapterEntries.shown(try loadEntries())
+        let shown = ChapterEntries.shown(raw)
         var entries: [OSISParser.VerseEntry] = []
         for entry in shown { entries.append(OSISParser.VerseEntry(verse: entry.verse, osis: entry.text)) }
         return OSISParser(options: options, profile: .chapter).parse(entries, identity: facts.identity(book: "Ps", chapter: 119))
@@ -101,6 +105,28 @@ final class ScriptureTextOSISTests: XCTestCase {
         }
     }
     #endif
+
+    /// Parse time grows in proportion to the text: Psalm 119 eight times over takes about eight times as long as once, not 64.
+    /// This is what went wrong in Kotlin before the core followed the speed rules (each append copied all the text so far, so time
+    /// grew with the square of the chapter), and a ratio holds on any machine where a fixed time limit would not.
+    func testParseTimeGrowsInProportionToTheText() throws {
+        let one = try loadEntries()
+        var many: [ChapterEntries.Entry] = []
+        var verse = 0
+        for _ in 0..<ParseTiming.factor {
+            for entry in one {
+                many.append(ChapterEntries.Entry(verse: verse, text: entry.text))
+                verse += 1
+            }
+        }
+        var markers = ScriptureDisplayOptions()
+        markers.strongs = true
+        markers.morph = true
+        let single = try ParseTiming.median { _ = try self.parse(markers, entries: one) }
+        let longer = try ParseTiming.median { _ = try self.parse(markers, entries: many) }
+        print("TIMING OSIS Psalm 119: " + ParseTiming.describe(single) + " once, " + ParseTiming.describe(longer) + " eight times")
+        XCTAssertLessThan(longer / single, ParseTiming.limit, "eight times the text took " + String(longer / single) + " times as long")
+    }
 
     func testDefault() throws { try check("default") }
     func testMarkers() throws { try check("markers") }
