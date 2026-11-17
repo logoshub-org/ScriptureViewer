@@ -7,8 +7,8 @@
 
 package scripture.viewer.compose
 
-import android.content.ClipboardManager
-import android.content.Context
+import android.os.ParcelFileDescriptor
+import android.os.SystemClock
 import android.text.Layout
 import android.text.Spanned
 import android.util.Log
@@ -31,7 +31,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.test.assertTextEquals
 import androidx.compose.ui.test.click
-import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.junit4.v2.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.test.swipe
@@ -46,6 +46,7 @@ import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertSame
 import org.junit.Assert.assertTrue
+import org.junit.Assert.fail
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -155,6 +156,30 @@ class ScriptureViewerTests {
         val rect = view.rectOfCharacter(offset)!!
         Offset(rect.centerX() + view.textView.totalPaddingLeft + view.textView.left + view.scroll.left,
                rect.centerY() + view.textView.totalPaddingTop + view.textView.top + view.scroll.top - view.scroll.scrollY)
+    }
+
+    /**
+     * Makes sure the test's window is the one in front, with focus: what the device's own touches and the clipboard need. On a CI
+     * emulator just booted, a system dialog ("System UI isn't responding") can sit in front of it. While it waits for focus this
+     * closes system dialogs and answers Wait to an "isn't responding" dialog; if focus never comes it says which window has it.
+     */
+    private fun ensureWindowFocus() {
+        val instrumentation = InstrumentationRegistry.getInstrumentation()
+        val device = UiDevice.getInstance(instrumentation)
+        fun shell(command: String): String =
+            ParcelFileDescriptor.AutoCloseInputStream(instrumentation.uiAutomation.executeShellCommand(command))
+                .bufferedReader().use { it.readText() }
+        fun focused() = compose.runOnUiThread<Boolean> { compose.activity.hasWindowFocus() }
+        val end = SystemClock.uptimeMillis() + 20_000
+        while (!focused()) {
+            if (SystemClock.uptimeMillis() > end) {
+                val focus = shell("dumpsys window").lines().filter { it.contains("mCurrentFocus") || it.contains("mFocusedApp") }
+                fail("the test's window never got focus; the focused window is: " + focus.joinToString(" | ") { it.trim() })
+            }
+            device.findObject(By.res("android", "aerr_wait"))?.click()
+            shell("am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS")
+            Thread.sleep(500)
+        }
     }
 
     /** Waits until a fling has run out: the text has stopped moving. */
@@ -403,10 +428,14 @@ class ScriptureViewerTests {
             assertEquals("Psalms 119:9–11 (KJV)\n" + psalm.copiedText(utf16Start = from.start, length = length).text, copied)
             assertTrue("the numbers set apart: $copied", copied.contains("\n9 Wherewithal") && copied.contains(" 10 With my whole heart"))
 
-            // The system's Copy puts that text on the clipboard, not the characters on screen.
+            // The system's Copy puts that text on the clipboard, not the characters on screen. (What it puts there, seen through the
+            // view's hook: reading the clipboard back needs the window to have focus, which an emulator on CI does not always give.)
+            var onClipboard: String? = null
+            val put = view.textView.putOnClipboard
+            view.textView.putOnClipboard = { onClipboard = it }
             assertTrue(view.textView.onTextContextMenuItem(android.R.id.copy))
-            val clipboard = view.context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            assertEquals(copied, clipboard.primaryClip?.getItemAt(0)?.text?.toString())
+            view.textView.putOnClipboard = put
+            assertEquals(copied, onClipboard)
         }
 
         // An item the host added to the menu, chosen on a selection.
@@ -431,7 +460,9 @@ class ScriptureViewerTests {
             events.onShare = { shared.add(it) }
         }
         val view = viewer()
-        // A press held in real time (the test clock of Compose does not make the text view wait): the device does it.
+        // A press held in real time (the test clock of Compose does not make the text view wait): the device does it, through the
+        // whole screen, so the test's window must be the one in front.
+        ensureWindowFocus()
         val device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
         val onWord = pointOfCharacter(view, psalm.text.indexOf("undefiled") + 4)
         val onScreen = onMain { IntArray(2).also { view.getLocationOnScreen(it) } }

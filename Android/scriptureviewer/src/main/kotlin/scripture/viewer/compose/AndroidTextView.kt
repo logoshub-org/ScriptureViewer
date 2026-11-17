@@ -892,6 +892,12 @@ internal class ReaderTextView(context: Context) : TextView(context) {
 
     var onSelection: ((Int, Int) -> Unit)? = null
     var copyText: (() -> String?)? = null
+    /** Puts copied text on the system clipboard. A test replaces it to see what Copy put there: an app may read the clipboard only
+     *  while its window has focus, which a test cannot count on. */
+    var putOnClipboard: (String) -> Unit = { text ->
+        val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        clipboard.setPrimaryClip(ClipData.newPlainText(null, text))
+    }
     var afterCopy: (() -> Unit)? = null
     var share: ((String) -> Unit)? = null
     /** The direction of every paragraph, whatever its first letter is. */
@@ -910,8 +916,7 @@ internal class ReaderTextView(context: Context) : TextView(context) {
     override fun onTextContextMenuItem(id: Int): Boolean {
         when (id) {
             android.R.id.copy -> copyText?.invoke()?.let { text ->
-                val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                clipboard.setPrimaryClip(ClipData.newPlainText(null, text))
+                putOnClipboard(text)
                 afterCopy?.invoke()
                 return true
             }

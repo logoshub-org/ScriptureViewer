@@ -41,7 +41,10 @@ Then, with `JAVA_HOME` (a JDK 21 or later, for example Android Studio's `jbr`; t
 ```
 
 CI runs the instrumented tests on every push: the job "Viewer on an Android emulator" (`.github/workflows/ci.yml`) transpiles the core
-on a Linux runner and runs them on an API 34 emulator (ReactiveCircus/android-emulator-runner).
+on a Linux runner and runs them on an API 34 emulator (ReactiveCircus/android-emulator-runner). Before the tests the job turns off
+animations, unlocks the screen and closes system dialogs; the long-press test also waits for its window to have focus (a freshly booted
+emulator can show "System UI isn't responding" in front of it), and the copy test checks what Copy hands the clipboard through the
+view's `putOnClipboard` rather than reading the clipboard back, which Android allows only to the window with focus.
 
 The settings file takes the core in as an included build (Skip's generated Gradle project for `ScriptureTextSource`, which holds
 `ScriptureText`, the OSIS, GBF, ThML and plain-text parsers, the module source, `SkipModel`, `SkipFoundation` and `SkipLib`), under the
@@ -95,5 +98,5 @@ requests no layout (the `Layout` object stays the same one); painting 176 bookma
   Psalm 119 through it on the emulator; no PocketSword screen uses it yet.
 - **USFM in this project.** The demo and the tests take their Kotlin from the build of `ScriptureTextSource`, which does not hold
   USFM or TEI (nothing in that graph needs them); an app built with Skip gets every module it imports.
-- **Publishing.** No AAR is published, and nothing here is in CI (the tests need an emulator).
+- **Publishing.** No AAR is published; the library reaches an app through the Skip package, and its tests run in CI on an emulator.
 - **Two- and three-finger gestures** are implemented and their rules tested, but not driven by real touches.
