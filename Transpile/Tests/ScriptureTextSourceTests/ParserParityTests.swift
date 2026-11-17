@@ -92,22 +92,22 @@ final class ParserParityTests: XCTestCase {
                     let label = pick.file + " " + type.rawValue + " display" + String(d)
                     if let model = source.chapter(module: "Sample", reference: pick.book + " " + String(pick.chapter), display: display,
                                                   commentary: pick.commentary) {
-                        out += digest(label, model)
+                        out += ModelDigest.of(label, model)
                     } else {
                         out += "# " + label + " nil\n"
                     }
                     if let verse = source.verse(module: "Sample", chapterReference: "", verse: 1, display: display) {
-                        out += digest(label + " verse 1", verse)
+                        out += ModelDigest.of(label + " verse 1", verse)
                     }
                     d += 1
                 }
             }
             // The GBF parser with its other line rule.
-            out += digest(pick.file + " gbf preserve", GBFParser(lineBreaks: GBFParser.LineBreaks.preserve).parse(ChapterEntries.shown(entries)))
+            out += ModelDigest.of(pick.file + " gbf preserve", GBFParser(lineBreaks: GBFParser.LineBreaks.preserve).parse(ChapterEntries.shown(entries)))
         }
         var k = 0
         for sample in try strings("tei_samples") {
-            out += digest("tei " + String(k), TEIParser(options: TEIParser.Options(module: "StrongsGreek")).parse(sample))
+            out += ModelDigest.of("tei " + String(k), TEIParser(options: TEIParser.Options(module: "StrongsGreek")).parse(sample))
             k += 1
         }
         k = 0
@@ -115,56 +115,20 @@ final class ParserParityTests: XCTestCase {
             var options = ThMLParser.Options(module: "TSK")
             options.strongs = true
             options.morphology = true
-            out += digest("thml " + String(k), ThMLParser(options: options).parse(sample))
-            out += digest("thml commentary " + String(k),
+            out += ModelDigest.of("thml " + String(k), ThMLParser(options: options).parse(sample))
+            out += ModelDigest.of("thml commentary " + String(k),
                           ThMLParser(options: options, profile: ScriptureContentProfile.commentary)
                               .parse([ChapterEntries.Entry(verse: 1, text: sample), ChapterEntries.Entry(verse: 2, text: sample)]))
             k += 1
         }
         k = 0
         for sample in try strings("plain_samples") {
-            out += digest("plain " + String(k), PlainTextParser().parse(sample))
+            out += ModelDigest.of("plain " + String(k), PlainTextParser().parse(sample))
             var preserve = PlainTextParser.Options()
             preserve.lineBreaks = PlainTextParser.Options.LineBreaks.preserve
-            out += digest("plain preserve " + String(k), PlainTextParser(options: preserve).parse(sample))
+            out += ModelDigest.of("plain preserve " + String(k), PlainTextParser(options: preserve).parse(sample))
             k += 1
         }
-        return out
-    }
-
-    // MARK: Digest
-
-    private func describe(_ attribute: ScriptureText.Attribute) -> String {
-        switch attribute {
-        case .block(let role): return "block:" + role.rawValue
-        case .verseNumber(let number): return "verseNumber:" + String(number)
-        case .redLetter: return "redLetter"
-        case .small: return "small"
-        case .bold: return "bold"
-        case .italic: return "italic"
-        case .strongs(let token): return "strongs:" + token
-        case .morph(let code): return "morph:" + code
-        case .word(let lemma, let morph): return "word:" + (lemma ?? "-") + ":" + (morph ?? "-")
-        case .footnote(let id): return "footnote:" + id
-        case .link(let target): return "link:" + target
-        case .divineName: return "divineName"
-        }
-    }
-
-    /// Everything about a model, as lines, under a label.
-    private func digest(_ label: String, _ model: ScriptureText) -> String {
-        var out = "# " + label + "\n"
-        out += "utf16=" + String(CodePoints.utf16Length(model.text)) + " verses=" + String(model.verses.count)
-        out += " spans=" + String(model.spans.count) + " words=" + String(model.words.count) + " notes=" + String(model.notes.count) + "\n"
-        for v in model.verses {
-            out += "V " + String(v.verse) + " " + String(v.start) + " " + String(v.length) + " " + v.displayNumber + "\n"
-        }
-        for s in model.spans { out += "S " + describe(s.attribute) + " " + String(s.start) + " " + String(s.length) + "\n" }
-        for w in model.words { out += "W " + String(w.verse) + " " + String(w.index) + " " + String(w.start) + " " + String(w.length) + "\n" }
-        for n in model.notes {
-            out += "N " + n.id + " " + n.kind.rawValue + " [" + n.references.joined(separator: "|") + "] " + n.text + "\n"
-        }
-        out += "T " + model.text + "\n"
         return out
     }
 }

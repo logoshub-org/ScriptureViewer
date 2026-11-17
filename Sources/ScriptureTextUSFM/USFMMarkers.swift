@@ -52,8 +52,12 @@ enum USFMMarker: Equatable {
     /// styles shown as plain text, so their text is kept.
     static func named(_ name: String) -> USFMMarker {
         if name.hasSuffix("-s") || name.hasSuffix("-e") || name == "ts" || name == "zms" { return .milestone }
-        let base = String(name.prefix { !$0.isNumber })
-        let level = Int(name.dropFirst(base.count)) ?? 1
+        // The name up to its first digit, and the number after it (names are ASCII: see the tokenizer).
+        let codes = CodePoints.of(name)
+        var digit = 0
+        while digit < codes.count && !(codes[digit] >= 0x30 && codes[digit] <= 0x39) { digit += 1 }
+        let base = CodePoints.string(codes, 0, digit)
+        let level = Int(CodePoints.string(codes, digit, codes.count)) ?? 1
         switch base {
         case "id", "usfm", "ide", "sts", "rem", "h", "toc", "toca", "periph": return .identification
         case "c": return .chapter

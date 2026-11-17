@@ -1,0 +1,1 @@
+../../../Sources/ScriptureTextUSFM/USFMMarkers.swift

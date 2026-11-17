@@ -58,14 +58,14 @@ public struct USFMParser: Sendable {
     /// One chapter of a book, or nil when the book has no such chapter. `identity` is carried on the result for word
     /// references (D41).
     public func parse(_ book: USFMBook, chapter: Int, identity: PassageIdentity? = nil) -> ScriptureText? {
-        guard let range = book.chapterRanges[chapter] else { return nil }
-        var builder = USFMBuilder(options: options)
+        guard let text = book.chapterTexts[chapter] else { return nil }
+        let builder = USFMBuilder(options: options)
         if chapter == book.chapters.first {
             builder.inPrelude = true
-            for token in USFMTokenizer.tokens(book.source[book.prelude]) { builder.handle(token) }
+            for token in USFMTokenizer.tokens(book.preludeText) { builder.handle(token) }
             builder.inPrelude = false
         }
-        for token in USFMTokenizer.tokens(book.source[range]) { builder.handle(token) }
+        for token in USFMTokenizer.tokens(text) { builder.handle(token) }
         var result = builder.finish()
         result.identity = identity
         return result
@@ -73,8 +73,8 @@ public struct USFMParser: Sendable {
 
     /// USFM text with no book around it (a test, a fragment): every chapter in it, read as one.
     public func parse(_ text: String, identity: PassageIdentity? = nil) -> ScriptureText {
-        var builder = USFMBuilder(options: options)
-        for token in USFMTokenizer.tokens(Substring(text)) { builder.handle(token) }
+        let builder = USFMBuilder(options: options)
+        for token in USFMTokenizer.tokens(text) { builder.handle(token) }
         var result = builder.finish()
         result.identity = identity
         return result
@@ -98,83 +98,89 @@ public struct USFMBook: Sendable {
     /// Each chapter's highest verse number (the end of a bridge counts), from the `\v` markers.
     public let lastVerses: [Int: Int]
 
-    let source: String
-    let prelude: Range<String.Index>
-    let chapterRanges: [Int: Range<String.Index>]
+    /// The text before the first chapter (the book's titles and introduction), and each chapter's text from its `\c`. Cut from
+    /// the file once, when it is indexed. A chapter number the file repeats keeps its last text and its first place in `chapters`.
+    let preludeText: String
+    let chapterTexts: [Int: String]
 
     /// The book in `text`, or nil when it has no `\id`.
     public init?(_ text: String) {
-        source = text
         // Each `\c N` and `\v N`: a backslash, the letter, whitespace and a number. `\cl`, `\cp`, `\cat`, `\va`,
-        // `\vp` and the like are other markers.
-        var starts: [(number: Int, index: String.Index)] = []
+        // `\vp` and the like are other markers. Read as UTF-16 code units (every character looked for is ASCII), so the
+        // chapters can be cut at their offsets.
+        let units = CodePoints.utf16(text)
+        let n = units.count
+        var startNumbers: [Int] = []
+        var startOffsets: [Int] = []
         var lastVerses: [Int: Int] = [:]
-        let utf8 = text.utf8
-        func number(at start: String.Index) -> (value: Int, end: String.Index)? {
-            var cursor = start
-            var value = 0
-            var digits = 0
-            while cursor < utf8.endIndex, utf8[cursor] >= UInt8(ascii: "0"), utf8[cursor] <= UInt8(ascii: "9") {
-                value = value * 10 + Int(utf8[cursor] - UInt8(ascii: "0"))
-                digits += 1
-                cursor = utf8.index(after: cursor)
-            }
-            return digits > 0 ? (value, cursor) : nil
-        }
-        var index = utf8.startIndex
-        while let slash = utf8[index...].firstIndex(of: UInt8(ascii: "\\")) {
-            var cursor = utf8.index(after: slash)
+        var index = 0
+        while index < n {
+            guard units[index] == 0x5C else { index += 1; continue }    // a backslash
+            let slash = index
+            var cursor = slash + 1
             index = cursor
-            guard cursor < utf8.endIndex else { continue }
-            let letter = utf8[cursor]
-            guard letter == UInt8(ascii: "c") || letter == UInt8(ascii: "v") else { continue }
-            cursor = utf8.index(after: cursor)
-            guard cursor < utf8.endIndex, Self.isSpace(utf8[cursor]) else { continue }
-            while cursor < utf8.endIndex, Self.isSpace(utf8[cursor]) { cursor = utf8.index(after: cursor) }
-            guard let (value, end) = number(at: cursor) else { continue }
-            if letter == UInt8(ascii: "c") {
-                starts.append((value, slash))
-            } else if let chapter = starts.last?.number {
-                var last = value
+            guard cursor < n else { continue }
+            let letter = units[cursor]
+            guard letter == 0x63 || letter == 0x76 else { continue }     // c, v
+            cursor += 1
+            guard cursor < n, Self.isSpace(units[cursor]) else { continue }
+            while cursor < n, Self.isSpace(units[cursor]) { cursor += 1 }
+            guard let value = Self.number(units, at: cursor) else { continue }
+            if letter == 0x63 {
+                startNumbers.append(value.value)
+                startOffsets.append(slash)
+            } else if let chapter = startNumbers.last {
+                var last = value.value
                 // A bridge: `1-2`.
-                if end < utf8.endIndex, utf8[end] == UInt8(ascii: "-"), let (to, _) = number(at: utf8.index(after: end)), to > value {
-                    last = to
+                if value.end < n, units[value.end] == 0x2D, let to = Self.number(units, at: value.end + 1), to.value > value.value {
+                    last = to.value
                 }
                 lastVerses[chapter] = max(lastVerses[chapter] ?? 0, last)
             }
         }
         self.lastVerses = lastVerses
-        var ranges: [Int: Range<String.Index>] = [:]
+        var boundaries: [Int] = [0]
+        for offset in startOffsets { boundaries.append(offset) }
+        boundaries.append(n)
+        let pieces = CodePoints.pieces(text, utf16Boundaries: boundaries)
+        var texts: [Int: String] = [:]
         var order: [Int] = []
-        for (position, start) in starts.enumerated() {
-            let end = position + 1 < starts.count ? starts[position + 1].index : text.endIndex
-            if ranges[start.number] == nil { order.append(start.number) }
-            ranges[start.number] = start.index..<end
+        var k = 0
+        while k < startNumbers.count {
+            let number = startNumbers[k]
+            if texts[number] == nil { order.append(number) }
+            texts[number] = pieces[k + 1]
+            k += 1
         }
-        let preludeEnd = starts.first?.index ?? text.endIndex
-        prelude = text.startIndex..<preludeEnd
-        chapterRanges = ranges
+        preludeText = pieces[0]
+        chapterTexts = texts
         chapters = order
 
         // The book's own lines: what follows each identification marker, up to the next marker.
         var fields: [String: String] = [:]
         var current: String?
-        for token in USFMTokenizer.tokens(text[prelude]) {
+        for token in USFMTokenizer.tokens(preludeText) {
             switch token {
             case .marker(let name, _):
-                current = ["id", "h", "toc1", "toc2", "toc3", "cl"].contains(name) && fields[name] == nil ? name : nil
-                if let current { fields[current] = "" }
+                if Self.isBookField(name) && fields[name] == nil {
+                    current = name
+                    fields[name] = ""
+                } else {
+                    current = nil
+                }
             case .text(let value):
-                if let current { fields[current, default: ""] += value }
+                if let current { fields[current] = (fields[current] ?? "") + value }
             case .end:
                 current = nil
             }
         }
         func field(_ name: String) -> String? {
-            let value = fields[name]?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            let value = CodePoints.trimmed(fields[name] ?? "", where: { CodePoints.isWhiteSpaceOrNewline($0) })
             return value.isEmpty ? nil : value
         }
-        guard let id = field("id"), let code = id.split(separator: " ").first.map(String.init), !code.isEmpty else { return nil }
+        guard let id = field("id") else { return nil }
+        let words = CodePoints.split(id, separator: " ")
+        guard let code = words.first, !code.isEmpty else { return nil }
         self.code = code.uppercased()
         shortName = field("toc2") ?? field("h")
         longName = field("toc1")
@@ -182,7 +188,32 @@ public struct USFMBook: Sendable {
         chapterLabel = field("cl")
     }
 
-    private static func isSpace(_ byte: UInt8) -> Bool {
-        byte == UInt8(ascii: " ") || byte == UInt8(ascii: "\t") || byte == UInt8(ascii: "\n") || byte == UInt8(ascii: "\r")
+    /// The identification markers whose text is the book's own: its code, its names, its chapter label.
+    private static func isBookField(_ name: String) -> Bool {
+        switch name {
+        case "id", "h", "toc1", "toc2", "toc3", "cl": return true
+        default: return false
+        }
+    }
+
+    /// A number in ASCII digits at `start`, and where it ends.
+    private struct Number {
+        var value: Int
+        var end: Int
+    }
+
+    private static func number(_ units: [Int], at start: Int) -> Number? {
+        var cursor = start
+        var value = 0
+        while cursor < units.count, units[cursor] >= 0x30, units[cursor] <= 0x39 {
+            // Eighteen digits at most: more would overflow, and no chapter or verse has them.
+            if cursor - start < 18 { value = value * 10 + (units[cursor] - 0x30) }
+            cursor += 1
+        }
+        return cursor > start ? Number(value: value, end: cursor) : nil
+    }
+
+    private static func isSpace(_ unit: Int) -> Bool {
+        unit == 0x20 || unit == 0x09 || unit == 0x0A || unit == 0x0D
     }
 }

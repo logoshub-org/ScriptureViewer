@@ -27,10 +27,11 @@ import Foundation
 import ScriptureText
 import ScriptureTextBuilding
 
-struct USFMBuilder {
+/// A class: one per parse, changed in place (see the speed rules in Transpile/README.md).
+final class USFMBuilder {
 
     private let options: USFMParser.Options
-    private var out: ScriptureTextBuilder
+    private let out: ScriptureTextBuilder
     private let transforms: TextTransforms
 
     /// Reading the book's own lines before its first chapter: its titles and introduction, not its chapter label.
@@ -58,8 +59,10 @@ struct USFMBuilder {
     private var skip: Skip?
     private var publishedLabel = ""
 
-    private var paragraph: (role: ParagraphRole?, handle: ScriptureTextBuilder.SpanHandle?)?
-    private var heading: (role: ParagraphRole, handle: ScriptureTextBuilder.SpanHandle?, shown: Bool)?
+    private struct ParagraphState { var role: ParagraphRole?; var handle: ScriptureTextBuilder.SpanHandle? }
+    private struct HeadingState { var role: ParagraphRole; var handle: ScriptureTextBuilder.SpanHandle?; var shown: Bool }
+    private var paragraph: ParagraphState?
+    private var heading: HeadingState?
 
     private struct CharacterFrame {
         var name: String
@@ -83,7 +86,7 @@ struct USFMBuilder {
 
     /// Inside `\qt-s |who="Jesus"\*` … `\qt-e\*`: words of Jesus, red letter until the milestone ends.
     private var quotationByJesus = false
-    private static let quotationFrame = "\u{0}qt"
+    private static let quotationFrame = "\u{0000}qt"
     /// A milestone being read: its name and attribute text.
     private var milestoneName = ""
     private var milestoneAttributes = ""
@@ -114,7 +117,7 @@ struct USFMBuilder {
 
     // MARK: Tokens
 
-    mutating func handle(_ token: USFMToken) {
+    func handle(_ token: USFMToken) {
         if skip != nil, consumeSkipped(token) { return }
         switch token {
         case .text(let text): self.text(text)
@@ -123,58 +126,65 @@ struct USFMBuilder {
         }
     }
 
-    mutating func finish() -> ScriptureText {
+    func finish() -> ScriptureText {
         if pendingVerse != nil { beginPendingVerse() }
         endBlock()
         return out.finish()
     }
 
     /// Whether a skipped region swallowed the token.
-    private mutating func consumeSkipped(_ token: USFMToken) -> Bool {
-        switch skip {
+    private func consumeSkipped(_ token: USFMToken) -> Bool {
+        guard let current = skip else { return false }
+        switch current {
         case .untilMarker:
             if case .text = token { return true }
             skip = nil
             return false
         case .milestone:
             switch token {
-            case .end(let name, _) where name.isEmpty: finishMilestone(); return true
-            case .text(let text): milestoneAttributes += text; return true
-            default: finishMilestone(); return false        // a milestone left open
+            case .end(let name, _):
+                if name.isEmpty { finishMilestone(); return true }
+                finishMilestone()                           // a milestone left open
+                return false
+            case .text(let text):
+                milestoneAttributes += text
+                return true
+            case .marker:
+                finishMilestone()                           // a milestone left open
+                return false
             }
         case .until(let name):
             switch token {
-            case .end(let ended, _) where ended == name:
-                finishSkip(name)
+            case .end(let ended, _):
+                if ended == name { finishSkip(name) }
                 return true
             case .text(let text):
                 if name == "vp" { publishedLabel += text }
                 return true
-            case .marker(let next, _) where Self.endsSkippedRun(USFMMarker.named(next)):
-                finishSkip(name)                            // never closed: it ends where its paragraph or verse does
-                return false
-            default:
+            case .marker(let next, _):
+                if Self.endsSkippedRun(USFMMarker.named(next)) {
+                    finishSkip(name)                        // never closed: it ends where its paragraph or verse does
+                    return false
+                }
                 return true
             }
         case .sidebar:
-            if case .marker("esbe", _) = token { skip = nil }
+            if case .marker(let name, _) = token, name == "esbe" { skip = nil }
             return true
-        case nil:
-            return false
         }
     }
 
     /// A milestone ended: a quotation by Jesus starts or ends red letter.
-    private mutating func finishMilestone() {
+    private func finishMilestone() {
         skip = nil
         let name = milestoneName
         defer { milestoneName = ""; milestoneAttributes = "" }
         guard name.hasPrefix("qt") else { return }
         if name.hasSuffix("-s") {
             let who = Self.attributes(milestoneAttributes)["who"] ?? ""
-            guard who.localizedCaseInsensitiveContains("Jesus"), !quotationByJesus else { return }
+            guard who.lowercased().contains("jesus"), !quotationByJesus else { return }
             quotationByJesus = true
-            if paragraph != nil, heading == nil { openCharacter(Self.quotationFrame, style: .redLetter) }
+            if paragraph != nil, heading == nil { openCharacter(Self.quotationFrame, style: USFMMarker.CharacterStyle.redLetter) }
         } else if name.hasSuffix("-e") {
             quotationByJesus = false
             if let index = characters.lastIndex(where: { $0.name == Self.quotationFrame }) {
@@ -183,9 +193,9 @@ struct USFMBuilder {
         }
     }
 
-    private mutating func finishSkip(_ name: String) {
+    private func finishSkip(_ name: String) {
         if name == "vp" {
-            let label = publishedLabel.trimmingCharacters(in: .whitespacesAndNewlines)
+            let label = Self.trimmed(publishedLabel)
             if !label.isEmpty { pendingVerse?.label = label }
             publishedLabel = ""
         }
@@ -201,93 +211,119 @@ struct USFMBuilder {
 
     // MARK: Text
 
-    private mutating func text(_ original: String) {
+    private func text(_ original: String) {
         var text = original
-        if let expected {
+        if let expecting = expected {
             self.expected = nil
-            let (word, rest) = Self.firstWord(of: text)
-            switch expected {
+            let split = Self.firstWord(of: text)
+            switch expecting {
             case .verseNumber:
-                if let verse = Self.verseNumber(word) {
+                if let verse = Self.verseNumber(split.word) {
                     pendingVerse = verse
-                    text = rest
+                    text = split.rest
                 }
             case .chapterNumber, .noteCaller:
-                text = rest
+                text = split.rest
             }
             if text.isEmpty { return }
         }
-        if paragraphOpening, let first = text.unicodeScalars.first(where: { !ScriptureTextBuilder.isMarkupSpace($0) }) {
-            paragraphOpening = false
-            if first == "\u{00B6}" {
-                let rest = text.drop { ScriptureTextBuilder.isMarkupSpace($0.unicodeScalars.first!) }.dropFirst()
-                text = String(rest.drop { ScriptureTextBuilder.isMarkupSpace($0.unicodeScalars.first!) })
-                if text.isEmpty { return }
+        if paragraphOpening {
+            let codes = CodePoints.of(text)
+            var first = 0
+            while first < codes.count && ScriptureTextBuilder.isMarkupSpace(codes[first]) { first += 1 }
+            if first < codes.count {
+                paragraphOpening = false
+                if codes[first] == 0xB6 {                       // an opening pilcrow, and the space around it
+                    var after = first + 1
+                    while after < codes.count && ScriptureTextBuilder.isMarkupSpace(codes[after]) { after += 1 }
+                    text = CodePoints.string(codes, after, codes.count)
+                    if text.isEmpty { return }
+                }
             }
         }
-        if pendingVerse != nil, text.unicodeScalars.contains(where: { !ScriptureTextBuilder.isMarkupSpace($0) }) {
+        if pendingVerse != nil, ScriptureTextBuilder.hasContent(text) {
             beginPendingVerse()
         }
         if targetText != nil {
             if targetInAttributes { targetAttributes += text; return }
-            if let bar = text.firstIndex(of: "|") {
-                targetAttributes = String(text[text.index(after: bar)...])
+            if let split = Self.splitAtBar(text) {
+                targetAttributes = split.after
                 targetInAttributes = true
-                text = String(text[..<bar])
+                text = split.before
             }
         }
         // Attributes: after `|` in a word or a link, up to its end marker.
-        if let top = characters.indices.last, characters[top].style == .word || characters[top].style == .link {
+        let top = characters.count - 1
+        if top >= 0, characters[top].style == USFMMarker.CharacterStyle.word || characters[top].style == USFMMarker.CharacterStyle.link {
             if characters[top].inAttributes {
                 characters[top].attributes += text
                 return
             }
-            if let bar = text.firstIndex(of: "|") {
-                characters[top].attributes = String(text[text.index(after: bar)...])
+            if let split = Self.splitAtBar(text) {
+                characters[top].attributes = split.after
                 characters[top].inAttributes = true
-                text = String(text[..<bar])
-                if characters[top].style == .word, !characters[top].sawText,
-                   text.trimmingCharacters(in: .whitespacesAndNewlines) == "-" {
+                text = split.before
+                if characters[top].style == USFMMarker.CharacterStyle.word, !characters[top].sawText, Self.trimmed(text) == "-" {
                     characters[top].placeholder = true
                     return
                 }
             }
-            if characters[top].style == .word, !text.isEmpty { characters[top].sawText = true }
+            if characters[top].style == USFMMarker.CharacterStyle.word, !text.isEmpty { characters[top].sawText = true }
         }
         content(text)
+    }
+
+    /// Text before and after a `|`.
+    private struct BarSplit {
+        var before: String
+        var after: String
+    }
+
+    /// `text` split at its first `|`, or nil when it has none.
+    private static func splitAtBar(_ text: String) -> BarSplit? {
+        let codes = CodePoints.of(text)
+        var bar = 0
+        while bar < codes.count && codes[bar] != 0x7C { bar += 1 }
+        guard bar < codes.count else { return nil }
+        return BarSplit(before: CodePoints.string(codes, 0, bar), after: CodePoints.string(codes, bar + 1, codes.count))
+    }
+
+    /// Without white space and line ends at its ends (Foundation's `CharacterSet.whitespacesAndNewlines`).
+    private static func trimmed(_ text: String) -> String {
+        CodePoints.trimmed(text, where: { CodePoints.isWhiteSpaceOrNewline($0) })
     }
 
     /// `//` is an optional line break in USFM: a place a line may be broken, which text that reflows does not need. It stays
     /// when a colon comes before it (a URL), and where it is the only thing between two words it leaves a space.
     static func withoutOptionalLineBreaks(_ text: String) -> String {
-        let scalars = Array(text.unicodeScalars)
-        var result = String.UnicodeScalarView()
+        let codes = CodePoints.of(text)
+        var result: [Int] = []
         var index = 0
-        func isSpace(_ scalar: Unicode.Scalar) -> Bool { scalar == " " || scalar == "\t" || scalar == "\n" || scalar == "\r" }
-        while index < scalars.count {
-            guard scalars[index] == "/", index + 1 < scalars.count, scalars[index + 1] == "/" else {
-                result.append(scalars[index])
+        while index < codes.count {
+            guard codes[index] == 0x2F, index + 1 < codes.count, codes[index + 1] == 0x2F else {
+                result.append(codes[index])
                 index += 1
                 continue
             }
             let before = result.last
-            if before == ":" {                                 // `https://…`
-                result.append("/"); result.append("/")
+            if before == 0x3A {                                 // `https://…`
+                result.append(0x2F)
+                result.append(0x2F)
                 index += 2
                 continue
             }
             index += 2
-            let beforeIsSpace = before.map(isSpace) ?? true
+            let beforeIsSpace = before == nil || ScriptureTextBuilder.isMarkupSpace(before!)
             if beforeIsSpace {
-                while index < scalars.count, isSpace(scalars[index]) { index += 1 }     // one space is enough
-            } else if index < scalars.count, !isSpace(scalars[index]) {
-                result.append(" ")                             // `praise//him` is two words
+                while index < codes.count, ScriptureTextBuilder.isMarkupSpace(codes[index]) { index += 1 }     // one space is enough
+            } else if index < codes.count, !ScriptureTextBuilder.isMarkupSpace(codes[index]) {
+                result.append(0x20)                             // `praise//him` is two words
             }
         }
-        return String(result)
+        return CodePoints.string(result)
     }
 
-    private mutating func content(_ original: String) {
+    private func content(_ original: String) {
         guard !original.isEmpty else { return }
         // `~` is a no-break space; `//` an optional line break, which the reader does not use (but not after a colon: that is
         // the `//` of a URL).
@@ -298,11 +334,13 @@ struct USFMBuilder {
         if divineNameDepth > 0 { raw = raw.uppercased() }
         if out.inNote {
             if !noteDropping { out.appendToNote(raw) }
-            if targetText != nil { targetText! += raw }
+            if let target = targetText { targetText = target + raw }
             return
         }
-        for index in characters.indices where characters[index].style == .link && !characters[index].inAttributes {
-            characters[index].text += raw
+        var index = 0
+        while index < characters.count {
+            if characters[index].style == USFMMarker.CharacterStyle.link && !characters[index].inAttributes { characters[index].text += raw }
+            index += 1
         }
         if heading?.shown == false {
             out.countHiddenWords(raw)
@@ -313,7 +351,7 @@ struct USFMBuilder {
 
     // MARK: Markers
 
-    private mutating func marker(_ name: String) {
+    private func marker(_ name: String) {
         let marker = USFMMarker.named(name)
         if pendingVerse != nil, marker != .publishedVerse { beginPendingVerse() }
         expected = nil
@@ -328,13 +366,13 @@ struct USFMBuilder {
             closeShortLived()
             expected = .verseNumber
         case .heading(let role, let canonical):
-            if inPrelude, role == .cl { skip = .untilMarker; return }   // the label for every chapter
+            if inPrelude, role == ParagraphRole.cl { skip = Skip.untilMarker; return }   // the label for every chapter
             startHeading(role, canonical: canonical)
         case .paragraph(let role):
             startParagraph(role)
         case .noBreak:
             endBlock()
-            paragraph = (role: nil, handle: nil)
+            paragraph = ParagraphState(role: nil, handle: nil)
         case .blankLine:
             endBlock()
             out.lineBreak()
@@ -370,7 +408,7 @@ struct USFMBuilder {
         }
     }
 
-    private mutating func end(_ name: String) {
+    private func end(_ name: String) {
         guard !name.isEmpty else { return }                 // a stray `\*`
         switch USFMMarker.named(name) {
         case .note:
@@ -385,7 +423,7 @@ struct USFMBuilder {
 
     // MARK: Verses
 
-    private mutating func beginPendingVerse() {
+    private func beginPendingVerse() {
         guard let verse = pendingVerse else { return }
         pendingVerse = nil
         out.endVerse(at: out.contentEnd)                 // a heading before this verse is not the last one's
@@ -393,50 +431,63 @@ struct USFMBuilder {
     }
 
     /// Notes and tagged words belong to one verse: one left open is closed at the next `\v`.
-    private mutating func closeShortLived() {
+    private func closeShortLived() {
         closeNote()
         if let index = characters.firstIndex(where: { $0.style == .word }) {
             while characters.count > index { closeTopCharacter() }
         }
     }
 
-    /// The first whitespace-separated word of `text`, and the text after the one space that ends it.
-    private static func firstWord(of text: String) -> (String, String) {
-        let scalars = text.unicodeScalars
-        guard let start = scalars.firstIndex(where: { !ScriptureTextBuilder.isMarkupSpace($0) }) else { return ("", "") }
-        let end = scalars[start...].firstIndex(where: { ScriptureTextBuilder.isMarkupSpace($0) }) ?? scalars.endIndex
-        let word = String(scalars[start..<end])
-        let rest = end < scalars.endIndex ? String(scalars[scalars.index(after: end)...]) : ""
-        return (word, rest)
+    /// A word, and the text after it.
+    private struct WordSplit {
+        var word: String
+        var rest: String
     }
+
+    /// The first whitespace-separated word of `text`, and the text after the one space that ends it.
+    private static func firstWord(of text: String) -> WordSplit {
+        let codes = CodePoints.of(text)
+        var start = 0
+        while start < codes.count && ScriptureTextBuilder.isMarkupSpace(codes[start]) { start += 1 }
+        guard start < codes.count else { return WordSplit(word: "", rest: "") }
+        var end = start
+        while end < codes.count && !ScriptureTextBuilder.isMarkupSpace(codes[end]) { end += 1 }
+        let rest = end < codes.count ? CodePoints.string(codes, end + 1, codes.count) : ""
+        return WordSplit(word: CodePoints.string(codes, start, end), rest: rest)
+    }
+
+    private static func isASCIIDigit(_ c: Int) -> Bool { c >= 0x30 && c <= 0x39 }
 
     /// `5`, `1-2` (a bridge), `3a` or `12-13a` (printed as written).
     private static func verseNumber(_ word: String) -> PendingVerse? {
-        let digits = word.prefix { $0.isASCII && $0.isNumber }
-        guard let first = Int(digits) else { return nil }
-        var rest = word.dropFirst(digits.count)
+        let codes = CodePoints.of(word)
+        var digits = 0
+        while digits < codes.count && isASCIIDigit(codes[digits]) { digits += 1 }
+        guard let first = Int(CodePoints.string(codes, 0, digits)) else { return nil }
+        var rest = digits
         var last: Int?
-        if rest.first == "-" || rest.first == "\u{2013}" {
-            let lastDigits = rest.dropFirst().prefix { $0.isASCII && $0.isNumber }
-            if let value = Int(lastDigits), value > first {
+        if rest < codes.count && (codes[rest] == 0x2D || codes[rest] == 0x2013) {
+            var end = rest + 1
+            while end < codes.count && isASCIIDigit(codes[end]) { end += 1 }
+            if let value = Int(CodePoints.string(codes, rest + 1, end)), value > first {
                 last = value
-                rest = rest.dropFirst(1 + lastDigits.count)
+                rest = end
             }
         }
-        return PendingVerse(first: first, last: last, label: rest.isEmpty ? nil : word)
+        return PendingVerse(first: first, last: last, label: rest == codes.count ? nil : word)
     }
 
     // MARK: Paragraphs and headings
 
-    private mutating func startParagraph(_ role: ParagraphRole?) {
+    private func startParagraph(_ role: ParagraphRole?) {
         endBlock()
         out.lineBreak()
         paragraphOpening = true
-        paragraph = (role: role, handle: role == nil ? nil : out.openSpan(block: true))
-        if quotationByJesus { openCharacter(Self.quotationFrame, style: .redLetter) }   // the quotation goes on
+        paragraph = ParagraphState(role: role, handle: role == nil ? nil : out.openSpan(block: true))
+        if quotationByJesus { openCharacter(Self.quotationFrame, style: USFMMarker.CharacterStyle.redLetter) }   // the quotation goes on
     }
 
-    private mutating func startHeading(_ role: ParagraphRole, canonical: Bool) {
+    private func startHeading(_ role: ParagraphRole, canonical: Bool) {
         paragraphOpening = false
         endBlock()
         out.blockBreak()
@@ -445,13 +496,13 @@ struct USFMBuilder {
         if shown { out.clearBreakCount() }               // a shown heading carries its own space
         out.headingDepth += 1
         if !role.isCanonical { out.editorialDepth += 1 }
-        heading = (role: role, handle: shown ? out.openSpan(block: false) : nil, shown: shown)
+        heading = HeadingState(role: role, handle: shown ? out.openSpan(block: false) : nil, shown: shown)
     }
 
-    private mutating func closeHeading() {
+    private func closeHeading() {
         guard let current = heading else { return }
         while !characters.isEmpty { closeTopCharacter() }
-        if let handle = current.handle { out.closeSpan(handle, as: .block(current.role)) }
+        if let handle = current.handle { out.closeSpan(handle, as: ScriptureText.Attribute.block(current.role)) }
         out.markHeadingEnd()
         out.headingDepth -= 1
         if !current.role.isCanonical { out.editorialDepth -= 1 }
@@ -459,16 +510,16 @@ struct USFMBuilder {
         out.blockBreak()
     }
 
-    private mutating func endParagraph() {
+    private func endParagraph() {
         while !characters.isEmpty { closeTopCharacter() }
         if let current = paragraph, let handle = current.handle, let role = current.role {
-            out.closeSpan(handle, as: .block(role))
+            out.closeSpan(handle, as: ScriptureText.Attribute.block(role))
         }
         paragraph = nil
     }
 
     /// Everything a paragraph marker ends: a note left open, the character styles, the heading or paragraph.
-    private mutating func endBlock() {
+    private func endBlock() {
         closeNote()
         closeHeading()
         endParagraph()
@@ -476,7 +527,7 @@ struct USFMBuilder {
 
     // MARK: Character styles
 
-    private mutating func openCharacter(_ name: String, style: USFMMarker.CharacterStyle) {
+    private func openCharacter(_ name: String, style: USFMMarker.CharacterStyle) {
         let shown = !out.inNote && heading?.shown != false
         let spanned: Bool
         switch style {
@@ -484,37 +535,46 @@ struct USFMBuilder {
         case .redLetter: spanned = options.redLetter
         default: spanned = true
         }
-        if style == .word {
+        if style == USFMMarker.CharacterStyle.word {
             out.wordBoundary()                           // a tagged word starts a word
             out.wordDepth += 1
         }
-        if style == .divineName { divineNameDepth += 1 }
+        if style == USFMMarker.CharacterStyle.divineName { divineNameDepth += 1 }
         characters.append(CharacterFrame(name: name, style: style, handle: shown && spanned ? out.openSpan(block: false) : nil,
                                          inNote: out.inNote))
     }
 
-    private mutating func closeTopCharacter() {
+    private func closeTopCharacter() {
         let frame = characters.removeLast()
         switch frame.style {
         case .word:
             out.wordDepth -= 1
-            let (lemma, morph) = Self.wordAttributes(frame.attributes)
+            let data = Self.wordAttributes(frame.attributes)
             if frame.placeholder {
                 // No text and no word, but the markers where it stands, when the word would have been shown.
                 if let handle = frame.handle {
                     out.closeSpan(handle, as: nil)
-                    out.emitWordMarkers(lemma: lemma, morph: morph)
+                    out.emitWordMarkers(lemma: data.lemma, morph: data.morph)
                 }
                 return
             }
-            let started = frame.handle.flatMap { out.closeSpan($0, as: .word(lemma: lemma, morph: morph)) } != nil
-            if started { out.emitWordMarkers(lemma: lemma, morph: morph) }
+            var started = false
+            if let handle = frame.handle {
+                started = out.closeSpan(handle, as: ScriptureText.Attribute.word(lemma: data.lemma, morph: data.morph)) != nil
+            }
+            if started { out.emitWordMarkers(lemma: data.lemma, morph: data.morph) }
         case .link:
             let target = Self.linkTarget(frame.attributes, text: frame.text)
-            if let handle = frame.handle { out.closeSpan(handle, as: target.map { .link(target: $0) }) }
+            if let handle = frame.handle {
+                if let target {
+                    out.closeSpan(handle, as: ScriptureText.Attribute.link(target: target))
+                } else {
+                    out.closeSpan(handle, as: nil)
+                }
+            }
         case .divineName:
             divineNameDepth -= 1
-            if let handle = frame.handle { out.closeSpan(handle, as: .divineName) }
+            if let handle = frame.handle { out.closeSpan(handle, as: ScriptureText.Attribute.divineName) }
         case .plain:
             break
         case .italic, .bold, .small, .redLetter:
@@ -524,11 +584,11 @@ struct USFMBuilder {
 
     private static func attribute(_ style: USFMMarker.CharacterStyle) -> ScriptureText.Attribute? {
         switch style {
-        case .italic: return .italic
-        case .bold: return .bold
-        case .small: return .small
-        case .redLetter: return .redLetter
-        case .divineName: return .divineName
+        case .italic: return ScriptureText.Attribute.italic
+        case .bold: return ScriptureText.Attribute.bold
+        case .small: return ScriptureText.Attribute.small
+        case .redLetter: return ScriptureText.Attribute.redLetter
+        case .divineName: return ScriptureText.Attribute.divineName
         case .plain, .word, .link: return nil
         }
     }
@@ -536,18 +596,24 @@ struct USFMBuilder {
     /// `key="value"` pairs; text with no `=` is the default attribute (`lemma` for a word).
     static func attributes(_ text: String) -> [String: String] {
         var result: [String: String] = [:]
-        let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmed.isEmpty else { return result }
-        guard trimmed.contains("=") else { return ["": trimmed] }
-        var rest = Substring(trimmed)
-        while let equals = rest.firstIndex(of: "=") {
-            let key = rest[..<equals].trimmingCharacters(in: .whitespaces)
-            rest = rest[rest.index(after: equals)...]
-            guard let open = rest.firstIndex(of: "\"") else { break }
-            let afterOpen = rest.index(after: open)
-            let close = rest[afterOpen...].firstIndex(of: "\"") ?? rest.endIndex
-            result[key] = String(rest[afterOpen..<close])
-            rest = close < rest.endIndex ? rest[rest.index(after: close)...] : ""
+        let whole = trimmed(text)
+        guard !whole.isEmpty else { return result }
+        guard whole.contains("=") else { return ["": whole] }
+        let codes = CodePoints.of(whole)
+        var rest = 0
+        while true {
+            var equals = rest
+            while equals < codes.count && codes[equals] != 0x3D { equals += 1 }
+            guard equals < codes.count else { break }
+            let key = CodePoints.trimmed(CodePoints.string(codes, rest, equals), where: { CodePoints.isHorizontalWhiteSpace($0) })
+            rest = equals + 1
+            var open = rest
+            while open < codes.count && codes[open] != 0x22 { open += 1 }
+            guard open < codes.count else { break }
+            var close = open + 1
+            while close < codes.count && codes[close] != 0x22 { close += 1 }
+            result[key] = CodePoints.string(codes, open + 1, close)
+            rest = close < codes.count ? close + 1 : codes.count
         }
         return result
     }
@@ -555,35 +621,50 @@ struct USFMBuilder {
     /// The word's lemma tokens as OSIS writes them: `strong:H0430` for each Strong's number (USFM separates them
     /// with commas), `lemma.usfm:…` for a lexical form, which SWORD's rules keep out of the Strong's markers; and its
     /// morphology.
-    private static func wordAttributes(_ text: String) -> (lemma: String?, morph: String?) {
+    /// A word's lemma tokens and morphology.
+    private struct WordData {
+        var lemma: String?
+        var morph: String?
+    }
+
+    private static func wordAttributes(_ text: String) -> WordData {
         let pairs = attributes(text)
         var tokens: [String] = []
         if let strong = pairs["strong"] {
-            for number in strong.split(whereSeparator: { $0 == "," || $0 == " " }) {
-                let value = number.trimmingCharacters(in: .whitespaces)
-                if !value.isEmpty { tokens.append(value.contains(":") ? value : "strong:" + value) }
+            let codes = CodePoints.of(strong)
+            var start = 0
+            var k = 0
+            while k <= codes.count {
+                if k == codes.count || codes[k] == 0x2C || codes[k] == 0x20 {   // a comma or a space ends a number
+                    if k > start {
+                        let value = CodePoints.trimmed(CodePoints.string(codes, start, k), where: { CodePoints.isHorizontalWhiteSpace($0) })
+                        if !value.isEmpty { tokens.append(value.contains(":") ? value : "strong:" + value) }
+                    }
+                    start = k + 1
+                }
+                k += 1
             }
         }
         if let lemma = pairs["lemma"] ?? pairs[""], !lemma.isEmpty { tokens.append("lemma.usfm:" + lemma) }
         let morph = pairs["x-morph"] ?? pairs["morph"]
-        return (tokens.isEmpty ? nil : tokens.joined(separator: " "), morph?.isEmpty == false ? morph : nil)
+        return WordData(lemma: tokens.isEmpty ? nil : tokens.joined(separator: " "), morph: morph?.isEmpty == false ? morph : nil)
     }
 
     /// `\ref Gen 1:1|loc="GEN 1:1"\ref*` and `\jmp text|link-href="…"\jmp*`.
     private static func linkTarget(_ attributeText: String, text: String) -> String? {
         let pairs = attributes(attributeText)
         if let href = pairs["link-href"], !href.isEmpty { return href }
-        let location = (pairs["loc"] ?? pairs[""] ?? text).trimmingCharacters(in: .whitespacesAndNewlines)
+        let location = trimmed(pairs["loc"] ?? pairs[""] ?? text)
         return location.isEmpty ? nil : "passage:" + location
     }
 
     // MARK: Notes
 
-    private mutating func openNote(_ name: String, crossReference: Bool) {
+    private func openNote(_ name: String, crossReference: Bool) {
         guard !out.inNote else { return }                // a note inside a note is its text
         noteOrdinal += 1
         noteName = name
-        noteID = "\(out.currentVerse ?? 0).\(noteOrdinal)"
+        noteID = String(out.currentVerse ?? 0) + "." + String(noteOrdinal)
         noteIsCrossReference = crossReference
         noteDropping = false
         out.beginNote()
@@ -591,23 +672,24 @@ struct USFMBuilder {
     }
 
     /// A `\xt` ended: its text (or its `link-href`) is a reference the note cites.
-    private mutating func flushTarget() {
+    private func flushTarget() {
         guard let text = targetText else { return }
         targetText = nil
-        let trimSet = CharacterSet.whitespacesAndNewlines.union(CharacterSet(charactersIn: ".;,:"))
-        var reference = text.trimmingCharacters(in: trimSet)
-        if reference.isEmpty { reference = (Self.attributes(targetAttributes)["link-href"] ?? "").trimmingCharacters(in: trimSet) }
+        // White space, line ends and the punctuation that runs between references.
+        let trim: (Int) -> Bool = { c in CodePoints.isWhiteSpaceOrNewline(c) || c == 0x2E || c == 0x3B || c == 0x2C || c == 0x3A }
+        var reference = CodePoints.trimmed(text, where: trim)
+        if reference.isEmpty { reference = CodePoints.trimmed(Self.attributes(targetAttributes)["link-href"] ?? "", where: trim) }
         if !reference.isEmpty { out.addNoteReference(reference) }
     }
 
-    private mutating func closeNote() {
+    private func closeNote() {
         guard out.inNote else { return }
         flushTarget()
         while let last = characters.last, last.inNote { closeTopCharacter() }
         if heading?.shown == false {
             out.discardNote()                            // a hidden heading's note is hidden with it
         } else {
-            out.finishNote(id: noteID, kind: noteIsCrossReference ? .crossReference : .footnote,
+            out.finishNote(id: noteID, kind: noteIsCrossReference ? ScriptureText.Note.Kind.crossReference : ScriptureText.Note.Kind.footnote,
                            show: noteIsCrossReference ? options.crossReferences : options.footnotes)
         }
         noteName = nil

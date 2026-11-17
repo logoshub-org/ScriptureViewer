@@ -30,6 +30,7 @@ let package = Package(
         .library(name: "ScriptureTextGBF", type: .dynamic, targets: ["ScriptureTextGBF"]),
         .library(name: "ScriptureTextSource", type: .dynamic, targets: ["ScriptureTextSource"]),
         .library(name: "ScriptureTextVersification", type: .dynamic, targets: ["ScriptureTextVersification"]),
+        .library(name: "ScriptureTextUSFM", type: .dynamic, targets: ["ScriptureTextUSFM"]),
         .library(name: "ScriptureViewerSkip", type: .dynamic, targets: ["ScriptureViewerSkip"]),
     ],
     dependencies: [
@@ -50,6 +51,8 @@ let package = Package(
         .target(name: "ScriptureTextSource", dependencies: ["ScriptureText", "ScriptureTextOSIS", "ScriptureTextGBF", "ScriptureTextThML",
                                                             "ScriptureTextPlain", foundation], plugins: [skipstone]),
         .target(name: "ScriptureTextVersification", dependencies: ["ScriptureText", foundation], plugins: [skipstone]),
+        .target(name: "ScriptureTextUSFM", dependencies: ["ScriptureText", "ScriptureTextBuilding", "ScriptureTextVersification", foundation],
+                plugins: [skipstone]),
         // The SwiftUI `ScriptureViewer` for the Skip-built app, over the Compose viewer in ../Android (its Kotlin is linked into Skip/).
         .target(name: "ScriptureViewerSkip", dependencies: ["ScriptureText", foundation, .product(name: "SkipUI", package: "skip-ui")], plugins: [skipstone]),
         .testTarget(name: "ScriptureTextOSISTests", dependencies: ["ScriptureText", "ScriptureTextOSIS", .product(name: "SkipTest", package: "skip")],
@@ -58,7 +61,8 @@ let package = Package(
         // graph: Skip builds a test target into the Gradle project of the module it is named after, so these in the OSIS tests made a cycle.
         .testTarget(name: "ScriptureTextSourceTests", dependencies: ["ScriptureText", "ScriptureTextSource", "ScriptureTextOSIS", "ScriptureTextGBF",
                                                                  "ScriptureTextThML", "ScriptureTextTEI", "ScriptureTextPlain",
-                                                                 "ScriptureTextVersification", .product(name: "SkipTest", package: "skip")],
+                                                                 "ScriptureTextVersification", "ScriptureTextUSFM",
+                                                                 .product(name: "SkipTest", package: "skip")],
                     resources: [.process("Resources")], plugins: [skipstone]),
     ]
 )

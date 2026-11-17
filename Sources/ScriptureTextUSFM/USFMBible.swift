@@ -66,7 +66,8 @@ public final class USFMBible: ScriptureBible, @unchecked Sendable {
     public let versificationSource: VersificationSource
 
     private let lock = NSLock()
-    private var opened: [(osisID: String, book: USFMBook)] = []    // the last few books read, most recent last
+    private struct OpenedBook { var osisID: String; var book: USFMBook }
+    private var opened: [OpenedBook] = []    // the last few books read, most recent last
     private var featuresFound: Features?
 
     /// The Bible in `folder`; `name` defaults to the folder's name without a trailing `_usfm` (eBible's downloads).
@@ -87,22 +88,44 @@ public final class USFMBible: ScriptureBible, @unchecked Sendable {
                                   url: file, chapters: book.chapters, lastVerses: book.lastVerses))
         }
         guard !found.isEmpty else { throw OpenError.noBooks }
-        let order = Dictionary(uniqueKeysWithValues: ParatextBook.all.enumerated().map { ($0.element.code, $0.offset) })
-        found.sort { (order[$0.code] ?? Int.max, $0.code) < (order[$1.code] ?? Int.max, $1.code) }
+        // Paratext's order; a code it does not number goes last, by code.
+        var order: [String: Int] = [:]
+        var position = 0
+        for book in ParatextBook.all {
+            order[book.code] = position
+            position += 1
+        }
+        found.sort { a, b in
+            let left = order[a.code] ?? Int.max
+            let right = order[b.code] ?? Int.max
+            return left != right ? left < right : a.code < b.code
+        }
         books = found
 
-        let (system, source) = declared.map { ($0, VersificationSource.host) }
-            ?? Self.declaredSystem(in: folder, files: files) ?? (Self.bestFit(found), .bestFit)
-        versificationSource = source
-        versification = Versification(
-            name: system.name,
-            books: found.map { book in
-                let last = book.chapters.max() ?? 0
-                return Versification.Book(name: book.name, osisID: book.osisID,
-                                          versesPerChapter: (0..<last).map { book.lastVerses[$0 + 1] ?? 0 },
-                                          testament: ParatextBook.book(code: book.code)?.testament ?? .old)
-            },
-            mappings: system.mappings, excludedVerses: system.excludedVerses)
+        let chosen: DeclaredSystem
+        if let declared {
+            chosen = DeclaredSystem(system: declared, source: VersificationSource.host)
+        } else if let inFolder = Self.declaredSystem(in: folder, files: files) {
+            chosen = inFolder
+        } else {
+            chosen = DeclaredSystem(system: Self.bestFit(found), source: VersificationSource.bestFit)
+        }
+        versificationSource = chosen.source
+        var shapes: [Versification.Book] = []
+        for book in found {
+            let last = book.chapters.max() ?? 0
+            var verses: [Int] = []
+            var chapter = 1
+            while chapter <= last {
+                verses.append(book.lastVerses[chapter] ?? 0)
+                chapter += 1
+            }
+            shapes.append(Versification.Book(name: book.name, osisID: book.osisID, versesPerChapter: verses,
+                                             testament: ParatextBook.book(code: book.code)?.testament ?? Versification.Testament.old))
+        }
+        // `self.`: the argument label is `versification` too, and in Kotlin the parameter would take the assignment.
+        self.versification = Versification(name: chosen.system.name, books: shapes,
+                                      mappings: chosen.system.mappings, excludedVerses: chosen.system.excludedVerses)
     }
 
     // MARK: Features
@@ -120,13 +143,17 @@ public final class USFMBible: ScriptureBible, @unchecked Sendable {
         var complete: Bool { headings && footnotes && crossReferences && redLetter && strongs && morphology }
 
         mutating func scan(_ text: String) {
-            func has(_ needle: String) -> Bool { text.range(of: needle) != nil }
-            if !headings { headings = ["\\s ", "\\s1", "\\s2", "\\ms", "\\mr ", "\\r "].contains(where: has) }
-            if !footnotes { footnotes = ["\\f ", "\\fe ", "\\ef "].contains(where: has) }
-            if !crossReferences { crossReferences = ["\\x ", "\\ex "].contains(where: has) }
-            if !redLetter { redLetter = has("\\wj ") || has("who=\"Jesus\"") }
-            if !strongs { strongs = has("strong=\"") }
-            if !morphology { morphology = has("x-morph=\"") || has("morph=\"") }
+            if !headings { headings = Self.hasAny(text, ["\\s ", "\\s1", "\\s2", "\\ms", "\\mr ", "\\r "]) }
+            if !footnotes { footnotes = Self.hasAny(text, ["\\f ", "\\fe ", "\\ef "]) }
+            if !crossReferences { crossReferences = Self.hasAny(text, ["\\x ", "\\ex "]) }
+            if !redLetter { redLetter = text.contains("\\wj ") || text.contains("who=\"Jesus\"") }
+            if !strongs { strongs = text.contains("strong=\"") }
+            if !morphology { morphology = text.contains("x-morph=\"") || text.contains("morph=\"") }
+        }
+
+        private static func hasAny(_ text: String, _ needles: [String]) -> Bool {
+            for needle in needles where text.contains(needle) { return true }
+            return false
         }
     }
 
@@ -169,41 +196,65 @@ public final class USFMBible: ScriptureBible, @unchecked Sendable {
         }
         guard let file = books.first(where: { $0.osisID == osisID }),
               let text = try? String(contentsOf: file.url, encoding: .utf8), let book = USFMBook(text) else { return nil }
-        opened.append((osisID, book))
+        opened.append(OpenedBook(osisID: osisID, book: book))
         if opened.count > 3 { opened.removeFirst() }
         return book
     }
 
     // MARK: Versification
 
+    /// A versification and where it came from.
+    private struct DeclaredSystem {
+        var system: Versification
+        var source: VersificationSource
+    }
+
     /// A Paratext `Settings.xml` `<Versification>`, or a `.vrs` file, in the folder.
-    private static func declaredSystem(in folder: URL, files: [URL]) -> (Versification, VersificationSource)? {
+    private static func declaredSystem(in folder: URL, files: [URL]) -> DeclaredSystem? {
         if let vrs = files.first(where: { $0.pathExtension.lowercased() == "vrs" }),
            let text = try? String(contentsOf: vrs, encoding: .utf8) {
             let read = VRSReader.versification(from: text)
-            if !read.books.isEmpty { return (read, .vrsFile(vrs.lastPathComponent)) }
+            if !read.books.isEmpty { return DeclaredSystem(system: read, source: VersificationSource.vrsFile(vrs.lastPathComponent)) }
         }
         if let settings = files.first(where: { $0.lastPathComponent.lowercased() == "settings.xml" }),
            let text = try? String(contentsOf: settings, encoding: .utf8),
-           let open = text.range(of: "<Versification>"), let close = text.range(of: "</Versification>", range: open.upperBound..<text.endIndex),
-           let number = Int(text[open.upperBound..<close.lowerBound].trimmingCharacters(in: .whitespaces)),
-           (1...6).contains(number) {
-            return (Versification.paratextSystems[number - 1], .settings)
+           let value = Self.element("Versification", in: text),
+           let number = Int(CodePoints.trimmed(value, where: { CodePoints.isHorizontalWhiteSpace($0) })),
+           number >= 1 && number <= 6 {
+            return DeclaredSystem(system: Versification.paratextSystems[number - 1], source: VersificationSource.settings)
         }
         return nil
+    }
+
+    /// The text between the first `<name>` and the `</name>` after it, or nil.
+    private static func element(_ name: String, in text: String) -> String? {
+        let afterOpen = text.components(separatedBy: "<" + name + ">")
+        guard afterOpen.count >= 2 else { return nil }
+        // Everything after the first opening tag, whatever follows it.
+        var rest = afterOpen[1]
+        var k = 2
+        while k < afterOpen.count {
+            rest += "<" + name + ">" + afterOpen[k]
+            k += 1
+        }
+        let beforeClose = rest.components(separatedBy: "</" + name + ">")
+        return beforeClose.count >= 2 ? beforeClose[0] : nil
     }
 
     /// The Paratext system the books fit best: the fewest verses the system does not have (a whole book it lacks
     /// counts every verse), then the fewest verses the system has that the books lack. English first, so it wins ties.
     static func bestFit(_ books: [BookFile]) -> Versification {
-        let candidates: [Versification] = [.english, .original, .septuagint, .vulgate, .russianProtestant, .russianOrthodox]
+        let candidates: [Versification] = [Versification.english, Versification.original, Versification.septuagint,
+                                           Versification.vulgate, Versification.russianProtestant, Versification.russianOrthodox]
         var best = candidates[0]
-        var bestScore = (Int.max, Int.max)
+        var bestExtra = Int.max
+        var bestMissing = Int.max
         for system in candidates {
-            var extra = 0, missing = 0
+            var extra = 0
+            var missing = 0
             for book in books {
                 guard let index = system.bookIndex(named: book.osisID) else {
-                    extra += book.lastVerses.values.reduce(0, +)
+                    for count in book.lastVerses.values { extra += count }
                     continue
                 }
                 let shape = system.books[index]
@@ -214,8 +265,9 @@ public final class USFMBible: ScriptureBible, @unchecked Sendable {
                     missing += max(expected - text, 0)
                 }
             }
-            if (extra, missing) < bestScore {
-                bestScore = (extra, missing)
+            if extra < bestExtra || (extra == bestExtra && missing < bestMissing) {
+                bestExtra = extra
+                bestMissing = missing
                 best = system
             }
         }

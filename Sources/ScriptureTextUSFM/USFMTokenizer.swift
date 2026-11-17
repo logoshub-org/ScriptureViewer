@@ -14,6 +14,8 @@
 //
 // A backslash not followed by a marker name is text. The tokenizer never fails: what it cannot read is text.
 
+import ScriptureText
+
 enum USFMToken: Equatable {
     /// `\name`, or `\+name` (`nested`) inside another character style.
     case marker(String, nested: Bool)
@@ -24,64 +26,60 @@ enum USFMToken: Equatable {
 
 enum USFMTokenizer {
 
-    static func tokens(_ source: Substring) -> [USFMToken] {
+    /// Works on code points, so it reads the same on every platform (plan D158).
+    static func tokens(_ source: String) -> [USFMToken] {
         var result: [USFMToken] = []
-        let scalars = source.unicodeScalars
-        var index = scalars.startIndex
-        var text = String.UnicodeScalarView()
+        let codes = CodePoints.of(source)
+        let n = codes.count
+        var index = 0
+        var text: [Int] = []
 
-        func flushText() {
-            if !text.isEmpty { result.append(.text(String(text))); text = String.UnicodeScalarView() }
-        }
-
-        while index < scalars.endIndex {
-            let scalar = scalars[index]
-            guard scalar == "\\" else {
-                text.append(scalar)
-                index = scalars.index(after: index)
+        while index < n {
+            let c = codes[index]
+            guard c == 0x5C else {                               // a backslash
+                text.append(c)
+                index += 1
                 continue
             }
-            var cursor = scalars.index(after: index)
+            var cursor = index + 1
             var nested = false
-            if cursor < scalars.endIndex, scalars[cursor] == "+" {
+            if cursor < n, codes[cursor] == 0x2B {               // `+`
                 nested = true
-                cursor = scalars.index(after: cursor)
+                cursor += 1
             }
-            var name = String.UnicodeScalarView()
-            while cursor < scalars.endIndex, isNameScalar(scalars[cursor]) {
-                name.append(scalars[cursor])
-                cursor = scalars.index(after: cursor)
-            }
-            if cursor < scalars.endIndex, scalars[cursor] == "*" {
-                flushText()
-                result.append(.end(String(name), nested: nested))
-                index = scalars.index(after: cursor)
+            let nameStart = cursor
+            while cursor < n, isNameCode(codes[cursor]) { cursor += 1 }
+            let name = CodePoints.string(codes, nameStart, cursor)
+            if cursor < n, codes[cursor] == 0x2A {               // `*`
+                if !text.isEmpty { result.append(USFMToken.text(CodePoints.string(text))); text = [] }
+                result.append(USFMToken.end(name, nested: nested))
+                index = cursor + 1
                 continue
             }
-            guard !name.isEmpty else {
-                text.append(scalar)                          // a lone backslash is text
-                index = scalars.index(after: index)
+            guard cursor > nameStart else {
+                text.append(c)                                  // a lone backslash is text
+                index += 1
                 continue
             }
-            flushText()
-            result.append(.marker(String(name), nested: nested))
+            if !text.isEmpty { result.append(USFMToken.text(CodePoints.string(text))); text = [] }
+            result.append(USFMToken.marker(name, nested: nested))
             // The space or line end after a marker belongs to it.
-            if cursor < scalars.endIndex {
-                let next = scalars[cursor]
-                if next == " " || next == "\t" || next == "\n" {
-                    cursor = scalars.index(after: cursor)
-                } else if next == "\r" {
-                    cursor = scalars.index(after: cursor)
-                    if cursor < scalars.endIndex, scalars[cursor] == "\n" { cursor = scalars.index(after: cursor) }
+            if cursor < n {
+                let next = codes[cursor]
+                if next == 0x20 || next == 0x09 || next == 0x0A {
+                    cursor += 1
+                } else if next == 0x0D {
+                    cursor += 1
+                    if cursor < n, codes[cursor] == 0x0A { cursor += 1 }
                 }
             }
             index = cursor
         }
-        flushText()
+        if !text.isEmpty { result.append(USFMToken.text(CodePoints.string(text))) }
         return result
     }
 
-    private static func isNameScalar(_ s: Unicode.Scalar) -> Bool {
-        (s >= "a" && s <= "z") || (s >= "A" && s <= "Z") || (s >= "0" && s <= "9") || s == "-"
+    private static func isNameCode(_ c: Int) -> Bool {
+        (c >= 0x61 && c <= 0x7A) || (c >= 0x41 && c <= 0x5A) || (c >= 0x30 && c <= 0x39) || c == 0x2D
     }
 }

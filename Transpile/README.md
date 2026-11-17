@@ -8,8 +8,8 @@ place the Android library's Kotlin core is built.
 
 What goes through Skip: `ScriptureText` (the model, the viewer contract, the bar rule), `ScriptureTextMarkup`, `ScriptureTextBuilding`,
 the parsers `ScriptureTextOSIS`, `ScriptureTextGBF`, `ScriptureTextThML`, `ScriptureTextTEI` and `ScriptureTextPlain`, and
-`ScriptureTextSource` (which picks the parser for a module), and `ScriptureTextVersification` (Paratext's six systems and the `.vrs`
-reader). Not yet: `ScriptureTextUSFM`.
+`ScriptureTextSource` (which picks the parser for a module), `ScriptureTextVersification` (Paratext's six systems and the `.vrs`
+reader) and `ScriptureTextUSFM` (USFM books and Bibles). That is every target of the portable core; only the iOS viewer is not.
 
 ## What runs
 
@@ -24,7 +24,11 @@ Gradle, a JDK and the Android SDK, as for any Skip project). Both must pass.
   through `ScriptureModuleSource` as each source type and with two sets of display options, and sample entries go through the ThML, TEI and
   plain-text parsers; the digests (notes included) are compared with `expected_parsers.txt`. Also the versifications: Paratext's six
   systems read from their embedded files (every book, chapter, mapping and excluded verse, with the mappings applied both ways and across
-  systems), the book table, and the reader on a file with the cases the six lack; compared with `expected_versification.txt`. It found two Android bugs the Swift tests
+  systems), the book table, and the reader on a file with the cases the six lack; compared with `expected_versification.txt`. And USFM:
+  excerpts of five real books (KJV 2006 Genesis 1–3 and Psalm 119, BSB John 1 with Strong's numbers, WEB Matthew 5 and Tobit 1, all
+  public domain) with four sets of options, each parsed whole, read as one Bible from a folder (versification by fit, then declared in a
+  `Settings.xml`), and fragments with the markers the excerpts lack; compared with `expected_usfm.txt`. The digest code they share is
+  `ModelDigest.swift`. It found two Android bugs the Swift tests
   could not: a repeated entry was shown twice (`ChapterEntries.shown`), and `ScriptureText`'s `contains(verse:)` held every verse up to its own.
 
 (The app's own navigation model, `AppModel`, is tested the same way, in the app's repository.) The Kotlin this package leaves in `.build`
@@ -74,6 +78,10 @@ Write the NUL character as `"\u{0000}"`: Skip writes `"\u{0}"` as `"\u0"`, which
   `CodePoints` (`isWhiteSpace`, `isHorizontalWhiteSpace`, `isPunctuation`, `isSymbol`, `isNumber`, `isDecimalDigit`), which give the
   same answer on both platforms.
 - No regular expressions: write the match out (`GBFParser.separatedReferences` is one, with the expression it replaces in its comment).
+
+**What it rejects that Swift takes**, found on the way: `contains` on an array of strings inside a condition (use a `switch`), a
+ternary that assigns an optional (use an `if`), and `replacingOccurrences` in a file without `import Foundation` (Skip's Foundation
+supplies it).
 
 **What is slow in Kotlin** (measured: these made the parser ten times slower before they were fixed; Psalm 119 went from about 105 ms to
 about 10–12 ms warm on the emulator): do not grow a string with `+=` in a loop (a Kotlin string is copied each time: use `TextBuffer`); do

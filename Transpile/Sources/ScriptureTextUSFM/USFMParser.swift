@@ -1,0 +1,1 @@
+../../../Sources/ScriptureTextUSFM/USFMParser.swift

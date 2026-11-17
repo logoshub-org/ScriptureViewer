@@ -204,10 +204,6 @@ public final class ScriptureTextBuilder {
         s == 0x20 || s == 0x09 || s == 0x0A || s == 0x0D
     }
 
-    #if !SKIP
-    /// The same, for the Swift-only parsers (USFM) that still read `Unicode.Scalar`s.
-    public static func isMarkupSpace(_ s: Unicode.Scalar) -> Bool { isMarkupSpace(Int(s.value)) }
-    #endif
 
     /// Whether `raw` has anything but markup whitespace.
     public static func hasContent(_ raw: String) -> Bool {

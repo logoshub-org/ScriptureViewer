@@ -170,6 +170,12 @@ public enum CodePoints {
     /// Tab or a space separator (category Zs): what Foundation's `CharacterSet.whitespaces` holds.
     public static func isHorizontalWhiteSpace(_ v: Int) -> Bool { v == 0x09 || group(v) == groupSpaceSeparator }
 
+    /// Tab, a space separator, or a line end (LF to CR, NEL, the Unicode line and paragraph separators): what Foundation's
+    /// `CharacterSet.whitespacesAndNewlines` holds.
+    public static func isWhiteSpaceOrNewline(_ v: Int) -> Bool {
+        isHorizontalWhiteSpace(v) || (v >= 0x0A && v <= 0x0D) || v == 0x85 || v == 0x2028 || v == 0x2029
+    }
+
     /// Category P (punctuation of any kind): what Swift's `Character.isPunctuation` tests.
     public static func isPunctuation(_ v: Int) -> Bool { group(v) == groupPunctuation }
 
@@ -251,6 +257,31 @@ public enum CodePoints {
             k += 1
         }
         out.append(string(codes, start, codes.count))
+        return out
+    }
+
+    /// The pieces of `s` between consecutive UTF-16 offsets in `boundaries` (ascending, each on a character boundary): with
+    /// boundaries a, b, c, the pieces a..<b and b..<c. One pass over the text.
+    public static func pieces(_ s: String, utf16Boundaries boundaries: [Int]) -> [String] {
+        var out: [String] = []
+        guard boundaries.count >= 2 else { return out }
+        #if SKIP
+        var k = 0
+        while k + 1 < boundaries.count {
+            out.append(s.substring(boundaries[k], boundaries[k + 1]))
+            k += 1
+        }
+        #else
+        let u = s.utf16
+        var index = u.index(u.startIndex, offsetBy: boundaries[0])
+        var k = 0
+        while k + 1 < boundaries.count {
+            let next = u.index(index, offsetBy: boundaries[k + 1] - boundaries[k])
+            out.append(String(u[index..<next]) ?? String(decoding: Array(u[index..<next]), as: UTF16.self))
+            index = next
+            k += 1
+        }
+        #endif
         return out
     }
 
