@@ -78,7 +78,7 @@ public struct ThMLParser: Sendable {
         return result
     }
 
-    private static func clean(_ s: String) -> String { s.replacingOccurrences(of: "\u{0}", with: "") }
+    private static func clean(_ s: String) -> String { s.replacingOccurrences(of: "\u{0000}", with: "") }
 }
 
 // MARK: - Builder
@@ -106,12 +106,12 @@ struct ThMLBuilder: MarkupEventSink {
     }
 
     private let options: ThMLParser.Options
-    private var text = ""
-    private var length = 0
-    private var spans: [ScriptureText.Span] = []
-    private var verses: [ScriptureText.VerseRange] = []
-    private var openVerse: (verse: Int, start: Int)?
-    private var notes: [ScriptureText.Note] = []
+    private let text = TextBuffer()
+    private var length: Int { text.length }
+    private let spans = GrowingList<ScriptureText.Span>()
+    private let verses = GrowingList<ScriptureText.VerseRange>()
+    private var openVerse: OpenVerse?
+    private let notes = GrowingList<ScriptureText.Note>()
     private var stack: [Frame] = []
     private var unstarted = 0
     private var skipDepth = 0
@@ -124,7 +124,7 @@ struct ThMLBuilder: MarkupEventSink {
     /// whatever paragraph markup comes first.
     /// (true when the number is on a line of its own).
     private var holdBreaks: Bool?
-    private var activeNote: (id: String, kind: ScriptureText.Note.Kind, text: String, references: [String])?
+    private var activeNote: NoteDraft?
     private var noteCount = 0
 
     init(options: ThMLParser.Options) { self.options = options }
@@ -140,8 +140,9 @@ struct ThMLBuilder: MarkupEventSink {
         let start = length
         let marker = String(verse)
         append(marker)
-        spans.append(.init(start: start, length: marker.utf16.count, attribute: .verseNumber(verse)))
-        openVerse = (verse, start)
+        spans.append(ScriptureText.Span(start: start, length: CodePoints.utf16Length(marker),
+                                        attribute: ScriptureText.Attribute.verseNumber(verse)))
+        openVerse = OpenVerse(verse: verse, start: start)
         needsBreak = false
         brCount = 0
         pendingSpace = false
@@ -153,15 +154,12 @@ struct ThMLBuilder: MarkupEventSink {
         openVerse = nil
         // A verse ends at its last visible character, not at the break before the next one.
         var end = length
-        var index = text.utf16.endIndex
         while end > open.start {
-            let previous = text.utf16.index(before: index)
-            let unit = text.utf16[previous]
+            let unit = text.unit(at: end - 1)
             guard unit == 0x20 || unit == 0x0A else { break }
-            index = previous
             end -= 1
         }
-        verses.append(.init(verse: open.verse, start: open.start, length: end - open.start))
+        verses.append(ScriptureText.VerseRange(verse: open.verse, start: open.start, length: end - open.start))
     }
 
     // MARK: Events
@@ -198,7 +196,7 @@ struct ThMLBuilder: MarkupEventSink {
             blockEdge()
             splitOpenListItem()
             let depth = stack.filter { $0.name == "ul" || $0.name == "ol" }.count
-            push(name, .block(.listItem(depth: max(depth, 1))), selfClosing: selfClosing)
+            push(name, Frame.Kind.block(ParagraphRole.listItem(depth: max(depth, 1))), selfClosing: selfClosing)
         case "table", "tr":
             blockEdge()
             push(name, .plain, selfClosing: selfClosing, breaksAfter: true)
@@ -206,25 +204,31 @@ struct ThMLBuilder: MarkupEventSink {
             pendingSpace = true
             push(name, .plain, selfClosing: selfClosing)
         case "a":
-            let target = anchorTarget(a)
-            push(name, target.map { .span(.link(target: $0)) } ?? .plain, selfClosing: selfClosing)
+            if let target = anchorTarget(a) {
+                push(name, Frame.Kind.span(ScriptureText.Attribute.link(target: target)), selfClosing: selfClosing)
+            } else {
+                push(name, Frame.Kind.plain, selfClosing: selfClosing)
+            }
         case "scripRef":
             let target = scriptureTarget(a)
-            if activeNote != nil, let reference = a["osisRef"] ?? a["passage"], !reference.isEmpty {
-                activeNote!.references.append(reference)
+            if let note = activeNote, let reference = a["osisRef"] ?? a["passage"], !reference.isEmpty {
+                note.references.append(reference)
             }
-            if target == nil, !selfClosing {
-                push(name, .span(.link(target: "passage:")), passageFromText: true)
+            if let target {
+                push(name, Frame.Kind.span(ScriptureText.Attribute.link(target: target)), selfClosing: selfClosing)
+            } else if !selfClosing {
+                push(name, Frame.Kind.span(ScriptureText.Attribute.link(target: "passage:")), passageFromText: true)
             } else {
-                push(name, target.map { .span(.link(target: $0)) } ?? .plain, selfClosing: selfClosing)
+                push(name, Frame.Kind.plain, selfClosing: selfClosing)
             }
         case "note":
             guard !selfClosing else { return }
             noteCount += 1
             let id = String(noteCount)
             let isCross = a["type"] == "x" || a["type"] == "crossReference"
-            activeNote = (id, isCross ? .crossReference : .footnote, "", [])
-            push(name, .note(id: id, kind: isCross ? .crossReference : .footnote))
+            let kind = isCross ? ScriptureText.Note.Kind.crossReference : ScriptureText.Note.Kind.footnote
+            activeNote = NoteDraft(id: id, kind: kind)
+            push(name, Frame.Kind.note(id: id, kind: kind))
         case "sync":
             sync(a)
         default:
@@ -264,7 +268,7 @@ struct ThMLBuilder: MarkupEventSink {
         default: break
         }
         stack.append(Frame(name: name, kind: kind, start: nil, breaksAfter: breaksAfter, paragraphAfter: paragraphAfter,
-                           passageFromText: passageFromText, noteOffset: passageFromText ? activeNote?.text.count : nil))
+                           passageFromText: passageFromText, noteOffset: passageFromText ? activeNote?.text.length : nil))
     }
 
     /// A list item inside a list item: the outer item's paragraph ends here, so the two
@@ -273,8 +277,8 @@ struct ThMLBuilder: MarkupEventSink {
         guard let index = stack.lastIndex(where: { $0.name == "li" }) else { return }
         switch stack[index].kind {
         case .block(let role):
-            if let start = stack[index].start { addSpan(start, .block(role)) } else { unstarted -= 1 }
-            stack[index].kind = .plain
+            if let start = stack[index].start { addSpan(start, ScriptureText.Attribute.block(role)) } else { unstarted -= 1 }
+            stack[index].kind = Frame.Kind.plain
         default:
             break
         }
@@ -288,16 +292,17 @@ struct ThMLBuilder: MarkupEventSink {
                 unstarted -= 1
             } else {
                 if frame.passageFromText, let start = frame.start, length > start {
-                    attribute = .link(target: "passage:" + textBetween(start, length))
+                    attribute = ScriptureText.Attribute.link(target: "passage:" + text.substring(from: start, to: length))
                 }
                 addSpan(frame.start, attribute)
             }
-            if frame.passageFromText, let offset = frame.noteOffset, activeNote != nil {
-                let reference = String(activeNote!.text.dropFirst(offset)).trimmingCharacters(in: .whitespaces)
-                if !reference.isEmpty { activeNote!.references.append(reference) }
+            if frame.passageFromText, let offset = frame.noteOffset, let note = activeNote {
+                let reference = CodePoints.trimmed(note.text.substring(from: offset, to: note.text.length),
+                                                   where: { CodePoints.isHorizontalWhiteSpace($0) })
+                if !reference.isEmpty { note.references.append(reference) }
             }
         case .block(let role):
-            if frame.start == nil { unstarted -= 1 } else { addSpan(frame.start, .block(role)) }
+            if frame.start == nil { unstarted -= 1 } else { addSpan(frame.start, ScriptureText.Attribute.block(role)) }
             needsBreak = true
         case .note(let id, let kind):
             finishNote(id: id, kind: kind)
@@ -309,16 +314,9 @@ struct ThMLBuilder: MarkupEventSink {
         if frame.paragraphAfter { paragraphBreak() } else if frame.breaksAfter { blockEdge() }
     }
 
-    private func textBetween(_ start: Int, _ end: Int) -> String {
-        let u = text.utf16
-        guard let from = u.index(u.startIndex, offsetBy: start, limitedBy: u.endIndex),
-              let to = u.index(u.startIndex, offsetBy: end, limitedBy: u.endIndex) else { return "" }
-        return String(text[from..<to])
-    }
-
     private mutating func addSpan(_ start: Int?, _ attribute: ScriptureText.Attribute) {
         guard let start, length > start else { return }
-        spans.append(.init(start: start, length: length - start, attribute: attribute))
+        spans.append(ScriptureText.Span(start: start, length: length - start, attribute: attribute))
     }
 
     // MARK: Breaks and text
@@ -343,8 +341,7 @@ struct ThMLBuilder: MarkupEventSink {
     private mutating func append(_ s: String) {
         guard !s.isEmpty else { return }
         text.append(s)
-        length += s.utf16.count
-        endsWithNewline = s.hasSuffix("\n")
+        endsWithNewline = text.lastUnit == 0x0A
     }
 
     private mutating func flushPending() {
@@ -388,16 +385,16 @@ struct ThMLBuilder: MarkupEventSink {
     /// Text with HTML's whitespace rules: a run of white space is one space, ignored at a
     /// line's start.
     private mutating func emit(_ raw: String) {
-        var run = ""
-        for scalar in raw.unicodeScalars {
-            if scalar == " " || scalar == "\t" || scalar == "\n" || scalar == "\r" {
-                if !run.isEmpty { beginContent(); append(run); run = "" }
+        var run: [Int] = []
+        for c in CodePoints.of(raw) {
+            if c == 0x20 || c == 0x09 || c == 0x0A || c == 0x0D {
+                if !run.isEmpty { beginContent(); append(CodePoints.string(run)); run = [] }
                 pendingSpace = true
             } else {
-                run.unicodeScalars.append(scalar)
+                run.append(c)
             }
         }
-        if !run.isEmpty { beginContent(); append(run) }
+        if !run.isEmpty { beginContent(); append(CodePoints.string(run)) }
     }
 
     // MARK: Markers, notes and links
@@ -407,46 +404,45 @@ struct ThMLBuilder: MarkupEventSink {
         switch a["type"]?.lowercased() {
         case "strongs", "lemma":
             guard options.strongs else { return }
-            let digits = value.drop { $0 == "G" || $0 == "H" }
+            let codes = CodePoints.of(value)
+            var first = 0
+            while first < codes.count && (codes[first] == 0x47 || codes[first] == 0x48) { first += 1 }   // leading G and H
+            let digits = CodePoints.string(codes, first, codes.count)
             beginContent()
             let start = length
-            let marker = "<\(digits)>"
+            let marker = "<" + digits + ">"
             append(marker)
-            spans.append(.init(start: start, length: marker.utf16.count, attribute: .strongs("strong:" + value)))
+            spans.append(ScriptureText.Span(start: start, length: CodePoints.utf16Length(marker),
+                                            attribute: ScriptureText.Attribute.strongs("strong:" + value)))
         case "morph":
             guard options.morphology else { return }
             beginContent()
             let start = length
-            let marker = "(\(value))"
+            let marker = "(" + value + ")"
             append(marker)
-            spans.append(.init(start: start, length: marker.utf16.count, attribute: .morph("robinson:" + value)))
+            spans.append(ScriptureText.Span(start: start, length: CodePoints.utf16Length(marker),
+                                            attribute: ScriptureText.Attribute.morph("robinson:" + value)))
         default:
             return
         }
     }
 
     private mutating func appendToNote(_ raw: String) {
-        guard activeNote != nil else { return }
-        for scalar in raw.unicodeScalars {
-            if scalar == " " || scalar == "\t" || scalar == "\n" || scalar == "\r" {
-                if !(activeNote!.text.isEmpty || activeNote!.text.hasSuffix(" ")) { activeNote!.text.append(" ") }
-            } else {
-                activeNote!.text.unicodeScalars.append(scalar)
-            }
-        }
+        guard let note = activeNote else { return }
+        note.append(raw)
     }
 
     private mutating func finishNote(id: String, kind: ScriptureText.Note.Kind) {
         guard let note = activeNote else { return }
         activeNote = nil
         guard options.footnotes else { return }
-        let body = note.text.trimmingCharacters(in: .whitespaces)
+        let body = CodePoints.trimmed(note.text.text, where: { CodePoints.isHorizontalWhiteSpace($0) })
         guard !body.isEmpty || !note.references.isEmpty else { return }
-        notes.append(.init(id: id, text: body, references: note.references, kind: kind))
+        notes.append(ScriptureText.Note(id: id, text: body, references: note.references, kind: kind))
         beginContent()
         let start = length
-        append(kind == .crossReference ? "x" : "n")
-        spans.append(.init(start: start, length: 1, attribute: .footnote(id: id)))
+        append(kind == ScriptureText.Note.Kind.crossReference ? "x" : "n")
+        spans.append(ScriptureText.Span(start: start, length: 1, attribute: ScriptureText.Attribute.footnote(id: id)))
     }
 
     /// `sword://Work/Key` and web links are kept as written; `#anchor` and `name=` anchors
@@ -470,15 +466,22 @@ struct ThMLBuilder: MarkupEventSink {
     static func decodeNamedEntities(_ s: String) -> String {
         guard s.contains("&") else { return s }
         var result = s
-        for (name, value) in namedEntities { result = result.replacingOccurrences(of: name, with: value) }
+        var k = 0
+        while k < entityNames.count {
+            result = result.replacingOccurrences(of: entityNames[k], with: entityValues[k])
+            k += 1
+        }
         return result
     }
 
-    private static let namedEntities: [(String, String)] = [
-        ("&nbsp;", "\u{00A0}"), ("&mdash;", "\u{2014}"), ("&ndash;", "\u{2013}"), ("&hellip;", "\u{2026}"),
-        ("&lsquo;", "\u{2018}"), ("&rsquo;", "\u{2019}"), ("&ldquo;", "\u{201C}"), ("&rdquo;", "\u{201D}"),
-        ("&middot;", "\u{00B7}"), ("&bull;", "\u{2022}"), ("&copy;", "\u{00A9}"), ("&deg;", "\u{00B0}"),
-        ("&c;", "&c."), ("&laquo;", "\u{00AB}"), ("&raquo;", "\u{00BB}"), ("&sect;", "\u{00A7}"), ("&para;", "\u{00B6}"),
+    // Two lists side by side, not a list of pairs: the transpiler takes no tuples in arrays. Applied in this order.
+    private static let entityNames: [String] = [
+        "&nbsp;", "&mdash;", "&ndash;", "&hellip;", "&lsquo;", "&rsquo;", "&ldquo;", "&rdquo;", "&middot;", "&bull;", "&copy;",
+        "&deg;", "&c;", "&laquo;", "&raquo;", "&sect;", "&para;",
+    ]
+    private static let entityValues: [String] = [
+        "\u{00A0}", "\u{2014}", "\u{2013}", "\u{2026}", "\u{2018}", "\u{2019}", "\u{201C}", "\u{201D}", "\u{00B7}", "\u{2022}",
+        "\u{00A9}", "\u{00B0}", "&c.", "\u{00AB}", "\u{00BB}", "\u{00A7}", "\u{00B6}",
     ]
 
     // MARK: Finish
@@ -487,18 +490,52 @@ struct ThMLBuilder: MarkupEventSink {
         while !stack.isEmpty { closeTopFrame() }
         closeVerse()
         // Trailing whitespace is never shown.
-        while text.last == " " || text.last == "\n" {
-            text.removeLast()
-            length -= 1
+        text.dropTrailingASCII(where: { $0 == 0x20 || $0 == 0x0A })
+        let total = length
+        var keptSpans: [ScriptureText.Span] = []
+        for span in spans.elements() {
+            let end = min(span.start + span.length, total)
+            if end > span.start {
+                keptSpans.append(ScriptureText.Span(start: span.start, length: end - span.start, attribute: span.attribute))
+            }
         }
-        spans = spans.compactMap { span in
-            let end = min(span.start + span.length, length)
-            return end > span.start ? .init(start: span.start, length: end - span.start, attribute: span.attribute) : nil
+        var keptVerses: [ScriptureText.VerseRange] = []
+        for verse in verses.elements() {
+            let end = min(verse.start + verse.length, total)
+            if end > verse.start { keptVerses.append(ScriptureText.VerseRange(verse: verse.verse, start: verse.start, length: end - verse.start)) }
         }
-        verses = verses.compactMap { verse in
-            let end = min(verse.start + verse.length, length)
-            return end > verse.start ? .init(verse: verse.verse, start: verse.start, length: end - verse.start) : nil
+        return ScriptureText(text: text.text, spans: keptSpans, verses: keptVerses, notes: notes.elements())
+    }
+}
+
+/// The verse being written: its number and where its marker starts.
+private struct OpenVerse {
+    let verse: Int
+    let start: Int
+}
+
+/// A note as it is captured: its text whitespace-collapsed, and the passages it cites. A class, so it grows in place.
+private final class NoteDraft {
+    let id: String
+    let kind: ScriptureText.Note.Kind
+    let text = TextBuffer()
+    var references: [String] = []
+
+    init(id: String, kind: ScriptureText.Note.Kind) {
+        self.id = id
+        self.kind = kind
+    }
+
+    func append(_ raw: String) {
+        var run: [Int] = []
+        for c in CodePoints.of(raw) {
+            if c == 0x20 || c == 0x09 || c == 0x0A || c == 0x0D {
+                if !run.isEmpty { text.append(CodePoints.string(run)); run = [] }
+                if !(text.isEmpty || text.lastUnit == 0x20) { text.append(" ") }
+            } else {
+                run.append(c)
+            }
         }
-        return ScriptureText(text: text, spans: spans, verses: verses, notes: notes)
+        if !run.isEmpty { text.append(CodePoints.string(run)) }
     }
 }

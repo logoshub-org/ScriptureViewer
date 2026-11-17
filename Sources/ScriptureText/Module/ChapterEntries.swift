@@ -35,7 +35,12 @@ public enum ChapterEntries {
         var result: [Entry] = []
         var previous = ""
         for entry in entries {
-            let trimmed = String(entry.text.drop { $0.isWhitespace })
+            // Over code points, not `String(text.drop { $0.isWhitespace })`: in the Kotlin Skip makes of that, `drop` gives a list
+            // of characters, not a string, so a repeated entry was never found and Android showed it twice.
+            let codes = CodePoints.of(entry.text)
+            var first = 0
+            while first < codes.count && CodePoints.isWhiteSpace(codes[first]) { first += 1 }
+            let trimmed = first == 0 ? entry.text : CodePoints.string(codes, first, codes.count)
             defer { previous = trimmed }
             guard !trimmed.isEmpty, trimmed != previous else { continue }
             result.append(.init(verse: entry.verse, text: entry.text))

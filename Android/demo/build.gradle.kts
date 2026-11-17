@@ -33,6 +33,7 @@ android {
     sourceSets {
         named("main") {
             assets.directories.add("../../Transpile/Tests/ScriptureTextOSISTests/Resources")
+            assets.directories.add("../../Transpile/Tests/ScriptureTextSourceTests/Resources")
             kotlin.directories.add("../shared/kotlin")
         }
     }
@@ -45,6 +46,7 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile>().configureEa
 dependencies {
     implementation(project(":scriptureviewer"))
     implementation("org.logoshub.scripture:ScriptureTextOSIS")
+    implementation("org.logoshub.scripture:ScriptureTextGBF")
     implementation(platform("androidx.compose:compose-bom:2026.05.01"))
     implementation("androidx.compose.foundation:foundation")
     implementation("androidx.activity:activity-compose:1.13.0")

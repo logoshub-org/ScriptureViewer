@@ -48,12 +48,7 @@ public final class ScriptureTextBuilder {
     public let options: Options
 
     // Output
-    #if SKIP
-    /// The text so far. A Kotlin string cannot grow in place, so `text += s` would copy the whole chapter at every append.
-    private let text = java.lang.StringBuilder()
-    #else
-    private var text = ""
-    #endif
+    private let text = TextBuffer()
     /// The text written so far, in UTF-16 code units.
     public private(set) var length = 0
     /// Where the last text outside a heading ended: a verse that a heading follows ends here (USFM puts a section
@@ -355,23 +350,14 @@ public final class ScriptureTextBuilder {
             if a.element.length != b.element.length { return a.element.length > b.element.length }
             return a.offset < b.offset
         }.map(\.element)
-        #if SKIP
-        let whole = text.toString()
-        #else
-        let whole = text
-        #endif
-        return ScriptureText(text: whole, spans: ordered, verses: verses.elements(), notes: notes.elements(), words: words.elements())
+        return ScriptureText(text: text.text, spans: ordered, verses: verses.elements(), notes: notes.elements(), words: words.elements())
     }
 
     // MARK: Writing
 
     private func append(_ s: String) {
         guard !s.isEmpty else { return }
-        #if SKIP
         text.append(s)
-        #else
-        text += s
-        #endif
         length += CodePoints.utf16Length(s)
         lastScalar = CodePoints.last(s)
         endsWithNewline = lastScalar == 0x0A
@@ -523,45 +509,16 @@ public final class ScriptureTextBuilder {
         switch s {
         case 0x2012...0x2015, 0x2E3A, 0x2E3B: return true
         case 0x05BE: return true            // Hebrew maqaf: joins words in speech, but each is its own word
-        default: return Self.category(s) == .spaceSeparator
+        default: return CodePoints.isSpaceSeparator(s)
         }
     }
 
     /// Punctuation, symbols and format characters: trimmed from a word's edges.
     private static func isEdgeTrimmed(_ s: Int) -> Bool {
-        switch Self.category(s) {
-        case .punctuation, .symbol, .format: return true
-        default: return false
-        }
+        CodePoints.isPunctuation(s) || CodePoints.isSymbol(s) || CodePoints.isFormat(s)
     }
 
-    private static func isPunctuation(_ s: Int) -> Bool { Self.category(s) == .punctuation }
-
-    /// The few Unicode general categories the builder tells apart. Swift reads them from `Unicode.Scalar.Properties`, which the
-    /// transpiler does not offer; Kotlin reads them from `Character.getType`.
-    private enum ScalarCategory { case spaceSeparator, punctuation, symbol, format, other }
-
-    private static func category(_ s: Int) -> ScalarCategory {
-        #if SKIP
-        // SKIP INSERT: val type = java.lang.Character.getType(s)
-        // SKIP INSERT: if (type == java.lang.Character.SPACE_SEPARATOR.toInt()) return ScalarCategory.spaceSeparator
-        // SKIP INSERT: if (type == java.lang.Character.FORMAT.toInt()) return ScalarCategory.format
-        // SKIP INSERT: if (type == java.lang.Character.CONNECTOR_PUNCTUATION.toInt() || type == java.lang.Character.DASH_PUNCTUATION.toInt() || type == java.lang.Character.START_PUNCTUATION.toInt() || type == java.lang.Character.END_PUNCTUATION.toInt() || type == java.lang.Character.INITIAL_QUOTE_PUNCTUATION.toInt() || type == java.lang.Character.FINAL_QUOTE_PUNCTUATION.toInt() || type == java.lang.Character.OTHER_PUNCTUATION.toInt()) return ScalarCategory.punctuation
-        // SKIP INSERT: if (type == java.lang.Character.MATH_SYMBOL.toInt() || type == java.lang.Character.CURRENCY_SYMBOL.toInt() || type == java.lang.Character.MODIFIER_SYMBOL.toInt() || type == java.lang.Character.OTHER_SYMBOL.toInt()) return ScalarCategory.symbol
-        return .other
-        #else
-        guard let u = Unicode.Scalar(UInt32(s)) else { return .other }
-        switch u.properties.generalCategory {
-        case .spaceSeparator: return .spaceSeparator
-        case .format: return .format
-        case .connectorPunctuation, .dashPunctuation, .openPunctuation, .closePunctuation,
-             .initialPunctuation, .finalPunctuation, .otherPunctuation:
-            return .punctuation
-        case .mathSymbol, .currencySymbol, .modifierSymbol, .otherSymbol: return .symbol
-        default: return .other
-        }
-        #endif
-    }
+    private static func isPunctuation(_ s: Int) -> Bool { CodePoints.isPunctuation(s) }
 
     /// Kept by SWORD's OSISLemma filter when the Lemmas option is off: a token with a scheme that does not start
     /// with "lemma.".
@@ -597,59 +554,5 @@ private final class ActiveNote {
         self.text = text
         self.references = references
         self.spaced = spaced
-    }
-}
-
-/// A list that grows in place, for what the builder gathers: the spans, verses, notes and word anchors of a chapter. In Swift it is
-/// an array and nothing more. In the Kotlin that Skip makes of this, an array held as a property is copied whole at every `append`
-/// (reading the property shares its storage, and writing to shared storage copies it), which made a chapter's 2,400 word anchors
-/// cost millions of copies; there it is a Java list.
-final class GrowingList<Element> {
-    #if SKIP
-    private let items = java.util.ArrayList<Element>()
-    #else
-    private var items: [Element] = []
-    #endif
-
-    var count: Int {
-        #if SKIP
-        return items.size
-        #else
-        return items.count
-        #endif
-    }
-
-    func append(_ element: Element) {
-        #if SKIP
-        items.add(items.size, element)      // the form that returns nothing, so this stays a statement in Kotlin
-        #else
-        items.append(element)
-        #endif
-    }
-
-    subscript(index: Int) -> Element {
-        get {
-            #if SKIP
-            return items.get(index)
-            #else
-            return items[index]
-            #endif
-        }
-        set {
-            #if SKIP
-            let replaced = items.set(index, newValue)
-            #else
-            items[index] = newValue
-            #endif
-        }
-    }
-
-    /// Everything gathered, in order.
-    func elements() -> [Element] {
-        #if SKIP
-        return Array<Element>(items, nocopy: true)
-        #else
-        return items
-        #endif
     }
 }

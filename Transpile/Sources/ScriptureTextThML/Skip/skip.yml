@@ -1,0 +1,3 @@
+# Skip configuration for ScriptureTextThML module: transpiled to Kotlin (Skip Lite, plan D158)
+skip:
+  mode: 'transpiled'

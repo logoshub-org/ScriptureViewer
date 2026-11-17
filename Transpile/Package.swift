@@ -24,6 +24,11 @@ let package = Package(
         .library(name: "ScriptureTextMarkup", type: .dynamic, targets: ["ScriptureTextMarkup"]),
         .library(name: "ScriptureTextBuilding", type: .dynamic, targets: ["ScriptureTextBuilding"]),
         .library(name: "ScriptureTextOSIS", type: .dynamic, targets: ["ScriptureTextOSIS"]),
+        .library(name: "ScriptureTextPlain", type: .dynamic, targets: ["ScriptureTextPlain"]),
+        .library(name: "ScriptureTextTEI", type: .dynamic, targets: ["ScriptureTextTEI"]),
+        .library(name: "ScriptureTextThML", type: .dynamic, targets: ["ScriptureTextThML"]),
+        .library(name: "ScriptureTextGBF", type: .dynamic, targets: ["ScriptureTextGBF"]),
+        .library(name: "ScriptureTextSource", type: .dynamic, targets: ["ScriptureTextSource"]),
         .library(name: "ScriptureViewerSkip", type: .dynamic, targets: ["ScriptureViewerSkip"]),
     ],
     dependencies: [
@@ -37,9 +42,21 @@ let package = Package(
         .target(name: "ScriptureTextMarkup", dependencies: ["ScriptureText", foundation], plugins: [skipstone]),
         .target(name: "ScriptureTextBuilding", dependencies: ["ScriptureText", foundation], plugins: [skipstone]),
         .target(name: "ScriptureTextOSIS", dependencies: ["ScriptureText", "ScriptureTextBuilding", "ScriptureTextMarkup", foundation], plugins: [skipstone]),
+        .target(name: "ScriptureTextPlain", dependencies: ["ScriptureText", foundation], plugins: [skipstone]),
+        .target(name: "ScriptureTextTEI", dependencies: ["ScriptureText", "ScriptureTextMarkup", foundation], plugins: [skipstone]),
+        .target(name: "ScriptureTextThML", dependencies: ["ScriptureText", "ScriptureTextMarkup", foundation], plugins: [skipstone]),
+        .target(name: "ScriptureTextGBF", dependencies: ["ScriptureText", "ScriptureTextOSIS", foundation], plugins: [skipstone]),
+        .target(name: "ScriptureTextSource", dependencies: ["ScriptureText", "ScriptureTextOSIS", "ScriptureTextGBF", "ScriptureTextThML",
+                                                            "ScriptureTextPlain", foundation], plugins: [skipstone]),
         // The SwiftUI `ScriptureViewer` for the Skip-built app, over the Compose viewer in ../Android (its Kotlin is linked into Skip/).
         .target(name: "ScriptureViewerSkip", dependencies: ["ScriptureText", foundation, .product(name: "SkipUI", package: "skip-ui")], plugins: [skipstone]),
         .testTarget(name: "ScriptureTextOSISTests", dependencies: ["ScriptureText", "ScriptureTextOSIS", .product(name: "SkipTest", package: "skip")],
+                    resources: [.process("Resources")], plugins: [skipstone]),
+        // The other parsers and the module source, as Swift and as Kotlin. A target of its own, named after the module at the top of the
+        // graph: Skip builds a test target into the Gradle project of the module it is named after, so these in the OSIS tests made a cycle.
+        .testTarget(name: "ScriptureTextSourceTests", dependencies: ["ScriptureText", "ScriptureTextSource", "ScriptureTextOSIS", "ScriptureTextGBF",
+                                                                 "ScriptureTextThML", "ScriptureTextTEI", "ScriptureTextPlain",
+                                                                 .product(name: "SkipTest", package: "skip")],
                     resources: [.process("Resources")], plugins: [skipstone]),
     ]
 )

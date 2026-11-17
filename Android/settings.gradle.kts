@@ -3,7 +3,8 @@
 //
 // The Android scripture viewer (plan D185): a hand-written `TextView` surface under a thin Compose wrapper, over the portable core
 // as Kotlin. The core is not copied here: it is what `swift build` in ../Transpile leaves (Skip Lite, plan D158), taken in as an
-// included build, so there is one copy of the model, the contract and the parsers.
+// included build, so there is one copy of the model, the contract and the parsers. The build of ScriptureTextSource holds every
+// module it uses: the model, the OSIS, GBF, ThML and plain-text parsers, and the module source.
 pluginManagement {
     repositories { google(); mavenCentral(); gradlePluginPortal() }
 }
@@ -12,7 +13,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ScriptureViewerAndroid"
 
-val core = file("../Transpile/.build/plugins/outputs/transpile/ScriptureTextOSIS/destination/skipstone")
+val core = file("../Transpile/.build/plugins/outputs/transpile/ScriptureTextSource/destination/skipstone")
 require(core.resolve("settings.gradle.kts").exists()) {
     "The Kotlin core is not built: run `swift build` in ../Transpile first (looked in $core)."
 }
@@ -24,6 +25,10 @@ includeBuild(core) {
     dependencySubstitution {
         substitute(module("org.logoshub.scripture:ScriptureText")).using(project(":ScriptureText"))
         substitute(module("org.logoshub.scripture:ScriptureTextOSIS")).using(project(":ScriptureTextOSIS"))
+        substitute(module("org.logoshub.scripture:ScriptureTextGBF")).using(project(":ScriptureTextGBF"))
+        substitute(module("org.logoshub.scripture:ScriptureTextThML")).using(project(":ScriptureTextThML"))
+        substitute(module("org.logoshub.scripture:ScriptureTextPlain")).using(project(":ScriptureTextPlain"))
+        substitute(module("org.logoshub.scripture:ScriptureTextSource")).using(project(":ScriptureTextSource"))
     }
 }
 

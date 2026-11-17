@@ -49,7 +49,7 @@ public struct PlainTextParser: Sendable {
 
     /// One entry: a dictionary article, a devotional, an "about" text.
     public func parse(_ text: String) -> ScriptureText {
-        var builder = Builder()
+        let builder = Builder()
         builder.appendParagraphs(paragraphs(in: text))
         return builder.finish()
     }
@@ -59,7 +59,7 @@ public struct PlainTextParser: Sendable {
     /// number on a line of its own, as the web view shows it; with the chapter
     /// profile the number runs into the text.
     public func parse(_ entries: [ChapterEntries.Entry], identity: PassageIdentity? = nil) -> ScriptureText {
-        var builder = Builder()
+        let builder = Builder()
         for entry in entries {
             let body = paragraphs(in: entry.text)
             if entry.verse > 0, profile.buildsVerseRanges {
@@ -77,10 +77,7 @@ public struct PlainTextParser: Sendable {
 
     func paragraphs(in raw: String) -> [String] {
         // CRLF and CR line ends are one line end each.
-        let lines = raw.replacingOccurrences(of: "\r\n", with: "\n")
-            .replacingOccurrences(of: "\r", with: "\n")
-            .split(separator: "\n", omittingEmptySubsequences: false)
-            .map { Self.collapsed($0) }
+        let lines = CodePoints.lines(raw).map { Self.collapsed($0) }
         switch options.lineBreaks {
         case .preserve:
             return lines.filter { !$0.isEmpty }
@@ -100,59 +97,61 @@ public struct PlainTextParser: Sendable {
     }
 
     /// Runs of spaces and tabs become one space, and the ends are trimmed.
-    private static func collapsed(_ line: Substring) -> String {
-        var result = ""
+    private static func collapsed(_ line: String) -> String {
+        var result: [Int] = []
         var pendingSpace = false
-        for ch in line {
-            if ch == " " || ch == "\t" || ch == "\u{00A0}" || ch == "\u{0C}" {
+        for c in CodePoints.of(line) {
+            if c == 0x20 || c == 0x09 || c == 0xA0 || c == 0x0C {
                 pendingSpace = true
             } else {
-                if pendingSpace, !result.isEmpty { result.append(" ") }
+                if pendingSpace, !result.isEmpty { result.append(0x20) }
                 pendingSpace = false
-                result.append(ch)
+                result.append(c)
             }
         }
-        return result
+        return CodePoints.string(result)
     }
 
     // MARK: Building
 
-    private struct Builder {
-        var text = ""
-        var length = 0
-        var spans: [ScriptureText.Span] = []
-        var verses: [ScriptureText.VerseRange] = []
+    /// A class: it grows in place (see `TextBuffer`).
+    private final class Builder {
+        let text = TextBuffer()
+        let spans = GrowingList<ScriptureText.Span>()
+        let verses = GrowingList<ScriptureText.VerseRange>()
 
-        private mutating func append(_ s: String) {
+        var length: Int { text.length }
+
+        private func append(_ s: String) {
             text.append(s)
-            length += s.utf16.count
         }
 
-        private mutating func startParagraph() {
+        private func startParagraph() {
             if length > 0 { append("\n") }
         }
 
-        mutating func appendParagraphs(_ paragraphs: [String]) {
+        func appendParagraphs(_ paragraphs: [String]) {
             for p in paragraphs {
                 startParagraph()
                 append(p)
             }
         }
 
-        mutating func appendVerse(_ verse: Int, paragraphs: [String], numberOnOwnLine: Bool) {
+        func appendVerse(_ verse: Int, paragraphs: [String], numberOnOwnLine: Bool) {
             startParagraph()
             let start = length
             let marker = String(verse)
             append(marker)
-            spans.append(.init(start: start, length: marker.utf16.count, attribute: .verseNumber(verse)))
+            spans.append(ScriptureText.Span(start: start, length: CodePoints.utf16Length(marker),
+                                            attribute: ScriptureText.Attribute.verseNumber(verse)))
             for (index, p) in paragraphs.enumerated() {
                 if index == 0, !numberOnOwnLine { append(p) } else { append("\n"); append(p) }
             }
-            verses.append(.init(verse: verse, start: start, length: length - start))
+            verses.append(ScriptureText.VerseRange(verse: verse, start: start, length: length - start))
         }
 
         func finish() -> ScriptureText {
-            ScriptureText(text: text, spans: spans, verses: verses)
+            ScriptureText(text: text.text, spans: spans.elements(), verses: verses.elements())
         }
     }
 }

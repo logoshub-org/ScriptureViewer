@@ -38,6 +38,7 @@ dependencies {
     implementation("androidx.core:core:1.18.0")
 
     androidTestImplementation("org.logoshub.scripture:ScriptureTextOSIS")
+    androidTestImplementation("org.logoshub.scripture:ScriptureTextGBF")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     androidTestImplementation("androidx.compose.foundation:foundation")
     androidTestImplementation("androidx.test.ext:junit:1.3.0")

@@ -23,7 +23,8 @@ link() {
     done
 }
 
-for target in ScriptureText ScriptureTextMarkup ScriptureTextBuilding ScriptureTextOSIS; do
+for target in ScriptureText ScriptureTextMarkup ScriptureTextBuilding ScriptureTextOSIS ScriptureTextPlain ScriptureTextTEI \
+              ScriptureTextThML ScriptureTextGBF ScriptureTextSource; do
     link "$target" Sources
 done
 

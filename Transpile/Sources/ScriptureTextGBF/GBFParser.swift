@@ -1,0 +1,1 @@
+../../../Sources/ScriptureTextGBF/GBFParser.swift

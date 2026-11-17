@@ -42,6 +42,15 @@ class ParseBenchmark : ComponentActivity() {
                 Log.i("ScriptureViewerMeasure", "parse Psalm 119 ${if (markers) "with markers" else "plain"}: first ${times.first()} ms, " +
                         "warm median ${warm[warm.size / 2]} ms; all $times")
             }
+            val tfg = SampleChapter.rawEntries(assets, "tfg_matt1.json")
+            val times = ArrayList<Long>()
+            repeat(runs) {
+                val start = System.nanoTime()
+                SampleChapter.parseGBFCommentary(tfg)
+                times.add((System.nanoTime() - start) / 1_000_000)
+            }
+            val warm = times.drop(runs / 2).sorted()
+            Log.i("ScriptureViewerMeasure", "parse TFG Matthew 1 (GBF commentary): first ${times.first()} ms, warm median ${warm[warm.size / 2]} ms; all $times")
             val until = System.nanoTime() + seconds * 1_000_000_000L
             while (System.nanoTime() < until) SampleChapter.parse(entries, markers = false)
             Log.i("ScriptureViewerMeasure", "parse benchmark done")

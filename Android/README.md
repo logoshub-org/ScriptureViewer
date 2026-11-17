@@ -38,9 +38,9 @@ Then, with `JAVA_HOME` (a JDK 17 or later, for example Android Studio's `jbr`) a
 ./gradlew :demo:installDebug
 ```
 
-The settings file takes the core in as an included build (Skip's generated Gradle project for `ScriptureTextOSIS`, which holds
-`ScriptureText`, `SkipModel`, `SkipFoundation` and `SkipLib`), under the names `org.logoshub.scripture:ScriptureText` and
-`org.logoshub.scripture:ScriptureTextOSIS`. The library needs only `ScriptureText`; the demo and the tests also use the OSIS parser.
+The settings file takes the core in as an included build (Skip's generated Gradle project for `ScriptureTextSource`, which holds
+`ScriptureText`, the OSIS, GBF, ThML and plain-text parsers, the module source, `SkipModel`, `SkipFoundation` and `SkipLib`), under the
+names `org.logoshub.scripture:<module>`. The library needs only `ScriptureText`; the demo and the tests also use the OSIS and GBF parsers.
 The plugin versions are the ones Skip's generated projects use (Android Gradle plugin 9.2.0, Kotlin 2.3.0), so that one Gradle run builds both.
 
 ## How it differs from the iOS view
@@ -70,7 +70,9 @@ On the Android 17 emulator (arm64, 1080 by 2400) on an M-series Mac, which is no
 
 Parsing that chapter from its raw OSIS in the transpiled core takes about 10–12 ms once warm (it was about 105 ms before the core was
 changed for Kotlin: the rules are in `../Transpile/README.md`); the first parse in a process takes 310–420 ms as installed and 127–160 ms
-when the app is compiled ahead of time. `demo` has a `ParseBenchmark` activity that measures this on a release build.
+when the app is compiled ahead of time. A GBF commentary chapter (TFG Matthew 1, 17 KB of entries with notes and reference marks) parses
+in about 6 ms warm, and in 5–9 ms the first time, since GBF goes through the OSIS parser, already warm by then. `demo` has a
+`ParseBenchmark` activity that measures these on a release build.
 
 Scrolling the chapter by hand for five seconds drew 351 frames with 1 janky (0.3%). A highlight change adds and removes spans and
 requests no layout (the `Layout` object stays the same one); painting 176 bookmarked verses and 251 search hits at once took 125 ms.

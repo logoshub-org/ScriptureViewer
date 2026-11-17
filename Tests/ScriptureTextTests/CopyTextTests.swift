@@ -60,4 +60,21 @@ struct CopyTextTests {
         #expect(entry.copiedText(utf16Start: 50, length: 5).text == "")
         #expect(entry.copiedText(verse: 1) == nil)
     }
+
+    /// A character outside the Basic Multilingual Plane is two UTF-16 units: copying must keep the pair together, not turn each half
+    /// into a replacement character. Gothic (𐌰𐌹𐍅), a CJK Extension B ideograph (𠀀) and a mathematical letter (𝔄) are real cases:
+    /// CrossWire has a Gothic Bible, and Chinese texts use Extension B.
+    @Test func charactersOutsideTheBasicPlaneCopyWhole() throws {
+        let words = "𐌰𐌹𐍅 𠀀 𝔄"
+        let text = "1" + words
+        let m = ScriptureText(text: text,
+                              spans: [.init(start: 0, length: 1, attribute: .verseNumber(1))],
+                              verses: [.init(verse: 1, start: 0, length: text.utf16.count)])
+        let copied = try #require(m.copiedText(verse: 1))
+        #expect(copied.text == "1 " + words)
+        #expect(!copied.text.unicodeScalars.contains("\u{FFFD}"))
+        // A selection that starts after the first of these characters.
+        let start = "1𐌰".utf16.count
+        #expect(m.copiedText(utf16Start: start, length: text.utf16.count - start).text == "𐌹𐍅 𠀀 𝔄")
+    }
 }

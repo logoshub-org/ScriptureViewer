@@ -136,6 +136,21 @@ final class ScriptureTextOSISTests: XCTestCase {
         XCTAssertFalse(model.strongsHits(for: "H835").isEmpty)
     }
 
+    /// A character outside the Basic Multilingual Plane is two UTF-16 units; copying keeps the pair together (Gothic, a CJK Extension B
+    /// ideograph, a mathematical letter). Swift once decoded the units one at a time and made each half a replacement character.
+    func testCharactersOutsideTheBasicPlaneCopyWhole() throws {
+        let words = "𐌰𐌹𐍅 𠀀 𝔄"
+        let text = "1" + words
+        let length = CodePoints.utf16Length(text)
+        let model = ScriptureText(text: text,
+                                  spans: [ScriptureText.Span(start: 0, length: 1, attribute: ScriptureText.Attribute.verseNumber(1))],
+                                  verses: [ScriptureText.VerseRange(verse: 1, start: 0, length: length)])
+        let copied = try XCTUnwrap(model.copiedText(verse: 1))
+        XCTAssertEqual(copied.text, "1 " + words)
+        let start = CodePoints.utf16Length("1𐌰")
+        XCTAssertEqual(model.copiedText(utf16Start: start, length: length - start).text, "𐌹𐍅 𠀀 𝔄")
+    }
+
     private func check(_ name: String) throws {
         var display = ScriptureDisplayOptions()
         for (variant, options) in variants() where variant == name { display = options }

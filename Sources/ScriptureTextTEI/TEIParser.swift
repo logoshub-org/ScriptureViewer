@@ -54,7 +54,7 @@ public struct TEIParser: Sendable {
     /// One entry. Tolerant: unknown or unbalanced markup never fails the parse.
     public func parse(_ entry: String) -> ScriptureText {
         var builder = TEIBuilder(options: options)
-        MarkupTokenizer.tokenize(entry.replacingOccurrences(of: "\u{0}", with: ""), into: &builder)
+        MarkupTokenizer.tokenize(entry.replacingOccurrences(of: "\u{0000}", with: ""), into: &builder)
         return builder.finish()
     }
 }
@@ -77,10 +77,10 @@ struct TEIBuilder: MarkupEventSink {
     }
 
     private let options: TEIParser.Options
-    private var text = ""
-    private var length = 0
-    private var spans: [ScriptureText.Span] = []
-    private var notes: [ScriptureText.Note] = []
+    private let text = TextBuffer()
+    private var length: Int { text.length }
+    private let spans = GrowingList<ScriptureText.Span>()
+    private let notes = GrowingList<ScriptureText.Note>()
     private var stack: [Frame] = []
     private var unstarted = 0
 
@@ -88,7 +88,7 @@ struct TEIBuilder: MarkupEventSink {
     private var needsBreak = false
     private var brCount = 0
     private var pendingSpace = false
-    private var activeNote: (id: String, text: String)?
+    private var activeNote: NoteDraft?
 
     init(options: TEIParser.Options) { self.options = options }
 
@@ -100,17 +100,17 @@ struct TEIBuilder: MarkupEventSink {
             guard !selfClosing else { return }
             push(name, .plain)
             if let n = a["n"], !n.isEmpty {
-                emitInline(n, .bold)                        // SWORD writes <b>n</b> ahead of the entry
+                emitInline(n, ScriptureText.Attribute.bold)  // SWORD writes <b>n</b> ahead of the entry
             }
         case "orth", "tr":
-            push(name, selfClosing ? .plain : .span(.bold), selfClosing: selfClosing)
+            push(name, selfClosing ? Frame.Kind.plain : Frame.Kind.span(ScriptureText.Attribute.bold), selfClosing: selfClosing)
         case "pron", "pos", "gen", "case", "gram", "number":
-            push(name, .span(.italic), selfClosing: selfClosing)
+            push(name, Frame.Kind.span(ScriptureText.Attribute.italic), selfClosing: selfClosing)
         case "hi":
             let kind: Frame.Kind
             switch a["rend"] {
-            case "italic", "ital": kind = .span(.italic)
-            case "bold": kind = .span(.bold)
+            case "italic", "ital": kind = Frame.Kind.span(ScriptureText.Attribute.italic)
+            case "bold": kind = Frame.Kind.span(ScriptureText.Attribute.bold)
             // super, sub, overline: the model has no raised-text attribute yet; the text stays plain.
             default: kind = .plain
             }
@@ -124,24 +124,27 @@ struct TEIBuilder: MarkupEventSink {
             lineBreak()
             if !selfClosing { push(name, .plain) }
             if let n = a["n"], !n.isEmpty {
-                emitInline(n, .bold)
+                emitInline(n, ScriptureText.Attribute.bold)
                 pendingSpace = true
             }
         case "ref":
-            let target = linkTarget(a)
-            push(name, target.map { .span(.link(target: $0)) } ?? .plain, selfClosing: selfClosing)
+            if let target = linkTarget(a) {
+                push(name, Frame.Kind.span(ScriptureText.Attribute.link(target: target)), selfClosing: selfClosing)
+            } else {
+                push(name, Frame.Kind.plain, selfClosing: selfClosing)
+            }
         case "note":
             guard !selfClosing else { return }
             let id = String(notes.count + 1)
-            activeNote = (id, "")
-            push(name, .note(id: id))
+            activeNote = NoteDraft(id: id)
+            push(name, Frame.Kind.note(id: id))
         case "list":
             lineBreak()
             push(name, .plain, selfClosing: selfClosing)
         case "item":
             lineBreak()
             let depth = stack.filter { $0.name == "list" }.count
-            push(name, .block(.listItem(depth: max(depth, 1))), selfClosing: selfClosing)
+            push(name, Frame.Kind.block(ParagraphRole.listItem(depth: max(depth, 1))), selfClosing: selfClosing)
         case "table":
             lineBreak()
             push(name, .plain, selfClosing: selfClosing)
@@ -187,7 +190,7 @@ struct TEIBuilder: MarkupEventSink {
         case .span(let attribute):
             if frame.start == nil { unstarted -= 1 } else { addSpan(frame.start, attribute) }
         case .block(let role):
-            if frame.start == nil { unstarted -= 1 } else { addSpan(frame.start, .block(role)) }
+            if frame.start == nil { unstarted -= 1 } else { addSpan(frame.start, ScriptureText.Attribute.block(role)) }
             needsBreak = true
         case .note(let id):
             finishNote(id: id)
@@ -200,7 +203,7 @@ struct TEIBuilder: MarkupEventSink {
 
     private mutating func addSpan(_ start: Int?, _ attribute: ScriptureText.Attribute) {
         guard let start, length > start else { return }
-        spans.append(.init(start: start, length: length - start, attribute: attribute))
+        spans.append(ScriptureText.Span(start: start, length: length - start, attribute: attribute))
     }
 
     // MARK: Breaks and text
@@ -218,8 +221,7 @@ struct TEIBuilder: MarkupEventSink {
     private mutating func append(_ s: String) {
         guard !s.isEmpty else { return }
         text.append(s)
-        length += s.utf16.count
-        endsWithNewline = s.hasSuffix("\n")
+        endsWithNewline = text.lastUnit == 0x0A
     }
 
     private mutating func flushPending() {
@@ -252,16 +254,16 @@ struct TEIBuilder: MarkupEventSink {
     /// Text with HTML's whitespace rules: a run of white space is one space, ignored at a
     /// line's start.
     private mutating func emit(_ raw: String) {
-        var run = ""
-        for scalar in raw.unicodeScalars {
-            if scalar == " " || scalar == "\t" || scalar == "\n" || scalar == "\r" {
-                if !run.isEmpty { beginContent(); append(run); run = "" }
+        var run: [Int] = []
+        for c in CodePoints.of(raw) {
+            if c == 0x20 || c == 0x09 || c == 0x0A || c == 0x0D {
+                if !run.isEmpty { beginContent(); append(CodePoints.string(run)); run = [] }
                 pendingSpace = true
             } else {
-                run.unicodeScalars.append(scalar)
+                run.append(c)
             }
         }
-        if !run.isEmpty { beginContent(); append(run) }
+        if !run.isEmpty { beginContent(); append(CodePoints.string(run)) }
     }
 
     /// A short run with its own attribute, e.g. an entry's number in bold.
@@ -269,54 +271,48 @@ struct TEIBuilder: MarkupEventSink {
         beginContent()
         let start = length
         append(s)
-        spans.append(.init(start: start, length: length - start, attribute: attribute))
+        spans.append(ScriptureText.Span(start: start, length: length - start, attribute: attribute))
     }
 
     // MARK: Notes and links
 
     private mutating func appendToNote(_ raw: String) {
-        guard activeNote != nil else { return }
-        for scalar in raw.unicodeScalars {
-            if scalar == " " || scalar == "\t" || scalar == "\n" || scalar == "\r" {
-                if !(activeNote!.text.isEmpty || activeNote!.text.hasSuffix(" ")) { activeNote!.text.append(" ") }
-            } else {
-                activeNote!.text.unicodeScalars.append(scalar)
-            }
-        }
+        guard let note = activeNote else { return }
+        note.append(raw)
     }
 
     private mutating func finishNote(id: String) {
         guard let note = activeNote else { return }
         activeNote = nil
         guard options.footnotes else { return }
-        let body = note.text.trimmingCharacters(in: .whitespaces)
+        let body = CodePoints.trimmed(note.text.text, where: { CodePoints.isHorizontalWhiteSpace($0) })
         guard !body.isEmpty else { return }
-        notes.append(.init(id: id, text: body, kind: .footnote))
+        notes.append(ScriptureText.Note(id: id, text: body, kind: ScriptureText.Note.Kind.footnote))
         beginContent()
         let start = length
         append("n")
-        spans.append(.init(start: start, length: 1, attribute: .footnote(id: id)))
+        spans.append(ScriptureText.Span(start: start, length: 1, attribute: ScriptureText.Attribute.footnote(id: id)))
     }
 
     /// `Work:Key` is a dictionary link and `osisRef` a scripture link, both `sword://Work/Key`
     /// as SWORD writes them; a target with no work belongs to the entry's own module.
     private func linkTarget(_ a: [String: String]) -> String? {
         guard let target = a["osisRef"] ?? a["target"], !target.isEmpty else { return nil }
-        let work: String?
-        let key: String
-        if let colon = target.firstIndex(of: ":") {
-            work = String(target[..<colon])
-            key = String(target[target.index(after: colon)...])
-        } else {
-            work = nil
-            key = target
+        let codes = CodePoints.of(target)
+        var colon = -1
+        var k = 0
+        while k < codes.count {
+            if codes[k] == 0x3A { colon = k; break }
+            k += 1
         }
-        let module = (work?.isEmpty == false ? work : options.module) ?? ""
-        return "sword://\(Self.encode(module))/\(Self.encode(key))"
-    }
-
-    private static func encode(_ s: String) -> String {
-        s.addingPercentEncoding(withAllowedCharacters: CharacterSet(charactersIn: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~")) ?? s
+        var work = ""
+        var key = target
+        if colon >= 0 {
+            work = CodePoints.string(codes, 0, colon)
+            key = CodePoints.string(codes, colon + 1, codes.count)
+        }
+        let module = work.isEmpty ? (options.module ?? "") : work
+        return "sword://" + CodePoints.percentEncoded(module) + "/" + CodePoints.percentEncoded(key)
     }
 
     // MARK: Finish
@@ -324,14 +320,34 @@ struct TEIBuilder: MarkupEventSink {
     mutating func finish() -> ScriptureText {
         while !stack.isEmpty { closeTopFrame() }
         // Trailing whitespace is never shown.
-        while text.last == " " || text.last == "\n" {
-            text.removeLast()
-            length -= 1
+        text.dropTrailingASCII(where: { $0 == 0x20 || $0 == 0x0A })
+        let total = length
+        var kept: [ScriptureText.Span] = []
+        for span in spans.elements() {
+            let end = min(span.start + span.length, total)
+            if end > span.start { kept.append(ScriptureText.Span(start: span.start, length: end - span.start, attribute: span.attribute)) }
         }
-        spans = spans.compactMap { span in
-            let end = min(span.start + span.length, length)
-            return end > span.start ? .init(start: span.start, length: end - span.start, attribute: span.attribute) : nil
+        return ScriptureText(text: text.text, spans: kept, verses: [], notes: notes.elements())
+    }
+}
+
+/// A note's text as it is captured, whitespace-collapsed. A class, so it grows in place.
+private final class NoteDraft {
+    let id: String
+    let text = TextBuffer()
+
+    init(id: String) { self.id = id }
+
+    func append(_ raw: String) {
+        var run: [Int] = []
+        for c in CodePoints.of(raw) {
+            if c == 0x20 || c == 0x09 || c == 0x0A || c == 0x0D {
+                if !run.isEmpty { text.append(CodePoints.string(run)); run = [] }
+                if !(text.isEmpty || text.lastUnit == 0x20) { text.append(" ") }
+            } else {
+                run.append(c)
+            }
         }
-        return ScriptureText(text: text, spans: spans, verses: [], notes: notes)
+        if !run.isEmpty { text.append(CodePoints.string(run)) }
     }
 }
