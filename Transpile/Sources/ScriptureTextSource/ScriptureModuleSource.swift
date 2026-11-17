@@ -1,1 +1,0 @@
-../../../Sources/ScriptureTextSource/ScriptureModuleSource.swift

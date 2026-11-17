@@ -25,13 +25,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode_26.3.app
+      # The package is a Skip package: its build plugin writes the Android Kotlin as it builds, and Xcode asks for a plugin to be
+      # trusted before it runs one. On CI that is this flag.
       - name: Build the ScriptureViewer scheme for the simulator
-        run: xcodebuild -scheme ScriptureViewer -destination 'generic/platform=iOS Simulator' build
+        run: xcodebuild -scheme ScriptureViewer -destination 'generic/platform=iOS Simulator' -skipPackagePluginValidation build
 
   linux:
     name: Tests on Linux
     runs-on: ubuntu-latest
     container: swift:6.0
+    # Plain Swift: SKIP_ZERO leaves Skip out of the package (see the end of Package.swift). The Android side is tested in Transpile/.
+    env:
+      SKIP_ZERO: "1"
     steps:
       - uses: actions/checkout@v4
       - name: swift test

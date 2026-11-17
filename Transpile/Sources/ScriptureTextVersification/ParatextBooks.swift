@@ -1,1 +1,0 @@
-../../../Sources/ScriptureTextVersification/ParatextBooks.swift

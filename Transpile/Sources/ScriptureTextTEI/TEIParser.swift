@@ -1,1 +1,0 @@
-../../../Sources/ScriptureTextTEI/TEIParser.swift

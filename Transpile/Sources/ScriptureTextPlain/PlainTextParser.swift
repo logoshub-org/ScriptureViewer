@@ -1,1 +1,0 @@
-../../../Sources/ScriptureTextPlain/PlainTextParser.swift

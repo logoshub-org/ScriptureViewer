@@ -2,9 +2,9 @@
 // Copyright (C) 2026 Logos Hub Ltd
 //
 // The Android scripture viewer (plan D185): a hand-written `TextView` surface under a thin Compose wrapper, over the portable core
-// as Kotlin. The core is not copied here: it is what `swift build` in ../Transpile leaves (Skip Lite, plan D158), taken in as an
-// included build, so there is one copy of the model, the contract and the parsers. The build of ScriptureTextSource holds every
-// module it uses: the model, the OSIS, GBF, ThML and plain-text parsers, and the module source.
+// as Kotlin. The core is not copied here: it is what `swift build` of the package at the repository root leaves (a Skip package,
+// plan D158), taken in as an included build, so there is one copy of the model, the contract and the parsers. The build of
+// ScriptureTextSource holds every module this project uses: the model, the OSIS, GBF, ThML and plain-text parsers, the module source.
 pluginManagement {
     repositories { google(); mavenCentral(); gradlePluginPortal() }
 }
@@ -13,9 +13,9 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ScriptureViewerAndroid"
 
-val core = file("../Transpile/.build/plugins/outputs/transpile/ScriptureTextSource/destination/skipstone")
+val core = file("../.build/plugins/outputs/scriptureviewer/ScriptureTextSource/destination/skipstone")
 require(core.resolve("settings.gradle.kts").exists()) {
-    "The Kotlin core is not built: run `swift build` in ../Transpile first (looked in $core)."
+    "The Kotlin core is not built: run `swift build` at the repository root first (looked in $core)."
 }
 // Kotlin's incremental compilation goes wrong in the core when a file is transpiled again (it compiles the changed file without the
 // rest of its module, which Skip's linked module folders seem to cause), so it is off for this build and the one it includes.

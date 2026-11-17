@@ -1,1 +1,0 @@
-../../../../Sources/ScriptureText/Model/ParagraphRole.swift

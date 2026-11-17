@@ -1,1 +1,0 @@
-../../../Sources/ScriptureTextThML/ThMLParser.swift

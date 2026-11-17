@@ -41,6 +41,13 @@ let package = Package(
         // files as a `ScriptureBible` (Track V5). Foundation only.
         .library(name: "ScriptureTextUSFM", targets: ["ScriptureTextUSFM"]),
     ],
+    // Skip (https://skip.dev) transpiles the library targets to Kotlin for Android at build time (plan D158): see the end of this file.
+    dependencies: [
+        .package(url: "https://github.com/skiptools/skip.git", from: "1.9.20"),
+        .package(url: "https://github.com/skiptools/skip-foundation.git", from: "1.4.9"),
+        .package(url: "https://github.com/skiptools/skip-model.git", from: "1.8.1"),
+        .package(url: "https://github.com/skiptools/skip-ui.git", from: "1.66.0"),
+    ],
     targets: [
         // UIKit, iOS only: on macOS and Linux the files are empty (`#if canImport(UIKit)`). Written in Swift 5 language mode.
         .target(
@@ -151,3 +158,38 @@ let package = Package(
         ),
     ]
 )
+
+// MARK: Skip
+//
+// Every library target but the test support is a Skip module: the skipstone plugin writes its Kotlin and a Gradle project when the
+// package is built (nothing of Skip runs in an iOS app: on iOS the Skip libraries are the platform's own types). Each target's `Skip/`
+// folder holds its skip.yml; the viewer's also links the Android viewer's Kotlin (`../Android/scriptureviewer`), which its
+// `#if SKIP` branch shows. The model needs SkipModel for the viewer controller's Observation, the viewer SkipUI for its Compose branch.
+for target in package.targets where target.type == .regular && target.name != "ScriptureTextTestSupport" {
+    target.dependencies.append(Target.Dependency.product(name: "SkipFoundation", package: "skip-foundation"))
+    if target.name == "ScriptureText" { target.dependencies.append(Target.Dependency.product(name: "SkipModel", package: "skip-model")) }
+    if target.name == "ScriptureViewer" { target.dependencies.append(Target.Dependency.product(name: "SkipUI", package: "skip-ui")) }
+    var plugins: [Target.PluginUsage] = target.plugins ?? []
+    plugins.append(Target.PluginUsage.plugin(name: "skipstone", package: "skip"))
+    target.plugins = plugins
+}
+
+// Setting the SKIP_ZERO=1 environment strips out the Skip plugin and all Skip dependencies: a plain Swift package, for builds that
+// need no Android (the Linux CI job; an iOS-only host may set it too). Skip's own pattern (`skip init --zero`).
+if Context.environment["SKIP_ZERO"] ?? "0" != "0" {
+    package.targets.forEach { target in
+        target.plugins?.removeAll(where: {
+            if case .plugin(let name, _) = $0 { return name == "skipstone" } else { return false }
+        })
+        target.dependencies.removeAll(where: { dependency in
+            if case .productItem(_, let package, _, _) = dependency {
+                return package == "skip" || package?.hasPrefix("skip-") == true
+            } else {
+                return false
+            }
+        })
+    }
+    package.dependencies.removeAll(where: { dependency in
+        if case .sourceControl(_, let url, _) = dependency.kind { return url.hasPrefix("https://github.com/skiptools/") } else { return false }
+    })
+}

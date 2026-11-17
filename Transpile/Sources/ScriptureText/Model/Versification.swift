@@ -1,1 +1,0 @@
-../../../../Sources/ScriptureText/Model/Versification.swift

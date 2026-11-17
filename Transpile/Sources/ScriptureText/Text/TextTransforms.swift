@@ -1,1 +1,0 @@
-../../../../Sources/ScriptureText/Text/TextTransforms.swift

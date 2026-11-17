@@ -22,7 +22,9 @@ final class PackageGuardTests: XCTestCase {
 
 	/// What a host needs is `public`; the rest is `package` or internal. This keeps the viewer's surface from growing unnoticed. If a
 	/// change needs more of it, raise the number here on purpose, in the same commit.
-	/// (88 with the old UIKit container, 75 once it went, 56 once the book navigator and the app hooks left, 57 with `frameOfVerse`.)
+	/// (88 with the old UIKit container, 75 once it went, 56 once the book navigator and the app hooks left, 57 with `frameOfVerse`,
+	/// 63 with the Android branch of `ScriptureViewer` and the macOS placeholder: each a struct, an initialiser and a body, the same view
+	/// under `#if SKIP` and on macOS.)
 	func testTheViewersPublicSurfaceHasNotGrown() throws {
 		var count = 0
 		for file in try swiftFiles(in: "Sources/ScriptureViewer") {
@@ -32,7 +34,7 @@ final class PackageGuardTests: XCTestCase {
 				if trimmed.range(of: #"^(@[A-Za-z_]+(\([^)]*\))?\s+)*(nonisolated\(unsafe\)\s+)?public "#, options: .regularExpression) != nil { count += 1 }
 			}
 		}
-		XCTAssertLessThanOrEqual(count, 57)
+		XCTAssertLessThanOrEqual(count, 63)
 	}
 
 	/// Every source file is MPL-2.0, except the data embedded under its own licence (MIT, which the MPL accepts), and uses no engine, no

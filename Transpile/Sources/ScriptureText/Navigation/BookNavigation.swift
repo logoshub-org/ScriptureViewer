@@ -1,1 +1,0 @@
-../../../../Sources/ScriptureText/Navigation/BookNavigation.swift

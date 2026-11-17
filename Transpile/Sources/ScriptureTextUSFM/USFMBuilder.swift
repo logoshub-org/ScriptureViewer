@@ -1,1 +1,0 @@
-../../../Sources/ScriptureTextUSFM/USFMBuilder.swift

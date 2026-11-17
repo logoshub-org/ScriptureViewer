@@ -1,15 +1,9 @@
 # Transpile
 
-The portable scripture core, transpiled to Kotlin by [Skip Lite](https://skip.dev) for Android (plan D158). It is a package of its own,
-nested in the repository: it builds the **same sources** as the package at the repository root through symbolic links to `../Sources`, so
-there is one copy of the code. The iOS package does not depend on it, and a user of that package never sees it: SwiftPM resolves only the
-package at the repository root, so this one cannot be added by URL. It is the repository's own test that the core still transpiles, and the
-place the Android library's Kotlin core is built.
-
-What goes through Skip: `ScriptureText` (the model, the viewer contract, the bar rule), `ScriptureTextMarkup`, `ScriptureTextBuilding`,
-the parsers `ScriptureTextOSIS`, `ScriptureTextGBF`, `ScriptureTextThML`, `ScriptureTextTEI` and `ScriptureTextPlain`, and
-`ScriptureTextSource` (which picks the parser for a module), `ScriptureTextVersification` (Paratext's six systems and the `.vrs`
-reader) and `ScriptureTextUSFM` (USFM books and Bibles). That is every target of the portable core; only the iOS viewer is not.
+The Kotlin parity tests of the package at the repository root. That package is a [Skip](https://skip.dev) package: its library
+targets are transpiled to Kotlin for Android when it is built (plan D158). This package holds only tests, so that the package above stays
+free of Skip's test machinery; it depends on it by path (`..`), and a user of that package never sees this one (SwiftPM resolves only the
+package at the repository root).
 
 ## What runs
 
@@ -28,8 +22,8 @@ Gradle, a JDK and the Android SDK, as for any Skip project). Both must pass.
   excerpts of five real books (KJV 2006 Genesis 1–3 and Psalm 119, BSB John 1 with Strong's numbers, WEB Matthew 5 and Tobit 1, all
   public domain) with four sets of options, each parsed whole, read as one Bible from a folder (versification by fit, then declared in a
   `Settings.xml`), and fragments with the markers the excerpts lack; compared with `expected_usfm.txt`. The digest code they share is
-  `ModelDigest.swift`. It found two Android bugs the Swift tests
-  could not: a repeated entry was shown twice (`ChapterEntries.shown`), and `ScriptureText`'s `contains(verse:)` held every verse up to its own.
+  `ModelDigest.swift`. These tests found two Android bugs the Swift tests could not: a repeated entry was shown twice
+  (`ChapterEntries.shown`), and `ScriptureText`'s `contains(verse:)` held every verse up to its own.
 
 Three of the tests guard speed: OSIS (Psalm 119), GBF (TFG Matthew 1) and USFM (Psalm 119) each parse the same text eight times over
 and once, and fail if the longer run takes more than 16 times as long. Growth in proportion to the text gives about 8; the copying the
@@ -37,36 +31,27 @@ Kotlin build once did, which grew with the square, gives up to 64 (put back on p
 ratio holds on any machine where a fixed time limit would not. (GBF's main text in that chapter is too short for the old bug to show; GBF
 writes through the same builder as OSIS.) The two warm-ups (`ScriptureModuleSource.warmUp`, `USFMParser.warmUp`) are also run as Kotlin.
 
-(The app's own navigation model, `AppModel`, is tested the same way, in the app's repository.) The Kotlin this package leaves in `.build`
-is also what the Android viewer builds on: see `../Android/README.md`.
+(The app's own navigation model, `AppModel`, is tested the same way, in the app's repository.)
 
 To rewrite the expected files after a deliberate change of the core's output: `GENERATE_EXPECTED=1 swift test --filter testGenerate` (the
 Swift run is the reference; the Kotlin run must then match it).
 
-## The SwiftUI viewer for the Skip-built app
-
-`ScriptureViewerSkip` is the `ScriptureViewer` SwiftUI view for an app built by Skip: the same name and values as the iOS view in the
-package, so the app's shared screens use it unchanged. On Android its body is Skip's `ComposeView` around the Compose viewer in
-`../Android/scriptureviewer`, whose Kotlin files are linked into the module's `Skip/` folder (`link-sources.sh`), so there is one copy of the
-viewer. On iOS the module builds but is empty: the app takes the iOS view from the package.
-
-It compiles with the generated Gradle project, and `Checks/WrapperCheck.kt` ran on the emulator (it shows a chapter through the
-SwiftUI view, checks the text on screen and that a controller command reaches the view). That check is not wired into `swift test` (it needs
-an emulator and a few test dependencies the generated project does not have): to run it, build, add the file to
-`.build/plugins/outputs/transpile/ScriptureViewerSkip/destination/skipstone/ScriptureViewerSkip/src/androidTest/kotlin/scripture/viewer/skip/`,
-add `androidx.compose.ui:ui-test-junit4`, `androidx.test.espresso:espresso-core:3.7.0` and `ui-test-manifest` to its `build.gradle.kts`, and run
-`gradle :ScriptureViewerSkip:connectedDebugAndroidTest`.
-
-## Keep the links current
-
-`link-sources.sh` recreates the links. Run it after a file is added, moved or removed in one of the linked targets. The viewer contract
-(`Sources/ScriptureText/Viewer`) is linked too: its controller uses Observation, which Skip carries to Compose state through SkipModel,
-a dependency of the `ScriptureText` target here for that reason.
-
 A test target is built into the Gradle project of the module it is named after (`ScriptureTextOSISTests` into `ScriptureTextOSIS`), so a
 test target may only use modules below that one: tests that need the whole graph belong in `ScriptureTextSourceTests`.
 
+## The viewer's check on Android
+
+`Checks/WrapperCheck.kt` shows a chapter through the package's `ScriptureViewer` on Android (the `#if SKIP` branch, whose body is the
+Compose viewer), checks the text on screen, and that a controller command reaches the view. It ran on the emulator (2026-11-17). It is not
+wired into `swift test` (it needs an emulator and test dependencies the generated project does not have): to run it, build the package at
+the repository root, add the file to
+`../.build/plugins/outputs/scriptureviewer/ScriptureViewer/destination/skipstone/ScriptureViewer/src/androidTest/kotlin/scripture/viewer/`, add
+`androidx.compose.ui:ui-test-junit4`, `androidx.test.espresso:espresso-core:3.7.0` and `ui-test-manifest` to that module's
+`build.gradle.kts`, and run `gradle :ScriptureViewer:connectedDebugAndroidTest` in its `skipstone` folder.
+
 ## Writing code the transpiler takes
+
+Every library target of the package at the root is transpiled, so all of its code must follow these.
 
 **What it accepts** (plan D158): `Int` only (no `UInt8`/`UInt32`/`Unicode.Scalar`); text as code point arrays through `CodePoints`; no
 `Substring` or `String.Index`; no double optionals, no mutated tuples, no tuples in arrays (two arrays side by side, or a small struct);

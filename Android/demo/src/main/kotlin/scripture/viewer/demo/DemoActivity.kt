@@ -46,7 +46,7 @@ import scripture.text.ScriptureViewerConfiguration
 import scripture.text.ScriptureViewerController
 import scripture.text.ScriptureViewerEvents
 import scripture.text.ScriptureViewerTheme
-import scripture.viewer.ScriptureViewer
+import scripture.viewer.compose.ScriptureViewer
 import scripture.viewer.sample.SampleChapter
 
 /** Psalm 119 between two bars, to try the viewer by hand: scrolling, the bars, taps, the selection menu, highlights, TalkBack. */

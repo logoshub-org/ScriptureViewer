@@ -1,1 +1,0 @@
-../../../../Android/scriptureviewer/src/main/kotlin/scripture/viewer/ScriptureTextTheme.kt

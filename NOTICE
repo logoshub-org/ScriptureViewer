@@ -17,9 +17,25 @@ THIRD-PARTY COMPONENTS
                                  MIT, Copyright James Cuenod (github.com/jcuenod/usfm3, data/markers.toml):
                                  the grouping of USFM markers is taken from it; no code is copied.
 
+DEPENDENCIES
+  Skip (skip.dev), which turns the library targets into Kotlin for Android when the package is built
+  (setting SKIP_ZERO=1 leaves it out): skip-foundation, skip-lib, skip-model and skip-unit are MPL-2.0;
+  skip (the build tool) and skip-ui are Apache-2.0. Fetched by Swift Package Manager, not part of this
+  repository.
+
+ANDROID
+  Android/ (the Compose viewer, its demo and tests) is MPL-2.0, as each file's header says. Its Kotlin is
+  also built into the ScriptureViewer target on Android (linked from Sources/ScriptureViewer/Skip/).
+
 TEST DATA (TestModules/)
   Real module files, used only by the package's tests: the KJV, YLT, Weymouth, DTN and TFG (SWORD
   modules), and the eBible.org USFM KJV (Genesis, Psalms and John). Each carries the licence stated in its
   .conf file or its copr.htm (public domain, except the KJV, whose conf states a general public licence for
   distribution); see TestModules/README.md. They are not part of any product, and no module whose licence
   is not clear belongs there.
+
+TEST DATA (Transpile/Tests/)
+  Excerpts of public-domain texts for the Kotlin parity tests: the KJV 2006 (eBible.org) Genesis 1-3 and
+  Psalm 119, the Berean Standard Bible with Strong's numbers John 1, and the World English Bible Matthew 5
+  and Tobit 1; Psalm 119 of the KJV as raw OSIS, and chapters of YLT, Weymouth, DTN and TFG, from the test
+  modules above. Not part of any product.

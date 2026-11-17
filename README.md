@@ -28,6 +28,15 @@ In Xcode: File, Add Package Dependencies, enter `https://github.com/logoshub-org
 // then: .product(name: "ScriptureViewer", package: "ScriptureViewer")
 ```
 
+It is a [Skip](https://skip.dev) package: when it is built, Skip's build plugin also writes the Kotlin of its library targets, for an
+Android app built with Skip. Nothing of Skip runs in an iOS app. What it means for you:
+
+- **Xcode asks you to trust the plugin** the first time (Trust & Enable). Command-line and CI builds pass `-skipPackagePluginValidation`
+  to `xcodebuild`.
+- **An iOS-only host can leave Skip out**: building with the environment variable `SKIP_ZERO=1` strips the plugin and the Skip
+  dependencies, and the package is plain Swift (the Linux CI job builds it so).
+- **On macOS** `ScriptureViewer` is a placeholder that shows nothing, so code shared with iOS and Android builds on a Mac.
+
 The other products are the portable parts alone, for code that does not draw anything: `ScriptureText`, `ScriptureTextOSIS`,
 `ScriptureTextTEI`, `ScriptureTextThML`, `ScriptureTextGBF`, `ScriptureTextPlain`, `ScriptureTextSource`, `ScriptureTextUSFM`,
 `ScriptureTextVersification` and `ScriptureTextMarkup`.
@@ -53,11 +62,11 @@ to it (scroll to a verse, focus a verse). The full boundary, input by input and 
 
 ## Android
 
-The contract is written so that each platform supplies its own `ScriptureViewer`: on iOS it is this package's UIKit-backed view; on
-Android it is a composable of the same name over a `TextView`, in [Android/](Android/README.md), taking the same values and reporting
-the same events. It is built and tested on an emulator; it is not yet published as a library or hosted in an app. The portable core
-(`ScriptureText` with the viewer contract, the markup tokenizer, the OSIS, GBF, ThML, TEI, plain-text and USFM parsers, the module
-source and the versifications) is transpiled to Kotlin by [Skip](https://skip.dev) in `Transpile/` and checked against the Swift results.
+One `ScriptureViewer`, two realisations behind the same contract. In an app built with Skip, the same SwiftUI code names the same view:
+on iOS it is the UIKit text view above; on Android (`#if SKIP` in `ScriptureViewer.swift`) it is a Compose viewer over a `TextView`, whose
+Kotlin is in [Android/](Android/README.md) and is linked into the target. Every library target goes through Skip, and the Kotlin is checked
+against the Swift results by the parity tests in `Transpile/`. A Skip app built from the package (the viewer showing Psalm 119) and the
+viewer's own instrumented tests run on an Android emulator; it has not been hosted in PocketSword yet.
 
 ## Tests
 

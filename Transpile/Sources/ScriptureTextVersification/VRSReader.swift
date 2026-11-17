@@ -1,1 +1,0 @@
-../../../Sources/ScriptureTextVersification/VRSReader.swift

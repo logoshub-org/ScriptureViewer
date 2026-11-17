@@ -1,1 +1,0 @@
-../../../../Sources/ScriptureText/Viewer/ScriptureBarScrollRule.swift

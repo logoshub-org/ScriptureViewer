@@ -1,1 +1,0 @@
-../../../../Sources/ScriptureText/Interaction/TapTargetFinding.swift

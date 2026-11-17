@@ -13,7 +13,7 @@
 /// Text that grows at its end, measured in UTF-16 code units (the model's offsets).
 public final class TextBuffer {
     #if SKIP
-    private let builder = java.lang.StringBuilder()
+    private let builder: java.lang.StringBuilder = java.lang.StringBuilder()
     #else
     private var string = ""
     private var units = 0
@@ -112,7 +112,7 @@ public final class TextBuffer {
 /// A list that grows in place: an array in Swift, a Java list in Kotlin.
 public final class GrowingList<Element> {
     #if SKIP
-    private let items = java.util.ArrayList<Element>()
+    private let items: java.util.ArrayList<Element> = java.util.ArrayList<Element>()
     #else
     private var items: [Element] = []
     #endif

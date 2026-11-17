@@ -64,12 +64,13 @@ notification.
   the text view's calls; `ScriptureTextTheme(_: ScriptureViewerTheme)` realises the theme (the contract's font size is in CSS points).
   The old UIKit container, with its detail pane, is gone: the host shows its own pane (plan D160, D161, D162). The dictionary entry, the
   devotional and the Bible and Commentary readers all use the view.
-- **Android (built 2026-11-16):** `Android/scriptureviewer`, a composable named `ScriptureViewer` (package `scripture.viewer`) over
+- **Android (built 2026-11-16):** `Android/scriptureviewer`, a composable named `ScriptureViewer` (package `scripture.viewer.compose`) over
   `ScriptureTextView`, a selectable `TextView` holding the chapter as one `Spannable` in a `NestedScrollView`, hosted by `AndroidView`
   (plan D185). A bridge does what the iOS coordinator does. The contract types and the bar rule are this folder's Swift, transpiled by
-  Skip (`Transpile/`, package `scripture.text`), so both platforms and the Skip-built host use the same ones. Sixteen instrumented tests
-  run it against Psalm 119 on an emulator; what differs from iOS, what was measured and what is left is in `Android/README.md`. The SwiftUI
-  view a Skip-built app names (same name, same values) is `ScriptureViewerSkip` in `Transpile/`, a `ComposeView` around the composable.
+  Skip (package `scripture.text`), so both platforms and the Skip-built host use the same ones. Sixteen instrumented tests run it against
+  Psalm 119 on an emulator; what differs from iOS, what was measured and what is left is in `Android/README.md`. The package is a Skip
+  package, so the SwiftUI view a Skip-built app names is this package's `ScriptureViewer`: `ScriptureViewer.swift` has an `#if SKIP` branch,
+  the same struct with a `ComposeView` around the composable as its body, beside the UIKit branch (and a placeholder on macOS).
 
 ## Open points
 
@@ -80,8 +81,8 @@ notification.
 3. **iOS navigation bar:** `setContentScrollView` ties the bar's scroll-edge effect to the text view; a SwiftUI wrapper needs a
    view-controller representable, or accepts the plainer bar.
 4. **Observation:** settled: with SkipModel the controller transpiles, its properties become Compose state, and a composable that
-   reads `currentVerse` follows the scroll (tested). Still open: the SwiftUI-side `ScriptureViewer` view that the Skip-built app's
-   shared code names, wrapping the composable under `#if SKIP`.
+   reads `currentVerse` follows the scroll (tested). The SwiftUI view a Skip-built app's shared code names is the `#if SKIP` branch of
+   `ScriptureViewer.swift`, a `ComposeView` around the composable.
 5. **Sizing:** done on both: `scrolls = false` takes the text's height (SwiftUI `sizeThatFits` on iOS, the view's measured height on
    Android).
 6. **The detail pane in the host:** history and Back inside the pane become the host's job.

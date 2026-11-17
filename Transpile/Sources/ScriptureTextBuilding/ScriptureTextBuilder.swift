@@ -1,1 +1,0 @@
-../../../Sources/ScriptureTextBuilding/ScriptureTextBuilder.swift

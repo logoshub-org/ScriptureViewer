@@ -1,1 +1,0 @@
-../../../Sources/ScriptureTextMarkup/MarkupTokenizer.swift

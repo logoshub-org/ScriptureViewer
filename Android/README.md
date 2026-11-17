@@ -10,13 +10,15 @@ ScriptureViewer(text = chapter, theme = theme, highlights = marks, configuration
 Underneath it is a selectable `TextView` holding the chapter as one `Spannable`, in a `NestedScrollView`, hosted by Compose's
 `AndroidView` (plan D185). The text model, the contract types (`ScriptureViewerTheme`, `ScriptureViewerController`, `ScriptureViewerEvents`
 and the rest) and the bar rule are not written again here: they are the Swift sources of `../Sources/ScriptureText`, transpiled to Kotlin by
-Skip in `../Transpile` (package `scripture.text`). The viewer's own Kotlin is package `scripture.viewer`.
+Skip when the package at the repository root is built (package `scripture.text`). The viewer's own Kotlin is package
+`scripture.viewer.compose`: the same files are this library and, linked into `../Sources/ScriptureViewer/Skip/`, the Android side of the
+package's `ScriptureViewer` (which is `scripture.viewer.ScriptureViewer` in Kotlin, a SwiftUI view whose body is this composable).
 
 ## What is here
 
 | | |
 |---|---|
-| `scriptureviewer/` | The library. `ScriptureViewer.kt` (the composable and the bridge to the contract), `ScriptureTextView.kt` (the view: scrolling, verse geometry, taps, gestures, selection menu, copy, highlights, focus), `ScriptureTextStyler.kt` (the model to a `Spannable`), `ScriptureTextTheme.kt` (colours, typeface and sizes in pixels). |
+| `scriptureviewer/` | The library. `AndroidScriptureViewer.kt` (the composable and the bridge to the contract), `AndroidTextView.kt` (the view: scrolling, verse geometry, taps, gestures, selection menu, copy, highlights, focus), `AndroidTextStyler.kt` (the model to a `Spannable`), `AndroidTextTheme.kt` (colours, typeface and sizes in pixels). The files are named apart from the Swift ones, because Skip writes each Swift file as a Kotlin file of the same name beside them. |
 | `scriptureviewer/src/androidTest/` | The tests, run on a device or an emulator. |
 | `demo/` | An app to try it by hand: Psalm 119 between two Compose bars that come and go as the viewer asks. |
 | `shared/` | Psalm 119 parsed on the device from its raw OSIS, for the demo and the tests. |
@@ -26,7 +28,7 @@ Skip in `../Transpile` (package `scripture.text`). The viewer's own Kotlin is pa
 The Kotlin core must exist first, and again after any change to the Swift core:
 
 ```
-cd ../Transpile && swift build
+cd .. && swift build
 ```
 
 Then, with `JAVA_HOME` (a JDK 17 or later, for example Android Studio's `jbr`) and the Android SDK (`ANDROID_HOME`, or `sdk.dir` in
@@ -86,8 +88,9 @@ requests no layout (the `Layout` object stays the same one); painting 176 bookma
 
 - **A real device and TalkBack.** The text is exposed to accessibility as one `TextView` (not an edit box) that can be moved through by
   word, line and paragraph, which a test checks; nobody has listened to it with TalkBack, and there is no navigation by verse.
-- **Hosting in the Skip-built app.** The SwiftUI-side `ScriptureViewer` is `ScriptureViewerSkip` in `../Transpile` (a Skip module: `ComposeView` around
-  this composable, with these Kotlin files linked in). It compiles and a check ran on the emulator; it has not been used from a Skip-built
-  PocketSword screen yet, and how that app takes the package (a Skip-enabled root package, a separate repository, or an AAR) is still open.
+- **Hosting in PocketSword.** The package's `ScriptureViewer` is this composable on Android, and a Skip app built from the package showed
+  Psalm 119 through it on the emulator; no PocketSword screen uses it yet.
+- **USFM in this project.** The demo and the tests take their Kotlin from the build of `ScriptureTextSource`, which does not hold
+  USFM or TEI (nothing in that graph needs them); an app built with Skip gets every module it imports.
 - **Publishing.** No AAR is published, and nothing here is in CI (the tests need an emulator).
 - **Two- and three-finger gestures** are implemented and their rules tested, but not driven by real touches.

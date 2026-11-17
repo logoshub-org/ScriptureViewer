@@ -1,1 +1,0 @@
-../../../../Sources/ScriptureText/Module/ScriptureContentProfile.swift

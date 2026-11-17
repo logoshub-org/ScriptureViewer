@@ -1,0 +1,12 @@
+# Skip configuration for the ScriptureViewer module: on Android the SwiftUI `ScriptureViewer` is the Compose viewer (plan D185).
+# The Kotlin files in this folder are links to ../../../Android/scriptureviewer/src/main/kotlin/scripture/viewer/compose: one copy of
+# the viewer, built here into the module and there into the Android library and its tests.
+skip:
+  mode: 'transpiled'
+
+build:
+  contents:
+    - block: 'dependencies'
+      contents:
+        # the viewer's scroll view
+        - 'implementation("androidx.core:core:1.18.0")'
