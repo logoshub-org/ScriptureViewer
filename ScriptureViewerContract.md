@@ -38,8 +38,10 @@ It asks two questions: `referenceLine(verses)`, the line put above copied text, 
 
 Draws the text and its styles; scrolls; keeps the verse at the top; dims all but a focused verse; draws highlights and the selection;
 finds the tap target at a point; copies the selection as the reader's copy (the core's `copiedText`: markers and note letters dropped,
-verse numbers set apart, plus the reference line). It opens no screen, resolves no lookup, reads no preference, and posts no
-notification.
+verse numbers set apart, plus the reference line). A new text starts at its top; the same text in another theme (night mode, a font,
+a size) keeps the reader's place: the verse at the top stays at the top, and the very top stays the very top. The focus, the selection
+and the highlights go in both cases, and the host's highlights are painted again. It opens no screen, resolves no lookup, reads no
+preference, and posts no notification.
 
 ## What leaves the component, and where it goes
 

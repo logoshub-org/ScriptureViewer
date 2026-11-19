@@ -151,8 +151,38 @@ internal class ScriptureTextView(context: Context) : FrameLayout(context) {
 
     fun display(scripture: ScriptureText, theme: ScriptureTextTheme) {
         this.scripture = scripture
+        style(theme)
+
+        currentVerse = 1
+        lastReportedOffset = 0.0
+        reportedEnd = false
+        // A new chapter starts at its top.
+        scrollTo(y = 0, animated = false)
+        // Text that fits the screen has been read to its end as soon as it shows.
+        whenLaidOut { post { reportEndIfAtBottom(userDriven = false) } }
+    }
+
+    /**
+     * The text on show in another theme (night mode, a font, a size): styled again where the reader is, not from its top. The verse at
+     * the top stays at the top, the very top (heading and all) stays the very top, and an end once reached stays reached. The focus,
+     * the selection and the highlights go, as for a new text; the host paints its highlights again.
+     */
+    fun restyle(theme: ScriptureTextTheme) {
+        if (scripture == null) return
+        val atTop = scroll.scrollY <= density
+        val verse = currentVerse
+        style(theme)
+        whenLaidOut {
+            if (atTop) scrollTo(y = 0, animated = false) else verseTop(verse)?.let { scrollTo(y = it, animated = false) }
+            currentVerse = verse
+            reportScroll()
+        }
+    }
+
+    /** Styles the text on show in a theme's fonts and colours, with nothing marked until the host says so. The scroll is the caller's. */
+    private fun style(theme: ScriptureTextTheme) {
+        val scripture = scripture ?: return
         this.theme = theme
-        // New text: nothing is marked until the host says so.
         bookmarkHighlights = emptyList()
         searchHighlights = emptyList()
         paintedSpans.clear()
@@ -176,14 +206,6 @@ internal class ScriptureTextView(context: Context) : FrameLayout(context) {
         textView.setPadding(margin, 0, margin, 0)
         setBackgroundColor(theme.backgroundColor)
         textView.setText(styled, TextView.BufferType.SPANNABLE)
-
-        currentVerse = 1
-        lastReportedOffset = 0.0
-        reportedEnd = false
-        // A new chapter starts at its top.
-        scrollTo(y = 0, animated = false)
-        // Text that fits the screen has been read to its end as soon as it shows.
-        whenLaidOut { post { reportEndIfAtBottom(userDriven = false) } }
     }
 
     // MARK: Insets

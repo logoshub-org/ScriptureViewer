@@ -275,6 +275,37 @@ class ScriptureViewerTests {
         }
     }
 
+    @Test
+    fun anotherThemeKeepsTheReadersPlace() {
+        val host = showPsalm()
+        val view = viewer()
+        host.controller.scroll(toVerse = 105)
+        onMain { assertEquals(105, view.verseAtTop()) }
+        // Night mode: the same text, styled again where the reader is.
+        host.theme = ScriptureViewerTheme(nightMode = true)
+        onMain {
+            assertEquals(android.graphics.Color.WHITE, view.textView.currentTextColor)
+            assertEquals(view.verseTop(105), view.scroll.scrollY)
+            assertEquals(105, view.verseAtTop())
+            assertEquals(105, host.controller.currentVerse)
+            assertEquals(view.scroll.scrollY / view.resources.displayMetrics.density.toDouble(), host.controller.scrollOffset, 0.01)
+        }
+        // A bigger font moves every line; the verse at the top is still the reader's.
+        host.theme = ScriptureViewerTheme(nightMode = true, fontSize = 20.0)
+        onMain {
+            assertEquals(view.verseTop(105), view.scroll.scrollY)
+            assertEquals(105, host.controller.currentVerse)
+        }
+        // At the very top, the heading above verse 1 stays in view.
+        host.controller.scroll(toOffset = 0.0)
+        onMain { assertEquals(0, view.scroll.scrollY) }
+        host.theme = ScriptureViewerTheme()
+        onMain {
+            assertEquals(0, view.scroll.scrollY)
+            assertEquals(1, host.controller.currentVerse)
+        }
+    }
+
     // MARK: Verses
 
     @Test

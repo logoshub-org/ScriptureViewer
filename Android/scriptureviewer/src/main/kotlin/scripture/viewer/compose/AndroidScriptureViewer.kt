@@ -129,12 +129,19 @@ internal class ScriptureViewerBridge(val view: ScriptureTextView) : ScriptureVie
         val metrics = view.resources.displayMetrics
         val fontScale = view.resources.configuration.fontScale
         var shownNow = false
-        if (shown?.matches(text, theme, metrics.density, fontScale) != true) {
+        val previous = shown
+        if (previous?.matches(text, theme, metrics.density, fontScale) != true) {
             shown = Shown(text, theme, metrics.density, fontScale)
             painted = null
-            view.display(text, ScriptureTextTheme(theme, metrics.density, fontScale))
-            // A new text starts at its top, unread.
-            controller?.update(scrollOffset = 0.0, verse = view.currentVerse, atEnd = false)
+            val styled = ScriptureTextTheme(theme, metrics.density, fontScale)
+            if (previous != null && (previous.text === text || previous.text == text)) {
+                // The same text in another theme keeps the reader's place; the view reports it once the new styling is laid out.
+                view.restyle(styled)
+            } else {
+                view.display(text, styled)
+                // A new text starts at its top, unread.
+                controller?.update(scrollOffset = 0.0, verse = view.currentVerse, atEnd = false)
+            }
             shownNow = true
         }
         if (painted != highlights) {

@@ -349,20 +349,7 @@ public final class ScriptureTextView: UIView {
 
 	public func display(_ scripture: ScriptureText, theme: ScriptureTextTheme) {
 		self.scripture = scripture
-		currentTheme = theme
-		// New text: nothing is marked until the host says so.
-		bookmarkHighlights = []
-		searchHighlights = []
-		highlights = []
-		paintedHighlights = []
-		focusedVerse = nil
-		dimmedRanges = []
-		let styled = styler.attributedString(for: scripture, theme: theme)
-		baseText = styled
-		textView.attributedText = styled
-		textView.backgroundColor = theme.backgroundColor
-		backgroundColor = theme.backgroundColor
-		applySideInsets()
+		style(theme)
 		currentVerse = 1
 		lastReportedOffsetY = 0
 		// A new chapter starts at its top. Without this, text laid out before the view had
@@ -375,6 +362,49 @@ public final class ScriptureTextView: UIView {
 		for delay in [0.0, 0.15, 0.5] {
 			DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in self?.reportEndIfAtBottom(userDriven: false) }
 		}
+	}
+
+	/// The text on show in another theme (night mode, a font, a size): styled again where the reader is, not from its top. The
+	/// verse at the top stays at the top, the very top (heading and all) stays the very top, and an end once reached stays
+	/// reached. The focus, the selection and the highlights go, as for a new text; the host paints its highlights again.
+	package func restyle(theme: ScriptureTextTheme) {
+		guard scripture != nil else { return }
+		let atTop = textView.contentOffset.y <= -topLength + 1
+		let verse = currentVerse
+		style(theme)
+		// The whole text, measured: TextKit 2 otherwise estimates the height of what it has not laid out, and the scroll to a
+		// verse further down would stop at the end of the estimate. A theme changes seldom; a chapter lays out in milliseconds.
+		if let layoutManager = textView.textLayoutManager, let contentManager = layoutManager.textContentManager {
+			layoutManager.ensureLayout(for: contentManager.documentRange)
+		}
+		textView.layoutIfNeeded()
+		if atTop {
+			textView.setContentOffset(CGPoint(x: 0, y: -topLength), animated: false)
+		} else {
+			scrollToVerse(verse, animated: false)
+		}
+		currentVerse = verse
+		// Report the place even when the offset did not move (the scroll callback only reports a move).
+		lastReportedOffsetY = max(textView.contentOffset.y + topLength, 0)
+		scriptureDelegate?.scriptureTextViewScrollHappened(self, newOffsetY: lastReportedOffsetY)
+	}
+
+	/// Styles the text on show in a theme's fonts and colours, with nothing marked until the host says so. The scroll is the caller's.
+	private func style(_ theme: ScriptureTextTheme) {
+		guard let scripture else { return }
+		currentTheme = theme
+		bookmarkHighlights = []
+		searchHighlights = []
+		highlights = []
+		paintedHighlights = []
+		focusedVerse = nil
+		dimmedRanges = []
+		let styled = styler.attributedString(for: scripture, theme: theme)
+		baseText = styled
+		textView.attributedText = styled
+		textView.backgroundColor = theme.backgroundColor
+		backgroundColor = theme.backgroundColor
+		applySideInsets()
 	}
 
 	// MARK: Reaching the end

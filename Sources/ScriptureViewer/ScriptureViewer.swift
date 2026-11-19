@@ -145,9 +145,15 @@ public struct ScriptureViewer: UIViewRepresentable {
             view.scrollView.isScrollEnabled = configuration.scrolls
 
             if shown?.text != viewer.text || shown?.theme != viewer.theme {
+                let sameText = shown?.text == viewer.text
                 shown = (viewer.text, viewer.theme)
                 painted = nil
-                view.display(viewer.text, theme: ScriptureTextTheme(viewer.theme))
+                if sameText {
+                    // The same text in another theme keeps the reader's place.
+                    view.restyle(theme: ScriptureTextTheme(viewer.theme))
+                } else {
+                    view.display(viewer.text, theme: ScriptureTextTheme(viewer.theme))
+                }
                 shownNow = true
             }
             if painted != viewer.highlights {
