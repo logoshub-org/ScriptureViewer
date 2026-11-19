@@ -372,12 +372,7 @@ public final class ScriptureTextView: UIView {
 		let atTop = textView.contentOffset.y <= -topLength + 1
 		let verse = currentVerse
 		style(theme)
-		// The whole text, measured: TextKit 2 otherwise estimates the height of what it has not laid out, and the scroll to a
-		// verse further down would stop at the end of the estimate. A theme changes seldom; a chapter lays out in milliseconds.
-		if let layoutManager = textView.textLayoutManager, let contentManager = layoutManager.textContentManager {
-			layoutManager.ensureLayout(for: contentManager.documentRange)
-		}
-		textView.layoutIfNeeded()
+		measureWholeText()
 		if atTop {
 			textView.setContentOffset(CGPoint(x: 0, y: -topLength), animated: false)
 		} else {
@@ -573,6 +568,7 @@ public final class ScriptureTextView: UIView {
 	/// Goes to a verse the reader asked for: near the top with a little space above it (as far as the text allows,
 	/// so a short chapter does not scroll past its end), and dims the text around it until the reader scrolls.
 	public func focusVerse(_ verse: Int) {
+		measureWholeText()
 		guard let rect = rectOfVerse(verse) else { return }
 		let visible = textView.bounds.height - topLength - bottomLength
 		let spacing = min(max(visible * 0.12, 24), 96)
@@ -599,12 +595,30 @@ public final class ScriptureTextView: UIView {
 	package var dimmedTextRanges: [NSRange] { dimmedRanges }
 
 	public func scrollToVerse(_ verse: Int, animated: Bool) {
+		measureWholeText()
 		guard let rect = rectOfVerse(verse) else { return }
 		var y = rect.minY - topLength
 		let maxY = max(textView.contentSize.height - textView.bounds.height + bottomLength, -topLength)
 		y = min(max(y, -topLength), maxY)
 		textView.setContentOffset(CGPoint(x: 0, y: y), animated: animated)
 		currentVerse = verse
+	}
+
+	/// Lays out the whole text, so `contentSize` is its real height. TextKit 2 otherwise estimates the height of what it has not
+	/// laid out, and a scroll further down than the estimate stops at its end: a jump to verse 30 of a 40-verse chapter stopped
+	/// about a third of the way short while reporting verse 30. Called before every scroll the host asks for; the layout is
+	/// kept, so a second call costs next to nothing.
+	private func measureWholeText() {
+		// A layout still pending (new text, a new width) first: run after the measuring, it would put the estimate back.
+		textView.layoutIfNeeded()
+		guard let layoutManager = textView.textLayoutManager, let contentManager = layoutManager.textContentManager else { return }
+		layoutManager.ensureLayout(for: contentManager.documentRange)
+		// The text view does not always take the measured height (after new text it keeps the estimate until the reader scrolls),
+		// so it is given it.
+		let height = (layoutManager.usageBoundsForTextContainer.maxY + textView.textContainerInset.top + textView.textContainerInset.bottom).rounded(.up)
+		if textView.contentSize.height < height {
+			textView.contentSize = CGSize(width: textView.contentSize.width, height: height)
+		}
 	}
 
 	/// The verse whose text crosses the top of the visible area.
@@ -639,7 +653,7 @@ public final class ScriptureTextView: UIView {
 
 	/// Scrolls so that `offset` (as `onScroll` reports it) is at the top.
 	package func scroll(toOffset offset: CGFloat, animated: Bool) {
-		textView.layoutIfNeeded()
+		measureWholeText()
 		let maxY = max(-topLength, textView.contentSize.height - textView.bounds.size.height + bottomLength)
 		textView.setContentOffset(CGPoint(x: 0, y: min(offset - topLength, maxY)), animated: animated)
 	}
