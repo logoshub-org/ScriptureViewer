@@ -69,7 +69,7 @@ preference, and posts no notification.
 - **Android (built 2026-11-16):** `Android/scriptureviewer`, a composable named `ScriptureViewer` (package `scripture.viewer.compose`) over
   `ScriptureTextView`, a selectable `TextView` holding the chapter as one `Spannable` in a `NestedScrollView`, hosted by `AndroidView`
   (plan D185). A bridge does what the iOS coordinator does. The contract types and the bar rule are this folder's Swift, transpiled by
-  Skip (package `scripture.text`), so both platforms and the Skip-built host use the same ones. Sixteen instrumented tests run it against
+  Skip (package `scripture.text`), so both platforms and the Skip-built host use the same ones. Seventeen instrumented tests run it against
   Psalm 119 on an emulator; what differs from iOS, what was measured and what is left is in `Android/README.md`. The package is a Skip
   package, so the SwiftUI view a Skip-built app names is this package's `ScriptureViewer`: `ScriptureViewer.swift` has an `#if SKIP` branch,
   the same struct with a `ComposeView` around the composable as its body, beside the UIKit branch (and a placeholder on macOS).

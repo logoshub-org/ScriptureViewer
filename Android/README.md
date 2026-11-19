@@ -42,8 +42,9 @@ Then, with `JAVA_HOME` (a JDK 21 or later, for example Android Studio's `jbr`; t
 
 CI runs the instrumented tests on every push: the job "Viewer on an Android emulator" (`.github/workflows/ci.yml`) transpiles the core
 on a Linux runner and runs them on an API 34 emulator (ReactiveCircus/android-emulator-runner). Before the tests the job turns off
-animations, unlocks the screen and closes system dialogs; the long-press test also waits for its window to have focus (a freshly booted
-emulator can show "System UI isn't responding" in front of it), and the copy test checks what Copy hands the clipboard through the
+animations, unlocks the screen, closes system dialogs and sets `hide_error_dialogs`; the long-press test also waits for its window to have
+focus (a freshly booted emulator can show "System UI isn't responding" in front of it), and while it looks for the selection menu presses
+Wait on any such dialog (on 2026-11-19 "Pixel Launcher isn't responding" covered the menu), and the copy test checks what Copy hands the clipboard through the
 view's `putOnClipboard` rather than reading the clipboard back, which Android allows only to the window with focus.
 
 The settings file takes the core in as an included build (Skip's generated Gradle project for `ScriptureTextSource`, which holds

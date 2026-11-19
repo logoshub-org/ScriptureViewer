@@ -132,8 +132,10 @@ instrumented tests run on an Android emulator.
 
 The tests run against real module files in [TestModules/](TestModules/README.md) (public-domain texts, and the KJV).
 
-- **Mac:** `swift test`, the quickest while working.
+- **Mac:** `swift test`, the quickest while working. The iOS viewer's tests are empty here (UIKit).
 - **iOS simulator:** `xcodebuild test -scheme ScriptureViewer-Package -destination 'platform=iOS Simulator,name=…' -skipPackagePluginValidation`.
+  This also runs `ScriptureViewerTests`, the iOS viewer in a window: scrolling to a verse, the verse at the top, a resize, a theme
+  change, the end, gestures, the selection menu, and the styler against its golden file (`Tests/ScriptureViewerTests/Fixtures`).
 - **Android:** the Kotlin parity tests in [Transpile/](Transpile/), and the viewer's instrumented tests on an emulator
   (see [Android/README.md](Android/README.md)).
 
