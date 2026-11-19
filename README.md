@@ -1,88 +1,57 @@
 # ScriptureViewer
 
-A native reading surface for scripture, and the portable text model and parsers under it, for iOS (and for Android through the same
-contract, see below).
+A native scripture reader view for SwiftUI apps on iOS, and on Android through [Skip](https://skip.dev).
 
-The app that embeds it does the co-ordinating: it finds the scripture, decides what to show and what a tap should do. ScriptureViewer
-turns a module's text into a styled, scrollable, selectable text and reports what the reader does with it. It opens no screens, reads no
-preferences, resolves no lookups and has no dependency on any Bible engine.
+Give it a chapter of scripture and it shows it as styled, scrollable, selectable text, then tells your app what the reader taps,
+selects and scrolls to. Your app keeps control of everything else: screens, navigation, bookmarks, lookups and settings.
 
-## What you get
+## Where the scripture comes from
 
-- **The viewer (iOS 17 and later):** `ScriptureViewer`, a SwiftUI view over a TextKit 2 text view. It scrolls to an exact verse, knows which verse is at the
-  top, dims all but a focused verse, selects and copies across paragraphs, draws bookmark and search highlights, and reports taps (a verse
-  number, a word, a note letter, a link), scrolls, gestures and selections as events.
-- **The text model:** `ScriptureText` (text, styled spans, verse ranges, word anchors, paragraph roles, notes, passage identity), with no UI
-  framework. It builds on any platform Swift runs on.
-- **Parsers for module markup:** OSIS, TEI, ThML, GBF (CrossWire's older markup), plain text, and USFM 3 (a Bible as a folder of book
-  files). Foundation only.
-- **Versification:** Paratext's six standard versifications and a `.vrs` reader.
+You supply the text. ScriptureViewer parses the formats Bible modules use:
 
-## Adding it
+- **SWORD-style modules** (CrossWire): OSIS, GBF, ThML, TEI and plain text. Your app hands over a chapter's raw entries from whatever
+  holds them (a Bible engine, files, a server), and the package picks the right parser.
+- **USFM 3 Bibles**: point it at a folder of book files, as published by eBible.org and Paratext.
 
-In Xcode: File, Add Package Dependencies, enter `https://github.com/logoshub-org/ScriptureViewer`, choose a version, and add the
-**ScriptureViewer** library (the viewer, with the text model and the module reader). Or in a `Package.swift`:
+Versification is built in: Paratext's six standard systems, and a reader for `.vrs` files.
+
+## What the viewer gives your app
+
+- Scrolls to an exact verse and reports which verse is at the top
+- Headings, poetry, footnotes, cross-references, red letter, Strong's numbers, right-to-left text
+- Selection and copy across paragraphs, with a reference line on copied text
+- Bookmark and search highlights, and focus on a single verse
+- Events for taps on a verse number, word, note or link, and for scrolls, swipes, selections and menu items
+- Night mode, fonts, sizes and insets set by your app
+
+## Installing
+
+In Xcode, choose **File > Add Package Dependencies**, enter the URL below, and add the **ScriptureViewer** library.
 
 ```swift
-.package(url: "https://github.com/logoshub-org/ScriptureViewer.git", from: "0.1.0")
-// then: .product(name: "ScriptureViewer", package: "ScriptureViewer")
+.package(url: "https://github.com/logoshub-org/ScriptureViewer.git", from: "0.2.1")
 ```
 
-It is a [Skip](https://skip.dev) package: when it is built, Skip's build plugin also writes the Kotlin of its library targets, for an
-Android app built with Skip. Nothing of Skip runs in an iOS app. What it means for you:
+Requires iOS 17. The parsers and text model are also available as separate libraries with no UI framework.
 
-- **Xcode asks you to trust the plugin** the first time (Trust & Enable). Command-line and CI builds pass `-skipPackagePluginValidation`
-  to `xcodebuild`.
-- **An iOS-only host can leave Skip out**: building with the environment variable `SKIP_ZERO=1` strips the plugin and the Skip
-  dependencies, and the package is plain Swift.
-- **On macOS** `ScriptureViewer` is a placeholder that shows nothing, so code shared with iOS and Android builds on a Mac.
-
-The other products are the portable parts alone, for code that does not draw anything: `ScriptureText`, `ScriptureTextOSIS`,
-`ScriptureTextTEI`, `ScriptureTextThML`, `ScriptureTextGBF`, `ScriptureTextPlain`, `ScriptureTextSource`, `ScriptureTextUSFM`,
-`ScriptureTextVersification` and `ScriptureTextMarkup`.
-
-## Using it
-
-Your app gives the package the unrendered entries of a chapter, by implementing `RawChapterReading` over whatever holds your modules
-(an engine, files, a server). The package parses them by the module's markup:
+## Quick look
 
 ```swift
 import ScriptureViewer
 
-let source = ScriptureModuleSource(reader: myReader)                 // your RawChapterReading
-let chapter = source.chapter(module: "KJV", reference: "John 3", display: .init())   // a ScriptureText?
+let source = ScriptureModuleSource(reader: myReader)   // your RawChapterReading
+let chapter = source.chapter(module: "KJV", reference: "John 3", display: .init())
 
-ScriptureViewer(text: chapter, theme: theme, highlights: marks, configuration: setup, controller: controller, events: events)
+ScriptureViewer(text: chapter, theme: theme, highlights: marks,
+                configuration: setup, controller: controller, events: events)
 ```
 
-`ScriptureViewerEvents` holds the closures the viewer calls (`onScroll`, `onTap`, `onSelectionChange`, `onMenuItem`, `onPull`,
-`onChromeRequest`, and the two questions it asks, `referenceLine` and `canHideChrome`). `ScriptureViewerController` carries your commands
-to it (scroll to a verse, focus a verse). The full boundary, input by input and event by event, is in
-[ScriptureViewerContract.md](ScriptureViewerContract.md).
+## Learn more
 
-## Android
-
-One `ScriptureViewer`, two realisations behind the same contract. In an app built with Skip, the same SwiftUI code names the same view:
-on iOS it is the UIKit text view above; on Android (`#if SKIP` in `ScriptureViewer.swift`) it is a Compose viewer over a `TextView`, whose
-Kotlin is in [Android/](Android/README.md) and is linked into the target. Every library target goes through Skip, and the Kotlin is checked
-against the Swift results by the parity tests in `Transpile/`. A Skip app built from the package (the viewer showing Psalm 119) and the
-viewer's own instrumented tests run on an Android emulator; it has not been hosted in PocketSword yet.
-
-## Tests
-
-The package's tests run against real module files in `TestModules/` (public-domain texts, and the KJV, see its README). CI runs them on
-an iOS simulator (`xcodebuild test -scheme ScriptureViewer-Package -destination 'platform=iOS Simulator,name=…'
--skipPackagePluginValidation`), and runs the Kotlin parity tests in `Transpile/` for Android (see its README). `swift test` runs the same
-package tests on a Mac, which is quicker while working. A third job runs the viewer's instrumented tests on an Android emulator, on a
-Linux runner (see [Android/README.md](Android/README.md)).
-
-## Versions
-
-Semantic versioning. While the version starts with 0, the public API may still change between minor versions. The public surface of the
-viewer target is kept small on purpose: what a host needs is `public`, and a test (`PackageGuardTests`) fails if it grows unnoticed.
+- [Instructions.md](Instructions.md) covers every library, loading SWORD-style and USFM text, the viewer's inputs and events, the Skip
+  build and Android, and the tests.
+- [ScriptureViewerContract.md](ScriptureViewerContract.md) specifies the viewer's inputs and events one by one.
 
 ## Licence
 
-The package is MPL-2.0 (see [LICENSE](LICENSE)): each source file states it. It is portable by design and contains no GPL code, so a
-GPL, proprietary or other application may use it, as the MPL allows. Embedded third-party data (SIL's Paratext versification files, the
-USFM marker grouping) and the test modules keep their own licences: see [NOTICE](NOTICE).
+MPL-2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
