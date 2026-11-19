@@ -195,6 +195,12 @@ class ScriptureViewerTests {
         var lastChange = SystemClock.uptimeMillis()
         while (SystemClock.uptimeMillis() < end) {
             try {
+                // A slow emulator's "… isn't responding" dialog covers the menu (seen on CI with the launcher): wait it out.
+                device.findObject(By.res("android", "aerr_wait"))?.let {
+                    it.click()
+                    ensureWindowFocus()
+                    lastChange = SystemClock.uptimeMillis()
+                }
                 device.findObject(By.text(title))?.let { item ->
                     if (click) item.click()
                     return true

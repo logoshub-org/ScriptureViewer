@@ -82,8 +82,10 @@ jobs:
           disable-animations: true
           working-directory: Android
           # The screen unlocked and no system dialog in front ("System UI isn't responding" on a slow boot), so the test's window
-          # has focus: the long press goes through the whole screen.
+          # has focus: the long press goes through the whole screen. hide_error_dialogs: a system app that stalls later on the shared
+          # runner ("Pixel Launcher isn't responding") puts no dialog over the test's window.
           script: |
+            adb shell settings put global hide_error_dialogs 1
             adb shell input keyevent 82
             adb shell am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS
             ./gradlew --no-daemon :scriptureviewer:connectedDebugAndroidTest
