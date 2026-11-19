@@ -595,7 +595,14 @@ public final class ScriptureTextView: UIView {
 	package var dimmedTextRanges: [NSRange] { dimmedRanges }
 
 	public func scrollToVerse(_ verse: Int, animated: Bool) {
-		measureWholeText()
+		scrollToVerse(verse, animated: animated, measuring: true)
+	}
+
+	/// `measuring` false: in the view's own layout pass (a new size), where measuring the whole text moves the lines again as the
+	/// scroll lands, and the verse ends up off the top (50 pt in a test that narrows the view). The text was measured when the
+	/// reader was brought there.
+	private func scrollToVerse(_ verse: Int, animated: Bool, measuring: Bool) {
+		if measuring { measureWholeText() }
 		guard let rect = rectOfVerse(verse) else { return }
 		var y = rect.minY - topLength
 		let maxY = max(textView.contentSize.height - textView.bounds.height + bottomLength, -topLength)
@@ -716,7 +723,7 @@ public final class ScriptureTextView: UIView {
 				// its own layout pass; without that the verse rect and the
 				// scroll clamp would both come from the old geometry.
 				textView.layoutIfNeeded()
-				scrollToVerse(currentVerse, animated: false)
+				scrollToVerse(currentVerse, animated: false, measuring: false)
 			}
 		}
 	}
