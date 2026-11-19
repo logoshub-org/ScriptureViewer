@@ -151,6 +151,15 @@ let package = Package(
         .testTarget(
             name: "PackageGuardTests"
         ),
+        // The iOS viewer in a window: scrolling to a verse, the verse at the top, a resize, a theme change, the end, gestures, the
+        // selection menu, the styler against its golden file. UIKit, so the files are empty on macOS and Linux (`#if canImport(UIKit)`);
+        // they run on the iOS simulator.
+        .testTarget(
+            name: "ScriptureViewerTests",
+            dependencies: ["ScriptureViewer", "ScriptureText", "ScriptureTextOSIS"],
+            exclude: ["Fixtures"],   // the styler's golden file, read by path
+            swiftSettings: [.swiftLanguageMode(.v5)]
+        ),
         .testTarget(
             name: "ScriptureTextModulesTests",
             dependencies: ["ScriptureTextTestSupport", "ScriptureTextSource", "ScriptureTextGBF", "ScriptureTextOSIS",

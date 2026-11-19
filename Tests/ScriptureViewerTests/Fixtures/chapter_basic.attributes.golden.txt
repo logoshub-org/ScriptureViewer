@@ -1,0 +1,31 @@
+0+1 [1] NSBaselineOffset=5 NSColor=#000000 NSFont=HelveticaNeue@10.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=1
+1+17 [In the beginning ] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=1
+18+3 [God] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureStrongs=strong:H07225 scriptureVerse=1
+21+7 [<07225>] NSBaselineOffset=5 NSColor=#7F7F7F NSFont=HelveticaNeue-Italic@8.0+I NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureStrongs=strong:H07225 scriptureVerse=1
+28+34 [ created the heaven and the earth.] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=1
+62+1 [ ] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0)
+63+1 [2] NSBaselineOffset=5 NSColor=#000000 NSFont=HelveticaNeue@10.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=2
+64+18 [And the earth was ] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=2
+82+12 [without form] NSColor=#000000 NSFont=HelveticaNeue-Italic@14.0+I NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=2
+94+21 [, and void; darkness ] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=2
+115+1 [n] NSBaselineOffset=5 NSColor=#7F7F7F NSFont=HelveticaNeue@10.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureFootnoteID=2.1 scriptureVerse=2
+116+19 [ was upon the deep.] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=2
+135+1 [ ] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0)
+136+1 [3] NSBaselineOffset=5 NSColor=#000000 NSFont=HelveticaNeue@10.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=3
+137+18 [Let there be light] NSColor=#D03030 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureMorph=robinson:HNC scriptureVerse=3
+155+5 [(HNC)] NSBaselineOffset=5 NSColor=#7F7F7F NSFont=HelveticaNeue-Italic@8.0+I NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureMorph=robinson:HNC scriptureVerse=3
+160+2 [ ב] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=3
+162+1 [⏎] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0)
+163+1 [4] NSBaselineOffset=5 NSColor=#000000 NSFont=HelveticaNeue@10.0 NSParagraphStyle=para(lh:19.60,head:14.0,first:14.0) scriptureVerse=4
+164+20 [Indented poetry line] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:14.0,first:14.0) scriptureVerse=4
+184+2 [⏎⏎] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0)
+186+1 [5] NSBaselineOffset=5 NSColor=#000000 NSFont=HelveticaNeue@10.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=5
+187+25 [Second paragraph 𝔊 with ] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=5
+212+4 [bold] NSColor=#000000 NSFont=HelveticaNeue-Bold@14.0+B NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=5
+216+4 [both] NSColor=#000000 NSFont=HelveticaNeue-BoldItalic@14.0+BI NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=5
+220+6 [italic] NSColor=#000000 NSFont=HelveticaNeue-Italic@14.0+I NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=5
+226+9 [ repair, ] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=5
+235+11 [small print] NSColor=#000000 NSFont=HelveticaNeue@13.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=5
+246+8 [, and a ] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=5
+254+4 [link] NSColor=#FF00FF NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureLink=osis:John.3.16 scriptureVerse=5
+258+1 [.] NSColor=#000000 NSFont=HelveticaNeue@14.0 NSParagraphStyle=para(lh:19.60,head:0.0,first:0.0) scriptureVerse=5
