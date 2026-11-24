@@ -644,6 +644,11 @@ class ScriptureViewerTests {
         compose.waitUntil(10_000) { host.gestures.contains(ScriptureViewerGesture.swipeLeft) }
         node.performTouchInput { swipe(Offset(width * 0.2f, centerY), Offset(width * 0.8f, centerY - 10f), 120) }
         compose.waitUntil(10_000) { host.gestures.contains(ScriptureViewerGesture.swipeRight) }
+        // An unhurried swipe is one too: what counts is how far the finger went sideways, not how fast.
+        host.gestures.clear()
+        node.performTouchInput { swipe(Offset(width * 0.8f, centerY), Offset(width * 0.2f, centerY + 10f), 1_200) }
+        compose.waitUntil(10_000) { host.gestures.contains(ScriptureViewerGesture.swipeLeft) }
+        assertEquals(listOf(ScriptureViewerGesture.swipeLeft), host.gestures.filter { it != ScriptureViewerGesture.plainTap })
         assertTrue(host.pulls.isEmpty())
 
         // At the top, a drag on down past it asks for the previous chapter.

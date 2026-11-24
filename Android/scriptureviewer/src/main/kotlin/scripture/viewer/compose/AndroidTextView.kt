@@ -617,15 +617,6 @@ internal class ScriptureTextView(context: Context) : FrameLayout(context) {
             reportPlainTap(x, y)
             return false
         }
-
-        override fun onFling(start: MotionEvent?, end: MotionEvent, velocityX: Float, velocityY: Float): Boolean {
-            val dx = end.x - downX
-            val dy = end.y - downY
-            if (pointers == 1 && abs(dx) >= swipeDistanceDp * density && abs(dx) > 2 * abs(dy) && abs(velocityX) > abs(velocityY)) {
-                reportSwipe(left = dx < 0)
-            }
-            return false
-        }
     })
 
     /** Watches every touch on its way to the text and the scroll view; it takes none of them. */
@@ -680,6 +671,11 @@ internal class ScriptureTextView(context: Context) : FrameLayout(context) {
                     onGesture?.invoke(ScriptureViewerGesture.twoFingerTap)
                 }
                 if (dragging && pointers == 1 && !touchBeganWithSelection && !textView.hasSelection()) dragEnded()
+                // A swipe is decided when the finger lifts, by how far it went and which way, at any speed: a fling's speed was the
+                // rule, and an unhurried swipe (or a mouse's drag in the emulator) changed nothing.
+                val dx = event.x - downX
+                val dy = event.y - downY
+                if (pointers == 1 && !dragging && abs(dx) >= swipeDistanceDp * density && abs(dx) > 2 * abs(dy)) reportSwipe(left = dx < 0)
             }
             MotionEvent.ACTION_CANCEL -> {
                 // A parent took the touch (a pager, a sheet): nothing of it is a gesture of the reader's.
@@ -855,7 +851,7 @@ internal class ScriptureTextView(context: Context) : FrameLayout(context) {
         /** How far beside a character a tap still counts as on it, in dp. */
         const val tapSlackDp = 6f
         const val tapAfterShowWindow = 1000L
-        /** A swipe left or right is at least this far, and more than twice as far sideways as up or down. */
+        /** A swipe left or right is at least this far, and more than twice as far sideways as up or down, at any speed. */
         const val swipeDistanceDp = 64f
         const val threeFingerDragDp = 100f
         const val twoFingerTapMillis = 400L
