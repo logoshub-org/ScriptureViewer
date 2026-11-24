@@ -6,6 +6,8 @@ on:
   push:
     branches: [main]
   pull_request:
+  # run by hand: the Actions tab's "Run workflow", or `gh workflow run CI --ref main`
+  workflow_dispatch:
 
 # The two platforms the package is for: iOS, and Android through Skip.
 jobs:
