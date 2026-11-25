@@ -658,7 +658,15 @@ internal class ScriptureTextView(context: Context) : FrameLayout(context) {
             MotionEvent.ACTION_MOVE -> {
                 val dx = event.x - downX
                 val dy = event.y - downY
-                if (abs(dx) > touchSlop || abs(dy) > touchSlop) movedPastSlop = true
+                if (!movedPastSlop && (abs(dx) > touchSlop || abs(dy) > touchSlop)) {
+                    movedPastSlop = true
+                    // A finger that sets off sideways before a long press is due is swiping: the text's long press would otherwise go
+                    // off under a slow swipe (a view keeps its long press while the finger stays inside it) and select a word, and a
+                    // swipe that ends in a selection is not one. A long press to select holds still first, so it is not touched.
+                    if (event.pointerCount == 1 && abs(dx) > abs(dy) && event.eventTime - event.downTime < ViewConfiguration.getLongPressTimeout()) {
+                        textView.cancelLongPress()
+                    }
+                }
                 if (event.pointerCount == 1 && !dragging && abs(dy) > touchSlop && abs(dy) > abs(dx)) dragging = true
                 if (dragging && event.pointerCount == 1) trackPull(event.y)
                 if (event.pointerCount == 3) {
