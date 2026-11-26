@@ -1,4 +1,4 @@
-package scripture.viewer
+package scripture.viewer.skip.ui
 
 import android.view.View
 import android.view.ViewGroup

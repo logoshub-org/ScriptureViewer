@@ -71,8 +71,9 @@ preference, and posts no notification.
   (plan D185). A bridge does what the iOS coordinator does. The contract types and the bar rule are this folder's Swift, transpiled by
   Skip (package `scripture.text`), so both platforms and the Skip-built host use the same ones. Seventeen instrumented tests run it against
   Psalm 119 on an emulator; what differs from iOS, what was measured and what is left is in `Android/README.md`. The package is a Skip
-  package, so the SwiftUI view a Skip-built app names is this package's `ScriptureViewer`: `ScriptureViewer.swift` has an `#if SKIP` branch,
-  the same struct with a `ComposeView` around the composable as its body, beside the UIKit branch (and a placeholder on macOS).
+  package. A native Android app calls the composable (`scripture.viewer.compose.ScriptureViewer`) directly, and the ScriptureViewer module
+  needs no SkipUI. A Skip-built app whose shared screens are SwiftUI names the viewer through the `ScriptureViewerSkipUI` product: the
+  same struct with a `ComposeView` around the composable as its body, the only part of the package that depends on SkipUI.
 
 ## Open points
 
@@ -83,8 +84,8 @@ preference, and posts no notification.
 3. **iOS navigation bar:** `setContentScrollView` ties the bar's scroll-edge effect to the text view; a SwiftUI wrapper needs a
    view-controller representable, or accepts the plainer bar.
 4. **Observation:** settled: with SkipModel the controller transpiles, its properties become Compose state, and a composable that
-   reads `currentVerse` follows the scroll (tested). The SwiftUI view a Skip-built app's shared code names is the `#if SKIP` branch of
-   `ScriptureViewer.swift`, a `ComposeView` around the composable.
+   reads `currentVerse` follows the scroll (tested). The SwiftUI view a Skip-built app's shared code names is in the
+   `ScriptureViewerSkipUI` product, a `ComposeView` around the composable.
 5. **Sizing:** done on both: `scrolls = false` takes the text's height (SwiftUI `sizeThatFits` on iOS, the view's measured height on
    Android).
 6. **The detail pane in the host:** history and Back inside the pane become the host's job.

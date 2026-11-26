@@ -11,8 +11,9 @@ Underneath it is a selectable `TextView` holding the chapter as one `Spannable`,
 `AndroidView` (plan D185). The text model, the contract types (`ScriptureViewerTheme`, `ScriptureViewerController`, `ScriptureViewerEvents`
 and the rest) and the bar rule are not written again here: they are the Swift sources of `../Sources/ScriptureText`, transpiled to Kotlin by
 Skip when the package at the repository root is built (package `scripture.text`). The viewer's own Kotlin is package
-`scripture.viewer.compose`: the same files are this library and, linked into `../Sources/ScriptureViewer/Skip/`, the Android side of the
-package's `ScriptureViewer` (which is `scripture.viewer.ScriptureViewer` in Kotlin, a SwiftUI view whose body is this composable).
+`scripture.viewer.compose`: the same files are this library and, linked into `../Sources/ScriptureViewer/Skip/`, the package's
+ScriptureViewer module on Android (which needs Compose UI, not SkipUI). A Skip app with SwiftUI screens names the viewer through the
+`ScriptureViewerSkipUI` product, a SwiftUI view whose body is this composable.
 
 ## What is here
 

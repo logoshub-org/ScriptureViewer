@@ -1,0 +1,4 @@
+# Skip configuration for the ScriptureViewerSkipUI module: the SwiftUI `ScriptureViewer` on Android, whose body is the Compose viewer of the
+# ScriptureViewer module. Only this module depends on SkipUI.
+skip:
+  mode: 'transpiled'

@@ -41,13 +41,13 @@ test target may only use modules below that one: tests that need the whole graph
 
 ## The viewer's check on Android
 
-`Checks/WrapperCheck.kt` shows a chapter through the package's `ScriptureViewer` on Android (the `#if SKIP` branch, whose body is the
-Compose viewer), checks the text on screen, and that a controller command reaches the view. It ran on the emulator (2026-11-17). It is not
+`Checks/WrapperCheck.kt` shows a chapter through the package's SwiftUI `ScriptureViewer` on Android (the `ScriptureViewerSkipUI`
+module, whose body is the Compose viewer), checks the text on screen, and that a controller command reaches the view. It ran on the emulator (2026-11-17). It is not
 wired into `swift test` (it needs an emulator and test dependencies the generated project does not have): to run it, build the package at
 the repository root, add the file to
-`../.build/plugins/outputs/scriptureviewer/ScriptureViewer/destination/skipstone/ScriptureViewer/src/androidTest/kotlin/scripture/viewer/`, add
+`../.build/plugins/outputs/scriptureviewer/ScriptureViewerSkipUI/destination/skipstone/ScriptureViewerSkipUI/src/androidTest/kotlin/scripture/viewer/skip/ui/`, add
 `androidx.compose.ui:ui-test-junit4`, `androidx.test.espresso:espresso-core:3.7.0` and `ui-test-manifest` to that module's
-`build.gradle.kts`, and run `gradle :ScriptureViewer:connectedDebugAndroidTest` in its `skipstone` folder.
+`build.gradle.kts`, and run `gradle :ScriptureViewerSkipUI:connectedDebugAndroidTest` in its `skipstone` folder.
 
 ## Writing code the transpiler takes
 

@@ -123,7 +123,7 @@ Android app built with Skip. Nothing of Skip runs in an iOS app.
   dependencies, and the package is plain Swift.
 
 One `ScriptureViewer`, two realisations behind the same contract. In an app built with Skip, the same SwiftUI code names the same view:
-on iOS it is the UIKit text view; on Android (`#if SKIP` in `ScriptureViewer.swift`) it is a Compose viewer over a `TextView`, whose
+on iOS it is the UIKit text view; on Android (the `ScriptureViewerSkipUI` product) it is a Compose viewer over a `TextView`, whose
 Kotlin is in [Android/](Android/README.md) and is linked into the target. Every library target goes through Skip, and the Kotlin is
 checked against the Swift results by the parity tests in [Transpile/](Transpile/). A Skip app built from the package and the viewer's own
 instrumented tests run on an Android emulator.

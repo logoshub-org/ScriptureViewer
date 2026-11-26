@@ -17,6 +17,9 @@ let package = Package(
         // The component: the reading surface in UIKit (iOS) with the portable core under it. `import ScriptureViewer` gives the text
         // view, the viewer, the book navigator and the model they show; the library products below are for the portable parts alone.
         .library(name: "ScriptureViewer", targets: ["ScriptureViewer"]),
+        // Android only: the viewer as a SwiftUI view, for a Skip app whose shared screens are SwiftUI (its body is the Compose viewer).
+        // The only product that needs SkipUI; empty on iOS and macOS, where `ScriptureViewer` is the SwiftUI view.
+        .library(name: "ScriptureViewerSkipUI", targets: ["ScriptureViewerSkipUI"]),
         // The model: text, spans, verse ranges, word anchors, paragraph roles, style sheet, passage identity.
         .library(name: "ScriptureText", targets: ["ScriptureText"]),
         // The OSIS source format: tokenizer, builder and OSISParser (plan D32, D39). Foundation only.
@@ -54,6 +57,10 @@ let package = Package(
             name: "ScriptureViewer",
             dependencies: ["ScriptureText", "ScriptureTextSource"],
             swiftSettings: [.swiftLanguageMode(.v5)]
+        ),
+        .target(
+            name: "ScriptureViewerSkipUI",
+            dependencies: ["ScriptureViewer", "ScriptureText"]
         ),
         .target(
             name: "ScriptureText"
@@ -173,11 +180,11 @@ let package = Package(
 // Every library target but the test support is a Skip module: the skipstone plugin writes its Kotlin and a Gradle project when the
 // package is built (nothing of Skip runs in an iOS app: on iOS the Skip libraries are the platform's own types). Each target's `Skip/`
 // folder holds its skip.yml; the viewer's also links the Android viewer's Kotlin (`../Android/scriptureviewer`), which its
-// `#if SKIP` branch shows. The model needs SkipModel for the viewer controller's Observation, the viewer SkipUI for its Compose branch.
+// `#if SKIP` branch shows. The model needs SkipModel for the viewer controller's Observation; only the SwiftUI wrapper (ScriptureViewerSkipUI) needs SkipUI.
 for target in package.targets where target.type == .regular && target.name != "ScriptureTextTestSupport" {
     target.dependencies.append(Target.Dependency.product(name: "SkipFoundation", package: "skip-foundation"))
     if target.name == "ScriptureText" { target.dependencies.append(Target.Dependency.product(name: "SkipModel", package: "skip-model")) }
-    if target.name == "ScriptureViewer" { target.dependencies.append(Target.Dependency.product(name: "SkipUI", package: "skip-ui")) }
+    if target.name == "ScriptureViewerSkipUI" { target.dependencies.append(Target.Dependency.product(name: "SkipUI", package: "skip-ui")) }
     var plugins: [Target.PluginUsage] = target.plugins ?? []
     plugins.append(Target.PluginUsage.plugin(name: "skipstone", package: "skip"))
     target.plugins = plugins

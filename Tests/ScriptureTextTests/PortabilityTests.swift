@@ -38,12 +38,13 @@ struct PortabilityTests {
             .deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
             .appendingPathComponent("Package.swift"), encoding: .utf8)
         // each `.target(` or `.testTarget(` block, up to the next one; the targets end where the manifest's Skip section starts (which
-        // names the viewer target to give it SkipUI, not as a dependency)
+        // names the SwiftUI wrapper's target to give it SkipUI, not as a dependency)
         let targets = manifest.components(separatedBy: "// MARK: Skip")[0]
         let blocks = targets.components(separatedBy: ".target(").dropFirst().flatMap { $0.components(separatedBy: ".testTarget(") }
         var checked = 0
-        // the viewer, and the viewer's own tests
-        for block in blocks where !block.contains("name: \"ScriptureViewer\"") && !block.contains("name: \"ScriptureViewerTests\"") {
+        // the viewer, its SwiftUI wrapper for Skip apps (ScriptureViewerSkipUI, Android only), and the viewer's own tests
+        for block in blocks where !block.contains("name: \"ScriptureViewer\"") && !block.contains("name: \"ScriptureViewerSkipUI\"")
+            && !block.contains("name: \"ScriptureViewerTests\"") {
             #expect(!block.contains("\"ScriptureViewer\""), "a portable target depends on the viewer")
             checked += 1
         }

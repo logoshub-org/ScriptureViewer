@@ -7,40 +7,9 @@
 
 #if SKIP
 
-import SwiftUI
-import ScriptureText
-
-/// The scripture viewer on Android (plan D157, D185, ScriptureViewerContract.md): the same SwiftUI view, with the same name and values,
-/// as the iOS one below, so an app's shared screens name it without a `#if SKIP` of their own. Skip carries this to Kotlin, where its
-/// body is the Compose viewer in `Android/scriptureviewer` (package `scripture.viewer.compose`, its Kotlin linked into `Skip/`): a
-/// `TextView` holding the chapter as one `Spannable`.
-public struct ScriptureViewer: View {
-
-    let text: ScriptureText
-    let theme: ScriptureViewerTheme
-    let highlights: ScriptureHighlights
-    let configuration: ScriptureViewerConfiguration
-    let controller: ScriptureViewerController?
-    let events: ScriptureViewerEvents
-
-    public init(text: ScriptureText, theme: ScriptureViewerTheme = ScriptureViewerTheme(), highlights: ScriptureHighlights = ScriptureHighlights(),
-                configuration: ScriptureViewerConfiguration = ScriptureViewerConfiguration(), controller: ScriptureViewerController? = nil,
-                events: ScriptureViewerEvents = ScriptureViewerEvents()) {
-        self.text = text
-        self.theme = theme
-        self.highlights = highlights
-        self.configuration = configuration
-        self.controller = controller
-        self.events = events
-    }
-
-    public var body: some View {
-        ComposeView { context in
-            scripture.viewer.compose.ScriptureViewer(text: text, modifier: context.modifier, theme: theme, highlights: highlights,
-                                                     configuration: configuration, controller: controller, events: events)
-        }
-    }
-}
+// On Android the viewer is the Compose one, `scripture.viewer.compose.ScriptureViewer` (`Android/scriptureviewer`, its Kotlin linked into
+// `Skip/`), which a native Android app calls directly. This module needs no SkipUI for it. A Skip app whose shared screens are SwiftUI
+// names the viewer through the `ScriptureViewerSkipUI` product, the same SwiftUI view as the iOS one below.
 
 #elseif canImport(UIKit)
 
