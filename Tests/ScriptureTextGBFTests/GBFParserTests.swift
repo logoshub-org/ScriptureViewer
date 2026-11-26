@@ -71,6 +71,21 @@ struct GBFParserTests {
         #expect(strongs == ["strong:G3972", "strong:G1223", "strong:G2307"], "\(strongs)")
     }
 
+    /// `<WTG5719>` is a Strong's tense number, labelled as OSIS modules label it (`strongMorph:TG5719`); it was once `robinson:5719`,
+    /// which a Robinson lookup misread. Its marker still shows the number. `<WT…>` with a Robinson code stays Robinson's, whole.
+    @Test func aTenseNumberIsStrongsMorphologyAndARobinsonCodeIsRobinsons() {
+        var options = OSISParser.Options()
+        options.morphMarkers = true
+        let m = chapter(["λόγος<WG3056><WTG5719> καί<WTN-NSF> אָמַר<WTH 8804> עִבְרִי<WTHEB>"], options: options)
+        let codes = m.spans.compactMap { if case .morph(let code) = $0.attribute { code } else { nil } }
+        #expect(codes == ["strongMorph:TG5719", "robinson:N-NSF", "strongMorph:TH8804", "robinson:HEB"], "\(codes)")
+        #expect(m.text.contains("λόγος(5719)"), "\(m.text)")
+        #expect(m.text.contains("(HEB)"), "\(m.text)")
+        let tap = m.spans.first { if case .morph("strongMorph:TG5719") = $0.attribute { true } else { false } }
+        let target = try? #require(tap.flatMap { m.tapTarget(atUTF16Offset: $0.start + 1) })
+        #expect(target?.attributes["scheme"] == "strongMorph")
+    }
+
     @Test func aTitleIsAHeadingAndAFootnoteIsKeptApart() {
         let m = chapter(["<TT><JC>The Gospel<CM><Tt>In the beginning<RF>A study note.<Rf> was the Word."])
         #expect(m.text.contains("The Gospel"))

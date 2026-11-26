@@ -255,13 +255,22 @@ public struct GBFParser: Sendable {
                 if t.hasPrefix("TS") { markup("<title>") }
                 else if t == "RF" || t.hasPrefix("RF ") { markup("<note type=\"x-StudyNote\">") }
                 else if t.hasPrefix("CA"), let character = Self.character(code: String(t.dropFirst(2))) { text(character) }
-                else if t.hasPrefix("WTG") || t.hasPrefix("WTH") { number(String(t.dropFirst(3)), morph: true) }
-                else if t.hasPrefix("WT") { number(String(t.dropFirst(2)), morph: true) }
+                else if Self.isStrongsTense(t) { number("T" + String(t.dropFirst(2)), morph: true, scheme: "strongMorph") }
+                else if t.hasPrefix("WT") { number(String(t.dropFirst(2)), morph: true, scheme: "robinson") }
                 else if t.hasPrefix("WG") || t.hasPrefix("WH") { number(String(t.dropFirst(1)), morph: false) }
                 else if t == "head" || t.hasPrefix("head ") { hidden = true }
                 else if t == "/head" { hidden = false }
                 // Everything else (layout, fonts, images, cross-reference marks): not shown.
             }
+        }
+
+        /// `WTG5719`, `WTH8804`: a Strong's tense number (Strong's own morphology numbering, with G or H and digits), not a Robinson
+        /// code. It was once labelled `robinson:` with its letter dropped, so a Robinson lookup misread it. `WT` followed by anything
+        /// else (`WTN-NSF`, and `WTHEB`, Robinson's code for a Hebrew word) is a Robinson code.
+        static func isStrongsTense(_ tag: String) -> Bool {
+            guard tag.hasPrefix("WTG") || tag.hasPrefix("WTH") else { return false }
+            let rest = CodePoints.of(String(tag.dropFirst(3))).filter { !CodePoints.isWhiteSpace($0) }
+            return !rest.isEmpty && rest.allSatisfy { $0 >= 0x30 && $0 <= 0x39 }
         }
 
         /// `CA123`: the character with that code, or nil when it is not a number or not a character.
@@ -271,12 +280,13 @@ public struct GBFParser: Sendable {
             return character.isEmpty ? nil : character
         }
 
-        /// A Strong's number (`G976`, `H7225`, with an optional space after the letter) or a morphology code.
-        private func number(_ raw: String, morph: Bool) {
+        /// A Strong's number (`G976`, `H7225`, with an optional space after the letter) or a morphology code in `scheme`:
+        /// `strongMorph` for Strong's tense numbers (`TG5719`, written as OSIS modules write them), `robinson` for Robinson's codes.
+        private func number(_ raw: String, morph: Bool, scheme: String = "robinson") {
             var value = CodePoints.string(CodePoints.of(raw).filter { !CodePoints.isWhiteSpace($0) })
             guard !value.isEmpty else { return }
             if morph {
-                value = "robinson:" + value
+                value = scheme + ":" + value
             } else {
                 // "WG976" arrives here as "G976".
                 value = "strong:" + value
