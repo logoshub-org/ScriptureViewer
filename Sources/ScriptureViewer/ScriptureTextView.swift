@@ -600,15 +600,42 @@ public final class ScriptureTextView: UIView {
 
 	/// `measuring` false: in the view's own layout pass (a new size), where measuring the whole text moves the lines again as the
 	/// scroll lands, and the verse ends up off the top (50 pt in a test that narrows the view). The text was measured when the
-	/// reader was brought there.
+	/// reader was brought there; only the screen below the verse is laid out (`makeRoom`), so the scroll is not stopped short.
 	private func scrollToVerse(_ verse: Int, animated: Bool, measuring: Bool) {
 		if measuring { measureWholeText() }
 		guard let rect = rectOfVerse(verse) else { return }
 		var y = rect.minY - topLength
+		if !measuring { makeRoom(toShowFrom: y, verse: verse) }
 		let maxY = max(textView.contentSize.height - textView.bounds.height + bottomLength, -topLength)
 		y = min(max(y, -topLength), maxY)
 		textView.setContentOffset(CGPoint(x: 0, y: y), animated: animated)
 		currentVerse = verse
+	}
+
+	/// Lays out the text from a verse down by one screen, and gives the text view at least the height that shows: enough to scroll
+	/// the verse to `y`, or, where the text ends within that screen, its real end. TextKit 2 estimates the height of what it has not
+	/// laid out; after a resize to a narrower width that estimate was short on iOS 18, and the re-anchoring scroll stopped 50 pt above
+	/// the verse (CI, iPhone 16 Pro, iOS 18.5). Nothing above the verse is laid out again, so no line moves as the scroll lands, which
+	/// measuring the whole text here did (`scrollToVerse`).
+	private func makeRoom(toShowFrom y: CGFloat, verse: Int) {
+		guard let scripture,
+		      let range = scripture.verseRange(containing: verse),
+		      let layoutManager = textView.textLayoutManager,
+		      let contentManager = layoutManager.textContentManager,
+		      let start = contentManager.location(contentManager.documentRange.location, offsetBy: range.start)
+		else { return }
+		let insets = textView.textContainerInset
+		// the content height at which the verse can sit at `y`, with the visible area below it
+		let wanted = y + textView.bounds.height - bottomLength
+		var laidOutTo: CGFloat = 0
+		layoutManager.enumerateTextLayoutFragments(from: start, options: [.ensuresLayout]) { fragment in
+			laidOutTo = fragment.layoutFragmentFrame.maxY
+			return laidOutTo + insets.top + insets.bottom < wanted
+		}
+		let height = (laidOutTo + insets.top + insets.bottom).rounded(.up)
+		if textView.contentSize.height < height {
+			textView.contentSize = CGSize(width: textView.contentSize.width, height: height)
+		}
 	}
 
 	/// Lays out the whole text, so `contentSize` is its real height. TextKit 2 otherwise estimates the height of what it has not
