@@ -20,8 +20,16 @@ extension ScriptureText {
         guard offset >= 0, offset < text.utf16.count else { return nil }
         let context = TapContext(offset: offset, verse: verse(at: offset), wordIndex: wordIndex(at: offset), passage: identity)
 
+        // The spans are in start order, and `tapReach` says how far a tappable span reaches up to each one: search for the last
+        // span starting at or before the offset, then walk back only while a span could still cover it. The rank and length decide
+        // between the spans found; where both tie, the first in order wins (`<=`, as the walk goes backwards).
+        let spans = self.spans
         var best: (rank: Int, span: Span)?
-        for span in spans where span.start <= offset && offset < span.start + span.length {
+        var index = ScriptureText.lastIndex(startingAtOrBefore: offset, count: spans.count) { spans[$0].start }
+        while index >= 0 && tapReach(at: index) > offset {
+            let span = spans[index]
+            index -= 1
+            guard offset < span.start + span.length else { continue }
             let rank: Int
             switch span.attribute {
             case .strongs, .morph, .footnote: rank = 4
@@ -30,7 +38,7 @@ extension ScriptureText {
             case .word: rank = 1
             default: continue
             }
-            if best == nil || rank > best!.rank || (rank == best!.rank && span.length < best!.span.length) {
+            if best == nil || rank > best!.rank || (rank == best!.rank && span.length <= best!.span.length) {
                 best = (rank, span)
             }
         }
@@ -57,12 +65,20 @@ extension ScriptureText {
         }
     }
 
+    /// The verse at an offset: verse ranges are in start order and do not overlap, so a binary search finds the only candidate.
     private func verse(at offset: Int) -> Int? {
-        verses.first { $0.start <= offset && offset < $0.start + $0.length }?.verse
+        let verses = self.verses
+        let index = ScriptureText.lastIndex(startingAtOrBefore: offset, count: verses.count) { verses[$0].start }
+        guard index >= 0, offset < verses[index].start + verses[index].length else { return nil }
+        return verses[index].verse
     }
 
+    /// The word at an offset: word anchors are in start order and do not overlap, as verse ranges.
     private func wordIndex(at offset: Int) -> Int? {
-        words.first { $0.start <= offset && offset < $0.start + $0.length }?.index
+        let words = self.words
+        let index = ScriptureText.lastIndex(startingAtOrBefore: offset, count: words.count) { words[$0].start }
+        guard index >= 0, offset < words[index].start + words[index].length else { return nil }
+        return words[index].index
     }
 }
 

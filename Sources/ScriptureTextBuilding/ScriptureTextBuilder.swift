@@ -340,13 +340,8 @@ public final class ScriptureTextBuilder {
 
     public func finish() -> ScriptureText {
         endVerse()
-        // Outer spans first, so equal starts order deterministically.
-        let ordered = spans.elements().enumerated().sorted { a, b in
-            if a.element.start != b.element.start { return a.element.start < b.element.start }
-            if a.element.length != b.element.length { return a.element.length > b.element.length }
-            return a.offset < b.offset
-        }.map(\.element)
-        return ScriptureText(text: text.text, spans: ordered, verses: verses.elements(), notes: notes.elements(), words: words.elements())
+        // The model puts the spans in its order (outer spans first where two start together, ScriptureText.ordered).
+        return ScriptureText(text: text.text, spans: spans.elements(), verses: verses.elements(), notes: notes.elements(), words: words.elements())
     }
 
     // MARK: Writing

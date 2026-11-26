@@ -38,13 +38,15 @@ public struct DetailContent: Equatable, Sendable {
     /// has no verse tracking.
     public var combined: ScriptureText {
         var result = ScriptureText()
+        // gathered here and given to the model once: each assignment orders the spans again
+        var spans: [ScriptureText.Span] = []
         var noteCount = 0
         for (index, section) in sections.enumerated() {
             if index > 0 { result.text += "\n\n" }
             if let title = section.title, !title.isEmpty {
                 let start = result.text.utf16.count
                 result.text += title + "\n"
-                result.spans.append(.init(start: start, length: title.utf16.count, attribute: .bold))
+                spans.append(ScriptureText.Span(start: start, length: title.utf16.count, attribute: .bold))
             }
             let shift = result.text.utf16.count
             result.text += section.text.text
@@ -60,9 +62,10 @@ public struct DetailContent: Equatable, Sendable {
             for span in section.text.spans {
                 var attribute = span.attribute
                 if case .footnote(let old) = attribute { attribute = .footnote(id: renamed[old] ?? old) }
-                result.spans.append(.init(start: span.start + shift, length: span.length, attribute: attribute))
+                spans.append(ScriptureText.Span(start: span.start + shift, length: span.length, attribute: attribute))
             }
         }
+        result.spans = spans
         return result
     }
 }

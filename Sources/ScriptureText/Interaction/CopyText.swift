@@ -30,14 +30,22 @@ extension ScriptureText {
         let lower = max(0, min(start, units.count)), upper = max(lower, min(start + length, units.count))
         guard lower < upper else { return CopiedText(text: "", verses: nil) }
 
-        var dropped = [Bool](repeating: false, count: units.count)
+        // The markers inside the range: footnote, Strong's and morphology markers are left out, and a verse number is set apart
+        // by spaces. Only spans that reach into the range matter. The spans are in start order, and all these kinds are tappable,
+        // so the search finds the last span starting before the range's end and walks back only while `tapReach` says an earlier
+        // one could still reach into the range (ScriptureTextModel.md).
+        let spans = self.spans
+        var dropped = [Bool](repeating: false, count: upper - lower)
         var numberStarts = Set<Int>(), numberEnds = Set<Int>()
-        for span in spans {
+        var index = ScriptureText.lastIndex(startingAtOrBefore: upper - 1, count: spans.count) { spans[$0].start }
+        while index >= 0 && tapReach(at: index) > lower {
+            let span = spans[index]
+            index -= 1
             let end = min(span.start + span.length, units.count)
-            guard span.start < end else { continue }
+            guard span.start < end, end > lower else { continue }
             switch span.attribute {
             case .footnote, .strongs, .morph:
-                for i in span.start..<end { dropped[i] = true }
+                for i in max(span.start, lower)..<min(end, upper) { dropped[i - lower] = true }
             case .verseNumber:
                 numberStarts.insert(span.start)
                 numberEnds.insert(end)
@@ -49,8 +57,8 @@ extension ScriptureText {
         var out: [Int] = []
         func endsInSpace() -> Bool { out.last.map { $0 == 0x20 || $0 == 0x0A } ?? true }
         for i in lower..<upper {
-            if numberEnds.contains(i), !dropped[i], units[i] != 0x20, units[i] != 0x0A, !endsInSpace() { out.append(0x20) }
-            if dropped[i] || units[i] == 0x2060 { continue }
+            if numberEnds.contains(i), !dropped[i - lower], units[i] != 0x20, units[i] != 0x0A, !endsInSpace() { out.append(0x20) }
+            if dropped[i - lower] || units[i] == 0x2060 { continue }
             if numberStarts.contains(i), !endsInSpace() { out.append(0x20) }
             out.append(units[i])
         }

@@ -66,6 +66,7 @@ extension ScriptureText {
     /// a verse the text does not hold, and a range outside the text, are ignored.
     public func resolve(_ highlights: [Highlight]) -> [ResolvedHighlight] {
         let count = text.utf16.count
+        let spans = self.spans
         var result: [ResolvedHighlight] = []
         for highlight in highlights {
             switch highlight.target {
@@ -75,13 +76,18 @@ extension ScriptureText {
                 for verse in verses where verse.contains(verse: number) {
                     var start = verse.start
                     let end = verse.start + verse.length
-                    // Past the verse number marker, and the space after it.
-                    if let marker = spans.first(where: { span in
-                        if case .verseNumber(let n) = span.attribute { return n == verse.verse && span.start == verse.start }
-                        return false
-                    }) {
-                        start = marker.start + marker.length
+                    // Past the verse number marker, and the space after it. The marker starts where the verse does: the spans
+                    // are in start order, so search for the last one starting there and look back over those that start with it
+                    // (to the first in order, should there be two).
+                    var index = ScriptureText.lastIndex(startingAtOrBefore: verse.start, count: spans.count) { spans[$0].start }
+                    var markerEnd: Int? = nil
+                    while index >= 0 && spans[index].start == verse.start {
+                        if case .verseNumber(let n) = spans[index].attribute, n == verse.verse {
+                            markerEnd = spans[index].start + spans[index].length
+                        }
+                        index -= 1
                     }
+                    if let markerEnd { start = markerEnd }
                     while start < end, isBreakOrSpace(atUTF16Offset: start) { start += 1 }
                     if end > start { result.append(.init(start: start, length: end - start, style: highlight.style)) }
                 }

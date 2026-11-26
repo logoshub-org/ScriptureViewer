@@ -51,6 +51,8 @@ ScriptureViewer(text: chapter, theme: theme, highlights: marks,
 - [Instructions.md](Instructions.md) covers every library, loading SWORD-style and USFM text, the viewer's inputs and events, the Skip
   build and Android, and the tests.
 - [ScriptureViewerContract.md](ScriptureViewerContract.md) specifies the viewer's inputs and events one by one.
+- [ScriptureTextModel.md](ScriptureTextModel.md) explains the text model: its shape, the rules it keeps (UTF-16 offsets, spans in
+  start order), how a tap finds what is under it, and what could change.
 
 ## Licence
 

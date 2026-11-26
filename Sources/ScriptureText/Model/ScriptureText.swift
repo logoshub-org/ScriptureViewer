@@ -10,14 +10,32 @@
 // styler (ScriptureTextStyler on iOS; a Compose/Spannable mapping on Android)
 // resolves them. All offsets are UTF-16 code units, which match both NSString
 // and Kotlin String indexing.
+//
+// Order (`ScriptureTextModel.md` at the repository root): `spans` are always in start order (the longer first where two
+// start together, else the order they were given), and `verses` and `words` in start order. The model keeps the spans in order
+// itself, on every assignment, so a lookup by position can search instead of scanning: `tapTarget(atUTF16Offset:)` and the verse
+// and word lookups. `verses` and `words` are put in order when the text is made; whoever changes them afterwards keeps the order.
 
 import Foundation
 
 public struct ScriptureText: Equatable, Sendable {
     /// The whole chapter or entry as plain text; "\n" separates paragraphs.
     public var text: String
-    /// Half-open UTF-16 ranges carrying semantic attributes.
-    public var spans: [Span]
+    /// Half-open UTF-16 ranges carrying semantic attributes, in start order (longer first where two start together). Assigning
+    /// puts them in that order.
+    public var spans: [Span] {
+        get { orderedSpans }
+        set {
+            orderedSpans = ScriptureText.ordered(newValue)
+            tapReach = ScriptureText.tapReach(of: orderedSpans)
+        }
+    }
+    /// The spans, in order; `spans` reads and writes them.
+    private var orderedSpans: [Span]
+    /// For each span, the furthest end reached by a span a tap can land on (`isTappable`), among it and the spans before it; -1
+    /// where there is none yet. A tap's search walks back from the spans that start before the offset only while this reaches
+    /// past it, so spans that overlap (a link over words, a word under a marker) are all found without reading every span.
+    private var tapReach: [Int]
     /// Verse number → range, for scroll-to-verse and position tracking.
     /// A verse's range starts at its verse-number marker and runs to the next
     /// verse's marker (trailing whitespace trimmed). Empty for content without
@@ -38,10 +56,12 @@ public struct ScriptureText: Equatable, Sendable {
     public init(text: String = "", spans: [Span] = [], verses: [VerseRange] = [],
                 notes: [Note] = [], words: [WordAnchor] = [], identity: PassageIdentity? = nil) {
         self.text = text
-        self.spans = spans
-        self.verses = verses
+        let ordered = ScriptureText.ordered(spans)
+        self.orderedSpans = ordered
+        self.tapReach = ScriptureText.tapReach(of: ordered)
+        self.verses = ScriptureText.versesInStartOrder(verses)
         self.notes = notes
-        self.words = words
+        self.words = ScriptureText.wordsInStartOrder(words)
         self.identity = identity
     }
 
@@ -177,6 +197,103 @@ public struct ScriptureText: Equatable, Sendable {
     }
 }
 
+// MARK: Order
+
+extension ScriptureText {
+
+    /// The spans in the model's order: by start, the longer first where two start together (an outer span before the ones inside
+    /// it), else as given. Spans already in that order (what the builder makes) come back as they are, after one pass to check.
+    public static func ordered(_ spans: [Span]) -> [Span] {
+        if isOrdered(spans) { return spans }
+        return spans.enumerated().sorted { a, b in
+            if a.element.start != b.element.start { return a.element.start < b.element.start }
+            if a.element.length != b.element.length { return a.element.length > b.element.length }
+            return a.offset < b.offset
+        }.map { $0.element }
+    }
+
+    /// Whether the spans are in the model's order.
+    public static func isOrdered(_ spans: [Span]) -> Bool {
+        var index = 1
+        while index < spans.count {
+            let before = spans[index - 1]
+            let span = spans[index]
+            if span.start < before.start || (span.start == before.start && span.length > before.length) { return false }
+            index += 1
+        }
+        return true
+    }
+
+    /// Whether a tap can land on a span of this kind (`tapTarget(atUTF16Offset:)`).
+    static func isTappable(_ attribute: Attribute) -> Bool {
+        switch attribute {
+        case .strongs, .morph, .footnote, .link, .verseNumber, .word: return true
+        default: return false
+        }
+    }
+
+    static func tapReach(of spans: [Span]) -> [Int] {
+        var reach: [Int] = []
+        reach.reserveCapacity(spans.count)
+        var furthest = -1
+        for span in spans {
+            if isTappable(span.attribute) { furthest = max(furthest, span.start + span.length) }
+            reach.append(furthest)
+        }
+        return reach
+    }
+
+    /// The furthest end a tappable span reaches among the spans up to `index` (`tapReach`).
+    func tapReach(at index: Int) -> Int { tapReach[index] }
+
+    /// The verse ranges in start order (as given when they are already). Named apart from the words' one: the JVM, which Kotlin runs
+    /// on, erases the element type, and two `inStartOrder` would clash there.
+    static func versesInStartOrder(_ verses: [VerseRange]) -> [VerseRange] {
+        var index = 1
+        while index < verses.count {
+            if verses[index].start < verses[index - 1].start {
+                return verses.enumerated().sorted { a, b in
+                    a.element.start != b.element.start ? a.element.start < b.element.start : a.offset < b.offset
+                }.map { $0.element }
+            }
+            index += 1
+        }
+        return verses
+    }
+
+    /// The word anchors in start order (as given when they are already).
+    static func wordsInStartOrder(_ words: [WordAnchor]) -> [WordAnchor] {
+        var index = 1
+        while index < words.count {
+            if words[index].start < words[index - 1].start {
+                return words.enumerated().sorted { a, b in
+                    a.element.start != b.element.start ? a.element.start < b.element.start : a.offset < b.offset
+                }.map { $0.element }
+            }
+            index += 1
+        }
+        return words
+    }
+
+    /// The index of the last of `count` items, in start order, that starts at or before `offset`; -1 when none does. A binary
+    /// search: `start(i)` is the start of item `i`.
+    static func lastIndex(startingAtOrBefore offset: Int, count: Int, start: (Int) -> Int) -> Int {
+        var low = 0
+        var high = count - 1
+        var found = -1
+        while low <= high {
+            let middle = (low + high) / 2
+            if start(middle) <= offset {
+                found = middle
+                low = middle + 1
+            } else {
+                high = middle - 1
+            }
+        }
+        return found
+    }
+}
+
 extension ScriptureText {
     /// The text with `heading` on a line of its own above it, as a section heading: a dictionary entry under its word.
     /// Everything that points into the text moves down by the heading's length.
@@ -197,7 +314,29 @@ extension ScriptureText {
 // Skip's transpiler synthesises Codable only for enums with raw values, so the model's Codable (a convenience of the iOS side) is
 // compiled out of the transpiled build.
 #if !SKIP
-extension ScriptureText: Codable {}
+extension ScriptureText: Codable {
+    private enum CodingKeys: String, CodingKey { case text, spans, verses, notes, words, identity }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.init(text: try container.decode(String.self, forKey: .text),
+                  spans: try container.decode([Span].self, forKey: .spans),
+                  verses: try container.decode([VerseRange].self, forKey: .verses),
+                  notes: try container.decode([Note].self, forKey: .notes),
+                  words: try container.decode([WordAnchor].self, forKey: .words),
+                  identity: try container.decodeIfPresent(PassageIdentity.self, forKey: .identity))
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(text, forKey: .text)
+        try container.encode(spans, forKey: .spans)
+        try container.encode(verses, forKey: .verses)
+        try container.encode(notes, forKey: .notes)
+        try container.encode(words, forKey: .words)
+        try container.encodeIfPresent(identity, forKey: .identity)
+    }
+}
 extension ScriptureText.Span: Codable {}
 extension ScriptureText.Attribute: Codable {}
 #endif

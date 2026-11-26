@@ -27750,8 +27750,8 @@ T a John 3:16 x y
 # tei 5
 utf16=20 verses=0 spans=3 words=0 notes=0
 S block:li1 0 3
-S block:li2 9 4
 S block:li1 4 9
+S block:li2 9 4
 T one
 two
 
@@ -27976,8 +27976,8 @@ a b — c & d &zzz; e boats, nets, &c. and so on “q”
 a b — c & d &zzz; e boats, nets, &c. and so on “q”
 # thml 7
 utf16=31 verses=0 spans=3 words=0 notes=0
-S italic 5 4
 S bold 0 9
+S italic 5 4
 S link:sword://X/1 24 7
 T bold both after endstraycut off
 # thml commentary 7
@@ -27985,13 +27985,13 @@ utf16=67 verses=2 spans=8 words=0 notes=0
 V 1 0 33 1
 V 2 34 33 2
 S verseNumber:1 0 1
-S italic 7 4
 S bold 2 9
-S verseNumber:2 34 1
-S italic 41 4
-S bold 36 9
-S link:sword://X/1 60 7
+S italic 7 4
 S link:sword://X/1 26 41
+S verseNumber:2 34 1
+S bold 36 9
+S italic 41 4
+S link:sword://X/1 60 7
 T 1
 bold both after endstraycut off
 2

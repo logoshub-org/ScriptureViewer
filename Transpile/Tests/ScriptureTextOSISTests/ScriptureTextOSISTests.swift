@@ -162,6 +162,41 @@ final class ScriptureTextOSISTests: XCTestCase {
         XCTAssertFalse(model.strongsHits(for: "H835").isEmpty)
     }
 
+    /// The spans are in start order, and a tap's search finds what reading every span would (ScriptureTextModel.md): across Psalm 119
+    /// with Strong's and morphology markers, at every seventh offset, the target is the one a model holding only the spans that cover
+    /// the offset gives, and its verse and word are the ones that hold the offset.
+    func testTheSpansAreInOrderAndATapFindsWhatAFullReadWould() throws {
+        var display = ScriptureDisplayOptions()
+        display.headings = true
+        display.strongs = true
+        display.morph = true
+        let model = try parse(display)
+        XCTAssertTrue(ScriptureText.isOrdered(model.spans))
+        let spans = model.spans
+        let length = CodePoints.utf16Length(model.text)
+        var checked = 0
+        var offset = 0
+        while offset < length {
+            var covering: [ScriptureText.Span] = []
+            for span in spans where span.start <= offset && offset < span.start + span.length { covering.append(span) }
+            let alone = ScriptureText(text: model.text, spans: covering, verses: model.verses, notes: model.notes, words: model.words,
+                                      identity: model.identity)
+            let found = model.tapTarget(atUTF16Offset: offset)
+            XCTAssertEqual(found, alone.tapTarget(atUTF16Offset: offset), "offset \(offset)")
+            if let found {
+                var verse: Int? = nil
+                for range in model.verses where range.start <= offset && offset < range.start + range.length { verse = range.verse; break }
+                var word: Int? = nil
+                for anchor in model.words where anchor.start <= offset && offset < anchor.start + anchor.length { word = anchor.index; break }
+                XCTAssertEqual(found.context.verse, verse, "offset \(offset)")
+                XCTAssertEqual(found.context.wordIndex, word, "offset \(offset)")
+                checked += 1
+            }
+            offset += 7
+        }
+        XCTAssertGreaterThan(checked, 1000)
+    }
+
     /// A character outside the Basic Multilingual Plane is two UTF-16 units; copying keeps the pair together (Gothic, a CJK Extension B
     /// ideograph, a mathematical letter). Swift once decoded the units one at a time and made each half a replacement character.
     func testCharactersOutsideTheBasicPlaneCopyWhole() throws {
