@@ -632,10 +632,7 @@ public final class ScriptureTextView: UIView {
 			laidOutTo = fragment.layoutFragmentFrame.maxY
 			return laidOutTo + insets.top + insets.bottom < wanted
 		}
-		let height = (laidOutTo + insets.top + insets.bottom).rounded(.up)
-		if textView.contentSize.height < height {
-			textView.contentSize = CGSize(width: textView.contentSize.width, height: height)
-		}
+		textView.keepHeight(atLeast: (laidOutTo + insets.top + insets.bottom).rounded(.up))
 	}
 
 	/// Lays out the whole text, so `contentSize` is its real height. TextKit 2 otherwise estimates the height of what it has not
@@ -648,11 +645,9 @@ public final class ScriptureTextView: UIView {
 		guard let layoutManager = textView.textLayoutManager, let contentManager = layoutManager.textContentManager else { return }
 		layoutManager.ensureLayout(for: contentManager.documentRange)
 		// The text view does not always take the measured height (after new text it keeps the estimate until the reader scrolls),
-		// so it is given it.
-		let height = (layoutManager.usageBoundsForTextContainer.maxY + textView.textContainerInset.top + textView.textContainerInset.bottom).rounded(.up)
-		if textView.contentSize.height < height {
-			textView.contentSize = CGSize(width: textView.contentSize.width, height: height)
-		}
+		// so it is given it, and kept to it.
+		let insets = textView.textContainerInset
+		textView.keepHeight(atLeast: (layoutManager.usageBoundsForTextContainer.maxY + insets.top + insets.bottom).rounded(.up))
 	}
 
 	/// The verse whose text crosses the top of the visible area.
@@ -878,6 +873,33 @@ extension ScriptureTextView: UITextViewDelegate {
 /// The text view behind the reader: Copy takes the text from the model, not the characters on screen.
 package final class ReaderTextView: UITextView {
 	package var copyText: (() -> String?)?
+
+	/// The height the text was laid out to, and the container width it was laid out at: the content is never made shorter than
+	/// that. In its own layout pass the text view sets its content size from TextKit 2's estimate again, which can be shorter than
+	/// the text measured a moment before, and the scroll view then clamps the offset to the shorter end: a scroll to a verse landed
+	/// on it and then dropped back 420 pt after a bigger font (iOS 27.2, iPhone 18 Pro) and 50 pt after a resize (CI, iOS 18.5).
+	/// New text or another width (a resize, other insets) forgets it, as the old measure no longer holds.
+	private var measured: (height: CGFloat, width: CGFloat)?
+
+	/// Gives the content at least `height`, the text having been laid out that far at the current width, and keeps it so.
+	package func keepHeight(atLeast height: CGFloat) {
+		let width = textContainer.size.width
+		measured = (max(height, measured?.width == width ? measured!.height : 0), width)
+		if contentSize.height < height { contentSize = CGSize(width: contentSize.width, height: height) }
+	}
+
+	package override var contentSize: CGSize {
+		get { super.contentSize }
+		set {
+			var size = newValue
+			if let measured, measured.width == textContainer.size.width, size.height < measured.height { size.height = measured.height }
+			super.contentSize = size
+		}
+	}
+
+	package override var attributedText: NSAttributedString! {
+		didSet { measured = nil }
+	}
 
 	package override func copy(_ sender: Any?) {
 		guard let text = copyText?() else { return super.copy(sender) }
