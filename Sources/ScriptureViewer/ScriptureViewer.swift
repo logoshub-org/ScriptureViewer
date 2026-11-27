@@ -88,6 +88,10 @@ public struct ScriptureViewer: UIViewRepresentable {
                 guard let self, let selection = self.view?.selection(for: range) else { return }
                 self.events.onMenuItem?(id, selection)
             }
+            view.onSelectionMenu = { [weak self] range in
+                guard let self, let selection = self.view?.selection(for: range) else { return }
+                self.events.onSelectionMenu?(selection)
+            }
             view.copyReference = { [weak self] first, last in
                 guard let self, first <= last else { return nil }
                 return self.events.referenceLine?(first...last)
@@ -102,6 +106,7 @@ public struct ScriptureViewer: UIViewRepresentable {
             let configuration = viewer.configuration
             view.pullChangesChapter = configuration.pullChangesChapter
             view.menuItems = configuration.menuItems
+            view.hostsSelectionMenu = configuration.hostSelectionMenu
             view.autoFullscreenMode = configuration.reportsDragEnd
             view.hidesTabBarOnScroll = events.onChromeRequest != nil
             view.onChromeRequest = events.onChromeRequest.map { request in { hide in request(hide ? .hide : .show) } }
@@ -184,6 +189,12 @@ extension ScriptureViewerController {
     @MainActor
     public func frameOfVerse(_ verse: Int) -> CGRect? {
         (driver as? ScriptureViewer.Bridge)?.view?.frameOfVerse(verse, in: nil)
+    }
+
+    /// Where the selection is on screen, in the window's coordinates, for the host's own selection menu (iOS). Nil with nothing selected.
+    @MainActor
+    public func frameOfSelection() -> CGRect? {
+        (driver as? ScriptureViewer.Bridge)?.view?.frameOfSelection(in: nil)
     }
 }
 

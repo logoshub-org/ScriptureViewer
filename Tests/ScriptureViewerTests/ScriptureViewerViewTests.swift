@@ -182,6 +182,37 @@ final class ScriptureViewerViewTests: XCTestCase {
 		XCTAssertEqual(view.copyReference?(1, 2), "Genesis 1:1–2 (KJV)")
 	}
 
+	/// With `hostSelectionMenu` the system's selection menu is not built: the host hears the selection, and the controller says where it is.
+	func testAHostsOwnSelectionMenuReplacesTheSystemsAndIsTold() throws {
+		var asked: [ScriptureSelection] = []
+		var events = ScriptureViewerEvents()
+		events.onSelectionMenu = { asked.append($0) }
+		let controller = ScriptureViewerController()
+		let text = chapter()
+		let (host, _) = show(ScriptureViewer(text: text, configuration: ScriptureViewerConfiguration(hostSelectionMenu: true),
+		                                     controller: controller, events: events))
+		let view = try XCTUnwrap(textView(in: host.view))
+		XCTAssertTrue(view.hostsSelectionMenu)
+		XCTAssertNil(controller.frameOfSelection(), "nothing selected")
+		let end = text.verses[1].start + 10
+		let inner = try XCTUnwrap(view.scrollView as? UITextView)
+		inner.selectedRange = NSRange(location: 0, length: end)
+		let menu = view.textView(inner, editMenuForTextIn: inner.selectedRange, suggestedActions: [UIAction(title: "Copy") { _ in }])
+		XCTAssertEqual(menu?.children.count, 0, "no system menu")
+		XCTAssertEqual(asked.last?.verses, 1...2)
+		let frame = try XCTUnwrap(controller.frameOfSelection())
+		XCTAssertGreaterThan(frame.height, 0)
+
+		// without the setting, the system's menu is built as before
+		let (plain, _) = show(ScriptureViewer(text: text, events: events))
+		let plainView = try XCTUnwrap(textView(in: plain.view))
+		let plainInner = try XCTUnwrap(plainView.scrollView as? UITextView)
+		plainInner.selectedRange = NSRange(location: 0, length: end)
+		let systems = plainView.textView(plainInner, editMenuForTextIn: plainInner.selectedRange, suggestedActions: [UIAction(title: "Copy") { _ in }])
+		XCTAssertEqual(systems?.children.count, 1)
+		XCTAssertEqual(asked.count, 1, "and the host is not asked")
+	}
+
 	func testTheControllerScrollsTheTextAndHearsWhereItIs() throws {
 		let controller = ScriptureViewerController()
 		var offsets: [(Double, Int)] = []

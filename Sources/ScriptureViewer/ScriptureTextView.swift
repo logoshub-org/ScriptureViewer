@@ -104,6 +104,9 @@ public final class ScriptureTextView: UIView {
 	package var onSelectionChange: ((NSRange) -> Void)?
 	package var menuItems: [ScriptureMenuItem] = []
 	package var onMenuItem: ((String, NSRange) -> Void)?
+	/// The host shows its own selection menu (`ScriptureViewerConfiguration.hostSelectionMenu`): told when the system's would be shown.
+	package var hostsSelectionMenu = false
+	package var onSelectionMenu: ((NSRange) -> Void)?
 	package var onChromeRequest: ((Bool) -> Void)?
 	/// Asked before a tap on the text sends the bars away (see `ScriptureViewerEvents.canHideChrome`).
 	package var canHideChrome: (() -> Bool)?
@@ -556,6 +559,14 @@ public final class ScriptureTextView: UIView {
 		rectOfVerse(verse).map { textView.convert($0, to: view) }
 	}
 
+	/// Where the selection is: the rectangle round its lines, in `view`'s coordinates (nil: the window's); nil with nothing selected.
+	package func frameOfSelection(in view: UIView?) -> CGRect? {
+		guard let range = textView.selectedTextRange, !range.isEmpty else { return nil }
+		let rects = textView.selectionRects(for: range).map(\.rect).filter { !$0.isEmpty && !$0.isNull }
+		guard let first = rects.first else { return nil }
+		return textView.convert(rects.dropFirst().reduce(first) { $0.union($1) }, to: view)
+	}
+
 	/// Scrolls so the verse's first line sits at the top of the visible area
 	/// (under any bars described by `topLength`).
 	// MARK: Verse focus (plan D78)
@@ -779,6 +790,11 @@ extension ScriptureTextView: UITextViewDelegate {
 	public func textView(_ textView: UITextView, editMenuForTextIn range: NSRange,
 	              suggestedActions: [UIMenuElement]) -> UIMenu? {
 		guard copiedSelection() != nil else { return nil }
+		if hostsSelectionMenu {
+			// the host's menu in place of the system's: an empty menu is not shown
+			onSelectionMenu?(range)
+			return UIMenu(children: [])
+		}
 		var actions = replacingShare(in: suggestedActions)
 		if scriptureDelegate?.scriptureTextViewOffersBookmark(self) == true, let verses = selectedVerses() {
 			actions.insert(UIAction(title: bookmarkMenuTitle, image: UIImage(systemName: "bookmark")) { [weak self] _ in

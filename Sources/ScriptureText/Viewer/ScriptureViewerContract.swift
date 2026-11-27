@@ -82,15 +82,19 @@ public struct ScriptureViewerConfiguration: Equatable, Sendable {
     public var menuItems: [ScriptureMenuItem]
     /// Report `dragEnded` when the reader lets go of a drag that did not pull past an end (Automatic Fullscreen goes fullscreen on it).
     public var reportsDragEnd: Bool
+    /// The host shows its own menu for a selection: the platform's selection menu (and `menuItems` in it) is not shown, and
+    /// `onSelectionMenu` is sent when it would have been. iOS only so far; Android keeps its own menu.
+    public var hostSelectionMenu: Bool
 
     public init(topInset: Double = 0, bottomInset: Double = 0, scrolls: Bool = true, pullChangesChapter: Bool = false,
-                menuItems: [ScriptureMenuItem] = [], reportsDragEnd: Bool = false) {
+                menuItems: [ScriptureMenuItem] = [], reportsDragEnd: Bool = false, hostSelectionMenu: Bool = false) {
         self.topInset = topInset
         self.bottomInset = bottomInset
         self.scrolls = scrolls
         self.pullChangesChapter = pullChangesChapter
         self.menuItems = menuItems
         self.reportsDragEnd = reportsDragEnd
+        self.hostSelectionMenu = hostSelectionMenu
     }
 }
 
@@ -139,6 +143,9 @@ public struct ScriptureViewerEvents: Sendable {
     public var onSelectionChange: (@MainActor @Sendable (ScriptureSelection?) -> Void)?
     /// A menu item of the configuration was chosen, with the selection it was chosen on.
     public var onMenuItem: (@MainActor @Sendable (_ id: String, _ selection: ScriptureSelection) -> Void)?
+    /// The platform would show its selection menu now (the reader has finished selecting), and the configuration's `hostSelectionMenu`
+    /// asks the host to show its own: the selection it is for. On iOS the controller's `frameOfSelection()` says where it is.
+    public var onSelectionMenu: (@MainActor @Sendable (_ selection: ScriptureSelection) -> Void)?
 
     /// Asked, not told: whether the bars may be sent away by a tap on the text (the host has bars, none is hidden for another reason such as full
     /// screen or an open pane). Without an answer the viewer never hides the bars by a tap; it still follows the scroll rule.

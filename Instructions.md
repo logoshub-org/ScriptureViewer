@@ -104,9 +104,9 @@ ScriptureViewer(text: chapter, theme: theme, highlights: marks, configuration: s
 |---|---|
 | `ScriptureViewerTheme` | Night mode, font name and size, wide layout, right to left, an optional style sheet. |
 | `ScriptureHighlights` | Bookmarked verses with their colours, search terms, a Strong's number. |
-| `ScriptureViewerConfiguration` | Insets, whether it scrolls or sizes to its text, pull to change chapter, extra selection-menu items. |
+| `ScriptureViewerConfiguration` | Insets, whether it scrolls or sizes to its text, pull to change chapter, extra selection-menu items, or the host's own selection menu in place of the platform's (iOS). |
 | `ScriptureViewerController` | Your commands (scroll to a verse or offset, focus a verse, clear the selection) and what the reader last did (current verse, offset, selection), observable by your views. |
-| `ScriptureViewerEvents` | The closures the viewer calls: `onScroll`, `onTap`, `onGesture`, `onSelectionChange`, `onMenuItem`, `onPull`, `onChromeRequest`, `onShare`, and the two questions it asks, `referenceLine` and `canHideChrome`. |
+| `ScriptureViewerEvents` | The closures the viewer calls: `onScroll`, `onTap`, `onGesture`, `onSelectionChange`, `onMenuItem`, `onSelectionMenu`, `onPull`, `onChromeRequest`, `onShare`, and the two questions it asks, `referenceLine` and `canHideChrome`. |
 
 The viewer itself scrolls to an exact verse, knows which verse is at the top, dims all but a focused verse, selects and copies across
 paragraphs, draws bookmark and search highlights, and finds what a tap landed on (a verse number, a word, a note letter, a link). Each
