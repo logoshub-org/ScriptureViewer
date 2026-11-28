@@ -69,6 +69,73 @@ final class ScriptureTextViewGestureTests: XCTestCase {
 		XCTAssertEqual(recorder.plainTaps, 1, "the verse number opens the verse menu instead")
 	}
 
+	/// A long text entered with the bar away (0.2.9): a pull down at its top brings the bar, and the spring back does not send it away
+	/// again; reading on down hides it as before.
+	func testAPullDownAtTheTopOfALongTextBringsTheBarAndTheSpringBackLeavesIt() {
+		let view = makeView()
+		var requests: [Bool] = []
+		view.onChromeRequest = { requests.append($0) }
+		view.hidesTabBarOnScroll = true
+		view.followScrollWithBar(offset: 50, maxOffset: 1000, tracking: true)
+		view.followScrollWithBar(offset: 15, maxOffset: 1000, tracking: true)
+		XCTAssertEqual(requests, [true], "away near the top, as a long text starts")
+		view.scrollViewWillBeginDragging(view.scrollView)
+		view.followScrollWithBar(offset: -60, maxOffset: 1000, tracking: true)
+		XCTAssertEqual(requests, [true, false], "a pull down at the top brings it")
+		for offset in stride(from: -50.0, through: 0, by: 10) { view.followScrollWithBar(offset: offset, maxOffset: 1000, tracking: false) }
+		XCTAssertEqual(requests, [true, false], "the spring back leaves it")
+		view.scrollViewWillBeginDragging(view.scrollView)
+		view.followScrollWithBar(offset: 60, maxOffset: 1000, tracking: true)
+		XCTAssertEqual(requests, [true, false, true], "reading on down hides it")
+	}
+
+	/// A new text settles the host's bar (0.2.9): away for a text longer than the screen, there for one that fits; not once the
+	/// reader has started to scroll it.
+	func testANewTextHidesTheBarWhenItIsLongerThanTheScreenAndShowsItWhenItFits() {
+		var long = ""
+		var ranges: [ScriptureText.VerseRange] = []
+		for verse in 1...60 {
+			let start = long.utf16.count
+			long += "\(verse)In the beginning God created the heaven and the earth, and the earth was without form and void.\n"
+			ranges.append(.init(verse: verse, start: start, length: long.utf16.count - start))
+		}
+		let view = makeView()
+		var requests: [Bool] = []
+		view.onChromeRequest = { requests.append($0) }
+		view.hidesTabBarOnScroll = true
+
+		view.display(ScriptureText(text: long, spans: [], verses: ranges), theme: ScriptureTextTheme())
+		view.layoutIfNeeded()
+		view.settleBarForNewText(last: false)
+		XCTAssertEqual(requests.last, true, "a long chapter starts with the bar away")
+		XCTAssertTrue(view.barHidden, "and the scroll rule knows it")
+
+		view.display(sample(), theme: ScriptureTextTheme())
+		view.layoutIfNeeded()
+		view.settleBarForNewText(last: true)
+		XCTAssertEqual(requests.last, false, "a text that fits shows it")
+		XCTAssertFalse(view.barHidden)
+
+		let count = requests.count
+		view.settleBarForNewText(last: true)
+		XCTAssertEqual(requests.count, count, "after the last look the text is left to the scroll rule")
+
+		view.display(ScriptureText(text: long, spans: [], verses: ranges), theme: ScriptureTextTheme())
+		view.layoutIfNeeded()
+		view.scrollViewWillBeginDragging(view.scrollView)
+		view.settleBarForNewText(last: false)
+		XCTAssertEqual(requests.count, count, "a text the reader has started to scroll is the scroll rule's")
+
+		let first = ScriptureTextView(frame: CGRect(x: 0, y: 0, width: 320, height: 480))
+		var firstRequests: [Bool] = []
+		first.onChromeRequest = { firstRequests.append($0) }
+		first.hidesTabBarOnScroll = true
+		first.display(ScriptureText(text: long, spans: [], verses: ranges), theme: ScriptureTextTheme())
+		first.layoutIfNeeded()
+		first.settleBarForNewText(last: true)
+		XCTAssertEqual(firstRequests, [], "the first text a view shows (the app opening) leaves the bar")
+	}
+
 	/// The bar follows the scroll and a push past the end, never a tap (0.2.8).
 	func testATapLeavesTheBarAlone() throws {
 		let view = makeView()
@@ -126,7 +193,12 @@ final class ScriptureTextViewGestureTests: XCTestCase {
 		view.followScrollWithBar(offset: 50, maxOffset: -400, tracking: true)
 		view.scrollViewWillBeginDragging(view.scrollView)
 		view.followScrollWithBar(offset: -30, maxOffset: -400, tracking: true)
+		XCTAssertEqual(requests, [true, false, true], "a small pull down does nothing")
+		view.followScrollWithBar(offset: -50, maxOffset: -400, tracking: true)
 		XCTAssertEqual(requests, [true, false, true, false], "a pull down from the top shows it")
+		view.followScrollWithBar(offset: -20, maxOffset: -400, tracking: false)
+		view.followScrollWithBar(offset: 0, maxOffset: -400, tracking: false)
+		XCTAssertEqual(requests, [true, false, true, false], "and the spring back leaves it")
 	}
 
 	func testATapWhileTextIsSelectedOnlyClearsTheSelection() throws {

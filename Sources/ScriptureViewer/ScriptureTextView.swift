@@ -304,6 +304,8 @@ public final class ScriptureTextView: UIView {
 	// MARK: Content
 
 	public func display(_ scripture: ScriptureText, theme: ScriptureTextTheme) {
+		// The first text a view shows (the app opening, a tab first shown) leaves the bar as it is: the reader is finding their way.
+		let replacing = self.scripture != nil
 		self.scripture = scripture
 		style(theme)
 		currentVerse = 1
@@ -313,11 +315,40 @@ public final class ScriptureTextView: UIView {
 		textView.layoutIfNeeded()
 		textView.setContentOffset(CGPoint(x: 0, y: -topLength), animated: false)
 		reportedEnd = false
+		barSettlesForNewText = replacing
 		// Text that fits the screen has been read to its end as soon as it shows. The text view measures its text as it is laid
-		// out (laying it out here would move the offset), so look again shortly after, for text not yet measured.
+		// out (laying it out here would move the offset), so look again shortly after, for text not yet measured. The host's bar
+		// is settled for the new text at the same moments.
 		for delay in [0.0, 0.15, 0.5] {
-			DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in self?.reportEndIfAtBottom(userDriven: false) }
+			DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+				self?.reportEndIfAtBottom(userDriven: false)
+				self?.settleBarForNewText(last: delay == 0.5)
+			}
 		}
+	}
+
+	/// A new text is on show and the reader has not touched it yet: the host's bar is still to follow it.
+	private var barSettlesForNewText = false
+
+	/// The host's bar for a new text that replaces one on show (0.2.9; a chapter, a verse chosen, a devotional's day): away for a
+	/// text longer than the screen, so the reading starts with the whole screen;
+	/// there for a text that fits, which is read at a glance and left for something else. Looked at again as the text is measured,
+	/// until the reader touches it (the scroll rule then has it) or the last look.
+	package func settleBarForNewText(last: Bool) {
+		// A drag begun since the text showed hands it to the scroll rule (`scrollViewWillBeginDragging`); the swipe that brought the
+		// text, which moves the scroll view a little as it goes, does not.
+		guard barSettlesForNewText, hidesTabBarOnScroll, let onChromeRequest else { return }
+		guard let fits = textFitsView else { return }
+		let offset = Double(textView.contentOffset.y + textView.adjustedContentInset.top)
+		if fits { barScrollRule.reset(at: offset) } else { barScrollRule.forceHidden(at: offset) }
+		onChromeRequest(!fits)
+		if last { barSettlesForNewText = false }
+	}
+
+	/// Whether the whole text fits the visible area; nil before the view and its text have a size.
+	private var textFitsView: Bool? {
+		guard scripture != nil, textView.bounds.height > 0, textView.contentSize.height > 0 else { return nil }
+		return textView.contentSize.height + textView.adjustedContentInset.top + textView.adjustedContentInset.bottom <= textView.bounds.height + 1
 	}
 
 	/// The text on show in another theme (night mode, a font, a size): styled again where the reader is, not from its top. The
@@ -821,6 +852,7 @@ extension ScriptureTextView: UITextViewDelegate {
 
 	public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
 		pushToggledBar = false
+		barSettlesForNewText = false
 	}
 
 	/// The bar follows the scroll (`ScriptureBarScrollRule`), and a push past the end of the text (on a short text, any push up)
@@ -828,6 +860,15 @@ extension ScriptureTextView: UITextViewDelegate {
 	/// the rule is not fed: it would read the spring back as scrolling, and on a short text as being at the top, and undo the push.
 	package func followScrollWithBar(offset: Double, maxOffset: Double, tracking: Bool) {
 		guard let onChromeRequest else { return }
+		// A pull down past the top shows the bar (0.2.9), as a scroll up does; the spring back from it is not scrolling, and fed to
+		// the rule it would read as a scroll down and hide the bar again.
+		if offset < 0 {
+			if tracking, barScrollRule.hidden, -offset > ScriptureBarScrollRule.pushPastEnd {
+				barScrollRule.reset(at: 0)
+				onChromeRequest(false)
+			}
+			return
+		}
 		let end = max(maxOffset, 0)
 		if offset > end {
 			if tracking, !pushToggledBar, offset - end > ScriptureBarScrollRule.pushPastEnd {

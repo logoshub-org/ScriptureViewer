@@ -31,13 +31,25 @@ struct ScriptureBarScrollRuleTests {
         #expect(rule.update(offset: 420, maxOffset: 2000) == true, "and down again hides")
     }
 
-    @Test func theTopShowsTheBarButTheEndDoesNot() {
+    @Test func scrollingBackToTheTopShowsTheBarButTheEndDoesNot() {
         var rule = ScriptureBarScrollRule()
         #expect(rule.update(offset: 100, maxOffset: 2000) == true)
         #expect(rule.update(offset: 500, maxOffset: 2000) == nil)
         #expect(rule.update(offset: 1999.5, maxOffset: 2000) == nil, "the end of the text leaves the bar hidden")
         #expect(rule.hidden)
-        #expect(rule.update(offset: 0.5, maxOffset: 2000) == false, "the top")
+        #expect(rule.update(offset: 0.5, maxOffset: 2000) == false, "back up to the top")
+    }
+
+    /// A long text starts with the bar away (0.2.9): being at the top does not bring it; scrolling up does, here a pull down at the top.
+    @Test func aTextThatStartsWithTheBarAwayKeepsItAwayAtTheTop() {
+        var rule = ScriptureBarScrollRule()
+        rule.forceHidden(at: 0)
+        #expect(rule.update(offset: 0.5, maxOffset: 2000) == nil, "the first touch at the top leaves it away")
+        #expect(rule.update(offset: 0, maxOffset: 2000) == nil)
+        #expect(rule.update(offset: 200, maxOffset: 2000) == nil, "reading down, still away")
+        #expect(rule.update(offset: 150, maxOffset: 2000) == false, "scrolling up brings it")
+        rule.forceHidden(at: 0)
+        #expect(rule.update(offset: -45, maxOffset: 2000) == false, "and so does a pull down at the top")
     }
 
     @Test func textThatDoesNotScrollNeverHidesTheBar() {
