@@ -68,15 +68,23 @@ public final class ScriptureTextView: UIView {
 
 	public weak var scriptureDelegate: ScriptureTextViewDelegate?
 	public var autoFullscreenMode = false
-	/// The iPad's icon bar hides as the text scrolls down and comes back scrolling up, at the top and at the end, and on a tap
-	/// (plan D107). The reader turns it on; the detail pane and the lists do not.
-	public var hidesTabBarOnScroll = false
+	/// The host's bar hides as the text scrolls down and comes back scrolling up and at the top (plan D107); a push past the end of the
+	/// text, or on a text too short to scroll, shows or hides it (0.2.8). A tap on the text leaves it alone. The reader turns it on; the
+	/// detail pane and the lists do not. A text too short to scroll still gives a little under the finger and springs back, so the
+	/// push can be made and felt.
+	public var hidesTabBarOnScroll = false {
+		didSet { textView.alwaysBounceVertical = hidesTabBarOnScroll }
+	}
 	/// The selection menu's Add Bookmark, in the app's language (the host sets it: this file has no strings of its own).
 	public var bookmarkMenuTitle = "Add Bookmark"
 	/// Whether pulling past the top or bottom of the text goes to the previous or next chapter. The reader turns it off:
 	/// a swipe left or right does that, and the pull fought with the bar hiding at the end of the text.
 	public var pullChangesChapter = true
 	private var barScrollRule = ScriptureBarScrollRule()
+	/// This drag has pushed past the end and moved the bar: once per drag.
+	private var pushToggledBar = false
+	/// Whether the rule has the bar hidden (tests).
+	package var barHidden: Bool { barScrollRule.hidden }
 	public private(set) var topLength: CGFloat = 0
 	public private(set) var bottomLength: CGFloat = 0
 
@@ -108,8 +116,6 @@ public final class ScriptureTextView: UIView {
 	package var hostsSelectionMenu = false
 	package var onSelectionMenu: ((NSRange) -> Void)?
 	package var onChromeRequest: ((Bool) -> Void)?
-	/// Asked before a tap on the text sends the bars away (see `ScriptureViewerEvents.canHideChrome`).
-	package var canHideChrome: (() -> Bool)?
 	/// The selection menu's Share (see `ScriptureViewerEvents.onShare`); without it the system's share sheet.
 	package var onShare: ((String) -> Void)?
 	private var lastLayoutSize = CGSize.zero
@@ -215,10 +221,6 @@ public final class ScriptureTextView: UIView {
 	/// double-tapping a word still selects it), a two-finger tap, left and right swipes, a three-finger drag.
 	package private(set) var readerGestures: [UIGestureRecognizer] = []
 	private let doubleTapGuard = UITapGestureRecognizer()
-	private let bottomEdgeTouch = UILongPressGestureRecognizer()
-	private lazy var bottomEdgeHover = UIHoverGestureRecognizer()
-	/// How far up from the bottom edge of the reader a touch brings the bar back, in points.
-	package static let bottomEdgeZone: CGFloat = 120
 	/// Whether the touch that started the current gesture began with text selected, or while the text was scrolling.
 	private var touchBeganWithSelection = false
 	private var touchBeganWhileScrolling = false
@@ -242,16 +244,6 @@ public final class ScriptureTextView: UIView {
 		threeFinger.maximumNumberOfTouches = 3
 
 		readerGestures = [plain, twoFinger, left, right, threeFinger]
-		// A finger down near the bottom edge brings back a bar that scrolling hid; it only watches, the touch carries on.
-		bottomEdgeTouch.minimumPressDuration = 0
-		bottomEdgeTouch.cancelsTouchesInView = false
-		bottomEdgeTouch.delegate = self
-		bottomEdgeTouch.addTarget(self, action: #selector(handleBottomEdgeTouch(_:)))
-		textView.addGestureRecognizer(bottomEdgeTouch)
-		// A pointer (mouse or trackpad on the iPad) moving into the same zone does the same, with no touch.
-		bottomEdgeHover.addTarget(self, action: #selector(handleBottomEdgeHover(_:)))
-		bottomEdgeHover.delegate = self
-		textView.addGestureRecognizer(bottomEdgeHover)
 		for gesture in [doubleTapGuard] + readerGestures {
 			gesture.delegate = self
 			gesture.cancelsTouchesInView = false
@@ -269,48 +261,9 @@ public final class ScriptureTextView: UIView {
 		guard !touchBeganWithSelection, !touchBeganWhileScrolling, textView.selectedRange.length == 0 else { return }
 		clearVerseFocus()          // a short chapter cannot scroll, so a tap on the text ends the focus too
 		if let target = tapTarget(at: point), target.kind != .word { return }
-		if hidesTabBarOnScroll, let onChromeRequest {
-			let offset = Double(textView.contentOffset.y + textView.adjustedContentInset.top)
-			if barScrollRule.hidden {
-				// a tap brings the bar back
-				barScrollRule.reset(at: offset)
-				onChromeRequest(false)
-			} else if CACurrentMediaTime() - barShownByTouchAt < Self.tapAfterShowWindow {
-				// the same touch has just brought the bar back: leave it
-			} else if !autoFullscreenMode, canHideChrome?() == true {
-				// and a tap on the text sends it away (Automatic Fullscreen has its own tap, and a tap out of full
-				// screen only leaves it: the host says so through `canHideChrome`)
-				barScrollRule.forceHidden(at: offset)
-				onChromeRequest(true)
-			}
-		}
+		// The host's bar does not follow a tap (0.2.8): scrolling and a push past the end move it.
 		scriptureDelegate?.scriptureTextViewDidTapPlainText(self)
 	}
-
-	@objc private func handleBottomEdgeTouch(_ gesture: UILongPressGestureRecognizer) {
-		guard gesture.state == .began else { return }
-		showBarAfterEdgeTouch()
-	}
-
-	@objc private func handleBottomEdgeHover(_ gesture: UIHoverGestureRecognizer) {
-		guard gesture.state == .began || gesture.state == .changed, isInBottomZone(gesture.location(in: self)) else { return }
-		showBarAfterEdgeTouch()
-	}
-
-	private func isInBottomZone(_ point: CGPoint) -> Bool { point.y > bounds.height - Self.bottomEdgeZone }
-
-	/// The rule for a touch in the bottom zone, apart from the gesture so that tests can drive it.
-	package func showBarAfterEdgeTouch() {
-		guard hidesTabBarOnScroll, barScrollRule.hidden, let onChromeRequest else { return }
-		barScrollRule.reset(at: Double(textView.contentOffset.y + textView.adjustedContentInset.top))
-		onChromeRequest(false)
-		barShownByTouchAt = CACurrentMediaTime()
-	}
-
-	/// When a touch near the bottom brought the bar back as it went down. The tap that follows the same touch (it is
-	/// recognised a moment after the finger lifts) must not hide the bar it just showed.
-	package var barShownByTouchAt: CFTimeInterval = 0
-	private static let tapAfterShowWindow: CFTimeInterval = 1.0
 
 	@objc private func handleTwoFingerTap(_ gesture: UITapGestureRecognizer) {
 		guard gesture.state == .ended else { return }
@@ -770,9 +723,6 @@ extension ScriptureTextView: UIGestureRecognizerDelegate {
 	/// Notes, as each touch starts, whether text was selected or the text was moving (a tap that stops a scroll, or
 	/// one that clears a selection, is not a plain tap).
 	public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-		if gestureRecognizer === bottomEdgeTouch {
-			return hidesTabBarOnScroll && barScrollRule.hidden && isInBottomZone(touch.location(in: self))
-		}
 		if readerGestures.contains(gestureRecognizer) {
 			touchBeganWithSelection = textView.selectedRange.length > 0
 			touchBeganWhileScrolling = textView.isDecelerating
@@ -850,13 +800,10 @@ extension ScriptureTextView: UITextViewDelegate {
 		var newOffsetY = scrollView.contentOffset.y + topLength
 		if newOffsetY < 0 { newOffsetY = 0 }
 		if hidesTabBarOnScroll, scrollView.isTracking || scrollView.isDragging || scrollView.isDecelerating {
-			let maxOffset = Double(scrollView.contentSize.height - scrollView.bounds.height + scrollView.adjustedContentInset.bottom)
-			if scrollView.isTracking, isInBottomZone(scrollView.panGestureRecognizer.location(in: self)) {
-				// A finger dragged down into the bar's area wants the bar, not the scroll rule.
-				showBarAfterEdgeTouch()
-			} else if let hide = barScrollRule.update(offset: Double(scrollView.contentOffset.y + scrollView.adjustedContentInset.top), maxOffset: maxOffset) {
-				onChromeRequest?(hide)
-			}
+			followScrollWithBar(offset: Double(scrollView.contentOffset.y + scrollView.adjustedContentInset.top),
+			                    maxOffset: Double(scrollView.contentSize.height - scrollView.bounds.height + scrollView.adjustedContentInset.bottom
+			                                      + scrollView.adjustedContentInset.top),
+			                    tracking: scrollView.isTracking)
 		}
 		reportEndIfAtBottom(userDriven: scrollView.isTracking || scrollView.isDragging || scrollView.isDecelerating)
 		if abs(lastReportedOffsetY - newOffsetY) > 2 {
@@ -870,6 +817,27 @@ extension ScriptureTextView: UITextViewDelegate {
 			}
 			scriptureDelegate?.scriptureTextViewScrollHappened(self, newOffsetY: newOffsetY)
 		}
+	}
+
+	public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+		pushToggledBar = false
+	}
+
+	/// The bar follows the scroll (`ScriptureBarScrollRule`), and a push past the end of the text (on a short text, any push up)
+	/// shows or hides it once per drag. While the text is past its end, and while it springs back from a push that moved the bar,
+	/// the rule is not fed: it would read the spring back as scrolling, and on a short text as being at the top, and undo the push.
+	package func followScrollWithBar(offset: Double, maxOffset: Double, tracking: Bool) {
+		guard let onChromeRequest else { return }
+		let end = max(maxOffset, 0)
+		if offset > end {
+			if tracking, !pushToggledBar, offset - end > ScriptureBarScrollRule.pushPastEnd {
+				pushToggledBar = true
+				onChromeRequest(barScrollRule.pushedPastEnd(at: end))
+			}
+			return
+		}
+		if pushToggledBar, !tracking { return }
+		if let hide = barScrollRule.update(offset: offset, maxOffset: maxOffset) { onChromeRequest(hide) }
 	}
 
 	public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {

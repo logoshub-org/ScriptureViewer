@@ -8,7 +8,8 @@
 import Foundation
 
 /// When scrolling should hide the host's bar (the app's icon bar) and when it should bring it back (plan D107): down hides it, up shows it,
-/// each after a few dozen points so a wobble does nothing, and the top and the end of the text always show it. A plain value
+/// each after a few dozen points so a wobble does nothing, and the top of the text always shows it; a push past the end of the text
+/// (or on a text too short to scroll) shows or hides it (`pushedPastEnd`, 0.2.8). A plain value
 /// so the rule is tested without a scroll view, and so each platform's viewer applies the same one (plan D165).
 public struct ScriptureBarScrollRule: Equatable {
     /// How far the text must move one way, in points, before the bar follows.
@@ -33,7 +34,18 @@ public struct ScriptureBarScrollRule: Equatable {
         return hidden == before ? nil : hidden
     }
 
-    /// The bar was shown by something else (a tap): start again from here.
+    /// How far past the end of the text, in points, a push must take it before the bar is shown or hidden.
+    public static let pushPastEnd: Double = 40
+
+    /// The reader pushed past the end of the text (on a text too short to scroll, any push up): the bar is shown if it was hidden and
+    /// hidden if it was shown, and scrolling goes on from `offset`, the end. Returns whether the bar is now hidden.
+    public mutating func pushedPastEnd(at offset: Double) -> Bool {
+        hidden = !hidden
+        anchor = offset
+        return hidden
+    }
+
+    /// The bar was shown by something else: start again from here.
     public mutating func reset(at offset: Double) {
         hidden = false
         anchor = offset

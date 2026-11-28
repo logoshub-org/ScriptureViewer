@@ -92,6 +92,48 @@ final class ScriptureTextStylerTests: XCTestCase {
 		XCTAssertEqual(attrs[.foregroundColor] as? UIColor, .white)
 	}
 
+	/// A sepia or grey page (0.2.8): its own text and page colours by day; night mode keeps white on black whatever the page.
+	func testASepiaOrGreyPageColoursTheTextAndNightIgnoresIt() throws {
+		for page in [ScriptureViewerPage.sepia, .grey] {
+			let theme = ScriptureTextTheme(ScriptureViewerTheme(page: page))
+			XCTAssertEqual(theme.backgroundColor, ScriptureTextTheme.colour(fromHex: page.backgroundHex))
+			let (model, styled) = try styledFixture(theme: theme)
+			let attrs = styled.attributes(at: model.verses[0].start + 3, effectiveRange: nil)
+			XCTAssertEqual(attrs[.foregroundColor] as? UIColor, ScriptureTextTheme.colour(fromHex: page.textHex), "\(page)")
+			let night = ScriptureTextTheme(ScriptureViewerTheme(nightMode: true, page: page))
+			XCTAssertEqual(night.backgroundColor, .black)
+			XCTAssertEqual(night.textColor, .white)
+			XCTAssertEqual(night.redLetterColor, ScriptureTextTheme(nightMode: true).redLetterColor)
+		}
+		let white = ScriptureTextTheme(ScriptureViewerTheme(page: .white))
+		XCTAssertEqual(white.textColor, .black, "the white page is as it always was")
+		XCTAssertEqual(white.markerColor, .gray)
+	}
+
+	/// Every colour on a sepia or grey page reads at least as well as on white (WCAG contrast): the text by far, the red letters, the
+	/// markers and the links no worse than they always have.
+	func testEachPagesColoursReadAtLeastAsWellAsOnWhite() {
+		func luminance(_ colour: UIColor) -> Double {
+			var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+			colour.getRed(&r, green: &g, blue: &b, alpha: &a)
+			func linear(_ c: CGFloat) -> Double { let c = Double(c); return c <= 0.04045 ? c / 12.92 : pow((c + 0.055) / 1.055, 2.4) }
+			return 0.2126 * linear(r) + 0.7152 * linear(g) + 0.0722 * linear(b)
+		}
+		func contrast(_ one: UIColor, _ other: UIColor) -> Double {
+			let (l1, l2) = (luminance(one), luminance(other))
+			return (max(l1, l2) + 0.05) / (min(l1, l2) + 0.05)
+		}
+		let white = ScriptureTextTheme()
+		for page in [ScriptureViewerPage.sepia, .grey] {
+			let theme = ScriptureTextTheme(ScriptureViewerTheme(page: page))
+			XCTAssertGreaterThanOrEqual(contrast(theme.textColor, theme.backgroundColor), 7, "\(page): the text")
+			for (role, colour, onWhite) in [("red letters", theme.redLetterColor, white.redLetterColor), ("markers", theme.markerColor, white.markerColor),
+			                                ("links", theme.linkColor, white.linkColor)] {
+				XCTAssertGreaterThanOrEqual(contrast(colour, theme.backgroundColor), contrast(onWhite, white.backgroundColor) - 0.01, "\(page): \(role)")
+			}
+		}
+	}
+
 	// MARK: Attribute dump
 
 	private static func dump(_ text: NSAttributedString) -> String {

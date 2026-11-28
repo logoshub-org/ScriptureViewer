@@ -256,6 +256,7 @@ final class ScriptureViewerViewTests: XCTestCase {
 		let (host, _) = show(ScriptureViewer(text: chapter(), events: events))
 		let view = try XCTUnwrap(textView(in: host.view))
 		XCTAssertTrue(view.hidesTabBarOnScroll)
+		XCTAssertTrue(view.scrollView.alwaysBounceVertical, "a text too short to scroll still gives under a push, which moves the bar")
 		view.onChromeRequest?(true)
 		view.onChromeRequest?(false)
 		XCTAssertEqual(requests, ["hide", "show"])
@@ -263,6 +264,7 @@ final class ScriptureViewerViewTests: XCTestCase {
 		let (plain, _) = show(ScriptureViewer(text: chapter()))
 		let other = try XCTUnwrap(textView(in: plain.view))
 		XCTAssertFalse(other.hidesTabBarOnScroll)
+		XCTAssertFalse(other.scrollView.alwaysBounceVertical)
 		XCTAssertNil(other.onChromeRequest)
 	}
 
@@ -299,24 +301,18 @@ final class ScriptureViewerViewTests: XCTestCase {
 		XCTAssertTrue(theme.isPad)
 	}
 
-	func testTheHostAnswersWhetherATapMayHideTheBarsAndReceivesTheShare() throws {
-		var answer = false
+	func testTheHostReceivesTheShare() throws {
 		var shared: [String] = []
 		var events = ScriptureViewerEvents()
 		events.onChromeRequest = { _ in }
-		events.canHideChrome = { answer }
 		events.onShare = { shared.append($0) }
 		let (host, _) = show(ScriptureViewer(text: chapter(verses: 2), events: events))
 		let view = try XCTUnwrap(textView(in: host.view))
-		XCTAssertEqual(view.canHideChrome?(), false)
-		answer = true
-		XCTAssertEqual(view.canHideChrome?(), true)
 		view.onShare?("Genesis 1:1\nIn the beginning")
 		XCTAssertEqual(shared, ["Genesis 1:1\nIn the beginning"])
 
 		let (plain, _) = show(ScriptureViewer(text: chapter(verses: 2)))
 		let other = try XCTUnwrap(textView(in: plain.view))
-		XCTAssertNil(other.canHideChrome, "without an answer the viewer never hides the bars by a tap")
 		XCTAssertNil(other.onShare, "and shares with the system's sheet")
 	}
 

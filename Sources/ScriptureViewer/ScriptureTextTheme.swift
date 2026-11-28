@@ -41,6 +41,8 @@ public struct ScriptureTextTheme {
 	// MARK: - Inputs
 
 	package let nightMode: Bool
+	/// The page by day (white, sepia, grey); night mode ignores it.
+	public let page: ScriptureViewerPage
 	package let fontName: String
 	package let fontSize: CGFloat
 	package let isPad: Bool
@@ -65,8 +67,10 @@ public struct ScriptureTextTheme {
 	     fontSize: CGFloat = ScriptureTextTheme.defaultFontSize,
 	     isPad: Bool = false,
 	     rightToLeft: Bool = false,
-	     customStyleSheet: ScriptureStyleSheet? = nil) {
+	     customStyleSheet: ScriptureStyleSheet? = nil,
+	     page: ScriptureViewerPage = .white) {
 		self.nightMode = nightMode
+		self.page = page
 		self.fontName = fontName
 		self.fontSize = fontSize
 		self.isPad = isPad
@@ -87,7 +91,7 @@ public struct ScriptureTextTheme {
 	/// UIKit points here.
 	public init(_ theme: ScriptureViewerTheme) {
 		self.init(nightMode: theme.nightMode, fontName: theme.fontName, fontSize: CGFloat(theme.fontSize) * Self.cssPointToUIKitPoint,
-		          isPad: theme.isWide, rightToLeft: theme.rightToLeft, customStyleSheet: theme.styleSheet)
+		          isPad: theme.isWide, rightToLeft: theme.rightToLeft, customStyleSheet: theme.styleSheet, page: theme.page)
 	}
 
 	// MARK: - Highlights
@@ -114,14 +118,20 @@ public struct ScriptureTextTheme {
 
 	// MARK: - Colours
 
-	public var textColor: UIColor { nightMode ? .white : .black }
-	public var backgroundColor: UIColor { nightMode ? .black : .white }
-	/// `span.WordOfChrist { color: #D03030; }`
-	package var redLetterColor: UIColor { UIColor(red: 0xD0 / 255.0, green: 0x30 / 255.0, blue: 0x30 / 255.0, alpha: 1) }
-	/// Strong's, morph, footnote and cross-reference markers.
-	package var markerColor: UIColor { .gray }
-	/// `a { color: fuchsia; }`, the legacy link colour, kept for parity.
-	package var linkColor: UIColor { UIColor(red: 1, green: 0, blue: 1, alpha: 1) }
+	/// A sepia or grey page by day (`ScriptureViewerPage`); nil for the white page and at night, which keep the colours they always had.
+	private var tintedPage: ScriptureViewerPage? { nightMode || page == .white ? nil : page }
+
+	/// By day the page's colours (white, sepia or grey); at night white on black, whatever the page.
+	public var textColor: UIColor { tintedPage.map { Self.colour(fromHex: $0.textHex)! } ?? (nightMode ? .white : .black) }
+	public var backgroundColor: UIColor { tintedPage.map { Self.colour(fromHex: $0.backgroundHex)! } ?? (nightMode ? .black : .white) }
+	/// `span.WordOfChrist { color: #D03030; }`; a shade deeper on a sepia or grey page.
+	package var redLetterColor: UIColor {
+		tintedPage.map { Self.colour(fromHex: $0.redLetterHex)! } ?? UIColor(red: 0xD0 / 255.0, green: 0x30 / 255.0, blue: 0x30 / 255.0, alpha: 1)
+	}
+	/// Strong's, morph, footnote and cross-reference markers; a shade deeper on a sepia or grey page.
+	package var markerColor: UIColor { tintedPage.map { Self.colour(fromHex: $0.markerHex)! } ?? .gray }
+	/// `a { color: fuchsia; }`, the legacy link colour, kept for parity; a shade deeper on a sepia or grey page.
+	package var linkColor: UIColor { tintedPage.map { Self.colour(fromHex: $0.linkHex)! } ?? UIColor(red: 1, green: 0, blue: 1, alpha: 1) }
 
 	/// The platform realisation of a colour role. Night mode is handled here,
 	/// never in the style sheet rules.

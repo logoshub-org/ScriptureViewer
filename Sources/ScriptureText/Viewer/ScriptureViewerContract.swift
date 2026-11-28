@@ -13,8 +13,41 @@ import Observation
 // written once. The reader draws and scrolls text and reports; it opens no screen, resolves no lookup and keeps no preference.
 
 /// How the text looks. A value, not a platform theme: each platform turns it into its own fonts and colours.
+/// The page the text is on by day (0.2.8): white, sepia (a light brown) or grey. Night mode keeps its black page whatever is chosen. Each
+/// page has its own text colour, and on sepia and grey the red letters, the markers and the links are a shade deeper, so that each reads
+/// at least as well as it does on white. Colours are `#RRGGBB`, the same on every platform.
+public enum ScriptureViewerPage: String, Sendable, CaseIterable {
+    case white
+    case sepia
+    case grey
+
+    public var backgroundHex: String {
+        switch self {
+        case .white: return "#FFFFFF"
+        case .sepia: return "#F4ECD8"
+        case .grey: return "#E6E6E6"
+        }
+    }
+
+    public var textHex: String {
+        switch self {
+        case .white: return "#000000"
+        case .sepia: return "#5B4636"
+        case .grey: return "#1C1C1E"
+        }
+    }
+
+    /// The words of Christ.
+    public var redLetterHex: String { self == .white ? "#D03030" : "#B42828" }
+    /// Strong's, morphology, footnote and cross-reference markers.
+    public var markerHex: String { self == .white ? "#808080" : "#707070" }
+    public var linkHex: String { self == .white ? "#FF00FF" : "#C000C0" }
+}
+
 public struct ScriptureViewerTheme: Equatable, Sendable {
     public var nightMode: Bool
+    /// The page by day; night mode ignores it.
+    public var page: ScriptureViewerPage
     public var fontName: String
     /// In CSS points, as the preference stores it.
     public var fontSize: Double
@@ -25,8 +58,9 @@ public struct ScriptureViewerTheme: Equatable, Sendable {
     public var styleSheet: ScriptureStyleSheet?
 
     public init(nightMode: Bool = false, fontName: String = "Helvetica Neue", fontSize: Double = 14, isWide: Bool = false,
-                rightToLeft: Bool = false, styleSheet: ScriptureStyleSheet? = nil) {
+                rightToLeft: Bool = false, styleSheet: ScriptureStyleSheet? = nil, page: ScriptureViewerPage = .white) {
         self.nightMode = nightMode
+        self.page = page
         self.fontName = fontName
         self.fontSize = fontSize
         self.isWide = isWide
@@ -148,7 +182,8 @@ public struct ScriptureViewerEvents: Sendable {
     public var onSelectionMenu: (@MainActor @Sendable (_ selection: ScriptureSelection) -> Void)?
 
     /// Asked, not told: whether the bars may be sent away by a tap on the text (the host has bars, none is hidden for another reason such as full
-    /// screen or an open pane). Without an answer the viewer never hides the bars by a tap; it still follows the scroll rule.
+    /// screen or an open pane). Without an answer the viewer never hides the bars by a tap; it still follows the scroll rule. The iOS viewer
+    /// no longer asks (0.2.8): its bars follow the scroll and a push past the end, not a tap. The Android viewer still asks.
     public var canHideChrome: (@MainActor @Sendable () -> Bool)?
     /// The selection menu's Share was chosen: the text as the reader copies it. Without this the viewer shows its platform's own share sheet.
     public var onShare: (@MainActor @Sendable (_ text: String) -> Void)?

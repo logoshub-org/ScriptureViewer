@@ -69,6 +69,66 @@ final class ScriptureTextViewGestureTests: XCTestCase {
 		XCTAssertEqual(recorder.plainTaps, 1, "the verse number opens the verse menu instead")
 	}
 
+	/// The bar follows the scroll and a push past the end, never a tap (0.2.8).
+	func testATapLeavesTheBarAlone() throws {
+		let view = makeView()
+		var requests: [Bool] = []
+		view.onChromeRequest = { requests.append($0) }
+		view.hidesTabBarOnScroll = true
+		view.reportPlainTap(at: try centre(of: 8, in: view))
+		XCTAssertEqual(recorder.plainTaps, 1, "the tap is still the host's (Automatic Fullscreen)")
+		XCTAssertEqual(requests, [], "but the bar does not move")
+	}
+
+	/// A long text: scrolling down hides the bar; at the end a push past it shows the bar, once per drag; the spring back does not
+	/// undo it; the next push hides it again.
+	func testAPushPastTheEndOfALongTextShowsOrHidesTheBar() {
+		let view = makeView()
+		var requests: [Bool] = []
+		view.onChromeRequest = { requests.append($0) }
+		view.hidesTabBarOnScroll = true
+		view.followScrollWithBar(offset: 100, maxOffset: 1000, tracking: true)
+		XCTAssertEqual(requests, [true], "scrolling down hides it")
+		view.followScrollWithBar(offset: 1000, maxOffset: 1000, tracking: true)
+		view.followScrollWithBar(offset: 1030, maxOffset: 1000, tracking: true)
+		XCTAssertEqual(requests, [true], "a small push does nothing")
+		view.followScrollWithBar(offset: 1050, maxOffset: 1000, tracking: true)
+		view.followScrollWithBar(offset: 1090, maxOffset: 1000, tracking: true)
+		XCTAssertEqual(requests, [true, false], "a push of more than 40 points shows it, once")
+		view.followScrollWithBar(offset: 1020, maxOffset: 1000, tracking: false)
+		view.followScrollWithBar(offset: 1000, maxOffset: 1000, tracking: false)
+		XCTAssertEqual(requests, [true, false], "the spring back leaves it")
+		view.scrollViewWillBeginDragging(view.scrollView)
+		view.followScrollWithBar(offset: 1060, maxOffset: 1000, tracking: true)
+		XCTAssertEqual(requests, [true, false, true], "the next push hides it")
+		XCTAssertTrue(view.barHidden)
+		view.scrollViewWillBeginDragging(view.scrollView)
+		view.followScrollWithBar(offset: 950, maxOffset: 1000, tracking: true)
+		XCTAssertEqual(requests, [true, false, true, false], "and scrolling back up shows it, as before")
+	}
+
+	/// A text too short to scroll (Psalm 117, a short devotional): any push up shows or hides the bar, and the spring back to the top
+	/// does not count as reaching the top; a pull down from the top still shows it.
+	func testAPushOnATextTooShortToScrollShowsOrHidesTheBar() {
+		let view = makeView()
+		var requests: [Bool] = []
+		view.onChromeRequest = { requests.append($0) }
+		view.hidesTabBarOnScroll = true
+		view.followScrollWithBar(offset: 50, maxOffset: -400, tracking: true)
+		XCTAssertEqual(requests, [true], "a push up hides it")
+		view.followScrollWithBar(offset: 10, maxOffset: -400, tracking: false)
+		view.followScrollWithBar(offset: 0, maxOffset: -400, tracking: false)
+		XCTAssertEqual(requests, [true], "springing back to the top leaves it hidden")
+		view.scrollViewWillBeginDragging(view.scrollView)
+		view.followScrollWithBar(offset: 60, maxOffset: -400, tracking: true)
+		XCTAssertEqual(requests, [true, false], "the next push shows it")
+		view.scrollViewWillBeginDragging(view.scrollView)
+		view.followScrollWithBar(offset: 50, maxOffset: -400, tracking: true)
+		view.scrollViewWillBeginDragging(view.scrollView)
+		view.followScrollWithBar(offset: -30, maxOffset: -400, tracking: true)
+		XCTAssertEqual(requests, [true, false, true, false], "a pull down from the top shows it")
+	}
+
 	func testATapWhileTextIsSelectedOnlyClearsTheSelection() throws {
 		let view = makeView()
 		let textView = try XCTUnwrap(view.scrollView as? UITextView)

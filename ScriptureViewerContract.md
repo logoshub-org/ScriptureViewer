@@ -20,7 +20,7 @@ values and reports through these events.
 | Input | Type | What it is |
 |---|---|---|
 | text | `ScriptureText` | The chapter or entry, already parsed (the portable core does that). |
-| theme | `ScriptureViewerTheme` | night mode, font name and size (CSS points), wide layout, right to left, an optional style sheet. |
+| theme | `ScriptureViewerTheme` | night mode, font name and size (CSS points), wide layout, right to left, an optional style sheet, and the page by day (`ScriptureViewerPage`: white, sepia or grey, with each page's colours as `#RRGGBB`; night mode ignores it; from 0.2.8, realised on iOS, not yet on Android). |
 | highlights | `ScriptureHighlights` | bookmark verses with their colours, search terms, a Strong's number. |
 | configuration | `ScriptureViewerConfiguration` | top and bottom inset, scrolls or sizes to its text, pull changes chapter, the selection menu's extra items, or `hostSelectionMenu`: the host shows its own menu for a selection in place of the platform's (iOS only so far). |
 | controller | `ScriptureViewerController` | commands the host sends (held until a new text is on show: the host says `willShowNewText()` when it changes the text or the theme, the view says `textWasShown()`, because a view applies state a turn after it is set) (`scroll(toVerse:)`, `scroll(toOffset:)`, `focus(verse:)`, `clearFocus()`, `clearSelection()`) and what the reader last said (`currentVerse`, `scrollOffset`, `selection`, `focusedVerse`, `isAtEnd`), observable by the host's views. |
@@ -30,7 +30,7 @@ values and reports through these events.
 
 `onScroll(offset, verse)`, `onReachedEnd`, `onTap(TapTarget)` (a verse number, a word, a note letter or a link, with where it was and
 what the markup said), `onGesture(.plainTap | .twoFingerTap | .swipeLeft | .swipeRight | .threeFingerDrag | .dragEnded)` (`.dragEnded` only when the configuration sets `reportsDragEnd`: Automatic Fullscreen goes fullscreen on it),
-`onPull(.previousChapter | .nextChapter)`, `onChromeRequest(.show | .hide)` (the scroll rule for the host's bars, and a tap or a touch near the bottom; the host decides), and asks `canHideChrome()` before a tap on the text sends them away; `onShare(text)` replaces the platform's own share sheet,
+`onPull(.previousChapter | .nextChapter)`, `onChromeRequest(.show | .hide)` (the scroll rule for the host's bars; on iOS from 0.2.8 also a push past the end of the text, or on a text too short to scroll, which shows or hides them, and no longer a tap or a touch near the bottom; the host decides), and on Android asks `canHideChrome()` before a tap on the text sends them away; `onShare(text)` replaces the platform's own share sheet,
 `onSelectionChange(ScriptureSelection?)` (UTF-16 start and length, and the verses touched), `onMenuItem(id, selection)`, `onSelectionMenu(selection)` (with `hostSelectionMenu`: the platform would show its selection menu now; on iOS the controller's `frameOfSelection()` says where the selection is, in the window's coordinates).
 It asks two questions: `referenceLine(verses)`, the line put above copied text, and `canHideChrome()`.
 

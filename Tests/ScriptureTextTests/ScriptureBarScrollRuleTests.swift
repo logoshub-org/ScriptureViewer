@@ -57,6 +57,15 @@ struct ScriptureBarScrollRuleTests {
         #expect(rule.update(offset: 400, maxOffset: 2000) == true)
     }
 
+    @Test func aPushPastTheEndShowsOrHidesTheBarAndScrollingGoesOnFromThere() {
+        var rule = ScriptureBarScrollRule()
+        #expect(rule.pushedPastEnd(at: 1000) == true, "shown: the push hides it")
+        #expect(rule.pushedPastEnd(at: 1000) == false, "hidden: the push shows it")
+        #expect(rule.pushedPastEnd(at: 1000) == true)
+        #expect(rule.update(offset: 980, maxOffset: 1000) == nil, "a wobble back does nothing")
+        #expect(rule.update(offset: 950, maxOffset: 1000) == false, "scrolling back up from the end shows it")
+    }
+
     @Test func aDifferentThresholdMovesTheBarSooner() {
         var rule = ScriptureBarScrollRule(threshold: 10)
         #expect(rule.update(offset: 5, maxOffset: 2000) == nil)

@@ -110,7 +110,6 @@ public struct ScriptureViewer: UIViewRepresentable {
             view.autoFullscreenMode = configuration.reportsDragEnd
             view.hidesTabBarOnScroll = events.onChromeRequest != nil
             view.onChromeRequest = events.onChromeRequest.map { request in { hide in request(hide ? .hide : .show) } }
-            view.canHideChrome = events.canHideChrome.map { ask in { ask() } }
             view.onShare = events.onShare.map { share in { text in share(text) } }
             if insets?.top != configuration.topInset || insets?.bottom != configuration.bottomInset {
                 insets = (configuration.topInset, configuration.bottomInset)
